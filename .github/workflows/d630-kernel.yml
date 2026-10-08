@@ -1,0 +1,291 @@
+name: Dell Latitude D630 kernel
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: d630-kernel
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  build:
+    name: Build D630 Debian packages
+    runs-on: ubuntu-22.04
+    container:
+      image: debian:12
+
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      ARCH: x86_64
+      KCFLAGS: -O2 -pipe -march=core2 -mtune=core2
+      KCPPFLAGS: -march=core2 -mtune=core2
+
+    steps:
+      - name: Install build dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates curl git make gcc g++ build-essential debhelper lsb-release bc bison flex \
+            libssl-dev libelf-dev libdw-dev dwarves \
+            cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
+            python3 file
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Prepare D630 configuration
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          make x86_64_defconfig
+          scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630.config
+          make olddefconfig
+
+          # Remove every generic loadable module, then restore only the
+          # explicit optional whitelist from the D630 profile.
+          bash arch/x86/configs/d630-prune-modules.sh
+
+          config_state() {
+            local value
+            value="$(./scripts/config --state "$1" 2>/dev/null || true)"
+            case "$value" in
+              y|m|n) printf '%s' "$value" ;;
+              undef|'') printf 'n' ;;
+              *) echo "Unexpected state for $1: $value" >&2; return 1 ;;
+            esac
+          }
+
+          echo "=== Required configuration ==="
+          for opt in \
+            X86_MSR \
+            CPU_SUP_INTEL \
+            DRM_I915 \
+            DRM_SIMPLEDRM \
+            FB_VESA \
+            AGP_INTEL \
+            ACPI \
+            ACPI_BATTERY \
+            X86_ACPI_CPUFREQ \
+            CPU_IDLE \
+            SENSORS_CORETEMP \
+            SND_HDA_INTEL \
+            SND_HDA_CODEC_SIGMATEL \
+            SATA_AHCI \
+            ATA_PIIX \
+            USB_EHCI_HCD \
+            USB_OHCI_HCD \
+            USB_UHCI_HCD \
+            USB_XHCI_HCD \
+            IWL3945 \
+            FAT_FS \
+            MSDOS_FS \
+            VFAT_FS \
+            ISO9660_FS \
+            UDF_FS \
+            EXT4_FS \
+            BTRFS_FS \
+            NTFS3_FS \
+            FW_LOADER \
+            ZRAM \
+            ZSMALLOC; do
+            ./scripts/config --state "CONFIG_${opt}" || true
+          done
+
+          test "$(config_state CONFIG_EFI)" = "n"
+          test "$(config_state CONFIG_EFI_STUB)" = "n"
+          test "$(config_state CONFIG_KERNEL_XZ)" = "y"
+          test "$(config_state CONFIG_KERNEL_GZIP)" = "n"
+          test "$(config_state CONFIG_BLK_DEV_INITRD)" = "y"
+          test "$(config_state CONFIG_DEVTMPFS)" = "y"
+          test "$(config_state CONFIG_DEVTMPFS_MOUNT)" = "y"
+          test "$(config_state CONFIG_MICROCODE)" = "y"
+
+          test "$(config_state CONFIG_VIRTUALIZATION)" = "y"
+          test "$(config_state CONFIG_KVM)" = "m"
+          test "$(config_state CONFIG_KVM_INTEL)" = "m"
+          test "$(config_state CONFIG_KVM_AMD)" = "n"
+          test "$(config_state CONFIG_TUN)" = "m"
+
+          test "$(config_state CONFIG_INPUT_JOYSTICK)" = "y"
+          test "$(config_state CONFIG_INPUT_JOYDEV)" = "m"
+          test "$(config_state CONFIG_HIDRAW)" = "y"
+          test "$(config_state CONFIG_INPUT_UINPUT)" = "m"
+          test "$(config_state CONFIG_BINFMT_MISC)" = "m"
+
+          test "$(config_state CONFIG_ZRAM)" = "y"
+          test "$(config_state CONFIG_ZRAM_BACKEND_LZ4)" = "y"
+          test "$(config_state CONFIG_ZRAM_DEF_COMP_LZ4)" = "y"
+          test "$(config_state CONFIG_ZRAM_BACKEND_LZ4HC)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_ZSTD)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_DEFLATE)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_842)" = "n"
+
+          test "$(config_state CONFIG_FAT_FS)" = "y"
+          test "$(config_state CONFIG_MSDOS_FS)" = "y"
+          test "$(config_state CONFIG_VFAT_FS)" = "y"
+          test "$(config_state CONFIG_ISO9660_FS)" = "y"
+          test "$(config_state CONFIG_UDF_FS)" = "y"
+          test "$(config_state CONFIG_BTRFS_FS)" = "y"
+          test "$(config_state CONFIG_NTFS3_FS)" = "y"
+          test "$(config_state CONFIG_FW_LOADER)" = "y"
+
+          echo "=== Remaining optional modules ==="
+          grep '=m$' .config || true
+          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|KVM|KVM_INTEL|KVM_X86|HAVE_KVM_IRQ_BYPASS|IRQ_BYPASS_MANAGER|TUN|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
+          test -z "$unexpected"
+
+      - name: Build minimal Intel 3945 firmware package
+        shell: bash
+        run: |
+          set -euxo pipefail
+          bash scripts/d630-firmware-package.sh ..
+
+      - name: Build kernel Debian packages
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          export LOCALVERSION=-d630-core2
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+          export KBUILD_BUILD_USER=AmrUser-48
+          export KBUILD_BUILD_HOST=github-actions
+          export KDEB_CHANGELOG_DIST=bookworm
+          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
+
+          make -j2 \
+            bindeb-pkg \
+            LOCALVERSION="${LOCALVERSION}" \
+            INSTALL_MOD_STRIP=1
+
+      - name: Validate packages and size
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          test -f arch/x86/boot/bzImage
+          file arch/x86/boot/bzImage
+
+          echo "=== Debian packages ==="
+          ls -lh ../linux-image-*.deb ../d630-firmware-iwl3945_*.deb
+
+          echo "=== Installed kernel payload estimate ==="
+          dpkg-deb -f ../linux-image-*.deb Package Version Architecture
+          dpkg-deb -c ../linux-image-*.deb | awk '{print $5, $6}' | tail -n +1 | sort -nr | head -30
+
+          echo "=== Module count ==="
+          dpkg-deb -c ../linux-image-*.deb | grep -E '/lib/modules/.+\.ko' | wc -l
+
+      - name: Create checksums
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd ..
+          sha256sum linux-image-*.deb d630-firmware-iwl3945_*.deb > SHA256SUMS-d630-core2.txt
+
+      - name: Stage release artifacts
+        shell: bash
+        run: |
+          set -euxo pipefail
+          rm -rf release-artifacts
+          mkdir -p release-artifacts
+          cp ../linux-image-*.deb release-artifacts/
+          cp ../d630-firmware-iwl3945_*.deb release-artifacts/
+          cp ../SHA256SUMS-d630-core2.txt release-artifacts/
+
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-d630-core2-${{ github.sha }}
+          path: release-artifacts/*
+          if-no-files-found: error
+
+  release:
+    name: Publish D630 release
+    needs: build
+    runs-on: ubuntu-22.04
+
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: d630-${{ github.sha }}
+
+    steps:
+      - name: Download release artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-d630-core2-${{ github.sha }}
+          path: dist
+
+      - name: Publish GitHub release
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd dist
+
+          cat > release-notes.md <<EOF
+          ## Dell Latitude D630 / Core 2 Duo kernel
+
+          Built from commit ${{ github.sha }} in Debian 12.
+
+          Hardware target:
+          - Dell Latitude D630
+          - Intel Core 2 Duo T7250
+          - Intel GM965 / GMA X3100
+          - Intel PRO/Wireless 3945ABG
+          - legacy BIOS
+          - Debian x86_64
+
+          Included:
+          - i915 graphics
+          - ACPI and Dell laptop support
+          - Intel HDA / SigmaTel audio
+          - AHCI + legacy ATA/PIIX support
+          - Intel 3945ABG Wi-Fi driver
+          - separate minimal 3945 firmware Debian package
+          - NTFS3 and Btrfs built-in
+          - FAT/VFAT/MS-DOS built-in
+          - ISO9660/UDF built-in
+          - zram built-in using LZ4
+          - USB joystick/gamepad support
+          - optional KVM/Intel VT-x and TAP modules for QEMU
+          - binfmt_misc module for optional userspace executable handlers
+
+          Slimming:
+          - EFI/UEFI disabled
+          - unused module families aggressively removed
+          - Bluetooth, FireWire, DVB/video/camera and Thunderbolt/USB4 disabled
+          - unrelated storage, network and wireless drivers removed
+          - kernel/module debug and development overhead disabled
+
+          Install the kernel image package and the d630-firmware-iwl3945
+          package. Keep Debian's intel-microcode package installed for CPU
+          microcode updates, and keep a known-good Debian kernel as fallback.
+          EOF
+
+          if gh release view "${TAG}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release upload "${TAG}" \
+              linux-image-*.deb \
+              d630-firmware-iwl3945_*.deb \
+              SHA256SUMS-d630-core2.txt \
+              --repo "${GITHUB_REPOSITORY}" \
+              --clobber
+          else
+            gh release create "${TAG}" \
+              linux-image-*.deb \
+              d630-firmware-iwl3945_*.deb \
+              SHA256SUMS-d630-core2.txt \
+              --repo "${GITHUB_REPOSITORY}" \
+              --title "Dell Latitude D630 kernel ${{ github.sha }}" \
+              --notes-file release-notes.md \
+              --target "${GITHUB_SHA}"
+          fi
