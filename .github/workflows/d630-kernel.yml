@@ -73,6 +73,10 @@ jobs:
             IWL3945 \
             IWL4965 \
             B43 \
+            INPUT_JOYSTICK \
+            INPUT_JOYDEV \
+            HIDRAW \
+            BINFMT_MISC \
             ZRAM \
             ZSMALLOC \
             EXT4_FS \
@@ -91,6 +95,9 @@ jobs:
 
           test "$(./scripts/config --state CONFIG_X86_MSR | tr -d ' ')" = "CONFIG_X86_MSR=y"
           test "$(./scripts/config --state CONFIG_DRM_I915 | tr -d ' ')" = "CONFIG_DRM_I915=y"
+          test "$(./scripts/config --state CONFIG_INPUT_JOYSTICK | tr -d ' ')" = "CONFIG_INPUT_JOYSTICK=y"
+          test "$(./scripts/config --state CONFIG_INPUT_JOYDEV | tr -d ' ')" = "CONFIG_INPUT_JOYDEV=m"
+          test "$(./scripts/config --state CONFIG_BINFMT_MISC | tr -d ' ')" = "CONFIG_BINFMT_MISC=m"
           test "$(./scripts/config --state CONFIG_ZRAM | tr -d ' ')" = "CONFIG_ZRAM=y"
           test "$(./scripts/config --state CONFIG_BTRFS_FS | tr -d ' ')" = "CONFIG_BTRFS_FS=y"
           test "$(./scripts/config --state CONFIG_NTFS3_FS | tr -d ' ')" = "CONFIG_NTFS3_FS=y"
@@ -192,6 +199,9 @@ jobs:
           - MSR built-in
           - zram built-in with LZ4
           - Btrfs and NTFS3 built-in
+          - Intel PRO/Wireless 3945ABG support
+          - USB joystick/gamepad support
+          - binfmt_misc as a module for optional userspace execution handlers
           - DVB/TV/camera multimedia support removed
           - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
           - Core 2 compiler tuning
