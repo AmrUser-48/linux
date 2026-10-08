@@ -193,14 +193,21 @@ jobs:
           cd ..
           sha256sum linux-image-*.deb d630-firmware-iwl3945_*.deb > SHA256SUMS-d630-core2.txt
 
+      - name: Stage release artifacts
+        shell: bash
+        run: |
+          set -euxo pipefail
+          rm -rf release-artifacts
+          mkdir -p release-artifacts
+          cp ../linux-image-*.deb release-artifacts/
+          cp ../d630-firmware-iwl3945_*.deb release-artifacts/
+          cp ../SHA256SUMS-d630-core2.txt release-artifacts/
+
       - name: Upload release artifacts
         uses: actions/upload-artifact@v4
         with:
           name: linux-d630-core2-${{ github.sha }}
-          path: |
-            ../linux-image-*.deb
-            ../d630-firmware-iwl3945_*.deb
-            ../SHA256SUMS-d630-core2.txt
+          path: release-artifacts/*
           if-no-files-found: error
 
   release:
