@@ -13,7 +13,7 @@ sed -E 's/^(CONFIG_[A-Za-z0-9_]+)=m$/\1=n/' .config > "$tmp"
 mv "$tmp" .config
 
 # Optional drivers/interfaces kept as modules.
-for opt in   TIGON3   USB_STORAGE   USB_NET_CDCETHER   USB_NET_RNDIS_HOST   USB_NET_CDC_NCM   INPUT_JOYDEV   HIDRAW   INPUT_UINPUT   BINFMT_MISC
+for opt in   TIGON3   KVM   KVM_INTEL   TUN   USB_STORAGE   USB_NET_CDCETHER   USB_NET_RNDIS_HOST   USB_NET_CDC_NCM   INPUT_JOYDEV   HIDRAW   INPUT_UINPUT   BINFMT_MISC
 do
   ./scripts/config --module "$opt"
 done
@@ -35,4 +35,7 @@ done
 make olddefconfig
 
 echo '=== remaining module settings ==='
+# KVM_X86 is an internal tristate selected by KVM and therefore survives as =m.
+grep -E '=m
+ .config || true
 grep -E '=m$' .config || true
