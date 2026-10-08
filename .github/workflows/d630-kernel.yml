@@ -55,6 +55,16 @@ jobs:
           # explicit optional whitelist from the D630 profile.
           bash arch/x86/configs/d630-prune-modules.sh
 
+          config_state() {
+            local value
+            value="$(./scripts/config --state "$1" 2>/dev/null || true)"
+            case "$value" in
+              y|m|n) printf '%s' "$value" ;;
+              undef|'') printf 'n' ;;
+              *) echo "Unexpected state for $1: $value" >&2; return 1 ;;
+            esac
+          }
+
           echo "=== Required configuration ==="
           for opt in \
             X86_MSR \
@@ -92,43 +102,43 @@ jobs:
             ./scripts/config --state "CONFIG_${opt}" || true
           done
 
-          test "$(./scripts/config --state CONFIG_EFI | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_EFI_STUB | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_KERNEL_XZ | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_KERNEL_GZIP | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_BLK_DEV_INITRD | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_DEVTMPFS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_DEVTMPFS_MOUNT | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_MICROCODE | tr -d ' ')" = "y"
+          test "$(config_state CONFIG_EFI)" = "n"
+          test "$(config_state CONFIG_EFI_STUB)" = "n"
+          test "$(config_state CONFIG_KERNEL_XZ)" = "y"
+          test "$(config_state CONFIG_KERNEL_GZIP)" = "n"
+          test "$(config_state CONFIG_BLK_DEV_INITRD)" = "y"
+          test "$(config_state CONFIG_DEVTMPFS)" = "y"
+          test "$(config_state CONFIG_DEVTMPFS_MOUNT)" = "y"
+          test "$(config_state CONFIG_MICROCODE)" = "y"
 
-          test "$(./scripts/config --state CONFIG_VIRTUALIZATION | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_KVM | tr -d ' ')" = "m"
-          test "$(./scripts/config --state CONFIG_KVM_INTEL | tr -d ' ')" = "m"
-          test "$(./scripts/config --state CONFIG_KVM_AMD | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_TUN | tr -d ' ')" = "m"
+          test "$(config_state CONFIG_VIRTUALIZATION)" = "y"
+          test "$(config_state CONFIG_KVM)" = "m"
+          test "$(config_state CONFIG_KVM_INTEL)" = "m"
+          test "$(config_state CONFIG_KVM_AMD)" = "n"
+          test "$(config_state CONFIG_TUN)" = "m"
 
-          test "$(./scripts/config --state CONFIG_INPUT_JOYSTICK | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_INPUT_JOYDEV | tr -d ' ')" = "m"
-          test "$(./scripts/config --state CONFIG_HIDRAW | tr -d ' ')" = "m"
-          test "$(./scripts/config --state CONFIG_INPUT_UINPUT | tr -d ' ')" = "m"
-          test "$(./scripts/config --state CONFIG_BINFMT_MISC | tr -d ' ')" = "m"
+          test "$(config_state CONFIG_INPUT_JOYSTICK)" = "y"
+          test "$(config_state CONFIG_INPUT_JOYDEV)" = "m"
+          test "$(config_state CONFIG_HIDRAW)" = "m"
+          test "$(config_state CONFIG_INPUT_UINPUT)" = "m"
+          test "$(config_state CONFIG_BINFMT_MISC)" = "m"
 
-          test "$(./scripts/config --state CONFIG_ZRAM | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_LZ4 | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_ZRAM_DEF_COMP_LZ4 | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_LZ4HC | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_ZSTD | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_DEFLATE | tr -d ' ')" = "n"
-          test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_842 | tr -d ' ')" = "n"
+          test "$(config_state CONFIG_ZRAM)" = "y"
+          test "$(config_state CONFIG_ZRAM_BACKEND_LZ4)" = "y"
+          test "$(config_state CONFIG_ZRAM_DEF_COMP_LZ4)" = "y"
+          test "$(config_state CONFIG_ZRAM_BACKEND_LZ4HC)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_ZSTD)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_DEFLATE)" = "n"
+          test "$(config_state CONFIG_ZRAM_BACKEND_842)" = "n"
 
-          test "$(./scripts/config --state CONFIG_FAT_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_MSDOS_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_VFAT_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_ISO9660_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_UDF_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_BTRFS_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_NTFS3_FS | tr -d ' ')" = "y"
-          test "$(./scripts/config --state CONFIG_FW_LOADER | tr -d ' ')" = "y"
+          test "$(config_state CONFIG_FAT_FS)" = "y"
+          test "$(config_state CONFIG_MSDOS_FS)" = "y"
+          test "$(config_state CONFIG_VFAT_FS)" = "y"
+          test "$(config_state CONFIG_ISO9660_FS)" = "y"
+          test "$(config_state CONFIG_UDF_FS)" = "y"
+          test "$(config_state CONFIG_BTRFS_FS)" = "y"
+          test "$(config_state CONFIG_NTFS3_FS)" = "y"
+          test "$(config_state CONFIG_FW_LOADER)" = "y"
 
           echo "=== Remaining optional modules ==="
           grep '=m$' .config || true
