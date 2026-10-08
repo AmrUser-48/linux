@@ -96,6 +96,10 @@ jobs:
           test "$(./scripts/config --state CONFIG_EFI_STUB | tr -d ' ')" = "CONFIG_EFI_STUB=n"
           test "$(./scripts/config --state CONFIG_KERNEL_XZ | tr -d ' ')" = "CONFIG_KERNEL_XZ=y"
           test "$(./scripts/config --state CONFIG_KERNEL_GZIP | tr -d ' ')" = "CONFIG_KERNEL_GZIP=n"
+          test "$(./scripts/config --state CONFIG_BLK_DEV_INITRD | tr -d ' ')" = "CONFIG_BLK_DEV_INITRD=y"
+          test "$(./scripts/config --state CONFIG_DEVTMPFS | tr -d ' ')" = "CONFIG_DEVTMPFS=y"
+          test "$(./scripts/config --state CONFIG_DEVTMPFS_MOUNT | tr -d ' ')" = "CONFIG_DEVTMPFS_MOUNT=y"
+          test "$(./scripts/config --state CONFIG_MICROCODE | tr -d ' ')" = "CONFIG_MICROCODE=y"
 
           test "$(./scripts/config --state CONFIG_VIRTUALIZATION | tr -d ' ')" = "CONFIG_VIRTUALIZATION=y"
           test "$(./scripts/config --state CONFIG_KVM | tr -d ' ')" = "CONFIG_KVM=m"
