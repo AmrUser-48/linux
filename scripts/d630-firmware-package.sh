@@ -43,4 +43,4 @@ Description: Intel PRO/Wireless 3945ABG firmware for D630 kernel
 EOF
 
 dpkg-deb --root-owner-group --build "$WORK/pkg" "${OUT}/${PKG}_${VER}_all.deb"
-dpkg-deb --info "$OUT/$PKG_$VER_all.deb"
+dpkg-deb --info "${OUT}/${PKG}_${VER}_all.deb"
