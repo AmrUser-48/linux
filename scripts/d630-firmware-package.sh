@@ -42,5 +42,5 @@ Description: Intel PRO/Wireless 3945ABG firmware for D630 kernel
  Intel PRO/Wireless 3945ABG adapter used by Dell Latitude D630 systems.
 EOF
 
-dpkg-deb --root-owner-group --build "$WORK/pkg" "$OUT/$PKG_$VER_all.deb"
+dpkg-deb --root-owner-group --build "$WORK/pkg" "${OUT}/${PKG}_${VER}_all.deb"
 dpkg-deb --info "$OUT/$PKG_$VER_all.deb"
