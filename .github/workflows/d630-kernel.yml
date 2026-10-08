@@ -51,8 +51,8 @@ jobs:
           scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630.config
           make olddefconfig
 
-          # Aggressively trim the installed module tree. Hardware needed for
-          # boot/use stays built-in; only a small optional whitelist remains.
+          # Aggressively trim loadable modules; hardware needed for normal
+          # operation is built-in, and only this small optional set remains.
           bash arch/x86/configs/d630-prune-modules.sh
 
           echo "=== D630 configuration ==="
@@ -73,6 +73,8 @@ jobs:
             USB_EHCI_HCD \
             USB_OHCI_HCD \
             USB_UHCI_HCD \
+            USB_XHCI_HCD \
+            USB_STORAGE \
             TIGON3 \
             IWL3945 \
             IWL4965 \
@@ -80,27 +82,22 @@ jobs:
             INPUT_JOYSTICK \
             INPUT_JOYDEV \
             HIDRAW \
+            INPUT_UINPUT \
             BINFMT_MISC \
             ZRAM \
             ZSMALLOC \
-            EXT4_FS \
             BTRFS_FS \
             NTFS3_FS \
             VFAT_FS \
             ISO9660_FS \
+            UDF_FS \
             MEDIA_SUPPORT \
             DVB_CORE \
             BLUETOOTH \
             IEEE1394 \
             THUNDERBOLT \
-            USB_XHCI_HCD \
             EFI \
-            EFI_STUB \
-            INPUT_JOYSTICK \
-            INPUT_JOYDEV \
-            HIDRAW \
-            INPUT_UINPUT \
-            BINFMT_MISC; do
+            EFI_STUB; do
             ./scripts/config --state "CONFIG_${opt}" || true
           done
 
@@ -110,13 +107,20 @@ jobs:
           test "$(./scripts/config --state CONFIG_DRM_I915 | tr -d ' ')" = "CONFIG_DRM_I915=y"
           test "$(./scripts/config --state CONFIG_INPUT_JOYSTICK | tr -d ' ')" = "CONFIG_INPUT_JOYSTICK=y"
           test "$(./scripts/config --state CONFIG_INPUT_JOYDEV | tr -d ' ')" = "CONFIG_INPUT_JOYDEV=m"
+          test "$(./scripts/config --state CONFIG_HIDRAW | tr -d ' ')" = "CONFIG_HIDRAW=m"
+          test "$(./scripts/config --state CONFIG_INPUT_UINPUT | tr -d ' ')" = "CONFIG_INPUT_UINPUT=m"
           test "$(./scripts/config --state CONFIG_BINFMT_MISC | tr -d ' ')" = "CONFIG_BINFMT_MISC=m"
+          test "$(./scripts/config --state CONFIG_USB_STORAGE | tr -d ' ')" = "CONFIG_USB_STORAGE=m"
+          test "$(./scripts/config --state CONFIG_TIGON3 | tr -d ' ')" = "CONFIG_TIGON3=m"
+          test "$(./scripts/config --state CONFIG_USB_NET_CDC_NCM | tr -d ' ')" = "CONFIG_USB_NET_CDC_NCM=m"
+
           test "$(./scripts/config --state CONFIG_ZRAM | tr -d ' ')" = "CONFIG_ZRAM=y"
           test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_LZ4 | tr -d ' ')" = "CONFIG_ZRAM_BACKEND_LZ4=y"
           test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_LZO | tr -d ' ')" = "CONFIG_ZRAM_BACKEND_LZO=n"
           test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_LZ4HC | tr -d ' ')" = "CONFIG_ZRAM_BACKEND_LZ4HC=n"
           test "$(./scripts/config --state CONFIG_ZRAM_BACKEND_ZSTD | tr -d ' ')" = "CONFIG_ZRAM_BACKEND_ZSTD=n"
           test "$(./scripts/config --state CONFIG_ZRAM_DEF_COMP_LZ4 | tr -d ' ')" = "CONFIG_ZRAM_DEF_COMP_LZ4=y"
+
           test "$(./scripts/config --state CONFIG_BTRFS_FS | tr -d ' ')" = "CONFIG_BTRFS_FS=y"
           test "$(./scripts/config --state CONFIG_NTFS3_FS | tr -d ' ')" = "CONFIG_NTFS3_FS=y"
           test "$(./scripts/config --state CONFIG_MEDIA_SUPPORT | tr -d ' ')" = "CONFIG_MEDIA_SUPPORT=n"
@@ -126,12 +130,11 @@ jobs:
           test "$(./scripts/config --state CONFIG_THUNDERBOLT | tr -d ' ')" = "CONFIG_THUNDERBOLT=n"
           test "$(./scripts/config --state CONFIG_USB_XHCI_HCD | tr -d ' ')" = "CONFIG_USB_XHCI_HCD=n"
 
-          ./scripts/config --state CONFIG_ZRAM_DEF_COMP_LZ4
-          ./scripts/config --state CONFIG_MODULES
-          ./scripts/config --state CONFIG_HZ_250
-          
           echo "=== remaining modules ==="
-          grep '=m
+          grep '=m$' .config || true
+          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|HIDRAW|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
+          test -z "$unexpected"
+
       - name: Build kernel packages
         shell: bash
         run: |
@@ -208,10 +211,10 @@ jobs:
 
           Target:
           - Dell Latitude D630
-          - Intel Core 2 Duo
+          - Intel Core 2 Duo T7250
           - Intel 965GM / GMA X3100
           - legacy BIOS
-          - Debian 12 x86_64
+          - Debian x86_64
 
           Configuration highlights:
           - i915 DRM and legacy VESA framebuffer
@@ -221,330 +224,8 @@ jobs:
           - Btrfs and NTFS3 built-in
           - Intel PRO/Wireless 3945ABG support
           - USB joystick/gamepad support
-          - binfmt_misc as a module for optional userspace execution handlers
-          - DVB/TV/camera multimedia support removed
-          - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
-          - only a small optional module whitelist; unused loadable modules pruned
-          - Core 2 compiler tuning
-
-          This is an experimental hardware-specific kernel. Keep a known-good
-          Debian kernel installed as a fallback.
-          EOF
-
-          gh release create "${TAG}" \
-            linux-*.deb \
-            SHA256SUMS-d630-core2.txt \
-            --repo "${GITHUB_REPOSITORY}" \
-            --title "Dell Latitude D630 kernel ${{ github.sha }}" \
-            --notes-file release-notes.md \
-            --target "${GITHUB_SHA}"
- .config || true
-          unexpected="$(grep '=m
-      - name: Build kernel packages
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          export LOCALVERSION=-d630-core2
-          export KBUILD_BUILD_USER=AmrUser-48
-          export KBUILD_BUILD_HOST=github-actions
-          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
-
-          make -j2 \
-            bindeb-pkg \
-            LOCALVERSION="${LOCALVERSION}" \
-            INSTALL_MOD_STRIP=1
-
-      - name: Validate kernel image
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          echo "=== kernel image ==="
-          ls -lh ../linux-image-*.deb
-
-          echo "=== packages ==="
-          ls -lh ../linux-*.deb
-
-          echo "=== architecture ==="
-          file arch/x86/boot/bzImage
-
-          echo "=== CPU flags in build config ==="
-          grep -E 'CONFIG_(X86_NATIVE_CPU|X86_GENERIC|MCORE2|CPU_SUP_INTEL)=' .config || true
-
-      - name: Checksums
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd ..
-          sha256sum linux-*.deb > SHA256SUMS-d630-core2.txt
-
-      - name: Upload kernel packages
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: |
-            ../linux-*.deb
-            ../SHA256SUMS-d630-core2.txt
-          if-no-files-found: error
-
-  release:
-    name: Publish D630 kernel release
-    needs: build
-    runs-on: ubuntu-22.04
-
-    env:
-      GH_TOKEN: ${{ github.token }}
-      TAG: d630-${{ github.sha }}
-
-    steps:
-      - name: Download kernel packages
-        uses: actions/download-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: dist
-
-      - name: Publish GitHub release
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd dist
-          cat > release-notes.md <<EOF
-          ## Dell Latitude D630 / Core 2 kernel
-
-          Built from commit ${{ github.sha }} in a Debian 12 container.
-
-          Target:
-          - Dell Latitude D630
-          - Intel Core 2 Duo
-          - Intel 965GM / GMA X3100
-          - legacy BIOS
-          - Debian 12 x86_64
-
-          Configuration highlights:
-          - i915 DRM and legacy VESA framebuffer
-          - Dell ACPI/platform support
-          - MSR built-in
-          - zram built-in with LZ4
-          - Btrfs and NTFS3 built-in
-          - Intel PRO/Wireless 3945ABG support
-          - USB joystick/gamepad support
-          - binfmt_misc as a module for optional userspace execution handlers
-          - DVB/TV/camera multimedia support removed
-          - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
-          - Core 2 compiler tuning
-
-          This is an experimental hardware-specific kernel. Keep a known-good
-          Debian kernel installed as a fallback.
-          EOF
-
-          gh release create "${TAG}" \
-            linux-*.deb \
-            SHA256SUMS-d630-core2.txt \
-            --repo "${GITHUB_REPOSITORY}" \
-            --title "Dell Latitude D630 kernel ${{ github.sha }}" \
-            --notes-file release-notes.md \
-            --target "${GITHUB_SHA}"
- .config | grep -Ev '^CONFIG_(TIGON3|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|HIDRAW|INPUT_UINPUT|BINFMT_MISC)=m
-      - name: Build kernel packages
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          export LOCALVERSION=-d630-core2
-          export KBUILD_BUILD_USER=AmrUser-48
-          export KBUILD_BUILD_HOST=github-actions
-          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
-
-          make -j2 \
-            bindeb-pkg \
-            LOCALVERSION="${LOCALVERSION}" \
-            INSTALL_MOD_STRIP=1
-
-      - name: Validate kernel image
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          echo "=== kernel image ==="
-          ls -lh ../linux-image-*.deb
-
-          echo "=== packages ==="
-          ls -lh ../linux-*.deb
-
-          echo "=== architecture ==="
-          file arch/x86/boot/bzImage
-
-          echo "=== CPU flags in build config ==="
-          grep -E 'CONFIG_(X86_NATIVE_CPU|X86_GENERIC|MCORE2|CPU_SUP_INTEL)=' .config || true
-
-      - name: Checksums
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd ..
-          sha256sum linux-*.deb > SHA256SUMS-d630-core2.txt
-
-      - name: Upload kernel packages
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: |
-            ../linux-*.deb
-            ../SHA256SUMS-d630-core2.txt
-          if-no-files-found: error
-
-  release:
-    name: Publish D630 kernel release
-    needs: build
-    runs-on: ubuntu-22.04
-
-    env:
-      GH_TOKEN: ${{ github.token }}
-      TAG: d630-${{ github.sha }}
-
-    steps:
-      - name: Download kernel packages
-        uses: actions/download-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: dist
-
-      - name: Publish GitHub release
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd dist
-          cat > release-notes.md <<EOF
-          ## Dell Latitude D630 / Core 2 kernel
-
-          Built from commit ${{ github.sha }} in a Debian 12 container.
-
-          Target:
-          - Dell Latitude D630
-          - Intel Core 2 Duo
-          - Intel 965GM / GMA X3100
-          - legacy BIOS
-          - Debian 12 x86_64
-
-          Configuration highlights:
-          - i915 DRM and legacy VESA framebuffer
-          - Dell ACPI/platform support
-          - MSR built-in
-          - zram built-in with LZ4
-          - Btrfs and NTFS3 built-in
-          - Intel PRO/Wireless 3945ABG support
-          - USB joystick/gamepad support
-          - binfmt_misc as a module for optional userspace execution handlers
-          - DVB/TV/camera multimedia support removed
-          - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
-          - Core 2 compiler tuning
-
-          This is an experimental hardware-specific kernel. Keep a known-good
-          Debian kernel installed as a fallback.
-          EOF
-
-          gh release create "${TAG}" \
-            linux-*.deb \
-            SHA256SUMS-d630-core2.txt \
-            --repo "${GITHUB_REPOSITORY}" \
-            --title "Dell Latitude D630 kernel ${{ github.sha }}" \
-            --notes-file release-notes.md \
-            --target "${GITHUB_SHA}"
- || true)"
-          test -z "$unexpected"
-
-
-      - name: Build kernel packages
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          export LOCALVERSION=-d630-core2
-          export KBUILD_BUILD_USER=AmrUser-48
-          export KBUILD_BUILD_HOST=github-actions
-          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
-
-          make -j2 \
-            bindeb-pkg \
-            LOCALVERSION="${LOCALVERSION}" \
-            INSTALL_MOD_STRIP=1
-
-      - name: Validate kernel image
-        shell: bash
-        run: |
-          set -euxo pipefail
-
-          echo "=== kernel image ==="
-          ls -lh ../linux-image-*.deb
-
-          echo "=== packages ==="
-          ls -lh ../linux-*.deb
-
-          echo "=== architecture ==="
-          file arch/x86/boot/bzImage
-
-          echo "=== CPU flags in build config ==="
-          grep -E 'CONFIG_(X86_NATIVE_CPU|X86_GENERIC|MCORE2|CPU_SUP_INTEL)=' .config || true
-
-      - name: Checksums
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd ..
-          sha256sum linux-*.deb > SHA256SUMS-d630-core2.txt
-
-      - name: Upload kernel packages
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: |
-            ../linux-*.deb
-            ../SHA256SUMS-d630-core2.txt
-          if-no-files-found: error
-
-  release:
-    name: Publish D630 kernel release
-    needs: build
-    runs-on: ubuntu-22.04
-
-    env:
-      GH_TOKEN: ${{ github.token }}
-      TAG: d630-${{ github.sha }}
-
-    steps:
-      - name: Download kernel packages
-        uses: actions/download-artifact@v4
-        with:
-          name: linux-d630-core2-${{ github.sha }}
-          path: dist
-
-      - name: Publish GitHub release
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd dist
-          cat > release-notes.md <<EOF
-          ## Dell Latitude D630 / Core 2 kernel
-
-          Built from commit ${{ github.sha }} in a Debian 12 container.
-
-          Target:
-          - Dell Latitude D630
-          - Intel Core 2 Duo
-          - Intel 965GM / GMA X3100
-          - legacy BIOS
-          - Debian 12 x86_64
-
-          Configuration highlights:
-          - i915 DRM and legacy VESA framebuffer
-          - Dell ACPI/platform support
-          - MSR built-in
-          - zram built-in with LZ4
-          - Btrfs and NTFS3 built-in
-          - Intel PRO/Wireless 3945ABG support
-          - USB joystick/gamepad support
-          - binfmt_misc as a module for optional userspace execution handlers
+          - only a small optional module whitelist
+          - EFI/UEFI kernel boot support disabled
           - DVB/TV/camera multimedia support removed
           - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
           - Core 2 compiler tuning
