@@ -34,7 +34,7 @@ jobs:
         run: |
           apt-get update
           apt-get install -y --no-install-recommends \
-            ca-certificates curl git make gcc g++ bc bison flex \
+            ca-certificates curl git make gcc g++ build-essential debhelper lsb-release bc bison flex \
             libssl-dev libelf-dev libdw-dev dwarves \
             cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
             python3 file
@@ -156,8 +156,11 @@ jobs:
           set -euxo pipefail
 
           export LOCALVERSION=-d630-core2
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
           export KBUILD_BUILD_USER=AmrUser-48
           export KBUILD_BUILD_HOST=github-actions
+          export KDEB_CHANGELOG_DIST=bookworm
           export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
 
           make -j2 \
