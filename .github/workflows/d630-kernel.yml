@@ -77,11 +77,10 @@ jobs:
             ACPI_BATTERY \
             X86_ACPI_CPUFREQ \
             CPU_IDLE \
-            X86_INTEL_IDLE \
             SENSORS_CORETEMP \
             SND_HDA_INTEL \
             SND_HDA_CODEC_SIGMATEL \
-            AHCI \
+            SATA_AHCI \
             ATA_PIIX \
             USB_EHCI_HCD \
             USB_OHCI_HCD \
@@ -119,7 +118,7 @@ jobs:
 
           test "$(config_state CONFIG_INPUT_JOYSTICK)" = "y"
           test "$(config_state CONFIG_INPUT_JOYDEV)" = "m"
-          test "$(config_state CONFIG_HIDRAW)" = "m"
+          test "$(config_state CONFIG_HIDRAW)" = "y"
           test "$(config_state CONFIG_INPUT_UINPUT)" = "m"
           test "$(config_state CONFIG_BINFMT_MISC)" = "m"
 
@@ -142,7 +141,7 @@ jobs:
 
           echo "=== Remaining optional modules ==="
           grep '=m$' .config || true
-          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|KVM|KVM_INTEL|KVM_X86|TUN|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|HIDRAW|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
+          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|KVM|KVM_INTEL|KVM_X86|TUN|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
           test -z "$unexpected"
 
       - name: Build minimal Intel 3945 firmware package

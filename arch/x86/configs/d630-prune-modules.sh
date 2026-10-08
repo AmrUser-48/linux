@@ -17,7 +17,7 @@ mv "$tmp" .config
 # - KVM/kvm-intel: QEMU hardware acceleration
 # - tun: QEMU TAP networking
 # - USB storage/phone networking
-# - joystick userspace interface / raw HID / uinput
+# - joystick userspace interface / raw HID (built-in) / uinput
 # - binfmt_misc
 for opt in \
   TIGON3 \
@@ -29,7 +29,6 @@ for opt in \
   USB_NET_RNDIS_HOST \
   USB_NET_CDC_NCM \
   INPUT_JOYDEV \
-  HIDRAW \
   INPUT_UINPUT \
   BINFMT_MISC
 do
