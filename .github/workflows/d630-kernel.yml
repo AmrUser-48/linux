@@ -141,7 +141,7 @@ jobs:
 
           echo "=== Remaining optional modules ==="
           grep '=m$' .config || true
-          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|KVM|KVM_INTEL|KVM_X86|TUN|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
+          unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|KVM|KVM_INTEL|KVM_X86|HAVE_KVM_IRQ_BYPASS|IRQ_BYPASS_MANAGER|TUN|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
           test -z "$unexpected"
 
       - name: Build minimal Intel 3945 firmware package
