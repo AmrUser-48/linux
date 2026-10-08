@@ -37,7 +37,7 @@ jobs:
             ca-certificates git make gcc g++ bc bison flex \
             libssl-dev libelf-dev libdw-dev dwarves \
             cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
-            python3 file
+            python3 file curl
 
       - name: Checkout
         uses: actions/checkout@v5
@@ -135,6 +135,12 @@ jobs:
           unexpected="$(grep '=m$' .config | grep -Ev '^CONFIG_(TIGON3|USB_STORAGE|USB_NET_CDCETHER|USB_NET_RNDIS_HOST|USB_NET_CDC_NCM|INPUT_JOYDEV|HIDRAW|INPUT_UINPUT|BINFMT_MISC)=m$' || true)"
           test -z "$unexpected"
 
+      - name: Build D630 firmware package
+        shell: bash
+        run: |
+          set -euxo pipefail
+          bash scripts/d630-firmware-package.sh ..
+
       - name: Build kernel packages
         shell: bash
         run: |
@@ -159,7 +165,7 @@ jobs:
           ls -lh ../linux-image-*.deb
 
           echo "=== packages ==="
-          ls -lh ../linux-*.deb
+          ls -lh ../linux-*.deb ../d630-firmware-iwl3945_*.deb
 
           echo "=== architecture ==="
           file arch/x86/boot/bzImage
@@ -172,7 +178,7 @@ jobs:
         run: |
           set -euxo pipefail
           cd ..
-          sha256sum linux-*.deb > SHA256SUMS-d630-core2.txt
+          sha256sum linux-*.deb d630-firmware-iwl3945_*.deb > SHA256SUMS-d630-core2.txt
 
       - name: Upload kernel packages
         uses: actions/upload-artifact@v4
@@ -180,6 +186,7 @@ jobs:
           name: linux-d630-core2-${{ github.sha }}
           path: |
             ../linux-*.deb
+            ../d630-firmware-iwl3945_*.deb
             ../SHA256SUMS-d630-core2.txt
           if-no-files-found: error
 
@@ -223,6 +230,7 @@ jobs:
           - zram built-in with LZ4 only (other zram compressors disabled)
           - Btrfs and NTFS3 built-in
           - Intel PRO/Wireless 3945ABG support
+          - separate minimal d630-firmware-iwl3945 Debian package (iwlwifi-3945-2.ucode)
           - USB joystick/gamepad support
           - only a small optional module whitelist
           - EFI/UEFI kernel boot support disabled
