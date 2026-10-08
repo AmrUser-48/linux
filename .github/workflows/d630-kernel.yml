@@ -1,0 +1,209 @@
+name: Dell Latitude D630 kernel
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: d630-kernel
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  build:
+    name: Build D630 Core 2 kernel
+    runs-on: ubuntu-22.04
+    container:
+      image: debian:12
+
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      ARCH: x86_64
+      KCFLAGS: -O2 -pipe -march=core2 -mtune=core2
+      KCPPFLAGS: -march=core2 -mtune=core2
+
+    steps:
+      - name: Install build dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates git make gcc g++ bc bison flex \
+            libssl-dev libelf-dev libdw-dev dwarves \
+            cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
+            python3 file
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Prepare D630 configuration
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          make x86_64_defconfig
+          scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630.config
+          make olddefconfig
+
+          echo "=== D630 configuration ==="
+          for opt in \
+            X86_MSR \
+            DRM_I915 \
+            DRM_SIMPLEDRM \
+            FB_VESA \
+            AGP_INTEL \
+            ACPI \
+            ACPI_BATTERY \
+            X86_ACPI_CPUFREQ \
+            CPU_IDLE \
+            X86_INTEL_IDLE \
+            SENSORS_CORETEMP \
+            SND_HDA_INTEL \
+            SND_HDA_CODEC_SIGMATEL \
+            USB_EHCI_HCD \
+            USB_OHCI_HCD \
+            USB_UHCI_HCD \
+            TIGON3 \
+            IWL3945 \
+            IWL4965 \
+            B43 \
+            ZRAM \
+            ZSMALLOC \
+            EXT4_FS \
+            BTRFS_FS \
+            NTFS3_FS \
+            VFAT_FS \
+            ISO9660_FS \
+            MEDIA_SUPPORT \
+            DVB_CORE \
+            BLUETOOTH \
+            IEEE1394 \
+            THUNDERBOLT \
+            USB_XHCI_HCD; do
+            ./scripts/config --state "CONFIG_${opt}" || true
+          done
+
+          test "$(./scripts/config --state CONFIG_X86_MSR | tr -d ' ')" = "CONFIG_X86_MSR=y"
+          test "$(./scripts/config --state CONFIG_DRM_I915 | tr -d ' ')" = "CONFIG_DRM_I915=y"
+          test "$(./scripts/config --state CONFIG_ZRAM | tr -d ' ')" = "CONFIG_ZRAM=y"
+          test "$(./scripts/config --state CONFIG_BTRFS_FS | tr -d ' ')" = "CONFIG_BTRFS_FS=y"
+          test "$(./scripts/config --state CONFIG_NTFS3_FS | tr -d ' ')" = "CONFIG_NTFS3_FS=y"
+          test "$(./scripts/config --state CONFIG_MEDIA_SUPPORT | tr -d ' ')" = "CONFIG_MEDIA_SUPPORT=n"
+          test "$(./scripts/config --state CONFIG_DVB_CORE | tr -d ' ')" = "CONFIG_DVB_CORE=n"
+          test "$(./scripts/config --state CONFIG_BLUETOOTH | tr -d ' ')" = "CONFIG_BLUETOOTH=n"
+          test "$(./scripts/config --state CONFIG_IEEE1394 | tr -d ' ')" = "CONFIG_IEEE1394=n"
+          test "$(./scripts/config --state CONFIG_THUNDERBOLT | tr -d ' ')" = "CONFIG_THUNDERBOLT=n"
+          test "$(./scripts/config --state CONFIG_USB_XHCI_HCD | tr -d ' ')" = "CONFIG_USB_XHCI_HCD=n"
+
+          ./scripts/config --state CONFIG_ZRAM_DEF_COMP_LZ4
+          ./scripts/config --state CONFIG_MODULES
+          ./scripts/config --state CONFIG_HZ_250
+
+      - name: Build kernel packages
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          export LOCALVERSION=-d630-core2
+          export KBUILD_BUILD_USER=AmrUser-48
+          export KBUILD_BUILD_HOST=github-actions
+          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
+
+          make -j2 \
+            bindeb-pkg \
+            LOCALVERSION="${LOCALVERSION}" \
+            INSTALL_MOD_STRIP=1
+
+      - name: Validate kernel image
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          echo "=== kernel image ==="
+          ls -lh ../linux-image-*.deb
+
+          echo "=== packages ==="
+          ls -lh ../linux-*.deb
+
+          echo "=== architecture ==="
+          file arch/x86/boot/bzImage
+
+          echo "=== CPU flags in build config ==="
+          grep -E 'CONFIG_(X86_NATIVE_CPU|X86_GENERIC|MCORE2|CPU_SUP_INTEL)=' .config || true
+
+      - name: Checksums
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd ..
+          sha256sum linux-*.deb > SHA256SUMS-d630-core2.txt
+
+      - name: Upload kernel packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-d630-core2-${{ github.sha }}
+          path: |
+            ../linux-*.deb
+            ../SHA256SUMS-d630-core2.txt
+          if-no-files-found: error
+
+  release:
+    name: Publish D630 kernel release
+    needs: build
+    runs-on: ubuntu-22.04
+
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: d630-${{ github.sha }}
+
+    steps:
+      - name: Download kernel packages
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-d630-core2-${{ github.sha }}
+          path: dist
+
+      - name: Publish GitHub release
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd dist
+          cat > release-notes.md <<EOF
+          ## Dell Latitude D630 / Core 2 kernel
+
+          Built from commit ${{ github.sha }} in a Debian 12 container.
+
+          Target:
+          - Dell Latitude D630
+          - Intel Core 2 Duo
+          - Intel 965GM / GMA X3100
+          - legacy BIOS
+          - Debian 12 x86_64
+
+          Configuration highlights:
+          - i915 DRM and legacy VESA framebuffer
+          - Dell ACPI/platform support
+          - MSR built-in
+          - zram built-in with LZ4
+          - Btrfs and NTFS3 built-in
+          - DVB/TV/camera multimedia support removed
+          - Bluetooth, FireWire and newer USB-C/USB4/Thunderbolt support removed
+          - Core 2 compiler tuning
+
+          This is an experimental hardware-specific kernel. Keep a known-good
+          Debian kernel installed as a fallback.
+          EOF
+
+          gh release create "${TAG}" \
+            linux-*.deb \
+            SHA256SUMS-d630-core2.txt \
+            --repo "${GITHUB_REPOSITORY}" \
+            --title "Dell Latitude D630 kernel ${{ github.sha }}" \
+            --notes-file release-notes.md \
+            --target "${GITHUB_SHA}"
