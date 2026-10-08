@@ -38,4 +38,3 @@ echo '=== remaining module settings ==='
 # KVM_X86 is an internal tristate selected by KVM and therefore survives as =m.
 grep -E '=m
  .config || true
-grep -E '=m$' .config || true
