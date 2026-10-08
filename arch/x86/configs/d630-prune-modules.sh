@@ -1,7 +1,7 @@
 #!/bin/sh
-# Aggressively remove loadable modules from the D630 configuration.
-# Hardware needed for boot/use is kept built-in in d630.config; only this
-# small whitelist remains loadable.
+# Aggressively trim loadable modules for the D630 profile.
+# Start from x86_64_defconfig, convert every =m to =n, then restore only
+# the explicit optional module whitelist below.
 
 set -eu
 
@@ -12,14 +12,31 @@ tmp=.config.d630-prune.tmp
 sed -E 's/^(CONFIG_[A-Za-z0-9_]+)=m$/\1=n/' .config > "$tmp"
 mv "$tmp" .config
 
-# Optional drivers/interfaces kept as modules.
-for opt in   TIGON3   KVM   KVM_INTEL   TUN   USB_STORAGE   USB_NET_CDCETHER   USB_NET_RNDIS_HOST   USB_NET_CDC_NCM   INPUT_JOYDEV   HIDRAW   INPUT_UINPUT   BINFMT_MISC
+# Optional modules only:
+# - tg3: Ethernet fallback
+# - KVM/kvm-intel: QEMU hardware acceleration
+# - tun: QEMU TAP networking
+# - USB storage/phone networking
+# - joystick userspace interface / raw HID / uinput
+# - binfmt_misc
+for opt in \
+  TIGON3 \
+  KVM \
+  KVM_INTEL \
+  TUN \
+  USB_STORAGE \
+  USB_NET_CDCETHER \
+  USB_NET_RNDIS_HOST \
+  USB_NET_CDC_NCM \
+  INPUT_JOYDEV \
+  HIDRAW \
+  INPUT_UINPUT \
+  BINFMT_MISC
 do
   ./scripts/config --module "$opt"
 done
 
-# The profile deliberately keeps loadable-module support but avoids module
-# overhead such as unloading, version CRCs, compression, signing and debug.
+# Keep module support but remove module-management and metadata overhead.
 ./scripts/config --enable MODULES
 ./scripts/config --disable MODULE_UNLOAD
 ./scripts/config --disable MODULE_FORCE_UNLOAD
@@ -35,6 +52,4 @@ done
 make olddefconfig
 
 echo '=== remaining module settings ==='
-# KVM_X86 is an internal tristate selected by KVM and therefore survives as =m.
-grep -E '=m
- .config || true
+grep '=m$' .config || true
