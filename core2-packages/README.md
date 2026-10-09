@@ -7,10 +7,48 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 11:39:35 UTC — Core 2 optimized ncmpcpp 0.9.2-2+core2.1~20261009113534
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/BUILD-INFO.txt)
+- [ncmpcpp_0.9.2-2+core2.1.20261009113534_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2%2Bcore2.1.20261009113534_amd64.deb)
+- [ncmpcpp_0.9.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2.debian.tar.xz)
+- [ncmpcpp_0.9.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2.dsc)
+- [ncmpcpp_0.9.2.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2.orig.tar.bz2)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/release-notes.md)
+- [SHA256SUMS-core2-ncmpcpp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/SHA256SUMS-core2-ncmpcpp.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534)
+
+### 2026-10-09 10:46:26 UTC — Core 2 system dash 0.5.12-2+core2.1~20261009104558
+- [ash_0.5.12-2+core2.1.20261009104558_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/ash_0.5.12-2%2Bcore2.1.20261009104558_all.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/BUILD-INFO.txt)
+- [dash_0.5.12-2+core2.1.20261009104558_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/dash_0.5.12-2%2Bcore2.1.20261009104558_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/release-notes.md)
+- [SHA256SUMS-core2-dash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/SHA256SUMS-core2-dash.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-dash-0.5.12-2-core2.1-20261009104558)
+
+### 2026-10-09 10:45:21 UTC — Core 2 system bash 5.2.15-2+core2.1~20261009104102
+- [bash-builtins_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-builtins_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb)
+- [bash-doc_5.2.15-2+core2.1.20261009104102_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-doc_5.2.15-2%2Bcore2.1.20261009104102_all.deb)
+- [bash-static_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-static_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb)
+- [bash_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/release-notes.md)
+- [SHA256SUMS-core2-bash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/SHA256SUMS-core2-bash.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-bash-5.2.15-2-core2.1-20261009104102)
+
+### 2026-10-09 10:40:01 UTC — Core 2 system coreutils 9.1-1+core2.1~20261009103756
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/BUILD-INFO.txt)
+- [coreutils_9.1-1+core2.1.20261009103756_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/coreutils_9.1-1%2Bcore2.1.20261009103756_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/release-notes.md)
+- [SHA256SUMS-core2-coreutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/SHA256SUMS-core2-coreutils.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-coreutils-9.1-1-core2.1-20261009103756)
+
 ### 2026-10-09 08:30:27 UTC — Core 2 optimized neovim 0.7.2-7+core2.1~20261009082328
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/BUILD-INFO.txt)
-- [neovim_0.7.2-7+core2.1.20261009082328_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim_0.7.2-7%2Bcore2.1.20261009082328_amd64.deb)
 - [neovim-runtime_0.7.2-7+core2.1.20261009082328_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim-runtime_0.7.2-7%2Bcore2.1.20261009082328_all.deb)
+- [neovim_0.7.2-7+core2.1.20261009082328_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim_0.7.2-7%2Bcore2.1.20261009082328_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/SHA256SUMS-core2-neovim.txt)
 - _Debian source archive assets are not attached to this release._
@@ -18,8 +56,8 @@ The index below is refreshed automatically after each successful Core 2 package 
 
 ### 2026-10-09 08:09:16 UTC — Core 2 optimized neovim 0.7.2-7+core2.1~20261009075932
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/BUILD-INFO.txt)
-- [neovim_0.7.2-7+core2.1.20261009075932_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/neovim_0.7.2-7%2Bcore2.1.20261009075932_amd64.deb)
 - [neovim-runtime_0.7.2-7+core2.1.20261009075932_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/neovim-runtime_0.7.2-7%2Bcore2.1.20261009075932_all.deb)
+- [neovim_0.7.2-7+core2.1.20261009075932_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/neovim_0.7.2-7%2Bcore2.1.20261009075932_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/SHA256SUMS-core2-neovim.txt)
 - _Debian source archive assets are not attached to this release._
@@ -29,18 +67,18 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/release-notes.md)
 - [SHA256SUMS-core2-zsh.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/SHA256SUMS-core2-zsh.txt)
-- [zsh_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh_5.9-4%2Bcore2.1.20261009061847_amd64.deb)
 - [zsh-common_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-common_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-doc_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-doc_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-static_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-static_5.9-4%2Bcore2.1.20261009061847_amd64.deb)
+- [zsh_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh_5.9-4%2Bcore2.1.20261009061847_amd64.deb)
 - _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847)
 
 ### 2026-10-09 06:17:34 UTC — Core 2 optimized bash 5.2.15-2+core2.1~20261009061252
-- [bash_5.2.15-2+core2.1.20261009061252_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash_5.2.15-2%2Bcore2.1.20261009061252_amd64.deb)
 - [bash-builtins_5.2.15-2+core2.1.20261009061252_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash-builtins_5.2.15-2%2Bcore2.1.20261009061252_amd64.deb)
 - [bash-doc_5.2.15-2+core2.1.20261009061252_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash-doc_5.2.15-2%2Bcore2.1.20261009061252_all.deb)
 - [bash-static_5.2.15-2+core2.1.20261009061252_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash-static_5.2.15-2%2Bcore2.1.20261009061252_amd64.deb)
+- [bash_5.2.15-2+core2.1.20261009061252_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash_5.2.15-2%2Bcore2.1.20261009061252_amd64.deb)
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/release-notes.md)
 - [SHA256SUMS-core2-bash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/SHA256SUMS-core2-bash.txt)
@@ -49,8 +87,8 @@ The index below is refreshed automatically after each successful Core 2 package 
 
 ### 2026-10-09 06:11:33 UTC — Core 2 optimized lame 3.100-6+core2.1~20261009061017
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/BUILD-INFO.txt)
-- [lame_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 - [lame-doc_3.100-6+core2.1.20261009061017_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame-doc_3.100-6%2Bcore2.1.20261009061017_all.deb)
+- [lame_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 - [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/release-notes.md)
 - [SHA256SUMS-core2-lame.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/SHA256SUMS-core2-lame.txt)
