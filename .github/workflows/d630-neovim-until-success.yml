@@ -8,7 +8,7 @@ on:
       - ".ci/neovim-retry-trigger.txt"
 
 concurrency:
-  group: neovim-until-success
+  group: neovim-until-success-rescue
   cancel-in-progress: false
 
 permissions:
