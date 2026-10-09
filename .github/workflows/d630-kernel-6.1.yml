@@ -177,7 +177,7 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          cd linux-6.1
+          cd linux-6.1.187
 
           export LOCALVERSION=-d630-core2
           export KBUILD_BUILD_USER=AmrUser-48
@@ -193,7 +193,7 @@ jobs:
         run: |
           set -euxo pipefail
           test -f linux-6.1.187/arch/x86/boot/bzImage
-          file linux-6.1/arch/x86/boot/bzImage
+          file linux-6.1.187/arch/x86/boot/bzImage
 
           echo "=== Debian packages ==="
           ls -lh linux-image-*.deb d630-firmware-iwl3945_*.deb
@@ -237,7 +237,7 @@ jobs:
       - name: Download release artifacts
         uses: actions/download-artifact@v4
         with:
-          name: linux-d630-core2-6.1-${{ github.sha }}
+          name: linux-d630-core2-debian-6.1.187-${{ github.sha }}
           path: dist
 
       - name: Publish GitHub release
