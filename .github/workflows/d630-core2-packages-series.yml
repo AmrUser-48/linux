@@ -41,7 +41,7 @@ jobs:
             shell-editors) packages=(bash zsh nano neovim) ;;
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
-            all) packages=(bash zsh nano neovim lame zstd xz-utils 7zip ffmpeg mpv curl mesa) ;;
+            all) packages=(lame bash zsh nano neovim zstd xz-utils 7zip ffmpeg mpv curl mesa) ;;
             *) echo "::error::Unknown package series: $SERIES"; exit 1 ;;
           esac
 
