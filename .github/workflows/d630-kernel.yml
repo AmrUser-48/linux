@@ -109,6 +109,8 @@ jobs:
           test "$(config_state CONFIG_DEVTMPFS)" = "y"
           test "$(config_state CONFIG_DEVTMPFS_MOUNT)" = "y"
           test "$(config_state CONFIG_MICROCODE)" = "y"
+          test "$(config_state CONFIG_CPU_FREQ_GOV_SCHEDUTIL)" = "y"
+          test "$(config_state CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL)" = "y"
 
           test "$(config_state CONFIG_VIRTUALIZATION)" = "y"
           test "$(config_state CONFIG_KVM)" = "m"
