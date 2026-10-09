@@ -7,3 +7,4 @@ btop, htop and xorg-server.
 Skip any package with an existing Core 2 release containing .deb assets.
 Capture failed build logs, continue through the entire list, and summarize failures
 for root-cause fixes and a later rerun that skips packages already released.
+Retry after fixing the YAML workflow registration issue; run new-tools sequentially.
