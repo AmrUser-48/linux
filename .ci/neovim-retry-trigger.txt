@@ -1,7 +1,5 @@
-Neovim rebuild request
-Requested: build and publish the Core 2 optimized Neovim Debian package until one attempt succeeds.
-Controller: .github/workflows/d630-neovim-until-success.yml
+Neovim Debian 12 package build verification request
 
-Retry controller pass for updated Neovim build/test fallback.
-
-Retry controller run after metadata fix commit 3022d03b7c8ee3694ba2bb4a976b7cacc227065d.
+The Core 2 package workflow already contains the metadata variable fix from the previous commit.
+The verifier keeps one active Neovim package build, cancels duplicate Neovim builds and the
+obsolete retry controller, and stops after a failure so logs can be inspected before any next run.
