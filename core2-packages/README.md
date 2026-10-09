@@ -15,7 +15,7 @@ Each target runs as a separate workflow, and the train waits for its release to 
 
 ## Build policy
 
-The workflow fetches official Debian Bookworm and Bookworm-security source packages, retains Debian's packaging and patches, and appends +core2.1 to the source version. Debian's default -O2 optimization and hardening settings are retained, with -march=core2 -mtune=core2 appended to C, C++ and Fortran flags. Binary packages and their checksums are published in a package-specific GitHub Release.
+The workflow fetches official Debian Bookworm and Bookworm-security source packages, retains Debian's packaging and patches, and appends a unique +core2.1~timestamp revision so each serial build can upgrade the previous custom package. It uses -O2 -march=core2 -mtune=core2 for Mesa, Bash, Zsh, Nano, Neovim and curl; the media/compression batch (LAME, FFmpeg, mpv, 7-Zip, zstd and xz-utils) uses -O3 -march=core2 -mtune=core2. Debian's package-specific hardening flags are retained. The build verifies that the selected optimization and Core 2 flags reached dpkg-buildflags. Binary packages and their checksums are published in a package-specific GitHub Release.
 
 The artifacts target Intel Core 2-class systems (such as the D630 CPUs) and are not intended as generic amd64 replacements. They use Debian's standard ABI, but compiler-generated instructions can require Core 2 or a later CPU. Keep the stock Debian packages available for rollback.
 
