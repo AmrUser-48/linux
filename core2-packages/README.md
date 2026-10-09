@@ -7,6 +7,48 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 19:04:20 UTC — Core 2 optimized mpv 0.35.1-4+core2.1~20261009190224
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/BUILD-INFO.txt)
+- [libmpv2_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/libmpv2_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb)
+- [mpv_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb)
+- [mpv_0.35.1-4.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4.debian.tar.xz)
+- [mpv_0.35.1-4.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4.dsc)
+- [mpv_0.35.1.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1.orig.tar.gz)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/release-notes.md)
+- [SHA256SUMS-core2-mpv.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/SHA256SUMS-core2-mpv.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224)
+
+### 2026-10-09 19:03:51 UTC — Core 2 system libcap2 1:2.66-4+deb12u3+core2.1~20261009190327
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/BUILD-INFO.txt)
+- [libcap2-bin_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2-bin_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
+- [libcap2_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
+- [libpam-cap_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libpam-cap_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/release-notes.md)
+- [SHA256SUMS-core2-libcap2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/SHA256SUMS-core2-libcap2.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327)
+
+### 2026-10-09 19:02:36 UTC — Core 2 system ncurses 6.4-4+core2.1~20261009185822
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/BUILD-INFO.txt)
+- [lib32ncurses6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32ncurses6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [lib32ncursesw6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32ncursesw6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [lib32tinfo6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32tinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libncurses5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncurses5_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libncurses6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncurses6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libncursesw5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncursesw5_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libncursesw6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncursesw6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libtinfo5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo5_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [libtinfo6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [ncurses-base_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-base_6.4-4%2Bcore2.1.20261009185822_all.deb)
+- [ncurses-bin_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-bin_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [ncurses-doc_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-doc_6.4-4%2Bcore2.1.20261009185822_all.deb)
+- [ncurses-examples_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-examples_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+- [ncurses-term_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-term_6.4-4%2Bcore2.1.20261009185822_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/release-notes.md)
+- [SHA256SUMS-core2-ncurses.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/SHA256SUMS-core2-ncurses.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822)
+
 ### 2026-10-09 19:00:59 UTC — Core 2 optimized ffmpeg 7:5.1.9-0+deb12u1+core2.1~20261009183944
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/BUILD-INFO.txt)
 - [ffmpeg-doc_5.1.9-0+deb12u1+core2.1.20261009183944_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg-doc_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_all.deb)
