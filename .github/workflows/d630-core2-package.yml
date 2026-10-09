@@ -135,7 +135,7 @@ jobs:
           echo "Staged Debian source package files:"
           find "$GITHUB_WORKSPACE/release-artifacts" -maxdepth 1 -type f \
             \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' -o -name '*.diff.gz' -o -name '*.tar.*' \) \
-            -printf '  %f (%s bytes)\\n' | sort
+            -print | sort
 
           SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
@@ -539,7 +539,7 @@ jobs:
 
           start = document.index(start_marker) + len(start_marker)
           end = document.index(end_marker, start)
-          replacement = "\\n" + "\\n".join(lines).rstrip() + "\\n"
+          replacement = chr(10) + chr(10).join(lines).rstrip() + chr(10)
           document = document[:start] + replacement + document[end:]
           readme_path.write_text(document, encoding="utf-8")
           PY
