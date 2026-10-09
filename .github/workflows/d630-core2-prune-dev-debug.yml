@@ -27,9 +27,13 @@ jobs:
           # tags. Only remove Debian binary assets whose actual package name
           # ends in -dev, -dbg or -dbgsym; leave runtime packages and metadata.
           asset_list="$RUNNER_TEMP/core2-release-assets.tsv"
+          release_tags="$RUNNER_TEMP/core2-release-tags.txt"
           gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
             --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name as $tag | .assets[] | [$tag, .name] | @tsv' \
             > "$asset_list"
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
+            --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name' \
+            | sort -u > "$release_tags"
 
           removed=0
           while IFS=$'\t' read -r tag asset; do
@@ -45,6 +49,30 @@ jobs:
                 ;;
             esac
           done < "$asset_list"
+
+          # Older releases may have a checksum line for a package asset removed
+          # by an earlier pass. Strip those lines from every Core 2 SHA256SUMS
+          # manifest and upload the corrected manifest only when it changed.
+          while IFS= read -r tag; do
+            [[ -n "$tag" ]] || continue
+            tag_dir="$RUNNER_TEMP/checksums-${tag//[^A-Za-z0-9._-]/_}"
+            mkdir -p "$tag_dir"
+            if ! gh release download "$tag" --repo "$GITHUB_REPOSITORY" \
+                --pattern 'SHA256SUMS*.txt' --dir "$tag_dir"; then
+              echo "::warning::Could not download checksum manifest for $tag; leaving it untouched."
+              continue
+            fi
+            shopt -s nullglob
+            sum_files=("$tag_dir"/SHA256SUMS*.txt)
+            for sum_file in "${sum_files[@]}"; do
+              cp "$sum_file" "$sum_file.before"
+              sed -E -i '/  [^ ]+-(dev|dbg|dbgsym)_[^ ]+\.deb$/d' "$sum_file"
+              if ! cmp -s "$sum_file" "$sum_file.before"; then
+                echo "Updating checksum manifest for $tag: $(basename "$sum_file")"
+                gh release upload "$tag" "$sum_file" --repo "$GITHUB_REPOSITORY" --clobber
+              fi
+            done
+          done < "$release_tags"
 
           {
             echo "## Core 2 package release cleanup complete"
