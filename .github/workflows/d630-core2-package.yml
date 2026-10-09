@@ -101,23 +101,84 @@ jobs:
             exit 1
           fi
 
-          # Skip development/debug binary stanzas during debhelper processing.
-          # noautodbgsym below also disables automatically generated dbgsym packages.
-          mapfile -t EXCLUDED_BINARY_PACKAGES < <(
-            awk '$1 == "Package:" { print $2 }' "$SOURCE_DIR/debian/control" |
-              awk '/-dev$/ || /-dbg$/ || /-dbgsym$/'
-          )
-          DH_OPTIONS=""
-          for excluded_package in "${EXCLUDED_BINARY_PACKAGES[@]}"; do
-            DH_OPTIONS="$DH_OPTIONS -N$excluded_package"
-          done
-          echo "DH_OPTIONS=$DH_OPTIONS" >> "$GITHUB_ENV"
-          if (( ${#EXCLUDED_BINARY_PACKAGES[@]} > 0 )); then
-            printf 'Excluding development/debug binary stanzas: %s\n' "${EXCLUDED_BINARY_PACKAGES[*]}"
-          else
-            echo "No explicit development/debug binary package stanzas to exclude."
+          if [[ "$PACKAGE" == "neovim" ]]; then
+            # Debian's CI test command forces an unavailable Tree-sitter C parser
+            # to be fatal. Without a parser fixture in this source package, let
+            # Neovim's own helper mark those parser-only tests as skipped.
+            # Also filter the process-tree test that leaves a sleep descendant
+            # alive in the GitHub container runner; keep all other tests enabled.
+            if ! grep -q 'TEST_FILTER_OUT' "$SOURCE_DIR/debian/rules"; then
+              echo "::error::Expected Neovim Debian TEST_FILTER_OUT setting was not found"
+              exit 1
+            fi
+            # Debian's makefile may express the empty value as a Make variable
+            # expansion, so replace the assignment generically rather than
+            # assuming the expanded shell text is present literally in the file.
+            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="entire"/g' "$SOURCE_DIR/debian/rules"
+            if ! grep -Fq 'entire' "$SOURCE_DIR/debian/rules"; then
+              echo "::error::Failed to set Neovim's test filter"
+              exit 1
+            fi
           fi
 
+          # Do not process explicit development/debug binary packages. Automatic
+          # dbgsym generation is disabled with DEB_BUILD_OPTIONS=noautodbgsym.
+          DH_OPTIONS="$(awk '$1 == "Package:" { p=$2; if (p ~ /-dev$/ || p ~ /-dbg$/ || p ~ /-dbgsym$/) print "-N" p }' "$SOURCE_DIR/debian/control" | paste -sd ' ' -)"
+          echo "DH_OPTIONS=$DH_OPTIONS" >> "$GITHUB_ENV"
+          if [[ -n "$DH_OPTIONS" ]]; then
+            echo "Debhelper will skip development/debug packages:$DH_OPTIONS"
+          fi
+
+          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          NEW_VERSION="${ORIGINAL_VERSION}+core2.1~${BUILD_STAMP}"
+          # dch resolves debian/changelog from the current directory.
+          # apt-get source ran in SRCROOT; enter the unpacked source tree first.
+          cd "$SOURCE_DIR"
+          dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
+            "Rebuild for Intel Core 2 using -march=core2 -mtune=core2."
+
+          ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          test "$ACTUAL_VERSION" = "$NEW_VERSION"
+
+          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
+          printf 'CFLAGS=%s\nCXXFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" \
+            | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
+          grep -q -- '-march=core2' <<<"$CFLAGS"
+          grep -q -- '-mtune=core2' <<<"$CFLAGS"
+          grep -q -- '-march=core2' <<<"$CXXFLAGS"
+          grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
+
+          {
+            echo "package=$PACKAGE"
+            echo "source_version=$ORIGINAL_VERSION"
+            echo "package_version=$NEW_VERSION"
+            echo "source_dir=$SOURCE_DIR"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Compile and package
+        id: compile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
+          ORIGINAL_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -euxo pipefail
+
+          # Run build/tests unprivileged: permission tests must not get root's bypass.
+          BUILD_USER=core2build
+          if ! id "$BUILD_USER" >/dev/null 2>&1; then
+            useradd --create-home --shell /bin/bash "$BUILD_USER"
+          fi
+          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
+
+          cd "$SOURCE_DIR"
+          BUILD_MODE="standard-debian-build"
           if [[ "$PACKAGE" == "neovim" ]]; then
             # Try the full Debian build/test sequence first.
             if runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
@@ -163,7 +224,7 @@ jobs:
             binary_arch="$(dpkg-deb -f "$deb" Architecture)"
             case "$binary_package" in
               *-dev|*-dbg|*-dbgsym)
-                echo "::error::Forbidden development/debug package was generated: $binary_package"
+                echo "::error::Refusing development/debug package output: $binary_package"
                 exit 1
                 ;;
             esac
@@ -262,249 +323,7 @@ jobs:
           - Build/test mode: ${BUILD_MODE}
           - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
           - Debian's hardening settings retained
-          - Only normal runtime/installable packages are published; -dev, -dbg and -dbgsym outputs are excluded
-
-          These packages are intended for the D630/Core 2 test machine, not as
-          generic replacements for every amd64 computer. Keep stock Debian
-          packages available as a rollback path. For Mesa, review the package
-          list and install related runtime libraries/drivers together; do not
-          blindly install development packages that are not needed.
-          EOF
-
-          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh release upload "$RELEASE_TAG" ./*.deb ./*.txt release-notes.md \
-              --repo "$GITHUB_REPOSITORY" --clobber
-            gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
-              --title "Core 2 optimized ${PACKAGE} ${PACKAGE_VERSION}" \
-              --notes-file release-notes.md
-          else
-            gh release create "$RELEASE_TAG" ./*.deb ./*.txt release-notes.md \
-              --repo "$GITHUB_REPOSITORY" \
-              --title "Core 2 optimized ${PACKAGE} ${PACKAGE_VERSION}" \
-              --notes-file release-notes.md
-          fi
- || true
-          )
-          DH_OPTIONS=""
-          for excluded_package in "${EXCLUDED_BINARY_PACKAGES[@]}"; do
-            DH_OPTIONS+=" -N${excluded_package}"
-          done
-          echo "DH_OPTIONS=$DH_OPTIONS" >> "$GITHUB_ENV"
-          if (( ${#EXCLUDED_BINARY_PACKAGES[@]} > 0 )); then
-            printf 'Excluding development/debug binary packages: %s\\n' "${EXCLUDED_BINARY_PACKAGES[*]}"
-          else
-            echo "No explicit development/debug binary package stanzas to exclude."
-          fi
-
-          if [[ "$PACKAGE" == "neovim" ]]; then
-            # Debian's CI test command forces an unavailable Tree-sitter C parser
-            # to be fatal. Without a parser fixture in this source package, let
-            # Neovim's own helper mark those parser-only tests as skipped.
-            # Also filter the process-tree test that leaves a sleep descendant
-            # alive in the GitHub container runner; keep all other tests enabled.
-            if ! grep -q 'TEST_FILTER_OUT' "$SOURCE_DIR/debian/rules"; then
-              echo "::error::Expected Neovim Debian TEST_FILTER_OUT setting was not found"
-              exit 1
-            fi
-            # Debian's makefile may express the empty value as a Make variable
-            # expansion, so replace the assignment generically rather than
-            # assuming the expanded shell text is present literally in the file.
-            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="entire"/g' "$SOURCE_DIR/debian/rules"
-            if ! grep -Fq 'entire' "$SOURCE_DIR/debian/rules"; then
-              echo "::error::Failed to set Neovim's test filter"
-              exit 1
-            fi
-          fi
-
-          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
-          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
-          NEW_VERSION="${ORIGINAL_VERSION}+core2.1~${BUILD_STAMP}"
-          # dch resolves debian/changelog from the current directory.
-          # apt-get source ran in SRCROOT; enter the unpacked source tree first.
-          cd "$SOURCE_DIR"
-          dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
-            "Rebuild for Intel Core 2 using -march=core2 -mtune=core2."
-
-          ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
-          test "$ACTUAL_VERSION" = "$NEW_VERSION"
-
-          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
-          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
-          printf 'CFLAGS=%s\nCXXFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" \
-            | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
-          grep -q -- '-march=core2' <<<"$CFLAGS"
-          grep -q -- '-mtune=core2' <<<"$CFLAGS"
-          grep -q -- '-march=core2' <<<"$CXXFLAGS"
-          grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
-          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
-          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
-
-          {
-            echo "package=$PACKAGE"
-            echo "source_version=$ORIGINAL_VERSION"
-            echo "package_version=$NEW_VERSION"
-            echo "source_dir=$SOURCE_DIR"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Compile and package
-        id: compile
-        shell: bash
-        env:
-          PACKAGE: ${{ inputs.package }}
-          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
-          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
-          ORIGINAL_VERSION: ${{ steps.source.outputs.source_version }}
-        run: |
-          set -euxo pipefail
-
-          # Run build/tests unprivileged: permission tests must not get root's bypass.
-          BUILD_USER=core2build
-          if ! id "$BUILD_USER" >/dev/null 2>&1; then
-            useradd --create-home --shell /bin/bash "$BUILD_USER"
-          fi
-          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
-
-          cd "$SOURCE_DIR"
-          BUILD_MODE="standard-debian-build"
-          if [[ "$PACKAGE" == "neovim" ]]; then
-            # Try the full Debian build/test sequence first.
-            if runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
-                HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-                dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 \
-                | tee "$GITHUB_WORKSPACE/neovim-tested-build.log"; then
-              BUILD_MODE="full-tests-passed"
-            else
-              # Only retry with nocheck when the log confirms a test-stage failure.
-              if ! grep -Eiq 'functional tests failed|unit tests failed|TEST FAILURE|[0-9]+ FAILED TEST' \
-                  "$GITHUB_WORKSPACE/neovim-tested-build.log"; then
-                echo "::error::Neovim failed outside its test suite; refusing the no-check fallback"
-                exit 1
-              fi
-              echo "::warning::Neovim tests failed in this CI environment; retrying after clean with Debian nocheck"
-              runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
-                HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-                debian/rules clean
-              runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
-                DEB_BUILD_OPTIONS="parallel=2 nocheck" \
-                HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-                dpkg-buildpackage -rfakeroot -us -uc -b -j2
-              BUILD_MODE="tests-skipped-after-test-failure"
-            fi
-          else
-            runuser --preserve-environment --user "$BUILD_USER" -- env \
-              HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-              dpkg-buildpackage -rfakeroot -us -uc -b -j2
-          fi
-          echo "build_mode=$BUILD_MODE" >> "$GITHUB_OUTPUT"
-          echo "CORE2_BUILD_MODE=$BUILD_MODE" >> "$GITHUB_ENV"
-
-          shopt -s nullglob
-          DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::Build produced no .deb packages for $PACKAGE"
-            exit 1
-          fi
-
-          for deb in "${DEBS[@]}"; do
-            binary_package="$(dpkg-deb -f "$deb" Package)"
-            binary_version="$(dpkg-deb -f "$deb" Version)"
-            binary_arch="$(dpkg-deb -f "$deb" Architecture)"
-            printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
-            test "$binary_version" = "$PACKAGE_VERSION"
-            case "$binary_arch" in amd64|all) ;; *) echo "Unexpected architecture $binary_arch in $deb"; exit 1 ;; esac
-            cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
-          done
-
-          printf '%s\n' \
-            "Package: $PACKAGE" \
-            "Debian Bookworm source version: $ORIGINAL_VERSION" \
-            "Core 2 package version: $PACKAGE_VERSION" \
-            "Target: amd64 / Intel Core 2" \
-            "Optimization level: $CORE2_OPT_LEVEL" \
-            "Build mode: $BUILD_MODE" \
-            "Flags: $CORE2_OPT_LEVEL -march=core2 -mtune=core2; Debian hardening retained" \
-            "Build source: official Debian Bookworm source package with Debian patches" \
-            > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
-
-      - name: Validate package set and create checksums
-        id: meta
-        shell: bash
-        env:
-          PACKAGE: ${{ inputs.package }}
-          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
-          SOURCE_VERSION: ${{ steps.source.outputs.source_version }}
-        run: |
-          set -euxo pipefail
-          cd "$GITHUB_WORKSPACE/release-artifacts"
-          shopt -s nullglob
-          DEBS=( ./*.deb )
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::No Debian packages staged"
-            exit 1
-          fi
-          sha256sum "${DEBS[@]#./}" > "SHA256SUMS-core2-${PACKAGE}.txt"
-          cat "SHA256SUMS-core2-${PACKAGE}.txt"
-
-          TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
-          RELEASE_TAG="core2-${PACKAGE}-${TAG_VERSION}"
-          {
-            echo "package_version=$PACKAGE_VERSION"
-            echo "source_version=$SOURCE_VERSION"
-            echo "release_tag=$RELEASE_TAG"
-            echo "optimization_level=$CORE2_OPT_LEVEL"
-          } >> "$GITHUB_OUTPUT"
-
-          echo "Release tag: $RELEASE_TAG"
-          ls -lh ./*.deb ./*.txt
-
-      - name: Upload package artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: core2-${{ inputs.package }}-${{ github.run_id }}
-          path: release-artifacts/*
-          if-no-files-found: error
-          retention-days: 7
-
-  release:
-    name: Publish Core 2 ${{ inputs.package }} packages
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    env:
-      GH_TOKEN: ${{ github.token }}
-      PACKAGE: ${{ inputs.package }}
-      SOURCE_VERSION: ${{ needs.build.outputs.source_version }}
-      PACKAGE_VERSION: ${{ needs.build.outputs.package_version }}
-      RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
-      OPT_LEVEL: ${{ needs.build.outputs.optimization_level }}
-      BUILD_MODE: ${{ needs.build.outputs.build_mode }}
-
-    steps:
-      - name: Download built packages
-        uses: actions/download-artifact@v4
-        with:
-          name: core2-${{ inputs.package }}-${{ github.run_id }}
-          path: dist
-
-      - name: Publish package release
-        shell: bash
-        run: |
-          set -euxo pipefail
-          cd dist
-          cat > release-notes.md <<EOF
-          ## Core 2 optimized Debian package: ${PACKAGE}
-
-          Built from official Debian Bookworm source package ${PACKAGE} ${SOURCE_VERSION},
-          with Debian's packaging and patches retained.
-
-          - Package version: ${PACKAGE_VERSION}
-          - Target CPU: Intel Core 2 family; amd64 architecture
-          - Optimization profile: ${OPT_LEVEL}
-          - Build/test mode: ${BUILD_MODE}
-          - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
-          - Debian's hardening settings retained
-          - Package set includes checksums and BUILD-INFO.txt
+          - Only normal runtime/installable packages are released; -dev, -dbg and -dbgsym outputs are excluded
 
           These packages are intended for the D630/Core 2 test machine, not as
           generic replacements for every amd64 computer. Keep stock Debian
