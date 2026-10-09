@@ -7,6 +7,30 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 16:40:55 UTC — Core 2 optimized nano 7.2-1+deb12u1+core2.1~20261009163909
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/BUILD-INFO.txt)
+- [nano-tiny_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano-tiny_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb)
+- [nano_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb)
+- [nano_7.2-1+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1.debian.tar.xz)
+- [nano_7.2-1+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1.dsc)
+- [nano_7.2.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2.orig.tar.xz)
+- [nano_7.2.orig.tar.xz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2.orig.tar.xz.asc)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/release-notes.md)
+- [SHA256SUMS-core2-nano.txt](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/SHA256SUMS-core2-nano.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-nano-7.2-1-deb12u1-core2.1-20261009163909)
+
+### 2026-10-09 16:11:55 UTC — Core 2 system readline 8.2-1.3+core2.1~20261009161033
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/BUILD-INFO.txt)
+- [lib32readline8_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/lib32readline8_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb)
+- [libreadline8_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/libreadline8_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb)
+- [readline-common_8.2-1.3+core2.1.20261009161033_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/readline-common_8.2-1.3%2Bcore2.1.20261009161033_all.deb)
+- [readline-doc_8.2-1.3+core2.1.20261009161033_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/readline-doc_8.2-1.3%2Bcore2.1.20261009161033_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/release-notes.md)
+- [rlfe_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/rlfe_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb)
+- [SHA256SUMS-core2-readline.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/SHA256SUMS-core2-readline.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-readline-8.2-1.3-core2.1-20261009161033)
+
 ### 2026-10-09 15:42:14 UTC — Core 2 system gawk 1:5.2.1-2+core2.1~20261009154053
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/BUILD-INFO.txt)
 - [gawk_5.2.1-2+core2.1.20261009154053_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/gawk_5.2.1-2%2Bcore2.1.20261009154053_amd64.deb)
