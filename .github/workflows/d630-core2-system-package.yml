@@ -53,6 +53,12 @@ on:
           - libffi
           - expat
           - libtirpc
+  workflow_call:
+    inputs:
+      package:
+        description: Debian Bookworm source package to rebuild for Intel Core 2
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -99,6 +105,10 @@ jobs:
           PACKAGE: ${{ inputs.package }}
         run: |
           set -euxo pipefail
+          case "$PACKAGE" in
+            glibc|gcc-12|binutils|coreutils|bash|dash|systemd|util-linux|dpkg|apt|openssl|zlib|libxcrypt|ncurses|readline|libcap2|libselinux|libseccomp|acl|attr|findutils|grep|sed|gawk|diffutils|tar|gzip|bzip2|procps|e2fsprogs|psmisc|shadow|pam|iproute2|kmod|xz-utils|zstd|pcre2|mpfr4|gmp|libffi|expat|libtirpc) ;;
+            *) echo "::error::Package is not on the Core 2 system-package allowlist: $PACKAGE"; exit 1 ;;
+          esac
           # Keep foundational system packages on Debian's normal -O2 profile.
           # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
           opt="-O2"
