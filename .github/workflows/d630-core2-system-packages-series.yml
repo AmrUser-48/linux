@@ -1,0 +1,91 @@
+name: Core 2 optimized Debian system package train
+run-name: "Core2 system package train: ${{ inputs.series }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      series:
+        description: Which Core 2 system packages to build
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+          - core-foundation
+          - toolchain
+          - runtime-libraries
+          - system-utilities
+          - text-compression
+
+concurrency:
+  group: core2-system-package-train
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  select:
+    name: Select packages
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.list.outputs.packages }}
+    steps:
+      - name: Build package list
+        id: list
+        shell: bash
+        env:
+          SERIES: ${{ inputs.series }}
+        run: |
+          set -euo pipefail
+          case "$SERIES" in
+            all)
+              packages=(glibc gcc-12 binutils coreutils bash dash systemd util-linux dpkg apt openssl zlib libxcrypt ncurses readline libcap2 libselinux libseccomp acl attr findutils grep sed gawk diffutils tar gzip bzip2 procps e2fsprogs psmisc shadow pam iproute2 kmod xz-utils zstd pcre2 mpfr4 gmp libffi expat libtirpc)
+              ;;
+            core-foundation)
+              packages=(glibc systemd coreutils bash dash util-linux dpkg apt)
+              ;;
+            toolchain)
+              packages=(gcc-12 binutils)
+              ;;
+            runtime-libraries)
+              packages=(openssl zlib libxcrypt ncurses readline libcap2 libselinux libseccomp acl attr pam pcre2 mpfr4 gmp libffi expat libtirpc)
+              ;;
+            system-utilities)
+              packages=(procps e2fsprogs psmisc shadow iproute2 kmod)
+              ;;
+            text-compression)
+              packages=(findutils grep sed gawk diffutils tar gzip bzip2 xz-utils zstd)
+              ;;
+            *)
+              echo "::error::Unknown system package series: $SERIES"
+              exit 1
+              ;;
+          esac
+
+          packages_json="$(printf '%s\n' "${packages[@]}" | jq -R . | jq -s -c .)"
+          echo "packages=$packages_json" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Core 2 system package train"
+            echo
+            echo "Selected series: `$SERIES`"
+            echo
+            printf '%s\n' "${packages[@]}" | sed 's/^/- /'
+            echo
+            echo "Build concurrency: 2 package jobs at a time."
+            echo "Each package publishes its own `core2-system-*` release."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  build:
+    name: Build ${{ matrix.package }}
+    needs: select
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        package: ${{ fromJSON(needs.select.outputs.packages) }}
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: ${{ matrix.package }}
+    permissions:
+      contents: write
