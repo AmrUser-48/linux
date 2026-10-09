@@ -4,7 +4,7 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 
 ## Published package downloads (newest first)
 
-The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Earlier releases predate source-archive uploads and therefore may not have all source files attached.
+The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
 ### 2026-10-09 08:30:27 UTC — Core 2 optimized neovim 0.7.2-7+core2.1~20261009082328
@@ -13,7 +13,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [neovim-runtime_0.7.2-7+core2.1.20261009082328_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim-runtime_0.7.2-7%2Bcore2.1.20261009082328_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/SHA256SUMS-core2-neovim.txt)
-- _Debian source archives are not attached to this older release; newly built releases include them._
+- _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009082328)
 
 ### 2026-10-09 08:09:16 UTC — Core 2 optimized neovim 0.7.2-7+core2.1~20261009075932
@@ -22,7 +22,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [neovim-runtime_0.7.2-7+core2.1.20261009075932_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/neovim-runtime_0.7.2-7%2Bcore2.1.20261009075932_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/SHA256SUMS-core2-neovim.txt)
-- _Debian source archives are not attached to this older release; newly built releases include them._
+- _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009075932)
 
 ### 2026-10-09 06:24:36 UTC — Core 2 optimized zsh 5.9-4+core2.1~20261009061847
@@ -33,7 +33,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [zsh-common_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-common_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-doc_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-doc_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-static_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-static_5.9-4%2Bcore2.1.20261009061847_amd64.deb)
-- _Debian source archives are not attached to this older release; newly built releases include them._
+- _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847)
 
 ### 2026-10-09 06:17:34 UTC — Core 2 optimized bash 5.2.15-2+core2.1~20261009061252
@@ -44,7 +44,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/release-notes.md)
 - [SHA256SUMS-core2-bash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/SHA256SUMS-core2-bash.txt)
-- _Debian source archives are not attached to this older release; newly built releases include them._
+- _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-bash-5.2.15-2-core2.1-20261009061252)
 
 ### 2026-10-09 06:11:33 UTC — Core 2 optimized lame 3.100-6+core2.1~20261009061017
@@ -54,7 +54,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 - [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/release-notes.md)
 - [SHA256SUMS-core2-lame.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/SHA256SUMS-core2-lame.txt)
-- _Debian source archives are not attached to this older release; newly built releases include them._
+- _Debian source archive assets are not attached to this release._
 - [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
 <!-- CORE2-PACKAGE-RELEASE-INDEX:END -->
 
