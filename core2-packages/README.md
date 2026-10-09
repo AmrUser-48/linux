@@ -7,6 +7,27 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 18:18:32 UTC — Core 2 optimized python3.11 3.11.2-6+deb12u9+core2.1~20261009153835
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/BUILD-INFO.txt)
+- [idle-python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/idle-python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
+- [libpython3.11-minimal_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-minimal_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [libpython3.11-stdlib_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-stdlib_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [libpython3.11-testsuite_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-testsuite_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
+- [libpython3.11_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11-doc_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-doc_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
+- [python3.11-examples_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-examples_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
+- [python3.11-full_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-full_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11-minimal_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-minimal_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11-nopie_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-nopie_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11-venv_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-venv_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
+- [python3.11_3.11.2-6+deb12u9.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9.debian.tar.xz)
+- [python3.11_3.11.2-6+deb12u9.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9.dsc)
+- [python3.11_3.11.2.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2.orig.tar.gz)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/release-notes.md)
+- [SHA256SUMS-core2-python3.11.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/SHA256SUMS-core2-python3.11.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835)
+
 ### 2026-10-09 17:53:45 UTC — Core 2 optimized mesa 22.3.6-1+deb12u2+core2.1~20261009173146
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/BUILD-INFO.txt)
 - [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
