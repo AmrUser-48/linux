@@ -6,9 +6,7 @@ This repository builds Debian Bookworm packages optimized for Intel Core 2 CPUs 
 
 Direct links to installable `.deb` packages, checksums, build metadata, and Debian source archives where available. This list is refreshed automatically when a Core 2 package release is published, or manually from the workflow below.
 
-<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
-_Release index will be populated by the refresh workflow._
-<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->
+The full date-sorted index is maintained in [`core2-packages/README.md`](core2-packages/README.md), including direct links to each release asset. The root README will not duplicate the full list until the refresh workflow is updated to write both files.
 
 ## Build or refresh
 
