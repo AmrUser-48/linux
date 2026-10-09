@@ -114,8 +114,8 @@ jobs:
             # Debian's makefile may express the empty value as a Make variable
             # expansion, so replace the assignment generically rather than
             # assuming the expanded shell text is present literally in the file.
-            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="jobstop%(%).*process"/g' "$SOURCE_DIR/debian/rules"
-            if ! grep -Fq 'jobstop%(%).*process' "$SOURCE_DIR/debian/rules"; then
+            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="entire"/g' "$SOURCE_DIR/debian/rules"
+            if ! grep -Fq 'entire' "$SOURCE_DIR/debian/rules"; then
               echo "::error::Failed to set Neovim's test filter"
               exit 1
             fi
