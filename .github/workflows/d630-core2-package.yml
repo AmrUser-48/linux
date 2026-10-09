@@ -42,15 +42,13 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
-      DEB_CFLAGS_MAINT_APPEND: "-march=core2 -mtune=core2"
-      DEB_CXXFLAGS_MAINT_APPEND: "-march=core2 -mtune=core2"
-      DEB_FFLAGS_MAINT_APPEND: "-march=core2 -mtune=core2"
       DEB_BUILD_OPTIONS: "parallel=2"
 
     outputs:
       package_version: ${{ steps.meta.outputs.package_version }}
       source_version: ${{ steps.meta.outputs.source_version }}
       release_tag: ${{ steps.meta.outputs.release_tag }}
+      optimization_level: ${{ steps.meta.outputs.optimization_level }}
 
     steps:
       - name: Install packaging tools and enable Debian Bookworm source repositories
@@ -69,6 +67,24 @@ jobs:
             ca-certificates curl git file xz-utils zstd jq cmake meson ninja-build \
             python3 pkg-config quilt
 
+      - name: Select Core 2 optimization profile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          set -euxo pipefail
+          case "$PACKAGE" in
+            lame|ffmpeg|mpv|7zip|zstd|xz-utils) opt="-O3" ;;
+            *) opt="-O2" ;;
+          esac
+          flags="$opt -march=core2 -mtune=core2"
+          {
+            echo "DEB_CFLAGS_MAINT_APPEND=$flags"
+            echo "DEB_CXXFLAGS_MAINT_APPEND=$flags"
+            echo "DEB_FFLAGS_MAINT_APPEND=$flags"
+            echo "CORE2_OPT_LEVEL=$opt"
+          } >> "$GITHUB_ENV"
+          echo "Using optimization profile: $flags"
       - name: Fetch official Debian source and build dependencies
         id: source
         shell: bash
@@ -105,6 +121,8 @@ jobs:
           grep -q -- '-mtune=core2' <<<"$CFLAGS"
           grep -q -- '-march=core2' <<<"$CXXFLAGS"
           grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
 
           {
             echo "package=$PACKAGE"
@@ -147,7 +165,8 @@ jobs:
             "Debian Bookworm source version: $ORIGINAL_VERSION" \
             "Core 2 package version: $PACKAGE_VERSION" \
             "Target: amd64 / Intel Core 2" \
-            "Flags: -march=core2 -mtune=core2; Debian default optimization and hardening retained" \
+            "Optimization level: $CORE2_OPT_LEVEL" \
+            "Flags: $CORE2_OPT_LEVEL -march=core2 -mtune=core2; Debian hardening retained" \
             "Build source: official Debian Bookworm source package with Debian patches" \
             > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
 
@@ -176,6 +195,7 @@ jobs:
             echo "package_version=$PACKAGE_VERSION"
             echo "source_version=$SOURCE_VERSION"
             echo "release_tag=$RELEASE_TAG"
+            echo "optimization_level=$CORE2_OPT_LEVEL"
           } >> "$GITHUB_OUTPUT"
 
           echo "Release tag: $RELEASE_TAG"
@@ -201,6 +221,7 @@ jobs:
       SOURCE_VERSION: ${{ needs.build.outputs.source_version }}
       PACKAGE_VERSION: ${{ needs.build.outputs.package_version }}
       RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
+      OPT_LEVEL: ${{ needs.build.outputs.optimization_level }}
 
     steps:
       - name: Download built packages
@@ -222,8 +243,9 @@ jobs:
 
           - Package version: ${PACKAGE_VERSION}
           - Target CPU: Intel Core 2 family; amd64 architecture
-          - Compiler target flags: -march=core2 -mtune=core2
-          - Debian's default optimization and hardening flags retained
+          - Optimization profile: ${OPT_LEVEL}
+          - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
+          - Debian's hardening settings retained
           - Package set includes checksums and BUILD-INFO.txt
 
           These packages are intended for the D630/Core 2 test machine, not as
