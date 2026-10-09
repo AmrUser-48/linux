@@ -44,6 +44,13 @@ jobs:
 
       - name: Checkout D630 configuration and packaging scripts
         uses: actions/checkout@v5
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            arch/x86/configs/d630-6.18.config
+            arch/x86/configs/d630-prune-modules-6.18.sh
+            scripts/d630-firmware-package.sh
+          sparse-checkout-cone-mode: false
 
       - name: Fetch upstream Linux 6.18 stable source
         shell: bash
