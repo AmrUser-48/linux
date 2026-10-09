@@ -21,6 +21,20 @@ The artifacts target Intel Core 2-class systems (such as the D630 CPUs) and are 
 
 Mesa is the highest-risk target because it supplies graphics libraries and driver modules used by the desktop. Its release may contain multiple runtime and development .deb packages. Inspect the package list, install only the related runtime packages required by this machine, keep a known-working kernel/Mesa combination as fallback, and test the GMA X3100 driver locally. CI compilation alone does not prove hardware rendering works.
 
+
+## Core system packages (manual, higher risk)
+
+For Debian core utilities, libraries and boot/runtime components, open [**Core 2 optimized Debian system package**](../actions/workflows/d630-core2-system-package.yml) and choose one source package per run. The menu includes:
+
+- Runtime and toolchain foundations: `glibc` (produces packages including `libc6` and `libc-bin`), `gcc-12`, `binutils`, `dpkg`, `apt`.
+- Init, shell and system tools: `systemd`, `bash`, `dash`, `coreutils`, `util-linux`, `iproute2`, `kmod`, `procps`, `e2fsprogs`, `psmisc`, `shadow`, `pam`.
+- Core libraries and compression: `openssl`, `zlib`, `libxcrypt`, `ncurses`, `readline`, `libcap2`, `libselinux`, `libseccomp`, `acl`, `attr`, `pcre2`, `gmp`, `mpfr4`, `libffi`, `expat`, `libtirpc`.
+- Basic text/file utilities: `findutils`, `grep`, `sed`, `gawk`, `diffutils`, `tar`, `gzip`, `bzip2`, `xz-utils`, `zstd`.
+
+This workflow uses the conservative `-O2 -march=core2 -mtune=core2` profile for all listed packages. GCC and glibc builds are particularly large and may run for hours; the workflow timeout is six hours. Each successful build publishes its binary packages, build metadata and SHA-256 sums in a separate `core2-system-*` GitHub Release. Compilation is not the same as runtime validation.
+
+**Critical warning:** do not install every generated `.deb` blindly. A glibc build may publish multiple runtime, locale, development, debug and multiarch packages. Inspect the asset list and dependencies first. Replacing `libc6` or `systemd` can make the installed system unusable; do this only with a verified backup, known-good kernel, and a tested rescue/rollback path. Keep the stock Debian packages and recovery media available. These builds target the D630 / Intel Core 2 system, not generic amd64 computers.
+
 ## Brave Browser
 
 Brave is intentionally not in the normal Debian-source train. It is not a standard Bookworm source-package rebuild; Brave's Linux build uses a Chromium-sized checkout. Upstream's current instructions recommend more than 16 GB RAM and expect about 100 GB of free disk for Chromium. That does not fit the standard GitHub-hosted runner reliably. Treat Brave as a separate project requiring a larger or self-hosted runner, and test it as a separate browser install rather than replacing the held vendor package automatically.
