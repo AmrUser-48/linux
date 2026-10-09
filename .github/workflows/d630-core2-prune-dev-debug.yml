@@ -78,6 +78,6 @@ jobs:
             echo "## Core 2 package release cleanup complete"
             echo
             echo "- Removed ${removed} development/debug package asset(s)."
-            echo "- Matching packages: names ending in `-dev`, `-dbg`, or `-dbgsym`."
+            echo "- Matching package suffixes: -dev, -dbg, -dbgsym."
             echo "- Normal runtime packages and release metadata were preserved."
           } >> "$GITHUB_STEP_SUMMARY"
