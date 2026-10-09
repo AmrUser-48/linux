@@ -7,6 +7,40 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 17:53:45 UTC — Core 2 optimized mesa 22.3.6-1+deb12u2+core2.1~20261009173146
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/BUILD-INFO.txt)
+- [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libegl-mesa0_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libegl-mesa0_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libegl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libegl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libgbm1_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgbm1_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libgl1-mesa-glx_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgl1-mesa-glx_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libglapi-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libglapi-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libgles2-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgles2-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libglx-mesa0_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libglx-mesa0_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libosmesa6_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libosmesa6_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libwayland-egl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libwayland-egl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [libxatracker2_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libxatracker2_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [mesa-opencl-icd_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-opencl-icd_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [mesa-va-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-va-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [mesa-vdpau-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vdpau-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [mesa-vulkan-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vulkan-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+- [mesa_22.3.6-1+deb12u2.diff.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6-1%2Bdeb12u2.diff.gz)
+- [mesa_22.3.6-1+deb12u2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6-1%2Bdeb12u2.dsc)
+- [mesa_22.3.6.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6.orig.tar.gz)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/release-notes.md)
+- [SHA256SUMS-core2-mesa.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/SHA256SUMS-core2-mesa.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+
+### 2026-10-09 16:45:15 UTC — Core 2 system findutils 4.9.0-4+core2.1~20261009164357
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/BUILD-INFO.txt)
+- [findutils_4.9.0-4+core2.1.20261009164357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/findutils_4.9.0-4%2Bcore2.1.20261009164357_amd64.deb)
+- [locate_4.9.0-4+core2.1.20261009164357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/locate_4.9.0-4%2Bcore2.1.20261009164357_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/release-notes.md)
+- [SHA256SUMS-core2-findutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/SHA256SUMS-core2-findutils.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-findutils-4.9.0-4-core2.1-20261009164357)
+
 ### 2026-10-09 16:42:51 UTC — Core 2 optimized rust-sd 0.7.6-1+deb12u1+core2.1~20261009163957
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/release-notes.md)
