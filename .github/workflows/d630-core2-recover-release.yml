@@ -1,0 +1,205 @@
+name: Recover Core 2 package release
+run-name: "Recover ${{ inputs.package }} artifact from run ${{ inputs.run_id }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: Which package workflow produced the artifact
+        required: true
+        type: choice
+        default: apps
+        options:
+          - apps
+          - system
+      package:
+        description: Package whose saved artifact should be published
+        required: true
+        type: choice
+        default: mesa
+        options:
+          - mesa
+          - lame
+          - bash
+          - zsh
+          - nano
+          - neovim
+          - ffmpeg
+          - mpv
+          - 7zip
+          - zstd
+          - xz-utils
+          - curl
+          - glibc
+          - gcc-12
+          - binutils
+          - coreutils
+          - dash
+          - systemd
+          - util-linux
+          - dpkg
+          - apt
+          - openssl
+          - zlib
+          - libxcrypt
+          - ncurses
+          - readline
+          - libcap2
+          - libselinux
+          - libseccomp
+          - acl
+          - attr
+          - findutils
+          - grep
+          - sed
+          - gawk
+          - diffutils
+          - tar
+          - gzip
+          - bzip2
+          - procps
+          - e2fsprogs
+          - psmisc
+          - shadow
+          - pam
+          - iproute2
+          - kmod
+          - pcre2
+          - mpfr4
+          - gmp
+          - libffi
+          - expat
+          - libtirpc
+      run_id:
+        description: Source GitHub Actions run ID (Mesa's saved artifact is prefilled)
+        required: true
+        type: string
+        default: "37892602737"
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  recover:
+    name: Validate and publish saved package artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      actions: read
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PACKAGE_INPUT: ${{ inputs.package }}
+      PACKAGE_KIND: ${{ inputs.kind }}
+      SOURCE_RUN_ID: ${{ inputs.run_id }}
+    steps:
+      - name: Select artifact name
+        id: artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$SOURCE_RUN_ID" =~ ^[0-9]+$ ]]; then
+            echo "::error::run_id must be a numeric GitHub Actions run ID"
+            exit 1
+          fi
+          case "$PACKAGE_KIND" in
+            apps) artifact_name="core2-${PACKAGE_INPUT}-${SOURCE_RUN_ID}" ;;
+            system) artifact_name="core2-system-${PACKAGE_INPUT}-${SOURCE_RUN_ID}" ;;
+            *) echo "::error::Unknown package kind: $PACKAGE_KIND"; exit 1 ;;
+          esac
+          echo "artifact_name=$artifact_name" >> "$GITHUB_OUTPUT"
+          echo "Recovering $artifact_name"
+
+      - name: Download saved workflow artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ steps.artifact.outputs.artifact_name }}
+          path: dist
+          repository: ${{ github.repository }}
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Validate artifact and prepare release metadata
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd dist
+          test -f BUILD-INFO.txt
+          SOURCE_VERSION="$(sed -n 's/^Debian Bookworm source version: //p' BUILD-INFO.txt | head -n1)"
+          PACKAGE_VERSION="$(sed -n 's/^Core 2 package version: //p' BUILD-INFO.txt | head -n1)"
+          ACTUAL_PACKAGE="$(sed -n 's/^Package: //p' BUILD-INFO.txt | head -n1)"
+          OPT_LEVEL="$(sed -n 's/^Optimization level: //p' BUILD-INFO.txt | head -n1)"
+          SUMS_FILE="SHA256SUMS-core2-${PACKAGE_INPUT}.txt"
+
+          test -n "$SOURCE_VERSION"
+          test -n "$PACKAGE_VERSION"
+          test "$ACTUAL_PACKAGE" = "$PACKAGE_INPUT"
+          test -f "$SUMS_FILE"
+          sha256sum -c "$SUMS_FILE"
+
+          shopt -s nullglob
+          DEBS=( ./*.deb )
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::Artifact contains no Debian packages"
+            exit 1
+          fi
+
+          PREFIX="core2"
+          if [[ "$PACKAGE_KIND" == system ]]; then PREFIX="core2-system"; fi
+          TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="${PREFIX}-${PACKAGE_INPUT}-${TAG_VERSION}"
+          {
+            echo "package=$ACTUAL_PACKAGE"
+            echo "source_version=$SOURCE_VERSION"
+            echo "package_version=$PACKAGE_VERSION"
+            echo "optimization_level=$OPT_LEVEL"
+            echo "release_tag=$RELEASE_TAG"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Recovered Core 2 Debian package: $ACTUAL_PACKAGE"
+            echo
+            echo "Re-published from saved GitHub Actions run $SOURCE_RUN_ID."
+            echo
+            echo "- Debian Bookworm source version: $SOURCE_VERSION"
+            echo "- Package version: $PACKAGE_VERSION"
+            echo "- Target CPU: Intel Core 2 family; amd64"
+            echo "- Optimization: $OPT_LEVEL -march=core2 -mtune=core2"
+            echo "- SHA-256 checks verified before publishing"
+            echo
+            echo "These packages are for the D630/Core 2 test machine. Review all package"
+            echo "dependencies before installation. Mesa releases contain multiple runtime,"
+            echo "development and debug packages; do not install all of them blindly."
+            echo "Never replace foundational system libraries without a verified recovery path."
+          } > release-notes.md
+
+          echo "Validated ${#DEBS[@]} .deb package(s): $RELEASE_TAG"
+
+      - name: Publish or update release
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ steps.meta.outputs.release_tag }}
+          PACKAGE: ${{ steps.meta.outputs.package }}
+          PACKAGE_VERSION: ${{ steps.meta.outputs.package_version }}
+          SOURCE_VERSION: ${{ steps.meta.outputs.source_version }}
+          OPT_LEVEL: ${{ steps.meta.outputs.optimization_level }}
+        run: |
+          set -euo pipefail
+          cd dist
+          shopt -s nullglob
+          FILES=( ./*.deb ./*.txt )
+          FILES+=( release-notes.md )
+
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" "${FILES[@]}" --repo "$GITHUB_REPOSITORY" --clobber
+            gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+              --title "Core 2 ${PACKAGE} ${PACKAGE_VERSION}" --notes-file release-notes.md
+          else
+            # Do not pin this to the source run's old commit. Creating a release
+            # against an old commit that differs in .github/workflows may be rejected
+            # by GitHub's GITHUB_TOKEN workflow-file permission guard.
+            gh release create "$RELEASE_TAG" "${FILES[@]}" --repo "$GITHUB_REPOSITORY" \
+              --title "Core 2 ${PACKAGE} ${PACKAGE_VERSION}" --notes-file release-notes.md
+          fi
