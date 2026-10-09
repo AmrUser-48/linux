@@ -4,3 +4,4 @@ Remove any previously published Debian -dev, -dbg and -dbgsym package assets
 from Core 2 application/system package releases. Preserve normal runtime packages,
 BUILD-INFO, release notes and SHA-256 metadata.
 Checksum manifest cleanup follow-up after removing dev/debug assets.
+Rerun checksum and release cleanup with corrected summary output.
