@@ -1,0 +1,69 @@
+name: D630 serial kernel release train
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: d630-release-train
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  release-series:
+    name: Build and publish 6.1, then 6.18, then 7.2.9
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Dispatch each stable build and wait for its release
+        shell: bash
+        env:
+          GH_TOKEN: \${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          dispatch_and_wait() {
+            local workflow="$1"
+            local branch="$2"
+            local label="$3"
+            local started response run_id attempt
+
+            echo "::group::\${label}: dispatch"
+            started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            response="$(gh api --method POST \
+              "repos/\${GITHUB_REPOSITORY}/actions/workflows/\${workflow}/dispatches" \
+              -f "ref=\${branch}")"
+            run_id="$(jq -r '.workflow_run_id // empty' <<<"$response")"
+
+            # Older API responses may not include the run ID; find this dispatch by branch and time.
+            if [[ -z "$run_id" ]]; then
+              for attempt in $(seq 1 60); do
+                run_id="$(gh api \
+                  "repos/\${GITHUB_REPOSITORY}/actions/workflows/\${workflow}/runs?branch=\${branch}&event=workflow_dispatch&per_page=10" \
+                  --jq --arg started "$started" \
+                  '[.workflow_runs[] | select(.created_at >= $started)] | sort_by(.created_at) | last | .id // empty')"
+                [[ -n "$run_id" ]] && break
+                sleep 5
+              done
+            fi
+
+            if [[ -z "$run_id" ]]; then
+              echo "::error::Could not identify the \${label} workflow run."
+              exit 1
+            fi
+
+            echo "Watching \${label}, run \${run_id}"
+            echo "https://github.com/\${GITHUB_REPOSITORY}/actions/runs/\${run_id}"
+            echo "::endgroup::"
+
+            # A failure stops the train. Later kernels are not released against a failed earlier build.
+            gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status
+          }
+
+          dispatch_and_wait "d630-kernel-6.1.yml" "d630-stable-6.1" "Linux 6.1"
+          dispatch_and_wait "d630-kernel.yml" "d630-stable-6.18" "Linux 6.18"
+          dispatch_and_wait "d630-kernel.yml" "d630-stable-7.2.9" "Linux 7.2.9"
+
+          echo "All three stable D630 kernel releases completed successfully."
