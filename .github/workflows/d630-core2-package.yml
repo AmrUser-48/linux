@@ -22,6 +22,16 @@ on:
           - zstd
           - xz-utils
           - curl
+          - python3.11
+          - fftw3
+          - ncmpcpp
+          - mpd
+          - rust-fd-find
+          - rust-sd
+          - rust-ripgrep
+          - btop
+          - htop
+          - xorg-server
 
 permissions:
   contents: write
@@ -70,7 +80,7 @@ jobs:
         run: |
           set -euxo pipefail
           case "$PACKAGE" in
-            lame|ffmpeg|mpv|7zip|zstd|xz-utils) opt="-O3" ;;
+            lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils) opt="-O3" ;;
             *) opt="-O2" ;;
           esac
           flags="$opt -march=core2 -mtune=core2"
@@ -177,6 +187,28 @@ jobs:
           fi
           chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
 
+          # Debian's Cargo build can supply its own encoded build/hardening flags.
+          # Wrap rustc instead of replacing those flags: inject only the Core 2
+          # target CPU and let Debian's original rustc/linker flags pass through.
+          case "$PACKAGE" in
+            rust-fd-find|rust-sd|rust-ripgrep)
+              RUSTC_WRAPPER_PATH="$SOURCE_DIR/.core2-rustc-wrapper"
+              RUSTC_LOG_PATH="$SOURCE_DIR/.core2-rustc-invocations.log"
+              cat > "$RUSTC_WRAPPER_PATH" <<'RUST_WRAPPER'
+#!/bin/sh
+set -eu
+compiler="$1"
+shift
+printf '%s\\n' "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"
+exec "$compiler" -C target-cpu=core2 "$@"
+RUST_WRAPPER
+              chmod 0755 "$RUSTC_WRAPPER_PATH"
+              chown "$BUILD_USER:$BUILD_USER" "$RUSTC_WRAPPER_PATH"
+              export RUSTC_WRAPPER="$RUSTC_WRAPPER_PATH"
+              export CORE2_RUSTC_LOG="$RUSTC_LOG_PATH"
+              ;;
+          esac
+
           cd "$SOURCE_DIR"
           BUILD_MODE="standard-debian-build"
           if [[ "$PACKAGE" == "neovim" ]]; then
@@ -210,6 +242,16 @@ jobs:
           fi
           echo "build_mode=$BUILD_MODE" >> "$GITHUB_OUTPUT"
           echo "CORE2_BUILD_MODE=$BUILD_MODE" >> "$GITHUB_ENV"
+
+          case "$PACKAGE" in
+            rust-fd-find|rust-sd|rust-ripgrep)
+              if [[ ! -s "$CORE2_RUSTC_LOG" ]]; then
+                echo "::error::The Core 2 Rust compiler wrapper was not invoked for $PACKAGE"
+                exit 1
+              fi
+              echo "Verified Rust compiler invocations used -C target-cpu=core2"
+              ;;
+          esac
 
           shopt -s nullglob
           DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
@@ -324,6 +366,7 @@ jobs:
           - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
           - Debian's hardening settings retained
           - Only normal runtime/installable packages are released; -dev, -dbg and -dbgsym outputs are excluded
+          - Rust targets: -C target-cpu=core2 is injected without replacing Debian Rust/linker flags
 
           These packages are intended for the D630/Core 2 test machine, not as
           generic replacements for every amd64 computer. Keep stock Debian
