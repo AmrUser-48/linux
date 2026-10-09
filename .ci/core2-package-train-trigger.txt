@@ -1,14 +1,6 @@
-Core 2 package train request: new-tools
+Core 2 package train request: targeted runtime dependencies
 
-Build sequentially from Debian 12 Bookworm source packages:
-python3.11, fftw3, ncmpcpp, mpd, rust-fd-find, rust-sd, rust-ripgrep,
-btop, htop and xorg-server.
+Run the latest Debian 12 Bookworm package workflow revision now. Required targets:
+rust-sd (sd), fftw3 (must publish libfftw3-double3 runtime .deb), and glibc (must publish libc6 runtime .deb).
 
-Skip any package with an existing Core 2 release containing .deb assets.
-Capture failed build logs, continue through the entire list, and summarize failures
-for root-cause fixes and a later rerun that skips packages already released.
-Retry after fixing the YAML workflow registration issue; run new-tools sequentially.
-
-Retry requested after fixing Python/FFTW staging and rust-sd package-version validation; skip already-published releases.
-
-Trigger again at the latest workflow revision, including required libc6/libfftw3-double3 output checks.
+Skip every package that already has a matching release with .deb assets; do not rebuild or overwrite existing releases. Capture logs, continue after failures, and report results.
