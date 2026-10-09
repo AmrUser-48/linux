@@ -15,7 +15,32 @@ env:
   KERNEL_TAG: v6.1.189
 
 jobs:
+  release-check:
+    name: Skip if this commit's kernel release exists
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      exists: ${{ steps.check.outputs.exists }}
+    steps:
+      - name: Check release before compiling the kernel
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: d630-6.1-${GITHUB_SHA}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::Release $RELEASE_TAG already exists; skipping kernel build and publication."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: release-check
+    if: needs.release-check.outputs.exists != 'true'
     name: Build stripped D630 Debian packages (Linux 6.1)
     runs-on: ubuntu-22.04
     container:
