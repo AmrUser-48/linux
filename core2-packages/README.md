@@ -7,6 +7,19 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 18:33:57 UTC — Core 2 optimized xz-utils 5.4.1-1+deb12u2+core2.1~20261009183205
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/BUILD-INFO.txt)
+- [liblzma-doc_5.4.1-1+deb12u2+core2.1.20261009183205_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/liblzma-doc_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_all.deb)
+- [liblzma5_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/release-notes.md)
+- [SHA256SUMS-core2-xz-utils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/SHA256SUMS-core2-xz-utils.txt)
+- [xz-utils_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
+- [xz-utils_5.4.1-1+deb12u2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2.debian.tar.xz)
+- [xz-utils_5.4.1-1+deb12u2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2.dsc)
+- [xz-utils_5.4.1.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1.orig.tar.xz)
+- [xzdec_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xzdec_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205)
+
 ### 2026-10-09 18:29:31 UTC — Core 2 optimized fftw3 3.3.10-1+core2.1~20261009181939
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/BUILD-INFO.txt)
 - [fftw3_3.3.10-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10-1.debian.tar.xz)
