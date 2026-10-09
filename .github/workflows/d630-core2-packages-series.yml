@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package train
-run-name: Core2 package train: ${{ inputs.series }}
+run-name: "Core2 package train: ${{ inputs.series }}"
 
 on:
   workflow_dispatch:
