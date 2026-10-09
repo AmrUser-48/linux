@@ -7,6 +7,22 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 18:29:31 UTC — Core 2 optimized fftw3 3.3.10-1+core2.1~20261009181939
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/BUILD-INFO.txt)
+- [fftw3_3.3.10-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10-1.debian.tar.xz)
+- [fftw3_3.3.10-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10-1.dsc)
+- [fftw3_3.3.10.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10.orig.tar.gz)
+- [libfftw3-bin_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-bin_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [libfftw3-doc_3.3.10-1+core2.1.20261009181939_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-doc_3.3.10-1%2Bcore2.1.20261009181939_all.deb)
+- [libfftw3-double3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [libfftw3-long3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-long3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [libfftw3-mpi3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-mpi3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [libfftw3-quad3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-quad3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [libfftw3-single3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-single3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/release-notes.md)
+- [SHA256SUMS-core2-fftw3.txt](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/SHA256SUMS-core2-fftw3.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939)
+
 ### 2026-10-09 18:18:32 UTC — Core 2 optimized python3.11 3.11.2-6+deb12u9+core2.1~20261009153835
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/BUILD-INFO.txt)
 - [idle-python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/idle-python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
