@@ -144,6 +144,7 @@ jobs:
           test "$(config_state CONFIG_DEVTMPFS)" = "y"
           test "$(config_state CONFIG_DEVTMPFS_MOUNT)" = "y"
           test "$(config_state CONFIG_MICROCODE)" = "y"
+          test "$(config_state CONFIG_CRYPTO_LZ4)" = "y"
           test "$(config_state CONFIG_ZRAM)" = "y"
           test "$(config_state CONFIG_ZRAM_DEF_COMP_LZ4)" = "y"
           test "$(config_state CONFIG_BTRFS_FS)" = "y"
