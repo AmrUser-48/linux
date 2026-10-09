@@ -2,13 +2,13 @@
 
 This repository builds Debian Bookworm packages optimized for Intel Core 2 CPUs (`-march=core2 -mtune=core2`). The packages target systems such as the Dell Latitude D630 and are not generic amd64 replacements.
 
-## Package downloads — newest first
+## Published package downloads — newest first
 
-The complete, date-sorted package list includes direct links to installable `.deb` files, checksums, build metadata, and Debian source archives where available:
+Direct links to installable `.deb` packages, checksums, build metadata, and Debian source archives where available. This list is refreshed automatically when a Core 2 package release is published, or manually from the workflow below.
 
-**[Browse all Core 2 package releases and direct downloads](core2-packages/README.md)**
-
-Latest releases are published individually on GitHub. Open the release index for the newest builds and all available assets. Development and debug packages are excluded from publication.
+<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+_Release index will be populated by the refresh workflow._
+<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->
 
 ## Build or refresh
 
@@ -16,4 +16,4 @@ Latest releases are published individually on GitHub. Open the release index for
 - [Run the Core 2 system package train](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-packages-series.yml)
 - [Refresh the package release index](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-release-index.yml)
 
-The detailed build policy, package selection, safety notes, and full release index are in [`core2-packages/README.md`](core2-packages/README.md).
+The [detailed package documentation and full release index](core2-packages/README.md) includes build policy, package selection, and safety notes.
