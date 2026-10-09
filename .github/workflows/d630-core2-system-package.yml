@@ -1,0 +1,305 @@
+name: Core 2 optimized Debian system package
+run-name: "Core2 system package: ${{ inputs.package }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Debian Bookworm source package to rebuild for Intel Core 2
+        required: true
+        type: choice
+        default: mesa
+        options:
+          - glibc
+          - gcc-12
+          - binutils
+          - coreutils
+          - bash
+          - dash
+          - systemd
+          - util-linux
+          - dpkg
+          - apt
+          - openssl
+          - zlib
+          - libxcrypt
+          - ncurses
+          - readline
+          - libcap2
+          - libselinux
+          - libseccomp
+          - acl
+          - attr
+          - findutils
+          - grep
+          - sed
+          - gawk
+          - diffutils
+          - tar
+          - gzip
+          - bzip2
+          - procps
+          - e2fsprogs
+          - psmisc
+          - shadow
+          - pam
+          - iproute2
+          - kmod
+          - xz-utils
+          - zstd
+          - pcre2
+          - mpfr4
+          - gmp
+          - libffi
+          - expat
+          - libtirpc
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ inputs.package }} for Core 2
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      DEB_BUILD_OPTIONS: "parallel=2"
+
+    outputs:
+      package_version: ${{ steps.meta.outputs.package_version }}
+      source_version: ${{ steps.meta.outputs.source_version }}
+      release_tag: ${{ steps.meta.outputs.release_tag }}
+      optimization_level: ${{ steps.meta.outputs.optimization_level }}
+
+    steps:
+      - name: Install packaging tools and enable Debian Bookworm source repositories
+        shell: bash
+        run: |
+          set -euxo pipefail
+          printf '%s\n' \
+            'deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' \
+            'deb http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware' \
+            'deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' \
+            'deb-src http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware' \
+            > /etc/apt/sources.list.d/core2-packages.list
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential devscripts debhelper dpkg-dev fakeroot \
+            ca-certificates curl git file xz-utils zstd jq cmake meson ninja-build \
+            python3 pkg-config quilt
+
+      - name: Select Core 2 optimization profile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          set -euxo pipefail
+          # Keep foundational system packages on Debian's normal -O2 profile.
+          # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
+          opt="-O2"
+          flags="$opt -march=core2 -mtune=core2"
+          {
+            echo "DEB_CFLAGS_MAINT_APPEND=$flags"
+            echo "DEB_CXXFLAGS_MAINT_APPEND=$flags"
+            echo "DEB_FFLAGS_MAINT_APPEND=$flags"
+            echo "CORE2_OPT_LEVEL=$opt"
+          } >> "$GITHUB_ENV"
+          echo "Using conservative system-package optimization profile: $flags"
+      - name: Fetch official Debian source and build dependencies
+        id: source
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          set -euxo pipefail
+          apt-get build-dep -y "$PACKAGE"
+
+          SRCROOT="$GITHUB_WORKSPACE/source-tree"
+          mkdir -p "$SRCROOT" "$GITHUB_WORKSPACE/release-artifacts"
+          cd "$SRCROOT"
+          apt-get source "$PACKAGE"
+
+          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
+            echo "::error::Could not find unpacked Debian source for $PACKAGE"
+            exit 1
+          fi
+
+          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          NEW_VERSION="${ORIGINAL_VERSION}+core2.1~${BUILD_STAMP}"
+          # dch resolves debian/changelog from the current directory.
+          # apt-get source ran in SRCROOT; enter the unpacked source tree first.
+          cd "$SOURCE_DIR"
+          dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
+            "Rebuild for Intel Core 2 using -march=core2 -mtune=core2."
+
+          ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          test "$ACTUAL_VERSION" = "$NEW_VERSION"
+
+          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
+          printf 'CFLAGS=%s\nCXXFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" \
+            | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
+          grep -q -- '-march=core2' <<<"$CFLAGS"
+          grep -q -- '-mtune=core2' <<<"$CFLAGS"
+          grep -q -- '-march=core2' <<<"$CXXFLAGS"
+          grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
+          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
+
+          {
+            echo "package=$PACKAGE"
+            echo "source_version=$ORIGINAL_VERSION"
+            echo "package_version=$NEW_VERSION"
+            echo "source_dir=$SOURCE_DIR"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Compile and package
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
+          ORIGINAL_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -euxo pipefail
+          cd "$SOURCE_DIR"
+          dpkg-buildpackage -us -uc -b -j2
+
+          shopt -s nullglob
+          DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::Build produced no .deb packages for $PACKAGE"
+            exit 1
+          fi
+
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            binary_version="$(dpkg-deb -f "$deb" Version)"
+            binary_arch="$(dpkg-deb -f "$deb" Architecture)"
+            printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
+            test "$binary_version" = "$PACKAGE_VERSION"
+            case "$binary_arch" in amd64|all) ;; *) echo "Unexpected architecture $binary_arch in $deb"; exit 1 ;; esac
+            cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
+          done
+
+          printf '%s\n' \
+            "Package: $PACKAGE" \
+            "Debian Bookworm source version: $ORIGINAL_VERSION" \
+            "Core 2 package version: $PACKAGE_VERSION" \
+            "Target: amd64 / Intel Core 2" \
+            "Optimization level: $CORE2_OPT_LEVEL" \
+            "Flags: $CORE2_OPT_LEVEL -march=core2 -mtune=core2; Debian hardening retained" \
+            "Build source: official Debian Bookworm source package with Debian patches" \
+            > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
+
+      - name: Validate package set and create checksums
+        id: meta
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
+          SOURCE_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -euxo pipefail
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          shopt -s nullglob
+          DEBS=( ./*.deb )
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::No Debian packages staged"
+            exit 1
+          fi
+          sha256sum "${DEBS[@]#./}" > "SHA256SUMS-core2-${PACKAGE}.txt"
+          cat "SHA256SUMS-core2-${PACKAGE}.txt"
+
+          TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="core2-system-${PACKAGE}-${TAG_VERSION}"
+          {
+            echo "package_version=$PACKAGE_VERSION"
+            echo "source_version=$SOURCE_VERSION"
+            echo "release_tag=$RELEASE_TAG"
+            echo "optimization_level=$CORE2_OPT_LEVEL"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Release tag: $RELEASE_TAG"
+          ls -lh ./*.deb ./*.txt
+
+      - name: Upload package artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-system-${{ inputs.package }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    name: Publish Core 2 system package ${{ inputs.package }}
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PACKAGE: ${{ inputs.package }}
+      SOURCE_VERSION: ${{ needs.build.outputs.source_version }}
+      PACKAGE_VERSION: ${{ needs.build.outputs.package_version }}
+      RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
+      OPT_LEVEL: ${{ needs.build.outputs.optimization_level }}
+
+    steps:
+      - name: Download built packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-${{ inputs.package }}-${{ github.run_id }}
+          path: dist
+
+      - name: Publish package release
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd dist
+          cat > release-notes.md <<EOF
+          ## Core 2 optimized Debian system package: ${PACKAGE}
+
+          Built from official Debian Bookworm source package ${PACKAGE} ${SOURCE_VERSION},
+          with Debian's packaging and patches retained.
+
+          - Package version: ${PACKAGE_VERSION}
+          - Target CPU: Intel Core 2 family; amd64 architecture
+          - Optimization profile: ${OPT_LEVEL}
+          - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
+          - Debian's hardening settings retained
+          - Package set includes checksums and BUILD-INFO.txt
+
+          These packages are intended for the Dell Latitude D630 / Intel Core 2 test
+          machine, not as generic replacements for every amd64 computer. They
+          use -O2 -march=core2 -mtune=core2 with Debian packaging and hardening
+          retained. A successful build does not prove runtime or boot safety.
+
+          HIGH-RISK PACKAGES: glibc builds can contain libc6, libc-bin, locales,
+          libc development packages, multiarch packages and other components.
+          Do not install every generated .deb blindly. Never replace libc6 or
+          systemd on the working installation without a tested recovery path,
+          a known-good kernel, a backup, and a way to boot/rescue the machine.
+          Review the package list and dependency versions first. Keep stock
+          Debian packages available for rollback.
+          EOF
+
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" ./*.deb ./*.txt release-notes.md \
+              --repo "$GITHUB_REPOSITORY" --clobber
+            gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+              --title "Core 2 system ${PACKAGE} ${PACKAGE_VERSION}" \
+              --notes-file release-notes.md
+          else
+            gh release create "$RELEASE_TAG" ./*.deb ./*.txt release-notes.md \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Core 2 system ${PACKAGE} ${PACKAGE_VERSION}" \
+              --notes-file release-notes.md --target "$GITHUB_SHA"
+          fi
