@@ -37,7 +37,32 @@ permissions:
   contents: write
 
 jobs:
+  release-check:
+    name: Skip if a release already exists
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      exists: ${{ steps.check.outputs.exists }}
+    steps:
+      - name: Check published releases before building
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE: ${{ inputs.package }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          prefix="core2-${PACKAGE}-"
+          exists="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s --arg prefix "$prefix" 'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))')"
+          echo "exists=$exists" >> "$GITHUB_OUTPUT"
+          if [[ "$exists" == "true" ]]; then
+            echo "::notice::Release already exists for ${PACKAGE} ($prefix*); skipping build and publication."
+          fi
+
   build:
+    needs: release-check
+    if: needs.release-check.outputs.exists != 'true'
     name: Build ${{ inputs.package }} for Core 2
     runs-on: ubuntu-22.04
     timeout-minutes: 360
