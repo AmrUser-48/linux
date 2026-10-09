@@ -1,5 +1,7 @@
-Neovim Debian 12 package build verification request
+Neovim Debian 12 Core 2 package verification
 
-The Core 2 package workflow already contains the metadata variable fix from the previous commit.
-The verifier keeps one active Neovim package build, cancels duplicate Neovim builds and the
-obsolete retry controller, and stops after a failure so logs can be inspected before any next run.
+Run one build using the runtime-only package policy:
+- skip explicit -dev and -dbg binary packages with DH_OPTIONS
+- disable automatic -dbgsym generation with noautodbgsym
+- fail the build if any development/debug .deb is produced
+- publish only normal installable packages with checksums
