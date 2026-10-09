@@ -203,38 +203,55 @@ jobs:
           esac
 
           cd "$SOURCE_DIR"
+          BUILD_LOG_PATH="$GITHUB_WORKSPACE/${PACKAGE}-build.log"
           BUILD_MODE="standard-debian-build"
           if [[ "$PACKAGE" == "neovim" ]]; then
-            # Try the full Debian build/test sequence first.
+            # Keep the full test attempt as a downloadable log instead of
+            # streaming megabytes of compiler output into the Actions console.
             if runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
                 HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-                dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 \
-                | tee "$GITHUB_WORKSPACE/neovim-tested-build.log"; then
+                dpkg-buildpackage -rfakeroot -us -uc -b -j2 \
+                > "$GITHUB_WORKSPACE/neovim-tested-build.log" 2>&1; then
               BUILD_MODE="full-tests-passed"
+              cp "$GITHUB_WORKSPACE/neovim-tested-build.log" "$BUILD_LOG_PATH"
             else
               # Only retry with nocheck when the log confirms a test-stage failure.
               if ! grep -Eiq 'functional tests failed|unit tests failed|TEST FAILURE|[0-9]+ FAILED TEST' \
                   "$GITHUB_WORKSPACE/neovim-tested-build.log"; then
-                echo "::error::Neovim failed outside its test suite; refusing the no-check fallback"
+                echo "::error::Neovim failed outside its test suite; recent log follows"
+                tail -n 200 "$GITHUB_WORKSPACE/neovim-tested-build.log" || true
                 exit 1
               fi
               echo "::warning::Neovim tests failed in this CI environment; retrying after clean with Debian nocheck"
               runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
                 HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
                 debian/rules clean
-              runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
+              if ! runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
                 DEB_BUILD_OPTIONS="parallel=2 nocheck noautodbgsym" \
                 HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-                dpkg-buildpackage -rfakeroot -us -uc -b -j2
+                dpkg-buildpackage -rfakeroot -us -uc -b -j2 \
+                > "$BUILD_LOG_PATH" 2>&1; then
+                echo "::error::Neovim nocheck fallback failed; recent build log follows"
+                tail -n 200 "$BUILD_LOG_PATH" || true
+                exit 1
+              fi
               BUILD_MODE="tests-skipped-after-test-failure"
             fi
           else
-            runuser --preserve-environment --user "$BUILD_USER" -- env \
+            if ! runuser --preserve-environment --user "$BUILD_USER" -- env \
               HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-              dpkg-buildpackage -rfakeroot -us -uc -b -j2
+              dpkg-buildpackage -rfakeroot -us -uc -b -j2 \
+              > "$BUILD_LOG_PATH" 2>&1; then
+              echo "::error::Debian package build failed for $PACKAGE; recent build log follows"
+              tail -n 200 "$BUILD_LOG_PATH" || true
+              exit 1
+            fi
+            echo "Build completed. Recent Debian packaging milestones:"
+            grep -E 'dpkg-buildpackage: info|dh binary|dpkg-deb: building package|dh_gencontrol|dh_builddeb|warning:|error:' "$BUILD_LOG_PATH" | tail -n 80 || tail -n 30 "$BUILD_LOG_PATH"
           fi
           echo "build_mode=$BUILD_MODE" >> "$GITHUB_OUTPUT"
           echo "CORE2_BUILD_MODE=$BUILD_MODE" >> "$GITHUB_ENV"
+          echo "build_log_path=$BUILD_LOG_PATH" >> "$GITHUB_OUTPUT"
 
           case "$PACKAGE" in
             rust-fd-find|rust-sd|rust-ripgrep)
@@ -279,6 +296,17 @@ jobs:
             "Flags: $CORE2_OPT_LEVEL -march=core2 -mtune=core2; Debian hardening retained" \
             "Build source: official Debian Bookworm source package with Debian patches" \
             > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
+
+      - name: Upload full build log for diagnosis
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-${{ inputs.package }}-build-log-${{ github.run_id }}
+          path: |
+            ${{ inputs.package }}-build.log
+            neovim-tested-build.log
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Validate package set and create checksums
         id: meta
