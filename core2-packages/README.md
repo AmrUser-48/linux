@@ -7,6 +7,16 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 11:58:49 UTC — Core 2 optimized rust-ripgrep 13.0.0-4+core2.1~20261009115443
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/release-notes.md)
+- [ripgrep_13.0.0-4+core2.1.20261009115443_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/ripgrep_13.0.0-4%2Bcore2.1.20261009115443_amd64.deb)
+- [rust-ripgrep_13.0.0-4.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0-4.debian.tar.xz)
+- [rust-ripgrep_13.0.0-4.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0-4.dsc)
+- [rust-ripgrep_13.0.0.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0.orig.tar.gz)
+- [SHA256SUMS-core2-rust-ripgrep.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/SHA256SUMS-core2-rust-ripgrep.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443)
+
 ### 2026-10-09 11:50:19 UTC — Core 2 optimized rust-fd-find 8.6.0-3+core2.1~20261009114655
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/BUILD-INFO.txt)
 - [fd-find_8.6.0-3+core2.1.20261009114655_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/fd-find_8.6.0-3%2Bcore2.1.20261009114655_amd64.deb)
