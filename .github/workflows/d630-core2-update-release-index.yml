@@ -85,7 +85,7 @@ jobs:
               lines = ["_No Core 2 package releases have been published yet._", ""]
           start = document.index(start_marker) + len(start_marker)
           end = document.index(end_marker, start)
-          replacement = "\\n" + "\\n".join(lines).rstrip() + "\\n"
+          replacement = "\n" + "\n".join(lines).rstrip() + "\n"
           readme_path.write_text(document[:start] + replacement + document[end:], encoding="utf-8")
           PY
 
