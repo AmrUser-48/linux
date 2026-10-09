@@ -194,14 +194,7 @@ jobs:
             rust-fd-find|rust-sd|rust-ripgrep)
               RUSTC_WRAPPER_PATH="$SOURCE_DIR/.core2-rustc-wrapper"
               RUSTC_LOG_PATH="$SOURCE_DIR/.core2-rustc-invocations.log"
-              cat > "$RUSTC_WRAPPER_PATH" <<'RUST_WRAPPER'
-#!/bin/sh
-set -eu
-compiler="$1"
-shift
-printf '%s\n' "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"
-exec "$compiler" -C target-cpu=core2 "$@"
-RUST_WRAPPER
+              printf '%s\n' '#!/bin/sh' 'set -eu' 'compiler="$1"' 'shift' 'echo "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"' 'exec "$compiler" -C target-cpu=core2 "$@"' > "$RUSTC_WRAPPER_PATH"
               chmod 0755 "$RUSTC_WRAPPER_PATH"
               chown "$BUILD_USER:$BUILD_USER" "$RUSTC_WRAPPER_PATH"
               export RUSTC_WRAPPER="$RUSTC_WRAPPER_PATH"
