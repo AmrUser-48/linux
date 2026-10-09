@@ -7,6 +7,35 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 15:42:14 UTC — Core 2 system gawk 1:5.2.1-2+core2.1~20261009154053
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/BUILD-INFO.txt)
+- [gawk_5.2.1-2+core2.1.20261009154053_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/gawk_5.2.1-2%2Bcore2.1.20261009154053_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/release-notes.md)
+- [SHA256SUMS-core2-gawk.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/SHA256SUMS-core2-gawk.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053)
+
+### 2026-10-09 15:31:27 UTC — Core 2 system tar 1.34+dfsg-1.2+deb12u1+core2.1~20261009152714
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/release-notes.md)
+- [SHA256SUMS-core2-tar.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/SHA256SUMS-core2-tar.txt)
+- [tar-scripts_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar-scripts_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb)
+- [tar_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714)
+
+### 2026-10-09 15:28:14 UTC — Core 2 system pcre2 10.42-1+deb12u2+core2.1~20261009152649
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/BUILD-INFO.txt)
+- [libpcre2-16-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-16-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
+- [libpcre2-32-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-32-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
+- [libpcre2-8-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
+- [libpcre2-posix3_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-posix3_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
+- [pcre2-utils_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/pcre2-utils_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/release-notes.md)
+- [SHA256SUMS-core2-pcre2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/SHA256SUMS-core2-pcre2.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649)
+
 ### 2026-10-09 12:08:59 UTC — Core 2 optimized xorg-server 2:21.1.7-3+deb12u13+core2.1~20261009120435
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/release-notes.md)
