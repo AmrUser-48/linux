@@ -104,6 +104,8 @@ jobs:
           test "$(config_state CONFIG_SECURITY_LANDLOCK)" = "y"
 
           test "$(config_state CONFIG_NETFILTER)" = "y"
+          test "$(config_state CONFIG_DRM_I915)" = "m"
+          test "$(config_state CONFIG_AGP_INTEL)" = "m"
           test "$(config_state CONFIG_NETFILTER_XTABLES_LEGACY)" = "y"
           test "$(config_state CONFIG_IP_NF_IPTABLES_LEGACY)" = "m"
           test "$(config_state CONFIG_IP6_NF_IPTABLES_LEGACY)" = "m"
@@ -111,6 +113,9 @@ jobs:
           test "$(config_state CONFIG_NF_TABLES)" = "m"
           test "$(config_state CONFIG_NF_NAT)" = "m"
           test "$(config_state CONFIG_NFT_CT)" = "m"
+          test "$(config_state CONFIG_NFT_FIB_IPV4)" = "m"
+          test "$(config_state CONFIG_NFT_FIB_IPV6)" = "m"
+          test "$(config_state CONFIG_NFT_FIB_INET)" = "m"
           test "$(config_state CONFIG_NFT_MASQ)" = "m"
           test "$(config_state CONFIG_IP_NF_NAT)" = "m"
           test "$(config_state CONFIG_IP6_NF_NAT)" = "m"
