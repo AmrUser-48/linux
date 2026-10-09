@@ -139,8 +139,18 @@ jobs:
           ORIGINAL_VERSION: ${{ steps.source.outputs.source_version }}
         run: |
           set -euxo pipefail
+
+          # Run build/tests unprivileged: permission tests must not get root's bypass.
+          BUILD_USER=core2build
+          if ! id "$BUILD_USER" >/dev/null 2>&1; then
+            useradd --create-home --shell /bin/bash "$BUILD_USER"
+          fi
+          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
+
           cd "$SOURCE_DIR"
-          dpkg-buildpackage -us -uc -b -j2
+          runuser --preserve-environment --user "$BUILD_USER" -- env \
+            HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
+            dpkg-buildpackage -rfakeroot -us -uc -b -j2
 
           shopt -s nullglob
           DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
