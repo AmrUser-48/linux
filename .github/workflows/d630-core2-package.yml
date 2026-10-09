@@ -199,7 +199,7 @@ jobs:
 set -eu
 compiler="$1"
 shift
-printf '%s\\n' "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"
+printf '%s\n' "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"
 exec "$compiler" -C target-cpu=core2 "$@"
 RUST_WRAPPER
               chmod 0755 "$RUSTC_WRAPPER_PATH"
