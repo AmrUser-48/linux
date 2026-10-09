@@ -3,3 +3,5 @@ Requested: build and publish the Core 2 optimized Neovim Debian package until on
 Controller: .github/workflows/d630-neovim-until-success.yml
 
 Retry controller pass for updated Neovim build/test fallback.
+
+Retry controller run after metadata fix commit 3022d03b7c8ee3694ba2bb4a976b7cacc227065d.
