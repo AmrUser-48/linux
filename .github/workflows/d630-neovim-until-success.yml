@@ -1,5 +1,5 @@
-name: Neovim build until success
-run-name: "Neovim retry controller"
+name: Neovim package build verifier
+run-name: "Neovim single-build verification"
 
 on:
   workflow_dispatch:
@@ -7,8 +7,9 @@ on:
     paths:
       - ".ci/neovim-retry-trigger.txt"
 
+# Use a different group from the retired retry loop so this verifier can stop it.
 concurrency:
-  group: neovim-until-success-rescue
+  group: neovim-build-verifier-single
   cancel-in-progress: false
 
 permissions:
@@ -16,75 +17,87 @@ permissions:
   contents: read
 
 jobs:
-  build-until-success:
-    name: Rebuild Neovim until release succeeds
+  build-once:
+    name: Cancel stale controller, verify one Neovim build
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Dispatch, watch, and retry up to eight builds
+      - name: Keep one current package build and inspect its result
         shell: bash
         run: |
-          set -uo pipefail
-          max_attempts=8
+          set -euo pipefail
 
-          for attempt in $(seq 1 "$max_attempts"); do
+          runs_json="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?per_page=100")"
+
+          # Stop prior instances of the blind retry controller.
+          mapfile -t old_controllers < <(jq -r --arg current "${GITHUB_RUN_ID}" '
+            .workflow_runs[]
+            | select((.id | tostring) != $current)
+            | select(.status == "in_progress" or .status == "queued")
+            | select(.path == ".github/workflows/d630-neovim-until-success.yml")
+            | .id
+          ' <<<"$runs_json")
+          for old_id in "${old_controllers[@]}"; do
+            echo "Cancelling obsolete retry controller: ${old_id}"
+            gh run cancel "${old_id}" --repo "${GITHUB_REPOSITORY}" || true
+          done
+
+          # The fixed package workflow is already building on the current master
+          # commit. Keep the oldest active Neovim build and cancel only duplicates.
+          package_runs="$(jq -c '
+            [.workflow_runs[]
+             | select(.path == ".github/workflows/d630-core2-package.yml")
+             | select(.display_title == "Core2 package: neovim")
+             | select(.status == "in_progress" or .status == "queued")]
+            | sort_by(.created_at)
+          ' <<<"$runs_json")"
+          run_id="$(jq -r '.[0].id // empty' <<<"$package_runs")"
+
+          if [[ -n "$run_id" ]]; then
+            mapfile -t duplicate_ids < <(jq -r '.[1:][]?.id' <<<"$package_runs")
+            for duplicate_id in "${duplicate_ids[@]}"; do
+              echo "Cancelling duplicate Neovim package build: ${duplicate_id}"
+              gh run cancel "${duplicate_id}" --repo "${GITHUB_REPOSITORY}" || true
+            done
+          else
+            # No current build exists: start exactly one. There is no retry loop.
             started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            echo "::group::Neovim build attempt ${attempt}/${max_attempts}"
-
-            if ! gh workflow run d630-core2-package.yml \
-              --repo "$GITHUB_REPOSITORY" --ref master -f package=neovim; then
-              echo "::error::Failed to dispatch Neovim build attempt $attempt"
-              echo "::endgroup::"
-              sleep 10
-              continue
-            fi
+            gh workflow run d630-core2-package.yml \
+              --repo "${GITHUB_REPOSITORY}" --ref master -f package=neovim
 
             run_id=""
             for poll in $(seq 1 90); do
               runs_json="$(gh api \
-                "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-package.yml/runs?branch=master&event=workflow_dispatch&per_page=50")" || {
-                  sleep 4
-                  continue
-                }
-              run_id="$(jq -r --arg label "Core2 package: neovim" --arg started "$started" \
-                '[.workflow_runs[] | select(.display_title == $label and .created_at >= $started)] | sort_by(.created_at) | last | .id // empty' \
-                <<<"$runs_json")"
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-package.yml/runs?branch=master&event=workflow_dispatch&per_page=100")"
+              run_id="$(jq -r --arg label "Core2 package: neovim" --arg started "$started" '
+                [.workflow_runs[]
+                 | select(.display_title == $label and .created_at >= $started)]
+                | sort_by(.created_at)
+                | last
+                | .id // empty
+              ' <<<"$runs_json")"
               [[ -n "$run_id" ]] && break
-              sleep 4
+              sleep 5
             done
 
             if [[ -z "$run_id" ]]; then
-              echo "::error::Could not identify Neovim run for attempt $attempt"
-              echo "::endgroup::"
-              sleep 10
-              continue
+              echo "::error::Could not identify the single dispatched Neovim build."
+              exit 1
             fi
+          fi
 
-            run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
-            echo "Attempt URL: $run_url"
-            echo "::endgroup::"
-
-            if gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status; then
-              {
-                echo "## Neovim package build succeeded"
-                echo
-                echo "- Successful attempt: $attempt of $max_attempts"
-                echo "- Workflow run: $run_url"
-                echo "- Package release was published by the build workflow."
-              } >> "$GITHUB_STEP_SUMMARY"
-              exit 0
-            fi
-
-            echo "::warning::Neovim attempt $attempt failed; the next attempt will use the current master workflow."
-            sleep 10
-          done
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
+          echo "Watching one Neovim package build: ${run_url}"
+          if ! gh run watch "$run_id" --repo "${GITHUB_REPOSITORY}" --exit-status; then
+            echo "::error::Neovim build failed. Inspect its logs and fix the cause; no automatic retry was started."
+            exit 1
+          fi
 
           {
-            echo "## Neovim package build still failing"
+            echo "## Neovim Debian 12 package build succeeded"
             echo
-            echo "All $max_attempts attempts failed. Inspect the latest app-package workflow logs."
-          } >> "$GITHUB_STEP_SUMMARY"
-          echo "::error::Neovim did not achieve a successful build/release within $max_attempts attempts."
-          exit 1
+            echo "- Workflow run: ${run_url}"
+            echo "- Retry policy: one build only; failures stop for log inspection."
+          } >> "${GITHUB_STEP_SUMMARY}"
