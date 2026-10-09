@@ -1,13 +1,13 @@
-name: Dell Latitude D630 — Linux 6.1 stable
+name: Dell Latitude D630 — Debian Linux 6.1.187-1
 
 on:
   push:
     branches:
-      - d630-stable-6.1
+      - d630-debian-6.1.187
   workflow_dispatch:
 
 concurrency:
-  group: d630-kernel-6.1
+  group: d630-debian-6.1.187
   cancel-in-progress: true
 
 permissions:
@@ -15,7 +15,7 @@ permissions:
   actions: read
 
 env:
-  KERNEL_TAG: v6.1.189
+  DEBIAN_SOURCE_VERSION: 6.1.187-1
 
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
             ca-certificates curl git make gcc g++ build-essential debhelper lsb-release bc bison flex \
             libssl-dev libelf-dev libdw-dev dwarves \
             cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
-            python3 file
+            python3 file patch quilt
 
       - name: Checkout D630 configuration and packaging scripts
         uses: actions/checkout@v5
@@ -52,24 +52,32 @@ jobs:
             scripts/d630-firmware-package.sh
           sparse-checkout-cone-mode: false
 
-      - name: Fetch upstream Linux 6.1 stable source
+      - name: Fetch official Debian Linux source package 6.1.187-1
         shell: bash
         run: |
           set -euxo pipefail
-          git clone --depth 1 --branch "${KERNEL_TAG}" \
-            https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git linux-6.1
+          # Enable the official Bookworm security source index and fetch the exact Debian source version.
+          printf '%s\n' \
+            'deb-src http://deb.debian.org/debian bookworm main' \
+            'deb-src http://deb.debian.org/debian-security bookworm-security main' \
+            > /etc/apt/sources.list.d/d630-deb-src.list
+          apt-get update
+          cd "$GITHUB_WORKSPACE"
+          apt-get source "linux=${DEBIAN_SOURCE_VERSION}"
+          test -d linux-6.1.187/debian
+          test "$(dpkg-parsechangelog -l linux-6.1.187/debian/changelog -S Version)" = "${DEBIAN_SOURCE_VERSION}"
           cp "$GITHUB_WORKSPACE/arch/x86/configs/d630-6.1.config" \
-            linux-6.1/arch/x86/configs/d630-6.1.config
+            linux-6.1.187/arch/x86/configs/d630-6.1.config
           cp "$GITHUB_WORKSPACE/arch/x86/configs/d630-prune-modules-6.1.sh" \
-            linux-6.1/arch/x86/configs/d630-prune-modules-6.1.sh
-          test "$(make -s -C linux-6.1 kernelversion)" = "6.1.189"
-          git -C linux-6.1 log -1 --oneline
+            linux-6.1.187/arch/x86/configs/d630-prune-modules-6.1.sh
+          test "$(make -s -C linux-6.1.187 kernelversion)" = "6.1.187"
+          dpkg-parsechangelog -l linux-6.1.187/debian/changelog -S Version
 
       - name: Prepare stripped Debian-compatible D630 configuration
         shell: bash
         run: |
           set -euxo pipefail
-          cd linux-6.1
+          cd linux-6.1.187
 
           make x86_64_defconfig
           scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630-6.1.config
@@ -165,18 +173,18 @@ jobs:
           set -euxo pipefail
           bash "$GITHUB_WORKSPACE/scripts/d630-firmware-package.sh" "$GITHUB_WORKSPACE"
 
-      - name: Build Linux 6.1.189 Debian kernel packages
+      - name: Build D630 kernel from Debian Linux 6.1.187-1 source
         shell: bash
         run: |
           set -euxo pipefail
           cd linux-6.1
 
           export LOCALVERSION=-d630-core2
-          git config --global --add safe.directory "$PWD"
           export KBUILD_BUILD_USER=AmrUser-48
           export KBUILD_BUILD_HOST=github-actions
           export KDEB_CHANGELOG_DIST=bookworm
-          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
+          SOURCE_DATE="$(dpkg-parsechangelog -l debian/changelog -S Date)"
+          export KBUILD_BUILD_TIMESTAMP="$(date -u -d "$SOURCE_DATE" '+%Y-%m-%dT%H:%M:%S+00:00')"
 
           make -j2 bindeb-pkg LOCALVERSION="${LOCALVERSION}" INSTALL_MOD_STRIP=1
 
@@ -184,7 +192,7 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          test -f linux-6.1/arch/x86/boot/bzImage
+          test -f linux-6.1.187/arch/x86/boot/bzImage
           file linux-6.1/arch/x86/boot/bzImage
 
           echo "=== Debian packages ==="
@@ -212,7 +220,7 @@ jobs:
       - name: Upload release artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: linux-d630-core2-6.1-${{ github.sha }}
+          name: linux-d630-core2-debian-6.1.187-${{ github.sha }}
           path: release-artifacts/*
           if-no-files-found: error
 
@@ -223,7 +231,7 @@ jobs:
 
     env:
       GH_TOKEN: ${{ github.token }}
-      TAG: d630-6.1-${{ github.sha }}
+      TAG: d630-debian-6.1.187-${{ github.sha }}
 
     steps:
       - name: Download release artifacts
@@ -238,9 +246,9 @@ jobs:
           set -euxo pipefail
           cd dist
           cat > release-notes.md <<EOF
-          ## Dell Latitude D630 / Core 2 Duo — Linux 6.1.189
+          ## Dell Latitude D630 / Core 2 Duo — Debian Linux 6.1.187-1
 
-          Built from upstream stable tag ${KERNEL_TAG} with D630 config from
+          Built from official Debian source package linux ${DEBIAN_SOURCE_VERSION} (Bookworm security), with Debian's source patches and D630 config from
           commit ${{ github.sha }}.
 
           - D630 graphics, ACPI, audio, storage and Intel 3945ABG support
@@ -263,6 +271,6 @@ jobs:
           else
             gh release create "${TAG}" linux-image-*.deb d630-firmware-iwl3945_*.deb \
               SHA256SUMS-d630-6.1.txt --repo "${GITHUB_REPOSITORY}" \
-              --title "Dell Latitude D630 Linux 6.1.189 (${{ github.sha }})" \
+              --title "Dell Latitude D630 Debian Linux 6.1.187-1 (${{ github.sha }})" \
               --notes-file release-notes.md --target "${GITHUB_SHA}"
           fi
