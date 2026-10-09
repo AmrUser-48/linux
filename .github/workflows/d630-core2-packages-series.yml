@@ -1,0 +1,85 @@
+name: Core 2 optimized Debian package train
+run-name: Core2 package train: ${{ inputs.series }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      series:
+        description: Sequential package set to build and publish
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+          - shell-editors
+          - media
+          - graphics
+
+concurrency:
+  group: core2-package-train
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  build-series:
+    name: Sequential Core 2 package builds
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SERIES: ${{ inputs.series }}
+    steps:
+      - name: Dispatch each package build and wait for its release
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          case "$SERIES" in
+            shell-editors) packages=(bash zsh nano neovim) ;;
+            media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
+            graphics) packages=(mesa) ;;
+            all) packages=(bash zsh nano neovim lame zstd xz-utils 7zip ffmpeg mpv curl mesa) ;;
+            *) echo "::error::Unknown package series: $SERIES"; exit 1 ;;
+          esac
+
+          dispatch_and_wait() {
+            local package="$1"
+            local started run_id attempt runs_json
+
+            echo "::group::Core2 package: ${package}"
+            started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+            gh workflow run "d630-core2-package.yml" \
+              --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}"
+
+            run_id=""
+            for attempt in $(seq 1 90); do
+              runs_json="$(gh api \
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-package.yml/runs?branch=master&event=workflow_dispatch&per_page=50")"
+              run_id="$(jq -r --arg label "Core2 package: ${package}" --arg started "$started" \
+                '[.workflow_runs[] | select(.display_title == $label and .created_at >= $started)] | sort_by(.created_at) | last | .id // empty' \
+                <<<"$runs_json")"
+              [[ -n "$run_id" ]] && break
+              sleep 4
+            done
+
+            if [[ -z "$run_id" ]]; then
+              echo "::error::Could not identify the ${package} build run"
+              exit 1
+            fi
+
+            echo "Run URL: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
+            echo "::endgroup::"
+
+            # Stop immediately if a package fails; later packages must not publish unverified releases.
+            gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status
+          }
+
+          for package in "${packages[@]}"; do
+            dispatch_and_wait "$package"
+          done
+
+          echo "Core 2 package series completed successfully: ${packages[*]}"
