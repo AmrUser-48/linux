@@ -531,7 +531,7 @@ jobs:
               else:
                   lines.append("- _No release assets attached._")
               if not (has_dsc and has_source_archive):
-                  lines.append("- _Debian source archives are not attached to this older release; newly built releases include them._")
+                  lines.append("- _Debian source archive assets are not attached to this release._")
               release_url = release.get("html_url")
               if release_url:
                   lines.append(f"- [Release notes and full asset list]({release_url})")
