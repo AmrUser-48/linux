@@ -35,6 +35,13 @@ This workflow uses the conservative `-O2 -march=core2 -mtune=core2` profile for 
 
 **Critical warning:** do not install every generated `.deb` blindly. A glibc build may publish multiple runtime, locale, development, debug and multiarch packages. Inspect the asset list and dependencies first. Replacing `libc6` or `systemd` can make the installed system unusable; do this only with a verified backup, known-good kernel, and a tested rescue/rollback path. Keep the stock Debian packages and recovery media available. These builds target the D630 / Intel Core 2 system, not generic amd64 computers.
 
+
+### Run the system package train
+
+Use [**Core 2 optimized Debian system package train**](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-packages-series.yml) to build batches or all 43 allowlisted system packages. The train reuses the single-package builder, publishes a separate release for each successful package, and runs at most **two package builds concurrently**. It does not stop all remaining builds just because one package fails; inspect the run summary and individual package jobs for failures.
+
+Select `all` for the complete set, or a narrower group: `core-foundation`, `toolchain`, `runtime-libraries`, `system-utilities`, or `text-compression`. GCC and glibc can be long builds; the overall train can take many hours, while each individual package build has its own six-hour timeout. The single-package workflow remains available when you want to retry one failed target.
+
 ## Brave Browser
 
 Brave is intentionally not in the normal Debian-source train. It is not a standard Bookworm source-package rebuild; Brave's Linux build uses a Chromium-sized checkout. Upstream's current instructions recommend more than 16 GB RAM and expect about 100 GB of free disk for Chromium. That does not fit the standard GitHub-hosted runner reliably. Treat Brave as a separate project requiring a larger or self-hosted runner, and test it as a separate browser install rather than replacing the held vendor package automatically.
