@@ -321,5 +321,5 @@ jobs:
             gh release create "$RELEASE_TAG" ./*.deb ./*.txt release-notes.md \
               --repo "$GITHUB_REPOSITORY" \
               --title "Core 2 system ${PACKAGE} ${PACKAGE_VERSION}" \
-              --notes-file release-notes.md --target "$GITHUB_SHA"
+              --notes-file release-notes.md
           fi
