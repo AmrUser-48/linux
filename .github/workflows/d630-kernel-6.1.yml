@@ -301,9 +301,8 @@ jobs:
           EOF
 
           if gh release view "${TAG}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
-            gh release upload "${TAG}" linux-image-*.deb d630-firmware-iwl3945_*.deb \
-              intel-microcode_*_amd64.deb \
-              SHA256SUMS-d630-6.1.txt --repo "${GITHUB_REPOSITORY}" --clobber
+            echo "::notice::Release ${TAG} already exists; refusing to overwrite or upload assets."
+            exit 0
           else
             gh release create "${TAG}" linux-image-*.deb d630-firmware-iwl3945_*.deb \
               intel-microcode_*_amd64.deb \
