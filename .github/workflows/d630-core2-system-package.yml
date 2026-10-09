@@ -222,9 +222,15 @@ jobs:
             echo "::error::No runtime/installable .deb packages remain after filtering development/debug outputs"
             exit 1
           fi
-          if [[ "$PACKAGE" == "glibc" ]] && ! printf '%s\n' "${DEBS[@]}" | while IFS= read -r deb; do dpkg-deb -f "$deb" Package; done | grep -Fxq 'libc6'; then
-            echo "::error::glibc build did not produce required runtime package libc6"
-            exit 1
+          if [[ "$PACKAGE" == "glibc" ]]; then
+            libc6_found=false
+            for deb in "${DEBS[@]}"; do
+              [[ "$(dpkg-deb -f "$deb" Package)" == "libc6" ]] && libc6_found=true
+            done
+            if [[ "$libc6_found" != "true" ]]; then
+              echo "::error::glibc build did not produce required runtime package libc6"
+              exit 1
+            fi
           fi
 
           for deb in "${DEBS[@]}"; do
