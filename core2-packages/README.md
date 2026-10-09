@@ -36,6 +36,11 @@ This workflow uses the conservative `-O2 -march=core2 -mtune=core2` profile for 
 **Critical warning:** do not install every generated `.deb` blindly. A glibc build may publish multiple runtime, locale, development, debug and multiarch packages. Inspect the asset list and dependencies first. Replacing `libc6` or `systemd` can make the installed system unusable; do this only with a verified backup, known-good kernel, and a tested rescue/rollback path. Keep the stock Debian packages and recovery media available. These builds target the D630 / Intel Core 2 system, not generic amd64 computers.
 
 
+
+### Recover a failed release without rebuilding
+
+If the compile/package job succeeded but release publishing failed, its workflow artifact may still be available for seven days. Use [**Recover Core 2 package release**](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-recover-release.yml), leave the default values for the Mesa run (`apps`, `mesa`, run ID `37892602737`), and run it. The workflow downloads the saved artifact, verifies its SHA-256 sums, and publishes the release without recompiling. Change the package kind and run ID to recover another app/system artifact.
+
 ### Run the system package train
 
 Use [**Core 2 optimized Debian system package train**](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-packages-series.yml) to build batches or all 43 allowlisted system packages. The train reuses the single-package builder, publishes a separate release for each successful package, and runs at most **two package builds concurrently**. It does not stop all remaining builds just because one package fails; inspect the run summary and individual package jobs for failures.
