@@ -2,11 +2,6 @@ name: Core 2 optimized Debian package
 run-name: "Core2 package: ${{ inputs.package }}"
 
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - '**'
   workflow_dispatch:
     inputs:
       package:
@@ -106,7 +101,8 @@ jobs:
           fi
 
           ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
-          NEW_VERSION="${ORIGINAL_VERSION}+core2.1"
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          NEW_VERSION="${ORIGINAL_VERSION}+core2.1~${BUILD_STAMP}"
           dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
             "Rebuild for Intel Core 2 using -march=core2 -mtune=core2."
 
