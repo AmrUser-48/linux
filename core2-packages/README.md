@@ -165,7 +165,7 @@ The index below is refreshed automatically after each successful Core 2 package 
 
 ## Start a build
 
-In GitHub, open **Actions → Core 2 optimized Debian package train → Run workflow**. Select a series:
+In GitHub, open **Actions → Core 2 optimized Debian package train → Run workflow**. Select a series. To refresh all release links in this README manually, use [**Refresh Core 2 package release index → Run workflow**](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-release-index.yml); the index also refreshes automatically when a release is published:
 
 - all: the existing package train, then Python, FFTW, MPD/client utilities, Rust command-line tools, process monitors and the X.Org server.
 - shell-editors: Bash, Zsh, Nano and Neovim.
