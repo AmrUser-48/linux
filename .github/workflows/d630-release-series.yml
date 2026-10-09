@@ -42,8 +42,7 @@ jobs:
               for attempt in $(seq 1 60); do
                 run_id="$(gh api \
                   "repos/\${GITHUB_REPOSITORY}/actions/workflows/\${workflow}/runs?branch=\${branch}&event=workflow_dispatch&per_page=10" \
-                  --jq --arg started "$started" \
-                  '[.workflow_runs[] | select(.created_at >= $started)] | sort_by(.created_at) | last | .id // empty')"
+                  --jq "[.workflow_runs[] | select(.created_at >= \"$started\")] | sort_by(.created_at) | last | .id // empty")"
                 [[ -n "$run_id" ]] && break
                 sleep 5
               done
