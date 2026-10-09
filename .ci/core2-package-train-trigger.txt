@@ -1,0 +1,9 @@
+Core 2 package train request: new-tools
+
+Build sequentially from Debian 12 Bookworm source packages:
+python3.11, fftw3, ncmpcpp, mpd, rust-fd-find, rust-sd, rust-ripgrep,
+btop, htop and xorg-server.
+
+Skip any package with an existing Core 2 release containing .deb assets.
+Capture failed build logs, continue through the entire list, and summarize failures
+for root-cause fixes and a later rerun that skips packages already released.
