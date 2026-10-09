@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package
-run-name: Core2 package: ${{ inputs.package }}
+run-name: "Core2 package: ${{ inputs.package }}"
 
 on:
   workflow_dispatch:
