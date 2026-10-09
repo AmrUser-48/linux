@@ -106,12 +106,18 @@ jobs:
             # Neovim's own helper mark those parser-only tests as skipped.
             # Also filter the process-tree test that leaves a sleep descendant
             # alive in the GitHub container runner; keep all other tests enabled.
-            if ! grep -Fq 'TEST_FILTER_OUT=""' "$SOURCE_DIR/debian/rules"; then
+            if ! grep -q 'TEST_FILTER_OUT' "$SOURCE_DIR/debian/rules"; then
               echo "::error::Expected Neovim Debian TEST_FILTER_OUT setting was not found"
               exit 1
             fi
-            sed -i 's/TEST_FILTER_OUT=""/TEST_FILTER_OUT="kills entire process tree"/g' "$SOURCE_DIR/debian/rules"
-            grep -F 'TEST_FILTER_OUT="kills entire process tree"' "$SOURCE_DIR/debian/rules"
+            # Debian's makefile may express the empty value as a Make variable
+            # expansion, so replace the assignment generically rather than
+            # assuming the expanded shell text is present literally in the file.
+            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="kills entire process tree"/g' "$SOURCE_DIR/debian/rules"
+            if ! grep -Fq 'kills entire process tree' "$SOURCE_DIR/debian/rules"; then
+              echo "::error::Failed to set Neovim's test filter"
+              exit 1
+            fi
           fi
 
           ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
