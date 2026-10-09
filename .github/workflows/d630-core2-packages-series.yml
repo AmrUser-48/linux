@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package train
-run-name: "Core2 package train: ${{ inputs.series }}"
+run-name: "Core2 package train: ${{ inputs.series || 'new-tools' }}"
 
 on:
   workflow_dispatch:
@@ -8,12 +8,16 @@ on:
         description: Sequential package set to build and publish
         required: true
         type: choice
-        default: all
+        default: new-tools
         options:
           - all
           - shell-editors
           - media
           - graphics
+          - new-tools
+  push:
+    paths:
+      - ".ci/core2-package-train-trigger.txt"
 
 concurrency:
   group: core2-package-train
@@ -27,59 +31,143 @@ jobs:
   build-series:
     name: Sequential Core 2 package builds
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 1440
     env:
       GH_TOKEN: ${{ github.token }}
-      SERIES: ${{ inputs.series }}
+      SERIES: ${{ inputs.series || 'new-tools' }}
     steps:
-      - name: Dispatch each package build and wait for its release
+      - name: Build packages sequentially, skipping ready releases
         shell: bash
         run: |
-          set -euo pipefail
+          set -uo pipefail
 
           case "$SERIES" in
             shell-editors) packages=(bash zsh nano neovim) ;;
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
-            all) packages=(lame bash zsh nano neovim zstd xz-utils 7zip ffmpeg mpv curl mesa) ;;
+            new-tools)
+              # Python interpreter, FFTW, MPD/clients, Rust CLI tools, monitors,
+              # then the code-bearing X.Org server. The xorg metapackage itself
+              # is only a dependency bundle and is not the useful optimized target.
+              packages=(python3.11 fftw3 ncmpcpp mpd rust-fd-find rust-sd rust-ripgrep btop htop xorg-server)
+              ;;
+            all)
+              packages=(lame bash zsh nano neovim zstd xz-utils 7zip ffmpeg mpv curl mesa python3.11 fftw3 ncmpcpp mpd rust-fd-find rust-sd rust-ripgrep btop htop xorg-server)
+              ;;
             *) echo "::error::Unknown package series: $SERIES"; exit 1 ;;
           esac
 
+          echo "Selected series: $SERIES"
+          printf 'Queue: %s\n' "${packages[*]}"
+
+          # Snapshot current releases. A package is ready when its normal
+          # Core 2 release exists and contains at least one .deb asset.
+          releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100")" || {
+            echo "::error::Cannot list releases; refusing to rebuild blindly."
+            exit 1
+          }
+
+          failed=()
+          skipped=()
+          built=()
+
           dispatch_and_wait() {
             local package="$1"
-            local started run_id attempt runs_json
+            local started run_id attempt runs_json log_file has_release
 
-            echo "::group::Core2 package: ${package}"
+            has_release="$(jq -r --arg prefix "core2-${package}-" '
+              any(.[]; (.tag_name | startswith($prefix))
+                and any(.assets[]?; .name | endswith(".deb")))
+            ' <<<"$releases_json")"
+
+            if [[ "$has_release" == "true" ]]; then
+              echo "::notice::Skipping ${package}: a Core 2 release with .deb assets already exists."
+              skipped+=("$package")
+              return 0
+            fi
+
+            echo "::group::Core 2 package: ${package}"
             started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
-            gh workflow run "d630-core2-package.yml" \
-              --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}"
+            if ! gh workflow run "d630-core2-package.yml" \
+                --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}"; then
+              echo "::error::Could not dispatch ${package}; recording failure and continuing."
+              failed+=("$package (dispatch failed)")
+              echo "::endgroup::"
+              return 0
+            fi
 
             run_id=""
             for attempt in $(seq 1 90); do
               runs_json="$(gh api \
-                "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-package.yml/runs?branch=master&event=workflow_dispatch&per_page=50")"
-              run_id="$(jq -r --arg label "Core2 package: ${package}" --arg started "$started" \
-                '[.workflow_runs[] | select(.display_title == $label and .created_at >= $started)] | sort_by(.created_at) | last | .id // empty' \
-                <<<"$runs_json")"
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-package.yml/runs?branch=master&event=workflow_dispatch&per_page=100")" || {
+                  sleep 4
+                  continue
+                }
+              run_id="$(jq -r --arg label "Core2 package: ${package}" --arg started "$started" '
+                [.workflow_runs[]
+                 | select(.display_title == $label and .created_at >= $started)]
+                | sort_by(.created_at)
+                | last
+                | .id // empty
+              ' <<<"$runs_json")"
               [[ -n "$run_id" ]] && break
               sleep 4
             done
 
             if [[ -z "$run_id" ]]; then
-              echo "::error::Could not identify the ${package} build run"
-              exit 1
+              echo "::error::Could not identify the ${package} build run; continuing."
+              failed+=("$package (run ID not found)")
+              echo "::endgroup::"
+              return 0
             fi
 
             echo "Run URL: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
             echo "::endgroup::"
 
-            # Stop immediately if a package fails; later packages must not publish unverified releases.
-            gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status
+            if gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status; then
+              echo "::notice::${package} built and published successfully."
+              built+=("$package")
+              # Refresh after each release so the series has an accurate record.
+              releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100")" || true
+              return 0
+            fi
+
+            echo "::error::${package} failed; fetching failure logs before continuing."
+            log_file="$RUNNER_TEMP/core2-${package}-${run_id}-failed.log"
+            if gh run view "$run_id" --repo "$GITHUB_REPOSITORY" --log-failed > "$log_file" 2>&1; then
+              {
+                echo
+                echo "### Failure log: ${package} (run ${run_id})"
+                echo
+                echo '~~~text'
+                grep -Ei 'error:|fatal:|failed|failure|undefined reference|not found|no such file|dpkg-buildpackage: error|make\[[0-9]+\]: \*\*\*' "$log_file" | tail -n 80 || tail -n 50 "$log_file"
+                echo '~~~'
+              } >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "::warning::Could not retrieve failure log for ${package}; run: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
+            fi
+            failed+=("$package (run $run_id)")
+            return 0
           }
 
           for package in "${packages[@]}"; do
             dispatch_and_wait "$package"
           done
 
-          echo "Core 2 package series completed successfully: ${packages[*]}"
+          {
+            echo "## Core 2 package train results"
+            echo
+            echo "- Published this run: ${built[*]:-(none)}"
+            echo "- Skipped because a ready release exists: ${skipped[*]:-(none)}"
+            echo "- Failed after log collection: ${failed[*]:-(none)}"
+            echo
+            echo "Packages are processed one at a time. Re-running this series skips package releases that already contain .deb assets."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if (( ${#failed[@]} > 0 )); then
+            echo "::error::Series completed with failed packages: ${failed[*]}. Inspect the failure logs above, fix the root cause, then rerun; ready releases will be skipped."
+            exit 1
+          fi
+
+          echo "Core 2 package series finished. Newly published: ${built[*]:-(none)}; skipped ready releases: ${skipped[*]:-(none)}"
