@@ -5,3 +5,4 @@ Run one build using the runtime-only package policy:
 - disable automatic -dbgsym generation with noautodbgsym
 - fail the build if any development/debug .deb is produced
 - publish only normal installable packages with checksums
+Trigger again after restoring valid package workflow configuration.
