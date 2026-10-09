@@ -7,6 +7,16 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 12:03:09 UTC — Core 2 optimized htop 3.2.2-2+core2.1~20261009120215
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/BUILD-INFO.txt)
+- [htop_3.2.2-2+core2.1.20261009120215_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2%2Bcore2.1.20261009120215_amd64.deb)
+- [htop_3.2.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2.debian.tar.xz)
+- [htop_3.2.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2.dsc)
+- [htop_3.2.2.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2.orig.tar.gz)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/release-notes.md)
+- [SHA256SUMS-core2-htop.txt](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/SHA256SUMS-core2-htop.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-htop-3.2.2-2-core2.1-20261009120215)
+
 ### 2026-10-09 12:01:31 UTC — Core 2 optimized btop 1.2.13-1+core2.1~20261009120005
 - [btop_1.2.13-1+core2.1.20261009120005_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1%2Bcore2.1.20261009120005_amd64.deb)
 - [btop_1.2.13-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1.debian.tar.xz)
