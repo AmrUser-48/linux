@@ -8,7 +8,7 @@ on:
         description: Debian Bookworm source package to rebuild for Intel Core 2
         required: true
         type: choice
-        default: mesa
+        default: coreutils
         options:
           - glibc
           - gcc-12
@@ -256,7 +256,7 @@ jobs:
       - name: Download built packages
         uses: actions/download-artifact@v4
         with:
-          name: core2-${{ inputs.package }}-${{ github.run_id }}
+          name: core2-system-${{ inputs.package }}-${{ github.run_id }}
           path: dist
 
       - name: Publish package release
