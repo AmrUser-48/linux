@@ -24,7 +24,7 @@ Mesa is the highest-risk target because it supplies graphics libraries and drive
 
 ## Core system packages (manual, higher risk)
 
-For Debian core utilities, libraries and boot/runtime components, open [**Core 2 optimized Debian system package**](../actions/workflows/d630-core2-system-package.yml) and choose one source package per run. The menu includes:
+For Debian core utilities, libraries and boot/runtime components, open [**Core 2 optimized Debian system package**](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-package.yml) and choose one source package per run. The menu includes:
 
 - Runtime and toolchain foundations: `glibc` (produces packages including `libc6` and `libc-bin`), `gcc-12`, `binutils`, `dpkg`, `apt`.
 - Init, shell and system tools: `systemd`, `bash`, `dash`, `coreutils`, `util-linux`, `iproute2`, `kmod`, `procps`, `e2fsprogs`, `psmisc`, `shadow`, `pam`.
