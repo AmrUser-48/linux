@@ -190,7 +190,7 @@ jobs:
                 HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
                 debian/rules clean
               runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
-                DEB_BUILD_OPTIONS="parallel=2,nocheck" \
+                DEB_BUILD_OPTIONS="parallel=2 nocheck" \
                 HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
                 dpkg-buildpackage -rfakeroot -us -uc -b -j2
               BUILD_MODE="tests-skipped-after-test-failure"
