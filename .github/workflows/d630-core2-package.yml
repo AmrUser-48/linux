@@ -101,80 +101,23 @@ jobs:
             exit 1
           fi
 
-          # Exclude binary development/debug packages at debhelper level.
-          # Automatic dbgsym output is disabled by DEB_BUILD_OPTIONS=noautodbgsym.
+          # Skip development/debug binary stanzas during debhelper processing.
+          # noautodbgsym below also disables automatically generated dbgsym packages.
           mapfile -t EXCLUDED_BINARY_PACKAGES < <(
             awk '$1 == "Package:" { print $2 }' "$SOURCE_DIR/debian/control" |
-              grep -E -- '-(dev|dbg|dbgsym)
-            # Debian's CI test command forces an unavailable Tree-sitter C parser
-            # to be fatal. Without a parser fixture in this source package, let
-            # Neovim's own helper mark those parser-only tests as skipped.
-            # Also filter the process-tree test that leaves a sleep descendant
-            # alive in the GitHub container runner; keep all other tests enabled.
-            if ! grep -q 'TEST_FILTER_OUT' "$SOURCE_DIR/debian/rules"; then
-              echo "::error::Expected Neovim Debian TEST_FILTER_OUT setting was not found"
-              exit 1
-            fi
-            # Debian's makefile may express the empty value as a Make variable
-            # expansion, so replace the assignment generically rather than
-            # assuming the expanded shell text is present literally in the file.
-            sed -i -E 's/TEST_FILTER_OUT[[:space:]]*=[[:space:]]*[^[:space:]]+/TEST_FILTER_OUT="entire"/g' "$SOURCE_DIR/debian/rules"
-            if ! grep -Fq 'entire' "$SOURCE_DIR/debian/rules"; then
-              echo "::error::Failed to set Neovim's test filter"
-              exit 1
-            fi
+              awk '/-dev$/ || /-dbg$/ || /-dbgsym$/'
+          )
+          DH_OPTIONS=""
+          for excluded_package in "${EXCLUDED_BINARY_PACKAGES[@]}"; do
+            DH_OPTIONS="$DH_OPTIONS -N$excluded_package"
+          done
+          echo "DH_OPTIONS=$DH_OPTIONS" >> "$GITHUB_ENV"
+          if (( ${#EXCLUDED_BINARY_PACKAGES[@]} > 0 )); then
+            printf 'Excluding development/debug binary stanzas: %s\n' "${EXCLUDED_BINARY_PACKAGES[*]}"
+          else
+            echo "No explicit development/debug binary package stanzas to exclude."
           fi
 
-          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
-          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
-          NEW_VERSION="${ORIGINAL_VERSION}+core2.1~${BUILD_STAMP}"
-          # dch resolves debian/changelog from the current directory.
-          # apt-get source ran in SRCROOT; enter the unpacked source tree first.
-          cd "$SOURCE_DIR"
-          dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
-            "Rebuild for Intel Core 2 using -march=core2 -mtune=core2."
-
-          ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
-          test "$ACTUAL_VERSION" = "$NEW_VERSION"
-
-          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
-          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
-          printf 'CFLAGS=%s\nCXXFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" \
-            | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
-          grep -q -- '-march=core2' <<<"$CFLAGS"
-          grep -q -- '-mtune=core2' <<<"$CFLAGS"
-          grep -q -- '-march=core2' <<<"$CXXFLAGS"
-          grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
-          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
-          grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
-
-          {
-            echo "package=$PACKAGE"
-            echo "source_version=$ORIGINAL_VERSION"
-            echo "package_version=$NEW_VERSION"
-            echo "source_dir=$SOURCE_DIR"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Compile and package
-        id: compile
-        shell: bash
-        env:
-          PACKAGE: ${{ inputs.package }}
-          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
-          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
-          ORIGINAL_VERSION: ${{ steps.source.outputs.source_version }}
-        run: |
-          set -euxo pipefail
-
-          # Run build/tests unprivileged: permission tests must not get root's bypass.
-          BUILD_USER=core2build
-          if ! id "$BUILD_USER" >/dev/null 2>&1; then
-            useradd --create-home --shell /bin/bash "$BUILD_USER"
-          fi
-          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
-
-          cd "$SOURCE_DIR"
-          BUILD_MODE="standard-debian-build"
           if [[ "$PACKAGE" == "neovim" ]]; then
             # Try the full Debian build/test sequence first.
             if runuser --preserve-environment --user "$BUILD_USER" -- env -u GITHUB_ACTIONS \
