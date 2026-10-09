@@ -147,6 +147,25 @@ jobs:
             else
               echo "::warning::Could not retrieve failure log for ${package}; run: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
             fi
+
+            # Pull the full redirected compiler log saved by the package workflow.
+            diagnostic_dir="$RUNNER_TEMP/core2-${package}-${run_id}-diagnostics"
+            if gh run download "$run_id" --repo "$GITHUB_REPOSITORY" \
+                --name "core2-${package}-build-log-${run_id}" --dir "$diagnostic_dir" 2>/dev/null; then
+              for full_log in "$diagnostic_dir"/*.log; do
+                [[ -f "$full_log" ]] || continue
+                {
+                  echo
+                  echo "### Full build-log excerpts: ${package} ($(basename "$full_log"))"
+                  echo
+                  echo '~~~text'
+                  grep -Ei 'error:|fatal:|failed|failure|undefined reference|not found|no such file|dpkg-buildpackage: error|make\[[0-9]+\]: \*\*\*|test .* failed|Failed to build these modules' "$full_log" | tail -n 120 || tail -n 80 "$full_log"
+                  echo '~~~'
+                } >> "$GITHUB_STEP_SUMMARY"
+              done
+            else
+              echo "::warning::Full build-log artifact was unavailable for ${package}; console failure log was retained."
+            fi
             failed+=("$package (run $run_id)")
             return 0
           }
