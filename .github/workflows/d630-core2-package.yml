@@ -226,7 +226,7 @@ jobs:
             "Core 2 package version: $PACKAGE_VERSION" \
             "Target: amd64 / Intel Core 2" \
             "Optimization level: $CORE2_OPT_LEVEL" \
-            "Build mode: $CORE2_BUILD_MODE" \
+            "Build mode: $BUILD_MODE" \
             "Flags: $CORE2_OPT_LEVEL -march=core2 -mtune=core2; Debian hardening retained" \
             "Build source: official Debian Bookworm source package with Debian patches" \
             > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
