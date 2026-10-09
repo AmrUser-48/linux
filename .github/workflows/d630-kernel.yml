@@ -50,6 +50,8 @@ jobs:
 
           make x86_64_defconfig
           scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630.config
+          # Stop setlocalversion from appending Git commit/hash metadata.
+          scripts/config --disable LOCALVERSION_AUTO
           make olddefconfig
           bash arch/x86/configs/d630-prune-modules.sh
 
@@ -62,6 +64,8 @@ jobs:
               *) echo "Unexpected state for $1: $value" >&2; return 1 ;;
             esac
           }
+
+          test "$(config_state CONFIG_LOCALVERSION_AUTO)" = "n"
 
           echo "=== D630 hardware requirements ==="
           for opt in \
