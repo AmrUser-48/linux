@@ -1,3 +1,5 @@
 Neovim rebuild request
 Requested: build and publish the Core 2 optimized Neovim Debian package until one attempt succeeds.
 Controller: .github/workflows/d630-neovim-until-success.yml
+
+Retry controller pass for updated Neovim build/test fallback.
