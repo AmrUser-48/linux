@@ -103,6 +103,9 @@ jobs:
           test "$(config_state CONFIG_SECURITY_LANDLOCK)" = "y"
 
           test "$(config_state CONFIG_NETFILTER)" = "y"
+          test "$(config_state CONFIG_NETFILTER_XTABLES_LEGACY)" = "y"
+          test "$(config_state CONFIG_IP_NF_IPTABLES_LEGACY)" = "m"
+          test "$(config_state CONFIG_IP6_NF_IPTABLES_LEGACY)" = "m"
           test "$(config_state CONFIG_NF_CONNTRACK)" = "m"
           test "$(config_state CONFIG_NF_TABLES)" = "m"
           test "$(config_state CONFIG_NF_NAT)" = "m"
