@@ -20,7 +20,7 @@ jobs:
       - name: Dispatch each stable build and wait for its release
         shell: bash
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
@@ -30,18 +30,18 @@ jobs:
             local label="$3"
             local started response run_id attempt
 
-            echo "::group::\${label}: dispatch"
+            echo "::group::${label}: dispatch"
             started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             response="$(gh api --method POST \
-              "repos/\${GITHUB_REPOSITORY}/actions/workflows/\${workflow}/dispatches" \
-              -f "ref=\${branch}")"
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches" \
+              -f "ref=${branch}")"
             run_id="$(jq -r '.workflow_run_id // empty' <<<"$response")"
 
             # Older API responses may not include the run ID; find this dispatch by branch and time.
             if [[ -z "$run_id" ]]; then
               for attempt in $(seq 1 60); do
                 run_id="$(gh api \
-                  "repos/\${GITHUB_REPOSITORY}/actions/workflows/\${workflow}/runs?branch=\${branch}&event=workflow_dispatch&per_page=10" \
+                  "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/runs?branch=${branch}&event=workflow_dispatch&per_page=10" \
                   --jq "[.workflow_runs[] | select(.created_at >= \"$started\")] | sort_by(.created_at) | last | .id // empty")"
                 [[ -n "$run_id" ]] && break
                 sleep 5
@@ -49,12 +49,12 @@ jobs:
             fi
 
             if [[ -z "$run_id" ]]; then
-              echo "::error::Could not identify the \${label} workflow run."
+              echo "::error::Could not identify the ${label} workflow run."
               exit 1
             fi
 
-            echo "Watching \${label}, run \${run_id}"
-            echo "https://github.com/\${GITHUB_REPOSITORY}/actions/runs/\${run_id}"
+            echo "Watching ${label}, run ${run_id}"
+            echo "https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
             echo "::endgroup::"
 
             # A failure stops the train. Later kernels are not released against a failed earlier build.
