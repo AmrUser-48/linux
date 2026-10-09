@@ -7,6 +7,60 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 19:00:59 UTC — Core 2 optimized ffmpeg 7:5.1.9-0+deb12u1+core2.1~20261009183944
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/BUILD-INFO.txt)
+- [ffmpeg-doc_5.1.9-0+deb12u1+core2.1.20261009183944_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg-doc_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_all.deb)
+- [ffmpeg_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [ffmpeg_5.1.9-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1.debian.tar.xz)
+- [ffmpeg_5.1.9-0+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1.dsc)
+- [ffmpeg_5.1.9.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9.orig.tar.xz)
+- [ffmpeg_5.1.9.orig.tar.xz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9.orig.tar.xz.asc)
+- [libavcodec-extra59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavcodec-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavcodec59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavdevice59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavdevice59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavfilter-extra8_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter-extra8_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavfilter-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavfilter8_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter8_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavformat-extra59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat-extra59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavformat-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavformat59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libavutil57_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavutil57_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libpostproc56_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libpostproc56_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libswresample4_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [libswscale6_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/release-notes.md)
+- [SHA256SUMS-core2-ffmpeg.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/SHA256SUMS-core2-ffmpeg.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944)
+
+### 2026-10-09 18:57:31 UTC — Core 2 system libxcrypt 1:4.4.33-2+core2.1~20261009185630
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/BUILD-INFO.txt)
+- [libcrypt1_4.4.33-2+core2.1.20261009185630_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb)
+- [libxcrypt-source_4.4.33-2+core2.1.20261009185630_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libxcrypt-source_4.4.33-2%2Bcore2.1.20261009185630_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/release-notes.md)
+- [SHA256SUMS-core2-libxcrypt.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/SHA256SUMS-core2-libxcrypt.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630)
+
+### 2026-10-09 18:55:48 UTC — Core 2 system zlib 1:1.2.13.dfsg-1+core2.1~20261009185513
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/BUILD-INFO.txt)
+- [lib32z1_1.2.13.dfsg-1+core2.1.20261009185513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/lib32z1_1.2.13.dfsg-1%2Bcore2.1.20261009185513_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/release-notes.md)
+- [SHA256SUMS-core2-zlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/SHA256SUMS-core2-zlib.txt)
+- [zlib1g_1.2.13.dfsg-1+core2.1.20261009185513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261009185513_amd64.deb)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513)
+
+### 2026-10-09 18:54:26 UTC — Core 2 system openssl 3.0.22-1~deb12u1+core2.1~20261009184347
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/BUILD-INFO.txt)
+- [libssl-doc_3.0.22-1.deb12u1+core2.1.20261009184347_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/libssl-doc_3.0.22-1.deb12u1%2Bcore2.1.20261009184347_all.deb)
+- [libssl3_3.0.22-1.deb12u1+core2.1.20261009184347_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261009184347_amd64.deb)
+- [openssl_3.0.22-1.deb12u1+core2.1.20261009184347_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/openssl_3.0.22-1.deb12u1%2Bcore2.1.20261009184347_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/release-notes.md)
+- [SHA256SUMS-core2-openssl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/SHA256SUMS-core2-openssl.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347)
+
 ### 2026-10-09 18:37:34 UTC — Core 2 optimized 7zip 22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500
 - [7zip_22.01+really26.02+dfsg-0+deb12u1+core2.1.20261009183500_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2.1.20261009183500_amd64.deb)
 - [7zip_22.01+really26.02+dfsg-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.debian.tar.xz)
