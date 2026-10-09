@@ -1,0 +1,108 @@
+name: Refresh Core 2 package release index
+run-name: "Refresh Core 2 package links"
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: core2-release-index
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Rebuild release index (newest first, every asset linked)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin master
+            git checkout -B master origin/master
+            gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/releases?per_page=100" > "$RUNNER_TEMP/core2-releases.json"
+
+            python3 - "core2-packages/README.md" "$RUNNER_TEMP/core2-releases.json" <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          readme_path = pathlib.Path(sys.argv[1])
+          payload = json.loads(pathlib.Path(sys.argv[2]).read_text(encoding="utf-8"))
+          releases = [item for page in payload for item in page] if payload and isinstance(payload[0], list) else payload
+          releases = [r for r in releases if str(r.get("tag_name", "")).startswith(("core2-",))]
+          releases.sort(key=lambda r: r.get("published_at") or r.get("created_at") or "", reverse=True)
+
+          start_marker = "<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->"
+          end_marker = "<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->"
+          document = readme_path.read_text(encoding="utf-8")
+          if document.count(start_marker) != 1 or document.count(end_marker) != 1:
+              raise SystemExit("Expected exactly one release-index marker pair in README")
+
+          lines = []
+          for release in releases:
+              published = (release.get("published_at") or release.get("created_at") or "").replace("T", " ").replace("Z", " UTC")
+              title = (release.get("name") or release.get("tag_name") or "Core 2 package").replace("|", "\\|")
+              lines.append(f"### {published} — {title}")
+              assets = sorted(release.get("assets") or [], key=lambda a: (a.get("name") or "").lower())
+              has_dsc = any((a.get("name") or "").endswith(".dsc") for a in assets)
+              has_source = any(
+                  (a.get("name") or "").endswith((
+                      ".orig.tar.gz", ".orig.tar.xz", ".orig.tar.bz2",
+                      ".orig.tar.zst", ".debian.tar.gz", ".debian.tar.xz",
+                      ".debian.tar.bz2", ".diff.gz", ".tar.gz", ".tar.xz", ".tar.bz2",
+                  )) for a in assets
+              )
+              for asset in assets:
+                  name = (asset.get("name") or "download").replace("[", "\\[").replace("]", "\\]")
+                  url = asset.get("browser_download_url")
+                  if url:
+                      lines.append(f"- [{name}]({url})")
+              if not assets:
+                  lines.append("- _No release assets attached._")
+              if not (has_dsc and has_source):
+                  lines.append("- _Debian source archive assets are not attached to this release._")
+              if release.get("html_url"):
+                  lines.append(f"- [Release notes and full asset list]({release['html_url']})")
+              lines.append("")
+
+          if not lines:
+              lines = ["_No Core 2 package releases have been published yet._", ""]
+          start = document.index(start_marker) + len(start_marker)
+          end = document.index(end_marker, start)
+          replacement = "\\n" + "\\n".join(lines).rstrip() + "\\n"
+          readme_path.write_text(document[:start] + replacement + document[end:], encoding="utf-8")
+          PY
+
+            git add core2-packages/README.md
+            if git diff --cached --quiet; then
+              echo "Release index is already current."
+              exit 0
+            fi
+            git commit -m "Refresh Core 2 package release index"
+            if git push origin HEAD:master; then
+              echo "Release index updated."
+              exit 0
+            fi
+            echo "::warning::master changed concurrently; retrying ($attempt/5)."
+            git reset --hard
+            sleep 2
+          done
+
+          echo "::error::Could not update release index after five attempts."
+          exit 1
