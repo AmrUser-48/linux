@@ -6,7 +6,7 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 
 In GitHub, open **Actions → Core 2 optimized Debian package train → Run workflow**. Select a series:
 
-- all: Bash, Zsh, Nano, Neovim, LAME, zstd, xz-utils, 7-Zip, FFmpeg, mpv, curl, then Mesa.
+- all: LAME first as the known performance benchmark, then Bash, Zsh, Nano, Neovim, zstd, xz-utils, 7-Zip, FFmpeg, mpv, curl, and Mesa last.
 - shell-editors: Bash, Zsh, Nano and Neovim.
 - media: LAME, zstd, xz-utils, 7-Zip, FFmpeg, mpv and curl.
 - graphics: Mesa only.
