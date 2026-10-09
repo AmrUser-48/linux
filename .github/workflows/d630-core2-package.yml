@@ -320,6 +320,10 @@ jobs:
             echo "::error::No runtime/installable .deb packages remain after filtering development/debug outputs"
             exit 1
           fi
+          if [[ "$PACKAGE" == "fftw3" ]] && ! printf '%s\n' "${DEBS[@]}" | while IFS= read -r deb; do dpkg-deb -f "$deb" Package; done | grep -Fxq 'libfftw3-double3'; then
+            echo "::error::FFTW build did not produce required runtime package libfftw3-double3"
+            exit 1
+          fi
 
           for deb in "${DEBS[@]}"; do
             binary_package="$(dpkg-deb -f "$deb" Package)"
