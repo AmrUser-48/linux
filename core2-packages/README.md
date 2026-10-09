@@ -7,6 +7,16 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-09 18:37:34 UTC — Core 2 optimized 7zip 22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500
+- [7zip_22.01+really26.02+dfsg-0+deb12u1+core2.1.20261009183500_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2.1.20261009183500_amd64.deb)
+- [7zip_22.01+really26.02+dfsg-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.debian.tar.xz)
+- [7zip_22.01+really26.02+dfsg-0+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.dsc)
+- [7zip_22.01+really26.02+dfsg.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg.orig.tar.xz)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/release-notes.md)
+- [SHA256SUMS-core2-7zip.txt](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/SHA256SUMS-core2-7zip.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500)
+
 ### 2026-10-09 18:33:57 UTC — Core 2 optimized xz-utils 5.4.1-1+deb12u2+core2.1~20261009183205
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/BUILD-INFO.txt)
 - [liblzma-doc_5.4.1-1+deb12u2+core2.1.20261009183205_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/liblzma-doc_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_all.deb)
