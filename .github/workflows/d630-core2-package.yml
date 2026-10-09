@@ -163,13 +163,11 @@ jobs:
             fi
           fi
 
-          # Do not process explicit development/debug binary packages. Automatic
-          # dbgsym generation is disabled with DEB_BUILD_OPTIONS=noautodbgsym.
-          DH_OPTIONS="$(awk '$1 == "Package:" { p=$2; if (p ~ /-dev$/ || p ~ /-dbg$/ || p ~ /-dbgsym$/) print "-N" p }' "$SOURCE_DIR/debian/control" | paste -sd ' ' -)"
-          echo "DH_OPTIONS=$DH_OPTIONS" >> "$GITHUB_ENV"
-          if [[ -n "$DH_OPTIONS" ]]; then
-            echo "Debhelper will skip development/debug packages:$DH_OPTIONS"
-          fi
+          # Do not pass -N<package> for development/debug stanzas here.
+          # Some Debian rules need those package staging directories internally
+          # (notably Python and FFTW) even when we do not want to publish them.
+          # Build normally, then remove unwanted .deb outputs before release.
+          echo "DH_OPTIONS=" >> "$GITHUB_ENV"
 
           ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
           BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
@@ -302,6 +300,27 @@ jobs:
             exit 1
           fi
 
+          # Filter development/debug packages after packaging rather than
+          # suppressing their staging directories during Debian's rules.
+          RUNTIME_DEBS=()
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            case "$binary_package" in
+              *-dev|*-dbg|*-dbgsym)
+                echo "::notice::Excluding non-runtime package from release: $binary_package"
+                rm -f "$deb"
+                ;;
+              *)
+                RUNTIME_DEBS+=("$deb")
+                ;;
+            esac
+          done
+          DEBS=("${RUNTIME_DEBS[@]}")
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::No runtime/installable .deb packages remain after filtering development/debug outputs"
+            exit 1
+          fi
+
           for deb in "${DEBS[@]}"; do
             binary_package="$(dpkg-deb -f "$deb" Package)"
             binary_version="$(dpkg-deb -f "$deb" Version)"
@@ -313,7 +332,12 @@ jobs:
                 ;;
             esac
             printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
-            test "$binary_version" = "$PACKAGE_VERSION"
+            if [[ "$PACKAGE" == "rust-sd" && "$binary_version" == "0.80.really.$PACKAGE_VERSION" ]]; then
+              echo "::notice::Accepted Debian sd Cargo-generated binary version: $binary_version"
+            elif [[ "$binary_version" != "$PACKAGE_VERSION" ]]; then
+              echo "::error::Unexpected binary version for $binary_package: $binary_version (expected $PACKAGE_VERSION)"
+              exit 1
+            fi
             case "$binary_arch" in amd64|all) ;; *) echo "Unexpected architecture $binary_arch in $deb"; exit 1 ;; esac
             cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
           done
