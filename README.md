@@ -10,6 +10,9 @@ The full date-sorted index is maintained in [`core2-packages/README.md`](core2-p
 
 ## Build or refresh
 
+- [Build any Core 2 optimized Debian package](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-package.yml)
+- [Build any Core 2 system package](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-package.yml)
+- [Update a package and replace older releases](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-package.yml)
 - [Run the Core 2 Debian package train](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-packages-series.yml)
 - [Run the Core 2 system package train](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-packages-series.yml)
 - [Refresh the package release index](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-release-index.yml)
