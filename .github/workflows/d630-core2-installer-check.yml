@@ -52,5 +52,9 @@ jobs:
           assert parsed["version"] == "2.36-9+deb12u14+core2.1.20261010052854", parsed
 
           assert installer["PRIMARY"]["glibc"] == ["libc6"]
+          assert installer["is_debug_package"]("libc6-dbg")
+          assert installer["is_debug_package"]("libc6-dbgsym")
+          assert not installer["is_debug_package"]("libc6-dev")
+          assert not installer["is_debug_package"]("python3.11")
           print("Installer syntax and selection parsing checks passed.")
           PY
