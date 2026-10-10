@@ -87,8 +87,9 @@ jobs:
                       lines.append(f"Published: {published}")
 
               selector = package.strip().lower()
+              release_kind = "system" if str(release.get("tag_name") or "").startswith("core2-system-") else "optimized"
               lines.append(
-                  f"Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector}`"
+                  f"Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector} --kind {release_kind}`"
               )
 
               def source_archive(name):
