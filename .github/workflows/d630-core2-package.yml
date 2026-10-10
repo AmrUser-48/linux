@@ -9,6 +9,11 @@ on:
         required: true
         type: string
         default: mesa
+      force_rebuild:
+        description: Ignore existing Core 2 releases (used by the package updater)
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -27,12 +32,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           PACKAGE: ${{ inputs.package }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild }}
         shell: bash
         run: |
           set -euo pipefail
           if [[ ! "$PACKAGE" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
             echo "::error::Invalid Debian source package name: $PACKAGE"
             exit 1
+          fi
+          if [[ "$FORCE_REBUILD" == "true" ]]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Forced update requested for $PACKAGE; existing releases will not block the build."
+            exit 0
           fi
           prefix="core2-${PACKAGE}-"
           exists="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s --arg prefix "$prefix" 'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))')"
