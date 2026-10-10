@@ -105,6 +105,25 @@ def fetch_releases():
 def is_debug_package(package_name):
     return package_name.lower().endswith(("-dbg", "-dbgsym"))
 
+def canonicalize_asset_version(version):
+    """Restore the build timestamp separator lost in some uploaded asset names.
+
+    Debian control metadata retains '+core2.1~YYYYMMDDhhmmss', while the asset
+    filename may contain '+core2.1.YYYYMMDDhhmmss'. Treat those as the same
+    version for comparison; do not rewrite any other part of the version.
+    """
+    return re.sub(r"(\+core2\.\d+)\.(\d{14})$", r"\1~\2", version)
+
+def parse_dpkg_deb_fields(output):
+    """Parse labeled Package/Version/Architecture output from dpkg-deb."""
+    fields = {}
+    for line in output.splitlines():
+        if ": " not in line:
+            continue
+        name, value = line.split(": ", 1)
+        fields[name.strip().lower()] = value.strip()
+    return fields
+
 def parse_deb_asset(asset):
     name = str(asset.get("name") or "")
     if not name.endswith(".deb"):
@@ -115,6 +134,7 @@ def parse_deb_asset(asset):
     package, version, arch = parts
     if not package or not version or not arch:
         return None
+    version = canonicalize_asset_version(version)
     return {"asset": asset, "name": name, "package": package, "version": version, "arch": arch}
 
 def installed_packages():
@@ -203,11 +223,16 @@ def download_asset(deb, release, checksums, destination):
     if metadata.returncode != 0:
         path.unlink(missing_ok=True)
         raise RuntimeError(f"Invalid Debian package {deb['name']}: {metadata.stderr.strip()}")
-    values = metadata.stdout.splitlines()
-    if len(values) != 3:
+    fields = parse_dpkg_deb_fields(metadata.stdout)
+    actual_package = fields.get("package", "")
+    actual_version = canonicalize_asset_version(fields.get("version", ""))
+    actual_arch = fields.get("architecture", "")
+    if not actual_package or not actual_version or not actual_arch:
         path.unlink(missing_ok=True)
-        raise RuntimeError(f"Could not read package metadata from {deb['name']}")
-    actual_package, actual_version, actual_arch = values
+        raise RuntimeError(
+            f"Could not read labeled Package/Version/Architecture fields from {deb['name']}: "
+            f"{metadata.stdout.strip()}"
+        )
     if (actual_package, actual_version, actual_arch) != (deb["package"], deb["version"], deb["arch"]):
         path.unlink(missing_ok=True)
         raise RuntimeError(
