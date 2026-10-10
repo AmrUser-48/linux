@@ -23,7 +23,7 @@ jobs:
           ref: master
           fetch-depth: 0
 
-      - name: Rebuild release index (newest first, every asset linked)
+      - name: Rebuild release index (newest first, package names with collapsed files)
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -40,12 +40,13 @@ jobs:
             python3 - "core2-packages/README.md" "$RUNNER_TEMP/core2-releases.json" <<'PY'
           import json
           import pathlib
+          import re
           import sys
 
           readme_path = pathlib.Path(sys.argv[1])
           payload = json.loads(pathlib.Path(sys.argv[2]).read_text(encoding="utf-8"))
           releases = [item for page in payload for item in page] if payload and isinstance(payload[0], list) else payload
-          releases = [r for r in releases if str(r.get("tag_name", "")).startswith(("core2-",))]
+          releases = [r for r in releases if str(r.get("tag_name", "")).startswith("core2-")]
           releases.sort(key=lambda r: r.get("published_at") or r.get("created_at") or "", reverse=True)
 
           start_marker = "<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->"
@@ -54,12 +55,42 @@ jobs:
           if document.count(start_marker) != 1 or document.count(end_marker) != 1:
               raise SystemExit("Expected exactly one release-index marker pair in README")
 
+          def package_and_version(release):
+              title = (release.get("name") or "").strip()
+              for prefix in ("Core 2 optimized ", "Core 2 system "):
+                  if title.lower().startswith(prefix.lower()):
+                      description = title[len(prefix):].strip()
+                      match = re.match(r"^(.*?)\\s+(\\S+)$", description)
+                      if match:
+                          return match.group(1).strip(), match.group(2).strip()
+
+              # Fallback to the release tag when its title is non-standard.
+              tag = str(release.get("tag_name") or "core2-package")
+              tag = re.sub(r"^core2-", "", tag)
+              match = re.match(r"^(.+?)-(?=\\d)", tag)
+              if match:
+                  return match.group(1).replace("-", " "), ""
+              return title or tag, ""
+
           lines = []
           for release in releases:
-              published = (release.get("published_at") or release.get("created_at") or "").replace("T", " ").replace("Z", " UTC")
-              title = (release.get("name") or release.get("tag_name") or "Core 2 package").replace("|", "\\|")
-              lines.append(f"### {published} — {title}")
+              raw_date = release.get("published_at") or release.get("created_at") or ""
+              published = raw_date.replace("T", " ").replace("Z", " UTC").strip()
+              package, version = package_and_version(release)
+              package = package.replace("|", "\\|").replace("\\n", " ").strip() or "package"
+              if version:
+                  lines.append(f"### {package}")
+                  lines.append(f"Version: `{version}` · Published: {published}")
+              else:
+                  lines.append(f"### {package}")
+                  if published:
+                      lines.append(f"Published: {published}")
+
               assets = sorted(release.get("assets") or [], key=lambda a: (a.get("name") or "").lower())
+              lines.append("")
+              lines.append(f"<details><summary>Files ({len(assets)})</summary>")
+              lines.append("")
+
               has_dsc = any((a.get("name") or "").endswith(".dsc") for a in assets)
               has_source = any(
                   (a.get("name") or "").endswith((
@@ -78,14 +109,15 @@ jobs:
               if not (has_dsc and has_source):
                   lines.append("- _Debian source archive assets are not attached to this release._")
               if release.get("html_url"):
-                  lines.append(f"- [Release notes and full asset list]({release['html_url']})")
-              lines.append("")
+                  lines.append(f"- [Release page]({release['html_url']})")
+              lines.extend(["", "</details>", ""])
 
           if not lines:
               lines = ["_No Core 2 package releases have been published yet._", ""]
+
           start = document.index(start_marker) + len(start_marker)
           end = document.index(end_marker, start)
-          replacement = "\n" + "\n".join(lines).rstrip() + "\n"
+          replacement = "\\n" + "\\n".join(lines).rstrip() + "\\n"
           readme_path.write_text(document[:start] + replacement + document[end:], encoding="utf-8")
           PY
 
