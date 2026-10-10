@@ -11,6 +11,7 @@ on:
       - ".github/workflows/d630-core2-recover-release.yml"
       - ".github/workflows/d630-core2-update-release-index.yml"
       - ".github/workflows/d630-core2-prune-dev-debug.yml"
+      - ".github/workflows/d630-core2-update-package.yml"
   pull_request:
     paths:
       - "core2-packages/install.py"
@@ -20,6 +21,7 @@ on:
       - ".github/workflows/d630-core2-recover-release.yml"
       - ".github/workflows/d630-core2-update-release-index.yml"
       - ".github/workflows/d630-core2-prune-dev-debug.yml"
+      - ".github/workflows/d630-core2-update-package.yml"
   workflow_dispatch:
 
 permissions:
@@ -44,7 +46,8 @@ jobs:
             .github/workflows/d630-core2-system-package.yml \
             .github/workflows/d630-core2-recover-release.yml \
             .github/workflows/d630-core2-update-release-index.yml \
-            .github/workflows/d630-core2-prune-dev-debug.yml
+            .github/workflows/d630-core2-prune-dev-debug.yml \\
+            .github/workflows/d630-core2-update-package.yml
 
       - name: Test release-index generator excludes source and debug assets
         shell: bash
@@ -143,9 +146,9 @@ jobs:
 
           # dpkg-deb emits labeled fields, not bare values.
           fields = installer["parse_dpkg_deb_fields"](
-              "Package: kmod\\n"
-              "Version: 30+20221128-1+core2.1~20261009193535\\n"
-              "Architecture: amd64\\n"
+              "Package: kmod\n"
+              "Version: 30+20221128-1+core2.1~20261009193535\n"
+              "Architecture: amd64\n"
           )
           assert fields["package"] == "kmod", fields
           assert installer["canonicalize_asset_version"](fields["version"]) == kmod_asset["version"], fields
