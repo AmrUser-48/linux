@@ -8,6 +8,8 @@ The [Core 2 optimized Debian package workflow](https://github.com/AmrUser-48/lin
 
 The [Core 2 optimized Debian system package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-package.yml) also accepts a free-text source-package name and uses the conservative `-O2 -march=core2 -mtune=core2` profile. The package-train workflows remain predefined sequential sets.
 
+For an update, use the [Core 2 package updater](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-package.yml). Select `optimized` or `system`, then enter any source-package name. It forces a build against the latest available Debian Bookworm source version, waits for successful publication, removes older releases for that package only after the new release exists, and refreshes this index. If the build fails, existing releases are left untouched.
+
 ## Smart install/update
 
 Each package entry below includes a one-line install command. It downloads the latest release for that package, checks installed Debian package names, architectures and versions, then prepares an APT plan.
