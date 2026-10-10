@@ -16,6 +16,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -311,10 +312,13 @@ def main():
         for deb in sorted(selected.values(), key=lambda d: d["package"]):
             paths.append(download_asset(deb, release, checksums, destination))
 
-        if subprocess.run(["sudo", "-v"], check=False).returncode != 0:
+        elevate = [] if os.geteuid() == 0 else ["sudo"]
+        if elevate and not shutil.which("sudo"):
+            raise RuntimeError("sudo is required when this installer is run as an unprivileged user.")
+        if elevate and subprocess.run([*elevate, "-v"], check=False).returncode != 0:
             raise RuntimeError("sudo authentication failed; no packages were installed.")
         command = [
-            "sudo", "apt-get", "-s", "install", "--no-install-recommends",
+            *elevate, "apt-get", "-s", "install", "--no-install-recommends",
             *[str(p) for p in paths]
         ]
         simulation = subprocess.run(command, text=True, stdout=subprocess.PIPE,
@@ -337,7 +341,7 @@ def main():
             return 0
 
         install_command = [
-            "sudo", "apt-get", "-y", "install", "--no-install-recommends",
+            *elevate, "apt-get", "-y", "install", "--no-install-recommends",
             *[str(p) for p in paths]
         ]
         result = subprocess.run(install_command, check=False)
