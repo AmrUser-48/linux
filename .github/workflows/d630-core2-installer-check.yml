@@ -134,7 +134,21 @@ jobs:
           })
           assert parsed["package"] == "libc6-dev-x32", parsed
           assert parsed["arch"] == "amd64", parsed
-          assert parsed["version"] == "2.36-9+deb12u14+core2.1.20261010052854", parsed
+          assert parsed["version"] == "2.36-9+deb12u14+core2.1~20261010052854", parsed
+
+          kmod_asset = installer["parse_deb_asset"]({
+              "name": "kmod_30+20221128-1+core2.1.20261009193535_amd64.deb"
+          })
+          assert kmod_asset["version"] == "30+20221128-1+core2.1~20261009193535", kmod_asset
+
+          # dpkg-deb emits labeled fields, not bare values.
+          fields = installer["parse_dpkg_deb_fields"](
+              "Package: kmod\\n"
+              "Version: 30+20221128-1+core2.1~20261009193535\\n"
+              "Architecture: amd64\\n"
+          )
+          assert fields["package"] == "kmod", fields
+          assert installer["canonicalize_asset_version"](fields["version"]) == kmod_asset["version"], fields
 
           assert installer["PRIMARY"]["glibc"] == ["libc6"]
           assert installer["is_debug_package"]("libc6-dbg")
