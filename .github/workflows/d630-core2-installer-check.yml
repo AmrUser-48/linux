@@ -43,6 +43,28 @@ jobs:
           set -euo pipefail
           ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml
 
+      - name: Check updater Bash-script syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          ruby -ryaml -rtempfile <<'RUBY'
+          workflow = YAML.load_file(".github/workflows/d630-core2-update-package.yml", aliases: true)
+          workflow.fetch("jobs").each do |job_name, job|
+            (job["steps"] || []).each_with_index do |step, index|
+              next unless step.is_a?(Hash) && step["shell"].to_s.start_with?("bash") && step["run"]
+              source = step["run"].gsub(/\$\{\{.*?\}\}/m, "SAFE_VALUE")
+              Tempfile.create(["core2-updater-#{job_name}-#{index}", ".sh"]) do |file|
+                file.write(source)
+                file.close
+                unless system("bash", "-n", file.path)
+                  abort("Bash syntax error in updater step: #{step["name"]}")
+                end
+              end
+            end
+          end
+          puts "Updater Bash-script syntax checks passed."
+          RUBY
+
       - name: Test release-index generator excludes source and debug assets
         shell: bash
         run: |
