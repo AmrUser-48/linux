@@ -7,6 +7,157 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-10 05:33:07 UTC — Core 2 optimized libxfce4util 4.18.1-2+core2.1~20261010053208
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/BUILD-INFO.txt)
+- [gir1.2-libxfce4util-1.0_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
+- [libxfce4util-bin_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-bin_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
+- [libxfce4util-common_4.18.1-2+core2.1.20261010053208_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-common_4.18.1-2%2Bcore2.1.20261010053208_all.deb)
+- [libxfce4util-dev_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-dev_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
+- [libxfce4util7_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
+- [libxfce4util_4.18.1-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1-2.debian.tar.xz)
+- [libxfce4util_4.18.1-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1-2.dsc)
+- [libxfce4util_4.18.1.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1.orig.tar.bz2)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/release-notes.md)
+- [SHA256SUMS-core2-libxfce4util.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/SHA256SUMS-core2-libxfce4util.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4util-4.18.1-2-core2.1-20261010053208)
+
+### 2026-10-10 03:17:08 UTC — Core 2 system glibc 2.36-9+deb12u14+core2.1~20261010025123
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/BUILD-INFO.txt)
+- [glibc-doc_2.36-9+deb12u14+core2.1.20261010025123_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/glibc-doc_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_all.deb)
+- [glibc-source_2.36-9+deb12u14+core2.1.20261010025123_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/glibc-source_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_all.deb)
+- [libc-bin_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc-bin_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc-dev-bin_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc-dev-bin_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc-devtools_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc-devtools_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc-l10n_2.36-9+deb12u14+core2.1.20261010025123_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc-l10n_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_all.deb)
+- [libc6-dev-i386_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc6-dev-i386_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc6-dev-x32_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc6-dev-x32_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc6-i386_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc6-i386_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc6-x32_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc6-x32_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [libc6_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [locales-all_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/locales-all_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [locales_2.36-9+deb12u14+core2.1.20261010025123_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/locales_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_all.deb)
+- [nscd_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/nscd_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/release-notes.md)
+- [SHA256SUMS-core2-glibc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/SHA256SUMS-core2-glibc.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123)
+
+### 2026-10-10 02:59:56 UTC — Core 2 system systemd 252.39-1~deb12u2+core2.1~20261010025144
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/BUILD-INFO.txt)
+- [libnss-myhostname_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-myhostname_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libnss-mymachines_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-mymachines_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libnss-resolve_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-resolve_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libnss-systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libpam-systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libpam-systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libsystemd-shared_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd-shared_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libsystemd0_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd0_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [libudev1_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libudev1_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/release-notes.md)
+- [SHA256SUMS-core2-systemd.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/SHA256SUMS-core2-systemd.txt)
+- [systemd-boot-efi_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-boot-efi_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-boot_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-boot_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-container_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-container_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-coredump_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-coredump_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-homed_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-homed_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-journal-remote_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-journal-remote_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-oomd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-oomd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-resolved_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-resolved_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-standalone-sysusers_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-standalone-sysusers_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-standalone-tmpfiles_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-standalone-tmpfiles_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-sysv_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-sysv_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-tests_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-tests_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-timesyncd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-timesyncd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd-userdbd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-userdbd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- [udev_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/udev_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144)
+
+### 2026-10-09 20:39:48 UTC — Core 2 system binutils 2.40-2+core2.1~20261009173258
+- [binutils-aarch64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-aarch64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-alpha-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-alpha-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-arc-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arc-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-arm-linux-gnueabi_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arm-linux-gnueabi_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-arm-linux-gnueabihf_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arm-linux-gnueabihf_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-common_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-common_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-doc_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-doc_2.40-2%2Bcore2.1.20261009173258_all.deb)
+- [binutils-for-build_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-for-build_2.40-2%2Bcore2.1.20261009173258_all.deb)
+- [binutils-for-host_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-for-host_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-hppa-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-hppa-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-hppa64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-hppa64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-i686-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-i686-kfreebsd-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-kfreebsd-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-i686-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-ia64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-ia64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-m68k-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-m68k-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-multiarch_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-multiarch_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-powerpc-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-powerpc64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-powerpc64le-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc64le-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-riscv64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-riscv64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-s390x-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-s390x-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-sh4-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-sh4-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-source_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-source_2.40-2%2Bcore2.1.20261009173258_all.deb)
+- [binutils-sparc64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-sparc64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-x86-64-kfreebsd-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-kfreebsd-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-x86-64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils-x86-64-linux-gnux32_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-linux-gnux32_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [binutils_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/BUILD-INFO.txt)
+- [libbinutils_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libbinutils_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [libctf-nobfd0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libctf-nobfd0_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [libctf0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libctf0_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [libgprofng0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libgprofng0_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/release-notes.md)
+- [SHA256SUMS-core2-binutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/SHA256SUMS-core2-binutils.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258)
+
+### 2026-10-09 19:54:21 UTC — Core 2 system libtirpc 1.3.3+ds-1+core2.1~20261009195337
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/BUILD-INFO.txt)
+- [libtirpc-common_1.3.3+ds-1+core2.1.20261009195337_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/libtirpc-common_1.3.3%2Bds-1%2Bcore2.1.20261009195337_all.deb)
+- [libtirpc3_1.3.3+ds-1+core2.1.20261009195337_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/libtirpc3_1.3.3%2Bds-1%2Bcore2.1.20261009195337_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/release-notes.md)
+- [SHA256SUMS-core2-libtirpc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/SHA256SUMS-core2-libtirpc.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337)
+
+### 2026-10-09 19:52:39 UTC — Core 2 system expat 2.5.0-1+deb12u4+core2.1~20261009195158
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/BUILD-INFO.txt)
+- [expat_2.5.0-1+deb12u4+core2.1.20261009195158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/expat_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+- [libexpat1_2.5.0-1+deb12u4+core2.1.20261009195158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/release-notes.md)
+- [SHA256SUMS-core2-expat.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/SHA256SUMS-core2-expat.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158)
+
+### 2026-10-09 19:51:15 UTC — Core 2 system libffi 3.4.4-1+core2.1~20261009194707
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/BUILD-INFO.txt)
+- [libffi8_3.4.4-1+core2.1.20261009194707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/release-notes.md)
+- [SHA256SUMS-core2-libffi.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/SHA256SUMS-core2-libffi.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707)
+
+### 2026-10-09 19:46:09 UTC — Core 2 system gmp 2:6.2.1+dfsg1-1.1+core2.1~20261009194412
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/BUILD-INFO.txt)
+- [libgmp10-doc_6.2.1+dfsg1-1.1+core2.1.20261009194412_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmp10-doc_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_all.deb)
+- [libgmp10_6.2.1+dfsg1-1.1+core2.1.20261009194412_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmp10_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb)
+- [libgmpxx4ldbl_6.2.1+dfsg1-1.1+core2.1.20261009194412_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmpxx4ldbl_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/release-notes.md)
+- [SHA256SUMS-core2-gmp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/SHA256SUMS-core2-gmp.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412)
+
+### 2026-10-09 19:43:32 UTC — Core 2 system mpfr4 4.2.0-1+core2.1~20261009194039
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/BUILD-INFO.txt)
+- [libmpfr-doc_4.2.0-1+core2.1.20261009194039_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/libmpfr-doc_4.2.0-1%2Bcore2.1.20261009194039_all.deb)
+- [libmpfr6_4.2.0-1+core2.1.20261009194039_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/libmpfr6_4.2.0-1%2Bcore2.1.20261009194039_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/release-notes.md)
+- [SHA256SUMS-core2-mpfr4.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/SHA256SUMS-core2-mpfr4.txt)
+- _Debian source archive assets are not attached to this release._
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039)
+
 ### 2026-10-09 19:41:11 UTC — Core 2 optimized curl 7.88.1-10+deb12u15+core2.1~20261009190528
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/BUILD-INFO.txt)
 - [curl_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
