@@ -34,6 +34,21 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### vine (system)
+Version: `5.0.0+dfsg-3+core2.1~20261010154009` · Published: 2026-10-10 15:40:28 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - vine`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/BUILD-INFO.txt)
+- [python-vine-doc_5.0.0+dfsg-3+core2.1.20261010154009_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/python-vine-doc_5.0.0%2Bdfsg-3%2Bcore2.1.20261010154009_all.deb)
+- [python3-vine_5.0.0+dfsg-3+core2.1.20261010154009_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/python3-vine_5.0.0%2Bdfsg-3%2Bcore2.1.20261010154009_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/release-notes.md)
+- [SHA256SUMS-core2-vine.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/SHA256SUMS-core2-vine.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009)
+
+</details>
+
 ### glibc (system)
 Version: `2.36-9+deb12u14+core2.1~20261010052854` · Published: 2026-10-10 05:56:13 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glibc`
