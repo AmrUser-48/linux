@@ -5,6 +5,7 @@ on:
     branches:
       - master
     paths-ignore:
+      # Documentation and automation changes should not start a full kernel rebuild.
       - '.github/workflows/**'
       - 'core2-packages/**'
       - 'README.md'
