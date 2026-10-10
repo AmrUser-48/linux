@@ -60,14 +60,14 @@ jobs:
               for prefix in ("Core 2 optimized ", "Core 2 system "):
                   if title.lower().startswith(prefix.lower()):
                       description = title[len(prefix):].strip()
-                      match = re.match(r"^(.*?)\\s+(\\S+)$", description)
+                      match = re.match(r"^(.*?)\s+(\S+)$", description)
                       if match:
                           return match.group(1).strip(), match.group(2).strip()
 
               # Fallback to the release tag when its title is non-standard.
               tag = str(release.get("tag_name") or "core2-package")
               tag = re.sub(r"^core2-", "", tag)
-              match = re.match(r"^(.+?)-(?=\\d)", tag)
+              match = re.match(r"^(.+?)-(?=\d)", tag)
               if match:
                   return match.group(1).replace("-", " "), ""
               return title or tag, ""
@@ -117,7 +117,7 @@ jobs:
 
           start = document.index(start_marker) + len(start_marker)
           end = document.index(end_marker, start)
-          replacement = "\\n" + "\\n".join(lines).rstrip() + "\\n"
+          replacement = "\n" + "\n".join(lines).rstrip() + "\n"
           readme_path.write_text(document[:start] + replacement + document[end:], encoding="utf-8")
           PY
 
