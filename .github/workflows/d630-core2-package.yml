@@ -124,10 +124,10 @@ jobs:
           # The extracted source tree is sufficient for a binary-only build.
           # Remove downloaded source archive files from the temporary workspace;
           # none are copied into release artifacts.
-          find "$SRCROOT" -maxdepth 1 -type f \\
-            \\( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \\
-               -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' \\
-               -o -name '*.tar.bz2' -o -name '*.tar.zst' \\) -delete
+          find "$SRCROOT" -maxdepth 1 -type f \
+            \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \
+               -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' \
+               -o -name '*.tar.bz2' -o -name '*.tar.zst' \) -delete
 
           if [[ "$PACKAGE" == "neovim" ]]; then
             # Debian's CI test command forces an unavailable Tree-sitter C parser
