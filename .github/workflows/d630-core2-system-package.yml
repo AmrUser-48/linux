@@ -145,6 +145,14 @@ jobs:
             exit 1
           fi
 
+          # The extracted source tree is sufficient for a binary-only build.
+          # Remove downloaded source archive files from the temporary workspace;
+          # none are copied into release artifacts.
+          find "$SRCROOT" -maxdepth 1 -type f \\
+            \\( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \\
+               -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' \\
+               -o -name '*.tar.bz2' -o -name '*.tar.zst' \\) -delete
+
           # Some Debian rules need development/debug staging directories while
           # assembling runtime packages (especially foundational packages).
           # Build normally and filter those .deb files before release instead.
