@@ -6,10 +6,20 @@ on:
     paths:
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
+      - ".github/workflows/d630-core2-package.yml"
+      - ".github/workflows/d630-core2-system-package.yml"
+      - ".github/workflows/d630-core2-recover-release.yml"
+      - ".github/workflows/d630-core2-update-release-index.yml"
+      - ".github/workflows/d630-core2-prune-dev-debug.yml"
   pull_request:
     paths:
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
+      - ".github/workflows/d630-core2-package.yml"
+      - ".github/workflows/d630-core2-system-package.yml"
+      - ".github/workflows/d630-core2-recover-release.yml"
+      - ".github/workflows/d630-core2-update-release-index.yml"
+      - ".github/workflows/d630-core2-prune-dev-debug.yml"
   workflow_dispatch:
 
 permissions:
@@ -24,6 +34,17 @@ jobs:
 
       - name: Check Python syntax
         run: python3 -m py_compile core2-packages/install.py
+
+      - name: Parse affected package workflows as YAML
+        shell: bash
+        run: |
+          set -euo pipefail
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' \\
+            .github/workflows/d630-core2-package.yml \\
+            .github/workflows/d630-core2-system-package.yml \\
+            .github/workflows/d630-core2-recover-release.yml \\
+            .github/workflows/d630-core2-update-release-index.yml \\
+            .github/workflows/d630-core2-prune-dev-debug.yml
 
       - name: Test release selector and Debian asset parsing
         run: |
