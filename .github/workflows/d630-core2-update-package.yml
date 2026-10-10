@@ -208,7 +208,10 @@ jobs:
           before_json="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-update-release-index.yml/runs?branch=master&event=workflow_dispatch&per_page=100")"
           before_ids="$(jq -r '[.workflow_runs[].id | tostring] | join(",")' <<<"$before_json")"
 
-          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
+          if ! gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "::warning::Package release was replaced, but the index workflow could not be dispatched."
+            exit 0
+          fi
 
           refresh_id=""
           for attempt in $(seq 1 60); do
@@ -230,8 +233,11 @@ jobs:
           done
 
           if [[ -n "$refresh_id" ]]; then
-            gh run watch "$refresh_id" --repo "$GITHUB_REPOSITORY" --exit-status
-            echo "Package index refreshed: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${refresh_id}"
+            if gh run watch "$refresh_id" --repo "$GITHUB_REPOSITORY" --exit-status; then
+              echo "Package index refreshed: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${refresh_id}"
+            else
+              echo "::warning::Package release was replaced, but README index refresh failed. The package updater itself completed successfully."
+            fi
           else
             echo "::warning::Package was updated, but the index workflow run could not be identified. Manually run d630-core2-update-release-index.yml."
           fi
