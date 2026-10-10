@@ -132,10 +132,21 @@ jobs:
                   "tag_name": "core2-system-kmod-30-20221128-1-core2.1-20261010010000",
                   "name": "Core 2 system kmod 30+20221128-1+core2.1~20261010010000",
                   "published_at": "2026-10-10T01:00:00Z",
-                  "html_url": "https://github.com/AmrUser-48/linux/releases/tag/test-kmod",
+                  "html_url": "https://github.com/AmrUser-48/linux/releases/tag/test-kmod-system",
                   "assets": [
                       {"name": "kmod_30+20221128-1+core2.1.20261010010000_amd64.deb",
-                       "browser_download_url": "https://example.invalid/kmod.deb"},
+                       "browser_download_url": "https://example.invalid/kmod-system.deb"},
+                      {"name": "BUILD-INFO.txt", "browser_download_url": "https://example.invalid/BUILD-INFO.txt"},
+                  ],
+              },
+              {
+                  "tag_name": "core2-kmod-30-20221128-1-core2.1-20261010003000",
+                  "name": "Core 2 optimized kmod 30+20221128-1+core2.1~20261010003000",
+                  "published_at": "2026-10-10T00:30:00Z",
+                  "html_url": "https://github.com/AmrUser-48/linux/releases/tag/test-kmod-optimized",
+                  "assets": [
+                      {"name": "kmod_30+20221128-1+core2.1.20261010003000_amd64.deb",
+                       "browser_download_url": "https://example.invalid/kmod-optimized.deb"},
                       {"name": "BUILD-INFO.txt", "browser_download_url": "https://example.invalid/BUILD-INFO.txt"},
                   ],
               },
@@ -156,9 +167,13 @@ jobs:
               subprocess.run([sys.executable, str(script), str(readme), str(releases_file)], check=True)
               result = readme.read_text(encoding="utf-8")
               assert result.startswith("header\n") and result.rstrip().endswith("footer")
-              assert result.index("### kmod") < result.index("### python3.11"), "packages must be newest first"
-              assert "python3 - python3.11 --kind optimized" in result
-              assert "python3 - kmod --kind system" in result
+              assert result.index("### kmod (system)") < result.index("### kmod (optimized)") < result.index("### python3.11 (optimized)"), "releases must be newest first with family labels"
+              assert "python3 - python3.11" in result
+              assert "python3 - kmod" in result
+              install_lines = [line for line in result.splitlines() if line.startswith("Install/update latest:")]
+              assert len(install_lines) == 2, install_lines
+              assert all("--kind" not in line for line in install_lines), install_lines
+              assert sum("python3 - kmod" in line for line in install_lines) == 1, install_lines
               assert "python3.11_3.11.2-1_amd64.deb" in result
               assert "python3.11-dev_3.11.2-1_amd64.deb" in result
               assert "BUILD-INFO.txt" in result and "SHA256SUMS-core2-python3.11.txt" in result
