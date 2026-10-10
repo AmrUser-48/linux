@@ -5,40 +5,10 @@ on:
   workflow_dispatch:
     inputs:
       package:
-        description: Debian Bookworm source package to rebuild for Intel Core 2
+        description: Any Debian Bookworm source package to rebuild for Intel Core 2
         required: true
-        type: choice
+        type: string
         default: mesa
-        options:
-          - mesa
-          - bash
-          - zsh
-          - nano
-          - neovim
-          - lame
-          - ffmpeg
-          - mpv
-          - 7zip
-          - zstd
-          - xz-utils
-          - curl
-          - python3.11
-          - fftw3
-          - ncmpcpp
-          - mpd
-          - rust-fd-find
-          - rust-sd
-          - rust-ripgrep
-          - btop
-          - htop
-          - xorg-server
-          - libxfce4util
-          - xfconf
-          - libxfce4ui
-          - exo
-          - garcon
-          - tumbler
-          - thunar
 
 permissions:
   contents: write
@@ -60,6 +30,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if [[ ! "$PACKAGE" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
+            echo "::error::Invalid Debian source package name: $PACKAGE"
+            exit 1
+          fi
           prefix="core2-${PACKAGE}-"
           exists="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s --arg prefix "$prefix" 'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))')"
           echo "exists=$exists" >> "$GITHUB_OUTPUT"
@@ -137,37 +111,9 @@ jobs:
           cd "$SRCROOT"
           apt-get source "$PACKAGE"
 
-          # Attach Debian's original source-package files to the release, not
-          # just the generated binaries. This includes the .dsc and whichever
-          # upstream/debian archive formats Debian uses (.tar.gz, .tar.xz,
-          # .orig.tar.*, .debian.tar.* or legacy .diff.gz).
-          shopt -s nullglob
-          SOURCE_ASSETS=(
-            "$SRCROOT"/"${PACKAGE}"_*.dsc
-            "$SRCROOT"/"${PACKAGE}"_*.orig.tar.*
-            "$SRCROOT"/"${PACKAGE}"_*.debian.tar.*
-            "$SRCROOT"/"${PACKAGE}"_*.diff.gz
-            "$SRCROOT"/"${PACKAGE}"_*.tar.*
-          )
-          declare -A COPIED_SOURCE_ASSETS=()
-          for source_asset in "${SOURCE_ASSETS[@]}"; do
-            [[ -f "$source_asset" ]] || continue
-            source_name="$(basename "$source_asset")"
-            if [[ -n "${COPIED_SOURCE_ASSETS[$source_name]:-}" ]]; then
-              continue
-            fi
-            cp "$source_asset" "$GITHUB_WORKSPACE/release-artifacts/"
-            COPIED_SOURCE_ASSETS["$source_name"]=1
-          done
-          DSC_FILES=("$SRCROOT"/"${PACKAGE}"_*.dsc)
-          if (( ${#DSC_FILES[@]} == 0 )); then
-            echo "::error::Debian source descriptor (.dsc) is missing for $PACKAGE"
-            exit 1
-          fi
-          echo "Staged Debian source package files:"
-          find "$GITHUB_WORKSPACE/release-artifacts" -maxdepth 1 -type f \
-            \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' -o -name '*.diff.gz' -o -name '*.tar.*' \) \
-            -print | sort
+          # apt-get source downloads source archives for the build. Keep those
+          # inputs in the temporary workspace only; release assets are binaries,
+          # checksums, and build metadata, never .dsc/.orig.tar/.debian.tar files.
 
           SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
@@ -330,10 +276,26 @@ jobs:
             exit 1
           fi
 
-          # Filter development/debug packages after packaging rather than
-          # suppressing their staging directories during Debian's rules.
-          # Retain every binary package produced by Debian, including development packages.
-          DEBS=("${DEBS[@]}")
+          # Keep all normal binary outputs (including -dev and split runtime
+          # packages); never publish -dbg or -dbgsym binary packages.
+          FILTERED_DEBS=()
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            case "$binary_package" in
+              *-dbg|*-dbgsym)
+                echo "Dropping debug-symbol package: $binary_package ($(basename "$deb"))"
+                rm -f "$deb"
+                ;;
+              *)
+                FILTERED_DEBS+=("$deb")
+                ;;
+            esac
+          done
+          DEBS=("${FILTERED_DEBS[@]}")
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::No non-debug binary packages remain after filtering"
+            exit 1
+          fi
           if [[ "$PACKAGE" == "fftw3" ]]; then
             fftw_runtime_found=false
             for deb in "${DEBS[@]}"; do
@@ -476,9 +438,10 @@ jobs:
           - Build/test mode: ${BUILD_MODE}
           - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
           - Debian's hardening settings retained
-          - All binary packages produced by the Debian build are retained, including -dev packages; automatic dbgsym generation remains disabled
-          - Debian source package files (.dsc plus matching upstream/Debian archives) are attached
-          - SHA-256 checksums cover the binary packages, source files and build metadata
+          - All non-debug binary packages produced by Debian are retained, including -dev packages
+          - Automatic dbgsym generation is disabled; any explicit -dbg/-dbgsym outputs are filtered
+          - Source archives are build inputs only and are not attached to the release
+          - SHA-256 checksums cover the binary packages and build metadata
           - Rust targets: -C target-cpu=core2 is injected without replacing Debian Rust/linker flags
 
           These packages are intended for the D630/Core 2 test machine, not as
@@ -497,108 +460,3 @@ jobs:
               --title "Core 2 optimized ${PACKAGE} ${PACKAGE_VERSION}" \
               --notes-file release-notes.md
           fi
-
-      - name: Update Core 2 package links in README (newest first)
-        shell: bash
-        run: |
-          set -euo pipefail
-          index_file="core2-packages/README.md"
-          release_json="$RUNNER_TEMP/core2-releases.json"
-
-          for attempt in 1 2 3 4 5; do
-            # Regenerate from the latest master to avoid overwriting a
-            # simultaneous package train or README edit.
-            git fetch origin master
-            git checkout -B master origin/master
-
-            gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/releases?per_page=100" > "$release_json"
-
-            python3 - "$index_file" "$release_json" <<'PY'
-          import json
-          import pathlib
-          import sys
-
-          readme_path = pathlib.Path(sys.argv[1])
-          payload_path = pathlib.Path(sys.argv[2])
-          document = readme_path.read_text(encoding="utf-8")
-          payload = json.loads(payload_path.read_text(encoding="utf-8"))
-          if payload and isinstance(payload[0], list):
-              releases = [release for page in payload for release in page]
-          else:
-              releases = payload
-
-          releases = [
-              release for release in releases
-              if str(release.get("tag_name", "")).startswith("core2-")
-          ]
-          releases.sort(
-              key=lambda release: release.get("published_at")
-              or release.get("created_at")
-              or "",
-              reverse=True,
-          )
-
-          start_marker = "<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->"
-          end_marker = "<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->"
-          if document.count(start_marker) != 1 or document.count(end_marker) != 1:
-              raise SystemExit("Expected exactly one release-index marker pair in README")
-
-          lines = []
-          if not releases:
-              lines.append("_No Core 2 package releases have been published yet._")
-          for release in releases:
-              published = release.get("published_at") or release.get("created_at") or ""
-              published = published.replace("T", " ").replace("Z", " UTC")
-              title = (release.get("name") or release.get("tag_name") or "Core 2 package").replace("|", "\\|")
-              lines.append(f"### {published} — {title}")
-              assets = sorted(release.get("assets") or [], key=lambda asset: asset.get("name", "").lower())
-              has_dsc = any(asset.get("name", "").endswith(".dsc") for asset in assets)
-              has_source_archive = any(
-                  any(asset.get("name", "").endswith(suffix) for suffix in (
-                      ".orig.tar.gz", ".orig.tar.xz", ".orig.tar.bz2",
-                      ".debian.tar.gz", ".debian.tar.xz", ".debian.tar.bz2",
-                      ".diff.gz", ".tar.gz", ".tar.xz", ".tar.bz2",
-                  ))
-                  for asset in assets
-              )
-              if assets:
-                  for asset in assets:
-                      asset_name = (asset.get("name") or "download").replace("[", "\\[").replace("]", "\\]")
-                      asset_url = asset.get("browser_download_url")
-                      if asset_url:
-                          lines.append(f"- [{asset_name}]({asset_url})")
-              else:
-                  lines.append("- _No release assets attached._")
-              if not (has_dsc and has_source_archive):
-                  lines.append("- _Debian source archive assets are not attached to this release._")
-              release_url = release.get("html_url")
-              if release_url:
-                  lines.append(f"- [Release notes and full asset list]({release_url})")
-              lines.append("")
-
-          start = document.index(start_marker) + len(start_marker)
-          end = document.index(end_marker, start)
-          replacement = chr(10) + chr(10).join(lines).rstrip() + chr(10)
-          document = document[:start] + replacement + document[end:]
-          readme_path.write_text(document, encoding="utf-8")
-          PY
-
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add "$index_file"
-            if git diff --cached --quiet; then
-              echo "Package release index is already current."
-              exit 0
-            fi
-            git commit -m "Update Core 2 package release index"
-            if git push origin HEAD:master; then
-              echo "Updated Core 2 package links in $index_file."
-              exit 0
-            fi
-            echo "::warning::README push raced with another master update; refreshing and retrying ($attempt/5)."
-            git reset --hard
-            sleep 2
-          done
-
-          echo "::error::Could not update the Core 2 package index after five attempts."
-          exit 1
