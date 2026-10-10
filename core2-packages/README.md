@@ -7,6 +7,19 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-10 05:35:14 UTC — Core 2 optimized xfconf 4.18.0-2+core2.1~20261010053410
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/BUILD-INFO.txt)
+- [gir1.2-xfconf-0_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/gir1.2-xfconf-0_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
+- [libxfconf-0-3_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-3_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
+- [libxfconf-0-dev_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-dev_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/release-notes.md)
+- [SHA256SUMS-core2-xfconf.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/SHA256SUMS-core2-xfconf.txt)
+- [xfconf_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
+- [xfconf_4.18.0-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2.debian.tar.xz)
+- [xfconf_4.18.0-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2.dsc)
+- [xfconf_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0.orig.tar.bz2)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-xfconf-4.18.0-2-core2.1-20261010053410)
+
 ### 2026-10-10 05:33:07 UTC — Core 2 optimized libxfce4util 4.18.1-2+core2.1~20261010053208
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/BUILD-INFO.txt)
 - [gir1.2-libxfce4util-1.0_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
