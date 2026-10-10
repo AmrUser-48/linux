@@ -146,24 +146,7 @@ jobs:
             exit 1
           fi
 
-          # Verify the original saved artifact first. Then remove forbidden
-          # development/debug binaries before republishing and regenerate sums
-          # for the package set that will actually be released.
-          for deb in "${DEBS[@]}"; do
-            binary_package="$(dpkg-deb -f "$deb" Package)"
-            case "$binary_package" in
-              *-dev|*-dbg|*-dbgsym)
-                echo "Removing development/debug package from recovered artifact: $binary_package"
-                rm -f -- "$deb"
-                ;;
-            esac
-          done
-          DEBS=( ./*.deb )
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::No normal installable Debian packages remain after filtering"
-            exit 1
-          fi
-          sha256sum "${DEBS[@]#./}" > "$SUMS_FILE"
+          # Verify the saved artifact and preserve every binary package, including -dev.
           sha256sum -c "$SUMS_FILE"
 
           PREFIX="core2"
@@ -188,7 +171,7 @@ jobs:
             echo "- Target CPU: Intel Core 2 family; amd64"
             echo "- Optimization: $OPT_LEVEL -march=core2 -mtune=core2"
             echo "- Original saved artifact checksums verified before filtering"
-            echo "- -dev, -dbg and -dbgsym packages excluded; SHA-256 sums regenerated"
+            echo "- All packages in the saved artifact are retained, including -dev packages"
             echo
             echo "These packages are for the D630/Core 2 test machine. Review the normal"
             echo "runtime package set and dependencies before installation."
