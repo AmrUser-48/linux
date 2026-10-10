@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: core2-release-index
+  group: core2-release-index-fast
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: master
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Rebuild package index (newest first, collapsed asset list per release)
         env:
