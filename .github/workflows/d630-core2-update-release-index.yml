@@ -91,19 +91,35 @@ jobs:
                   f"Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector}`"
               )
 
-              assets = sorted(release.get("assets") or [], key=lambda a: (a.get("name") or "").lower())
+              def source_archive(name):
+                  lower = name.lower()
+                  return (
+                      lower.endswith(".dsc")
+                      or ".orig.tar." in lower
+                      or ".debian.tar." in lower
+                      or lower.endswith((".diff.gz", ".tar.gz", ".tar.xz", ".tar.bz2", ".tar.zst"))
+                  )
+
+              def debug_binary(name):
+                  if not name.lower().endswith(".deb"):
+                      return False
+                  binary_package = name.split("_", 1)[0].lower()
+                  return binary_package.endswith(("-dbg", "-dbgsym"))
+
+              # Hide legacy source archives and debug binaries from the normal
+              # package list as well as keeping them out of newly built releases.
+              assets = sorted(
+                  [
+                      a for a in (release.get("assets") or [])
+                      if not source_archive(str(a.get("name") or ""))
+                      and not debug_binary(str(a.get("name") or ""))
+                  ],
+                  key=lambda a: (a.get("name") or "").lower(),
+              )
               lines.append("")
               lines.append(f"<details><summary>Files ({len(assets)})</summary>")
               lines.append("")
 
-              has_dsc = any((a.get("name") or "").endswith(".dsc") for a in assets)
-              has_source = any(
-                  (a.get("name") or "").endswith((
-                      ".orig.tar.gz", ".orig.tar.xz", ".orig.tar.bz2",
-                      ".orig.tar.zst", ".debian.tar.gz", ".debian.tar.xz",
-                      ".debian.tar.bz2", ".diff.gz", ".tar.gz", ".tar.xz", ".tar.bz2",
-                  )) for a in assets
-              )
               for asset in assets:
                   name = (asset.get("name") or "download").replace("[", "\\[").replace("]", "\\]")
                   url = asset.get("browser_download_url")
@@ -111,8 +127,6 @@ jobs:
                       lines.append(f"- [{name}]({url})")
               if not assets:
                   lines.append("- _No release assets attached._")
-              if not (has_dsc and has_source):
-                  lines.append("- _Debian source archive assets are not attached to this release._")
               if release.get("html_url"):
                   lines.append(f"- [Release page]({release['html_url']})")
               lines.extend(["", "</details>", ""])
