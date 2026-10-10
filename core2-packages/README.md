@@ -7,6 +7,23 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-10 05:43:19 UTC — Core 2 optimized garcon 4.18.0-1+core2.1~20261010054213
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/BUILD-INFO.txt)
+- [garcon_4.18.0-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0-1.debian.tar.xz)
+- [garcon_4.18.0-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0-1.dsc)
+- [garcon_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0.orig.tar.bz2)
+- [gir1.2-garcon-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcon-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [gir1.2-garcongtk-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcongtk-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [libgarcon-1-0-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [libgarcon-1-0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [libgarcon-1-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [libgarcon-common_4.18.0-1+core2.1.20261010054213_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-common_4.18.0-1%2Bcore2.1.20261010054213_all.deb)
+- [libgarcon-gtk3-1-0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [libgarcon-gtk3-1-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/release-notes.md)
+- [SHA256SUMS-core2-garcon.txt](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/SHA256SUMS-core2-garcon.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213)
+
 ### 2026-10-10 05:40:53 UTC — Core 2 optimized exo 4.18.0-1+core2.1~20261010053936
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/BUILD-INFO.txt)
 - [exo-utils_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo-utils_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
