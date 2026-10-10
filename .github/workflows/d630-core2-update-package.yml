@@ -80,6 +80,7 @@ jobs:
           set -euo pipefail
 
           started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "started=$started" >> "$GITHUB_OUTPUT"
           before_json="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/${BUILD_WORKFLOW}/runs?branch=master&event=workflow_dispatch&per_page=100")"
           before_ids="$(jq -r '[.workflow_runs[].id | tostring] | join(",")' <<<"$before_json")"
 
@@ -137,30 +138,29 @@ jobs:
         shell: bash
         env:
           PREFIX: ${{ steps.config.outputs.prefix }}
+          STARTED: ${{ steps.dispatch.outputs.started }}
           BUILD_RUN_URL: ${{ steps.dispatch.outputs.build_run_url }}
         run: |
           set -euo pipefail
           releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"
 
-          # The build run must have published a new release after this update
-          # started. Pick the newest matching release; do not delete anything
-          # if we cannot prove a fresh release was published.
-          latest="$(jq -c --arg prefix "$PREFIX" --arg started "${{ steps.dispatch.outputs.started }}" '
-            [.[] | select((.tag_name // "") | startswith($prefix))]
+          # Only select a matching release published after this update started.
+          # Fail closed before deleting anything if no fresh release exists.
+          latest="$(jq -c --arg prefix "$PREFIX" --arg started "$STARTED" '
+            [.[] | select((.tag_name // "") | startswith($prefix))
+                 | select((.created_at // "") >= $started)]
             | sort_by(.created_at)
             | last // empty
           ' <<<"$releases_json")"
 
-          # Use the dispatched run start marker captured below when available.
-          # If the newest release predates this update, fail closed.
           latest_tag="$(jq -r '.tag_name // empty' <<<"${latest:-{}}")"
           latest_created="$(jq -r '.created_at // empty' <<<"${latest:-{}}")"
           if [[ -z "$latest_tag" || -z "$latest_created" ]]; then
-            echo "::error::No release found for prefix $PREFIX. Existing releases were left untouched."
+            echo "::error::No new release found for prefix $PREFIX. Existing releases were left untouched."
             exit 1
           fi
-          if [[ "$latest_created" < "${{ steps.dispatch.outputs.started }}" ]]; then
-            echo "::error::No new package release was published after the update started. Existing releases were left untouched."
+          if [[ "$latest_created" < "$STARTED" ]]; then
+            echo "::error::Release timestamp predates this update. Existing releases were left untouched."
             exit 1
           fi
 
