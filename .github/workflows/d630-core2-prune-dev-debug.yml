@@ -1,5 +1,5 @@
-name: Prune Core 2 development and debug package assets
-run-name: "Prune Core 2 -dev/-dbg/-dbgsym release assets"
+name: Audit Core 2 development and debug package assets
+run-name: "Audit Core 2 -dev/-dbg/-dbgsym release assets"
 
 on:
   workflow_dispatch:
@@ -12,72 +12,23 @@ permissions:
 
 jobs:
   prune-release-assets:
-    name: Remove forbidden Core 2 release assets
+    name: Report development/debug assets without deleting
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Remove old development/debug Debian packages from Core 2 releases
+      - name: Report development/debug Debian packages without deleting them
         shell: bash
         run: |
           set -euo pipefail
-
-          # The app and system package releases in this repository use core2-*
-          # tags. Only remove Debian binary assets whose actual package name
-          # ends in -dev, -dbg or -dbgsym; leave runtime packages and metadata.
-          asset_list="$RUNNER_TEMP/core2-release-assets.tsv"
-          release_tags="$RUNNER_TEMP/core2-release-tags.txt"
+          echo "This workflow is audit-only. Development packages are allowed and must not be deleted."
           gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
-            --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name as $tag | .assets[] | [$tag, .name] | @tsv' \
-            > "$asset_list"
-          gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
-            --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name' \
-            | sort -u > "$release_tags"
-
-          removed=0
-          while IFS=$'\t' read -r tag asset; do
-            [[ -n "$tag" && -n "$asset" ]] || continue
-            [[ "$asset" == *.deb ]] || continue
-            binary_package="${asset%%_*}"
-            case "$binary_package" in
-              *-dev|*-dbg|*-dbgsym)
-                echo "Removing $binary_package from release $tag"
-                gh release delete-asset "$tag" "$asset" \
-                  --repo "$GITHUB_REPOSITORY" --yes
-                removed=$((removed + 1))
-                ;;
-            esac
-          done < "$asset_list"
-
-          # Older releases may have a checksum line for a package asset removed
-          # by an earlier pass. Strip those lines from every Core 2 SHA256SUMS
-          # manifest and upload the corrected manifest only when it changed.
-          while IFS= read -r tag; do
-            [[ -n "$tag" ]] || continue
-            tag_dir="$RUNNER_TEMP/checksums-${tag//[^A-Za-z0-9._-]/_}"
-            mkdir -p "$tag_dir"
-            if ! gh release download "$tag" --repo "$GITHUB_REPOSITORY" \
-                --pattern 'SHA256SUMS*.txt' --dir "$tag_dir"; then
-              echo "::warning::Could not download checksum manifest for $tag; leaving it untouched."
-              continue
-            fi
-            shopt -s nullglob
-            sum_files=("$tag_dir"/SHA256SUMS*.txt)
-            for sum_file in "${sum_files[@]}"; do
-              cp "$sum_file" "$sum_file.before"
-              sed -E -i '/  [^ ]+-(dev|dbg|dbgsym)_[^ ]+\.deb$/d' "$sum_file"
-              if ! cmp -s "$sum_file" "$sum_file.before"; then
-                echo "Updating checksum manifest for $tag: $(basename "$sum_file")"
-                gh release upload "$tag" "$sum_file" --repo "$GITHUB_REPOSITORY" --clobber
-              fi
-            done
-          done < "$release_tags"
-
-          {
-            echo "## Core 2 package release cleanup complete"
-            echo
-            echo "- Removed ${removed} development/debug package asset(s)."
-            echo "- Matching package suffixes: -dev, -dbg, -dbgsym."
-            echo "- Normal runtime packages and release metadata were preserved."
-          } >> "$GITHUB_STEP_SUMMARY"
+            --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name as $tag | .assets[] | select(.name | endswith(".deb")) | [$tag, .name] | @tsv' \
+            | while IFS=$'\\t' read -r tag asset; do
+                package="${asset%%_*}"
+                case "$package" in
+                  *-dev|*-dbg|*-dbgsym) echo "Retained existing asset: $tag / $asset" ;;
+                esac
+              done
+          echo "No release assets were changed." >> "$GITHUB_STEP_SUMMARY"
