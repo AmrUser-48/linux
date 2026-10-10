@@ -81,7 +81,20 @@ jobs:
         run: |
           set -euo pipefail
           prefix="core2-system-${PACKAGE}-"
-          exists="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s --arg prefix "$prefix" 'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))')"
+          releases="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"
+          if [[ "$PACKAGE" == "glibc" ]]; then
+            # A prior glibc release is reusable only if it contains both native
+            # amd64 runtime and development packages. Older incomplete releases
+            # must not block a corrected rebuild.
+            exists="$(jq --arg prefix "$prefix" '
+              any(.[]; ((.tag_name // "") | startswith($prefix)) and
+                ([.assets[].name] as $names |
+                  any($names[]; startswith("libc6_") and endswith("_amd64.deb")) and
+                  any($names[]; startswith("libc6-dev_") and endswith("_amd64.deb"))))
+            ' <<<"$releases")"
+          else
+            exists="$(jq --arg prefix "$prefix" 'any(.[]; ((.tag_name // "") | startswith($prefix)))' <<<"$releases")"
+          fi
           echo "exists=$exists" >> "$GITHUB_OUTPUT"
           if [[ "$exists" == "true" ]]; then
             echo "::notice::Release already exists for ${PACKAGE} ($prefix*); skipping build and publication."
@@ -352,9 +365,9 @@ jobs:
           use -O2 -march=core2 -mtune=core2 with Debian packaging and hardening
           retained. A successful build does not prove runtime or boot safety.
 
-          HIGH-RISK PACKAGES: glibc builds can contain libc6, libc-bin, locales,
-          multiarch packages and other runtime components. Development and debug
-          binary packages are intentionally excluded. Do not install every generated .deb blindly. Never replace libc6 or
+          HIGH-RISK PACKAGES: glibc builds can contain libc6, libc6-dev, libc-bin,
+          locales, multiarch packages and other runtime components. Debug-symbol
+          packages are not generated automatically. Do not install every generated .deb blindly. Never replace libc6 or
           systemd on the working installation without a tested recovery path,
           a known-good kernel, a backup, and a way to boot/rescue the machine.
           Review the package list and dependency versions first. Keep stock
