@@ -3,6 +3,11 @@ run-name: "Refresh Core 2 package links"
 
 on:
   workflow_dispatch:
+  # Also run once when the indexer itself changes, so its output path can be checked.
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-update-release-index.yml"
   release:
     types: [published]
 
