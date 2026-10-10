@@ -189,9 +189,7 @@ jobs:
           fi
 
           # Do not pass -N<package> for development/debug stanzas here.
-          # Some Debian rules need those package staging directories internally
-          # (notably Python and FFTW) even when we do not want to publish them.
-          # Build normally, then remove unwanted .deb outputs before release.
+          # Keep Debian's full binary package set, including development packages.
           echo "DH_OPTIONS=" >> "$GITHUB_ENV"
 
           ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
@@ -327,24 +325,8 @@ jobs:
 
           # Filter development/debug packages after packaging rather than
           # suppressing their staging directories during Debian's rules.
-          RUNTIME_DEBS=()
-          for deb in "${DEBS[@]}"; do
-            binary_package="$(dpkg-deb -f "$deb" Package)"
-            case "$binary_package" in
-              *-dev|*-dbg|*-dbgsym)
-                echo "::notice::Excluding non-runtime package from release: $binary_package"
-                rm -f "$deb"
-                ;;
-              *)
-                RUNTIME_DEBS+=("$deb")
-                ;;
-            esac
-          done
-          DEBS=("${RUNTIME_DEBS[@]}")
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::No runtime/installable .deb packages remain after filtering development/debug outputs"
-            exit 1
-          fi
+          # Retain every binary package produced by Debian, including development packages.
+          DEBS=("${DEBS[@]}")
           if [[ "$PACKAGE" == "fftw3" ]]; then
             fftw_runtime_found=false
             for deb in "${DEBS[@]}"; do
@@ -360,12 +342,6 @@ jobs:
             binary_package="$(dpkg-deb -f "$deb" Package)"
             binary_version="$(dpkg-deb -f "$deb" Version)"
             binary_arch="$(dpkg-deb -f "$deb" Architecture)"
-            case "$binary_package" in
-              *-dev|*-dbg|*-dbgsym)
-                echo "::error::Refusing development/debug package output: $binary_package"
-                exit 1
-                ;;
-            esac
             printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
             if [[ "$PACKAGE" == "rust-sd" && "$binary_version" == "0.80.really.$PACKAGE_VERSION" ]]; then
               echo "::notice::Accepted Debian sd Cargo-generated binary version: $binary_version"
@@ -493,7 +469,7 @@ jobs:
           - Build/test mode: ${BUILD_MODE}
           - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
           - Debian's hardening settings retained
-          - Only normal runtime/installable packages are released; -dev, -dbg and -dbgsym outputs are excluded
+          - All binary packages produced by the Debian build are retained, including -dev packages; automatic dbgsym generation remains disabled
           - Debian source package files (.dsc plus matching upstream/Debian archives) are attached
           - SHA-256 checksums cover the binary packages, source files and build metadata
           - Rust targets: -C target-cpu=core2 is injected without replacing Debian Rust/linker flags
