@@ -102,6 +102,9 @@ def fetch_releases():
             indexed[key] = release
     return indexed
 
+def is_debug_package(package_name):
+    return package_name.lower().endswith(("-dbg", "-dbgsym"))
+
 def parse_deb_asset(asset):
     name = str(asset.get("name") or "")
     if not name.endswith(".deb"):
@@ -257,7 +260,10 @@ def main():
         return 2
 
     package_assets = [p for a in (release.get("assets") or []) if (p := parse_deb_asset(a))]
-    package_assets = [p for p in package_assets if p["arch"] in ("amd64", "all")]
+    package_assets = [
+        p for p in package_assets
+        if p["arch"] in ("amd64", "all") and not is_debug_package(p["package"])
+    ]
     if not package_assets:
         raise RuntimeError(f"No amd64/all Debian packages attached to {release.get('tag_name')}.")
 
