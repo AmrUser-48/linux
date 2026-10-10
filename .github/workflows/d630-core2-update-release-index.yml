@@ -86,6 +86,11 @@ jobs:
                   if published:
                       lines.append(f"Published: {published}")
 
+              selector = package.strip().lower()
+              lines.append(
+                  f"Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector}`"
+              )
+
               assets = sorted(release.get("assets") or [], key=lambda a: (a.get("name") or "").lower())
               lines.append("")
               lines.append(f"<details><summary>Files ({len(assets)})</summary>")
