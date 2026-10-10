@@ -32,6 +32,13 @@ on:
           - btop
           - htop
           - xorg-server
+          - libxfce4util
+          - xfconf
+          - libxfce4ui
+          - exo
+          - garcon
+          - tumbler
+          - thunar
 
 permissions:
   contents: write
