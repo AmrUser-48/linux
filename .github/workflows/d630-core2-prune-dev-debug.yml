@@ -1,5 +1,5 @@
-name: Audit Core 2 development and debug package assets
-run-name: "Audit Core 2 -dev/-dbg/-dbgsym release assets"
+name: Audit Core 2 debug-symbol package assets
+run-name: "Audit Core 2 -dbg/-dbgsym release assets"
 
 on:
   workflow_dispatch:
@@ -8,27 +8,27 @@ on:
       - ".ci/core2-prune-dev-debug-trigger.txt"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  prune-release-assets:
-    name: Report development/debug assets without deleting
+  audit-debug-assets:
+    name: Report legacy debug-symbol assets without deleting
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Report development/debug Debian packages without deleting them
+      - name: Report debug-symbol Debian packages without deleting them
         shell: bash
         run: |
           set -euo pipefail
-          echo "This workflow is audit-only. Development packages are allowed and must not be deleted."
+          echo "This workflow is audit-only. Normal runtime binaries and -dev packages are allowed."
           gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
             --jq '.[] | select(.tag_name | startswith("core2-")) | .tag_name as $tag | .assets[] | select(.name | endswith(".deb")) | [$tag, .name] | @tsv' \
             | while IFS=$'\\t' read -r tag asset; do
                 package="${asset%%_*}"
                 case "$package" in
-                  *-dev|*-dbg|*-dbgsym) echo "Retained existing asset: $tag / $asset" ;;
+                  *-dbg|*-dbgsym) echo "Legacy debug-symbol asset: $tag / $asset" ;;
                 esac
               done
-          echo "No release assets were changed." >> "$GITHUB_STEP_SUMMARY"
+          echo "This audit did not modify releases. New package builds filter debug-symbol binaries." >> "$GITHUB_STEP_SUMMARY"
