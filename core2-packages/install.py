@@ -26,7 +26,7 @@ from pathlib import Path
 
 REPO = "AmrUser-48/linux"
 API = f"https://api.github.com/repos/{REPO}/releases"
-USER_AGENT = "core2-smart-package-installer/1.0"
+USER_AGENT = "core2-smart-package-installer/1.1"
 
 # Source package -> binary package(s) to install if none of its binary outputs
 # is installed. Other binaries from that release are added only when installed.
@@ -125,7 +125,7 @@ def canonicalize_asset_version(version):
     filename may contain '+core2.1.YYYYMMDDhhmmss'. Treat those as the same
     version for comparison; do not rewrite any other part of the version.
     """
-    return re.sub(r"(\+core2\.\d+)\.(\d{14})$", r"\1~\2", version)
+    return re.sub(r"(\+core2\.\d+)[.~](\d{14})$", r"\1~\2", version)
 
 def parse_dpkg_deb_fields(output):
     """Parse labeled Package/Version/Architecture output from dpkg-deb."""
@@ -250,7 +250,8 @@ def download_asset(deb, release, checksums, destination):
         path.unlink(missing_ok=True)
         raise RuntimeError(
             f"Package metadata mismatch for {deb['name']}: "
-            f"{actual_package} {actual_version} {actual_arch}"
+            f"expected {deb['package']} {deb['version']} {deb['arch']}; "
+            f"got {actual_package} {actual_version} {actual_arch}"
         )
     return path
 
