@@ -4,9 +4,8 @@ This repository publishes Debian Bookworm packages built for Intel Core 2 CPUs (
 
 ## Packages
 
-**[Browse the Core 2 packages list →](https://github.com/AmrUser-48/linux/blob/master/core2-packages/README.md)**
+**[Browse all published Core 2 packages →](https://github.com/AmrUser-48/linux/releases)**
 
-This opens the package list page directly. Each package entry includes links to its published files and release page.
+The Releases page is the live package list, newest first. Open a release to download its `.deb` files, checksums, build information, and release notes.
 
-For the optional smart installer and update commands, see the [package installation guide](core2-packages/README.md).
-
+For build instructions and the optional smart installer, see the [package guide](core2-packages/README.md).
