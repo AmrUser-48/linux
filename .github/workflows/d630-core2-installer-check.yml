@@ -1,0 +1,56 @@
+name: Validate Core 2 smart installer
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "core2-packages/install.py"
+      - ".github/workflows/d630-core2-installer-check.yml"
+  pull_request:
+    paths:
+      - "core2-packages/install.py"
+      - ".github/workflows/d630-core2-installer-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Python syntax
+        run: python3 -m py_compile core2-packages/install.py
+
+      - name: Test release selector and Debian asset parsing
+        run: |
+          python3 - <<'PY'
+          import runpy
+
+          installer = runpy.run_path("core2-packages/install.py", run_name="installer_test")
+
+          key, version = installer["package_and_version"]({
+              "name": "Core 2 system glibc 2.36-9+deb12u14+core2.1~20261010052854"
+          })
+          assert key == "glibc", (key, version)
+          assert version == "2.36-9+deb12u14+core2.1~20261010052854", version
+
+          key, version = installer["package_and_version"]({
+              "name": "Core 2 optimized rust-ripgrep 13.0.0-4+core2.1~20261009115443"
+          })
+          assert key == "rust-ripgrep", (key, version)
+          assert version == "13.0.0-4+core2.1~20261009115443", version
+
+          parsed = installer["parse_deb_asset"]({
+              "name": "libc6-dev-x32_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb"
+          })
+          assert parsed["package"] == "libc6-dev-x32", parsed
+          assert parsed["arch"] == "amd64", parsed
+          assert parsed["version"] == "2.36-9+deb12u14+core2.1.20261010052854", parsed
+
+          assert installer["PRIMARY"]["glibc"] == ["libc6"]
+          print("Installer syntax and selection parsing checks passed.")
+          PY
