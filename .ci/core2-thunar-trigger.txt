@@ -1,0 +1,1 @@
+Build the XFCE support packages and Thunar sequentially for Intel Core 2.
