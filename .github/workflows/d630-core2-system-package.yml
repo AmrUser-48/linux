@@ -236,29 +236,8 @@ jobs:
             exit 1
           fi
 
-          RUNTIME_DEBS=()
-          for deb in "${DEBS[@]}"; do
-            binary_package="$(dpkg-deb -f "$deb" Package)"
-            case "$binary_package" in
-              libc6-dev)
-                # Keep the native amd64 libc development package: it is a requested
-                # primary output, unlike optional cross/multiarch -dev packages.
-                RUNTIME_DEBS+=("$deb")
-                ;;
-              *-dev|*-dbg|*-dbgsym)
-                echo "::notice::Excluding non-runtime package from release: $binary_package"
-                rm -f "$deb"
-                ;;
-              *)
-                RUNTIME_DEBS+=("$deb")
-                ;;
-            esac
-          done
-          DEBS=("${RUNTIME_DEBS[@]}")
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::No runtime/installable .deb packages remain after filtering development/debug outputs"
-            exit 1
-          fi
+          # Retain every binary package produced by Debian, including development packages.
+          DEBS=("${DEBS[@]}")
           if [[ "$PACKAGE" == "glibc" ]]; then
             libc6_found=false
             for deb in "${DEBS[@]}"; do
@@ -274,15 +253,6 @@ jobs:
             binary_package="$(dpkg-deb -f "$deb" Package)"
             binary_version="$(dpkg-deb -f "$deb" Version)"
             binary_arch="$(dpkg-deb -f "$deb" Architecture)"
-            case "$binary_package" in
-              libc6-dev)
-                [[ "$PACKAGE" == "glibc" ]] || { echo "::error::Unexpected libc6-dev in $PACKAGE output"; exit 1; }
-                ;;
-              *-dev|*-dbg|*-dbgsym)
-                echo "::error::Refusing development/debug package output: $binary_package"
-                exit 1
-                ;;
-            esac
             printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
             test "$binary_version" = "$PACKAGE_VERSION"
             case "$binary_arch" in amd64|all) ;; *) echo "Unexpected architecture $binary_arch in $deb"; exit 1 ;; esac
@@ -375,7 +345,7 @@ jobs:
           - Optimization profile: ${OPT_LEVEL}
           - Compiler target flags: ${OPT_LEVEL} -march=core2 -mtune=core2
           - Debian's hardening settings retained
-          - Only normal runtime/installable packages are released; -dev, -dbg and -dbgsym outputs are excluded
+          - All binary packages produced by the Debian build are retained, including -dev packages; automatic dbgsym generation remains disabled
 
           These packages are intended for the Dell Latitude D630 / Intel Core 2 test
           machine, not as generic replacements for every amd64 computer. They
