@@ -15,61 +15,8 @@ on:
       package:
         description: Package whose saved artifact should be published
         required: true
-        type: choice
+        type: string
         default: mesa
-        options:
-          - mesa
-          - lame
-          - bash
-          - zsh
-          - nano
-          - neovim
-          - ffmpeg
-          - mpv
-          - 7zip
-          - zstd
-          - xz-utils
-          - curl
-          - glibc
-          - gcc-12
-          - binutils
-          - coreutils
-          - dash
-          - systemd
-          - util-linux
-          - dpkg
-          - apt
-          - openssl
-          - zlib
-          - libxcrypt
-          - ncurses
-          - readline
-          - libcap2
-          - libselinux
-          - libseccomp
-          - acl
-          - attr
-          - findutils
-          - grep
-          - sed
-          - gawk
-          - diffutils
-          - tar
-          - gzip
-          - bzip2
-          - procps
-          - e2fsprogs
-          - psmisc
-          - shadow
-          - pam
-          - iproute2
-          - kmod
-          - pcre2
-          - mpfr4
-          - gmp
-          - libffi
-          - expat
-          - libtirpc
       run_id:
         description: Source GitHub Actions run ID (Mesa's saved artifact is prefilled)
         required: true
@@ -101,6 +48,10 @@ jobs:
           set -euo pipefail
           if [[ ! "$SOURCE_RUN_ID" =~ ^[0-9]+$ ]]; then
             echo "::error::run_id must be a numeric GitHub Actions run ID"
+            exit 1
+          fi
+          if [[ ! "$PACKAGE_INPUT" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
+            echo "::error::Invalid Debian source package name: $PACKAGE_INPUT"
             exit 1
           fi
           case "$PACKAGE_KIND" in
@@ -146,8 +97,38 @@ jobs:
             exit 1
           fi
 
-          # Verify the saved artifact and preserve every binary package, including -dev.
-          sha256sum -c "$SUMS_FILE"
+          # Keep all normal runtime/split packages and -dev binaries, but
+          # remove debug-symbol output and source archives from recovery bundles.
+          FILTERED_DEBS=()
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            case "$binary_package" in
+              *-dbg|*-dbgsym)
+                echo "Dropping debug-symbol package: $binary_package ($(basename "$deb"))"
+                rm -f "$deb"
+                ;;
+              *)
+                FILTERED_DEBS+=("$deb")
+                ;;
+            esac
+          done
+          DEBS=("${FILTERED_DEBS[@]}")
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::No non-debug binary packages remain after filtering"
+            exit 1
+          fi
+
+          # Legacy saved artifacts may contain source archives. They were
+          # verified above, but are not redistributed with recovered releases.
+          find . -maxdepth 1 -type f \
+            \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \
+               -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' \
+               -o -name '*.tar.bz2' -o -name '*.tar.zst' \) -delete
+
+          rm -f "$SUMS_FILE"
+          CHECKSUM_INPUTS=("${DEBS[@]}" BUILD-INFO.txt)
+          sha256sum "${CHECKSUM_INPUTS[@]}" > "$SUMS_FILE"
+
 
           PREFIX="core2"
           if [[ "$PACKAGE_KIND" == system ]]; then PREFIX="core2-system"; fi
@@ -171,7 +152,9 @@ jobs:
             echo "- Target CPU: Intel Core 2 family; amd64"
             echo "- Optimization: $OPT_LEVEL -march=core2 -mtune=core2"
             echo "- Original saved artifact checksums verified before filtering"
-            echo "- All packages in the saved artifact are retained, including -dev packages"
+            echo "- Runtime and split packages are retained, including -dev packages"
+            echo "- Debug-symbol packages and source archives are excluded from the recovered release"
+            echo "- Checksums regenerated for the filtered binary bundle and build metadata"
             echo
             echo "These packages are for the D630/Core 2 test machine. Review the normal"
             echo "runtime package set and dependencies before installation."
