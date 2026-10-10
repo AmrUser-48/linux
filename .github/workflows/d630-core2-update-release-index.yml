@@ -81,24 +81,32 @@ jobs:
               return title or tag, ""
 
           lines = []
+          install_command_written = set()
           for release in releases:
               raw_date = release.get("published_at") or release.get("created_at") or ""
               published = raw_date.replace("T", " ").replace("Z", " UTC").strip()
               package, version = package_and_version(release)
               package = package.replace("|", "\\|").replace("\\n", " ").strip() or "package"
+              selector = package.strip().lower()
+              release_kind = "system" if str(release.get("tag_name") or "").startswith("core2-system-") else "optimized"
+
+              # Show the build family clearly. The default installer chooses the
+              # newest family for a package, so add a simple install command only
+              # to that package's newest release entry rather than repeating a
+              # misleading family-specific command on older/duplicate entries.
               if version:
-                  lines.append(f"### {package}")
+                  lines.append(f"### {package} ({release_kind})")
                   lines.append(f"Version: `{version}` · Published: {published}")
               else:
-                  lines.append(f"### {package}")
+                  lines.append(f"### {package} ({release_kind})")
                   if published:
                       lines.append(f"Published: {published}")
 
-              selector = package.strip().lower()
-              release_kind = "system" if str(release.get("tag_name") or "").startswith("core2-system-") else "optimized"
-              lines.append(
-                  f"Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector} --kind {release_kind}`"
-              )
+              if selector not in install_command_written:
+                  lines.append(
+                      f"Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector}`"
+                  )
+                  install_command_written.add(selector)
 
               def source_archive(name):
                   lower = name.lower()
