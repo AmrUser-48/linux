@@ -97,7 +97,7 @@ jobs:
             started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
             if ! gh workflow run "d630-core2-package.yml" \
-                --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}"; then
+                --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}" -f "refresh_index=false"; then
               echo "::error::Could not dispatch ${package}; recording failure and continuing."
               failed+=("$package (dispatch failed)")
               echo "::endgroup::"
@@ -190,6 +190,16 @@ jobs:
             echo
             echo "Packages are processed one at a time. Re-running this series skips package releases that already contain .deb assets."
           } >> "$GITHUB_STEP_SUMMARY"
+
+          if (( ${#built[@]} > 0 )); then
+            echo "::group::Refresh package README index"
+            if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+              echo "Dispatched package index refresh after series."
+            else
+              echo "::warning::Package series published releases, but index refresh could not be dispatched."
+            fi
+            echo "::endgroup::"
+          fi
 
           if (( ${#failed[@]} > 0 )); then
             echo "::error::Series completed with failed packages: ${failed[*]}. Inspect the failure logs above, fix the root cause, then rerun; ready releases will be skipped."

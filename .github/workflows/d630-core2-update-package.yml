@@ -86,7 +86,7 @@ jobs:
 
           echo "Dispatching ${BUILD_WORKFLOW} for source package ${PACKAGE}; force_rebuild=true."
           if ! gh workflow run "$BUILD_WORKFLOW" --repo "$GITHUB_REPOSITORY" --ref master \
-              --field "package=${PACKAGE}" --field "force_rebuild=true"; then
+              --field "package=${PACKAGE}" --field "force_rebuild=true" --field "refresh_index=false"; then
             echo "::error::Could not dispatch package build."
             exit 1
           fi

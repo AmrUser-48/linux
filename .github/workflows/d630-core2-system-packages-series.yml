@@ -22,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -87,5 +88,28 @@ jobs:
     uses: ./.github/workflows/d630-core2-system-package.yml
     with:
       package: ${{ matrix.package }}
+      refresh_index: false
     permissions:
+      actions: write
       contents: write
+
+  refresh-index:
+    name: Refresh package README after system series
+    needs: [select, build]
+    if: ${{ always() && needs.select.result == 'success' && needs.build.result != 'cancelled' }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch package index refresh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh after system series."
+          else
+            echo "::warning::System package series completed, but index refresh could not be dispatched."
+          fi

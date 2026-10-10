@@ -13,6 +13,9 @@ on:
       - ".github/workflows/d630-core2-recover-release.yml"
       - ".github/workflows/d630-core2-prune-dev-debug.yml"
       - ".github/workflows/d630-core2-update-package.yml"
+      - ".github/workflows/d630-core2-update-release-index.yml"
+      - ".github/workflows/d630-core2-packages-series.yml"
+      - ".github/workflows/d630-core2-system-packages-series.yml"
   pull_request:
     paths:
       - "README.md"
@@ -24,6 +27,9 @@ on:
       - ".github/workflows/d630-core2-recover-release.yml"
       - ".github/workflows/d630-core2-prune-dev-debug.yml"
       - ".github/workflows/d630-core2-update-package.yml"
+      - ".github/workflows/d630-core2-update-release-index.yml"
+      - ".github/workflows/d630-core2-packages-series.yml"
+      - ".github/workflows/d630-core2-system-packages-series.yml"
   workflow_dispatch:
 
 permissions:
@@ -43,7 +49,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml
 
       - name: Check updater Bash-script syntax
         shell: bash
@@ -67,21 +73,99 @@ jobs:
           puts "Updater Bash-script syntax checks passed."
           RUBY
 
-      - name: Check package list uses direct GitHub Releases links
+      - name: Test package index generator and refresh hooks
+        shell: bash
         run: |
+          set -euo pipefail
           python3 - <<'PY'
-          from pathlib import Path
+          import json
+          import pathlib
+          import re
+          import subprocess
+          import sys
+          import tempfile
+          import textwrap
 
-          root = Path("README.md").read_text(encoding="utf-8")
-          packages = Path("core2-packages/README.md").read_text(encoding="utf-8")
-          updater = Path(".github/workflows/d630-core2-update-package.yml").read_text(encoding="utf-8")
-          target = "https://github.com/AmrUser-48/linux/releases"
-          assert target in root, "root README is missing the direct package list link"
-          assert target in packages, "package README is missing the direct package list link"
-          assert "CORE2-PACKAGE-RELEASE-INDEX" not in packages, "large generated index should be removed"
-          assert "d630-core2-update-release-index.yml" not in updater, "package updater should not dispatch a slow index refresh"
-          assert "actions/workflows/" not in root, "root README package navigation must not open Actions"
-          print("Direct package-list links and no index refresh dispatch: OK")
+          root = pathlib.Path("README.md").read_text(encoding="utf-8")
+          readme_path = pathlib.Path("core2-packages/README.md")
+          document = readme_path.read_text(encoding="utf-8")
+          index_workflow = pathlib.Path(".github/workflows/d630-core2-update-release-index.yml").read_text(encoding="utf-8")
+          package_workflow = pathlib.Path(".github/workflows/d630-core2-package.yml").read_text(encoding="utf-8")
+          system_workflow = pathlib.Path(".github/workflows/d630-core2-system-package.yml").read_text(encoding="utf-8")
+          updater = pathlib.Path(".github/workflows/d630-core2-update-package.yml").read_text(encoding="utf-8")
+          assert "[Browse the complete Core 2 package list →](core2-packages/README.md)" in root
+          assert document.count("<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->") == 1
+          assert document.count("<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->") == 1
+          assert "workflow_dispatch:" in index_workflow
+          assert "release:" in index_workflow and "types: [published]" in index_workflow
+          assert "refresh_index" in package_workflow and "d630-core2-update-release-index.yml" in package_workflow
+          assert "refresh_index" in system_workflow and "d630-core2-update-release-index.yml" in system_workflow
+          assert '--field "refresh_index=false"' in updater
+
+          match = re.search(r"<<'PY'\n(.*?)\n\s+PY(?:\n|$)", index_workflow, re.S)
+          assert match, "could not extract index-generator Python from workflow"
+          source = textwrap.dedent(match.group(1))
+          compile(source, "core2-index-generator.py", "exec")
+
+          assets = [
+              "python3.11_3.11.2-1_amd64.deb",
+              "python3.11-dev_3.11.2-1_amd64.deb",
+              "python3.11-dbg_3.11.2-1_amd64.deb",
+              "python3.11-dbgsym_3.11.2-1_amd64.deb",
+              "python3.11_3.11.2.orig.tar.gz",
+              "python3.11_3.11.2.dsc",
+              "BUILD-INFO.txt",
+              "SHA256SUMS-core2-python3.11.txt",
+          ]
+          releases = [
+              {
+                  "tag_name": "core2-python3.11-3.11.2-core2.1-20261010000000",
+                  "name": "Core 2 optimized python3.11 3.11.2-1+core2.1~20261010000000",
+                  "published_at": "2026-10-10T00:00:00Z",
+                  "html_url": "https://github.com/AmrUser-48/linux/releases/tag/test-python",
+                  "assets": [
+                      {"name": name, "browser_download_url": f"https://example.invalid/{name}"}
+                      for name in assets
+                  ],
+              },
+              {
+                  "tag_name": "core2-system-kmod-30-20221128-1-core2.1-20261010010000",
+                  "name": "Core 2 system kmod 30+20221128-1+core2.1~20261010010000",
+                  "published_at": "2026-10-10T01:00:00Z",
+                  "html_url": "https://github.com/AmrUser-48/linux/releases/tag/test-kmod",
+                  "assets": [
+                      {"name": "kmod_30+20221128-1+core2.1.20261010010000_amd64.deb",
+                       "browser_download_url": "https://example.invalid/kmod.deb"},
+                      {"name": "BUILD-INFO.txt", "browser_download_url": "https://example.invalid/BUILD-INFO.txt"},
+                  ],
+              },
+          ]
+
+          with tempfile.TemporaryDirectory() as tmp:
+              temp = pathlib.Path(tmp)
+              script = temp / "index.py"
+              script.write_text(source, encoding="utf-8")
+              readme = temp / "README.md"
+              readme.write_text(
+                  "header\n<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->\n"
+                  "<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->\nfooter\n",
+                  encoding="utf-8",
+              )
+              releases_file = temp / "releases.json"
+              releases_file.write_text(json.dumps(releases), encoding="utf-8")
+              subprocess.run([sys.executable, str(script), str(readme), str(releases_file)], check=True)
+              result = readme.read_text(encoding="utf-8")
+              assert result.startswith("header\n") and result.rstrip().endswith("footer")
+              assert result.index("### kmod") < result.index("### python3.11"), "packages must be newest first"
+              assert "python3 - python3.11 --kind optimized" in result
+              assert "python3 - kmod --kind system" in result
+              assert "python3.11_3.11.2-1_amd64.deb" in result
+              assert "python3.11-dev_3.11.2-1_amd64.deb" in result
+              assert "BUILD-INFO.txt" in result and "SHA256SUMS-core2-python3.11.txt" in result
+              for forbidden in ("python3.11-dbg_", "python3.11-dbgsym_", ".orig.tar.gz", ".dsc"):
+                  assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
+              assert "<details><summary>Files (4)</summary>" in result
+          print("Package index generator and refresh-hook checks passed.")
           PY
 
       - name: Test release selector and Debian asset parsing

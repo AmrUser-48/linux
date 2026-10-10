@@ -24,7 +24,7 @@ on:
         default: "37892602737"
 
 permissions:
-  actions: read
+  actions: write
   contents: write
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
-      actions: read
+      actions: write
       contents: write
     env:
       GH_TOKEN: ${{ github.token }}
@@ -188,4 +188,16 @@ jobs:
             # by GitHub's GITHUB_TOKEN workflow-file permission guard.
             gh release create "$RELEASE_TAG" "${FILES[@]}" --repo "$GITHUB_REPOSITORY" \
               --title "Core 2 ${PACKAGE} ${PACKAGE_VERSION}" --notes-file release-notes.md
+          fi
+
+      - name: Dispatch package index refresh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh."
+          else
+            echo "::warning::Recovered release was published, but index refresh could not be dispatched."
           fi

@@ -14,8 +14,14 @@ on:
         required: false
         type: boolean
         default: false
+      refresh_index:
+        description: Refresh package README after successful publication
+        required: false
+        type: boolean
+        default: true
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -418,6 +424,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      actions: write
       contents: write
     env:
       GH_TOKEN: ${{ github.token }}
@@ -478,4 +485,17 @@ jobs:
               --repo "$GITHUB_REPOSITORY" \
               --title "Core 2 optimized ${PACKAGE} ${PACKAGE_VERSION}" \
               --notes-file release-notes.md
+          fi
+
+      - name: Dispatch package index refresh
+        if: ${{ inputs.refresh_index }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh."
+          else
+            echo "::warning::Package release was published, but index refresh could not be dispatched."
           fi
