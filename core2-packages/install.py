@@ -74,7 +74,17 @@ def package_and_version(release):
                 return match.group(1).strip().lower(), match.group(2).strip()
     return None, None
 
-def fetch_releases():
+def release_kind_from_tag(tag_name):
+    tag = str(tag_name or "")
+    if tag.startswith("core2-system-"):
+        return "system"
+    if tag.startswith("core2-"):
+        return "optimized"
+    return None
+
+def fetch_releases(kind="any"):
+    if kind not in ("any", "optimized", "system"):
+        raise ValueError(f"Unsupported package release kind: {kind}")
     result = []
     for page in range(1, 21):
         url = f"{API}?per_page=100&page={page}"
@@ -90,7 +100,10 @@ def fetch_releases():
     for release in result:
         if release.get("draft") or release.get("prerelease"):
             continue
-        if not str(release.get("tag_name") or "").startswith("core2-"):
+        tag_kind = release_kind_from_tag(release.get("tag_name"))
+        if tag_kind is None:
+            continue
+        if kind != "any" and tag_kind != kind:
             continue
         key, version = package_and_version(release)
         if not key:
@@ -256,6 +269,10 @@ def main():
     )
     parser.add_argument("package", nargs="?", help="package key from core2-packages/README.md")
     parser.add_argument("--list", action="store_true", help="list available package keys")
+    parser.add_argument(
+        "--kind", choices=("optimized", "system", "any"), default="any",
+        help="select a release family; any keeps backward-compatible newest-release selection"
+    )
     parser.add_argument("--dry-run", action="store_true", help="show the APT plan but do not install")
     parser.add_argument("--yes", action="store_true", help="apply the displayed APT plan without asking")
     args = parser.parse_args()
@@ -266,7 +283,7 @@ def main():
     if architecture != "amd64":
         raise RuntimeError(f"This repository targets amd64; detected architecture is {architecture!r}.")
 
-    releases = fetch_releases()
+    releases = fetch_releases(args.kind)
     if args.list:
         for key, release in sorted(releases.items()):
             _, version = package_and_version(release)
