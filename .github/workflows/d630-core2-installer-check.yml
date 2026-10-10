@@ -46,7 +46,7 @@ jobs:
             .github/workflows/d630-core2-system-package.yml \
             .github/workflows/d630-core2-recover-release.yml \
             .github/workflows/d630-core2-update-release-index.yml \
-            .github/workflows/d630-core2-prune-dev-debug.yml \\
+            .github/workflows/d630-core2-prune-dev-debug.yml \
             .github/workflows/d630-core2-update-package.yml
 
       - name: Test release-index generator excludes source and debug assets
