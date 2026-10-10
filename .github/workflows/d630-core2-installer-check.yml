@@ -39,11 +39,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' \\
-            .github/workflows/d630-core2-package.yml \\
-            .github/workflows/d630-core2-system-package.yml \\
-            .github/workflows/d630-core2-recover-release.yml \\
-            .github/workflows/d630-core2-update-release-index.yml \\
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' \
+            .github/workflows/d630-core2-package.yml \
+            .github/workflows/d630-core2-system-package.yml \
+            .github/workflows/d630-core2-recover-release.yml \
+            .github/workflows/d630-core2-update-release-index.yml \
             .github/workflows/d630-core2-prune-dev-debug.yml
 
       - name: Test release selector and Debian asset parsing
