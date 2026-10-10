@@ -160,6 +160,8 @@ jobs:
               "name": "kmod_30+20221128-1+core2.1.20261009193535_amd64.deb"
           })
           assert kmod_asset["version"] == "30+20221128-1+core2.1~20261009193535", kmod_asset
+          assert installer["canonicalize_asset_version"]("30+20221128-1+core2.1~20261009193535") == kmod_asset["version"]
+          assert installer["canonicalize_asset_version"]("30+20221128-1+core2.1.20261009193535") == kmod_asset["version"]
 
           # dpkg-deb emits labeled fields, not bare values.
           fields = installer["parse_dpkg_deb_fields"](
