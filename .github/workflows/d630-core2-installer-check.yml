@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
     paths:
+      - "README.md"
+      - "core2-packages/README.md"
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
       - ".github/workflows/d630-core2-package.yml"
@@ -13,6 +15,8 @@ on:
       - ".github/workflows/d630-core2-update-package.yml"
   pull_request:
     paths:
+      - "README.md"
+      - "core2-packages/README.md"
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
       - ".github/workflows/d630-core2-package.yml"
