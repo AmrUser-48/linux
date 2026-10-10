@@ -240,6 +240,11 @@ jobs:
           for deb in "${DEBS[@]}"; do
             binary_package="$(dpkg-deb -f "$deb" Package)"
             case "$binary_package" in
+              libc6-dev)
+                # Keep the native amd64 libc development package: it is a requested
+                # primary output, unlike optional cross/multiarch -dev packages.
+                RUNTIME_DEBS+=("$deb")
+                ;;
               *-dev|*-dbg|*-dbgsym)
                 echo "::notice::Excluding non-runtime package from release: $binary_package"
                 rm -f "$deb"
@@ -270,6 +275,9 @@ jobs:
             binary_version="$(dpkg-deb -f "$deb" Version)"
             binary_arch="$(dpkg-deb -f "$deb" Architecture)"
             case "$binary_package" in
+              libc6-dev)
+                [[ "$PACKAGE" == "glibc" ]] || { echo "::error::Unexpected libc6-dev in $PACKAGE output"; exit 1; }
+                ;;
               *-dev|*-dbg|*-dbgsym)
                 echo "::error::Refusing development/debug package output: $binary_package"
                 exit 1
