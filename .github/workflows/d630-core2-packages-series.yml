@@ -15,9 +15,11 @@ on:
           - media
           - graphics
           - new-tools
+          - thunar
   push:
     paths:
       - ".ci/core2-package-train-trigger.txt"
+      - ".ci/core2-thunar-trigger.txt"
 
 concurrency:
   group: core2-package-train
@@ -34,7 +36,7 @@ jobs:
     timeout-minutes: 360
     env:
       GH_TOKEN: ${{ github.token }}
-      SERIES: ${{ inputs.series || 'new-tools' }}
+      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
     steps:
       - name: Build packages sequentially, skipping ready releases
         shell: bash
@@ -45,6 +47,11 @@ jobs:
             shell-editors) packages=(bash zsh nano neovim) ;;
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
+            thunar)
+              # Build the XFCE libraries and supporting services before Thunar.
+              # Debian build-dependencies are installed by each package workflow.
+              packages=(libxfce4util xfconf libxfce4ui exo garcon tumbler thunar)
+              ;;
             new-tools)
               # Python interpreter, FFTW, MPD/clients, Rust CLI tools, monitors,
               # then the code-bearing X.Org server. The xorg metapackage itself
@@ -52,7 +59,7 @@ jobs:
               packages=(python3.11 fftw3 ncmpcpp mpd rust-fd-find rust-sd rust-ripgrep btop htop xorg-server)
               ;;
             all)
-              packages=(lame bash zsh nano neovim zstd xz-utils 7zip ffmpeg mpv curl mesa python3.11 fftw3 ncmpcpp mpd rust-fd-find rust-sd rust-ripgrep btop htop xorg-server)
+              packages=(lame bash zsh nano neovim zstd xz-utils 7zip ffmpeg mpv curl mesa python3.11 fftw3 ncmpcpp mpd rust-fd-find rust-sd rust-ripgrep btop htop xorg-server libxfce4util xfconf libxfce4ui exo garcon tumbler thunar)
               ;;
             *) echo "::error::Unknown package series: $SERIES"; exit 1 ;;
           esac
