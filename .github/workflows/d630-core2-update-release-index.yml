@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: core2-release-index-fast
+  group: core2-release-index-sparse
   cancel-in-progress: false
 
 jobs:
@@ -27,6 +27,9 @@ jobs:
         with:
           ref: master
           fetch-depth: 1
+          sparse-checkout: |
+            core2-packages/README.md
+          sparse-checkout-cone-mode: false
 
       - name: Rebuild package index (newest first, collapsed asset list per release)
         env:
