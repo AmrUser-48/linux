@@ -1,6 +1,12 @@
 # Debian Bookworm packages optimized for Intel Core 2
 
-This directory documents the opt-in GitHub Actions workflows for rebuilding selected Debian Bookworm source packages with native Core 2 compiler targets.
+This directory documents the opt-in GitHub Actions workflows for rebuilding Debian Bookworm source packages with native Core 2 compiler targets.
+
+## Build any package by source name
+
+The [Core 2 optimized Debian package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-package.yml) accepts a free-text Debian source-package name; it is no longer limited to a YAML dropdown list. Enter any valid source package available from the configured Debian Bookworm source repositories, such as `python3.11`, `thunar`, or another package name. The workflow resolves build dependencies, builds binary packages for amd64/all, and skips publication when that package already has a Core 2 release.
+
+The [Core 2 optimized Debian system package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-package.yml) also accepts a free-text source-package name and uses the conservative `-O2 -march=core2 -mtune=core2` profile. The package-train workflows remain predefined sequential sets.
 
 ## Smart install/update
 
