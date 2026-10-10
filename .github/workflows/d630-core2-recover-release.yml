@@ -126,7 +126,7 @@ jobs:
                -o -name '*.tar.bz2' -o -name '*.tar.zst' \) -delete
 
           rm -f "$SUMS_FILE"
-          CHECKSUM_INPUTS=("${DEBS[@]}" BUILD-INFO.txt)
+          CHECKSUM_INPUTS=("${DEBS[@]#./}" BUILD-INFO.txt)
           sha256sum "${CHECKSUM_INPUTS[@]}" > "$SUMS_FILE"
 
 
