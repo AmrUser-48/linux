@@ -16,12 +16,15 @@ Each package entry below includes a one-line install command. It downloads the l
 
 The installer updates binary packages from that release **only when the same package and architecture is already installed**. It may add the primary runtime package if that package is not installed; it does not install extra `-dev`, `-doc`, `-source`, dbgsym, i386/x32 or other split packages merely because they are attached to the release. For example, selecting `glibc` updates installed `libc6` and other matching installed components, but will not add `libc6-dev`, `libc6-x32` or `libc6-i386` if they are absent.
 
+The installer distinguishes the `optimized` and `system` release families. Each command in the index specifies the correct family, so a package such as `bash` will not accidentally select the system build when you click the optimized entry, or vice versa. Manual commands can use `--kind optimized`, `--kind system`, or `--kind any`.
+
 The script verifies SHA-256 hashes where the release publishes them, shows an APT simulation, and asks before installing. It refuses plans in which APT proposes removing packages. APT resolves dependencies using your configured Debian repositories. This installer is for Debian Bookworm amd64.
 
-Run the command shown under a package heading to install/update that package. To preview instead of installing, add `--dry-run` after the package key. To list package keys supported by the current releases:
+Run the command shown under a package heading to install/update that package. To preview instead of installing, add `--dry-run` after the package key and `--kind` value. To list package keys, optionally limited to a release family:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - --list
+curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - --list --kind optimized
+curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - --list --kind system
 ```
 
 Installer source: [`install.py`](install.py).
