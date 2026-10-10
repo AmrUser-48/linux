@@ -28,7 +28,7 @@ Version: `2.36-9+deb12u14+core2.1~20261010052854` · Published: 2026-10-10 05:56
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glibc`
 
-<details><summary>Files (19)</summary>
+<details><summary>Files (18)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/BUILD-INFO.txt)
 - [glibc-doc_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/glibc-doc_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb)
@@ -38,7 +38,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libc-devtools_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-devtools_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 - [libc-l10n_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-l10n_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb)
 - [libc6_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-- [libc6-dbg_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dbg_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 - [libc6-dev_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 - [libc6-dev-i386_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev-i386_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 - [libc6-dev-x32_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev-x32_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
@@ -49,7 +48,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [nscd_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/nscd_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/release-notes.md)
 - [SHA256SUMS-core2-glibc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/SHA256SUMS-core2-glibc.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854)
 
 </details>
@@ -59,7 +57,7 @@ Version: `4.18.4-1+core2.1~20261010054751` · Published: 2026-10-10 05:50:00 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - thunar`
 
-<details><summary>Files (11)</summary>
+<details><summary>Files (8)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/BUILD-INFO.txt)
 - [gir1.2-thunarx-3.0_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/gir1.2-thunarx-3.0_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb)
@@ -67,12 +65,8 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libthunarx-3-dev_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/libthunarx-3-dev_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/release-notes.md)
 - [SHA256SUMS-core2-thunar.txt](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/SHA256SUMS-core2-thunar.txt)
-- [thunar_4.18.4-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar_4.18.4-1.debian.tar.xz)
-- [thunar_4.18.4-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar_4.18.4-1.dsc)
 - [thunar_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb)
-- [thunar_4.18.4.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar_4.18.4.orig.tar.bz2)
 - [thunar-data_4.18.4-1+core2.1.20261010054751_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar-data_4.18.4-1%2Bcore2.1.20261010054751_all.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751)
 
 </details>
@@ -82,20 +76,16 @@ Version: `4.18.0-1+core2.1~20261010054511` · Published: 2026-10-10 05:46:25 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tumbler`
 
-<details><summary>Files (11)</summary>
+<details><summary>Files (8)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/BUILD-INFO.txt)
 - [libtumbler-1-0_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/libtumbler-1-0_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb)
 - [libtumbler-1-dev_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/libtumbler-1-dev_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/release-notes.md)
 - [SHA256SUMS-core2-tumbler.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/SHA256SUMS-core2-tumbler.txt)
-- [tumbler_4.18.0-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler_4.18.0-1.debian.tar.xz)
-- [tumbler_4.18.0-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler_4.18.0-1.dsc)
 - [tumbler_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb)
-- [tumbler_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler_4.18.0.orig.tar.bz2)
 - [tumbler-common_4.18.0-1+core2.1.20261010054511_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler-common_4.18.0-1%2Bcore2.1.20261010054511_all.deb)
 - [tumbler-plugins-extra_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler-plugins-extra_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511)
 
 </details>
@@ -105,12 +95,9 @@ Version: `4.18.0-1+core2.1~20261010054213` · Published: 2026-10-10 05:43:19 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - garcon`
 
-<details><summary>Files (14)</summary>
+<details><summary>Files (11)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/BUILD-INFO.txt)
-- [garcon_4.18.0-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0-1.debian.tar.xz)
-- [garcon_4.18.0-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0-1.dsc)
-- [garcon_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/garcon_4.18.0.orig.tar.bz2)
 - [gir1.2-garcon-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcon-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 - [gir1.2-garcongtk-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcongtk-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 - [libgarcon-1-0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
@@ -121,7 +108,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libgarcon-gtk3-1-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/release-notes.md)
 - [SHA256SUMS-core2-garcon.txt](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/SHA256SUMS-core2-garcon.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213)
 
 </details>
@@ -131,19 +117,15 @@ Version: `4.18.0-1+core2.1~20261010053936` · Published: 2026-10-10 05:40:53 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - exo`
 
-<details><summary>Files (10)</summary>
+<details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/BUILD-INFO.txt)
-- [exo_4.18.0-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo_4.18.0-1.debian.tar.xz)
-- [exo_4.18.0-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo_4.18.0-1.dsc)
-- [exo_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo_4.18.0.orig.tar.bz2)
 - [exo-utils_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo-utils_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
 - [libexo-2-0_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-0_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
 - [libexo-2-dev_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-dev_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
 - [libexo-common_4.18.0-1+core2.1.20261010053936_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-common_4.18.0-1%2Bcore2.1.20261010053936_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/release-notes.md)
 - [SHA256SUMS-core2-exo.txt](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/SHA256SUMS-core2-exo.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936)
 
 </details>
@@ -153,13 +135,10 @@ Version: `4.18.2-2+core2.1~20261010053651` · Published: 2026-10-10 05:38:11 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4ui`
 
-<details><summary>Files (12)</summary>
+<details><summary>Files (9)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/BUILD-INFO.txt)
 - [gir1.2-libxfce4ui-2.0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/gir1.2-libxfce4ui-2.0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
-- [libxfce4ui_4.18.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2-2.debian.tar.xz)
-- [libxfce4ui_4.18.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2-2.dsc)
-- [libxfce4ui_4.18.2.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2.orig.tar.bz2)
 - [libxfce4ui-2-0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
 - [libxfce4ui-2-dev_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-dev_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
 - [libxfce4ui-common_4.18.2-2+core2.1.20261010053651_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-common_4.18.2-2%2Bcore2.1.20261010053651_all.deb)
@@ -167,7 +146,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libxfce4ui-utils_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-utils_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/release-notes.md)
 - [SHA256SUMS-core2-libxfce4ui.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/SHA256SUMS-core2-libxfce4ui.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651)
 
 </details>
@@ -177,7 +155,7 @@ Version: `4.18.0-2+core2.1~20261010053410` · Published: 2026-10-10 05:35:14 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xfconf`
 
-<details><summary>Files (10)</summary>
+<details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/BUILD-INFO.txt)
 - [gir1.2-xfconf-0_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/gir1.2-xfconf-0_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
@@ -185,11 +163,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libxfconf-0-dev_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-dev_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/release-notes.md)
 - [SHA256SUMS-core2-xfconf.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/SHA256SUMS-core2-xfconf.txt)
-- [xfconf_4.18.0-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2.debian.tar.xz)
-- [xfconf_4.18.0-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2.dsc)
 - [xfconf_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
-- [xfconf_4.18.0.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0.orig.tar.bz2)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xfconf-4.18.0-2-core2.1-20261010053410)
 
 </details>
@@ -199,20 +173,16 @@ Version: `4.18.1-2+core2.1~20261010053208` · Published: 2026-10-10 05:33:07 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4util`
 
-<details><summary>Files (11)</summary>
+<details><summary>Files (8)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/BUILD-INFO.txt)
 - [gir1.2-libxfce4util-1.0_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
-- [libxfce4util_4.18.1-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1-2.debian.tar.xz)
-- [libxfce4util_4.18.1-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1-2.dsc)
-- [libxfce4util_4.18.1.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util_4.18.1.orig.tar.bz2)
 - [libxfce4util-bin_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-bin_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 - [libxfce4util-common_4.18.1-2+core2.1.20261010053208_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-common_4.18.1-2%2Bcore2.1.20261010053208_all.deb)
 - [libxfce4util-dev_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-dev_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 - [libxfce4util7_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/release-notes.md)
 - [SHA256SUMS-core2-libxfce4util.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/SHA256SUMS-core2-libxfce4util.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4util-4.18.1-2-core2.1-20261010053208)
 
 </details>
@@ -241,7 +211,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [nscd_2.36-9+deb12u14+core2.1.20261010025123_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/nscd_2.36-9%2Bdeb12u14%2Bcore2.1.20261010025123_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/release-notes.md)
 - [SHA256SUMS-core2-glibc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123/SHA256SUMS-core2-glibc.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010025123)
 
 </details>
@@ -280,7 +249,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [systemd-timesyncd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-timesyncd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 - [systemd-userdbd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-userdbd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 - [udev_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/udev_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144)
 
 </details>
@@ -328,7 +296,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libgprofng0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libgprofng0_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/release-notes.md)
 - [SHA256SUMS-core2-binutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/SHA256SUMS-core2-binutils.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258)
 
 </details>
@@ -345,7 +312,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libtirpc3_1.3.3+ds-1+core2.1.20261009195337_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/libtirpc3_1.3.3%2Bds-1%2Bcore2.1.20261009195337_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/release-notes.md)
 - [SHA256SUMS-core2-libtirpc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/SHA256SUMS-core2-libtirpc.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337)
 
 </details>
@@ -362,7 +328,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libexpat1_2.5.0-1+deb12u4+core2.1.20261009195158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/release-notes.md)
 - [SHA256SUMS-core2-expat.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/SHA256SUMS-core2-expat.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158)
 
 </details>
@@ -378,7 +343,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libffi8_3.4.4-1+core2.1.20261009194707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/release-notes.md)
 - [SHA256SUMS-core2-libffi.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/SHA256SUMS-core2-libffi.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707)
 
 </details>
@@ -396,7 +360,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libgmpxx4ldbl_6.2.1+dfsg1-1.1+core2.1.20261009194412_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmpxx4ldbl_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/release-notes.md)
 - [SHA256SUMS-core2-gmp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/SHA256SUMS-core2-gmp.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412)
 
 </details>
@@ -413,7 +376,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libmpfr6_4.2.0-1+core2.1.20261009194039_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/libmpfr6_4.2.0-1%2Bcore2.1.20261009194039_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/release-notes.md)
 - [SHA256SUMS-core2-mpfr4.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/SHA256SUMS-core2-mpfr4.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039)
 
 </details>
@@ -423,21 +385,16 @@ Version: `7.88.1-10+deb12u15+core2.1~20261009190528` · Published: 2026-10-09 19
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - curl`
 
-<details><summary>Files (12)</summary>
+<details><summary>Files (8)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/BUILD-INFO.txt)
-- [curl_7.88.1-10+deb12u15.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1-10%2Bdeb12u15.debian.tar.xz)
-- [curl_7.88.1-10+deb12u15.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1-10%2Bdeb12u15.dsc)
 - [curl_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
-- [curl_7.88.1.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1.orig.tar.gz)
-- [curl_7.88.1.orig.tar.gz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1.orig.tar.gz.asc)
 - [libcurl3-gnutls_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
 - [libcurl3-nss_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-nss_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
 - [libcurl4_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl4_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
 - [libcurl4-doc_7.88.1-10+deb12u15+core2.1.20261009190528_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl4-doc_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/release-notes.md)
 - [SHA256SUMS-core2-curl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/SHA256SUMS-core2-curl.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528)
 
 </details>
@@ -456,7 +413,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [SHA256SUMS-core2-xz-utils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/SHA256SUMS-core2-xz-utils.txt)
 - [xz-utils_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 - [xzdec_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/xzdec_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709)
 
 </details>
@@ -473,7 +429,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libkmod2_30+20221128-1+core2.1.20261009193535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/libkmod2_30%2B20221128-1%2Bcore2.1.20261009193535_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/release-notes.md)
 - [SHA256SUMS-core2-kmod.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/SHA256SUMS-core2-kmod.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-kmod-30-20221128-1-core2.1-20261009193535)
 
 </details>
@@ -490,7 +445,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [iproute2-doc_6.1.0-3+core2.1.20261009193351_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/iproute2-doc_6.1.0-3%2Bcore2.1.20261009193351_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/release-notes.md)
 - [SHA256SUMS-core2-iproute2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/SHA256SUMS-core2-iproute2.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-iproute2-6.1.0-3-core2.1-20261009193351)
 
 </details>
@@ -510,7 +464,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libpam0g_1.5.2-6+deb12u2+core2.1.20261009193111_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam0g_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/release-notes.md)
 - [SHA256SUMS-core2-pam.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/SHA256SUMS-core2-pam.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111)
 
 </details>
@@ -529,7 +482,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/release-notes.md)
 - [SHA256SUMS-core2-shadow.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/SHA256SUMS-core2-shadow.txt)
 - [uidmap_4.13+dfsg1-1+deb12u2+core2.1.20261009192822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/uidmap_4.13%2Bdfsg1-1%2Bdeb12u2%2Bcore2.1.20261009192822_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822)
 
 </details>
@@ -545,7 +497,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [psmisc_23.6-1+core2.1.20261009192718_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-psmisc-23.6-1-core2.1-20261009192718/psmisc_23.6-1%2Bcore2.1.20261009192718_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-psmisc-23.6-1-core2.1-20261009192718/release-notes.md)
 - [SHA256SUMS-core2-psmisc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-psmisc-23.6-1-core2.1-20261009192718/SHA256SUMS-core2-psmisc.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-psmisc-23.6-1-core2.1-20261009192718)
 
 </details>
@@ -568,7 +519,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [logsave_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/logsave_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/release-notes.md)
 - [SHA256SUMS-core2-e2fsprogs.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/SHA256SUMS-core2-e2fsprogs.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320)
 
 </details>
@@ -586,7 +536,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libbz2-1.0_1.0.8-5+core2.1.20261009192040_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bzip2-1.0.8-5-core2.1-20261009192040/libbz2-1.0_1.0.8-5%2Bcore2.1.20261009192040_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-bzip2-1.0.8-5-core2.1-20261009192040/release-notes.md)
 - [SHA256SUMS-core2-bzip2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bzip2-1.0.8-5-core2.1-20261009192040/SHA256SUMS-core2-bzip2.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-bzip2-1.0.8-5-core2.1-20261009192040)
 
 </details>
@@ -603,7 +552,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [gzip-win32_1.12-1+core2.1.20261009191817_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/gzip-win32_1.12-1%2Bcore2.1.20261009191817_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/release-notes.md)
 - [SHA256SUMS-core2-gzip.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/SHA256SUMS-core2-gzip.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gzip-1.12-1-core2.1-20261009191817)
 
 </details>
@@ -620,7 +568,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [diffutils-doc_3.8-4+core2.1.20261009191615_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-diffutils-1-3.8-4-core2.1-20261009191615/diffutils-doc_3.8-4%2Bcore2.1.20261009191615_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-diffutils-1-3.8-4-core2.1-20261009191615/release-notes.md)
 - [SHA256SUMS-core2-diffutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-diffutils-1-3.8-4-core2.1-20261009191615/SHA256SUMS-core2-diffutils.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-diffutils-1-3.8-4-core2.1-20261009191615)
 
 </details>
@@ -636,7 +583,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427/release-notes.md)
 - [sed_4.9-1+deb12u1+core2.1.20261009191427_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427/sed_4.9-1%2Bdeb12u1%2Bcore2.1.20261009191427_amd64.deb)
 - [SHA256SUMS-core2-sed.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427/SHA256SUMS-core2-sed.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427)
 
 </details>
@@ -652,7 +598,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [grep_3.8-5+core2.1.20261009191150_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-grep-3.8-5-core2.1-20261009191150/grep_3.8-5%2Bcore2.1.20261009191150_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-grep-3.8-5-core2.1-20261009191150/release-notes.md)
 - [SHA256SUMS-core2-grep.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-grep-3.8-5-core2.1-20261009191150/SHA256SUMS-core2-grep.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-grep-3.8-5-core2.1-20261009191150)
 
 </details>
@@ -669,7 +614,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libattr1_2.5.1-4+core2.1.20261009191027_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-attr-1-2.5.1-4-core2.1-20261009191027/libattr1_2.5.1-4%2Bcore2.1.20261009191027_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-attr-1-2.5.1-4-core2.1-20261009191027/release-notes.md)
 - [SHA256SUMS-core2-attr.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-attr-1-2.5.1-4-core2.1-20261009191027/SHA256SUMS-core2-attr.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-attr-1-2.5.1-4-core2.1-20261009191027)
 
 </details>
@@ -686,7 +630,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libacl1_2.3.1-3+core2.1.20261009190907_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/libacl1_2.3.1-3%2Bcore2.1.20261009190907_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/release-notes.md)
 - [SHA256SUMS-core2-acl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/SHA256SUMS-core2-acl.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-acl-2.3.1-3-core2.1-20261009190907)
 
 </details>
@@ -705,7 +648,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [ruby-selinux_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/ruby-selinux_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 - [selinux-utils_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/selinux-utils_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 - [SHA256SUMS-core2-libselinux.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/SHA256SUMS-core2-libselinux.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libselinux-3.4-1-core2.1-20261009190433)
 
 </details>
@@ -715,17 +657,13 @@ Version: `0.35.1-4+core2.1~20261009190224` · Published: 2026-10-09 19:04:20 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpv`
 
-<details><summary>Files (8)</summary>
+<details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/BUILD-INFO.txt)
 - [libmpv2_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/libmpv2_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb)
-- [mpv_0.35.1-4.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4.debian.tar.xz)
-- [mpv_0.35.1-4.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4.dsc)
 - [mpv_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb)
-- [mpv_0.35.1.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1.orig.tar.gz)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/release-notes.md)
 - [SHA256SUMS-core2-mpv.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/SHA256SUMS-core2-mpv.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224)
 
 </details>
@@ -743,7 +681,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libpam-cap_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libpam-cap_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/release-notes.md)
 - [SHA256SUMS-core2-libcap2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/SHA256SUMS-core2-libcap2.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327)
 
 </details>
@@ -772,7 +709,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [ncurses-term_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-term_6.4-4%2Bcore2.1.20261009185822_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/release-notes.md)
 - [SHA256SUMS-core2-ncurses.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/SHA256SUMS-core2-ncurses.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822)
 
 </details>
@@ -782,14 +718,10 @@ Version: `7:5.1.9-0+deb12u1+core2.1~20261009183944` · Published: 2026-10-09 19:
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ffmpeg`
 
-<details><summary>Files (23)</summary>
+<details><summary>Files (19)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/BUILD-INFO.txt)
-- [ffmpeg_5.1.9-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1.debian.tar.xz)
-- [ffmpeg_5.1.9-0+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1.dsc)
 - [ffmpeg_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
-- [ffmpeg_5.1.9.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9.orig.tar.xz)
-- [ffmpeg_5.1.9.orig.tar.xz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9.orig.tar.xz.asc)
 - [ffmpeg-doc_5.1.9-0+deb12u1+core2.1.20261009183944_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg-doc_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_all.deb)
 - [libavcodec-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 - [libavcodec-extra59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
@@ -807,7 +739,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libswscale6_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/release-notes.md)
 - [SHA256SUMS-core2-ffmpeg.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/SHA256SUMS-core2-ffmpeg.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944)
 
 </details>
@@ -824,7 +755,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libxcrypt-source_4.4.33-2+core2.1.20261009185630_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libxcrypt-source_4.4.33-2%2Bcore2.1.20261009185630_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/release-notes.md)
 - [SHA256SUMS-core2-libxcrypt.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/SHA256SUMS-core2-libxcrypt.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630)
 
 </details>
@@ -841,7 +771,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/release-notes.md)
 - [SHA256SUMS-core2-zlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/SHA256SUMS-core2-zlib.txt)
 - [zlib1g_1.2.13.dfsg-1+core2.1.20261009185513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261009185513_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513)
 
 </details>
@@ -859,7 +788,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [openssl_3.0.22-1.deb12u1+core2.1.20261009184347_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/openssl_3.0.22-1.deb12u1%2Bcore2.1.20261009184347_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/release-notes.md)
 - [SHA256SUMS-core2-openssl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347/SHA256SUMS-core2-openssl.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-openssl-3.0.22-1-deb12u1-core2.1-20261009184347)
 
 </details>
@@ -869,16 +797,12 @@ Version: `22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500` · Published:
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - 7zip`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
-- [7zip_22.01+really26.02+dfsg-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.debian.tar.xz)
-- [7zip_22.01+really26.02+dfsg-0+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.dsc)
 - [7zip_22.01+really26.02+dfsg-0+deb12u1+core2.1.20261009183500_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2.1.20261009183500_amd64.deb)
-- [7zip_22.01+really26.02+dfsg.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg.orig.tar.xz)
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/release-notes.md)
 - [SHA256SUMS-core2-7zip.txt](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/SHA256SUMS-core2-7zip.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500)
 
 </details>
@@ -888,19 +812,15 @@ Version: `5.4.1-1+deb12u2+core2.1~20261009183205` · Published: 2026-10-09 18:33
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xz-utils`
 
-<details><summary>Files (10)</summary>
+<details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/BUILD-INFO.txt)
 - [liblzma-doc_5.4.1-1+deb12u2+core2.1.20261009183205_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/liblzma-doc_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_all.deb)
 - [liblzma5_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/release-notes.md)
 - [SHA256SUMS-core2-xz-utils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/SHA256SUMS-core2-xz-utils.txt)
-- [xz-utils_5.4.1-1+deb12u2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2.debian.tar.xz)
-- [xz-utils_5.4.1-1+deb12u2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2.dsc)
 - [xz-utils_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
-- [xz-utils_5.4.1.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xz-utils_5.4.1.orig.tar.xz)
 - [xzdec_5.4.1-1+deb12u2+core2.1.20261009183205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205/xzdec_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009183205_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2.1-20261009183205)
 
 </details>
@@ -910,12 +830,9 @@ Version: `3.3.10-1+core2.1~20261009181939` · Published: 2026-10-09 18:29:31 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fftw3`
 
-<details><summary>Files (13)</summary>
+<details><summary>Files (10)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/BUILD-INFO.txt)
-- [fftw3_3.3.10-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10-1.debian.tar.xz)
-- [fftw3_3.3.10-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10-1.dsc)
-- [fftw3_3.3.10.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/fftw3_3.3.10.orig.tar.gz)
 - [libfftw3-bin_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-bin_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
 - [libfftw3-doc_3.3.10-1+core2.1.20261009181939_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-doc_3.3.10-1%2Bcore2.1.20261009181939_all.deb)
 - [libfftw3-double3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
@@ -925,7 +842,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libfftw3-single3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-single3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/release-notes.md)
 - [SHA256SUMS-core2-fftw3.txt](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/SHA256SUMS-core2-fftw3.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939)
 
 </details>
@@ -935,7 +851,7 @@ Version: `3.11.2-6+deb12u9+core2.1~20261009153835` · Published: 2026-10-09 18:1
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python3.11`
 
-<details><summary>Files (18)</summary>
+<details><summary>Files (15)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/BUILD-INFO.txt)
 - [idle-python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/idle-python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
@@ -943,10 +859,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libpython3.11-minimal_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-minimal_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
 - [libpython3.11-stdlib_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-stdlib_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
 - [libpython3.11-testsuite_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-testsuite_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
-- [python3.11_3.11.2-6+deb12u9.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9.debian.tar.xz)
-- [python3.11_3.11.2-6+deb12u9.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9.dsc)
 - [python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
-- [python3.11_3.11.2.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2.orig.tar.gz)
 - [python3.11-doc_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-doc_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
 - [python3.11-examples_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-examples_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb)
 - [python3.11-full_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-full_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
@@ -955,7 +868,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [python3.11-venv_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-venv_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/release-notes.md)
 - [SHA256SUMS-core2-python3.11.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/SHA256SUMS-core2-python3.11.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835)
 
 </details>
@@ -965,7 +877,7 @@ Version: `22.3.6-1+deb12u2+core2.1~20261009173146` · Published: 2026-10-09 17:5
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`
 
-<details><summary>Files (22)</summary>
+<details><summary>Files (19)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/BUILD-INFO.txt)
 - [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
@@ -980,16 +892,12 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libosmesa6_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libosmesa6_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [libwayland-egl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libwayland-egl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [libxatracker2_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libxatracker2_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
-- [mesa_22.3.6-1+deb12u2.diff.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6-1%2Bdeb12u2.diff.gz)
-- [mesa_22.3.6-1+deb12u2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6-1%2Bdeb12u2.dsc)
-- [mesa_22.3.6.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa_22.3.6.orig.tar.gz)
 - [mesa-opencl-icd_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-opencl-icd_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [mesa-va-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-va-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [mesa-vdpau-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vdpau-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [mesa-vulkan-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vulkan-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/release-notes.md)
 - [SHA256SUMS-core2-mesa.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/SHA256SUMS-core2-mesa.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
 
 </details>
@@ -1006,7 +914,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [locate_4.9.0-4+core2.1.20261009164357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/locate_4.9.0-4%2Bcore2.1.20261009164357_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/release-notes.md)
 - [SHA256SUMS-core2-findutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/SHA256SUMS-core2-findutils.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-findutils-4.9.0-4-core2.1-20261009164357)
 
 </details>
@@ -1016,16 +923,12 @@ Version: `0.7.6-1+deb12u1+core2.1~20261009163957` · Published: 2026-10-09 16:42
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-sd`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/release-notes.md)
-- [rust-sd_0.7.6-1+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/rust-sd_0.7.6-1%2Bdeb12u1.debian.tar.xz)
-- [rust-sd_0.7.6-1+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/rust-sd_0.7.6-1%2Bdeb12u1.dsc)
-- [rust-sd_0.7.6.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/rust-sd_0.7.6.orig.tar.gz)
 - [sd_0.80.really.0.7.6-1+deb12u1+core2.1.20261009163957_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/sd_0.80.really.0.7.6-1%2Bdeb12u1%2Bcore2.1.20261009163957_amd64.deb)
 - [SHA256SUMS-core2-rust-sd.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/SHA256SUMS-core2-rust-sd.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957)
 
 </details>
@@ -1035,18 +938,13 @@ Version: `7.2-1+deb12u1+core2.1~20261009163909` · Published: 2026-10-09 16:40:5
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - nano`
 
-<details><summary>Files (9)</summary>
+<details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/BUILD-INFO.txt)
-- [nano_7.2-1+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1.debian.tar.xz)
-- [nano_7.2-1+deb12u1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1.dsc)
 - [nano_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb)
-- [nano_7.2.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2.orig.tar.xz)
-- [nano_7.2.orig.tar.xz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2.orig.tar.xz.asc)
 - [nano-tiny_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano-tiny_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/release-notes.md)
 - [SHA256SUMS-core2-nano.txt](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/SHA256SUMS-core2-nano.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-nano-7.2-1-deb12u1-core2.1-20261009163909)
 
 </details>
@@ -1066,7 +964,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/release-notes.md)
 - [rlfe_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/rlfe_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb)
 - [SHA256SUMS-core2-readline.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/SHA256SUMS-core2-readline.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-readline-8.2-1.3-core2.1-20261009161033)
 
 </details>
@@ -1082,7 +979,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [gawk_5.2.1-2+core2.1.20261009154053_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/gawk_5.2.1-2%2Bcore2.1.20261009154053_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/release-notes.md)
 - [SHA256SUMS-core2-gawk.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/SHA256SUMS-core2-gawk.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053)
 
 </details>
@@ -1099,7 +995,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [SHA256SUMS-core2-tar.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/SHA256SUMS-core2-tar.txt)
 - [tar_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb)
 - [tar-scripts_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar-scripts_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714)
 
 </details>
@@ -1119,7 +1014,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [pcre2-utils_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/pcre2-utils_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/release-notes.md)
 - [SHA256SUMS-core2-pcre2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/SHA256SUMS-core2-pcre2.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649)
 
 </details>
@@ -1129,22 +1023,18 @@ Version: `2:21.1.7-3+deb12u13+core2.1~20261009120435` · Published: 2026-10-09 1
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xorg-server`
 
-<details><summary>Files (13)</summary>
+<details><summary>Files (10)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/release-notes.md)
 - [SHA256SUMS-core2-xorg-server.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/SHA256SUMS-core2-xorg-server.txt)
 - [xnest_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xnest_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
-- [xorg-server_21.1.7-3+deb12u13.diff.gz](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xorg-server_21.1.7-3%2Bdeb12u13.diff.gz)
-- [xorg-server_21.1.7-3+deb12u13.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xorg-server_21.1.7-3%2Bdeb12u13.dsc)
-- [xorg-server_21.1.7.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xorg-server_21.1.7.orig.tar.gz)
 - [xorg-server-source_21.1.7-3+deb12u13+core2.1.20261009120435_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xorg-server-source_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb)
 - [xserver-common_21.1.7-3+deb12u13+core2.1.20261009120435_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-common_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb)
 - [xserver-xephyr_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xephyr_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
 - [xserver-xorg-core_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-core_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
 - [xserver-xorg-legacy_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-legacy_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
 - [xvfb_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xvfb_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435)
 
 </details>
@@ -1154,16 +1044,12 @@ Version: `3.2.2-2+core2.1~20261009120215` · Published: 2026-10-09 12:03:09 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - htop`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/BUILD-INFO.txt)
-- [htop_3.2.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2.debian.tar.xz)
-- [htop_3.2.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2.dsc)
 - [htop_3.2.2-2+core2.1.20261009120215_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2%2Bcore2.1.20261009120215_amd64.deb)
-- [htop_3.2.2.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2.orig.tar.gz)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/release-notes.md)
 - [SHA256SUMS-core2-htop.txt](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/SHA256SUMS-core2-htop.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-htop-3.2.2-2-core2.1-20261009120215)
 
 </details>
@@ -1173,16 +1059,12 @@ Version: `1.2.13-1+core2.1~20261009120005` · Published: 2026-10-09 12:01:31 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - btop`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
-- [btop_1.2.13-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1.debian.tar.xz)
-- [btop_1.2.13-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1.dsc)
 - [btop_1.2.13-1+core2.1.20261009120005_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1%2Bcore2.1.20261009120005_amd64.deb)
-- [btop_1.2.13.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13.orig.tar.gz)
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/release-notes.md)
 - [SHA256SUMS-core2-btop.txt](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/SHA256SUMS-core2-btop.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-btop-1.2.13-1-core2.1-20261009120005)
 
 </details>
@@ -1192,16 +1074,12 @@ Version: `13.0.0-4+core2.1~20261009115443` · Published: 2026-10-09 11:58:49 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-ripgrep`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/release-notes.md)
 - [ripgrep_13.0.0-4+core2.1.20261009115443_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/ripgrep_13.0.0-4%2Bcore2.1.20261009115443_amd64.deb)
-- [rust-ripgrep_13.0.0-4.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0-4.debian.tar.xz)
-- [rust-ripgrep_13.0.0-4.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0-4.dsc)
-- [rust-ripgrep_13.0.0.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/rust-ripgrep_13.0.0.orig.tar.gz)
 - [SHA256SUMS-core2-rust-ripgrep.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/SHA256SUMS-core2-rust-ripgrep.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443)
 
 </details>
@@ -1211,16 +1089,12 @@ Version: `8.6.0-3+core2.1~20261009114655` · Published: 2026-10-09 11:50:19 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-fd-find`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/BUILD-INFO.txt)
 - [fd-find_8.6.0-3+core2.1.20261009114655_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/fd-find_8.6.0-3%2Bcore2.1.20261009114655_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/release-notes.md)
-- [rust-fd-find_8.6.0-3.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/rust-fd-find_8.6.0-3.debian.tar.xz)
-- [rust-fd-find_8.6.0-3.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/rust-fd-find_8.6.0-3.dsc)
-- [rust-fd-find_8.6.0.orig.tar.gz](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/rust-fd-find_8.6.0.orig.tar.gz)
 - [SHA256SUMS-core2-rust-fd-find.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/SHA256SUMS-core2-rust-fd-find.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655)
 
 </details>
@@ -1230,17 +1104,12 @@ Version: `0.23.12-1+core2.1~20261009114100` · Published: 2026-10-09 11:45:54 UT
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpd`
 
-<details><summary>Files (8)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/BUILD-INFO.txt)
-- [mpd_0.23.12-1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12-1.debian.tar.xz)
-- [mpd_0.23.12-1.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12-1.dsc)
 - [mpd_0.23.12-1+core2.1.20261009114100_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12-1%2Bcore2.1.20261009114100_amd64.deb)
-- [mpd_0.23.12.orig.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12.orig.tar.xz)
-- [mpd_0.23.12.orig.tar.xz.asc](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12.orig.tar.xz.asc)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/release-notes.md)
 - [SHA256SUMS-core2-mpd.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/SHA256SUMS-core2-mpd.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mpd-0.23.12-1-core2.1-20261009114100)
 
 </details>
@@ -1250,16 +1119,12 @@ Version: `0.9.2-2+core2.1~20261009113534` · Published: 2026-10-09 11:39:35 UTC
 
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ncmpcpp`
 
-<details><summary>Files (7)</summary>
+<details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/BUILD-INFO.txt)
-- [ncmpcpp_0.9.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2.debian.tar.xz)
-- [ncmpcpp_0.9.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2.dsc)
 - [ncmpcpp_0.9.2-2+core2.1.20261009113534_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2%2Bcore2.1.20261009113534_amd64.deb)
-- [ncmpcpp_0.9.2.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2.orig.tar.bz2)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/release-notes.md)
 - [SHA256SUMS-core2-ncmpcpp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/SHA256SUMS-core2-ncmpcpp.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534)
 
 </details>
@@ -1276,7 +1141,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [dash_0.5.12-2+core2.1.20261009104558_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/dash_0.5.12-2%2Bcore2.1.20261009104558_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/release-notes.md)
 - [SHA256SUMS-core2-dash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/SHA256SUMS-core2-dash.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-dash-0.5.12-2-core2.1-20261009104558)
 
 </details>
@@ -1295,7 +1159,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/release-notes.md)
 - [SHA256SUMS-core2-bash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/SHA256SUMS-core2-bash.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-bash-5.2.15-2-core2.1-20261009104102)
 
 </details>
@@ -1311,7 +1174,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [coreutils_9.1-1+core2.1.20261009103756_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/coreutils_9.1-1%2Bcore2.1.20261009103756_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/release-notes.md)
 - [SHA256SUMS-core2-coreutils.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/SHA256SUMS-core2-coreutils.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-coreutils-9.1-1-core2.1-20261009103756)
 
 </details>
@@ -1328,7 +1190,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [neovim-runtime_0.7.2-7+core2.1.20261009082328_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim-runtime_0.7.2-7%2Bcore2.1.20261009082328_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/SHA256SUMS-core2-neovim.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009082328)
 
 </details>
@@ -1345,7 +1206,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [neovim-runtime_0.7.2-7+core2.1.20261009075932_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/neovim-runtime_0.7.2-7%2Bcore2.1.20261009075932_all.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/release-notes.md)
 - [SHA256SUMS-core2-neovim.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/SHA256SUMS-core2-neovim.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009075932)
 
 </details>
@@ -1364,7 +1224,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [zsh-common_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-common_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-doc_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-doc_5.9-4%2Bcore2.1.20261009061847_all.deb)
 - [zsh-static_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-static_5.9-4%2Bcore2.1.20261009061847_amd64.deb)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847)
 
 </details>
@@ -1383,7 +1242,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/BUILD-INFO.txt)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/release-notes.md)
 - [SHA256SUMS-core2-bash.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/SHA256SUMS-core2-bash.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-bash-5.2.15-2-core2.1-20261009061252)
 
 </details>
@@ -1401,7 +1259,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 - [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/release-notes.md)
 - [SHA256SUMS-core2-lame.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/SHA256SUMS-core2-lame.txt)
-- _Debian source archive assets are not attached to this release._
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
 
 </details>
