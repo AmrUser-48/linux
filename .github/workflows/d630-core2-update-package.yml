@@ -191,9 +191,9 @@ jobs:
           {
             echo "## Core 2 package update completed"
             echo
-            echo "- Source package: `$PACKAGE`"
-            echo "- Builder: `$KIND`"
-            echo "- Kept release: [`$latest_tag`](https://github.com/${GITHUB_REPOSITORY}/releases/tag/$latest_tag)"
+            echo "- Source package: $PACKAGE"
+            echo "- Builder: $KIND"
+            echo "- Kept release: [$latest_tag](https://github.com/${GITHUB_REPOSITORY}/releases/tag/$latest_tag)"
             echo "- Older releases removed: $deleted"
             echo "- Build run: $BUILD_RUN_URL"
           } >> "$GITHUB_STEP_SUMMARY"
