@@ -9,12 +9,22 @@ on:
         required: true
         type: string
         default: coreutils
+      force_rebuild:
+        description: Ignore existing Core 2 releases (used by the package updater)
+        required: false
+        type: boolean
+        default: false
   workflow_call:
     inputs:
       package:
         description: Debian Bookworm source package to rebuild for Intel Core 2
         required: true
         type: string
+      force_rebuild:
+        description: Ignore existing Core 2 releases (used by the package updater)
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,12 +43,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           PACKAGE: ${{ inputs.package }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild }}
         shell: bash
         run: |
           set -euo pipefail
           if [[ ! "$PACKAGE" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
             echo "::error::Invalid Debian source package name: $PACKAGE"
             exit 1
+          fi
+          if [[ "$FORCE_REBUILD" == "true" ]]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Forced update requested for $PACKAGE; existing releases will not block the build."
+            exit 0
           fi
           prefix="core2-system-${PACKAGE}-"
           releases="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"
