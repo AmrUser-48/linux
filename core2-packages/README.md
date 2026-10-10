@@ -2,6 +2,22 @@
 
 This directory documents the opt-in GitHub Actions workflows for rebuilding selected Debian Bookworm source packages with native Core 2 compiler targets.
 
+## Smart install/update
+
+Each package entry below includes a one-line install command. It downloads the latest release for that package, checks installed Debian package names, architectures and versions, then prepares an APT plan.
+
+The installer updates binary packages from that release **only when the same package and architecture is already installed**. It may add the primary runtime package if that package is not installed; it does not install extra `-dev`, `-doc`, `-source`, dbgsym, i386/x32 or other split packages merely because they are attached to the release. For example, selecting `glibc` updates installed `libc6` and other matching installed components, but will not add `libc6-dev`, `libc6-x32` or `libc6-i386` if they are absent.
+
+The script verifies SHA-256 hashes where the release publishes them, shows an APT simulation, and asks before installing. It refuses plans in which APT proposes removing packages. APT resolves dependencies using your configured Debian repositories. This installer is for Debian Bookworm amd64.
+
+Run the command shown under a package heading to install/update that package. To preview instead of installing, add `--dry-run` after the package key. To list package keys supported by the current releases:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - --list
+```
+
+Installer source: [`install.py`](install.py).
+
 ## Published package downloads (newest first)
 
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
@@ -9,6 +25,8 @@ The index below is refreshed automatically after each successful Core 2 package 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
 ### glibc
 Version: `2.36-9+deb12u14+core2.1~20261010052854` · Published: 2026-10-10 05:56:13 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glibc`
 
 <details><summary>Files (19)</summary>
 
@@ -39,6 +57,8 @@ Version: `2.36-9+deb12u14+core2.1~20261010052854` · Published: 2026-10-10 05:56
 ### thunar
 Version: `4.18.4-1+core2.1~20261010054751` · Published: 2026-10-10 05:50:00 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - thunar`
+
 <details><summary>Files (11)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/BUILD-INFO.txt)
@@ -60,6 +80,8 @@ Version: `4.18.4-1+core2.1~20261010054751` · Published: 2026-10-10 05:50:00 UTC
 ### tumbler
 Version: `4.18.0-1+core2.1~20261010054511` · Published: 2026-10-10 05:46:25 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tumbler`
+
 <details><summary>Files (11)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/BUILD-INFO.txt)
@@ -80,6 +102,8 @@ Version: `4.18.0-1+core2.1~20261010054511` · Published: 2026-10-10 05:46:25 UTC
 
 ### garcon
 Version: `4.18.0-1+core2.1~20261010054213` · Published: 2026-10-10 05:43:19 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - garcon`
 
 <details><summary>Files (14)</summary>
 
@@ -105,6 +129,8 @@ Version: `4.18.0-1+core2.1~20261010054213` · Published: 2026-10-10 05:43:19 UTC
 ### exo
 Version: `4.18.0-1+core2.1~20261010053936` · Published: 2026-10-10 05:40:53 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - exo`
+
 <details><summary>Files (10)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/BUILD-INFO.txt)
@@ -124,6 +150,8 @@ Version: `4.18.0-1+core2.1~20261010053936` · Published: 2026-10-10 05:40:53 UTC
 
 ### libxfce4ui
 Version: `4.18.2-2+core2.1~20261010053651` · Published: 2026-10-10 05:38:11 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4ui`
 
 <details><summary>Files (12)</summary>
 
@@ -147,6 +175,8 @@ Version: `4.18.2-2+core2.1~20261010053651` · Published: 2026-10-10 05:38:11 UTC
 ### xfconf
 Version: `4.18.0-2+core2.1~20261010053410` · Published: 2026-10-10 05:35:14 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xfconf`
+
 <details><summary>Files (10)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/BUILD-INFO.txt)
@@ -166,6 +196,8 @@ Version: `4.18.0-2+core2.1~20261010053410` · Published: 2026-10-10 05:35:14 UTC
 
 ### libxfce4util
 Version: `4.18.1-2+core2.1~20261010053208` · Published: 2026-10-10 05:33:07 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4util`
 
 <details><summary>Files (11)</summary>
 
@@ -187,6 +219,8 @@ Version: `4.18.1-2+core2.1~20261010053208` · Published: 2026-10-10 05:33:07 UTC
 
 ### glibc
 Version: `2.36-9+deb12u14+core2.1~20261010025123` · Published: 2026-10-10 03:17:08 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glibc`
 
 <details><summary>Files (17)</summary>
 
@@ -214,6 +248,8 @@ Version: `2.36-9+deb12u14+core2.1~20261010025123` · Published: 2026-10-10 03:17
 
 ### systemd
 Version: `252.39-1~deb12u2+core2.1~20261010025144` · Published: 2026-10-10 02:59:56 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - systemd`
 
 <details><summary>Files (27)</summary>
 
@@ -251,6 +287,8 @@ Version: `252.39-1~deb12u2+core2.1~20261010025144` · Published: 2026-10-10 02:5
 
 ### binutils
 Version: `2.40-2+core2.1~20261009173258` · Published: 2026-10-09 20:39:48 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - binutils`
 
 <details><summary>Files (36)</summary>
 
@@ -298,6 +336,8 @@ Version: `2.40-2+core2.1~20261009173258` · Published: 2026-10-09 20:39:48 UTC
 ### libtirpc
 Version: `1.3.3+ds-1+core2.1~20261009195337` · Published: 2026-10-09 19:54:21 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libtirpc`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/BUILD-INFO.txt)
@@ -312,6 +352,8 @@ Version: `1.3.3+ds-1+core2.1~20261009195337` · Published: 2026-10-09 19:54:21 U
 
 ### expat
 Version: `2.5.0-1+deb12u4+core2.1~20261009195158` · Published: 2026-10-09 19:52:39 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - expat`
 
 <details><summary>Files (5)</summary>
 
@@ -328,6 +370,8 @@ Version: `2.5.0-1+deb12u4+core2.1~20261009195158` · Published: 2026-10-09 19:52
 ### libffi
 Version: `3.4.4-1+core2.1~20261009194707` · Published: 2026-10-09 19:51:15 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libffi`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/BUILD-INFO.txt)
@@ -341,6 +385,8 @@ Version: `3.4.4-1+core2.1~20261009194707` · Published: 2026-10-09 19:51:15 UTC
 
 ### gmp
 Version: `2:6.2.1+dfsg1-1.1+core2.1~20261009194412` · Published: 2026-10-09 19:46:09 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gmp`
 
 <details><summary>Files (6)</summary>
 
@@ -358,6 +404,8 @@ Version: `2:6.2.1+dfsg1-1.1+core2.1~20261009194412` · Published: 2026-10-09 19:
 ### mpfr4
 Version: `4.2.0-1+core2.1~20261009194039` · Published: 2026-10-09 19:43:32 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpfr4`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/BUILD-INFO.txt)
@@ -372,6 +420,8 @@ Version: `4.2.0-1+core2.1~20261009194039` · Published: 2026-10-09 19:43:32 UTC
 
 ### curl
 Version: `7.88.1-10+deb12u15+core2.1~20261009190528` · Published: 2026-10-09 19:41:11 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - curl`
 
 <details><summary>Files (12)</summary>
 
@@ -395,6 +445,8 @@ Version: `7.88.1-10+deb12u15+core2.1~20261009190528` · Published: 2026-10-09 19
 ### xz-utils
 Version: `5.4.1-1+deb12u2+core2.1~20261009193709` · Published: 2026-10-09 19:38:34 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xz-utils`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/BUILD-INFO.txt)
@@ -412,6 +464,8 @@ Version: `5.4.1-1+deb12u2+core2.1~20261009193709` · Published: 2026-10-09 19:38
 ### kmod
 Version: `30+20221128-1+core2.1~20261009193535` · Published: 2026-10-09 19:36:20 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - kmod`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/BUILD-INFO.txt)
@@ -427,6 +481,8 @@ Version: `30+20221128-1+core2.1~20261009193535` · Published: 2026-10-09 19:36:2
 ### iproute2
 Version: `6.1.0-3+core2.1~20261009193351` · Published: 2026-10-09 19:34:38 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - iproute2`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/BUILD-INFO.txt)
@@ -441,6 +497,8 @@ Version: `6.1.0-3+core2.1~20261009193351` · Published: 2026-10-09 19:34:38 UTC
 
 ### pam
 Version: `1.5.2-6+deb12u2+core2.1~20261009193111` · Published: 2026-10-09 19:32:56 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pam`
 
 <details><summary>Files (8)</summary>
 
@@ -460,6 +518,8 @@ Version: `1.5.2-6+deb12u2+core2.1~20261009193111` · Published: 2026-10-09 19:32
 ### shadow
 Version: `1:4.13+dfsg1-1+deb12u2+core2.1~20261009192822` · Published: 2026-10-09 19:30:23 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - shadow`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/BUILD-INFO.txt)
@@ -477,6 +537,8 @@ Version: `1:4.13+dfsg1-1+deb12u2+core2.1~20261009192822` · Published: 2026-10-0
 ### psmisc
 Version: `23.6-1+core2.1~20261009192718` · Published: 2026-10-09 19:27:48 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - psmisc`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-psmisc-23.6-1-core2.1-20261009192718/BUILD-INFO.txt)
@@ -490,6 +552,8 @@ Version: `23.6-1+core2.1~20261009192718` · Published: 2026-10-09 19:27:48 UTC
 
 ### e2fsprogs
 Version: `1.47.0-2+core2.1~20261009192320` · Published: 2026-10-09 19:26:35 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - e2fsprogs`
 
 <details><summary>Files (11)</summary>
 
@@ -512,6 +576,8 @@ Version: `1.47.0-2+core2.1~20261009192320` · Published: 2026-10-09 19:26:35 UTC
 ### bzip2
 Version: `1.0.8-5+core2.1~20261009192040` · Published: 2026-10-09 19:21:05 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bzip2`
+
 <details><summary>Files (6)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-bzip2-1.0.8-5-core2.1-20261009192040/BUILD-INFO.txt)
@@ -528,6 +594,8 @@ Version: `1.0.8-5+core2.1~20261009192040` · Published: 2026-10-09 19:21:05 UTC
 ### gzip
 Version: `1.12-1+core2.1~20261009191817` · Published: 2026-10-09 19:19:50 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gzip`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/BUILD-INFO.txt)
@@ -542,6 +610,8 @@ Version: `1.12-1+core2.1~20261009191817` · Published: 2026-10-09 19:19:50 UTC
 
 ### diffutils
 Version: `1:3.8-4+core2.1~20261009191615` · Published: 2026-10-09 19:17:10 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - diffutils`
 
 <details><summary>Files (5)</summary>
 
@@ -558,6 +628,8 @@ Version: `1:3.8-4+core2.1~20261009191615` · Published: 2026-10-09 19:17:10 UTC
 ### sed
 Version: `4.9-1+deb12u1+core2.1~20261009191427` · Published: 2026-10-09 19:15:32 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sed`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427/BUILD-INFO.txt)
@@ -572,6 +644,8 @@ Version: `4.9-1+deb12u1+core2.1~20261009191427` · Published: 2026-10-09 19:15:3
 ### grep
 Version: `3.8-5+core2.1~20261009191150` · Published: 2026-10-09 19:13:45 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - grep`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-grep-3.8-5-core2.1-20261009191150/BUILD-INFO.txt)
@@ -585,6 +659,8 @@ Version: `3.8-5+core2.1~20261009191150` · Published: 2026-10-09 19:13:45 UTC
 
 ### attr
 Version: `1:2.5.1-4+core2.1~20261009191027` · Published: 2026-10-09 19:10:56 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - attr`
 
 <details><summary>Files (5)</summary>
 
@@ -601,6 +677,8 @@ Version: `1:2.5.1-4+core2.1~20261009191027` · Published: 2026-10-09 19:10:56 UT
 ### acl
 Version: `2.3.1-3+core2.1~20261009190907` · Published: 2026-10-09 19:09:41 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - acl`
+
 <details><summary>Files (5)</summary>
 
 - [acl_2.3.1-3+core2.1.20261009190907_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/acl_2.3.1-3%2Bcore2.1.20261009190907_amd64.deb)
@@ -615,6 +693,8 @@ Version: `2.3.1-3+core2.1~20261009190907` · Published: 2026-10-09 19:09:41 UTC
 
 ### libselinux
 Version: `3.4-1+core2.1~20261009190433` · Published: 2026-10-09 19:05:10 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libselinux`
 
 <details><summary>Files (7)</summary>
 
@@ -632,6 +712,8 @@ Version: `3.4-1+core2.1~20261009190433` · Published: 2026-10-09 19:05:10 UTC
 
 ### mpv
 Version: `0.35.1-4+core2.1~20261009190224` · Published: 2026-10-09 19:04:20 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpv`
 
 <details><summary>Files (8)</summary>
 
@@ -651,6 +733,8 @@ Version: `0.35.1-4+core2.1~20261009190224` · Published: 2026-10-09 19:04:20 UTC
 ### libcap2
 Version: `1:2.66-4+deb12u3+core2.1~20261009190327` · Published: 2026-10-09 19:03:51 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libcap2`
+
 <details><summary>Files (6)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/BUILD-INFO.txt)
@@ -666,6 +750,8 @@ Version: `1:2.66-4+deb12u3+core2.1~20261009190327` · Published: 2026-10-09 19:0
 
 ### ncurses
 Version: `6.4-4+core2.1~20261009185822` · Published: 2026-10-09 19:02:36 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ncurses`
 
 <details><summary>Files (17)</summary>
 
@@ -693,6 +779,8 @@ Version: `6.4-4+core2.1~20261009185822` · Published: 2026-10-09 19:02:36 UTC
 
 ### ffmpeg
 Version: `7:5.1.9-0+deb12u1+core2.1~20261009183944` · Published: 2026-10-09 19:00:59 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ffmpeg`
 
 <details><summary>Files (23)</summary>
 
@@ -727,6 +815,8 @@ Version: `7:5.1.9-0+deb12u1+core2.1~20261009183944` · Published: 2026-10-09 19:
 ### libxcrypt
 Version: `1:4.4.33-2+core2.1~20261009185630` · Published: 2026-10-09 18:57:31 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxcrypt`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/BUILD-INFO.txt)
@@ -742,6 +832,8 @@ Version: `1:4.4.33-2+core2.1~20261009185630` · Published: 2026-10-09 18:57:31 U
 ### zlib
 Version: `1:1.2.13.dfsg-1+core2.1~20261009185513` · Published: 2026-10-09 18:55:48 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-zlib-1-1.2.13.dfsg-1-core2.1-20261009185513/BUILD-INFO.txt)
@@ -756,6 +848,8 @@ Version: `1:1.2.13.dfsg-1+core2.1~20261009185513` · Published: 2026-10-09 18:55
 
 ### openssl
 Version: `3.0.22-1~deb12u1+core2.1~20261009184347` · Published: 2026-10-09 18:54:26 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openssl`
 
 <details><summary>Files (6)</summary>
 
@@ -773,6 +867,8 @@ Version: `3.0.22-1~deb12u1+core2.1~20261009184347` · Published: 2026-10-09 18:5
 ### 7zip
 Version: `22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500` · Published: 2026-10-09 18:37:34 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - 7zip`
+
 <details><summary>Files (7)</summary>
 
 - [7zip_22.01+really26.02+dfsg-0+deb12u1.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1.debian.tar.xz)
@@ -789,6 +885,8 @@ Version: `22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500` · Published:
 
 ### xz-utils
 Version: `5.4.1-1+deb12u2+core2.1~20261009183205` · Published: 2026-10-09 18:33:57 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xz-utils`
 
 <details><summary>Files (10)</summary>
 
@@ -809,6 +907,8 @@ Version: `5.4.1-1+deb12u2+core2.1~20261009183205` · Published: 2026-10-09 18:33
 
 ### fftw3
 Version: `3.3.10-1+core2.1~20261009181939` · Published: 2026-10-09 18:29:31 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fftw3`
 
 <details><summary>Files (13)</summary>
 
@@ -832,6 +932,8 @@ Version: `3.3.10-1+core2.1~20261009181939` · Published: 2026-10-09 18:29:31 UTC
 
 ### python3.11
 Version: `3.11.2-6+deb12u9+core2.1~20261009153835` · Published: 2026-10-09 18:18:32 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python3.11`
 
 <details><summary>Files (18)</summary>
 
@@ -860,6 +962,8 @@ Version: `3.11.2-6+deb12u9+core2.1~20261009153835` · Published: 2026-10-09 18:1
 
 ### mesa
 Version: `22.3.6-1+deb12u2+core2.1~20261009173146` · Published: 2026-10-09 17:53:45 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`
 
 <details><summary>Files (22)</summary>
 
@@ -893,6 +997,8 @@ Version: `22.3.6-1+deb12u2+core2.1~20261009173146` · Published: 2026-10-09 17:5
 ### findutils
 Version: `4.9.0-4+core2.1~20261009164357` · Published: 2026-10-09 16:45:15 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - findutils`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/BUILD-INFO.txt)
@@ -907,6 +1013,8 @@ Version: `4.9.0-4+core2.1~20261009164357` · Published: 2026-10-09 16:45:15 UTC
 
 ### rust-sd
 Version: `0.7.6-1+deb12u1+core2.1~20261009163957` · Published: 2026-10-09 16:42:51 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-sd`
 
 <details><summary>Files (7)</summary>
 
@@ -924,6 +1032,8 @@ Version: `0.7.6-1+deb12u1+core2.1~20261009163957` · Published: 2026-10-09 16:42
 
 ### nano
 Version: `7.2-1+deb12u1+core2.1~20261009163909` · Published: 2026-10-09 16:40:55 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - nano`
 
 <details><summary>Files (9)</summary>
 
@@ -944,6 +1054,8 @@ Version: `7.2-1+deb12u1+core2.1~20261009163909` · Published: 2026-10-09 16:40:5
 ### readline
 Version: `8.2-1.3+core2.1~20261009161033` · Published: 2026-10-09 16:11:55 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - readline`
+
 <details><summary>Files (8)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/BUILD-INFO.txt)
@@ -962,6 +1074,8 @@ Version: `8.2-1.3+core2.1~20261009161033` · Published: 2026-10-09 16:11:55 UTC
 ### gawk
 Version: `1:5.2.1-2+core2.1~20261009154053` · Published: 2026-10-09 15:42:14 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gawk`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/BUILD-INFO.txt)
@@ -975,6 +1089,8 @@ Version: `1:5.2.1-2+core2.1~20261009154053` · Published: 2026-10-09 15:42:14 UT
 
 ### tar
 Version: `1.34+dfsg-1.2+deb12u1+core2.1~20261009152714` · Published: 2026-10-09 15:31:27 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tar`
 
 <details><summary>Files (5)</summary>
 
@@ -990,6 +1106,8 @@ Version: `1.34+dfsg-1.2+deb12u1+core2.1~20261009152714` · Published: 2026-10-09
 
 ### pcre2
 Version: `10.42-1+deb12u2+core2.1~20261009152649` · Published: 2026-10-09 15:28:14 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pcre2`
 
 <details><summary>Files (8)</summary>
 
@@ -1008,6 +1126,8 @@ Version: `10.42-1+deb12u2+core2.1~20261009152649` · Published: 2026-10-09 15:28
 
 ### xorg-server
 Version: `2:21.1.7-3+deb12u13+core2.1~20261009120435` · Published: 2026-10-09 12:08:59 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xorg-server`
 
 <details><summary>Files (13)</summary>
 
@@ -1032,6 +1152,8 @@ Version: `2:21.1.7-3+deb12u13+core2.1~20261009120435` · Published: 2026-10-09 1
 ### htop
 Version: `3.2.2-2+core2.1~20261009120215` · Published: 2026-10-09 12:03:09 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - htop`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/BUILD-INFO.txt)
@@ -1048,6 +1170,8 @@ Version: `3.2.2-2+core2.1~20261009120215` · Published: 2026-10-09 12:03:09 UTC
 
 ### btop
 Version: `1.2.13-1+core2.1~20261009120005` · Published: 2026-10-09 12:01:31 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - btop`
 
 <details><summary>Files (7)</summary>
 
@@ -1066,6 +1190,8 @@ Version: `1.2.13-1+core2.1~20261009120005` · Published: 2026-10-09 12:01:31 UTC
 ### rust-ripgrep
 Version: `13.0.0-4+core2.1~20261009115443` · Published: 2026-10-09 11:58:49 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-ripgrep`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/BUILD-INFO.txt)
@@ -1083,6 +1209,8 @@ Version: `13.0.0-4+core2.1~20261009115443` · Published: 2026-10-09 11:58:49 UTC
 ### rust-fd-find
 Version: `8.6.0-3+core2.1~20261009114655` · Published: 2026-10-09 11:50:19 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-fd-find`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/BUILD-INFO.txt)
@@ -1099,6 +1227,8 @@ Version: `8.6.0-3+core2.1~20261009114655` · Published: 2026-10-09 11:50:19 UTC
 
 ### mpd
 Version: `0.23.12-1+core2.1~20261009114100` · Published: 2026-10-09 11:45:54 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpd`
 
 <details><summary>Files (8)</summary>
 
@@ -1118,6 +1248,8 @@ Version: `0.23.12-1+core2.1~20261009114100` · Published: 2026-10-09 11:45:54 UT
 ### ncmpcpp
 Version: `0.9.2-2+core2.1~20261009113534` · Published: 2026-10-09 11:39:35 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ncmpcpp`
+
 <details><summary>Files (7)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/BUILD-INFO.txt)
@@ -1135,6 +1267,8 @@ Version: `0.9.2-2+core2.1~20261009113534` · Published: 2026-10-09 11:39:35 UTC
 ### dash
 Version: `0.5.12-2+core2.1~20261009104558` · Published: 2026-10-09 10:46:26 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dash`
+
 <details><summary>Files (5)</summary>
 
 - [ash_0.5.12-2+core2.1.20261009104558_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/ash_0.5.12-2%2Bcore2.1.20261009104558_all.deb)
@@ -1149,6 +1283,8 @@ Version: `0.5.12-2+core2.1~20261009104558` · Published: 2026-10-09 10:46:26 UTC
 
 ### bash
 Version: `5.2.15-2+core2.1~20261009104102` · Published: 2026-10-09 10:45:21 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bash`
 
 <details><summary>Files (7)</summary>
 
@@ -1167,6 +1303,8 @@ Version: `5.2.15-2+core2.1~20261009104102` · Published: 2026-10-09 10:45:21 UTC
 ### coreutils
 Version: `9.1-1+core2.1~20261009103756` · Published: 2026-10-09 10:40:01 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - coreutils`
+
 <details><summary>Files (4)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/BUILD-INFO.txt)
@@ -1180,6 +1318,8 @@ Version: `9.1-1+core2.1~20261009103756` · Published: 2026-10-09 10:40:01 UTC
 
 ### neovim
 Version: `0.7.2-7+core2.1~20261009082328` · Published: 2026-10-09 08:30:27 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - neovim`
 
 <details><summary>Files (5)</summary>
 
@@ -1196,6 +1336,8 @@ Version: `0.7.2-7+core2.1~20261009082328` · Published: 2026-10-09 08:30:27 UTC
 ### neovim
 Version: `0.7.2-7+core2.1~20261009075932` · Published: 2026-10-09 08:09:16 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - neovim`
+
 <details><summary>Files (5)</summary>
 
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009075932/BUILD-INFO.txt)
@@ -1210,6 +1352,8 @@ Version: `0.7.2-7+core2.1~20261009075932` · Published: 2026-10-09 08:09:16 UTC
 
 ### zsh
 Version: `5.9-4+core2.1~20261009061847` · Published: 2026-10-09 06:24:36 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zsh`
 
 <details><summary>Files (7)</summary>
 
@@ -1228,6 +1372,8 @@ Version: `5.9-4+core2.1~20261009061847` · Published: 2026-10-09 06:24:36 UTC
 ### bash
 Version: `5.2.15-2+core2.1~20261009061252` · Published: 2026-10-09 06:17:34 UTC
 
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bash`
+
 <details><summary>Files (7)</summary>
 
 - [bash_5.2.15-2+core2.1.20261009061252_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bash-5.2.15-2-core2.1-20261009061252/bash_5.2.15-2%2Bcore2.1.20261009061252_amd64.deb)
@@ -1244,6 +1390,8 @@ Version: `5.2.15-2+core2.1~20261009061252` · Published: 2026-10-09 06:17:34 UTC
 
 ### lame
 Version: `3.100-6+core2.1~20261009061017` · Published: 2026-10-09 06:11:33 UTC
+
+Install/update: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lame`
 
 <details><summary>Files (6)</summary>
 
