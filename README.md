@@ -14,4 +14,4 @@ The full date-sorted index is maintained in [`core2-packages/README.md`](core2-p
 - [Run the Core 2 system package train](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-packages-series.yml)
 - [Refresh the package release index](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-release-index.yml)
 
-The [detailed package documentation and full release index](core2-packages/README.md) includes build policy, package selection, and safety notes.
+The [detailed package documentation and full release index](core2-packages/README.md) includes per-package smart install commands that select only relevant binary packages already installed (plus a primary runtime package when missing), as well as build policy and safety notes.
