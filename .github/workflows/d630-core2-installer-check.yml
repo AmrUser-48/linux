@@ -60,7 +60,7 @@ jobs:
           import textwrap
 
           workflow = pathlib.Path(".github/workflows/d630-core2-update-release-index.yml").read_text(encoding="utf-8")
-          match = re.search(r"<<'PY'\\n(.*?)\\n\\s+PY(?:\\n|$)", workflow, re.S)
+          match = re.search(r"<<'PY'\n(.*?)\n\s+PY(?:\n|$)", workflow, re.S)
           assert match, "could not extract index-generator Python from workflow"
           source = textwrap.dedent(match.group(1))
           compile(source, "core2-index-generator.py", "exec")
@@ -92,8 +92,8 @@ jobs:
               script.write_text(source, encoding="utf-8")
               readme = temp / "README.md"
               readme.write_text(
-                  "header\\n<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->\\n"
-                  "<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->\\nfooter\\n",
+                  "header\n<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->\n"
+                  "<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->\nfooter\n",
                   encoding="utf-8",
               )
               releases = temp / "releases.json"
