@@ -126,6 +126,7 @@ jobs:
               for forbidden in ("python3.11-dbg_", "python3.11-dbgsym_", ".orig.tar.gz", ".dsc"):
                   assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
               assert "<details><summary>Files (4)</summary>" in result
+              assert "python3 - python3.11 --kind optimized" in result
           print("Release index generator filtering checks passed.")
           PY
 
@@ -170,6 +171,9 @@ jobs:
           assert installer["canonicalize_asset_version"](fields["version"]) == kmod_asset["version"], fields
 
           assert installer["PRIMARY"]["glibc"] == ["libc6"]
+          assert installer["release_kind_from_tag"]("core2-kmod-30.1") == "optimized"
+          assert installer["release_kind_from_tag"]("core2-system-kmod-30.1") == "system"
+          assert installer["release_kind_from_tag"]("unrelated-tag") is None
           assert installer["is_debug_package"]("libc6-dbg")
           assert installer["is_debug_package"]("libc6-dbgsym")
           assert not installer["is_debug_package"]("libc6-dev")
