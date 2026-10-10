@@ -7,6 +7,21 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding sele
 The index below is refreshed automatically after each successful Core 2 package release. It links directly to every release asset, including installable `.deb` files, build metadata, SHA-256 checksums, and Debian source-package files (`.dsc`, `.orig.tar.*`, `.debian.tar.*` or legacy `.diff.gz`) where present. Releases published before the source-archive upload step was enabled may not have all source files attached.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### 2026-10-10 05:38:11 UTC — Core 2 optimized libxfce4ui 4.18.2-2+core2.1~20261010053651
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/BUILD-INFO.txt)
+- [gir1.2-libxfce4ui-2.0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/gir1.2-libxfce4ui-2.0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
+- [libxfce4ui-2-0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
+- [libxfce4ui-2-dev_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-dev_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
+- [libxfce4ui-common_4.18.2-2+core2.1.20261010053651_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-common_4.18.2-2%2Bcore2.1.20261010053651_all.deb)
+- [libxfce4ui-glade_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-glade_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
+- [libxfce4ui-utils_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-utils_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
+- [libxfce4ui_4.18.2-2.debian.tar.xz](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2-2.debian.tar.xz)
+- [libxfce4ui_4.18.2-2.dsc](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2-2.dsc)
+- [libxfce4ui_4.18.2.orig.tar.bz2](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui_4.18.2.orig.tar.bz2)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/release-notes.md)
+- [SHA256SUMS-core2-libxfce4ui.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/SHA256SUMS-core2-libxfce4ui.txt)
+- [Release notes and full asset list](https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651)
+
 ### 2026-10-10 05:35:14 UTC — Core 2 optimized xfconf 4.18.0-2+core2.1~20261010053410
 - [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/BUILD-INFO.txt)
 - [gir1.2-xfconf-0_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/gir1.2-xfconf-0_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
