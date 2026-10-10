@@ -1,0 +1,237 @@
+name: Update Core 2 package
+run-name: "Update Core 2 ${{ inputs.kind }} package: ${{ inputs.package }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: Which package builder to use
+        required: true
+        type: choice
+        default: optimized
+        options:
+          - optimized
+          - system
+      package:
+        description: Any Debian Bookworm source package name
+        required: true
+        type: string
+        default: kmod
+
+permissions:
+  actions: write
+  contents: write
+
+# Serialize updates so two updater runs cannot delete each other's fresh releases.
+concurrency:
+  group: core2-package-updater
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Build latest version and replace older package releases
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PACKAGE: ${{ inputs.package }}
+      KIND: ${{ inputs.kind }}
+    steps:
+      - name: Validate package name and choose builder
+        id: config
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$PACKAGE" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
+            echo "::error::Invalid Debian source package name: $PACKAGE"
+            exit 1
+          fi
+
+          case "$KIND" in
+            optimized)
+              workflow="d630-core2-package.yml"
+              label="Core2 package: $PACKAGE"
+              prefix="core2-$PACKAGE-"
+              ;;
+            system)
+              workflow="d630-core2-system-package.yml"
+              label="Core2 system package: $PACKAGE"
+              prefix="core2-system-$PACKAGE-"
+              ;;
+            *)
+              echo "::error::Unknown package builder: $KIND"
+              exit 1
+              ;;
+          esac
+
+          {
+            echo "workflow=$workflow"
+            echo "label=$label"
+            echo "prefix=$prefix"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch forced build of current Debian Bookworm package
+        id: dispatch
+        shell: bash
+        env:
+          BUILD_WORKFLOW: ${{ steps.config.outputs.workflow }}
+          RUN_LABEL: ${{ steps.config.outputs.label }}
+        run: |
+          set -euo pipefail
+
+          started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          before_json="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/${BUILD_WORKFLOW}/runs?branch=master&event=workflow_dispatch&per_page=100")"
+          before_ids="$(jq -r '[.workflow_runs[].id | tostring] | join(",")' <<<"$before_json")"
+
+          echo "Dispatching ${BUILD_WORKFLOW} for source package ${PACKAGE}; force_rebuild=true."
+          if ! gh workflow run "$BUILD_WORKFLOW" --repo "$GITHUB_REPOSITORY" --ref master \
+              --field "package=${PACKAGE}" --field "force_rebuild=true"; then
+            echo "::error::Could not dispatch package build."
+            exit 1
+          fi
+
+          run_id=""
+          for attempt in $(seq 1 120); do
+            runs_json="$(gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/${BUILD_WORKFLOW}/runs?branch=master&event=workflow_dispatch&per_page=100")" || {
+                sleep 5
+                continue
+              }
+            run_id="$(jq -r --arg label "$RUN_LABEL" --arg started "$started" --arg before "$before_ids" '
+              [.workflow_runs[]
+               | select(.display_title == $label and .created_at >= $started)
+               | select(. as $run | (($before | split(",")) | index($run.id | tostring)) == null)]
+              | sort_by(.created_at)
+              | last
+              | .id // empty
+            ' <<<"$runs_json")"
+            [[ -n "$run_id" ]] && break
+            sleep 5
+          done
+
+          if [[ -z "$run_id" ]]; then
+            echo "::error::Could not identify the dispatched package build. No existing releases were changed."
+            exit 1
+          fi
+
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${run_id}"
+          echo "build_run_id=$run_id" >> "$GITHUB_OUTPUT"
+          echo "build_run_url=$run_url" >> "$GITHUB_OUTPUT"
+          echo "Build run: $run_url"
+
+      - name: Wait for build and publication
+        env:
+          BUILD_RUN_ID: ${{ steps.dispatch.outputs.build_run_id }}
+          BUILD_RUN_URL: ${{ steps.dispatch.outputs.build_run_url }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! gh run watch "$BUILD_RUN_ID" --repo "$GITHUB_REPOSITORY" --exit-status; then
+            echo "::error::Package build/publication failed. Existing releases were left untouched."
+            echo "Inspect: $BUILD_RUN_URL"
+            exit 1
+          fi
+
+      - name: Keep newest release and remove older releases for this package
+        id: replace
+        shell: bash
+        env:
+          PREFIX: ${{ steps.config.outputs.prefix }}
+          BUILD_RUN_URL: ${{ steps.dispatch.outputs.build_run_url }}
+        run: |
+          set -euo pipefail
+          releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"
+
+          # The build run must have published a new release after this update
+          # started. Pick the newest matching release; do not delete anything
+          # if we cannot prove a fresh release was published.
+          latest="$(jq -c --arg prefix "$PREFIX" --arg started "${{ steps.dispatch.outputs.started }}" '
+            [.[] | select((.tag_name // "") | startswith($prefix))]
+            | sort_by(.created_at)
+            | last // empty
+          ' <<<"$releases_json")"
+
+          # Use the dispatched run start marker captured below when available.
+          # If the newest release predates this update, fail closed.
+          latest_tag="$(jq -r '.tag_name // empty' <<<"${latest:-{}}")"
+          latest_created="$(jq -r '.created_at // empty' <<<"${latest:-{}}")"
+          if [[ -z "$latest_tag" || -z "$latest_created" ]]; then
+            echo "::error::No release found for prefix $PREFIX. Existing releases were left untouched."
+            exit 1
+          fi
+          if [[ "$latest_created" < "${{ steps.dispatch.outputs.started }}" ]]; then
+            echo "::error::No new package release was published after the update started. Existing releases were left untouched."
+            exit 1
+          fi
+
+          echo "Keeping latest release: $latest_tag"
+          echo "Latest release created: $latest_created"
+          old_tags="$(jq -r --arg prefix "$PREFIX" --arg keep "$latest_tag" --arg created "$latest_created" '
+            .[]
+            | select((.tag_name // "") | startswith($prefix))
+            | select(.tag_name != $keep)
+            | select((.created_at // "") < $created)
+            | .tag_name
+          ' <<<"$releases_json")"
+
+          deleted=0
+          while IFS= read -r old_tag; do
+            [[ -n "$old_tag" ]] || continue
+            echo "Removing superseded release: $old_tag"
+            gh release delete "$old_tag" --repo "$GITHUB_REPOSITORY" --cleanup-tag --yes
+            deleted=$((deleted + 1))
+          done <<<"$old_tags"
+
+          {
+            echo "latest_tag=$latest_tag"
+            echo "latest_created=$latest_created"
+            echo "deleted_count=$deleted"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Core 2 package update completed"
+            echo
+            echo "- Source package: `$PACKAGE`"
+            echo "- Builder: `$KIND`"
+            echo "- Kept release: [`$latest_tag`](https://github.com/${GITHUB_REPOSITORY}/releases/tag/$latest_tag)"
+            echo "- Older releases removed: $deleted"
+            echo "- Build run: $BUILD_RUN_URL"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Refresh package index after release replacement
+        shell: bash
+        env:
+          LATEST_TAG: ${{ steps.replace.outputs.latest_tag }}
+        run: |
+          set -euo pipefail
+          started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          before_json="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-update-release-index.yml/runs?branch=master&event=workflow_dispatch&per_page=100")"
+          before_ids="$(jq -r '[.workflow_runs[].id | tostring] | join(",")' <<<"$before_json")"
+
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
+
+          refresh_id=""
+          for attempt in $(seq 1 60); do
+            runs_json="$(gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/d630-core2-update-release-index.yml/runs?branch=master&event=workflow_dispatch&per_page=100")" || {
+                sleep 3
+                continue
+              }
+            refresh_id="$(jq -r --arg started "$started" --arg before "$before_ids" '
+              [.workflow_runs[]
+               | select(.display_title == "Refresh Core 2 package links" and .created_at >= $started)
+               | select(. as $run | (($before | split(",")) | index($run.id | tostring)) == null)]
+              | sort_by(.created_at)
+              | last
+              | .id // empty
+            ' <<<"$runs_json")"
+            [[ -n "$refresh_id" ]] && break
+            sleep 3
+          done
+
+          if [[ -n "$refresh_id" ]]; then
+            gh run watch "$refresh_id" --repo "$GITHUB_REPOSITORY" --exit-status
+            echo "Package index refreshed: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${refresh_id}"
+          else
+            echo "::warning::Package was updated, but the index workflow run could not be identified. Manually run d630-core2-update-release-index.yml."
+          fi
