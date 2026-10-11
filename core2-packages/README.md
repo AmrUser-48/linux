@@ -34,6 +34,57 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### tigervnc (optimized)
+Version: `1.12.0+dfsg-8+core2.1~20261011153224` · Published: 2026-10-11 15:34:30 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tigervnc`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/release-notes.md)
+- [SHA256SUMS-core2-tigervnc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/SHA256SUMS-core2-tigervnc.txt)
+- [tigervnc-common_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-common_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [tigervnc-scraping-server_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-scraping-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [tigervnc-standalone-server_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-standalone-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [tigervnc-tools_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-tools_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [tigervnc-viewer_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-viewer_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [tigervnc-xorg-extension_1.12.0+dfsg-8+core2.1.20261011153224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224/tigervnc-xorg-extension_1.12.0%2Bdfsg-8%2Bcore2.1.20261011153224_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011153224)
+
+</details>
+
+### pixman (optimized)
+Version: `0.42.2-1+core2.1~20261011152845` · Published: 2026-10-11 15:31:38 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pixman`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011152845/BUILD-INFO.txt)
+- [libpixman-1-0_0.42.2-1+core2.1.20261011152845_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011152845/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011152845_amd64.deb)
+- [libpixman-1-dev_0.42.2-1+core2.1.20261011152845_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011152845/libpixman-1-dev_0.42.2-1%2Bcore2.1.20261011152845_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011152845/release-notes.md)
+- [SHA256SUMS-core2-pixman.txt](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011152845/SHA256SUMS-core2-pixman.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011152845)
+
+</details>
+
+### zlib (optimized)
+Version: `1:1.2.13.dfsg-1+core2.1~20261011152653` · Published: 2026-10-11 15:27:51 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/BUILD-INFO.txt)
+- [lib32z1-dev_1.2.13.dfsg-1+core2.1.20261011152653_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/lib32z1-dev_1.2.13.dfsg-1%2Bcore2.1.20261011152653_amd64.deb)
+- [lib32z1_1.2.13.dfsg-1+core2.1.20261011152653_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/lib32z1_1.2.13.dfsg-1%2Bcore2.1.20261011152653_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/release-notes.md)
+- [SHA256SUMS-core2-zlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/SHA256SUMS-core2-zlib.txt)
+- [zlib1g-dev_1.2.13.dfsg-1+core2.1.20261011152653_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011152653_amd64.deb)
+- [zlib1g_1.2.13.dfsg-1+core2.1.20261011152653_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011152653_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011152653)
+
+</details>
+
 ### imagemagick (optimized)
 Version: `8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530` · Published: 2026-10-11 07:09:57 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - imagemagick`
@@ -901,7 +952,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### zlib (system)
 Version: `1:1.2.13.dfsg-1+core2.1~20261009185513` · Published: 2026-10-09 18:55:48 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
 
 <details><summary>Files (5)</summary>
 
