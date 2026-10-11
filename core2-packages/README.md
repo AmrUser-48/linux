@@ -34,6 +34,24 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### libwebp (optimized)
+Version: `1.2.4-0.2+deb12u1+core2.1~20261011064208` · Published: 2026-10-11 06:43:39 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libwebp`
+
+<details><summary>Files (8)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/BUILD-INFO.txt)
+- [libwebp-dev_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp-dev_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+- [libwebp7_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+- [libwebpdemux2_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpdemux2_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+- [libwebpmux3_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpmux3_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/release-notes.md)
+- [SHA256SUMS-core2-libwebp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/SHA256SUMS-core2-libwebp.txt)
+- [webp_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/webp_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208)
+
+</details>
+
 ### perl (optimized)
 Version: `5.36.0-7+deb12u4+core2.1~20261011040002` · Published: 2026-10-11 04:38:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - perl`
