@@ -1,0 +1,1 @@
+Build TigerVNC for Debian 12 Bookworm optimized for Intel Core 2. Build the relevant decoder/pixel-processing libraries first: zlib, libjpeg-turbo, pixman, then tigervnc. Skip any package that already has a Core 2 release with .deb assets; retain build logs and refresh the package index after publication.
