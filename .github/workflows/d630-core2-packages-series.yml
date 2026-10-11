@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package train
-run-name: "Core2 package train: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}"
+run-name: "Core2 package train: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}"
 
 on:
   workflow_dispatch:
@@ -17,11 +17,13 @@ on:
           - new-tools
           - thunar
           - tigervnc
+          - tigervnc-rebuild
   push:
     paths:
       - ".ci/core2-package-train-trigger.txt"
       - ".ci/core2-thunar-trigger.txt"
       - ".ci/core2-tigervnc-trigger.txt"
+      - ".ci/core2-tigervnc-rebuild-trigger.txt"
 
 concurrency:
   group: core2-package-train
@@ -38,7 +40,7 @@ jobs:
     timeout-minutes: 360
     env:
       GH_TOKEN: ${{ github.token }}
-      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
+      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
     steps:
       - name: Build packages sequentially, skipping ready releases
         shell: bash
@@ -54,11 +56,11 @@ jobs:
               # Debian build-dependencies are installed by each package workflow.
               packages=(libxfce4util xfconf libxfce4ui exo garcon tumbler thunar)
               ;;
-            tigervnc)
+            tigervnc|tigervnc-rebuild)
               # Optimize TigerVNC's main image-decoding / pixel-processing stack first:
               # zlib (ZRLE/Tight compression), libjpeg-turbo (JPEG/Tight JPEG),
-              # pixman (pixel operations), then TigerVNC itself. Existing releases
-              # with .deb assets are skipped automatically.
+              # pixman (pixel operations), then TigerVNC itself.
+              # The rebuild variant intentionally emits fresh optimized releases.
               packages=(zlib libjpeg-turbo pixman tigervnc)
               ;;
             new-tools)
@@ -90,11 +92,17 @@ jobs:
           dispatch_and_wait() {
             local package="$1"
             local started run_id attempt runs_json log_file has_release
+            local force_rebuild=false
+            [[ "$SERIES" == "tigervnc-rebuild" ]] && force_rebuild=true
 
             has_release="$(jq -r --arg prefix "core2-${package}-" '
               any(.[]; (.tag_name | startswith($prefix))
                 and any(.assets[]?; .name | endswith(".deb")))
             ' <<<"$releases_json")"
+
+            if [[ "$force_rebuild" == "true" ]]; then
+              has_release=false
+            fi
 
             if [[ "$has_release" == "true" ]]; then
               echo "::notice::Skipping ${package}: a Core 2 release with .deb assets already exists."
@@ -105,8 +113,12 @@ jobs:
             echo "::group::Core 2 package: ${package}"
             started="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
-            if ! gh workflow run "d630-core2-package.yml" \
-                --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}" -f "refresh_index=false"; then
+            dispatch_args=(workflow run "d630-core2-package.yml" \
+              --repo "$GITHUB_REPOSITORY" --ref master -f "package=${package}" -f "refresh_index=false")
+            if [[ "$force_rebuild" == "true" ]]; then
+              dispatch_args+=(-f "force_rebuild=true")
+            fi
+            if ! gh "${dispatch_args[@]}"; then
               echo "::error::Could not dispatch ${package}; recording failure and continuing."
               failed+=("$package (dispatch failed)")
               echo "::endgroup::"
