@@ -34,18 +34,17 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
-### vine (system)
-Version: `5.0.0+dfsg-3+core2.1~20261010154009` · Published: 2026-10-10 15:40:28 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - vine`
+### zip (optimized)
+Version: `3.0-13+deb12u1+core2.1~20261011040024` · Published: 2026-10-11 04:01:15 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zip`
 
-<details><summary>Files (5)</summary>
+<details><summary>Files (4)</summary>
 
-- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/BUILD-INFO.txt)
-- [python-vine-doc_5.0.0+dfsg-3+core2.1.20261010154009_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/python-vine-doc_5.0.0%2Bdfsg-3%2Bcore2.1.20261010154009_all.deb)
-- [python3-vine_5.0.0+dfsg-3+core2.1.20261010154009_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/python3-vine_5.0.0%2Bdfsg-3%2Bcore2.1.20261010154009_all.deb)
-- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/release-notes.md)
-- [SHA256SUMS-core2-vine.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009/SHA256SUMS-core2-vine.txt)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-vine-5.0.0-dfsg-3-core2.1-20261010154009)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zip-3.0-13-deb12u1-core2.1-20261011040024/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-zip-3.0-13-deb12u1-core2.1-20261011040024/release-notes.md)
+- [SHA256SUMS-core2-zip.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zip-3.0-13-deb12u1-core2.1-20261011040024/SHA256SUMS-core2-zip.txt)
+- [zip_3.0-13+deb12u1+core2.1.20261011040024_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zip-3.0-13-deb12u1-core2.1-20261011040024/zip_3.0-13%2Bdeb12u1%2Bcore2.1.20261011040024_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zip-3.0-13-deb12u1-core2.1-20261011040024)
 
 </details>
 
