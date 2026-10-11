@@ -35,8 +35,78 @@ The index below is refreshed after successful package builds and package-series 
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
 ### tigervnc (optimized)
-Version: `1.12.0+dfsg-8+core2.1~20261011153224` · Published: 2026-10-11 15:34:30 UTC
+Version: `1.12.0+dfsg-8+core2.1~20261011154436` · Published: 2026-10-11 15:47:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tigervnc`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/release-notes.md)
+- [SHA256SUMS-core2-tigervnc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/SHA256SUMS-core2-tigervnc.txt)
+- [tigervnc-common_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-common_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [tigervnc-scraping-server_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-scraping-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [tigervnc-standalone-server_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-standalone-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [tigervnc-tools_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-tools_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [tigervnc-viewer_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-viewer_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [tigervnc-xorg-extension_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-xorg-extension_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436)
+
+</details>
+
+### pixman (optimized)
+Version: `0.42.2-1+core2.1~20261011154041` · Published: 2026-10-11 15:43:07 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pixman`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/BUILD-INFO.txt)
+- [libpixman-1-0_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
+- [libpixman-1-dev_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-dev_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/release-notes.md)
+- [SHA256SUMS-core2-pixman.txt](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/SHA256SUMS-core2-pixman.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041)
+
+</details>
+
+### libjpeg-turbo (optimized)
+Version: `1:2.1.5-2+core2.1~20261011153748` · Published: 2026-10-11 15:39:39 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libjpeg-turbo`
+
+<details><summary>Files (10)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/BUILD-INFO.txt)
+- [libjpeg-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [libjpeg-turbo-progs_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg-turbo-progs_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [libjpeg62-turbo-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [libjpeg62-turbo_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [libturbojpeg-java_2.1.5-2+core2.1.20261011153748_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg-java_2.1.5-2%2Bcore2.1.20261011153748_all.deb)
+- [libturbojpeg0-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg0-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [libturbojpeg0_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg0_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/release-notes.md)
+- [SHA256SUMS-core2-libjpeg-turbo.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/SHA256SUMS-core2-libjpeg-turbo.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748)
+
+</details>
+
+### zlib (optimized)
+Version: `1:1.2.13.dfsg-1+core2.1~20261011153535` · Published: 2026-10-11 15:36:38 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/BUILD-INFO.txt)
+- [lib32z1-dev_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/lib32z1-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+- [lib32z1_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/lib32z1_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/release-notes.md)
+- [SHA256SUMS-core2-zlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/SHA256SUMS-core2-zlib.txt)
+- [zlib1g-dev_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+- [zlib1g_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535)
+
+</details>
+
+### tigervnc (optimized)
+Version: `1.12.0+dfsg-8+core2.1~20261011153224` · Published: 2026-10-11 15:34:30 UTC
 
 <details><summary>Files (9)</summary>
 
@@ -55,7 +125,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### pixman (optimized)
 Version: `0.42.2-1+core2.1~20261011152845` · Published: 2026-10-11 15:31:38 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pixman`
 
 <details><summary>Files (5)</summary>
 
@@ -70,7 +139,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### zlib (optimized)
 Version: `1:1.2.13.dfsg-1+core2.1~20261011152653` · Published: 2026-10-11 15:27:51 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
 
 <details><summary>Files (7)</summary>
 
@@ -149,7 +217,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libjpeg-turbo (optimized)
 Version: `1:2.1.5-2+core2.1~20261011064258` · Published: 2026-10-11 06:44:52 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libjpeg-turbo`
 
 <details><summary>Files (10)</summary>
 
