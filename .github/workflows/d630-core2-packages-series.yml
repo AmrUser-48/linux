@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package train
-run-name: "Core2 package train: ${{ inputs.series || 'new-tools' }}"
+run-name: "Core2 package train: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}"
 
 on:
   workflow_dispatch:
@@ -16,10 +16,12 @@ on:
           - graphics
           - new-tools
           - thunar
+          - tigervnc
   push:
     paths:
       - ".ci/core2-package-train-trigger.txt"
       - ".ci/core2-thunar-trigger.txt"
+      - ".ci/core2-tigervnc-trigger.txt"
 
 concurrency:
   group: core2-package-train
@@ -36,7 +38,7 @@ jobs:
     timeout-minutes: 360
     env:
       GH_TOKEN: ${{ github.token }}
-      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
+      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
     steps:
       - name: Build packages sequentially, skipping ready releases
         shell: bash
@@ -51,6 +53,13 @@ jobs:
               # Build the XFCE libraries and supporting services before Thunar.
               # Debian build-dependencies are installed by each package workflow.
               packages=(libxfce4util xfconf libxfce4ui exo garcon tumbler thunar)
+              ;;
+            tigervnc)
+              # Optimize TigerVNC's main image-decoding / pixel-processing stack first:
+              # zlib (ZRLE/Tight compression), libjpeg-turbo (JPEG/Tight JPEG),
+              # pixman (pixel operations), then TigerVNC itself. Existing releases
+              # with .deb assets are skipped automatically.
+              packages=(zlib libjpeg-turbo pixman tigervnc)
               ;;
             new-tools)
               # Python interpreter, FFTW, MPD/clients, Rust CLI tools, monitors,
