@@ -34,6 +34,23 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### gstreamer1.0 (optimized)
+Version: `1.22.0-2+deb12u1+core2.1~20261011064624` · Published: 2026-10-11 06:48:32 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gstreamer1.0`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/BUILD-INFO.txt)
+- [gir1.2-gstreamer-1.0_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gir1.2-gstreamer-1.0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+- [gstreamer1.0-tools_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gstreamer1.0-tools_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+- [libgstreamer1.0-0_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+- [libgstreamer1.0-dev_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-dev_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/release-notes.md)
+- [SHA256SUMS-core2-gstreamer1.0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/SHA256SUMS-core2-gstreamer1.0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624)
+
+</details>
+
 ### libjpeg-turbo (optimized)
 Version: `1:2.1.5-2+core2.1~20261011064258` · Published: 2026-10-11 06:44:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libjpeg-turbo`
