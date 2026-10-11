@@ -1,0 +1,105 @@
+name: Publish Core 2 Debian package bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      archive_path:
+        description: Absolute path to the existing bundle on the self-hosted runner
+        required: true
+        type: string
+        default: /home/runner/core2-debian12-packages.tar.gz
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Sanitize, preserve, and release package bundle
+    runs-on: self-hosted
+    timeout-minutes: 15
+    steps:
+      - name: Prepare bundle and remove development/debug packages
+        id: bundle
+        shell: bash
+        env:
+          ARCHIVE_PATH: ${{ inputs.archive_path }}
+        run: |
+          set -euo pipefail
+          if [[ ! -f "$ARCHIVE_PATH" ]]; then
+            echo "::error::Archive not found: $ARCHIVE_PATH"
+            echo "The archive must exist on this self-hosted runner before this workflow starts."
+            exit 1
+          fi
+          command -v dpkg-deb >/dev/null || {
+            echo "::error::dpkg-deb is required on the self-hosted runner."
+            exit 1
+          }
+
+          stage="$RUNNER_TEMP/core2-bundle"
+          unpack="$stage/unpacked"
+          mkdir -p "$unpack" "$GITHUB_WORKSPACE/dist"
+          tar -tzf "$ARCHIVE_PATH" >/dev/null
+          tar -xzf "$ARCHIVE_PATH" -C "$unpack" --no-same-owner
+
+          shopt -s nullglob
+          debs=("$unpack"/*.deb)
+          if (( ${#debs[@]} == 0 )); then
+            echo "::error::Archive contains no top-level .deb files."
+            exit 1
+          fi
+
+          kept=0
+          for deb in "${debs[@]}"; do
+            pkg="$(dpkg-deb -f "$deb" Package)"
+            case "$pkg" in
+              *-dev|*-dbg|*-dbgsym)
+                echo "Excluding $pkg ($(basename "$deb"))"
+                rm -f -- "$deb"
+                ;;
+              *)
+                kept=$((kept + 1))
+                ;;
+            esac
+          done
+          if (( kept == 0 )); then
+            echo "::error::No packages remain after filtering."
+            exit 1
+          fi
+
+          output="$GITHUB_WORKSPACE/dist/core2-debian12-packages.tar.gz"
+          tar -czf "$output" -C "$unpack" -- *.deb
+          sha256sum "$output" > "$output.sha256"
+          echo "archive=$output" >> "$GITHUB_OUTPUT"
+          echo "checksum=$output.sha256" >> "$GITHUB_OUTPUT"
+          echo "Packages retained: $kept"
+          tar -tzf "$output" | head -80
+          sha256sum -c "$output.sha256"
+
+      - name: Save GitHub Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-debian12-packages
+          path: |
+            ${{ steps.bundle.outputs.archive }}
+            ${{ steps.bundle.outputs.checksum }}
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Publish GitHub Release with archive and checksum
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: core2-debian12-bundle-${{ github.run_id }}
+          name: Core 2 Debian 12 package bundle (${{ github.run_number }})
+          body: |
+            Aggregated Debian 12 amd64 packages built for Intel Core 2.
+
+            The archive excludes binary packages whose Debian package names end in -dev, -dbg, or -dbgsym.
+            Verify the downloaded archive with the accompanying SHA-256 checksum before extracting or installing.
+          files: |
+            ${{ steps.bundle.outputs.archive }}
+            ${{ steps.bundle.outputs.checksum }}
+          draft: false
+          prerelease: false
+          make_latest: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
