@@ -1,0 +1,1 @@
+Force a fresh optimized Debian 12 Bookworm Core 2 build/release for the TigerVNC decoder stack in dependency order: zlib, libjpeg-turbo, pixman, tigervnc. All four package builds must use -O3 -march=core2 -mtune=core2. Existing Core 2 releases must not block this one deliberate rebuild. Publish only binary .deb artifacts and refresh the package index when complete.
