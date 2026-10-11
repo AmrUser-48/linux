@@ -103,7 +103,7 @@ jobs:
         run: |
           set -euxo pipefail
           case "$PACKAGE" in
-            lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils) opt="-O3" ;;
+            lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils|zlib|libjpeg-turbo|pixman|tigervnc) opt="-O3" ;;
             *) opt="-O2" ;;
           esac
           flags="$opt -march=core2 -mtune=core2"
