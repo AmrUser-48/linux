@@ -34,9 +34,45 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### perl (optimized)
+Version: `5.36.0-7+deb12u4+core2.1~20261011040002` · Published: 2026-10-11 04:38:51 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - perl`
+
+<details><summary>Files (10)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/BUILD-INFO.txt)
+- [libperl-dev_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/libperl-dev_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+- [libperl5.36_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/libperl5.36_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+- [perl-base_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-base_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+- [perl-debug_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-debug_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+- [perl-doc_5.36.0-7+deb12u4+core2.1.20261011040002_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-doc_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_all.deb)
+- [perl-modules-5.36_5.36.0-7+deb12u4+core2.1.20261011040002_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-modules-5.36_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_all.deb)
+- [perl_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/release-notes.md)
+- [SHA256SUMS-core2-perl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/SHA256SUMS-core2-perl.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002)
+
+</details>
+
+### openssl (optimized)
+Version: `3.0.22-1~deb12u1+core2.1~20261011040326` · Published: 2026-10-11 04:21:38 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openssl`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/BUILD-INFO.txt)
+- [libssl-dev_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl-dev_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+- [libssl-doc_3.0.22-1.deb12u1+core2.1.20261011040326_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl-doc_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_all.deb)
+- [libssl3_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+- [openssl_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/openssl_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/release-notes.md)
+- [SHA256SUMS-core2-openssl.txt](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/SHA256SUMS-core2-openssl.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326)
+
+</details>
+
 ### openssl (optimized)
 Version: `3.0.22-1~deb12u1+core2.1~20261011035927` · Published: 2026-10-11 04:10:06 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openssl`
 
 <details><summary>Files (7)</summary>
 
