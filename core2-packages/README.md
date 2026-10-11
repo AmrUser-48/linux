@@ -34,6 +34,26 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### libjpeg-turbo (optimized)
+Version: `1:2.1.5-2+core2.1~20261011064258` · Published: 2026-10-11 06:44:52 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libjpeg-turbo`
+
+<details><summary>Files (10)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/BUILD-INFO.txt)
+- [libjpeg-dev_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libjpeg-dev_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [libjpeg-turbo-progs_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libjpeg-turbo-progs_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [libjpeg62-turbo-dev_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libjpeg62-turbo-dev_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [libjpeg62-turbo_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [libturbojpeg-java_2.1.5-2+core2.1.20261011064258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libturbojpeg-java_2.1.5-2%2Bcore2.1.20261011064258_all.deb)
+- [libturbojpeg0-dev_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libturbojpeg0-dev_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [libturbojpeg0_2.1.5-2+core2.1.20261011064258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/libturbojpeg0_2.1.5-2%2Bcore2.1.20261011064258_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/release-notes.md)
+- [SHA256SUMS-core2-libjpeg-turbo.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258/SHA256SUMS-core2-libjpeg-turbo.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011064258)
+
+</details>
+
 ### libwebp (optimized)
 Version: `1.2.4-0.2+deb12u1+core2.1~20261011064208` · Published: 2026-10-11 06:43:39 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libwebp`
