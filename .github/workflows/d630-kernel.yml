@@ -196,7 +196,7 @@ jobs:
           export KDEB_CHANGELOG_DIST=bookworm
           export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
 
-          make -j2 \
+          make -j4 \
             bindeb-pkg \
             LOCALVERSION="${LOCALVERSION}" \
             INSTALL_MOD_STRIP=1
