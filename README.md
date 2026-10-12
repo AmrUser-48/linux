@@ -19,3 +19,5 @@ The package retains the upstream runtime requirements, including GTK 3, XCB, xdo
 ## Midnight Commander and related packages
 
 The [MC package-suite workflow](.github/workflows/d630-core2-mc-suite.yml) queues Core 2 builds for Midnight Commander and its available Debian Bookworm direct-dependency, recommendation, and concrete-suggestion source packages. It reuses the generic Debian package builder, skips existing releases and active builds, and checks that each source package exists in Bookworm before dispatch. The MC source build publishes both `mc` and `mc-data`; virtual suggestions and reverse-dependent applications are not rebuilt as MC requirements.
+
+For any binary or source package, the [**Build with Deps** workflow](.github/workflows/build-with-deps.yml) resolves its recursive Debian Bookworm runtime dependency closure and builds missing Core 2 source packages. It can optionally include Recommends and can force rebuilds of existing Core 2 releases. Debian Build-Depends are supplied by Bookworm during each individual source build rather than recursively rebuilt.
