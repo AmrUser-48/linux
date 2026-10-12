@@ -1,0 +1,231 @@
+name: MC and related Core 2 package suite
+run-name: "MC Core 2 package suite"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-mc-suite.yml"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: core2-mc-suite
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    name: Resolve Debian 12 sources and queue missing Core 2 builds
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      API_URL: https://api.github.com
+    steps:
+      - name: Install Debian Bookworm source indexes and API tools
+        shell: bash
+        run: |
+          set -euxo pipefail
+          rm -f /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends ca-certificates curl jq
+
+      - name: Skip existing packages and dispatch missing source builds
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Each item is a Debian SOURCE package. These cover the MC binary's
+          # direct dependencies, Recommends, and concrete Suggests from the
+          # supplied Debian Bookworm apt-cache output. Source-package aliases
+          # are used where the binary and source names differ.
+          SOURCES=(
+            mc
+            glibc
+            e2fsprogs
+            glib2.0
+            gpm
+            slang2
+            libssh2
+            mailcap
+            perl
+            sensible-utils
+            unzip
+            arj
+            bzip2
+            catdvi
+            texlive-bin
+            dbview
+            djvulibre
+            ebook-tools
+            file
+            cdrkit
+            gv
+            imagemagick
+            aspell
+            links2
+            w3m
+            lynx
+            odt2txt
+            poppler
+            python-tz
+            python-boto
+            unar
+            wimlib
+            xpdf
+            apvlv
+            atril
+            evince
+            mupdf
+            okular
+            qpdfview
+            zathura-pdf-poppler
+            zip
+          )
+
+          RELEASE_PAGES="$RUNNER_TEMP/mc-release-pages.jsonl"
+          ACTIVE_PAGES="$RUNNER_TEMP/mc-active-runs.jsonl"
+          : > "$RELEASE_PAGES"
+          : > "$ACTIVE_PAGES"
+
+          # Read every release page once so packages that already have a Core 2
+          # release are never re-dispatched unnecessarily.
+          page=1
+          while :; do
+            body="$RUNNER_TEMP/releases-page.json"
+            code="$(curl -sS -o "$body" -w '%{http_code}' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'Accept: application/vnd.github+json' \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              "$API_URL/repos/$GITHUB_REPOSITORY/releases?per_page=100&page=$page")"
+            if [[ "$code" != "200" ]]; then
+              echo "::error::Could not inspect existing releases (HTTP $code)."
+              cat "$body"
+              exit 1
+            fi
+            jq -e 'type == "array"' "$body" >/dev/null
+            cat "$body" >> "$RELEASE_PAGES"
+            count="$(jq 'length' "$body")"
+            (( count < 100 )) && break
+            page=$((page + 1))
+          done
+
+          # Avoid duplicating package jobs already queued or running.
+          for status in queued in_progress; do
+            body="$RUNNER_TEMP/runs-$status.json"
+            code="$(curl -sS -o "$body" -w '%{http_code}' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'Accept: application/vnd.github+json' \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              "$API_URL/repos/$GITHUB_REPOSITORY/actions/runs?per_page=100&status=$status")"
+            if [[ "$code" != "200" ]]; then
+              echo "::error::Could not inspect active workflow runs (HTTP $code)."
+              cat "$body"
+              exit 1
+            fi
+            jq -e 'type == "object" and (.workflow_runs | type == "array")' "$body" >/dev/null
+            jq '.workflow_runs' "$body" >> "$ACTIVE_PAGES"
+          done
+
+          dispatched=()
+          existing=()
+          active=()
+          unavailable=()
+          failed=()
+
+          for package in "${SOURCES[@]}"; do
+            echo "::group::Check source package: $package"
+
+            # mc-data is built from the mc source. Virtual suggestions such as
+            # python and pdf-viewer are not independent source package names.
+            if ! apt-cache showsrc "$package" >/dev/null 2>&1; then
+              echo "::notice::Skipping $package: no Debian Bookworm source package is available."
+              unavailable+=("$package")
+              echo "::endgroup::"
+              continue
+            fi
+
+            prefix="core2-$package-"
+            has_release="$(jq -s --arg prefix "$prefix" \
+              'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))' "$RELEASE_PAGES")"
+            if [[ "$has_release" == "true" ]]; then
+              echo "::notice::Skipping $package: Core 2 release already exists ($prefix*)."
+              existing+=("$package")
+              echo "::endgroup::"
+              continue
+            fi
+
+            title="Core2 package: $package"
+            is_active="$(jq -s --arg title "$title" \
+              'flatten | any(.[]; .display_title == $title and (.status == "queued" or .status == "in_progress"))' "$ACTIVE_PAGES")"
+            if [[ "$is_active" == "true" ]]; then
+              echo "::notice::Skipping $package: a matching package workflow is already queued or running."
+              active+=("$package")
+              echo "::endgroup::"
+              continue
+            fi
+
+            payload="$(jq -cn --arg package "$package" \
+              '{ref:"master",inputs:{package:$package,force_rebuild:false,refresh_index:false}}')"
+            response="$RUNNER_TEMP/dispatch-response.json"
+            code="$(curl -sS -o "$response" -w '%{http_code}' -X POST \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'Accept: application/vnd.github+json' \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              -H 'Content-Type: application/json' \
+              --data "$payload" \
+              "$API_URL/repos/$GITHUB_REPOSITORY/actions/workflows/d630-core2-package.yml/dispatches")"
+
+            if [[ "$code" == "204" ]]; then
+              echo "Queued optimized source build: $package"
+              dispatched+=("$package")
+            else
+              echo "::error::Could not dispatch $package (HTTP $code)."
+              cat "$response"
+              failed+=("$package")
+            fi
+            echo "::endgroup::"
+          done
+
+          {
+            echo "# MC / Core 2 package suite"
+            echo
+            echo "Debian Bookworm source-package builds are dispatched to the existing Core 2 package workflow."
+            echo "Packages are built with the repository's Core 2 flags; upstream Debian control metadata retains Depends, Recommends, and Suggests."
+            echo
+            echo "Queued (${#dispatched[@]}): ${dispatched[*]:-none}"
+            echo
+            echo "Skipped — release already exists (${#existing[@]}): ${existing[*]:-none}"
+            echo
+            echo "Skipped — build already queued/running (${#active[@]}): ${active[*]:-none}"
+            echo
+            echo "Skipped — no Bookworm source package (${#unavailable[@]}): ${unavailable[*]:-none}"
+            echo
+            echo "Dispatch failures (${#failed[@]}): ${failed[*]:-none}"
+            echo
+            echo "The MC source build produces both mc and mc-data. Virtual names such as python and pdf-viewer are not separate source builds. Reverse dependencies (for example findutils and desktop metapackages) are not MC runtime dependencies and are not rebuilt by this suite."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          printf 'Queued %s source package(s); skipped %s existing, %s active, %s unavailable.\n' \
+            "${#dispatched[@]}" "${#existing[@]}" "${#active[@]}" "${#unavailable[@]}"
+
+          if (( ${#failed[@]} > 0 )); then
+            echo "::error::One or more package workflows could not be dispatched."
+            exit 1
+          fi
