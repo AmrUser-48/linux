@@ -73,7 +73,7 @@ jobs:
             echo
             printf '%s\n' "${packages[@]}" | sed 's/^/- /'
             echo
-            echo "Build concurrency: 2 package jobs at a time."
+            echo "Build concurrency: up to 4 independent package runners at a time."
             echo "Each package publishes its own `core2-system-*` release."
           } >> "$GITHUB_STEP_SUMMARY"
 
@@ -82,7 +82,7 @@ jobs:
     needs: select
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 4
       matrix:
         package: ${{ fromJSON(needs.select.outputs.packages) }}
     uses: ./.github/workflows/d630-core2-system-package.yml
