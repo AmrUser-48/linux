@@ -121,6 +121,7 @@ jobs:
             fi
             jq -e 'type == "array"' "$body" >/dev/null
             cat "$body" >> "$RELEASE_PAGES"
+            printf '\\n' >> "$RELEASE_PAGES"
             count="$(jq 'length' "$body")"
             (( count < 100 )) && break
             page=$((page + 1))
