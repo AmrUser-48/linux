@@ -19,6 +19,22 @@ on:
         required: false
         type: boolean
         default: true
+  workflow_call:
+    inputs:
+      package:
+        description: Debian Bookworm source package to rebuild for Intel Core 2
+        required: true
+        type: string
+      force_rebuild:
+        description: Ignore existing Core 2 releases
+        required: false
+        type: boolean
+        default: false
+      refresh_index:
+        description: Refresh package README after successful publication
+        required: false
+        type: boolean
+        default: true
 
 permissions:
   actions: write
