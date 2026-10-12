@@ -80,10 +80,10 @@ jobs:
               "publishes package and checksums": "SHA256SUMS-core2-rustdesk.txt" in workflow and "gh release create" in workflow,
               "does not enable special DRM feature": "--drm" not in workflow and "drm-wake" not in workflow,
               "workflow-scoped push trigger": (
-        "workflow_dispatch:" in workflow
-        and "  push:" in workflow
-        and "      - '.github/workflows/d630-core2-rustdesk.yml'" in workflow
-    ),
+                  "workflow_dispatch:" in workflow
+                  and "  push:" in workflow
+                  and "      - '.github/workflows/d630-core2-rustdesk.yml'" in workflow
+              ),
           }
           for label, passed in required.items():
               print(("PASS" if passed else "FAIL") + ": " + label)
