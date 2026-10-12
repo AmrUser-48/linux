@@ -16,6 +16,7 @@ on:
       - ".github/workflows/d630-core2-update-release-index.yml"
       - ".github/workflows/d630-core2-packages-series.yml"
       - ".github/workflows/d630-core2-system-packages-series.yml"
+      - ".github/workflows/d630-core2-rustdesk.yml"
   pull_request:
     paths:
       - "README.md"
@@ -30,6 +31,7 @@ on:
       - ".github/workflows/d630-core2-update-release-index.yml"
       - ".github/workflows/d630-core2-packages-series.yml"
       - ".github/workflows/d630-core2-system-packages-series.yml"
+      - ".github/workflows/d630-core2-rustdesk.yml"
   workflow_dispatch:
 
 permissions:
@@ -49,7 +51,40 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml
+
+      - name: Validate RustDesk Core 2 build contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          workflow = Path(".github/workflows/d630-core2-rustdesk.yml").read_text()
+          required = {
+              "Debian 12 build container": "image: debian:12" in workflow,
+              "official RustDesk source": "repository: rustdesk/rustdesk" in workflow,
+              "stable 1.5.0 default": 'default: "1.5.0"' in workflow,
+              "Core 2 C compiler flags": "-march=core2 -mtune=core2" in workflow,
+              "Core 2 Rust target": "-C target-cpu=core2" in workflow,
+              "strip ELF symbols": "strip --strip-unneeded" in workflow,
+              "uses upstream Flutter Debian packaging": "python3 build.py --flutter --hwcodec --unix-file-copy-paste" in workflow,
+              "required Bookworm runtime dependencies": all(x in workflow for x in (
+                  "libgtk-3-0", "libxcb-randr0", "libxdo3", "libxfixes3",
+                  "libxcb-shape0", "libxcb-xfixes0", "libasound2", "libsystemd0",
+                  "libva2", "libva-drm2", "libva-x11-2",
+                  "libgstreamer-plugins-base1.0-0", "gstreamer1.0-pipewire"
+              )),
+              "publishes package and checksums": "SHA256SUMS-core2-rustdesk.txt" in workflow and "gh release create" in workflow,
+              "does not enable special DRM feature": "--drm" not in workflow and "drm-wake" not in workflow,
+              "manual dispatch only": "workflow_dispatch:" in workflow and "  push:" not in workflow,
+          }
+          for label, passed in required.items():
+              print(("PASS" if passed else "FAIL") + ": " + label)
+          failures = [label for label, passed in required.items() if not passed]
+          if failures:
+              raise SystemExit(f"{len(failures)} RustDesk workflow validation(s) failed")
+          PY
 
       - name: Check updater Bash-script syntax
         shell: bash
