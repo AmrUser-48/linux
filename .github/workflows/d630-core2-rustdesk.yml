@@ -1,14 +1,19 @@
 name: Core 2 optimized RustDesk package
-run-name: "Core 2 RustDesk ${{ inputs.version || '1.5.0' }}"
+run-name: "Core 2 RustDesk ${{ inputs.version || '1.4.9' }}"
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/d630-core2-rustdesk.yml'
   workflow_dispatch:
     inputs:
       version:
         description: Stable RustDesk upstream version tag (no v prefix)
         required: true
         type: string
-        default: "1.5.0"
+        default: "1.4.9"
       force_rebuild:
         description: Build another package revision even if this version was already released
         required: false
@@ -19,7 +24,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: core2-rustdesk-${{ inputs.version || '1.5.0' }}
+  group: core2-rustdesk-${{ inputs.version || '1.4.9' }}
   cancel-in-progress: false
 
 jobs:
@@ -35,13 +40,13 @@ jobs:
         id: check
         env:
           GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ inputs.version || '1.5.0' }}
+          VERSION: ${{ inputs.version || '1.4.9' }}
           FORCE_REBUILD: ${{ inputs.force_rebuild || false }}
         shell: bash
         run: |
           set -euo pipefail
           if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "::error::Use a stable upstream version such as 1.5.0; prereleases are not accepted."
+            echo "::error::Use a stable upstream version such as 1.4.9; prereleases are not accepted."
             exit 1
           fi
           if [[ "$FORCE_REBUILD" == "true" ]]; then
@@ -68,7 +73,7 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
-      VERSION: ${{ inputs.version || '1.5.0' }}
+      VERSION: ${{ inputs.version || '1.4.9' }}
       CFLAGS: "-O2 -march=core2 -mtune=core2 -pipe"
       CXXFLAGS: "-O2 -march=core2 -mtune=core2 -pipe"
       CPPFLAGS: "-march=core2 -mtune=core2"
@@ -79,6 +84,10 @@ jobs:
       CARGO_PROFILE_RELEASE_DEBUG: "0"
       CARGO_BUILD_JOBS: "2"
       CMAKE_BUILD_PARALLEL_LEVEL: "2"
+      VCPKG_ROOT: /opt/artifacts/vcpkg
+      VCPKG_COMMIT_ID: "120deac3062162151622ca4860575a33844ba10b"
+      VCPKG_MAX_CONCURRENCY: "2"
+      USE_AOM_391: "1"
 
     outputs:
       source_version: ${{ steps.package.outputs.source_version }}
@@ -93,13 +102,14 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends \
             build-essential binutils cmake curl file git jq nasm yasm zip unzip wget xz-utils \
+            perl autoconf automake libtool bison flex gperf \
             clang llvm llvm-dev libclang-dev pkg-config ninja-build \
             libgtk-3-dev libayatana-appindicator3-dev libxdo-dev libxfixes-dev \
             libxcb-randr0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxcb1-dev \
             libx11-dev libx11-xcb-dev libxrandr-dev libxrender-dev libxext-dev \
             libxcursor-dev libxi-dev libxtst-dev libxinerama-dev \
             libxkbcommon-dev libxkbcommon-x11-dev libwayland-dev libegl-dev libgles2-mesa-dev \
-            libasound2-dev libpulse-dev libsystemd-dev libdbus-1-dev libssl-dev libunwind-dev \
+            libasound2-dev libpulse-dev libsystemd-dev libdbus-1-dev libssl-dev libunwind-dev libpam0g-dev \
             libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
             libva-dev libdrm-dev libpipewire-0.3-dev libspa-0.2-dev \
             libgtk-3-0 libxcb-randr0 libxdo3 libxfixes3 libxcb-shape0 libxcb-xfixes0 \
@@ -124,7 +134,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: rustdesk/rustdesk
-          ref: ${{ inputs.version || '1.5.0' }}
+          ref: ${{ inputs.version || '1.4.9' }}
           path: rustdesk-src
           submodules: recursive
           fetch-depth: 1
@@ -143,6 +153,7 @@ jobs:
             | sh -s -- -y --profile minimal --default-toolchain 1.75.0
           echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
           "$HOME/.cargo/bin/rustup" toolchain install 1.75.0 --profile minimal
+          "$HOME/.cargo/bin/rustup" component add rustfmt --toolchain 1.75.0
           "$HOME/.cargo/bin/rustup" default 1.75.0
           "$HOME/.cargo/bin/rustc" --version
           "$HOME/.cargo/bin/cargo" --version
@@ -170,16 +181,44 @@ jobs:
           flutter --version
           flutter precache --linux
 
+      - name: Bootstrap pinned vcpkg and build static media libraries
+        working-directory: rustdesk-src
+        shell: bash
+        env:
+          VCPKG_DEFAULT_TRIPLET: x64-linux
+          VCPKG_DEFAULT_HOST_TRIPLET: x64-linux
+        run: |
+          set -euxo pipefail
+          mkdir -p "$(dirname "$VCPKG_ROOT")"
+          git clone https://github.com/microsoft/vcpkg "$VCPKG_ROOT"
+          git -C "$VCPKG_ROOT" checkout --detach "$VCPKG_COMMIT_ID"
+          "$VCPKG_ROOT/bootstrap-vcpkg.sh" -disableMetrics
+          "$VCPKG_ROOT/vcpkg" version
+
+          if ! "$VCPKG_ROOT/vcpkg" install --triplet x64-linux --x-install-root="$VCPKG_ROOT/installed"; then
+            find "$VCPKG_ROOT/buildtrees" -type f -name '*.log' -print -exec tail -n 120 {} \; || true
+            exit 1
+          fi
+
+          for library in libavcodec.a libavutil.a libavformat.a; do
+            test -s "$VCPKG_ROOT/installed/x64-linux/lib/$library" || {
+              echo "::error::Required static RustDesk hardware-codec library not found: $library"
+              exit 1
+            }
+          done
+          echo "VCPKG_ROOT=$VCPKG_ROOT" >> "$GITHUB_ENV"
+          echo "Pinned vcpkg dependencies installed for x64-linux."
+
       - name: Restore Rust build cache
         uses: actions/cache@v4
         with:
           path: |
-            /root/.cargo/registry
-            /root/.cargo/git
+            ~/.cargo/registry
+            ~/.cargo/git
             rustdesk-src/target
-          key: rustdesk-core2-bookworm-${{ inputs.version || '1.5.0' }}-${{ hashFiles('rustdesk-src/Cargo.lock') }}-v1
+          key: rustdesk-core2-bookworm-${{ inputs.version || '1.4.9' }}-${{ hashFiles('rustdesk-src/Cargo.lock') }}-v1
           restore-keys: |
-            rustdesk-core2-bookworm-${{ inputs.version || '1.5.0' }}-
+            rustdesk-core2-bookworm-${{ inputs.version || '1.4.9' }}-
 
       - name: Build official Flutter Debian package with Core 2 flags
         working-directory: rustdesk-src
@@ -260,7 +299,7 @@ jobs:
           DEPENDS="$(dpkg-deb -f "$FINAL_DEB" Depends)"
           for required in \
             libgtk-3-0 libxcb-randr0 libxdo3 libxfixes3 libxcb-shape0 \
-            libxcb-xfixes0 libasound2 libsystemd0 curl libva2 libva-drm2 \
+            libxcb-xfixes0 libasound2 libsystemd0 curl libva2 libva-drm2 libpam0g \
             libva-x11-2 libgstreamer-plugins-base1.0-0 gstreamer1.0-pipewire; do
             if ! grep -Fq "$required" <<<"$DEPENDS"; then
               echo "::error::Runtime dependency missing from Debian control metadata: $required"
@@ -313,6 +352,7 @@ jobs:
             libxcb-xfixes0
             libasound2
             libsystemd0
+            libpam0g
             curl
             libva2
             libva-drm2
@@ -350,7 +390,7 @@ jobs:
       - name: Upload Core 2 RustDesk package artifact
         uses: actions/upload-artifact@v4
         with:
-          name: core2-rustdesk-${{ inputs.version || '1.5.0' }}-${{ github.run_id }}
+          name: core2-rustdesk-${{ inputs.version || '1.4.9' }}-${{ github.run_id }}
           path: release-artifacts/*
           if-no-files-found: error
           retention-days: 7
@@ -362,7 +402,7 @@ jobs:
           name: core2-rustdesk-build-log-${{ github.run_id }}
           path: |
             rustdesk-src/target/.rustc_info.json
-            rustdesk-src/rustdesk-${{ inputs.version || '1.5.0' }}.deb
+            rustdesk-src/rustdesk-${{ inputs.version || '1.4.9' }}.deb
             ${{ runner.temp }}/stripped-elf-sizes.txt
             ${{ runner.temp }}/rustdesk-unresolved-libraries.txt
           if-no-files-found: ignore
@@ -384,7 +424,7 @@ jobs:
       - name: Download package artifact
         uses: actions/download-artifact@v4
         with:
-          name: core2-rustdesk-${{ inputs.version || '1.5.0' }}-${{ github.run_id }}
+          name: core2-rustdesk-${{ inputs.version || '1.4.9' }}-${{ github.run_id }}
           path: dist
 
       - name: Publish GitHub release
