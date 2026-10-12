@@ -162,31 +162,32 @@ jobs:
           for binary in "${BINARIES[@]}"; do
             [[ -n "$binary" ]] || continue
             source_name="$(apt-cache show "$binary" 2>/dev/null | awk -v wanted="$binary" '
-              BEGIN { RS=""; FS="\n" }
+              BEGIN { RS=""; FS="\n"; found=0 }
               {
                 package_name=""
-                source_name=""
+                candidate_source=""
                 for (i=1; i<=NF; i++) {
                   if ($i ~ /^Package: /) {
                     package_name=$i
                     sub(/^Package: /, "", package_name)
                   }
                   if ($i ~ /^Source: /) {
-                    source_name=$i
-                    sub(/^Source: /, "", source_name)
+                    candidate_source=$i
+                    sub(/^Source: /, "", candidate_source)
                   }
                 }
-                if (package_name == wanted) {
-                  if (source_name == "") source_name=package_name
-                  split(source_name, fields, /[[:space:]]+/)
+                if (!found && package_name == wanted) {
+                  if (candidate_source == "") candidate_source=package_name
+                  split(candidate_source, fields, /[[:space:]]+/)
                   print fields[1]
-                  exit
+                  found=1
                 }
               }
             ')"
             [[ -n "$source_name" ]] || source_name="$binary"
 
-            if ! apt-cache showsrc "$source_name" 2>/dev/null | grep -q '^Package:'; then
+            source_info="$(apt-cache showsrc "$source_name" 2>/dev/null || true)"
+            if [[ -z "$source_info" ]] || ! grep -q '^Package:' <<< "$source_info"; then
               UNMAPPED+=("$binary -> $source_name")
               continue
             fi
