@@ -8,6 +8,7 @@ on:
       - "core2-packages/README.md"
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
+      - ".github/workflows/build-with-deps.yml"
       - ".github/workflows/d630-core2-package.yml"
       - ".github/workflows/d630-core2-system-package.yml"
       - ".github/workflows/d630-core2-recover-release.yml"
@@ -23,6 +24,7 @@ on:
       - "core2-packages/README.md"
       - "core2-packages/install.py"
       - ".github/workflows/d630-core2-installer-check.yml"
+      - ".github/workflows/build-with-deps.yml"
       - ".github/workflows/d630-core2-package.yml"
       - ".github/workflows/d630-core2-system-package.yml"
       - ".github/workflows/d630-core2-recover-release.yml"
@@ -51,7 +53,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/build-with-deps.yml .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml
 
       - name: Validate RustDesk Core 2 build contract
         shell: bash
@@ -64,7 +66,7 @@ jobs:
           required = {
               "Debian 12 build container": "image: debian:12" in workflow,
               "official RustDesk source": "repository: rustdesk/rustdesk" in workflow,
-              "stable 1.5.0 default": 'default: "1.5.0"' in workflow,
+              "stable 1.4.9 default": 'default: "1.4.9"' in workflow,
               "Core 2 C compiler flags": "-march=core2 -mtune=core2" in workflow,
               "Core 2 Rust target": "-C target-cpu=core2" in workflow,
               "strip ELF symbols": "strip --strip-unneeded" in workflow,
@@ -77,7 +79,11 @@ jobs:
               )),
               "publishes package and checksums": "SHA256SUMS-core2-rustdesk.txt" in workflow and "gh release create" in workflow,
               "does not enable special DRM feature": "--drm" not in workflow and "drm-wake" not in workflow,
-              "manual dispatch only": "workflow_dispatch:" in workflow and "  push:" not in workflow,
+              "workflow-scoped push trigger": (
+        "workflow_dispatch:" in workflow
+        and "  push:" in workflow
+        and "      - '.github/workflows/d630-core2-rustdesk.yml'" in workflow
+    ),
           }
           for label, passed in required.items():
               print(("PASS" if passed else "FAIL") + ": " + label)
