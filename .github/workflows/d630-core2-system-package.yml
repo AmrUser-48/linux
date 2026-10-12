@@ -99,7 +99,6 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
-      DEB_BUILD_OPTIONS: "parallel=2 noautodbgsym"
 
     outputs:
       package_version: ${{ steps.meta.outputs.package_version }}
@@ -138,18 +137,27 @@ jobs:
           # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
           opt="-O2"
           flags="$opt -march=core2 -mtune=core2"
+          # Public GitHub-hosted Ubuntu runners have 4 vCPUs / 16 GB RAM.
+          # Use them for normal packages, but keep GCC's memory-heavy bootstrap at -j2.
+          build_jobs=4
+          if [[ "$PACKAGE" == "gcc-12" ]]; then
+            build_jobs=2
+          fi
           {
             echo "DEB_CFLAGS_MAINT_APPEND=$flags"
             echo "DEB_CXXFLAGS_MAINT_APPEND=$flags"
             echo "DEB_FFLAGS_MAINT_APPEND=$flags"
             echo "CORE2_OPT_LEVEL=$opt"
+            echo "BUILD_JOBS=$build_jobs"
+            echo "DEB_BUILD_OPTIONS=parallel=$build_jobs noautodbgsym"
           } >> "$GITHUB_ENV"
           echo "Using conservative system-package optimization profile: $flags"
+          echo "Build parallelism: -j$build_jobs"
           # glibc and systemd test suites rely on host/kernel facilities that are
           # unavailable or unreliable in the Debian-in-Docker build container.
           # Keep compile/package validation enabled, but avoid container-only test failures.
           if [[ "$PACKAGE" == "glibc" || "$PACKAGE" == "systemd" ]]; then
-            echo "DEB_BUILD_OPTIONS=parallel=2 noautodbgsym nocheck" >> "$GITHUB_ENV"
+            echo "DEB_BUILD_OPTIONS=parallel=$build_jobs noautodbgsym nocheck" >> "$GITHUB_ENV"
             echo "Skipping package test suite for $PACKAGE in the container build environment."
           fi
       - name: Fetch official Debian source and build dependencies
@@ -235,7 +243,7 @@ jobs:
           cd "$SOURCE_DIR"
           runuser --preserve-environment --user "$BUILD_USER" -- env \
             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-            dpkg-buildpackage -rfakeroot -us -uc -b -j2
+            dpkg-buildpackage -rfakeroot -us -uc -b -j"$BUILD_JOBS"
 
           shopt -s nullglob
           DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
