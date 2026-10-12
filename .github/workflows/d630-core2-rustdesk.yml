@@ -1,0 +1,423 @@
+name: Core 2 optimized RustDesk package
+run-name: "Core 2 RustDesk ${{ inputs.version || '1.5.0' }}"
+
+on:
+  push:
+    paths:
+      - ".github/workflows/d630-core2-rustdesk.yml"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Stable RustDesk upstream version tag (no v prefix)
+        required: true
+        type: string
+        default: "1.5.0"
+      force_rebuild:
+        description: Build another package revision even if this version was already released
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: core2-rustdesk-${{ inputs.version || '1.5.0' }}
+  cancel-in-progress: false
+
+jobs:
+  release-check:
+    name: Skip if this RustDesk version already has a Core 2 release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      exists: ${{ steps.check.outputs.exists }}
+    steps:
+      - name: Validate stable version and check published releases
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version || '1.5.0' }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild || false }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Use a stable upstream version such as 1.5.0; prereleases are not accepted."
+            exit 1
+          fi
+          if [[ "$FORCE_REBUILD" == "true" ]]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Forced rebuild requested for RustDesk $VERSION."
+            exit 0
+          fi
+          prefix="core2-rustdesk-$VERSION-"
+          exists="$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" | jq -s --arg prefix "$prefix" 'flatten | any(.[]; ((.tag_name // "") | startswith($prefix)))')"
+          echo "exists=$exists" >> "$GITHUB_OUTPUT"
+          if [[ "$exists" == "true" ]]; then
+            echo "::notice::A Core 2 RustDesk $VERSION release already exists; skipping the build."
+          fi
+
+  build:
+    needs: release-check
+    if: needs.release-check.outputs.exists != 'true'
+    name: Build RustDesk for Intel Core 2 / Debian 12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      VERSION: ${{ inputs.version || '1.5.0' }}
+      CFLAGS: "-O2 -march=core2 -mtune=core2 -pipe"
+      CXXFLAGS: "-O2 -march=core2 -mtune=core2 -pipe"
+      CPPFLAGS: "-march=core2 -mtune=core2"
+      RUSTFLAGS: "-C target-cpu=core2 -C strip=symbols"
+      CARGO_PROFILE_RELEASE_OPT_LEVEL: "3"
+      CARGO_PROFILE_RELEASE_LTO: "thin"
+      CARGO_PROFILE_RELEASE_CODEGEN_UNITS: "1"
+      CARGO_PROFILE_RELEASE_DEBUG: "0"
+      CARGO_BUILD_JOBS: "2"
+      CMAKE_BUILD_PARALLEL_LEVEL: "2"
+
+    outputs:
+      source_version: ${{ steps.package.outputs.source_version }}
+      deb_version: ${{ steps.package.outputs.deb_version }}
+      release_tag: ${{ steps.package.outputs.release_tag }}
+
+    steps:
+      - name: Install Debian Bookworm build and runtime dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential binutils cmake curl file git jq nasm yasm zip unzip wget xz-utils \
+            clang llvm llvm-dev libclang-dev pkg-config ninja-build \
+            libgtk-3-dev libayatana-appindicator3-dev libxdo-dev libxfixes-dev \
+            libxcb-randr0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxcb1-dev \
+            libx11-dev libx11-xcb-dev libxrandr-dev libxrender-dev libxext-dev \
+            libxcursor-dev libxi-dev libxtst-dev libxinerama-dev \
+            libxkbcommon-dev libxkbcommon-x11-dev libwayland-dev libegl-dev libgles2-mesa-dev \
+            libasound2-dev libpulse-dev libsystemd-dev libdbus-1-dev libssl-dev libunwind-dev \
+            libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
+            libva-dev libdrm-dev libpipewire-0.3-dev libspa-0.2-dev \
+            libgtk-3-0 libxcb-randr0 libxdo3 libxfixes3 libxcb-shape0 libxcb-xfixes0 \
+            libasound2 libsystemd0 curl libva2 libva-drm2 libva-x11-2 \
+            libgstreamer-plugins-base1.0-0 gstreamer1.0-pipewire libayatana-appindicator3-1 \
+            python3 python3-pip ca-certificates
+
+          echo "=== Debian target and build toolchain ==="
+          dpkg --print-architecture
+          gcc --version | head -n 1
+          clang --version | head -n 1
+          llvm-config --version
+          pkg-config --modversion gtk+-3.0
+          pkg-config --modversion gstreamer-1.0
+          pkg-config --modversion libva
+          echo "LIBCLANG_PATH=$(llvm-config --libdir)" >> "$GITHUB_ENV"
+          echo "CORE2_CFLAGS=$CFLAGS" >> "$GITHUB_ENV"
+          echo "CORE2_CXXFLAGS=$CXXFLAGS" >> "$GITHUB_ENV"
+          echo "CORE2_RUSTFLAGS=$RUSTFLAGS" >> "$GITHUB_ENV"
+
+      - name: Check out official RustDesk source
+        uses: actions/checkout@v4
+        with:
+          repository: rustdesk/rustdesk
+          ref: ${{ inputs.version || '1.5.0' }}
+          path: rustdesk-src
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Validate source version and set up Rust 1.75
+        working-directory: rustdesk-src
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_VERSION="$(awk '/^\[package\]/{p=1;next}/^\[/{p=0} p && /^version[[:space:]]*=/{gsub(/"/,"",$3); print $3; exit}' Cargo.toml)"
+          if [[ "$SOURCE_VERSION" != "$VERSION" ]]; then
+            echo "::error::Requested tag $VERSION but Cargo.toml declares $SOURCE_VERSION."
+            exit 1
+          fi
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+            | sh -s -- -y --profile minimal --default-toolchain 1.75.0
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+          "$HOME/.cargo/bin/rustup" toolchain install 1.75.0 --profile minimal
+          "$HOME/.cargo/bin/rustup" default 1.75.0
+          "$HOME/.cargo/bin/rustc" --version
+          "$HOME/.cargo/bin/cargo" --version
+          echo "RUSTDESK_SOURCE_VERSION=$SOURCE_VERSION" >> "$GITHUB_ENV"
+          echo "RUSTDESK_SOURCE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "Rust target profile: $RUSTFLAGS"
+          echo "C compiler profile: $CFLAGS"
+          echo "C++ compiler profile: $CXXFLAGS"
+
+      - name: Install upstream Flutter toolchain
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: "3.24.5"
+          cache: true
+
+      - name: Apply upstream Flutter compatibility patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          FLUTTER_BIN="$(command -v flutter)"
+          FLUTTER_ROOT="$(dirname "$(dirname "$FLUTTER_BIN")")"
+          git -C "$FLUTTER_ROOT" apply "$GITHUB_WORKSPACE/rustdesk-src/.github/patches/flutter_3.24.4_dropdown_menu_enableFilter.diff"
+          flutter config --no-analytics
+          flutter --version
+          flutter precache --linux
+
+      - name: Restore Rust build cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            /root/.cargo/registry
+            /root/.cargo/git
+            rustdesk-src/target
+          key: rustdesk-core2-bookworm-${{ inputs.version || '1.5.0' }}-${{ hashFiles('rustdesk-src/Cargo.lock') }}-v1
+          restore-keys: |
+            rustdesk-core2-bookworm-${{ inputs.version || '1.5.0' }}-
+
+      - name: Build official Flutter Debian package with Core 2 flags
+        working-directory: rustdesk-src
+        shell: bash
+        run: |
+          set -euxo pipefail
+          test "$(rustc -vV | sed -n 's/^host: //p')" = "x86_64-unknown-linux-gnu"
+          rustc -C target-cpu=core2 --version >/dev/null
+          # Use upstream packaging path. No DRM consent-bypass feature is enabled.
+          python3 build.py --flutter --hwcodec --unix-file-copy-paste
+          SOURCE_DEB="$GITHUB_WORKSPACE/rustdesk-src/rustdesk-$VERSION.deb"
+          if [[ ! -s "$SOURCE_DEB" ]]; then
+            echo "::error::Upstream build.py did not produce $SOURCE_DEB."
+            find "$GITHUB_WORKSPACE/rustdesk-src" -maxdepth 2 -type f -name '*.deb' -ls || true
+            exit 1
+          fi
+          dpkg-deb -f "$SOURCE_DEB" Package Version Architecture Depends Recommends
+          echo "Upstream package size: $(du -h "$SOURCE_DEB" | cut -f1)"
+
+      - name: Strip ELF symbols and set a Debian-upgradeable Core 2 version
+        id: package
+        working-directory: rustdesk-src
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_DEB="$GITHUB_WORKSPACE/rustdesk-src/rustdesk-$VERSION.deb"
+          ROOT="$RUNNER_TEMP/rustdesk-package-root"
+          rm -rf "$ROOT"
+          mkdir -p "$ROOT" "$GITHUB_WORKSPACE/release-artifacts"
+          dpkg-deb -R "$SOURCE_DEB" "$ROOT"
+          test -x "$ROOT/usr/share/rustdesk/rustdesk" || {
+            echo "::error::Expected the Flutter desktop ELF at /usr/share/rustdesk/rustdesk."
+            find "$ROOT/usr/share/rustdesk" -maxdepth 3 -type f -print | head -n 100
+            exit 1
+          }
+
+          # Strip ELF payloads but retain dynamic symbols required for Flutter/Rust FFI.
+          ELF_COUNT=0
+          while IFS= read -r -d '' ELF; do
+            if file -b "$ELF" | grep -q '^ELF '; then
+              before="$(stat -c %s "$ELF")"
+              strip --strip-unneeded "$ELF"
+              after="$(stat -c %s "$ELF")"
+              ELF_COUNT=$((ELF_COUNT + 1))
+              printf '%s %s %s\n' "$((before - after))" "$before" "$ELF" >> "$RUNNER_TEMP/stripped-elf-sizes.txt"
+            fi
+          done < <(find "$ROOT" -path "$ROOT/DEBIAN" -prune -o -type f -print0)
+          if (( ELF_COUNT == 0 )); then
+            echo "::error::No ELF binaries were found to strip."
+            exit 1
+          fi
+          echo "Stripped ELF payloads: $ELF_COUNT"
+          cat "$RUNNER_TEMP/stripped-elf-sizes.txt"
+
+          SOURCE_VERSION="$(dpkg-deb -f "$SOURCE_DEB" Version)"
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          DEB_VERSION="$SOURCE_VERSION+core2.1~$BUILD_STAMP"
+          RELEASE_TAG="core2-rustdesk-$SOURCE_VERSION-$BUILD_STAMP"
+          CONTROL="$ROOT/DEBIAN/control"
+          sed -i -E "s/^Version:.*/Version: $DEB_VERSION/" "$CONTROL"
+          grep -Fx "Version: $DEB_VERSION" "$CONTROL"
+
+          rm -f "$ROOT/DEBIAN/md5sums"
+          (
+            cd "$ROOT"
+            find . -path './DEBIAN' -prune -o -type f -printf '%P\0' \
+              | sort -z \
+              | xargs -0 -r md5sum > DEBIAN/md5sums
+          )
+
+          FINAL_DEB="$GITHUB_WORKSPACE/release-artifacts/rustdesk_${DEB_VERSION}_amd64.deb"
+          dpkg-deb --build --root-owner-group "$ROOT" "$FINAL_DEB"
+          dpkg-deb --info "$FINAL_DEB"
+          test "$(dpkg-deb -f "$FINAL_DEB" Package)" = "rustdesk"
+          test "$(dpkg-deb -f "$FINAL_DEB" Version)" = "$DEB_VERSION"
+          test "$(dpkg-deb -f "$FINAL_DEB" Architecture)" = "amd64"
+
+          DEPENDS="$(dpkg-deb -f "$FINAL_DEB" Depends)"
+          for required in \
+            libgtk-3-0 libxcb-randr0 libxdo3 libxfixes3 libxcb-shape0 \
+            libxcb-xfixes0 libasound2 libsystemd0 curl libva2 libva-drm2 \
+            libva-x11-2 libgstreamer-plugins-base1.0-0 gstreamer1.0-pipewire; do
+            if ! grep -Fq "$required" <<<"$DEPENDS"; then
+              echo "::error::Runtime dependency missing from Debian control metadata: $required"
+              echo "$DEPENDS"
+              exit 1
+            fi
+          done
+          RECOMMENDS="$(dpkg-deb -f "$FINAL_DEB" Recommends)"
+          grep -Fq "libayatana-appindicator3-1" <<<"$RECOMMENDS" || {
+            echo "::error::Expected app-indicator runtime recommendation is missing."
+            exit 1
+          }
+
+          UNRESOLVED="$RUNNER_TEMP/rustdesk-unresolved-libraries.txt"
+          : > "$UNRESOLVED"
+          while IFS= read -r -d '' ELF; do
+            if file -b "$ELF" | grep -q '^ELF '; then
+              ldd "$ELF" 2>/dev/null | grep 'not found' >> "$UNRESOLVED" || true
+            fi
+          done < <(find "$ROOT" -path "$ROOT/DEBIAN" -prune -o -type f -print0)
+          if [[ -s "$UNRESOLVED" ]]; then
+            echo "::error::Unresolved shared-library dependency in the package:"
+            cat "$UNRESOLVED"
+            exit 1
+          fi
+
+          printf '%s\n' \
+            "Package: rustdesk" \
+            "Upstream source: https://github.com/rustdesk/rustdesk/tree/$SOURCE_VERSION" \
+            "Upstream version: $SOURCE_VERSION" \
+            "Debian package version: $DEB_VERSION" \
+            "Source commit: $RUSTDESK_SOURCE_COMMIT" \
+            "Target: Debian 12 Bookworm amd64 / Intel Core 2 family" \
+            "CFLAGS: $CORE2_CFLAGS" \
+            "CXXFLAGS: $CORE2_CXXFLAGS" \
+            "RUSTFLAGS: $CORE2_RUSTFLAGS" \
+            "Rust profile: opt-level=3, thin LTO, codegen-units=1, debug=0" \
+            "Upstream features: flutter, hwcodec, unix-file-copy-paste" \
+            "ELF payloads stripped: $ELF_COUNT" \
+            "Native runtime dependencies: Debian control Depends; not bundled" \
+            > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
+
+          cat > "$GITHUB_WORKSPACE/release-artifacts/RUNTIME-DEPENDENCIES.txt" <<'DEPS'
+          Runtime dependencies (Debian 12 Bookworm amd64):
+            libgtk-3-0
+            libxcb-randr0
+            libxdo3
+            libxfixes3
+            libxcb-shape0
+            libxcb-xfixes0
+            libasound2
+            libsystemd0
+            curl
+            libva2
+            libva-drm2
+            libva-x11-2
+            libgstreamer-plugins-base1.0-0
+            gstreamer1.0-pipewire
+
+          Recommended:
+            libayatana-appindicator3-1
+
+          Install the .deb through APT so Debian resolves dependencies. These
+          are system dependencies, not libraries copied into the package.
+          DEPS
+
+          printf '%s\n' \
+            "source_version=$SOURCE_VERSION" \
+            "deb_version=$DEB_VERSION" \
+            "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+          echo "Final package size: $(du -h "$FINAL_DEB" | cut -f1)"
+
+      - name: Create checksums and validate release payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          DEB_COUNT="$(find . -maxdepth 1 -type f -name '*.deb' | wc -l)"
+          if [[ "$DEB_COUNT" != "1" ]]; then
+            echo "::error::Expected exactly one RustDesk .deb, found $DEB_COUNT."
+            exit 1
+          fi
+          sha256sum ./*.deb BUILD-INFO.txt RUNTIME-DEPENDENCIES.txt > SHA256SUMS-core2-rustdesk.txt
+          cat SHA256SUMS-core2-rustdesk.txt
+          ls -lh ./*
+
+      - name: Upload Core 2 RustDesk package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-rustdesk-${{ inputs.version || '1.5.0' }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload build logs for diagnosis
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-rustdesk-build-log-${{ github.run_id }}
+          path: |
+            rustdesk-src/target/.rustc_info.json
+            rustdesk-src/rustdesk-${{ inputs.version || '1.5.0' }}.deb
+            ${{ runner.temp }}/stripped-elf-sizes.txt
+            ${{ runner.temp }}/rustdesk-unresolved-libraries.txt
+          if-no-files-found: ignore
+          retention-days: 7
+
+  release:
+    name: Publish Core 2 RustDesk package
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_VERSION: ${{ needs.build.outputs.source_version }}
+      DEB_VERSION: ${{ needs.build.outputs.deb_version }}
+      RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
+
+    steps:
+      - name: Download package artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-rustdesk-${{ inputs.version || '1.5.0' }}-${{ github.run_id }}
+          path: dist
+
+      - name: Publish GitHub release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd dist
+          cat > release-notes.md <<EOF
+          ## Core 2 optimized RustDesk $DEB_VERSION
+
+          Built from the official RustDesk source for Debian 12 Bookworm amd64.
+          - Debian package: rustdesk_${DEB_VERSION}_amd64.deb
+          - Rust: target-cpu=core2, opt-level=3, thin LTO, one codegen unit
+          - C/C++: -O2 -march=core2 -mtune=core2
+          - ELF symbols/debug data stripped while retaining dynamic FFI symbols
+          - Upstream Flutter Debian package and native dependency metadata retained
+          - VA-API hardware-codec support and Unix file copy/paste enabled
+          - No DRM consent-bypass feature enabled
+          - Includes build metadata, runtime dependency list and SHA-256 checksums
+
+          Install with APT to resolve dependencies:
+
+              sudo apt install ./rustdesk_${DEB_VERSION}_amd64.deb
+
+          Intended for Intel Core 2 / Debian 12 amd64, not generic amd64 systems.
+          EOF
+          gh release create "$RELEASE_TAG" \
+            ./*.deb BUILD-INFO.txt RUNTIME-DEPENDENCIES.txt \
+            SHA256SUMS-core2-rustdesk.txt release-notes.md \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Core 2 optimized rustdesk $DEB_VERSION" \
+            --notes-file release-notes.md
+          echo "Published: https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_TAG"
