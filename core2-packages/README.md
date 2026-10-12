@@ -6,6 +6,12 @@ This directory documents the opt-in GitHub Actions workflows for rebuilding Debi
 
 The [Core 2 optimized Debian package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-package.yml) accepts a free-text Debian source-package name; it is no longer limited to a YAML dropdown list. Enter any valid source package available from the configured Debian Bookworm source repositories, such as `python3.11`, `thunar`, or another package name. The workflow resolves build dependencies, builds binary packages for amd64/all, and skips publication when that package already has a Core 2 release.
 
+## Build a package with all runtime dependencies
+
+Use [**Build with Deps → Run workflow**](https://github.com/AmrUser-48/linux/actions/workflows/build-with-deps.yml). Enter a binary package or Debian source-package name, such as `mc`. The action resolves the recursive `Depends` and `Pre-Depends` closure using Debian Bookworm's APT metadata, maps each required binary package to its source package, and builds all source packages that do not already have a Core 2 release. Enable **include Recommends** to include recommended packages, or **force rebuild** to rebuild packages even when a Core 2 release exists. Up to eight source-package builds run concurrently, and one failed build does not cancel the other builds.
+
+This workflow covers runtime dependencies. Each package's Debian `Build-Depends` are installed by the normal package builder from Bookworm; they are not recursively rebuilt as part of the runtime dependency closure.
+
 The [Core 2 optimized Debian system package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-system-package.yml) also accepts a free-text source-package name and uses the conservative `-O2 -march=core2 -mtune=core2` profile. The package-train workflows remain predefined sequential sets.
 
 For an update, use the [Core 2 package updater](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-package.yml). Select `optimized` or `system`, then enter any source-package name. It forces a build against the latest available Debian Bookworm source version, waits for successful publication, removes older releases for that package only after the new release exists, and refreshes this index. If the build fails, existing releases are left untouched.
