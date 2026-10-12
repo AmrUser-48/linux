@@ -1,0 +1,362 @@
+name: Build with Deps
+run-name: "Build with Deps: ${{ inputs.package }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Binary or Debian source package name (for example mc)
+        required: true
+        type: string
+        default: mc
+      include_recommends:
+        description: Include Recommends as well as Depends and Pre-Depends
+        required: false
+        type: boolean
+        default: false
+      force_rebuild:
+        description: Rebuild source packages even when a Core 2 release already exists
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: build-with-deps-${{ inputs.package }}
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    name: Resolve recursive Debian runtime dependencies
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      API_URL: https://api.github.com
+      REQUESTED_PACKAGE: ${{ inputs.package }}
+      INCLUDE_RECOMMENDS: ${{ inputs.include_recommends }}
+      FORCE_REBUILD: ${{ inputs.force_rebuild }}
+    outputs:
+      packages: ${{ steps.resolve.outputs.packages }}
+      has_packages: ${{ steps.resolve.outputs.has_packages }}
+      target_binary: ${{ steps.resolve.outputs.target_binary }}
+      source_count: ${{ steps.resolve.outputs.source_count }}
+      pending_count: ${{ steps.resolve.outputs.pending_count }}
+      existing_count: ${{ steps.resolve.outputs.existing_count }}
+    steps:
+      - name: Install APT and API tools
+        shell: bash
+        run: |
+          set -euxo pipefail
+          rm -f /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends ca-certificates curl jq
+
+      - name: Resolve dependency closure and skip already published packages
+        id: resolve
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$REQUESTED_PACKAGE" =~ ^[a-z0-9][a-z0-9+.-]{0,254}$ ]]; then
+            echo "::error::Invalid Debian package or source name: $REQUESTED_PACKAGE"
+            exit 1
+          fi
+
+          has_binary() {
+            apt-cache show "$1" 2>/dev/null |
+              awk -v wanted="$1" '$1 == "Package:" && $2 == wanted { found=1 } END { exit !found }'
+          }
+
+          # Accept a binary package directly. If the input is a source-package
+          # name instead, choose its primary non-dev runtime binary as the root.
+          TARGET_BINARY=""
+          if has_binary "$REQUESTED_PACKAGE"; then
+            TARGET_BINARY="$REQUESTED_PACKAGE"
+          else
+            SOURCE_INFO="$RUNNER_TEMP/requested-source.txt"
+            if ! apt-cache showsrc "$REQUESTED_PACKAGE" > "$SOURCE_INFO" 2>/dev/null ||
+               ! grep -q '^Package:' "$SOURCE_INFO"; then
+              echo "::error::No binary or Debian Bookworm source package found for '$REQUESTED_PACKAGE'."
+              exit 1
+            fi
+
+            BINARY_FIELD="$(awk '
+              /^Binary:/ {
+                sub(/^Binary:[[:space:]]*/, "")
+                printf "%s ", $0
+                in_binary=1
+                next
+              }
+              in_binary && /^[[:space:]]/ {
+                sub(/^[[:space:]]+/, "")
+                printf "%s ", $0
+                next
+              }
+              in_binary { exit }
+              END { print "" }
+            ' "$SOURCE_INFO")"
+
+            FALLBACK_BINARY=""
+            for candidate in $(printf '%s\n' "$BINARY_FIELD" | tr ',' ' '); do
+              has_binary "$candidate" || continue
+              [[ -n "$FALLBACK_BINARY" ]] || FALLBACK_BINARY="$candidate"
+              case "$candidate" in
+                *-dev|*-dbg|*-dbgsym|*-doc|*-doc-base|*-examples|*-tests|*-pic|*-common|*-data|*-static)
+                  continue
+                  ;;
+              esac
+              TARGET_BINARY="$candidate"
+              break
+            done
+            [[ -n "$TARGET_BINARY" ]] || TARGET_BINARY="$FALLBACK_BINARY"
+            if [[ -z "$TARGET_BINARY" ]]; then
+              echo "::error::Could not find a buildable binary output for source package '$REQUESTED_PACKAGE'."
+              exit 1
+            fi
+          fi
+
+          echo "Input: $REQUESTED_PACKAGE"
+          echo "Dependency root binary: $TARGET_BINARY"
+
+          # Simulate an install against an empty dpkg status database so packages
+          # already present in the runner image are still included in the closure.
+          EMPTY_STATUS="$RUNNER_TEMP/empty-dpkg-status"
+          SIMULATION="$RUNNER_TEMP/apt-install-plan.txt"
+          : > "$EMPTY_STATUS"
+          APT_OPTIONS=(-s -o "Dir::State::status=$EMPTY_STATUS")
+          if [[ "$INCLUDE_RECOMMENDS" != "true" ]]; then
+            APT_OPTIONS+=(--no-install-recommends)
+          fi
+          if ! apt-get "${APT_OPTIONS[@]}" install "$TARGET_BINARY" > "$SIMULATION"; then
+            echo "::error::APT could not resolve the runtime dependency closure for $TARGET_BINARY."
+            tail -n 100 "$SIMULATION" || true
+            exit 1
+          fi
+
+          mapfile -t BINARIES < <(
+            awk '$1 == "Inst" { name=$2; sub(/:.*/, "", name); print name }' "$SIMULATION" |
+              sort -u
+          )
+          BINARIES+=("$TARGET_BINARY")
+
+          # Map every binary in the install plan to its Debian source package.
+          # Several binaries can come from one source, so deduplicate the result.
+          declare -A SEEN_SOURCES=()
+          SOURCES=()
+          UNMAPPED=()
+          for binary in "${BINARIES[@]}"; do
+            [[ -n "$binary" ]] || continue
+            source_name="$(apt-cache show "$binary" 2>/dev/null | awk -v wanted="$binary" '
+              BEGIN { RS=""; FS="\n" }
+              {
+                package_name=""
+                source_name=""
+                for (i=1; i<=NF; i++) {
+                  if ($i ~ /^Package: /) {
+                    package_name=$i
+                    sub(/^Package: /, "", package_name)
+                  }
+                  if ($i ~ /^Source: /) {
+                    source_name=$i
+                    sub(/^Source: /, "", source_name)
+                  }
+                }
+                if (package_name == wanted) {
+                  if (source_name == "") source_name=package_name
+                  split(source_name, fields, /[[:space:]]+/)
+                  print fields[1]
+                  exit
+                }
+              }
+            ')"
+            [[ -n "$source_name" ]] || source_name="$binary"
+
+            if ! apt-cache showsrc "$source_name" 2>/dev/null | grep -q '^Package:'; then
+              UNMAPPED+=("$binary -> $source_name")
+              continue
+            fi
+
+            if [[ -z "${SEEN_SOURCES[$source_name]+x}" ]]; then
+              SEEN_SOURCES["$source_name"]=1
+              SOURCES+=("$source_name")
+            fi
+          done
+
+          if (( ${#UNMAPPED[@]} > 0 )); then
+            echo "::error::Some runtime dependencies have no source package in the configured Debian Bookworm indexes:"
+            printf ' - %s\n' "${UNMAPPED[@]}"
+            exit 1
+          fi
+
+          # Read all releases, not only the first page. Either release family
+          # counts as an existing Core 2 build for dependency-closure purposes.
+          RELEASE_TAGS="$RUNNER_TEMP/core2-release-tags.txt"
+          : > "$RELEASE_TAGS"
+          page=1
+          while :; do
+            body="$RUNNER_TEMP/releases-page.json"
+            code="$(curl -sS -o "$body" -w '%{http_code}' \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'Accept: application/vnd.github+json' \
+              -H 'X-GitHub-Api-Version: 2022-11-28' \
+              "$API_URL/repos/$GITHUB_REPOSITORY/releases?per_page=100&page=$page")"
+            if [[ "$code" != "200" ]]; then
+              echo "::error::Could not inspect existing releases (HTTP $code)."
+              cat "$body"
+              exit 1
+            fi
+            jq -e 'type == "array"' "$body" >/dev/null
+            jq -r '.[].tag_name // empty' "$body" >> "$RELEASE_TAGS"
+            count="$(jq 'length' "$body")"
+            (( count < 100 )) && break
+            page=$((page + 1))
+          done
+
+          mapfile -t SOURCES < <(printf '%s\n' "${SOURCES[@]}" | sed '/^$/d' | sort -u)
+          PENDING=()
+          EXISTING=()
+          for source_name in "${SOURCES[@]}"; do
+            if [[ "$FORCE_REBUILD" == "true" ]]; then
+              PENDING+=("$source_name")
+              continue
+            fi
+
+            if awk -v opt="core2-$source_name-" -v sys="core2-system-$source_name-" \
+              'index($0,opt)==1 || index($0,sys)==1 { found=1 } END { exit !found }' "$RELEASE_TAGS"; then
+              EXISTING+=("$source_name")
+            else
+              PENDING+=("$source_name")
+            fi
+          done
+
+          PACKAGES_JSON="$(jq -cn --args '$ARGS.positional' -- "${PENDING[@]}")"
+          HAS_PACKAGES=false
+          (( ${#PENDING[@]} > 0 )) && HAS_PACKAGES=true
+
+          {
+            echo "packages=$PACKAGES_JSON"
+            echo "has_packages=$HAS_PACKAGES"
+            echo "target_binary=$TARGET_BINARY"
+            echo "source_count=${#SOURCES[@]}"
+            echo "pending_count=${#PENDING[@]}"
+            echo "existing_count=${#EXISTING[@]}"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Build with Deps — resolved plan"
+            echo
+            echo "- Requested input: $REQUESTED_PACKAGE"
+            echo "- Root binary: $TARGET_BINARY"
+            echo "- Dependency closure: Depends + Pre-Depends$( [[ "$INCLUDE_RECOMMENDS" == "true" ]] && echo " + Recommends" )"
+            echo "- Unique Debian source packages in closure: ${#SOURCES[@]}"
+            echo "- Already available as Core 2 releases: ${#EXISTING[@]}"
+            echo "- Source packages scheduled for build: ${#PENDING[@]}"
+            if (( ${#PENDING[@]} > 0 )); then
+              echo
+              echo "### Scheduled source packages"
+              printf -- '- %s\n' "${PENDING[@]}"
+            fi
+            if (( ${#EXISTING[@]} > 0 )); then
+              echo
+              echo "### Skipped — Core 2 release already exists"
+              printf -- '- %s\n' "${EXISTING[@]}"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          echo "Resolved ${#SOURCES[@]} unique source package(s); ${#PENDING[@]} need a build."
+
+  build:
+    name: Build ${{ matrix.package }} for Core 2
+    needs: resolve
+    if: needs.resolve.outputs.has_packages == 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        package: ${{ fromJSON(needs.resolve.outputs.packages) }}
+    uses: ./.github/workflows/d630-core2-package.yml
+    with:
+      package: ${{ matrix.package }}
+      force_rebuild: ${{ inputs.force_rebuild }}
+      refresh_index: false
+
+  refresh-index:
+    name: Refresh package release index
+    needs: [resolve, build]
+    if: always() && needs.resolve.outputs.has_packages == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Update package README after all builds
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh workflow run d630-core2-update-release-index.yml \
+            --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh."
+          else
+            echo "::warning::Build jobs finished, but the release index refresh could not be dispatched."
+          fi
+
+  summary:
+    name: Build with Deps summary
+    needs: [resolve, build, refresh-index]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report overall result
+        env:
+          RESOLVE_RESULT: ${{ needs.resolve.result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+          INDEX_RESULT: ${{ needs.refresh-index.result }}
+          HAS_PACKAGES: ${{ needs.resolve.outputs.has_packages }}
+          SOURCE_COUNT: ${{ needs.resolve.outputs.source_count }}
+          PENDING_COUNT: ${{ needs.resolve.outputs.pending_count }}
+          EXISTING_COUNT: ${{ needs.resolve.outputs.existing_count }}
+          TARGET_BINARY: ${{ needs.resolve.outputs.target_binary }}
+        shell: bash
+        run: |
+          {
+            echo "## Build with Deps result"
+            echo
+            echo "- Root binary: $TARGET_BINARY"
+            echo "- Source packages in recursive dependency closure: $SOURCE_COUNT"
+            echo "- Previously published / reused: $EXISTING_COUNT"
+            echo "- Scheduled for build: $PENDING_COUNT"
+            echo "- Dependency resolution: $RESOLVE_RESULT"
+            echo "- Build matrix: $BUILD_RESULT"
+            echo "- Release index refresh: $INDEX_RESULT"
+            if [[ "$RESOLVE_RESULT" != "success" ]]; then
+              echo
+              echo "Dependency resolution failed. Check the Resolve recursive Debian runtime dependencies job."
+            elif [[ "$HAS_PACKAGES" != "true" ]]; then
+              echo
+              echo "All source packages in this closure already have a Core 2 release; nothing needed rebuilding."
+            elif [[ "$BUILD_RESULT" == "success" ]]; then
+              echo
+              echo "All scheduled source-package builds completed successfully."
+            else
+              echo
+              echo "One or more source-package builds did not succeed. See the matrix jobs for the exact failures."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
