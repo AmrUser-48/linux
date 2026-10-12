@@ -245,6 +245,11 @@ jobs:
             fi
           done
 
+          if (( ${#PENDING[@]} > 256 )); then
+            echo "::error::The dependency closure requires ${#PENDING[@]} builds, exceeding GitHub Actions' 256-job matrix limit. Disable Recommends or split the request."
+            exit 1
+          fi
+
           PACKAGES_JSON="$(jq -cn --args '$ARGS.positional' -- "${PENDING[@]}")"
           HAS_PACKAGES=false
           (( ${#PENDING[@]} > 0 )) && HAS_PACKAGES=true
