@@ -40,6 +40,652 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### less (optimized)
+Version: `590-2.1~deb12u2+core2.1~20261012093417` · Published: 2026-10-12 09:35:12 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - less`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-less-590-2.1-deb12u2-core2.1-20261012093417/BUILD-INFO.txt)
+- [less_590-2.1.deb12u2+core2.1.20261012093417_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-less-590-2.1-deb12u2-core2.1-20261012093417/less_590-2.1.deb12u2%2Bcore2.1.20261012093417_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-less-590-2.1-deb12u2-core2.1-20261012093417/release-notes.md)
+- [SHA256SUMS-core2-less.txt](https://github.com/AmrUser-48/linux/releases/download/core2-less-590-2.1-deb12u2-core2.1-20261012093417/SHA256SUMS-core2-less.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-less-590-2.1-deb12u2-core2.1-20261012093417)
+
+</details>
+
+### busybox (optimized)
+Version: `1:1.35.0-4+deb12u1+core2.1~20261012093022` · Published: 2026-10-12 09:33:49 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - busybox`
+
+<details><summary>Files (8)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/BUILD-INFO.txt)
+- [busybox-static_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox-static_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb)
+- [busybox-syslogd_1.35.0-4+deb12u1+core2.1.20261012093022_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox-syslogd_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_all.deb)
+- [busybox_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/release-notes.md)
+- [SHA256SUMS-core2-busybox.txt](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/SHA256SUMS-core2-busybox.txt)
+- [udhcpc_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/udhcpc_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb)
+- [udhcpd_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/udhcpd_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022)
+
+</details>
+
+### libunistring (optimized)
+Version: `1.0-2+core2.1~20261012093008` · Published: 2026-10-12 09:32:34 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libunistring`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/BUILD-INFO.txt)
+- [libunistring-dev_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring-dev_1.0-2%2Bcore2.1.20261012093008_amd64.deb)
+- [libunistring2_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring2_1.0-2%2Bcore2.1.20261012093008_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/release-notes.md)
+- [SHA256SUMS-core2-libunistring.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/SHA256SUMS-core2-libunistring.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libunistring-1.0-2-core2.1-20261012093008)
+
+</details>
+
+### libidn2 (optimized)
+Version: `2.3.3-1+core2.1~20261012093052` · Published: 2026-10-12 09:32:02 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libidn2`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/BUILD-INFO.txt)
+- [idn2_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/idn2_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb)
+- [libidn2-0_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-0_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb)
+- [libidn2-dev_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-dev_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb)
+- [libidn2-doc_2.3.3-1+core2.1.20261012093052_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-doc_2.3.3-1%2Bcore2.1.20261012093052_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/release-notes.md)
+- [SHA256SUMS-core2-libidn2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/SHA256SUMS-core2-libidn2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libidn2-2.3.3-1-core2.1-20261012093052)
+
+</details>
+
+### glib2.0 (optimized)
+Version: `2.74.6-2+deb12u9+core2.1~20261012055158` · Published: 2026-10-12 06:07:36 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glib2.0`
+
+<details><summary>Files (10)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/BUILD-INFO.txt)
+- [libglib2.0-0_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+- [libglib2.0-bin_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-bin_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+- [libglib2.0-data_2.74.6-2+deb12u9+core2.1.20261012055158_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-data_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_all.deb)
+- [libglib2.0-dev-bin_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev-bin_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+- [libglib2.0-dev_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+- [libglib2.0-doc_2.74.6-2+deb12u9+core2.1.20261012055158_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-doc_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_all.deb)
+- [libglib2.0-tests_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-tests_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/release-notes.md)
+- [SHA256SUMS-core2-glib2.0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/SHA256SUMS-core2-glib2.0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158)
+
+</details>
+
+### texlive-bin (optimized)
+Version: `2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216` · Published: 2026-10-12 06:04:36 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - texlive-bin`
+
+<details><summary>Files (16)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/BUILD-INFO.txt)
+- [libkpathsea-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libkpathsea-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libkpathsea6_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libkpathsea6_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libptexenc-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libptexenc-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libptexenc1_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libptexenc1_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libsynctex-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libsynctex-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libsynctex2_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libsynctex2_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libtexlua-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libtexlua53-5_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53-5_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libtexlua53-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_all.deb)
+- [libtexlua53_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_all.deb)
+- [libtexluajit-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexluajit-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [libtexluajit2_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexluajit2_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/release-notes.md)
+- [SHA256SUMS-core2-texlive-bin.txt](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/SHA256SUMS-core2-texlive-bin.txt)
+- [texlive-binaries_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/texlive-binaries_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216)
+
+</details>
+
+### poppler (optimized)
+Version: `22.12.0-2+deb12u3+core2.1~20261012055344` · Published: 2026-10-12 05:59:35 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - poppler`
+
+<details><summary>Files (17)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/BUILD-INFO.txt)
+- [gir1.2-poppler-0.18_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/gir1.2-poppler-0.18_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-cpp-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-cpp-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-cpp0v5_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-cpp0v5_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-glib-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-glib-doc_22.12.0-2+deb12u3+core2.1.20261012055344_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib-doc_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_all.deb)
+- [libpoppler-glib8_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib8_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-private-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-private-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-qt5-1_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt5-1_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-qt5-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt5-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-qt6-3_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt6-3_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler-qt6-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt6-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [libpoppler126_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler126_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [poppler-utils_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/poppler-utils_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/release-notes.md)
+- [SHA256SUMS-core2-poppler.txt](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/SHA256SUMS-core2-poppler.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344)
+
+</details>
+
+### atril (optimized)
+Version: `1.26.0-2+deb12u4+core2.1~20261012055510` · Published: 2026-10-12 05:58:44 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - atril`
+
+<details><summary>Files (11)</summary>
+
+- [atril-common_1.26.0-2+deb12u4+core2.1.20261012055510_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/atril-common_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_all.deb)
+- [atril_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/atril_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/BUILD-INFO.txt)
+- [gir1.2-atrildocument-1.5.0_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/gir1.2-atrildocument-1.5.0_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [gir1.2-atrilview-1.5.0_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/gir1.2-atrilview-1.5.0_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [libatrildocument-dev_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrildocument-dev_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [libatrildocument3_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrildocument3_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [libatrilview-dev_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrilview-dev_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [libatrilview3_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrilview3_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/release-notes.md)
+- [SHA256SUMS-core2-atril.txt](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/SHA256SUMS-core2-atril.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510)
+
+</details>
+
+### okular (optimized)
+Version: `4:22.12.3-1+deb12u1+core2.1~20261012055453` · Published: 2026-10-12 05:58:38 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - okular`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/BUILD-INFO.txt)
+- [libokular5core10_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/libokular5core10_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [okular-dev_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-dev_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [okular-extra-backends_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-extra-backends_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [okular-mobile_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-mobile_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [okular_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [qml-module-org-kde-okular_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/qml-module-org-kde-okular_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/release-notes.md)
+- [SHA256SUMS-core2-okular.txt](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/SHA256SUMS-core2-okular.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453)
+
+</details>
+
+### mupdf (optimized)
+Version: `1.21.1+ds2-1+deb12u1+core2.1~20261012055501` · Published: 2026-10-12 05:57:27 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mupdf`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/BUILD-INFO.txt)
+- [libmupdf-dev_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/libmupdf-dev_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb)
+- [mupdf-tools_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/mupdf-tools_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb)
+- [mupdf_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/mupdf_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/release-notes.md)
+- [SHA256SUMS-core2-mupdf.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/SHA256SUMS-core2-mupdf.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501)
+
+</details>
+
+### wimlib (optimized)
+Version: `1.13.6-1+core2.1~20261012055555` · Published: 2026-10-12 05:57:15 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wimlib`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/BUILD-INFO.txt)
+- [libwim-dev_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim-dev_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb)
+- [libwim-doc_1.13.6-1+core2.1.20261012055555_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim-doc_1.13.6-1%2Bcore2.1.20261012055555_all.deb)
+- [libwim15_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim15_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/release-notes.md)
+- [SHA256SUMS-core2-wimlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/SHA256SUMS-core2-wimlib.txt)
+- [wimtools_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/wimtools_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055555)
+
+</details>
+
+### evince (optimized)
+Version: `43.1-2+deb12u1+core2.1~20261012055507` · Published: 2026-10-12 05:56:52 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - evince`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/BUILD-INFO.txt)
+- [evince-common_43.1-2+deb12u1+core2.1.20261012055507_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/evince-common_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_all.deb)
+- [evince_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/evince_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
+- [gir1.2-evince-3.0_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/gir1.2-evince-3.0_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
+- [libevdocument3-4_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevdocument3-4_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
+- [libevince-dev_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevince-dev_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
+- [libevview3-3_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevview3-3_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/release-notes.md)
+- [SHA256SUMS-core2-evince.txt](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/SHA256SUMS-core2-evince.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507)
+
+</details>
+
+### qpdfview (optimized)
+Version: `0.5.0+ds-2+core2.1~20261012055504` · Published: 2026-10-12 05:56:50 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - qpdfview`
+
+<details><summary>Files (8)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/BUILD-INFO.txt)
+- [qpdfview-djvu-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-djvu-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb)
+- [qpdfview-pdf-poppler-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-pdf-poppler-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb)
+- [qpdfview-ps-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-ps-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb)
+- [qpdfview-translations_0.5.0+ds-2+core2.1.20261012055504_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-translations_0.5.0%2Bds-2%2Bcore2.1.20261012055504_all.deb)
+- [qpdfview_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/release-notes.md)
+- [SHA256SUMS-core2-qpdfview.txt](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/SHA256SUMS-core2-qpdfview.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504)
+
+</details>
+
+### apvlv (optimized)
+Version: `0.4.0+repack-1+core2.1~20261012055524` · Published: 2026-10-12 05:56:17 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - apvlv`
+
+<details><summary>Files (4)</summary>
+
+- [apvlv_0.4.0+repack-1+core2.1.20261012055524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524/apvlv_0.4.0%2Brepack-1%2Bcore2.1.20261012055524_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524/release-notes.md)
+- [SHA256SUMS-core2-apvlv.txt](https://github.com/AmrUser-48/linux/releases/download/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524/SHA256SUMS-core2-apvlv.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524)
+
+</details>
+
+### unar (optimized)
+Version: `1.10.7+ds1+really1.10.1-2+core2.1~20261012055403` · Published: 2026-10-12 05:55:51 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - unar`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403/release-notes.md)
+- [SHA256SUMS-core2-unar.txt](https://github.com/AmrUser-48/linux/releases/download/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403/SHA256SUMS-core2-unar.txt)
+- [unar_1.10.7+ds1+really1.10.1-2+core2.1.20261012055403_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403/unar_1.10.7%2Bds1%2Breally1.10.1-2%2Bcore2.1.20261012055403_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403)
+
+</details>
+
+### zathura-pdf-poppler (optimized)
+Version: `0.3.1-1+core2.1~20261012055457` · Published: 2026-10-12 05:55:48 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zathura-pdf-poppler`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457/release-notes.md)
+- [SHA256SUMS-core2-zathura-pdf-poppler.txt](https://github.com/AmrUser-48/linux/releases/download/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457/SHA256SUMS-core2-zathura-pdf-poppler.txt)
+- [zathura-pdf-poppler_0.3.1-1+core2.1.20261012055457_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457/zathura-pdf-poppler_0.3.1-1%2Bcore2.1.20261012055457_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457)
+
+</details>
+
+### wimlib (optimized)
+Version: `1.13.6-1+core2.1~20261012055405` · Published: 2026-10-12 05:55:45 UTC
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/BUILD-INFO.txt)
+- [libwim-dev_1.13.6-1+core2.1.20261012055405_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/libwim-dev_1.13.6-1%2Bcore2.1.20261012055405_amd64.deb)
+- [libwim-doc_1.13.6-1+core2.1.20261012055405_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/libwim-doc_1.13.6-1%2Bcore2.1.20261012055405_all.deb)
+- [libwim15_1.13.6-1+core2.1.20261012055405_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/libwim15_1.13.6-1%2Bcore2.1.20261012055405_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/release-notes.md)
+- [SHA256SUMS-core2-wimlib.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/SHA256SUMS-core2-wimlib.txt)
+- [wimtools_1.13.6-1+core2.1.20261012055405_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055405/wimtools_1.13.6-1%2Bcore2.1.20261012055405_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055405)
+
+</details>
+
+### xpdf (optimized)
+Version: `3.04+git20220601-1+core2.1~20261012055410` · Published: 2026-10-12 05:55:34 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xpdf`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410/release-notes.md)
+- [SHA256SUMS-core2-xpdf.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410/SHA256SUMS-core2-xpdf.txt)
+- [xpdf_3.04+git20220601-1+core2.1.20261012055410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410/xpdf_3.04%2Bgit20220601-1%2Bcore2.1.20261012055410_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410)
+
+</details>
+
+### links2 (optimized)
+Version: `2.28-1+core2.1~20261012055305` · Published: 2026-10-12 05:55:31 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - links2`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/BUILD-INFO.txt)
+- [links2_2.28-1+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/links2_2.28-1%2Bcore2.1.20261012055305_amd64.deb)
+- [links_2.28-1+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/links_2.28-1%2Bcore2.1.20261012055305_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/release-notes.md)
+- [SHA256SUMS-core2-links2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/SHA256SUMS-core2-links2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-links2-2.28-1-core2.1-20261012055305)
+
+</details>
+
+### python-boto (optimized)
+Version: `2.49.0-4.1+core2.1~20261012055353` · Published: 2026-10-12 05:55:27 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python-boto`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python-boto-2.49.0-4.1-core2.1-20261012055353/BUILD-INFO.txt)
+- [python3-boto_2.49.0-4.1+core2.1.20261012055353_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python-boto-2.49.0-4.1-core2.1-20261012055353/python3-boto_2.49.0-4.1%2Bcore2.1.20261012055353_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-python-boto-2.49.0-4.1-core2.1-20261012055353/release-notes.md)
+- [SHA256SUMS-core2-python-boto.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python-boto-2.49.0-4.1-core2.1-20261012055353/SHA256SUMS-core2-python-boto.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-python-boto-2.49.0-4.1-core2.1-20261012055353)
+
+</details>
+
+### djvulibre (optimized)
+Version: `3.5.28-2.2~deb12u1+core2.1~20261012055223` · Published: 2026-10-12 05:55:20 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - djvulibre`
+
+<details><summary>Files (11)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/BUILD-INFO.txt)
+- [djview3_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djview3_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb)
+- [djview_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djview_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb)
+- [djvulibre-bin_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvulibre-bin_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
+- [djvulibre-desktop_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvulibre-desktop_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb)
+- [djvuserve_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvuserve_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
+- [libdjvulibre-dev_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre-dev_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
+- [libdjvulibre-text_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre-text_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb)
+- [libdjvulibre21_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/release-notes.md)
+- [SHA256SUMS-core2-djvulibre.txt](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/SHA256SUMS-core2-djvulibre.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223)
+
+</details>
+
+### w3m (optimized)
+Version: `0.5.3+git20230121-2+core2.1~20261012055311` · Published: 2026-10-12 05:55:17 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - w3m`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/release-notes.md)
+- [SHA256SUMS-core2-w3m.txt](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/SHA256SUMS-core2-w3m.txt)
+- [w3m-img_0.5.3+git20230121-2+core2.1.20261012055311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/w3m-img_0.5.3%2Bgit20230121-2%2Bcore2.1.20261012055311_amd64.deb)
+- [w3m_0.5.3+git20230121-2+core2.1.20261012055311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/w3m_0.5.3%2Bgit20230121-2%2Bcore2.1.20261012055311_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311)
+
+</details>
+
+### aspell (optimized)
+Version: `0.60.8-4+core2.1~20261012055250` · Published: 2026-10-12 05:55:13 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - aspell`
+
+<details><summary>Files (8)</summary>
+
+- [aspell-doc_0.60.8-4+core2.1.20261012055250_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/aspell-doc_0.60.8-4%2Bcore2.1.20261012055250_all.deb)
+- [aspell_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/aspell_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/BUILD-INFO.txt)
+- [libaspell-dev_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libaspell-dev_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb)
+- [libaspell15_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libaspell15_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb)
+- [libpspell-dev_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libpspell-dev_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/release-notes.md)
+- [SHA256SUMS-core2-aspell.txt](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/SHA256SUMS-core2-aspell.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250)
+
+</details>
+
+### python-tz (optimized)
+Version: `2022.7.1-4+core2.1~20261012055311` · Published: 2026-10-12 05:55:02 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python-tz`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python-tz-2022.7.1-4-core2.1-20261012055311/BUILD-INFO.txt)
+- [python3-tz_2022.7.1-4+core2.1.20261012055311_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python-tz-2022.7.1-4-core2.1-20261012055311/python3-tz_2022.7.1-4%2Bcore2.1.20261012055311_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-python-tz-2022.7.1-4-core2.1-20261012055311/release-notes.md)
+- [SHA256SUMS-core2-python-tz.txt](https://github.com/AmrUser-48/linux/releases/download/core2-python-tz-2022.7.1-4-core2.1-20261012055311/SHA256SUMS-core2-python-tz.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-python-tz-2022.7.1-4-core2.1-20261012055311)
+
+</details>
+
+### cdrkit (optimized)
+Version: `9:1.1.11-3.4+core2.1~20261012055245` · Published: 2026-10-12 05:55:01 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cdrkit`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/BUILD-INFO.txt)
+- [cdrkit-doc_1.1.11-3.4+core2.1.20261012055245_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/cdrkit-doc_1.1.11-3.4%2Bcore2.1.20261012055245_all.deb)
+- [genisoimage_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/genisoimage_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb)
+- [icedax_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/icedax_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/release-notes.md)
+- [SHA256SUMS-core2-cdrkit.txt](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/SHA256SUMS-core2-cdrkit.txt)
+- [wodim_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/wodim_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245)
+
+</details>
+
+### lynx (optimized)
+Version: `2.9.0dev.12-1+core2.1~20261012055253` · Published: 2026-10-12 05:54:59 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lynx`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/BUILD-INFO.txt)
+- [lynx-common_2.9.0dev.12-1+core2.1.20261012055253_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/lynx-common_2.9.0dev.12-1%2Bcore2.1.20261012055253_all.deb)
+- [lynx_2.9.0dev.12-1+core2.1.20261012055253_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/lynx_2.9.0dev.12-1%2Bcore2.1.20261012055253_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/release-notes.md)
+- [SHA256SUMS-core2-lynx.txt](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/SHA256SUMS-core2-lynx.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253)
+
+</details>
+
+### gv (optimized)
+Version: `1:3.7.4-2+core2.1~20261012055256` · Published: 2026-10-12 05:54:41 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gv`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gv-1-3.7.4-2-core2.1-20261012055256/BUILD-INFO.txt)
+- [gv_3.7.4-2+core2.1.20261012055256_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gv-1-3.7.4-2-core2.1-20261012055256/gv_3.7.4-2%2Bcore2.1.20261012055256_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gv-1-3.7.4-2-core2.1-20261012055256/release-notes.md)
+- [SHA256SUMS-core2-gv.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gv-1-3.7.4-2-core2.1-20261012055256/SHA256SUMS-core2-gv.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gv-1-3.7.4-2-core2.1-20261012055256)
+
+</details>
+
+### mc (optimized)
+Version: `3:4.8.29-2+core2.1~20261012055147` · Published: 2026-10-12 05:54:40 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mc`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/BUILD-INFO.txt)
+- [mc-data_4.8.29-2+core2.1.20261012055147_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/mc-data_4.8.29-2%2Bcore2.1.20261012055147_all.deb)
+- [mc_4.8.29-2+core2.1.20261012055147_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/mc_4.8.29-2%2Bcore2.1.20261012055147_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/release-notes.md)
+- [SHA256SUMS-core2-mc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/SHA256SUMS-core2-mc.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mc-3-4.8.29-2-core2.1-20261012055147)
+
+</details>
+
+### slang2 (optimized)
+Version: `2.3.3-3+core2.1~20261012055155` · Published: 2026-10-12 05:54:26 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - slang2`
+
+<details><summary>Files (8)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/BUILD-INFO.txt)
+- [libslang2-dev_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-dev_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
+- [libslang2-modules_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-modules_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
+- [libslang2-pic_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-pic_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
+- [libslang2_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/release-notes.md)
+- [SHA256SUMS-core2-slang2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/SHA256SUMS-core2-slang2.txt)
+- [slsh_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/slsh_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155)
+
+</details>
+
+### file (optimized)
+Version: `1:5.44-3+core2.1~20261012055237` · Published: 2026-10-12 05:54:25 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - file`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/BUILD-INFO.txt)
+- [file_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/file_5.44-3%2Bcore2.1.20261012055237_amd64.deb)
+- [libmagic-dev_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-dev_5.44-3%2Bcore2.1.20261012055237_amd64.deb)
+- [libmagic-mgc_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-mgc_5.44-3%2Bcore2.1.20261012055237_amd64.deb)
+- [libmagic1_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic1_5.44-3%2Bcore2.1.20261012055237_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/release-notes.md)
+- [SHA256SUMS-core2-file.txt](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/SHA256SUMS-core2-file.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237)
+
+</details>
+
+### odt2txt (optimized)
+Version: `0.5-7+core2.1~20261012055305` · Published: 2026-10-12 05:54:23 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - odt2txt`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-odt2txt-0.5-7-core2.1-20261012055305/BUILD-INFO.txt)
+- [odt2txt_0.5-7+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-odt2txt-0.5-7-core2.1-20261012055305/odt2txt_0.5-7%2Bcore2.1.20261012055305_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-odt2txt-0.5-7-core2.1-20261012055305/release-notes.md)
+- [SHA256SUMS-core2-odt2txt.txt](https://github.com/AmrUser-48/linux/releases/download/core2-odt2txt-0.5-7-core2.1-20261012055305/SHA256SUMS-core2-odt2txt.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-odt2txt-0.5-7-core2.1-20261012055305)
+
+</details>
+
+### libssh2 (optimized)
+Version: `1.10.0-3+deb12u1+core2.1~20261012055158` · Published: 2026-10-12 05:54:14 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libssh2`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/BUILD-INFO.txt)
+- [libssh2-1-dev_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1-dev_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb)
+- [libssh2-1_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/release-notes.md)
+- [SHA256SUMS-core2-libssh2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/SHA256SUMS-core2-libssh2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158)
+
+</details>
+
+### ebook-tools (optimized)
+Version: `0.2.2-6+core2.1~20261012055224` · Published: 2026-10-12 05:54:13 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ebook-tools`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/BUILD-INFO.txt)
+- [epub-utils_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/epub-utils_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb)
+- [libepub-dev_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/libepub-dev_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb)
+- [libepub0_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/libepub0_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/release-notes.md)
+- [SHA256SUMS-core2-ebook-tools.txt](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/SHA256SUMS-core2-ebook-tools.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-ebook-tools-0.2.2-6-core2.1-20261012055224)
+
+</details>
+
+### bzip2 (optimized)
+Version: `1.0.8-5+core2.1~20261012055218` · Published: 2026-10-12 05:53:52 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bzip2`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/BUILD-INFO.txt)
+- [bzip2-doc_1.0.8-5+core2.1.20261012055218_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/bzip2-doc_1.0.8-5%2Bcore2.1.20261012055218_all.deb)
+- [bzip2_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/bzip2_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
+- [libbz2-1.0_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
+- [libbz2-dev_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-dev_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/release-notes.md)
+- [SHA256SUMS-core2-bzip2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/SHA256SUMS-core2-bzip2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-bzip2-1.0.8-5-core2.1-20261012055218)
+
+</details>
+
+### catdvi (optimized)
+Version: `0.14-14+core2.1~20261012055215` · Published: 2026-10-12 05:53:50 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - catdvi`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-catdvi-0.14-14-core2.1-20261012055215/BUILD-INFO.txt)
+- [catdvi_0.14-14+core2.1.20261012055215_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-catdvi-0.14-14-core2.1-20261012055215/catdvi_0.14-14%2Bcore2.1.20261012055215_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-catdvi-0.14-14-core2.1-20261012055215/release-notes.md)
+- [SHA256SUMS-core2-catdvi.txt](https://github.com/AmrUser-48/linux/releases/download/core2-catdvi-0.14-14-core2.1-20261012055215/SHA256SUMS-core2-catdvi.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-catdvi-0.14-14-core2.1-20261012055215)
+
+</details>
+
+### arj (optimized)
+Version: `3.10.22-26+core2.1~20261012055158` · Published: 2026-10-12 05:53:49 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - arj`
+
+<details><summary>Files (4)</summary>
+
+- [arj_3.10.22-26+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-arj-3.10.22-26-core2.1-20261012055158/arj_3.10.22-26%2Bcore2.1.20261012055158_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-arj-3.10.22-26-core2.1-20261012055158/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-arj-3.10.22-26-core2.1-20261012055158/release-notes.md)
+- [SHA256SUMS-core2-arj.txt](https://github.com/AmrUser-48/linux/releases/download/core2-arj-3.10.22-26-core2.1-20261012055158/SHA256SUMS-core2-arj.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-arj-3.10.22-26-core2.1-20261012055158)
+
+</details>
+
+### unzip (optimized)
+Version: `6.0-28+deb12u1+core2.1~20261012055157` · Published: 2026-10-12 05:53:44 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - unzip`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157/release-notes.md)
+- [SHA256SUMS-core2-unzip.txt](https://github.com/AmrUser-48/linux/releases/download/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157/SHA256SUMS-core2-unzip.txt)
+- [unzip_6.0-28+deb12u1+core2.1.20261012055157_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157/unzip_6.0-28%2Bdeb12u1%2Bcore2.1.20261012055157_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157)
+
+</details>
+
+### dbview (optimized)
+Version: `1.0.4-5+core2.1~20261012055207` · Published: 2026-10-12 05:53:42 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dbview`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-dbview-1.0.4-5-core2.1-20261012055207/BUILD-INFO.txt)
+- [dbview_1.0.4-5+core2.1.20261012055207_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dbview-1.0.4-5-core2.1-20261012055207/dbview_1.0.4-5%2Bcore2.1.20261012055207_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-dbview-1.0.4-5-core2.1-20261012055207/release-notes.md)
+- [SHA256SUMS-core2-dbview.txt](https://github.com/AmrUser-48/linux/releases/download/core2-dbview-1.0.4-5-core2.1-20261012055207/SHA256SUMS-core2-dbview.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-dbview-1.0.4-5-core2.1-20261012055207)
+
+</details>
+
+### gpm (optimized)
+Version: `1.20.7-10+core2.1~20261012055149` · Published: 2026-10-12 05:53:41 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gpm`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/BUILD-INFO.txt)
+- [gpm_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/gpm_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb)
+- [libgpm-dev_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/libgpm-dev_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb)
+- [libgpm2_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/libgpm2_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/release-notes.md)
+- [SHA256SUMS-core2-gpm.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/SHA256SUMS-core2-gpm.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gpm-1.20.7-10-core2.1-20261012055149)
+
+</details>
+
 ### tigervnc (optimized)
 Version: `1.12.0+dfsg-8+core2.1~20261011154436` · Published: 2026-10-11 15:47:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tigervnc`
@@ -802,7 +1448,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### bzip2 (system)
 Version: `1.0.8-5+core2.1~20261009192040` · Published: 2026-10-09 19:21:05 UTC
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bzip2`
 
 <details><summary>Files (6)</summary>
 
