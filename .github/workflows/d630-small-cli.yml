@@ -1,0 +1,230 @@
+name: Build compact Core 2 CLI tools
+run-name: "Core2 CLI: gh=${{ inputs.gh_ref || 'latest' }}, codex=${{ inputs.codex_ref || 'latest' }}"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-small-cli.yml"
+  workflow_dispatch:
+    inputs:
+      gh_ref:
+        description: "GitHub CLI upstream ref: latest or a tag such as v2.102.0"
+        required: true
+        default: "latest"
+        type: string
+      codex_ref:
+        description: "Codex upstream ref: latest or a tag such as rust-v0.163.0"
+        required: true
+        default: "latest"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build compact gh and Core 2 Codex binaries
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - name: Install build and archive tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            binutils build-essential ca-certificates cmake curl file git jq \
+            musl-tools pkg-config protobuf-compiler zstd
+
+      - name: Resolve upstream refs
+        id: resolve
+        env:
+          GH_REF_INPUT: ${{ inputs.gh_ref || 'latest' }}
+          CODEX_REF_INPUT: ${{ inputs.codex_ref || 'latest' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          GH_REF="$GH_REF_INPUT"
+          CODEX_REF="$CODEX_REF_INPUT"
+          if [[ "$GH_REF" == "latest" ]]; then
+            GH_REF="$(curl -fsSL --retry 3 https://api.github.com/repos/cli/cli/releases/latest | jq -er '.tag_name')"
+          fi
+          if [[ "$CODEX_REF" == "latest" ]]; then
+            CODEX_REF="$(curl -fsSL --retry 3 https://api.github.com/repos/openai/codex/releases/latest | jq -er '.tag_name')"
+          fi
+          for REF in "$GH_REF" "$CODEX_REF"; do
+            if [[ ! "$REF" =~ ^[A-Za-z0-9][A-Za-z0-9._/-]*$ ]]; then
+              echo "::error::Invalid upstream ref: $REF"
+              exit 1
+            fi
+          done
+          {
+            echo "gh_ref=$GH_REF"
+            echo "codex_ref=$CODEX_REF"
+          } >> "$GITHUB_OUTPUT"
+          echo "GitHub CLI source ref: $GH_REF"
+          echo "Codex source ref: $CODEX_REF"
+
+      - name: Fetch upstream source
+        env:
+          GH_REF: ${{ steps.resolve.outputs.gh_ref }}
+          CODEX_REF: ${{ steps.resolve.outputs.codex_ref }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GH_REF" https://github.com/cli/cli.git gh-src
+          git clone --depth 1 --branch "$CODEX_REF" https://github.com/openai/codex.git codex-src
+
+      - name: Read Codex pinned Rust toolchain
+        id: rustver
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOOLCHAIN="$(sed -n 's/^[[:space:]]*channel[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' codex-src/codex-rs/rust-toolchain.toml | head -n 1)"
+          if [[ -z "$TOOLCHAIN" ]]; then
+            echo "::error::Could not read the Rust toolchain pinned by Codex"
+            exit 1
+          fi
+          echo "version=$TOOLCHAIN" >> "$GITHUB_OUTPUT"
+
+      - name: Install upstream-pinned Rust toolchain and musl target
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ steps.rustver.outputs.version }}
+          targets: x86_64-unknown-linux-musl
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.27.x"
+          cache: true
+          cache-dependency-path: gh-src/go.sum
+
+      - name: Cache Cargo downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: codex-cargo-${{ runner.os }}-${{ steps.resolve.outputs.codex_ref }}
+          restore-keys: |
+            codex-cargo-${{ runner.os }}-
+
+      - name: Build stripped, static GitHub CLI
+        working-directory: gh-src
+        env:
+          GH_REF: ${{ steps.resolve.outputs.gh_ref }}
+          GOOS: linux
+          GOARCH: amd64
+          GOAMD64: v1
+          CGO_ENABLED: "0"
+          GO_LDFLAGS: "-s -w"
+        shell: bash
+        run: |
+          set -euo pipefail
+          make clean bin/gh
+          ./bin/gh version
+          file ./bin/gh
+          readelf -h ./bin/gh | grep -E 'Class:|Machine:'
+          if readelf -l ./bin/gh | grep -q INTERP; then
+            echo "::error::gh is unexpectedly dynamically linked"
+            exit 1
+          fi
+          mkdir -p "$GITHUB_WORKSPACE/out/gh-payload"
+          install -m 0755 ./bin/gh "$GITHUB_WORKSPACE/out/gh-payload/gh"
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner \
+            -I 'zstd -12 -T0' \
+            -cf "$GITHUB_WORKSPACE/out/gh-linux-amd64-core2.tar.zst" \
+            -C "$GITHUB_WORKSPACE/out/gh-payload" gh
+          {
+            printf 'upstream_ref=%s\n' "$GH_REF"
+            printf 'source_commit=%s\n' "$(git rev-parse HEAD)"
+            printf 'version=%s\n' "$(./bin/gh version | head -n 1)"
+            printf 'go=%s\n' "$(go version)"
+            printf 'target=linux/amd64\nGOAMD64=v1\nCGO_ENABLED=0\nlinker_flags=-s -w\n'
+            printf 'cpu_note=GOAMD64 v1 keeps compatibility with Core 2 Duo T7250; v2 requires unsupported SSE4.1/SSE4.2.\n'
+            printf 'binary_bytes=%s\n' "$(stat -c %s ./bin/gh)"
+          } > "$GITHUB_WORKSPACE/out/gh-build-info.txt"
+          ls -lh "$GITHUB_WORKSPACE/out/gh-linux-amd64-core2.tar.zst" "$GITHUB_WORKSPACE/out/gh-payload/gh"
+
+      - name: Build stripped static Codex for Core 2
+        working-directory: codex-src/codex-rs
+        env:
+          CODEX_REF: ${{ steps.resolve.outputs.codex_ref }}
+          RUSTFLAGS: "-C target-cpu=core2 -C strip=symbols"
+          CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER: musl-gcc
+          CC_x86_64_unknown_linux_musl: musl-gcc
+          CFLAGS_x86_64_unknown_linux_musl: "-O2 -pipe -march=core2 -mtune=core2"
+          CARGO_PROFILE_RELEASE_OPT_LEVEL: "3"
+          CARGO_PROFILE_RELEASE_LTO: "thin"
+          CARGO_PROFILE_RELEASE_CODEGEN_UNITS: "1"
+          CARGO_PROFILE_RELEASE_DEBUG: "0"
+          CARGO_BUILD_JOBS: "2"
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo build --locked --release --target x86_64-unknown-linux-musl -p codex-cli --bin codex
+          BIN="target/x86_64-unknown-linux-musl/release/codex"
+          test -s "$BIN"
+          strip --strip-unneeded "$BIN"
+          "$BIN" --version
+          file "$BIN"
+          readelf -h "$BIN" | grep -E 'Class:|Machine:'
+          if readelf -l "$BIN" | grep -q INTERP; then
+            echo "::error::Codex musl binary has an ELF interpreter; expected a self-contained executable"
+            exit 1
+          fi
+          if readelf -d "$BIN" 2>/dev/null | grep -q NEEDED; then
+            echo "::error::Codex musl binary has dynamic-library dependencies"
+            exit 1
+          fi
+          mkdir -p "$GITHUB_WORKSPACE/out/codex-payload"
+          install -m 0755 "$BIN" "$GITHUB_WORKSPACE/out/codex-payload/codex"
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner \
+            -I 'zstd -12 -T0' \
+            -cf "$GITHUB_WORKSPACE/out/codex-linux-amd64-core2-musl.tar.zst" \
+            -C "$GITHUB_WORKSPACE/out/codex-payload" codex
+          {
+            printf 'upstream_ref=%s\n' "$CODEX_REF"
+            printf 'source_commit=%s\n' "$(git -C "$GITHUB_WORKSPACE/codex-src" rev-parse HEAD)"
+            printf 'version=%s\n' "$("$BIN" --version)"
+            printf 'rust=%s\n' "$(rustc --version)"
+            printf 'target=x86_64-unknown-linux-musl\nRUSTFLAGS=-C target-cpu=core2 -C strip=symbols\n'
+            printf 'CFLAGS=-O2 -pipe -march=core2 -mtune=core2\n'
+            printf 'binary_bytes=%s\n' "$(stat -c %s "$BIN")"
+          } > "$GITHUB_WORKSPACE/out/codex-build-info.txt"
+          ls -lh "$GITHUB_WORKSPACE/out/codex-linux-amd64-core2-musl.tar.zst" "$BIN"
+
+      - name: Prepare checksums and build information
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat out/gh-build-info.txt out/codex-build-info.txt > out/BUILD-INFO.txt
+          (cd out && sha256sum gh-linux-amd64-core2.tar.zst codex-linux-amd64-core2-musl.tar.zst > SHA256SUMS)
+          cat out/BUILD-INFO.txt
+          cat out/SHA256SUMS
+
+      - name: Publish release without changing repository latest
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: core2-cli-${{ github.run_id }}
+          name: "Core 2 CLI tools: gh ${{ steps.resolve.outputs.gh_ref }} / Codex ${{ steps.resolve.outputs.codex_ref }}"
+          target_commitish: ${{ github.sha }}
+          make_latest: false
+          draft: false
+          prerelease: false
+          fail_on_unmatched_files: true
+          files: |
+            out/gh-linux-amd64-core2.tar.zst
+            out/codex-linux-amd64-core2-musl.tar.zst
+            out/BUILD-INFO.txt
+            out/SHA256SUMS
+          body: |
+            Standalone Linux x86_64 command-line binaries built from upstream source for the Dell Latitude D630 / Intel Core 2 Duo.
+
+            - gh: CGO disabled and linker symbols removed. GOAMD64=v1 is intentional: Go's v2 baseline requires SSE4.1/SSE4.2, which the Core 2 Duo T7250 does not support.
+            - codex: Rust target x86_64-unknown-linux-musl, compiled with -C target-cpu=core2, stripped, and checked for dynamic-library dependencies.
+            - SHA256SUMS verifies the archives; BUILD-INFO.txt records source refs and build flags.
+
+            Extract the desired archive and copy the executable to ~/.local/bin or another directory on PATH.
