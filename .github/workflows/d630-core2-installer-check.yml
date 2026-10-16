@@ -128,7 +128,6 @@ jobs:
                   "libxfixes", "libxi", "libxinerama", "libxscrnsaver",
                   "libxkbcommon", "libxkbfile", "libxfont",
               },
-              "llvm-runtime": {"llvm-toolchain-15"},
               "java-runtime": {"openjdk-17"},
           }
           for series, required in expected.items():
