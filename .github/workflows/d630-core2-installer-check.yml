@@ -84,8 +84,6 @@ jobs:
               "xvidcore", "libtheora", "libvpx", "ffmpeg", "gstreamer1.0",
               "gst-plugins-base1.0", "gst-plugins-good1.0", "gst-plugins-bad1.0",
               "gst-libav1.0", "gstreamer-vaapi", "mpv", "vlc",
-              # Provides libgomp1
-              "gcc-12",
           }
           duplicates = sorted({package for package in packages if packages.count(package) > 1})
           missing = sorted(required - set(packages))
