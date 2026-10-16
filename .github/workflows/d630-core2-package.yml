@@ -229,6 +229,12 @@ jobs:
               "debian/mesa-opencl-icd/etc/OpenCL/vendors",
               "No Rusticl ICD in the D630 no-LLVM build; skipping optional move.",
           )
+          rules = guard_missing_driver_move(
+              rules,
+              "debian/tmp/usr/lib/${DEB_HOST_MULTIARCH}/libRusticlOpenCL*",
+              "debian/mesa-opencl-icd/usr/lib/${DEB_HOST_MULTIARCH}/",
+              "No Rusticl OpenCL library in the D630 no-LLVM build; skipping optional move.",
+          )
 
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
