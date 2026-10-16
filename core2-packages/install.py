@@ -37,6 +37,7 @@ PRIMARY = {
     "garcon": ["libgarcon-1-0"],
     "exo": ["libexo-2-0"],
     "xorg-server": ["xserver-xorg-core"],
+    "xserver-xorg-input-keyboard": ["xserver-xorg-input-kbd"],
     "zlib": ["zlib1g"],
     "shadow": ["passwd"],
     "readline": ["libreadline8"],
@@ -137,7 +138,7 @@ def parse_dpkg_deb_fields(output):
         fields[name.strip().lower()] = value.strip()
     return fields
 
-def parse_deb_asset(asset):
+def parse_deb_asset(asset, release_version=None):
     name = str(asset.get("name") or "")
     if not name.endswith(".deb"):
         return None
@@ -148,6 +149,12 @@ def parse_deb_asset(asset):
     if not package or not version or not arch:
         return None
     version = canonicalize_asset_version(version)
+    # Debian .deb filenames omit the epoch (for example, "2:"). The
+    # package control metadata and installed dpkg database retain it, so
+    # restore the release version epoch before comparing or validating assets.
+    epoch = re.match(r"^([0-9]+):", str(release_version or ""))
+    if epoch and ":" not in version:
+        version = epoch.group(1) + ":" + version
     return {"asset": asset, "name": name, "package": package, "version": version, "arch": arch}
 
 def installed_packages():
@@ -302,7 +309,11 @@ def main():
         print("Available package keys: " + ", ".join(sorted(releases)), file=sys.stderr)
         return 2
 
-    package_assets = [p for a in (release.get("assets") or []) if (p := parse_deb_asset(a))]
+    _, release_version = package_and_version(release)
+    package_assets = [
+        p for a in (release.get("assets") or [])
+        if (p := parse_deb_asset(a, release_version))
+    ]
     package_assets = [
         p for p in package_assets
         if p["arch"] in ("amd64", "all") and not is_debug_package(p["package"])
