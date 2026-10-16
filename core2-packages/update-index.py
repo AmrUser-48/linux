@@ -303,6 +303,8 @@ def build_tree_markdown(nodes):
     roots = sorted(name for name in by_name if name not in referenced)
     output = []
     expanded = set()
+    package_width = max(28, min(44, max((len(name) for name in by_name), default=28)))
+    version_width = max((len(display_version(node.get("version", ""))) for node in by_name.values()), default=1)
 
     def render_package(name, path):
         node = by_name[name]
@@ -312,7 +314,10 @@ def build_tree_markdown(nodes):
             " <em>[shared dependency]</em>" if shared else ""
         )
         package = html.escape(name, quote=True)
-        version = html.escape(display_version(node.get("version", "")), quote=True)
+        raw_version = display_version(node.get("version", ""))
+        version = html.escape(raw_version, quote=True)
+        name_padding = "&nbsp;" * max(2, package_width - len(name))
+        version_padding = "&nbsp;" * max(0, version_width - len(raw_version))
         downloads = node.get("downloads") or []
 
         # A repeated dependency links directly to its .deb instead of repeating
@@ -330,7 +335,7 @@ def build_tree_markdown(nodes):
 
         output.extend([
             "<details>",
-            f"<summary><code>{package}</code> — <code>{version}</code></summary>",
+            f"<summary><code>{package}{name_padding}{version_padding}{version}</code></summary>",
             "",
             "**Download files**",
         ])
