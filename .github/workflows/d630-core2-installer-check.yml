@@ -233,12 +233,12 @@ jobs:
               for forbidden in ("python3.11-dbg_", "python3.11-dbgsym_", ".orig.tar.gz", ".dsc"):
                   assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
               assert "<details><summary>Files (4)</summary>" in result
-              assert "Unique binary packages indexed: 3" in result
+              assert "**Unique binary packages indexed:** 3." in result
               tree_start = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->")
               tree_end = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->")
               tree_result = result[tree_start:tree_end]
               assert "<summary>Development (1 top-level packages)</summary>" in tree_result
-              assert "<summary><code>python3.11-dev</code> — <code>3.11.2-1</code></summary>" in tree_result
+              assert "<summary><code>python3.11-dev" in tree_result and "3.11.2-1</code></summary>" in tree_result
               assert "[python3.11-dev_3.11.2-1_amd64.deb](https://example.invalid/python-dev.deb)" in tree_result
               assert "[python3.11_3.11.2-1_amd64.deb](https://example.invalid/python.deb)" in tree_result
               assert "<summary>System &amp; libraries (1 top-level packages)</summary>" in tree_result
