@@ -178,6 +178,27 @@ jobs:
 
           path = Path(sys.argv[1])
           control = path.read_text(encoding="utf-8")
+
+          # An empty LLVM_ARCHS/RUSTICL_ARCHS would expand Debian qualifiers to
+          # invalid forms such as "glslang-tools []". Remove those optional
+          # Build-Depends entries outright in this no-LLVM/no-Rusticl profile.
+          kept_lines = []
+          removed_arch_qualified_deps = 0
+          for line in control.splitlines(keepends=True):
+              if re.search(r"\\[@(?:LLVM|RUSTICL)_ARCHS@\\]", line):
+                  if line.lstrip().startswith(("Package:", "Architecture:")):
+                      raise SystemExit("Unexpected architecture field using optional build-dependency placeholder")
+                  removed_arch_qualified_deps += 1
+                  continue
+              kept_lines.append(line)
+          control = "".join(kept_lines)
+          if removed_arch_qualified_deps < 10:
+              raise SystemExit(
+                  f"Expected to remove no-LLVM optional Build-Depends entries; removed only {removed_arch_qualified_deps}"
+              )
+          if re.search(r"\\[@(?:LLVM|RUSTICL)_ARCHS@\\]", control):
+              raise SystemExit("Empty LLVM/Rusticl architecture qualifiers remain in debian/control.in")
+
           dropped = {
               "libxatracker2",
               "libxatracker-dev",
