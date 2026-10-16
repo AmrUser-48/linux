@@ -37,6 +37,9 @@ PRIMARY = {
     "garcon": ["libgarcon-1-0"],
     "exo": ["libexo-2-0"],
     "xorg-server": ["xserver-xorg-core"],
+    # The D630 uses Intel graphics: install/upgrade only the common DRM core
+    # and Intel runtime from this source-package release.
+    "libdrm": ["libdrm2", "libdrm-intel1"],
     "xserver-xorg-input-keyboard": ["xserver-xorg-input-kbd"],
     "zlib": ["zlib1g"],
     "shadow": ["passwd"],
