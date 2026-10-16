@@ -228,8 +228,14 @@ jobs:
         run: |
           python3 - <<'PY'
           import runpy
+          from pathlib import Path
 
           installer = runpy.run_path("core2-packages/install.py", run_name="installer_test")
+          package_builder = Path(".github/workflows/d630-core2-package.yml").read_text(encoding="utf-8")
+          assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
+          assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
+          assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
+          assert "libdrm2_found" in package_builder and "libdrm_intel_found" in package_builder
 
           key, version = installer["package_and_version"]({
               "name": "Core 2 system glibc 2.36-9+deb12u14+core2.1~20261010052854"
