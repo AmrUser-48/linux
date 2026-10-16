@@ -300,6 +300,16 @@ jobs:
               "No Rusticl OpenCL library in the D630 no-LLVM build; skipping optional move.",
           )
 
+          # Debian Bookworm overwrites the environment's C/C++ maintainer flags
+          # for amd64. Preserve that workaround but append the requested Core 2 target.
+          core2_flag_anchor = "DEB_CFLAGS_MAINT_APPEND=-Wall DEB_CXXFLAGS_MAINT_APPEND=-Wall dpkg-buildflags --export=configure"
+          if rules.count(core2_flag_anchor) != 1:
+              raise SystemExit("Expected exactly one Debian C/C++ maintainer-flag override")
+          rules = rules.replace(
+              core2_flag_anchor,
+              "DEB_CFLAGS_MAINT_APPEND='-Wall -march=core2 -mtune=core2' DEB_CXXFLAGS_MAINT_APPEND='-Wall -march=core2 -mtune=core2' dpkg-buildflags --export=configure",
+          )
+
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
             grep -qF 'LLVM_ARCHS =' "$RULES"
@@ -498,6 +508,19 @@ jobs:
           echo "CORE2_BUILD_MODE=$BUILD_MODE" >> "$GITHUB_ENV"
           echo "build_log_path=$BUILD_LOG_PATH" >> "$GITHUB_OUTPUT"
 
+          # Verify flags at the actual dh_auto_configure invocation, not just
+          # dpkg-buildflags in the outer workflow shell.
+          if [[ "$PACKAGE" == "mesa" ]]; then
+            if ! grep -Eq 'CFLAGS="[^"]*-march=core2[^"]*-mtune=core2[^"]*"' "$BUILD_LOG_PATH"; then
+              echo "::error::Mesa CFLAGS lost -march=core2 -mtune=core2 in Debian rules"
+              exit 1
+            fi
+            if ! grep -Eq 'CXXFLAGS="[^"]*-march=core2[^"]*-mtune=core2[^"]*"' "$BUILD_LOG_PATH"; then
+              echo "::error::Mesa CXXFLAGS lost -march=core2 -mtune=core2 in Debian rules"
+              exit 1
+            fi
+          fi
+
           case "$PACKAGE" in
             rust-fd-find|rust-sd|rust-ripgrep)
               if [[ ! -s "$CORE2_RUSTC_LOG" ]]; then
@@ -558,7 +581,7 @@ jobs:
               fi
               if [[ "$package_name" == "libgl1-mesa-dri" ]]; then
                 dri_package_found=true
-                if ! dpkg-deb --contents "$deb" | grep -q "/crocus_dri.so"; then
+                if ! dpkg-deb --contents "$deb" | grep "/crocus_dri.so" >/dev/null; then
                   echo "::error::LLVM-free Mesa artifact omitted the required Intel Crocus Gallium driver"
                   exit 1
                 fi
