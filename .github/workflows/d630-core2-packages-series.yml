@@ -69,7 +69,6 @@ jobs:
               # rendering/playback engines, and VA-API/VDPAU interfaces.
               # Use Bookworm SOURCE package names, not newer binary ABI names.
               # Existing Core 2 releases are skipped by the release check below.
-              # gcc-12 is last because it is a much larger source build, included for libgomp1.
               packages=(
                 libdrm libpciaccess pixman
                 libx11 libxext libxrandr libxcomposite libxdamage libxv libxvmc wayland libepoxy
@@ -79,7 +78,7 @@ jobs:
                 dav1d aom svt-av1 x264 x265 mpeg2dec xvidcore libtheora libvpx
                 ffmpeg gstreamer1.0 gst-plugins-base1.0 gst-plugins-good1.0
                 gst-plugins-bad1.0 gst-libav1.0 gstreamer-vaapi
-                mpv vlc gcc-12
+                mpv vlc
               )
               ;;
             thunar)
