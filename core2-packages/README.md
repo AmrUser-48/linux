@@ -47,14 +47,14 @@ Displayed versions omit this repository's +core2 build timestamp. Shared depende
 Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README files cannot run a custom search box.
 
 <details>
-<summary>Graphics (28 top-level packages)</summary>
+<summary>Graphics (31 top-level packages)</summary>
 
 <details>
-<summary><code>libd3dadapter9-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+<summary><code>cairo-perf-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
 
 **Download files**
-- [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+- [cairo-perf-utils_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/cairo-perf-utils_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
 
 **Dependencies**
 
@@ -65,6 +65,140 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854)
 </details>
+
+<details>
+<summary><code>libcairo-script-interpreter2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
+
+**Download files**
+- [libcairo-script-interpreter2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-script-interpreter2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libcairo2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
+
+**Download files**
+- [libcairo2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libpixman-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
+
+**Download files**
+- [libpixman-1-0_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libpng16-16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.39-2+deb12u6</code></summary>
+
+**Download files**
+- [libpng16-16_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>zlib1g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
+
+**Download files**
+- [zlib1g_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libx11-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
+
+**Download files**
+- [libx11-6_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libx11-data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
+
+**Download files**
+- [libx11-data_1.8.4-2+deb12u2+core2.1.20261016131846_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-data_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+</details>
+
+</details>
+
+<details>
+<summary><code>libxext6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.3.4-1</code></summary>
+
+**Download files**
+- [libxext6_1.3.4-1+core2.1.20261016132313_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libcairo2-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
+
+**Download files**
+- [libcairo2-doc_1.16.0-7+core2.1.20261016135244_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2-doc_1.16.0-7%2Bcore2.1.20261016135244_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+</details>
+
+<details>
+<summary><code>libd3dadapter9-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+
+**Download files**
+- [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
 <summary><code>libdrm-amdgpu1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
@@ -124,18 +258,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
-<details>
-<summary><code>zlib1g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
-
-**Download files**
-- [zlib1g_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-</details>
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
 
@@ -250,6 +373,32 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
 
+<details>
+<summary><code>libwayland-server0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-server0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-server0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libffi8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.4-1</code></summary>
+
+**Download files**
+- [libffi8_3.4.4-1+core2.1.20261009194707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
 </details>
 
 <details>
@@ -262,6 +411,36 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libwayland-client0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-client0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libffi8 — 3.4.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb)
+
+</details>
+
+- [libwayland-server0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-server0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+<details>
+<summary><code>libx11-xcb1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
+
+**Download files**
+- [libx11-xcb1_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+
+**Dependencies**
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 </details>
 
@@ -330,6 +509,12 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libglapi-mesa — 22.3.6-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libglapi-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
 </details>
 
 </details>
@@ -372,18 +557,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
-<details>
-<summary><code>libffi8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.4-1</code></summary>
-
-**Download files**
-- [libffi8_3.4.4-1+core2.1.20261009194707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-</details>
+- [libffi8 — 3.4.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb)
 
 <details>
 <summary><code>libpcre2-8-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
@@ -636,20 +810,36 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpixman-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
+<summary><code>libwayland-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
 
 **Download files**
-- [libpixman-1-dev_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-dev_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041)
+- [libwayland-doc_1.21.0-1+core2.1.20261016133904_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-doc_1.21.0-1%2Bcore2.1.20261016133904_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+</details>
+
+<details>
+<summary><code>libwayland-egl-backend-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-egl-backend-dev_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl-backend-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+</details>
+
+<details>
+<summary><code>libwayland-egl1-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+
+**Download files**
+- [libwayland-egl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libwayland-egl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
 
 **Dependencies**
 
 <details>
-<summary><code>libpixman-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
+<summary><code>libwayland-egl1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
 
 **Download files**
-- [libpixman-1-0_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041)
+- [libwayland-egl1_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
 
 **Dependencies**
 
@@ -660,11 +850,11 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwayland-egl1-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+<summary><code>libx11-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
 
 **Download files**
-- [libwayland-egl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libwayland-egl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+- [libx11-doc_1.8.4-2+deb12u2+core2.1.20261016131846_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-doc_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
 </details>
 
 <details>
@@ -691,60 +881,18 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libxext-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.3.4-1</code></summary>
+
+**Download files**
+- [libxext-doc_1.3.4-1+core2.1.20261016132313_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-doc_1.3.4-1%2Bcore2.1.20261016132313_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313)
+</details>
+
+<details>
 <summary><code>mesa-opencl-icd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [mesa-opencl-icd_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-opencl-icd_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [libdrm-amdgpu1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm-nouveau2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm-radeon1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
-
-- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
-
-</details>
-
-<details>
-<summary><code>mesa-va-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
-
-**Download files**
-- [mesa-va-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-va-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [libdrm-amdgpu1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm-nouveau2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm-radeon1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
-
-- [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
-
-- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
-
-</details>
-
-<details>
-<summary><code>mesa-vdpau-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
-
-**Download files**
-- [mesa-vdpau-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vdpau-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
 
 **Dependencies**
@@ -781,6 +929,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -837,6 +989,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+<details>
+<summary><code>libepoxy0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.10-1</code></summary>
+
+**Download files**
+- [libepoxy0_1.5.10-1+core2.1.20261016134055_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libepoxy-1.5.10-1-core2.1-20261016134055)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
 
 - [libgbm1 — 22.3.6-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgbm1_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
 
@@ -956,6 +1121,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libsystemd0 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd0_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
 - [xserver-common — 2:21.1.7-3+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-common_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb)
 
 </details>
@@ -979,6 +1148,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libepoxy0 — 1.5.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
@@ -986,6 +1157,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libsystemd0 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd0_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 - [libudev1 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libudev1_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [xserver-common — 2:21.1.7-3+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-common_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb)
 
@@ -1040,6 +1215,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 - [xserver-xorg-core — 2:21.1.7-3+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-core_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
 
 </details>
@@ -1087,6 +1264,61 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
 - [libudev1 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libudev1_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+<details>
+<summary><code>libxdamage1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.1.6-1</code></summary>
+
+**Download files**
+- [libxdamage1_1.1.6-1+core2.1.20261016133326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+<details>
+<summary><code>libxrandr2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.5.2-2</code></summary>
+
+**Download files**
+- [libxrandr2_1.5.2-2+core2.1.20261016132856_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libxvmc1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.0.12-2</code></summary>
+
+**Download files**
+- [libxvmc1_1.0.12-2+core2.1.20261016133703_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/libxvmc1_1.0.12-2%2Bcore2.1.20261016133703_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
 
 - [xserver-xorg-core — 2:21.1.7-3+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-core_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb)
 
@@ -1137,6 +1369,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
+<summary><code>libaom3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.0-1+deb12u3</code></summary>
+
+**Download files**
+- [libaom3_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libavutil57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
@@ -1149,9 +1394,92 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
+<details>
+<summary><code>libva-drm2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva-drm2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+<details>
+<summary><code>libva2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libva-x11-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva-x11-2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+<details>
+<summary><code>libvdpau1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5-2</code></summary>
+
+**Download files**
+- [libvdpau1_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 </details>
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+<details>
+<summary><code>libdav1d6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0-2+deb12u1</code></summary>
+
+**Download files**
+- [libdav1d6_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d6_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
@@ -1163,6 +1491,32 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Download files**
 - [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb) (architecture: amd64)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libopenjp2-7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjp2-7_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libsvtav1enc1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [libsvtav1enc1_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
 
 **Dependencies**
 
@@ -1184,6 +1538,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 </details>
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
 
 <details>
 <summary><code>libvpx7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
@@ -1250,6 +1606,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 **Dependencies**
 
+<details>
+<summary><code>libass9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.17.1-1+deb12u1</code></summary>
+
+**Download files**
+- [libass9_0.17.1-1+deb12u1+core2.1.20261016142820_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 <details>
@@ -1269,6 +1638,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+<details>
+<summary><code>libopenmpt0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6.9-1</code></summary>
+
+**Download files**
+- [libopenmpt0_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
@@ -1276,6 +1660,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libavutil57 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavutil57_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libplacebo208&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.208.0-3</code></summary>
+
+**Download files**
+- [libplacebo208_4.208.0-3+core2.1.20261016142619_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libplacebo-4.208.0-3-core2.1-20261016142619)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libepoxy0 — 1.5.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+
+</details>
 
 <details>
 <summary><code>libpostproc56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
@@ -1309,6 +1708,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
@@ -1321,6 +1722,69 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
+<details>
+<summary><code>libsdl2-2.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.26.5+dfsg-1</code></summary>
+
+**Download files**
+- [libsdl2-2.0-0_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libgbm1 — 22.3.6-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgbm1_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+<details>
+<summary><code>libwayland-cursor0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-cursor0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+</details>
+
+- [libwayland-egl1 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+</details>
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+<details>
+<summary><code>libxv1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.0.11-1.1</code></summary>
+
+**Download files**
+- [libxv1_1.0.11-1.1+core2.1.20261016133515_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
+
 </details>
 
 - [libavfilter8 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter8_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
@@ -1332,6 +1796,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libpostproc56 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libpostproc56_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libsdl2-2.0-0 — 2.26.5+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
 
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
@@ -1405,6 +1871,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
+<details>
+<summary><code>liborc-0.4-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.33-2</code></summary>
+
+**Download files**
+- [liborc-0.4-0_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
@@ -1447,6 +1926,16 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
 
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-cursor0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-egl1 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 </details>
 
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
@@ -1454,6 +1943,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 </details>
 
@@ -1467,6 +1960,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
@@ -1549,11 +2044,30 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
 
+- [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+
 </details>
 
 - [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libcairo-gobject2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
+
+**Download files**
+- [libcairo-gobject2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-gobject2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+
+**Dependencies**
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+</details>
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
@@ -1565,9 +2079,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 
+- [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
 
 - [libvpx7 — 1.12.0-1+deb12u5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx7_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxdamage1 — 1:1.1.6-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -1628,11 +2152,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxv1 — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
 
 </details>
 
@@ -1679,9 +2211,15 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 **Dependencies**
 
+- [libaom3 — 3.6.0-1+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+
 - [libavutil57 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavutil57_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libdav1d6 — 1.0.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d6_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
@@ -1689,7 +2227,13 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libsvtav1enc1 — 1.4.1+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
 
 - [libvpx7 — 1.12.0-1+deb12u5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx7_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
 
@@ -1721,6 +2265,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 **Dependencies**
 
+- [libass9 — 1:0.17.1-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
+
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libavformat59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
@@ -1729,11 +2275,15 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libplacebo208 — 4.208.0-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
+
 - [libpostproc56 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libpostproc56_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libswscale6 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -1766,6 +2316,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -1950,6 +2502,94 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
+<details>
+<summary><code>liborc-0.4-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.33-2</code></summary>
+
+**Download files**
+- [liborc-0.4-dev_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-dev_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016)
+
+**Dependencies**
+
+- [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+
+<details>
+<summary><code>liborc-0.4-dev-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.33-2</code></summary>
+
+**Download files**
+- [liborc-0.4-dev-bin_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-dev-bin_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libwayland-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-dev_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+**Dependencies**
+
+<details>
+<summary><code>libwayland-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.0-1</code></summary>
+
+**Download files**
+- [libwayland-bin_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-bin_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+
+</details>
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-cursor0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-egl1 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-server0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-server0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libx11-xcb-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
+
+**Download files**
+- [libx11-xcb-dev_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+
+**Dependencies**
+
+<details>
+<summary><code>libx11-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.8.4-2+deb12u2</code></summary>
+
+**Download files**
+- [libx11-dev_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+
+**Dependencies**
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
 </details>
 
 <details>
@@ -1960,6 +2600,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224)
 
 **Dependencies**
+
+- [libass9 — 1:0.17.1-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
 
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
@@ -1979,9 +2621,52 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
+- [libplacebo208 — 4.208.0-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
+
+- [libsdl2-2.0-0 — 2.26.5+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libswscale6 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libva-drm2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+<details>
+<summary><code>libva-wayland2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva-wayland2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-wayland2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+</details>
+
+- [libva-x11-2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libvdpau1 — 1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-cursor0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-egl1 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+- [libxv1 — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -2089,6 +2774,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
 
+- [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
 - [libpcre2-8-0 — 10.42-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 
 - [libsystemd0 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd0_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
@@ -2105,6 +2792,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224)
 
 **Dependencies**
+
+- [libass9 — 1:0.17.1-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
 
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
@@ -2124,9 +2813,37 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
+- [libplacebo208 — 4.208.0-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
+
+- [libsdl2-2.0-0 — 2.26.5+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 - [libswscale6 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libva-drm2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva-wayland2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-wayland2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva-x11-2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libvdpau1 — 1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-cursor0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwayland-egl1 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+- [libxv1 — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -2150,7 +2867,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Development (79 top-level packages)</summary>
+<summary>Development (93 top-level packages)</summary>
 
 <details>
 <summary><code>binutils-aarch64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
@@ -2778,6 +3495,32 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libaom-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.0-1+deb12u3</code></summary>
+
+**Download files**
+- [libaom-dev_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom-dev_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330)
+
+**Dependencies**
+
+- [libaom3 — 3.6.0-1+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libass-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.17.1-1+deb12u1</code></summary>
+
+**Download files**
+- [libass-dev_0.17.1-1+deb12u1+core2.1.20261016142820_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass-dev_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820)
+
+**Dependencies**
+
+- [libass9 — 1:0.17.1-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libatrildocument-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
@@ -2805,6 +3548,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 <details>
 <summary><code>libdjvulibre21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
@@ -2855,6 +3600,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
@@ -2869,6 +3616,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -2934,6 +3685,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 </details>
@@ -2982,6 +3735,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 </details>
+
+</details>
+
+<details>
+<summary><code>libdav1d-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0-2+deb12u1</code></summary>
+
+**Download files**
+- [libdav1d-dev_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d-dev_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008)
+
+**Dependencies**
+
+- [libdav1d6 — 1.0.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d6_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
 
 </details>
 
@@ -3038,6 +3804,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libdjvulibre21 — 3.5.28-2.2~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
@@ -3062,6 +3830,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gstreamer1.0-plugins-base — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libevdocument3-4 — 43.1-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevdocument3-4_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
 
@@ -3102,6 +3872,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 <details>
 <summary><code>libexo-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
@@ -3274,6 +4046,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 <details>
 <summary><code>libxfce4ui-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
@@ -3332,6 +4106,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libgarcon-1-0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 
@@ -3436,6 +4212,45 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libigfxcmrt-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.1.1+dfsg1-1</code></summary>
+
+**Download files**
+- [libigfxcmrt-dev_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/libigfxcmrt-dev_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210)
+
+**Dependencies**
+
+<details>
+<summary><code>libigfxcmrt7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.1.1+dfsg1-1</code></summary>
+
+**Download files**
+- [libigfxcmrt7_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/libigfxcmrt7_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210)
+
+**Dependencies**
+
+<details>
+<summary><code>intel-media-va-driver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.1.1+dfsg1-1</code></summary>
+
+**Download files**
+- [intel-media-va-driver_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/intel-media-va-driver_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
 <summary><code>libimage-magick-q16hdri-perl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
@@ -3484,6 +4299,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
 
 <details>
@@ -3502,6 +4321,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 - [libwebpmux3 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpmux3_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -3700,6 +4523,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libmagickcore-6.q16hdri-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 </details>
 
 </details>
@@ -3795,6 +4620,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libdjvulibre21 — 3.5.28-2.2~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
@@ -3802,6 +4629,51 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagickcore-6.q16hdri-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
 - [libmagickwand-6.q16hdri-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libopenjp2-7-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjp2-7-dev_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7-dev_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libpng-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.39-2+deb12u6</code></summary>
+
+**Download files**
+- [libpng-dev_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-dev_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707)
+
+**Dependencies**
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+- [zlib1g-dev — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+<details>
+<summary><code>libxext-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.3.4-1</code></summary>
+
+**Download files**
+- [libxext-dev_1.3.4-1+core2.1.20261016132313_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 </details>
 
@@ -3884,11 +4756,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
 
 - [libwebpdemux2 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpdemux2_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
 
 - [libwebpmux3 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpmux3_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -3908,6 +4788,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libmagickcore-6.q16-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 </details>
 
@@ -3943,6 +4825,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libdjvulibre21 — 3.5.28-2.2~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
@@ -3952,6 +4836,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagickwand-6.q16-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
 </details>
+
+- [libopenjp2-7-dev — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7-dev_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libpng-dev — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-dev_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 - [zlib1g-dev — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -4019,6 +4911,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libopenmpt-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6.9-1</code></summary>
+
+**Download files**
+- [libopenmpt-dev_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt-dev_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234)
+
+**Dependencies**
+
+- [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
+- [zlib1g-dev — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libperl-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
@@ -4032,6 +4939,32 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libperl5.36 — 5.36.0-7+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/libperl5.36_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
 
 - [perl — 5.36.0-7+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libplacebo-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.208.0-3</code></summary>
+
+**Download files**
+- [libplacebo-dev_4.208.0-3+core2.1.20261016142619_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo-dev_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libplacebo-4.208.0-3-core2.1-20261016142619)
+
+**Dependencies**
+
+<details>
+<summary><code>libepoxy-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.10-1</code></summary>
+
+**Download files**
+- [libepoxy-dev_1.5.10-1+core2.1.20261016134055_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy-dev_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libepoxy-1.5.10-1-core2.1-20261016134055)
+
+**Dependencies**
+
+- [libepoxy0 — 1.5.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+
+</details>
+
+- [libplacebo208 — 4.208.0-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
 
 </details>
 
@@ -4093,6 +5026,44 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libpoppler-glib8 — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib8_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libcairo2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.16.0-7</code></summary>
+
+**Download files**
+- [libcairo2-dev_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2-dev_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+
+**Dependencies**
+
+- [libcairo-gobject2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-gobject2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libcairo-script-interpreter2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-script-interpreter2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libglib2.0-dev — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+<details>
+<summary><code>libpixman-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
+
+**Download files**
+- [libpixman-1-dev_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-dev_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041)
+
+**Dependencies**
+
+- [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
+
+</details>
+
+- [libpng-dev — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-dev_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 </details>
 
@@ -4256,6 +5227,61 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libsdl2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.26.5+dfsg-1</code></summary>
+
+**Download files**
+- [libsdl2-dev_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-dev_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254)
+
+**Dependencies**
+
+- [libdrm-dev — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-dev_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libsdl2-2.0-0 — 2.26.5+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+
+- [libwayland-dev — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+<details>
+<summary><code>libxrandr-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.5.2-2</code></summary>
+
+**Download files**
+- [libxrandr-dev_1.5.2-2+core2.1.20261016132856_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr-dev_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libxv-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.0.11-1.1</code></summary>
+
+**Download files**
+- [libxv-dev_1.0.11-1.1+core2.1.20261016133515_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv-dev_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxv1 — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
 <summary><code>libssh2-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
 
 **Download files**
@@ -4280,6 +5306,53 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 - [zlib1g-dev — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libsvtav1dec-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [libsvtav1dec-dev_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1dec-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+
+**Dependencies**
+
+<details>
+<summary><code>libsvtav1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [libsvtav1-dev_1.4.1+dfsg-1+core2.1.20261016144712_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+</details>
+
+<details>
+<summary><code>libsvtav1dec0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [libsvtav1dec0_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1dec0_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libsvtav1enc-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [libsvtav1enc-dev_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+
+**Dependencies**
+
+- [libsvtav1-dev — 1.4.1+dfsg-1 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_all.deb)
+
+- [libsvtav1enc1 — 1.4.1+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
 
 </details>
 
@@ -4390,6 +5463,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpcre2-8-0 — 10.42-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 - [libxfce4ui-2-0 — 4.18.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
 
 - [libxfce4util7 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
@@ -4484,6 +5559,59 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libva-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva-dev_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-dev_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libva-drm2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+<details>
+<summary><code>libva-glx2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [libva-glx2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-glx2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libva-x11-2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+</details>
+
+- [libva-wayland2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-wayland2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva-x11-2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libwayland-dev — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libvdpau-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5-2</code></summary>
+
+**Download files**
+- [libvdpau-dev_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau-dev_1.5-2%2Bcore2.1.20261016142429_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429)
+
+**Dependencies**
+
+- [libvdpau1 — 1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libwebp-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
@@ -4521,6 +5649,70 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 </details>
+
+</details>
+
+<details>
+<summary><code>libxcomposite-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.5-1</code></summary>
+
+**Download files**
+- [libxcomposite-dev_0.4.5-1+core2.1.20261016133125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/libxcomposite-dev_0.4.5-1%2Bcore2.1.20261016133125_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+<details>
+<summary><code>libxcomposite1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.5-1</code></summary>
+
+**Download files**
+- [libxcomposite1_0.4.5-1+core2.1.20261016133125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/libxcomposite1_0.4.5-1%2Bcore2.1.20261016133125_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libxdamage-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.1.6-1</code></summary>
+
+**Download files**
+- [libxdamage-dev_1.1.6-1+core2.1.20261016133326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage-dev_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxdamage1 — 1:1.1.6-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libxvmc-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:1.0.12-2</code></summary>
+
+**Download files**
+- [libxvmc-dev_1.0.12-2+core2.1.20261016133703_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/libxvmc-dev_1.0.12-2%2Bcore2.1.20261016133703_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703)
+
+**Dependencies**
+
+- [libx11-dev — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext-dev — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxv-dev — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv-dev_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
+
+- [libxvmc1 — 2:1.0.12-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/libxvmc1_1.0.12-2%2Bcore2.1.20261016133703_amd64.deb)
 
 </details>
 
@@ -5821,7 +7013,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Applications &amp; utilities (112 top-level packages)</summary>
+<summary>Applications &amp; utilities (129 top-level packages)</summary>
 
 <details>
 <summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
@@ -5852,6 +7044,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>aom-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.0-1+deb12u3</code></summary>
+
+**Download files**
+- [aom-tools_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/aom-tools_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330)
+
+**Dependencies**
+
+- [libaom3 — 3.6.0-1+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>apvlv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.4.0+repack-1</code></summary>
 
 **Download files**
@@ -5861,6 +7068,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libepub0 — 0.2.2-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/libepub0_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb)
 
@@ -5986,6 +7195,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Download files**
 - [cdrkit-doc_1.1.11-3.4+core2.1.20261012055245_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/cdrkit-doc_1.1.11-3.4%2Bcore2.1.20261012055245_all.deb) (architecture: all)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245)
+</details>
+
+<details>
+<summary><code>dav1d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0-2+deb12u1</code></summary>
+
+**Download files**
+- [dav1d_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/dav1d_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdav1d6 — 1.0.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d6_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
+
 </details>
 
 <details>
@@ -6216,6 +7440,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo-gobject2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-gobject2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libevdocument3-4 — 43.1-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevdocument3-4_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
 
 - [libevview3-3 — 43.1-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevview3-3_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb)
@@ -6347,6 +7575,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 </details>
 
@@ -6584,6 +7814,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libaom-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.0-1+deb12u3</code></summary>
+
+**Download files**
+- [libaom-doc_3.6.0-1+deb12u3+core2.1.20261016144330_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom-doc_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330)
+</details>
+
+<details>
 <summary><code>libcurl3-nss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
@@ -6804,11 +8042,140 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libopenjp2-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjp2-tools_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-tools_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libopenjpip-server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjpip-server_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-server_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcurl3-gnutls — 7.88.1-10+deb12u15 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libopenjpip-viewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjpip-viewer_2.5.0-2+deb12u3+core2.1.20261016135019_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-viewer_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+<details>
+<summary><code>libopenjpip-dec-server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjpip-dec-server_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-dec-server_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libopenjpip7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [libopenjpip7_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+</details>
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libopenmpt-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6.9-1</code></summary>
+
+**Download files**
+- [libopenmpt-doc_0.6.9-1+core2.1.20261016143234_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt-doc_0.6.9-1%2Bcore2.1.20261016143234_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234)
+</details>
+
+<details>
+<summary><code>liborc-0.4-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:0.4.33-2</code></summary>
+
+**Download files**
+- [liborc-0.4-doc_0.4.33-2+core2.1.20261016143016_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-doc_0.4.33-2%2Bcore2.1.20261016143016_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016)
+</details>
+
+<details>
+<summary><code>libpng-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.39-2+deb12u6</code></summary>
+
+**Download files**
+- [libpng-tools_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-tools_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libpoppler-glib-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-glib-doc_22.12.0-2+deb12u3+core2.1.20261012055344_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib-doc_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_all.deb) (architecture: all)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344)
+</details>
+
+<details>
+<summary><code>libsdl2-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.26.5+dfsg-1</code></summary>
+
+**Download files**
+- [libsdl2-doc_2.26.5+dfsg-1+core2.1.20261016134254_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-doc_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254)
+</details>
+
+<details>
+<summary><code>libsdl2-tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.26.5+dfsg-1</code></summary>
+
+**Download files**
+- [libsdl2-tests_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-tests_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libsdl2-2.0-0 — 2.26.5+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 </details>
 
 <details>
@@ -6830,6 +8197,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6-dev — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libpng-dev — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-dev_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
 
 <details>
 <summary><code>libslang2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
@@ -6872,6 +8241,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libturbojpeg0 — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg0_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
+</details>
+
+<details>
+<summary><code>libvdpau-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5-2</code></summary>
+
+**Download files**
+- [libvdpau-doc_1.5-2+core2.1.20261016142429_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau-doc_1.5-2%2Bcore2.1.20261016142429_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429)
 </details>
 
 <details>
@@ -6918,7 +8295,11 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libepoxy0 — 1.5.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [libxfce4ui-2-0 — 4.18.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb)
 
@@ -6977,6 +8358,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 - [libgpm2 — 1.20.7-10 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/libgpm2_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb)
@@ -6985,9 +8368,13 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
 
 - [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -7096,7 +8483,13 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -7114,6 +8507,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
 
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
 
@@ -7342,6 +8737,29 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>openjpeg-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-2+deb12u3</code></summary>
+
+**Download files**
+- [openjpeg-doc_2.5.0-2+deb12u3+core2.1.20261016135019_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/openjpeg-doc_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+</details>
+
+<details>
+<summary><code>openmpt123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6.9-1</code></summary>
+
+**Download files**
+- [openmpt123_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/openmpt123_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>pcre2-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
@@ -7407,6 +8825,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libpoppler126 — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler126_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
 
@@ -7564,9 +8984,28 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
+
+</details>
+
+<details>
+<summary><code>svt-av1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
+
+**Download files**
+- [svt-av1_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/svt-av1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libsvtav1dec0 — 1.4.1+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1dec0_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+
+- [libsvtav1enc1 — 1.4.1+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
 
 </details>
 
@@ -7583,7 +9022,11 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+
 - [libptexenc1 — 2022.20220321.62855-5.1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libptexenc1_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
@@ -7609,6 +9052,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libexo-2-0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-0_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
@@ -7620,6 +9065,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libexo-2-0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-0_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb)
 
@@ -7654,6 +9101,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxdamage1 — 1:1.1.6-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
 - [perl — 5.36.0-7+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
 
 <details>
@@ -7666,6 +9121,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 </details>
 
@@ -7730,6 +9187,12 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
 
 </details>
@@ -7762,6 +9225,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
@@ -7769,6 +9234,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
 
 - [libpoppler-glib8 — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib8_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
 
@@ -7821,6 +9288,103 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>va-driver-all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.17.0-1</code></summary>
+
+**Download files**
+- [va-driver-all_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/va-driver-all_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+**Dependencies**
+
+<details>
+<summary><code>i965-va-driver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.1+dfsg1-1</code></summary>
+
+**Download files**
+- [i965-va-driver_2.4.1+dfsg1-1+core2.1.20261016135957_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957/i965-va-driver_2.4.1%2Bdfsg1-1%2Bcore2.1.20261016135957_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm-intel1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-intel1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+</details>
+
+- [intel-media-va-driver — 23.1.1+dfsg1-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/intel-media-va-driver_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb)
+
+<details>
+<summary><code>mesa-va-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+
+**Download files**
+- [mesa-va-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-va-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm-amdgpu1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm-nouveau2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm-radeon1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>vdpau-driver-all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5-2</code></summary>
+
+**Download files**
+- [vdpau-driver-all_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/vdpau-driver-all_1.5-2%2Bcore2.1.20261016142429_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429)
+
+**Dependencies**
+
+<details>
+<summary><code>mesa-vdpau-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
+
+**Download files**
+- [mesa-vdpau-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vdpau-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm-amdgpu1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm-nouveau2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm-radeon1 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
+
+- [libvdpau1 — 1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+
+- [libx11-xcb1 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
 <summary><code>w3m-img&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.3+git20230121-2</code></summary>
 
 **Download files**
@@ -7830,6 +9394,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 <details>
 <summary><code>w3m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.3+git20230121-2</code></summary>
@@ -7866,6 +9432,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
 
 - [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
 
@@ -7918,6 +9486,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpoppler126 — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler126_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
 
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
 </details>
 
 <details>
@@ -7930,6 +9500,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
@@ -8000,7 +9572,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 526.
+**Unique binary packages indexed:** 616.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -8009,6 +9581,408 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### svt-av1 (optimized)
+Version: `1.4.1+dfsg-1+core2.1~20261016144712` · Published: 2026-10-16 14:50:22 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - svt-av1`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/BUILD-INFO.txt)
+- [libsvtav1-dev_1.4.1+dfsg-1+core2.1.20261016144712_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_all.deb)
+- [libsvtav1dec-dev_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1dec-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+- [libsvtav1dec0_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1dec0_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+- [libsvtav1enc-dev_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc-dev_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+- [libsvtav1enc1_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/release-notes.md)
+- [SHA256SUMS-core2-svt-av1.txt](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/SHA256SUMS-core2-svt-av1.txt)
+- [svt-av1_1.4.1+dfsg-1+core2.1.20261016144712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/svt-av1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712)
+
+</details>
+
+### aom (optimized)
+Version: `3.6.0-1+deb12u3+core2.1~20261016144330` · Published: 2026-10-16 14:46:13 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - aom`
+
+<details><summary>Files (7)</summary>
+
+- [aom-tools_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/aom-tools_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/BUILD-INFO.txt)
+- [libaom-dev_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom-dev_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+- [libaom-doc_3.6.0-1+deb12u3+core2.1.20261016144330_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom-doc_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_all.deb)
+- [libaom3_3.6.0-1+deb12u3+core2.1.20261016144330_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/release-notes.md)
+- [SHA256SUMS-core2-aom.txt](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/SHA256SUMS-core2-aom.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330)
+
+</details>
+
+### dav1d (optimized)
+Version: `1.0.0-2+deb12u1+core2.1~20261016144008` · Published: 2026-10-16 14:41:59 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dav1d`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/BUILD-INFO.txt)
+- [dav1d_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/dav1d_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
+- [libdav1d-dev_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d-dev_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
+- [libdav1d6_1.0.0-2+deb12u1+core2.1.20261016144008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/libdav1d6_1.0.0-2%2Bdeb12u1%2Bcore2.1.20261016144008_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/release-notes.md)
+- [SHA256SUMS-core2-dav1d.txt](https://github.com/AmrUser-48/linux/releases/download/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008/SHA256SUMS-core2-dav1d.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008)
+
+</details>
+
+### libopenmpt (optimized)
+Version: `0.6.9-1+core2.1~20261016143234` · Published: 2026-10-16 14:39:13 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libopenmpt`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/BUILD-INFO.txt)
+- [libopenmpt-dev_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt-dev_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+- [libopenmpt-doc_0.6.9-1+core2.1.20261016143234_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt-doc_0.6.9-1%2Bcore2.1.20261016143234_all.deb)
+- [libopenmpt0_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+- [openmpt123_0.6.9-1+core2.1.20261016143234_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/openmpt123_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/release-notes.md)
+- [SHA256SUMS-core2-libopenmpt.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/SHA256SUMS-core2-libopenmpt.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234)
+
+</details>
+
+### orc (optimized)
+Version: `1:0.4.33-2+core2.1~20261016143016` · Published: 2026-10-16 14:31:28 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - orc`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/BUILD-INFO.txt)
+- [liborc-0.4-0_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+- [liborc-0.4-dev-bin_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-dev-bin_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+- [liborc-0.4-dev_0.4.33-2+core2.1.20261016143016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-dev_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+- [liborc-0.4-doc_0.4.33-2+core2.1.20261016143016_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-doc_0.4.33-2%2Bcore2.1.20261016143016_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/release-notes.md)
+- [SHA256SUMS-core2-orc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/SHA256SUMS-core2-orc.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016)
+
+</details>
+
+### libass (optimized)
+Version: `1:0.17.1-1+deb12u1+core2.1~20261016142820` · Published: 2026-10-16 14:29:17 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libass`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/BUILD-INFO.txt)
+- [libass-dev_0.17.1-1+deb12u1+core2.1.20261016142820_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass-dev_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
+- [libass9_0.17.1-1+deb12u1+core2.1.20261016142820_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/release-notes.md)
+- [SHA256SUMS-core2-libass.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/SHA256SUMS-core2-libass.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820)
+
+</details>
+
+### libplacebo (optimized)
+Version: `4.208.0-3+core2.1~20261016142619` · Published: 2026-10-16 14:27:16 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libplacebo`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/BUILD-INFO.txt)
+- [libplacebo-dev_4.208.0-3+core2.1.20261016142619_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo-dev_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
+- [libplacebo208_4.208.0-3+core2.1.20261016142619_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/libplacebo208_4.208.0-3%2Bcore2.1.20261016142619_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/release-notes.md)
+- [SHA256SUMS-core2-libplacebo.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libplacebo-4.208.0-3-core2.1-20261016142619/SHA256SUMS-core2-libplacebo.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libplacebo-4.208.0-3-core2.1-20261016142619)
+
+</details>
+
+### libvdpau (optimized)
+Version: `1.5-2+core2.1~20261016142429` · Published: 2026-10-16 14:25:24 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libvdpau`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/BUILD-INFO.txt)
+- [libvdpau-dev_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau-dev_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+- [libvdpau-doc_1.5-2+core2.1.20261016142429_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau-doc_1.5-2%2Bcore2.1.20261016142429_all.deb)
+- [libvdpau1_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/libvdpau1_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/release-notes.md)
+- [SHA256SUMS-core2-libvdpau.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/SHA256SUMS-core2-libvdpau.txt)
+- [vdpau-driver-all_1.5-2+core2.1.20261016142429_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvdpau-1.5-2-core2.1-20261016142429/vdpau-driver-all_1.5-2%2Bcore2.1.20261016142429_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429)
+
+</details>
+
+### intel-media-driver (optimized)
+Version: `23.1.1+dfsg1-1+core2.1~20261016140210` · Published: 2026-10-16 14:22:32 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - intel-media-driver`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/BUILD-INFO.txt)
+- [intel-media-va-driver_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/intel-media-va-driver_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb)
+- [libigfxcmrt-dev_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/libigfxcmrt-dev_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb)
+- [libigfxcmrt7_23.1.1+dfsg1-1+core2.1.20261016140210_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/libigfxcmrt7_23.1.1%2Bdfsg1-1%2Bcore2.1.20261016140210_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/release-notes.md)
+- [SHA256SUMS-core2-intel-media-driver.txt](https://github.com/AmrUser-48/linux/releases/download/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210/SHA256SUMS-core2-intel-media-driver.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210)
+
+</details>
+
+### intel-vaapi-driver (optimized)
+Version: `2.4.1+dfsg1-1+core2.1~20261016135957` · Published: 2026-10-16 14:01:08 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - intel-vaapi-driver`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957/BUILD-INFO.txt)
+- [i965-va-driver_2.4.1+dfsg1-1+core2.1.20261016135957_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957/i965-va-driver_2.4.1%2Bdfsg1-1%2Bcore2.1.20261016135957_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957/release-notes.md)
+- [SHA256SUMS-core2-intel-vaapi-driver.txt](https://github.com/AmrUser-48/linux/releases/download/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957/SHA256SUMS-core2-intel-vaapi-driver.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-vaapi-driver-2.4.1-dfsg1-1-core2.1-20261016135957)
+
+</details>
+
+### libva (optimized)
+Version: `2.17.0-1+core2.1~20261016135745` · Published: 2026-10-16 13:58:54 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libva`
+
+<details><summary>Files (10)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/BUILD-INFO.txt)
+- [libva-dev_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-dev_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [libva-drm2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [libva-glx2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-glx2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [libva-wayland2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-wayland2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [libva-x11-2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-x11-2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [libva2_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/release-notes.md)
+- [SHA256SUMS-core2-libva.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/SHA256SUMS-core2-libva.txt)
+- [va-driver-all_2.17.0-1+core2.1.20261016135745_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/va-driver-all_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745)
+
+</details>
+
+### cairo (optimized)
+Version: `1.16.0-7+core2.1~20261016135244` · Published: 2026-10-16 13:56:48 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cairo`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/BUILD-INFO.txt)
+- [cairo-perf-utils_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/cairo-perf-utils_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+- [libcairo-gobject2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-gobject2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+- [libcairo-script-interpreter2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo-script-interpreter2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+- [libcairo2-dev_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2-dev_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+- [libcairo2-doc_1.16.0-7+core2.1.20261016135244_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2-doc_1.16.0-7%2Bcore2.1.20261016135244_all.deb)
+- [libcairo2_1.16.0-7+core2.1.20261016135244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/release-notes.md)
+- [SHA256SUMS-core2-cairo.txt](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/SHA256SUMS-core2-cairo.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244)
+
+</details>
+
+### openjpeg2 (optimized)
+Version: `2.5.0-2+deb12u3+core2.1~20261016135019` · Published: 2026-10-16 13:51:38 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openjpeg2`
+
+<details><summary>Files (11)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/BUILD-INFO.txt)
+- [libopenjp2-7-dev_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7-dev_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [libopenjp2-7_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [libopenjp2-tools_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-tools_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [libopenjpip-dec-server_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-dec-server_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [libopenjpip-server_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-server_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [libopenjpip-viewer_2.5.0-2+deb12u3+core2.1.20261016135019_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip-viewer_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_all.deb)
+- [libopenjpip7_2.5.0-2+deb12u3+core2.1.20261016135019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjpip7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+- [openjpeg-doc_2.5.0-2+deb12u3+core2.1.20261016135019_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/openjpeg-doc_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_all.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/release-notes.md)
+- [SHA256SUMS-core2-openjpeg2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/SHA256SUMS-core2-openjpeg2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019)
+
+</details>
+
+### libpng1.6 (optimized)
+Version: `1.6.39-2+deb12u6+core2.1~20261016134707` · Published: 2026-10-16 13:48:57 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpng1.6`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/BUILD-INFO.txt)
+- [libpng-dev_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-dev_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+- [libpng-tools_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng-tools_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+- [libpng16-16_1.6.39-2+deb12u6+core2.1.20261016134707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016134707_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/release-notes.md)
+- [SHA256SUMS-core2-libpng1.6.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707/SHA256SUMS-core2-libpng1.6.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016134707)
+
+</details>
+
+### libsdl2 (optimized)
+Version: `2.26.5+dfsg-1+core2.1~20261016134254` · Published: 2026-10-16 13:46:08 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsdl2`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/BUILD-INFO.txt)
+- [libsdl2-2.0-0_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-2.0-0_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+- [libsdl2-dev_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-dev_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+- [libsdl2-doc_2.26.5+dfsg-1+core2.1.20261016134254_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-doc_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_all.deb)
+- [libsdl2-tests_2.26.5+dfsg-1+core2.1.20261016134254_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/libsdl2-tests_2.26.5%2Bdfsg-1%2Bcore2.1.20261016134254_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/release-notes.md)
+- [SHA256SUMS-core2-libsdl2.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254/SHA256SUMS-core2-libsdl2.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254)
+
+</details>
+
+### libepoxy (optimized)
+Version: `1.5.10-1+core2.1~20261016134055` · Published: 2026-10-16 13:41:52 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libepoxy`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/BUILD-INFO.txt)
+- [libepoxy-dev_1.5.10-1+core2.1.20261016134055_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy-dev_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+- [libepoxy0_1.5.10-1+core2.1.20261016134055_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/libepoxy0_1.5.10-1%2Bcore2.1.20261016134055_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/release-notes.md)
+- [SHA256SUMS-core2-libepoxy.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libepoxy-1.5.10-1-core2.1-20261016134055/SHA256SUMS-core2-libepoxy.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libepoxy-1.5.10-1-core2.1-20261016134055)
+
+</details>
+
+### wayland (optimized)
+Version: `1.21.0-1+core2.1~20261016133904` · Published: 2026-10-16 13:40:07 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wayland`
+
+<details><summary>Files (11)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/BUILD-INFO.txt)
+- [libwayland-bin_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-bin_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-client0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-cursor0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-cursor0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-dev_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-doc_1.21.0-1+core2.1.20261016133904_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-doc_1.21.0-1%2Bcore2.1.20261016133904_all.deb)
+- [libwayland-egl-backend-dev_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl-backend-dev_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-egl1_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-egl1_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [libwayland-server0_1.21.0-1+core2.1.20261016133904_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-server0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/release-notes.md)
+- [SHA256SUMS-core2-wayland.txt](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/SHA256SUMS-core2-wayland.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904)
+
+</details>
+
+### libxvmc (optimized)
+Version: `2:1.0.12-2+core2.1~20261016133703` · Published: 2026-10-16 13:37:56 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxvmc`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/BUILD-INFO.txt)
+- [libxvmc-dev_1.0.12-2+core2.1.20261016133703_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/libxvmc-dev_1.0.12-2%2Bcore2.1.20261016133703_amd64.deb)
+- [libxvmc1_1.0.12-2+core2.1.20261016133703_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/libxvmc1_1.0.12-2%2Bcore2.1.20261016133703_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/release-notes.md)
+- [SHA256SUMS-core2-libxvmc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703/SHA256SUMS-core2-libxvmc.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703)
+
+</details>
+
+### libxv (optimized)
+Version: `2:1.0.11-1.1+core2.1~20261016133515` · Published: 2026-10-16 13:36:06 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxv`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/BUILD-INFO.txt)
+- [libxv-dev_1.0.11-1.1+core2.1.20261016133515_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv-dev_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
+- [libxv1_1.0.11-1.1+core2.1.20261016133515_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/release-notes.md)
+- [SHA256SUMS-core2-libxv.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/SHA256SUMS-core2-libxv.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515)
+
+</details>
+
+### libxdamage (optimized)
+Version: `1:1.1.6-1+core2.1~20261016133326` · Published: 2026-10-16 13:34:17 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxdamage`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/BUILD-INFO.txt)
+- [libxdamage-dev_1.1.6-1+core2.1.20261016133326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage-dev_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+- [libxdamage1_1.1.6-1+core2.1.20261016133326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/release-notes.md)
+- [SHA256SUMS-core2-libxdamage.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/SHA256SUMS-core2-libxdamage.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326)
+
+</details>
+
+### libxcomposite (optimized)
+Version: `1:0.4.5-1+core2.1~20261016133125` · Published: 2026-10-16 13:32:25 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxcomposite`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/BUILD-INFO.txt)
+- [libxcomposite-dev_0.4.5-1+core2.1.20261016133125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/libxcomposite-dev_0.4.5-1%2Bcore2.1.20261016133125_amd64.deb)
+- [libxcomposite1_0.4.5-1+core2.1.20261016133125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/libxcomposite1_0.4.5-1%2Bcore2.1.20261016133125_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/release-notes.md)
+- [SHA256SUMS-core2-libxcomposite.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/SHA256SUMS-core2-libxcomposite.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125)
+
+</details>
+
+### libxrandr (optimized)
+Version: `2:1.5.2-2+core2.1~20261016132856` · Published: 2026-10-16 13:29:53 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxrandr`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/BUILD-INFO.txt)
+- [libxrandr-dev_1.5.2-2+core2.1.20261016132856_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr-dev_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+- [libxrandr2_1.5.2-2+core2.1.20261016132856_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/release-notes.md)
+- [SHA256SUMS-core2-libxrandr.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/SHA256SUMS-core2-libxrandr.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856)
+
+</details>
+
+### libxext (optimized)
+Version: `2:1.3.4-1+core2.1~20261016132313` · Published: 2026-10-16 13:27:50 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxext`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/BUILD-INFO.txt)
+- [libxext-dev_1.3.4-1+core2.1.20261016132313_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-dev_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+- [libxext-doc_1.3.4-1+core2.1.20261016132313_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext-doc_1.3.4-1%2Bcore2.1.20261016132313_all.deb)
+- [libxext6_1.3.4-1+core2.1.20261016132313_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/release-notes.md)
+- [SHA256SUMS-core2-libxext.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/SHA256SUMS-core2-libxext.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313)
+
+</details>
+
+### libx11 (optimized)
+Version: `2:1.8.4-2+deb12u2+core2.1~20261016131846` · Published: 2026-10-16 13:22:18 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libx11`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/BUILD-INFO.txt)
+- [libx11-6_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+- [libx11-data_1.8.4-2+deb12u2+core2.1.20261016131846_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-data_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_all.deb)
+- [libx11-dev_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+- [libx11-doc_1.8.4-2+deb12u2+core2.1.20261016131846_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-doc_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_all.deb)
+- [libx11-xcb-dev_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb-dev_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+- [libx11-xcb1_1.8.4-2+deb12u2+core2.1.20261016131846_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-xcb1_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/release-notes.md)
+- [SHA256SUMS-core2-libx11.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/SHA256SUMS-core2-libx11.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846)
+
+</details>
+
 ### gst-plugins-good1.0 (optimized)
 Version: `1.22.0-5+deb12u4+core2.1~20261016120601` · Published: 2026-10-16 12:10:23 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-good1.0`
