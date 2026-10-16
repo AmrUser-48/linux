@@ -1,0 +1,62 @@
+name: One-off Core 2 system runtime-library rebuild
+run-name: "Core2 system runtime libraries"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".ci/core2-system-runtime-libraries-trigger.txt"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  build:
+    name: Build system library ${{ matrix.package }}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        package:
+          - openssl
+          - zlib
+          - libxcrypt
+          - ncurses
+          - readline
+          - libcap2
+          - libselinux
+          - libseccomp
+          - acl
+          - attr
+          - pam
+          - pcre2
+          - mpfr4
+          - gmp
+          - libffi
+          - expat
+          - libtirpc
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: ${{ matrix.package }}
+      refresh_index: false
+    permissions:
+      actions: write
+      contents: write
+
+  refresh-index:
+    name: Refresh Core 2 package index
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ always() && needs.build.result != 'cancelled' }}
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch package index refresh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
