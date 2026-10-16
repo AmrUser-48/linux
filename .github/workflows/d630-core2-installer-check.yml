@@ -94,6 +94,43 @@ jobs:
           print(f"Video queue contains {len(packages)} unique Bookworm source packages.")
           PY
 
+      - name: Validate installed runtime package queues
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          workflow = Path(".github/workflows/d630-core2-packages-series.yml").read_text(encoding="utf-8")
+
+          def queue(series):
+              start = workflow.index(f"            {series})")
+              start = workflow.index("packages=(", start) + len("packages=(")
+              end = workflow.index(")", start)
+              return workflow[start:end].split()
+
+          expected = {
+              "runtime-extra": {
+                  "libunwind", "alsa-lib", "pipewire", "pulseaudio", "lapack",
+                  "libarchive", "brotli", "libdeflate", "z3",
+              },
+              "llvm-runtime": {"llvm-toolchain-15"},
+              "java-runtime": {"openjdk-17"},
+          }
+          for series, required in expected.items():
+              packages = queue(series)
+              duplicates = sorted({name for name in packages if packages.count(name) > 1})
+              missing = sorted(required - set(packages))
+              if duplicates or missing:
+                  raise SystemExit(
+                      f"{series} queue validation failed; duplicates={duplicates}, missing={missing}"
+                  )
+              print(f"PASS: {series} has {len(packages)} unique source packages")
+
+          if "gcc-12" in queue("runtime-extra"):
+              raise SystemExit("gcc-12 must not be duplicated; its compiler/runtime build is handled separately")
+          PY
+
       - name: Validate RustDesk Core 2 build contract
         shell: bash
         run: |
