@@ -185,7 +185,7 @@ jobs:
           kept_lines = []
           removed_arch_qualified_deps = 0
           for line in control.splitlines(keepends=True):
-              if re.search(r"\\[@(?:LLVM|RUSTICL)_ARCHS@\\]", line):
+              if re.search(r"\[@(?:LLVM|RUSTICL)_ARCHS@\]", line):
                   if line.lstrip().startswith(("Package:", "Architecture:")):
                       raise SystemExit("Unexpected architecture field using optional build-dependency placeholder")
                   removed_arch_qualified_deps += 1
@@ -196,7 +196,7 @@ jobs:
               raise SystemExit(
                   f"Expected to remove no-LLVM optional Build-Depends entries; removed only {removed_arch_qualified_deps}"
               )
-          if re.search(r"\\[@(?:LLVM|RUSTICL)_ARCHS@\\]", control):
+          if re.search(r"\[@(?:LLVM|RUSTICL)_ARCHS@\]", control):
               raise SystemExit("Empty LLVM/Rusticl architecture qualifiers remain in debian/control.in")
 
           dropped = {
