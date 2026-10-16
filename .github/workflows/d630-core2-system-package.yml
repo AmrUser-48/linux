@@ -167,16 +167,24 @@ jobs:
           PACKAGE: ${{ inputs.package }}
         run: |
           set -euxo pipefail
-          apt-get build-dep -y "$PACKAGE"
+          # The requested package may be a binary package rather than the
+          # Debian source-package name (for example, libmp3lame0 comes from lame).
+          SOURCE_PACKAGE="$(apt-cache show "$PACKAGE" | sed -n 's/^Source: \\([^ (]*\\).*/\\1/p' | head -n1)"
+          if [[ -z "$SOURCE_PACKAGE" ]]; then
+            SOURCE_PACKAGE="$PACKAGE"
+          fi
+          echo "Binary/requested package: $PACKAGE; Debian source package: $SOURCE_PACKAGE"
+          apt-get build-dep -y "$SOURCE_PACKAGE"
 
           SRCROOT="$GITHUB_WORKSPACE/source-tree"
           mkdir -p "$SRCROOT" "$GITHUB_WORKSPACE/release-artifacts"
           cd "$SRCROOT"
-          apt-get source "$PACKAGE"
+          apt-get source "$SOURCE_PACKAGE"
 
-          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${SOURCE_PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
-            echo "::error::Could not find unpacked Debian source for $PACKAGE"
+            echo "::error::Could not find unpacked Debian source for $SOURCE_PACKAGE (requested package: $PACKAGE)"
+            find "$SRCROOT" -mindepth 1 -maxdepth 2 -type f -name changelog -path '*/debian/changelog' -print
             exit 1
           fi
 
