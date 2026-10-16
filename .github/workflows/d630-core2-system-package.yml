@@ -192,34 +192,6 @@ jobs:
             exit 1
           fi
 
-          if [[ "$PACKAGE" == "libseccomp" ]]; then
-            # The optional python3-seccomp binary fails Debian Bookworm's
-            # staged setup.py install check in this container. The requested
-            # target is the native runtime library; omit that binding package
-            # rather than failing dh_install after the native library built.
-            python3 - "$SOURCE_DIR/debian/control" <<'PY'
-          from pathlib import Path
-          import re
-          import sys
-
-          path = Path(sys.argv[1])
-          control = path.read_text(encoding="utf-8")
-          blocks = re.split(r"(?m)(?=^Package: )", control)
-          kept = []
-          found = 0
-          for block in blocks:
-              match = re.match(r"Package: ([^\\s]+)", block)
-              if match and match.group(1) == "python3-seccomp":
-                  found += 1
-              else:
-                  kept.append(block)
-          if found != 1:
-              raise SystemExit(f"Expected exactly one python3-seccomp stanza, found {found}")
-          path.write_text("".join(kept), encoding="utf-8")
-          print("Omitted optional python3-seccomp binding; retaining native libseccomp packages.")
-          PY
-          fi
-
           # The extracted source tree is sufficient for a binary-only build.
           # Remove downloaded source archive files from the temporary workspace;
           # none are copied into release artifacts.
@@ -281,6 +253,12 @@ jobs:
           chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
 
           cd "$SOURCE_DIR"
+          if [[ "$PACKAGE" == "libseccomp" ]]; then
+            # Debian Bookworm setup.py checks that its staged site-packages
+            # directory is on sys.path; expose the staging path during install.
+            mkdir -p "$SOURCE_DIR/debian/tmp/usr/lib/python3.11/site-packages"
+            export PYTHONPATH="$SOURCE_DIR/debian/tmp/usr/lib/python3.11/site-packages${PYTHONPATH:+:$PYTHONPATH}"
+          fi
           runuser --preserve-environment --user "$BUILD_USER" -- env \
             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
             dpkg-buildpackage -rfakeroot -us -uc -b -j"$BUILD_JOBS"
