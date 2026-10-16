@@ -93,7 +93,7 @@ jobs:
 
           # Snapshot current releases. A package is ready when its normal
           # Core 2 release exists and contains at least one .deb asset.
-          releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100")" || {
+          releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')" || {
             echo "::error::Cannot list releases; refusing to rebuild blindly."
             exit 1
           }
@@ -104,7 +104,7 @@ jobs:
 
           dispatch_and_wait() {
             local package="$1"
-            local started run_id attempt runs_json log_file has_release
+            local started run_id attempt runs_json log_file has_release refreshed_releases
             local force_rebuild=false
             [[ "$SERIES" == "tigervnc-rebuild" ]] && force_rebuild=true
 
@@ -169,8 +169,13 @@ jobs:
             if gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status; then
               echo "::notice::${package} built and published successfully."
               built+=("$package")
-              # Refresh after each release so the series has an accurate record.
-              releases_json="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100")" || true
+              # Refresh after each release. If the listing fails, stop rather than risk
+              # rebuilding a package whose release is no longer in the snapshot.
+              if ! refreshed_releases="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"; then
+                echo "::error::Could not refresh the release list; stopping to avoid rebuilding blindly."
+                exit 1
+              fi
+              releases_json="$refreshed_releases"
               return 0
             fi
 
