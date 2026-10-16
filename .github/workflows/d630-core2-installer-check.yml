@@ -7,6 +7,7 @@ on:
       - "README.md"
       - "core2-packages/README.md"
       - "core2-packages/install.py"
+      - "core2-packages/update-index.py"
       - ".github/workflows/d630-core2-installer-check.yml"
       - ".github/workflows/build-with-deps.yml"
       - ".github/workflows/d630-core2-package.yml"
@@ -23,6 +24,7 @@ on:
       - "README.md"
       - "core2-packages/README.md"
       - "core2-packages/install.py"
+      - "core2-packages/update-index.py"
       - ".github/workflows/d630-core2-installer-check.yml"
       - ".github/workflows/build-with-deps.yml"
       - ".github/workflows/d630-core2-package.yml"
@@ -47,7 +49,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check Python syntax
-        run: python3 -m py_compile core2-packages/install.py
+        run: python3 -m py_compile core2-packages/install.py core2-packages/update-index.py
 
       - name: Parse affected package workflows as YAML
         shell: bash
@@ -231,7 +233,25 @@ jobs:
           from pathlib import Path
 
           installer = runpy.run_path("core2-packages/install.py", run_name="installer_test")
+          treegen = runpy.run_path("core2-packages/update-index.py", run_name="dependency_tree_test")
           package_builder = Path(".github/workflows/d630-core2-package.yml").read_text(encoding="utf-8")
+          relation_names = treegen["relationship_names"](
+              "libdrm-intel1 (>= 2.4.0), libdrm2, libfoo1 | libfoo2 [amd64]"
+          )
+          assert relation_names == ["libdrm-intel1", "libdrm2", "libfoo1", "libfoo2"], relation_names
+          sample_nodes = [
+              {"package": "libgl1-mesa-dri", "version": "22.3.6-1+core2.1~20261016000000",
+               "depends": "libdrm-intel1 (>= 2.4.0), libdrm2", "published_at": "2026-10-16"},
+              {"package": "libdrm-intel1", "version": "2.4.114-1+core2.1~20261016000000",
+               "depends": "libdrm2", "published_at": "2026-10-16"},
+              {"package": "libdrm2", "version": "2.4.114-1+core2.1~20261016000000",
+               "depends": "", "published_at": "2026-10-16"},
+          ]
+          tree_rows, tree_count = treegen["build_tree_rows"](sample_nodes)
+          assert tree_count == 3, (tree_rows, tree_count)
+          assert any("libgl1-mesa-dri" in row and row.rstrip().endswith("22.3.6-1") for row in tree_rows), tree_rows
+          assert any("libdrm-intel1" in row and row.rstrip().endswith("2.4.114-1") for row in tree_rows), tree_rows
+          assert any("libdrm2 [shared dependency]" in row for row in tree_rows), tree_rows
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
           assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
