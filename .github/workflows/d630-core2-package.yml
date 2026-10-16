@@ -154,7 +154,7 @@ jobs:
             exit 1
           fi
           if [[ "$PACKAGE" == "mesa" ]]; then
-            # D630 profile: disable LLVM-dependent renderers while preserving classic i965.
+            # D630 profile: disable LLVM-dependent renderers and use Crocus/Gallium i915.
             RULES="$SOURCE_DIR/debian/rules"
             grep -qE '^LLVM_ARCHS[[:space:]]*=' "$RULES"
             grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
@@ -168,7 +168,7 @@ jobs:
             sed -i -E '/^[[:space:]]*confflags_GALLIUM += -Dintel-clc=enabled[[:space:]]*$/d' "$RULES"
 
             # Drop binary packages for frontends intentionally disabled in this
-            # software-only/no-LLVM profile. Their Debian .install manifests
+            # focused no-LLVM profile. Their Debian .install manifests
             # otherwise make dh_install --fail-missing abort after compilation.
             CONTROL_TEMPLATE="$SOURCE_DIR/debian/control.in"
             python3 - "$CONTROL_TEMPLATE" <<'PY'
@@ -215,12 +215,11 @@ jobs:
           if rules.count(anchor) != 1:
               raise SystemExit("Expected one Mesa driver-list anchor; refusing a broad rules edit")
           insertion = (
-              "# CORE2_D630_NO_LLVM: build classic Intel DRI plus Gallium software fallback.\n"
-              "GALLIUM_DRIVERS := swrast\n"
+              "# CORE2_D630_NO_LLVM: Crocus for Intel Gen4-7, Gallium i915 for older hardware, plus software fallback.\n"
+              "GALLIUM_DRIVERS := swrast crocus i915\n"
               "VULKAN_DRIVERS :=\n"
               "VULKAN_LAYERS :=\n"
-              "# Force the classic DRI modules required by the GM965/X3100; do not rely on auto-detection.\n"
-              "confflags += -Ddri-drivers=\"['i915','i965']\"\n"
+              "# Crocus supports the GM965/X3100 (Gen4); Debian dropped classic i965 before Bookworm.\n"
               "# Disable optional frontends whose package payloads are absent in this profile.\n"
               "confflags_GALLIUM := $(filter-out -Dgallium-vdpau=enabled -Dgallium-va=enabled -Dgallium-xa=enabled -Dgallium-nine=true -Dintel-clc=enabled -Dgallium-rusticl=true,$(confflags_GALLIUM))\n"
               "confflags_GALLIUM += -Dllvm=disabled -Ddraw-use-llvm=false -Dgallium-vdpau=disabled -Dgallium-va=disabled -Dgallium-xa=disabled -Dgallium-nine=false -Dgallium-omx=disabled -Dintel-clc=disabled\n"
@@ -285,6 +284,8 @@ jobs:
             grep -qF 'LLVM_ARCHS =' "$RULES"
             grep -qF 'RUSTICL_ARCHS =' "$RULES"
             grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
+            grep -qF 'GALLIUM_DRIVERS := swrast crocus i915' "$RULES"
+            ! grep -qF 'confflags += -Ddri-drivers' "$RULES"
             grep -qF 'gallium-vdpau=disabled' "$RULES"
             grep -qF 'gallium-va=disabled' "$RULES"
             grep -qF 'intel-clc=disabled' "$RULES"
@@ -536,8 +537,8 @@ jobs:
               fi
               if [[ "$package_name" == "libgl1-mesa-dri" ]]; then
                 dri_package_found=true
-                if ! dpkg-deb --contents "$deb" | grep -q "/i965_dri.so"; then
-                  echo "::error::LLVM-free Mesa artifact omitted the required Intel i965 DRI driver"
+                if ! dpkg-deb --contents "$deb" | grep -q "/crocus_dri.so"; then
+                  echo "::error::LLVM-free Mesa artifact omitted the required Intel Crocus Gallium driver"
                   exit 1
                 fi
               fi
@@ -546,7 +547,7 @@ jobs:
               echo "::error::Mesa build did not produce libgl1-mesa-dri"
               exit 1
             fi
-            echo "Verified Mesa package set keeps i965 and has no libllvm15 runtime dependency."
+            echo "Verified Mesa package set keeps Crocus and has no libllvm15 runtime dependency."
           fi
           if [[ "$PACKAGE" == "libdrm" ]]; then
             libdrm2_found=false
