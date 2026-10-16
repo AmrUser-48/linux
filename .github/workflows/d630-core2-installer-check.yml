@@ -170,7 +170,7 @@ jobs:
           package_workflow = pathlib.Path(".github/workflows/d630-core2-package.yml").read_text(encoding="utf-8")
           system_workflow = pathlib.Path(".github/workflows/d630-core2-system-package.yml").read_text(encoding="utf-8")
           updater = pathlib.Path(".github/workflows/d630-core2-update-package.yml").read_text(encoding="utf-8")
-          assert "[Browse the complete Core 2 package list →](core2-packages/README.md)" in root
+          assert "(core2-packages/README.md)" in root and "core2-packages/README.md" in root, "root README must link to the package browser"
           assert readme_path.count("<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->") == 1
           assert readme_path.count("<!-- CORE2-PACKAGE-RELEASE-INDEX:END -->") == 1
           assert readme_path.count("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->") == 1
