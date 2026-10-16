@@ -160,6 +160,10 @@ jobs:
             grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
             grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
             sed -i -E 's/^LLVM_ARCHS[[:space:]]*=.*/LLVM_ARCHS =/' "$RULES"
+            # Remove Rusticl/OpenCL from the generated Debian package architecture list too;
+            # leaving mesa-opencl-icd enabled would pull libclc and LLVM back into installs.
+            grep -qE '^RUSTICL_ARCHS[[:space:]]*=' "$RULES"
+            sed -i -E 's/^RUSTICL_ARCHS[[:space:]]*=.*/RUSTICL_ARCHS =/' "$RULES"
             sed -i -E '/^[[:space:]]*GALLIUM_DRIVERS += r300 r600[[:space:]]*$/d' "$RULES"
             sed -i -E '/^[[:space:]]*confflags_GALLIUM += -Dintel-clc=enabled[[:space:]]*$/d' "$RULES"
             python3 - "$RULES" <<'PY'
@@ -239,6 +243,7 @@ jobs:
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
             grep -qF 'LLVM_ARCHS =' "$RULES"
+            grep -qF 'RUSTICL_ARCHS =' "$RULES"
             grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
             grep -qF 'gallium-vdpau=disabled' "$RULES"
             grep -qF 'gallium-va=disabled' "$RULES"
@@ -483,6 +488,10 @@ jobs:
               depends="$(dpkg-deb -f "$deb" Depends 2>/dev/null || true)"
               if grep -qw "libllvm15" <<<"$depends"; then
                 echo "::error::LLVM-free Mesa artifact still depends on libllvm15: $package_name"
+                exit 1
+              fi
+              if [[ "$package_name" == "mesa-opencl-icd" ]]; then
+                echo "::error::Mesa no-LLVM release must omit mesa-opencl-icd; its runtime dependency chain restores LLVM."
                 exit 1
               fi
               if [[ "$package_name" == "libgl1-mesa-dri" ]]; then
