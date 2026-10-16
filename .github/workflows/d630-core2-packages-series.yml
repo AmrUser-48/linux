@@ -21,7 +21,6 @@ on:
           - tigervnc
           - tigervnc-rebuild
           - runtime-extra
-          - llvm-runtime
           - java-runtime
           - audio-libraries
           - image-libraries
@@ -117,12 +116,6 @@ jobs:
               # Installed, still-stock runtime libraries with plausible CPU-bound hot paths.
               # GCC's compiler runtimes are covered by the currently queued gcc-12 build.
               packages=(libunwind alsa-lib pipewire pulseaudio lapack libarchive brotli libdeflate z3)
-              ;;
-            llvm-runtime)
-              # Inventory contains libllvm15, but no clang/compiler-rt packages.
-              # Bookworm's llvm-toolchain-15 source builds the installed LLVM shared library;
-              # keep this large build isolated from the normal runtime queue.
-              packages=(llvm-toolchain-15)
               ;;
             java-runtime)
               # openjdk-17-jre-headless is installed without a Core 2 package version.
