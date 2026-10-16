@@ -1,1 +1,1 @@
-Retry Core 2 runtime libraries after libseccomp native-package fix.
+Retry Core 2 runtime libraries after libseccomp Python staging-path fix.
