@@ -164,7 +164,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cargo build --locked --release --target x86_64-unknown-linux-musl -p codex-cli --bin codex
+          cargo build --release --target x86_64-unknown-linux-musl -p codex-cli --bin codex
           BIN="target/x86_64-unknown-linux-musl/release/codex"
           test -s "$BIN"
           strip --strip-unneeded "$BIN"
