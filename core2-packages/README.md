@@ -35,6 +35,14 @@ curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packa
 
 Installer source: [`install.py`](install.py).
 
+## Binary package dependency tree
+
+The tree is generated from the actual Debian control metadata in the latest published Core 2 .deb for each source package. It shows binary package names and their underlying Debian versions. A branch is shown when one built package declares another built package in Pre-Depends or Depends; dependencies provided by the stock Debian installation are omitted.
+
+<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->
+_The dependency tree is generated automatically from published Debian packages._
+<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
+
 ## Published package downloads (newest first)
 
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
