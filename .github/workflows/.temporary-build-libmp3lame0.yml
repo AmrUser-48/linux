@@ -1,0 +1,20 @@
+name: One-time Core 2 libmp3lame0 build
+run-name: "Build libmp3lame0 for Core 2"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflow-triggers/build-libmp3lame0"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  package:
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: libmp3lame0
+      force_rebuild: true
+      refresh_index: true
