@@ -9632,6 +9632,58 @@
       "release_tag": "core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835",
       "source": "gst-plugins-bad1.0",
       "version": "1.22.0-4+deb12u8+core2.1~20261016163835"
+    },
+    "648680420": {
+      "architecture": "amd64",
+      "asset_id": "648680420",
+      "asset_name": "libmp3lame0_3.100-6+core2.1.20261016213051_amd64.deb",
+      "depends": "libc6 (>= 2.29)",
+      "package": "libmp3lame0",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-16T21:31:29Z",
+      "release_tag": "core2-system-libmp3lame0-3.100-6-core2.1-20261016213051",
+      "source": "libmp3lame0",
+      "version": "3.100-6+core2.1~20261016213051"
+    },
+    "648680423": {
+      "architecture": "all",
+      "asset_id": "648680423",
+      "asset_name": "lame-doc_3.100-6+core2.1.20261016213051_all.deb",
+      "depends": "",
+      "package": "lame-doc",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-16T21:31:29Z",
+      "release_tag": "core2-system-libmp3lame0-3.100-6-core2.1-20261016213051",
+      "source": "libmp3lame0",
+      "version": "3.100-6+core2.1~20261016213051"
+    },
+    "648680424": {
+      "architecture": "amd64",
+      "asset_id": "648680424",
+      "asset_name": "lame_3.100-6+core2.1.20261016213051_amd64.deb",
+      "depends": "libc6 (>= 2.34), libmp3lame0 (>= 3.100), libsndfile1 (>= 1.0.20), libtinfo6 (>= 6)",
+      "package": "lame",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-16T21:31:29Z",
+      "release_tag": "core2-system-libmp3lame0-3.100-6-core2.1-20261016213051",
+      "source": "libmp3lame0",
+      "version": "3.100-6+core2.1~20261016213051"
+    },
+    "648680427": {
+      "architecture": "amd64",
+      "asset_id": "648680427",
+      "asset_name": "libmp3lame-dev_3.100-6+core2.1.20261016213051_amd64.deb",
+      "depends": "libmp3lame0 (= 3.100-6+core2.1~20261016213051)",
+      "package": "libmp3lame-dev",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-16T21:31:29Z",
+      "release_tag": "core2-system-libmp3lame0-3.100-6-core2.1-20261016213051",
+      "source": "libmp3lame0",
+      "version": "3.100-6+core2.1~20261016213051"
     }
   },
   "schema": 1

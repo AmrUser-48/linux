@@ -2274,7 +2274,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Audio &amp; video (30 top-level packages)</summary>
+<summary>Audio &amp; video (31 top-level packages)</summary>
 
 <details>
 <summary><code>ffmpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
@@ -2419,8 +2419,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary><code>libmp3lame0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
-- [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
+- [libmp3lame0_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051)
 
 **Dependencies**
 
@@ -3154,7 +3154,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
-- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
 
 - [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
 
@@ -3491,14 +3491,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary><code>lame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
-- [lame_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame_3.100-6%2Bcore2.1.20261009061017_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
+- [lame_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/lame_3.100-6%2Bcore2.1.20261016213051_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051)
 
 **Dependencies**
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
-- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
 
 - [libtinfo6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
 
@@ -3508,8 +3508,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary><code>lame-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
-- [lame-doc_3.100-6+core2.1.20261009061017_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame-doc_3.100-6%2Bcore2.1.20261009061017_all.deb) (architecture: all)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lame-3.100-6-core2.1-20261009061017)
+- [lame-doc_3.100-6+core2.1.20261016213051_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/lame-doc_3.100-6%2Bcore2.1.20261016213051_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051)
 </details>
 
 <details>
@@ -3544,7 +3544,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
-- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
 
 - [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
 
@@ -3966,6 +3966,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libmp3lame-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
+
+**Download files**
+- [libmp3lame-dev_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame-dev_3.100-6%2Bcore2.1.20261016213051_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051)
+
+**Dependencies**
+
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libmpv2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.35.1-4</code></summary>
 
 **Download files**
@@ -4095,7 +4108,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-expat-2.5.0-1-deb12u4-core2.1-20261016150748/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261016150748_amd64.deb)
 
-- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb)
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
 
 - [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
 
@@ -11766,7 +11779,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 741.
+**Unique binary packages indexed:** 742.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11775,6 +11788,23 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### libmp3lame0 (system)
+Version: `3.100-6+core2.1~20261016213051` · Published: 2026-10-16 21:31:29 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmp3lame0`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/BUILD-INFO.txt)
+- [lame-doc_3.100-6+core2.1.20261016213051_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/lame-doc_3.100-6%2Bcore2.1.20261016213051_all.deb)
+- [lame_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/lame_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
+- [libmp3lame-dev_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame-dev_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
+- [libmp3lame0_3.100-6+core2.1.20261016213051_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/release-notes.md)
+- [SHA256SUMS-core2-libmp3lame0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/SHA256SUMS-core2-libmp3lame0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051)
+
+</details>
+
 ### gst-plugins-bad1.0 (optimized)
 Version: `1.22.0-4+deb12u8+core2.1~20261016163835` · Published: 2026-10-16 16:44:20 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-bad1.0`
