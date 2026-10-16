@@ -55,9 +55,22 @@ jobs:
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
             video)
-              # Core 2 graphics userspace, codecs, and common GStreamer playback plugins.
+              # Core 2 display/DRM, SIMD image pipelines, codecs, FFmpeg, GStreamer,
+              # rendering/playback engines, and VA-API/VDPAU interfaces.
+              # Use Bookworm SOURCE package names, not newer binary ABI names.
               # Existing Core 2 releases are skipped by the release check below.
-              packages=(libdrm pixman libpciaccess libvpx ffmpeg gst-plugins-base1.0 gst-plugins-good1.0)
+              # gcc-12 is last because it is a much larger source build, included for libgomp1.
+              packages=(
+                libdrm libpciaccess pixman
+                libx11 libxext libxrandr libxcomposite libxdamage libxv libxvmc wayland libepoxy
+                libsdl2 libjpeg-turbo libpng1.6 libwebp openjpeg2 glib2.0 cairo
+                mesa libva intel-vaapi-driver intel-media-driver libvdpau
+                libplacebo libass orc libopenmpt
+                dav1d aom svt-av1 x264 x265 mpeg2dec xvidcore libtheora libvpx
+                ffmpeg gstreamer1.0 gst-plugins-base1.0 gst-plugins-good1.0
+                gst-plugins-bad1.0 gst-libav1.0 gstreamer-vaapi
+                mpv vlc gcc-12
+              )
               ;;
             thunar)
               # Build the XFCE libraries and supporting services before Thunar.
