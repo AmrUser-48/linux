@@ -313,14 +313,28 @@ def build_tree_markdown(nodes):
         )
         package = html.escape(name, quote=True)
         version = html.escape(display_version(node.get("version", "")), quote=True)
+        downloads = node.get("downloads") or []
+
+        # A repeated dependency links directly to its .deb instead of repeating
+        # a full spoiler and release link every time a shared library is used.
+        if shared or cycle:
+            flag = "dependency cycle" if cycle else "shared dependency"
+            for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
+                url = item.get("download_url") or ""
+                arch = html.escape(item.get("architecture") or "binary", quote=True)
+                if url:
+                    output.append(f"- [{package} — {version} ({flag}; {arch})]({url})")
+            if not downloads:
+                output.append(f"- {package} — {version} ({flag})")
+            return
+
         output.extend([
             "<details>",
-            f"<summary><code>{package}</code> — <code>{version}</code>{marker}</summary>",
+            f"<summary><code>{package}</code> — <code>{version}</code></summary>",
             "",
             "**Download files**",
         ])
 
-        downloads = node.get("downloads") or []
         if downloads:
             for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
                 label = markdown_asset_label(item.get("asset_name"))
