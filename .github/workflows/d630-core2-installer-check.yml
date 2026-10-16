@@ -111,8 +111,22 @@ jobs:
 
           expected = {
               "runtime-extra": {
-                  "libunwind", "alsa-lib", "pipewire", "pulseaudio", "lapack",
-                  "libarchive", "brotli", "libdeflate", "z3",
+                  "libunwind", "lapack", "libarchive", "brotli", "libdeflate", "z3",
+              },
+              "audio-libraries": {
+                  "alsa-lib", "pipewire", "pulseaudio", "flac", "libogg", "opus",
+                  "libvorbis", "mpg123", "libsamplerate", "libsndfile", "soxr",
+                  "speex", "speexdsp", "faad2", "shine", "libmad",
+              },
+              "image-libraries": {
+                  "libavif", "libheif", "jpeg-xl", "libexif", "lcms2", "tiff",
+                  "libwmf", "djvulibre",
+              },
+              "desktop-libraries": {
+                  "fontconfig", "freetype", "harfbuzz", "fribidi", "pango",
+                  "gdk-pixbuf", "gtk+2.0", "gtk+3.0", "libxft", "libxrender",
+                  "libxfixes", "libxi", "libxinerama", "libxscrnsaver",
+                  "libxkbcommon", "libxkbfile", "libxfont",
               },
               "llvm-runtime": {"llvm-toolchain-15"},
               "java-runtime": {"openjdk-17"},
