@@ -1,0 +1,3 @@
+Request: build all X.Org source packages corresponding to the installed Debian Bookworm set.
+Targets: xorg-server, xserver-xorg-input-keyboard, xserver-xorg-input-libinput, xserver-xorg-input-synaptics, xserver-xorg-video-intel, xorg.
+Use the existing Core 2 optimized package workflow, skip source packages that already have a published Core 2 release, continue after individual failures, and refresh the package index after the series.
