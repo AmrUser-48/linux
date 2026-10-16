@@ -1,5 +1,5 @@
 name: Build D630 Mesa without LLVM
-run-name: "D630 Mesa no-LLVM rebuild"
+run-name: "D630 Mesa no-LLVM rebuild (guard optional VA/VDPAU payloads)"
 
 on:
   push:
