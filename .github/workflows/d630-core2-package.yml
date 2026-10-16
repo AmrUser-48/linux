@@ -155,9 +155,7 @@ jobs:
           fi
 
           if [[ "$PACKAGE" == "mesa" ]]; then
-            # D630 profile: keep the classic i965 driver and software softpipe fallback,
-            # but exclude LLVM-only Gallium/Vulkan drivers and OpenCL so the installed
-            # Mesa DRI package no longer pulls in the ~115 MB libllvm15 runtime.
+            # D630 profile: disable LLVM-dependent renderers while preserving classic i965.
             RULES="$SOURCE_DIR/debian/rules"
             grep -qE '^LLVM_ARCHS[[:space:]]*=' "$RULES"
             grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
@@ -174,16 +172,22 @@ jobs:
           anchor = "GALLIUM_DRIVERS := $(patsubst %,'%',$(GALLIUM_DRIVERS))"
           if rules.count(anchor) != 1:
               raise SystemExit("Expected one Mesa driver-list anchor; refusing a broad rules edit")
-          rules = rules.replace(
-              anchor,
-              "# CORE2_D630_NO_LLVM: retain only software fallback; classic i965 is configured separately.\\n"
-              "GALLIUM_DRIVERS := swrast\\n"
-              "VULKAN_DRIVERS :=\\n"
-              "VULKAN_LAYERS :=\\n" + anchor,
+          insertion = (
+              "# CORE2_D630_NO_LLVM: retain softpipe fallback; classic i965 is configured separately.\n"
+              "GALLIUM_DRIVERS := swrast\n"
+              "VULKAN_DRIVERS :=\n"
+              "VULKAN_LAYERS :=\n"
           )
-          path.write_text(rules, encoding="utf-8")
+          path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
-            grep -q '^LLVM_ARCHS = *          # The extracted source tree is sufficient for a binary-only build.
+            grep -qE '^LLVM_ARCHS[[:space:]]*=[[:space:]]*$' "$RULES"
+            grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
+            ! grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
+            ! grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
+            echo "Configured D630 Mesa with LLVM-dependent drivers disabled."
+          fi
+
+          # The extracted source tree is sufficient for a binary-only build.
           # Remove downloaded source archive files from the temporary workspace;
           # none are copied into release artifacts.
           find "$SRCROOT" -maxdepth 1 -type f \
