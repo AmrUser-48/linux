@@ -50,7 +50,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary>Graphics (28 top-level packages)</summary>
 
 <details>
-<summary><code>libd3dadapter9-mesa</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libd3dadapter9-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libd3dadapter9-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libd3dadapter9-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -59,7 +59,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libc6</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -67,7 +67,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-amdgpu1</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-amdgpu1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-amdgpu1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -78,7 +78,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libdrm2</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm2_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -89,7 +89,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libdrm-common</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-common_2.4.114-1+core2.1.20261016115216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-common_2.4.114-1%2Bcore2.1.20261016115216_all.deb) (architecture: all)
@@ -101,7 +101,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-intel1</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-intel1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-intel1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-intel1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -114,7 +114,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
 <details>
-<summary><code>libpciaccess0</code> — <code>0.17-2</code></summary>
+<summary><code>libpciaccess0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.17-2</code></summary>
 
 **Download files**
 - [libpciaccess0_0.17-2+core2.1.20261016115401_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/libpciaccess0_0.17-2%2Bcore2.1.20261016115401_amd64.deb) (architecture: amd64)
@@ -125,7 +125,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>zlib1g</code> — <code>1:1.2.13.dfsg-1</code></summary>
+<summary><code>zlib1g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
 
 **Download files**
 - [zlib1g_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
@@ -142,7 +142,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-nouveau2</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-nouveau2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-nouveau2_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -157,7 +157,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-radeon1</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-radeon1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-radeon1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -174,7 +174,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
 <details>
-<summary><code>libexpat1</code> — <code>2.5.0-1+deb12u4</code></summary>
+<summary><code>libexpat1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-1+deb12u4</code></summary>
 
 **Download files**
 - [libexpat1_2.5.0-1+deb12u4+core2.1.20261009195158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb) (architecture: amd64)
@@ -187,7 +187,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libudev1</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libudev1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libudev1_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libudev1_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -204,7 +204,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-tests</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-tests_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-tests_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -221,7 +221,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libegl-mesa0</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libegl-mesa0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libegl-mesa0_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libegl-mesa0_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -236,7 +236,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
 
 <details>
-<summary><code>libgbm1</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libgbm1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libgbm1_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgbm1_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -253,7 +253,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libglapi-mesa</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libglapi-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libglapi-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libglapi-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -268,7 +268,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libegl1-mesa</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libegl1-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libegl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libegl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -276,7 +276,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgl1-mesa-glx</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libgl1-mesa-glx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libgl1-mesa-glx_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgl1-mesa-glx_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -285,7 +285,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libglx-mesa0</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libglx-mesa0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libglx-mesa0_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libglx-mesa0_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -300,7 +300,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb)
 
 <details>
-<summary><code>libgl1-mesa-dri</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libgl1-mesa-dri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -335,7 +335,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgles2-mesa</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libgles2-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libgles2-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libgles2-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -343,7 +343,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libglib2.0-doc</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-doc_2.74.6-2+deb12u9+core2.1.20261012055158_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-doc_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_all.deb) (architecture: all)
@@ -351,7 +351,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libglib2.0-tests</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-tests_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-tests_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -362,7 +362,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libglib2.0-0</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-0_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -373,7 +373,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libffi8</code> — <code>3.4.4-1</code></summary>
+<summary><code>libffi8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.4-1</code></summary>
 
 **Download files**
 - [libffi8_3.4.4-1+core2.1.20261009194707_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb) (architecture: amd64)
@@ -386,7 +386,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpcre2-8-0</code> — <code>10.42-1+deb12u2</code></summary>
+<summary><code>libpcre2-8-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
 - [libpcre2-8-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb) (architecture: amd64)
@@ -399,7 +399,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libselinux1</code> — <code>3.4-1</code></summary>
+<summary><code>libselinux1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
 - [libselinux1_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb) (architecture: amd64)
@@ -418,7 +418,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libglib2.0-dev-bin</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-dev-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-dev-bin_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev-bin_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -435,7 +435,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpcre2-8-0 — 10.42-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 
 <details>
-<summary><code>python3.11</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -444,7 +444,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libpython3.11-stdlib</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>libpython3.11-stdlib&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [libpython3.11-stdlib_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-stdlib_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -453,7 +453,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libbz2-1.0</code> — <code>1.0.8-5</code></summary>
+<summary><code>libbz2-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.8-5</code></summary>
 
 **Download files**
 - [libbz2-1.0_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb) (architecture: amd64)
@@ -468,7 +468,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libcrypt1</code> — <code>1:4.4.33-2</code></summary>
+<summary><code>libcrypt1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.4.33-2</code></summary>
 
 **Download files**
 - [libcrypt1_4.4.33-2+core2.1.20261009185630_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb) (architecture: amd64)
@@ -483,7 +483,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libffi8 — 3.4.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libffi-3.4.4-1-core2.1-20261009194707/libffi8_3.4.4-1%2Bcore2.1.20261009194707_amd64.deb)
 
 <details>
-<summary><code>liblzma5</code> — <code>5.4.1-1+deb12u2</code></summary>
+<summary><code>liblzma5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1-1+deb12u2</code></summary>
 
 **Download files**
 - [liblzma5_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb) (architecture: amd64)
@@ -496,7 +496,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libncursesw6</code> — <code>6.4-4</code></summary>
+<summary><code>libncursesw6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libncursesw6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncursesw6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -507,7 +507,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libtinfo6</code> — <code>6.4-4</code></summary>
+<summary><code>libtinfo6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libtinfo6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -522,7 +522,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpython3.11-minimal</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>libpython3.11-minimal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [libpython3.11-minimal_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-minimal_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -533,7 +533,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libssl3</code> — <code>3.0.22-1~deb12u1</code></summary>
+<summary><code>libssl3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0.22-1~deb12u1</code></summary>
 
 **Download files**
 - [libssl3_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb) (architecture: amd64)
@@ -548,7 +548,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libreadline8</code> — <code>8.2-1.3</code></summary>
+<summary><code>libreadline8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2-1.3</code></summary>
 
 **Download files**
 - [libreadline8_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/libreadline8_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb) (architecture: amd64)
@@ -561,7 +561,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtinfo6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
 
 <details>
-<summary><code>readline-common</code> — <code>8.2-1.3</code></summary>
+<summary><code>readline-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2-1.3</code></summary>
 
 **Download files**
 - [readline-common_8.2-1.3+core2.1.20261009161033_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/readline-common_8.2-1.3%2Bcore2.1.20261009161033_all.deb) (architecture: all)
@@ -573,7 +573,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtinfo6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
 
 <details>
-<summary><code>libtirpc3</code> — <code>1.3.3+ds-1</code></summary>
+<summary><code>libtirpc3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.3+ds-1</code></summary>
 
 **Download files**
 - [libtirpc3_1.3.3+ds-1+core2.1.20261009195337_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/libtirpc3_1.3.3%2Bds-1%2Bcore2.1.20261009195337_amd64.deb) (architecture: amd64)
@@ -584,7 +584,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libtirpc-common</code> — <code>1.3.3+ds-1</code></summary>
+<summary><code>libtirpc-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.3+ds-1</code></summary>
 
 **Download files**
 - [libtirpc-common_1.3.3+ds-1+core2.1.20261009195337_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337/libtirpc-common_1.3.3%2Bds-1%2Bcore2.1.20261009195337_all.deb) (architecture: all)
@@ -596,7 +596,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3.11-minimal</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-minimal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-minimal_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-minimal_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -619,7 +619,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libosmesa6</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libosmesa6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libosmesa6_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libosmesa6_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -636,7 +636,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpixman-1-dev</code> — <code>0.42.2-1</code></summary>
+<summary><code>libpixman-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
 
 **Download files**
 - [libpixman-1-dev_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-dev_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
@@ -645,7 +645,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libpixman-1-0</code> — <code>0.42.2-1</code></summary>
+<summary><code>libpixman-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.42.2-1</code></summary>
 
 **Download files**
 - [libpixman-1-0_0.42.2-1+core2.1.20261011154041_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb) (architecture: amd64)
@@ -660,7 +660,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwayland-egl1-mesa</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libwayland-egl1-mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libwayland-egl1-mesa_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libwayland-egl1-mesa_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -668,7 +668,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxatracker2</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>libxatracker2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [libxatracker2_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/libxatracker2_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -691,7 +691,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mesa-opencl-icd</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>mesa-opencl-icd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [mesa-opencl-icd_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-opencl-icd_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -716,7 +716,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mesa-va-drivers</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>mesa-va-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [mesa-va-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-va-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -741,7 +741,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mesa-vdpau-drivers</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>mesa-vdpau-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [mesa-vdpau-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vdpau-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -766,7 +766,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mesa-vulkan-drivers</code> — <code>22.3.6-1+deb12u2</code></summary>
+<summary><code>mesa-vulkan-drivers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.3.6-1+deb12u2</code></summary>
 
 **Download files**
 - [mesa-vulkan-drivers_22.3.6-1+deb12u2+core2.1.20261009173146_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261009173146/mesa-vulkan-drivers_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261009173146_amd64.deb) (architecture: amd64)
@@ -787,7 +787,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tigervnc-xorg-extension</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-xorg-extension&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-xorg-extension_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-xorg-extension_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -798,7 +798,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libjpeg62-turbo</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libjpeg62-turbo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libjpeg62-turbo_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -811,7 +811,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpam0g</code> — <code>1.5.2-6+deb12u2</code></summary>
+<summary><code>libpam0g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.2-6+deb12u2</code></summary>
 
 **Download files**
 - [libpam0g_1.5.2-6+deb12u2+core2.1.20261009193111_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam0g_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_amd64.deb) (architecture: amd64)
@@ -826,7 +826,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpixman-1-0 — 0.42.2-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-pixman-0.42.2-1-core2.1-20261011154041/libpixman-1-0_0.42.2-1%2Bcore2.1.20261011154041_amd64.deb)
 
 <details>
-<summary><code>xserver-xorg-core</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xserver-xorg-core&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xserver-xorg-core_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-core_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb) (architecture: amd64)
@@ -847,7 +847,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
 <details>
-<summary><code>libsystemd0</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libsystemd0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libsystemd0_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd0_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -858,7 +858,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libcap2</code> — <code>1:2.66-4+deb12u3</code></summary>
+<summary><code>libcap2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.66-4+deb12u3</code></summary>
 
 **Download files**
 - [libcap2_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb) (architecture: amd64)
@@ -877,7 +877,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libudev1 — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libudev1_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 <details>
-<summary><code>udev</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>udev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [udev_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/udev_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -886,7 +886,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libacl1</code> — <code>2.3.1-3</code></summary>
+<summary><code>libacl1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.1-3</code></summary>
 
 **Download files**
 - [libacl1_2.3.1-3+core2.1.20261009190907_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/libacl1_2.3.1-3%2Bcore2.1.20261009190907_amd64.deb) (architecture: amd64)
@@ -903,7 +903,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcap2 — 1:2.66-4+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
 
 <details>
-<summary><code>libkmod2</code> — <code>30+20221128-1</code></summary>
+<summary><code>libkmod2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30+20221128-1</code></summary>
 
 **Download files**
 - [libkmod2_30+20221128-1+core2.1.20261009193535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/libkmod2_30%2B20221128-1%2Bcore2.1.20261009193535_amd64.deb) (architecture: amd64)
@@ -926,7 +926,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-common</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xserver-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xserver-common_21.1.7-3+deb12u13+core2.1.20261009120435_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-common_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb) (architecture: all)
@@ -940,7 +940,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xnest</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xnest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xnest_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xnest_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb) (architecture: amd64)
@@ -961,7 +961,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xorg-server-source</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xorg-server-source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xorg-server-source_21.1.7-3+deb12u13+core2.1.20261009120435_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xorg-server-source_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_all.deb) (architecture: all)
@@ -969,7 +969,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xephyr</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xserver-xephyr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xserver-xephyr_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xephyr_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb) (architecture: amd64)
@@ -992,7 +992,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-input-kbd</code> — <code>1:1.9.0-1</code></summary>
+<summary><code>xserver-xorg-input-kbd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.9.0-1</code></summary>
 
 **Download files**
 - [xserver-xorg-input-kbd_1.9.0-1+core2.1.20261016112635_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635/xserver-xorg-input-kbd_1.9.0-1%2Bcore2.1.20261016112635_amd64.deb) (architecture: amd64)
@@ -1007,7 +1007,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-input-libinput</code> — <code>1.2.1-1</code></summary>
+<summary><code>xserver-xorg-input-libinput&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1-1</code></summary>
 
 **Download files**
 - [xserver-xorg-input-libinput_1.2.1-1+core2.1.20261016112819_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/xserver-xorg-input-libinput_1.2.1-1%2Bcore2.1.20261016112819_amd64.deb) (architecture: amd64)
@@ -1022,7 +1022,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-input-libinput-dev</code> — <code>1.2.1-1</code></summary>
+<summary><code>xserver-xorg-input-libinput-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1-1</code></summary>
 
 **Download files**
 - [xserver-xorg-input-libinput-dev_1.2.1-1+core2.1.20261016112819_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/xserver-xorg-input-libinput-dev_1.2.1-1%2Bcore2.1.20261016112819_all.deb) (architecture: all)
@@ -1030,7 +1030,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-input-synaptics</code> — <code>1.9.2-1</code></summary>
+<summary><code>xserver-xorg-input-synaptics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.9.2-1</code></summary>
 
 **Download files**
 - [xserver-xorg-input-synaptics_1.9.2-1+core2.1.20261016113016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/xserver-xorg-input-synaptics_1.9.2-1%2Bcore2.1.20261016113016_amd64.deb) (architecture: amd64)
@@ -1045,7 +1045,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-input-synaptics-dev</code> — <code>1.9.2-1</code></summary>
+<summary><code>xserver-xorg-input-synaptics-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.9.2-1</code></summary>
 
 **Download files**
 - [xserver-xorg-input-synaptics-dev_1.9.2-1+core2.1.20261016113016_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/xserver-xorg-input-synaptics-dev_1.9.2-1%2Bcore2.1.20261016113016_all.deb) (architecture: all)
@@ -1053,7 +1053,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-legacy</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xserver-xorg-legacy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xserver-xorg-legacy_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xserver-xorg-legacy_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb) (architecture: amd64)
@@ -1068,7 +1068,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xserver-xorg-video-intel</code> — <code>2:2.99.917+git20210115-1</code></summary>
+<summary><code>xserver-xorg-video-intel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:2.99.917+git20210115-1</code></summary>
 
 **Download files**
 - [xserver-xorg-video-intel_2.99.917+git20210115-1+core2.1.20261016113213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213/xserver-xorg-video-intel_2.99.917%2Bgit20210115-1%2Bcore2.1.20261016113213_amd64.deb) (architecture: amd64)
@@ -1093,7 +1093,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xvfb</code> — <code>2:21.1.7-3+deb12u13</code></summary>
+<summary><code>xvfb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:21.1.7-3+deb12u13</code></summary>
 
 **Download files**
 - [xvfb_21.1.7-3+deb12u13+core2.1.20261009120435_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435/xvfb_21.1.7-3%2Bdeb12u13%2Bcore2.1.20261009120435_amd64.deb) (architecture: amd64)
@@ -1119,7 +1119,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary>Audio &amp; video (22 top-level packages)</summary>
 
 <details>
-<summary><code>ffmpeg</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>ffmpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [ffmpeg_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1128,7 +1128,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libavcodec59</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavcodec59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavcodec59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1137,7 +1137,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libavutil57</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavutil57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavutil57_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavutil57_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1158,7 +1158,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
 <details>
-<summary><code>libmp3lame0</code> — <code>3.100-6</code></summary>
+<summary><code>libmp3lame0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
 - [libmp3lame0_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/libmp3lame0_3.100-6%2Bcore2.1.20261009061017_amd64.deb) (architecture: amd64)
@@ -1171,7 +1171,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libswresample4</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libswresample4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libswresample4_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1186,7 +1186,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libvpx7</code> — <code>1.12.0-1+deb12u5</code></summary>
+<summary><code>libvpx7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
 
 **Download files**
 - [libvpx7_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx7_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb) (architecture: amd64)
@@ -1199,7 +1199,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwebp7</code> — <code>1.2.4-0.2+deb12u1</code></summary>
+<summary><code>libwebp7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
 - [libwebp7_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb) (architecture: amd64)
@@ -1212,7 +1212,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwebpmux3</code> — <code>1.2.4-0.2+deb12u1</code></summary>
+<summary><code>libwebpmux3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
 - [libwebpmux3_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpmux3_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb) (architecture: amd64)
@@ -1231,7 +1231,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libavdevice59</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavdevice59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavdevice59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavdevice59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1242,7 +1242,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 <details>
-<summary><code>libavfilter8</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavfilter8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavfilter8_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter8_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1253,7 +1253,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 <details>
-<summary><code>libavformat59</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavformat59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavformat59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1278,7 +1278,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libpostproc56</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libpostproc56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libpostproc56_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libpostproc56_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1295,7 +1295,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
 
 <details>
-<summary><code>libswscale6</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libswscale6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libswscale6_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1340,7 +1340,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ffmpeg-doc</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>ffmpeg-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [ffmpeg-doc_5.1.9-0+deb12u1+core2.1.20261009183944_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg-doc_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_all.deb) (architecture: all)
@@ -1348,7 +1348,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-alsa</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-alsa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gstreamer1.0-alsa_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-alsa_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1361,7 +1361,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libgstreamer-plugins-base1.0-0</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>libgstreamer-plugins-base1.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [libgstreamer-plugins-base1.0-0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1374,7 +1374,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libgstreamer1.0-0</code> — <code>1.22.0-2+deb12u1</code></summary>
+<summary><code>libgstreamer1.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
 
 **Download files**
 - [libgstreamer1.0-0_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
@@ -1387,7 +1387,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcap2 — 1:2.66-4+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
 
 <details>
-<summary><code>libcap2-bin</code> — <code>1:2.66-4+deb12u3</code></summary>
+<summary><code>libcap2-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.66-4+deb12u3</code></summary>
 
 **Download files**
 - [libcap2-bin_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2-bin_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb) (architecture: amd64)
@@ -1414,7 +1414,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-gl</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-gl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gstreamer1.0-gl_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-gl_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1427,7 +1427,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libgstreamer-gl1.0-0</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>libgstreamer-gl1.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [libgstreamer-gl1.0-0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1458,7 +1458,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-gtk3</code> — <code>1.22.0-5+deb12u4</code></summary>
+<summary><code>gstreamer1.0-gtk3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
 
 **Download files**
 - [gstreamer1.0-gtk3_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-gtk3_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
@@ -1479,7 +1479,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-plugins-base-apps</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-plugins-base-apps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gstreamer1.0-plugins-base-apps_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base-apps_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1488,7 +1488,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gstreamer1.0-tools</code> — <code>1.22.0-2+deb12u1</code></summary>
+<summary><code>gstreamer1.0-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
 
 **Download files**
 - [gstreamer1.0-tools_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gstreamer1.0-tools_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
@@ -1515,7 +1515,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-pulseaudio</code> — <code>1.22.0-5+deb12u4</code></summary>
+<summary><code>gstreamer1.0-pulseaudio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
 
 **Download files**
 - [gstreamer1.0-pulseaudio_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-pulseaudio_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
@@ -1524,7 +1524,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gstreamer1.0-plugins-good</code> — <code>1.22.0-5+deb12u4</code></summary>
+<summary><code>gstreamer1.0-plugins-good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
 
 **Download files**
 - [gstreamer1.0-plugins-good_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-plugins-good_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
@@ -1533,7 +1533,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gstreamer1.0-plugins-base</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-plugins-base&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gstreamer1.0-plugins-base_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1576,7 +1576,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-qt5</code> — <code>1.22.0-5+deb12u4</code></summary>
+<summary><code>gstreamer1.0-qt5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
 
 **Download files**
 - [gstreamer1.0-qt5_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-qt5_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
@@ -1597,7 +1597,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-qt6</code> — <code>1.22.0-5+deb12u4</code></summary>
+<summary><code>gstreamer1.0-qt6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
 
 **Download files**
 - [gstreamer1.0-qt6_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-qt6_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
@@ -1618,7 +1618,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-x</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gstreamer1.0-x_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-x_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1637,7 +1637,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lame</code> — <code>3.100-6</code></summary>
+<summary><code>lame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
 - [lame_3.100-6+core2.1.20261009061017_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame_3.100-6%2Bcore2.1.20261009061017_amd64.deb) (architecture: amd64)
@@ -1654,7 +1654,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lame-doc</code> — <code>3.100-6</code></summary>
+<summary><code>lame-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.100-6</code></summary>
 
 **Download files**
 - [lame-doc_3.100-6+core2.1.20261009061017_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lame-3.100-6-core2.1-20261009061017/lame-doc_3.100-6%2Bcore2.1.20261009061017_all.deb) (architecture: all)
@@ -1662,7 +1662,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libavcodec-extra</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavcodec-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavcodec-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1671,7 +1671,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libavcodec-extra59</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavcodec-extra59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavcodec-extra59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec-extra59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1704,7 +1704,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libavfilter-extra</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavfilter-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavfilter-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1713,7 +1713,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libavfilter-extra8</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavfilter-extra8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavfilter-extra8_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavfilter-extra8_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1742,7 +1742,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libavformat-extra</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavformat-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavformat-extra_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat-extra_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1751,7 +1751,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libavformat-extra59</code> — <code>7:5.1.9-0+deb12u1</code></summary>
+<summary><code>libavformat-extra59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
 
 **Download files**
 - [libavformat-extra59_5.1.9-0+deb12u1+core2.1.20261009183944_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat-extra59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb) (architecture: amd64)
@@ -1774,7 +1774,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgstreamer-plugins-base1.0-dev</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>libgstreamer-plugins-base1.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [libgstreamer-plugins-base1.0-dev_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-dev_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1783,7 +1783,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-gst-plugins-base-1.0</code> — <code>1.22.0-3+deb12u7</code></summary>
+<summary><code>gir1.2-gst-plugins-base-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
 
 **Download files**
 - [gir1.2-gst-plugins-base-1.0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gir1.2-gst-plugins-base-1.0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
@@ -1792,7 +1792,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-gstreamer-1.0</code> — <code>1.22.0-2+deb12u1</code></summary>
+<summary><code>gir1.2-gstreamer-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
 
 **Download files**
 - [gir1.2-gstreamer-1.0_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gir1.2-gstreamer-1.0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
@@ -1811,7 +1811,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libc6-dev</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6-dev_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -1820,7 +1820,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libc-dev-bin</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc-dev-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc-dev-bin_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-dev-bin_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -1837,7 +1837,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdrm-dev</code> — <code>2.4.114-1</code></summary>
+<summary><code>libdrm-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4.114-1</code></summary>
 
 **Download files**
 - [libdrm-dev_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-dev_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb) (architecture: amd64)
@@ -1856,7 +1856,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
 
 <details>
-<summary><code>libpciaccess-dev</code> — <code>0.17-2</code></summary>
+<summary><code>libpciaccess-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.17-2</code></summary>
 
 **Download files**
 - [libpciaccess-dev_0.17-2+core2.1.20261016115401_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/libpciaccess-dev_0.17-2%2Bcore2.1.20261016115401_amd64.deb) (architecture: amd64)
@@ -1871,7 +1871,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libglib2.0-dev</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-dev_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -1882,7 +1882,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libglib2.0-bin</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-bin_2.74.6-2+deb12u9+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-bin_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -1895,7 +1895,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libglib2.0-data</code> — <code>2.74.6-2+deb12u9</code></summary>
+<summary><code>libglib2.0-data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.74.6-2+deb12u9</code></summary>
 
 **Download files**
 - [libglib2.0-data_2.74.6-2+deb12u9+core2.1.20261012055158_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-data_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_all.deb) (architecture: all)
@@ -1907,7 +1907,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-dev-bin — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev-bin_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>zlib1g-dev</code> — <code>1:1.2.13.dfsg-1</code></summary>
+<summary><code>zlib1g-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
 
 **Download files**
 - [zlib1g-dev_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
@@ -1928,7 +1928,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 <details>
-<summary><code>libgstreamer1.0-dev</code> — <code>1.22.0-2+deb12u1</code></summary>
+<summary><code>libgstreamer1.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
 
 **Download files**
 - [libgstreamer1.0-dev_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-dev_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
@@ -1953,7 +1953,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmpv2</code> — <code>0.35.1-4</code></summary>
+<summary><code>libmpv2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.35.1-4</code></summary>
 
 **Download files**
 - [libmpv2_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/libmpv2_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb) (architecture: amd64)
@@ -1988,7 +1988,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libvpx-dev</code> — <code>1.12.0-1+deb12u5</code></summary>
+<summary><code>libvpx-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
 
 **Download files**
 - [libvpx-dev_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx-dev_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb) (architecture: amd64)
@@ -2001,7 +2001,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libvpx-doc</code> — <code>1.12.0-1+deb12u5</code></summary>
+<summary><code>libvpx-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
 
 **Download files**
 - [libvpx-doc_1.12.0-1+deb12u5+core2.1.20261016115550_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx-doc_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_all.deb) (architecture: all)
@@ -2009,7 +2009,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mpd</code> — <code>0.23.12-1</code></summary>
+<summary><code>mpd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.23.12-1</code></summary>
 
 **Download files**
 - [mpd_0.23.12-1+core2.1.20261009114100_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpd-0.23.12-1-core2.1-20261009114100/mpd_0.23.12-1%2Bcore2.1.20261009114100_amd64.deb) (architecture: amd64)
@@ -2028,7 +2028,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libcurl3-gnutls</code> — <code>7.88.1-10+deb12u15</code></summary>
+<summary><code>libcurl3-gnutls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
 - [libcurl3-gnutls_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
@@ -2039,7 +2039,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libidn2-0</code> — <code>2.3.3-1</code></summary>
+<summary><code>libidn2-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
 
 **Download files**
 - [libidn2-0_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-0_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb) (architecture: amd64)
@@ -2050,7 +2050,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libunistring2</code> — <code>1.0-2</code></summary>
+<summary><code>libunistring2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0-2</code></summary>
 
 **Download files**
 - [libunistring2_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring2_1.0-2%2Bcore2.1.20261012093008_amd64.deb) (architecture: amd64)
@@ -2065,7 +2065,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libssh2-1</code> — <code>1.10.0-3+deb12u1</code></summary>
+<summary><code>libssh2-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
 
 **Download files**
 - [libssh2-1_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -2098,7 +2098,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mpv</code> — <code>0.35.1-4</code></summary>
+<summary><code>mpv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.35.1-4</code></summary>
 
 **Download files**
 - [mpv_0.35.1-4+core2.1.20261009190224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpv-0.35.1-4-core2.1-20261009190224/mpv_0.35.1-4%2Bcore2.1.20261009190224_amd64.deb) (architecture: amd64)
@@ -2133,7 +2133,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>vpx-tools</code> — <code>1.12.0-1+deb12u5</code></summary>
+<summary><code>vpx-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
 
 **Download files**
 - [vpx-tools_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/vpx-tools_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb) (architecture: amd64)
@@ -2153,7 +2153,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary>Development (79 top-level packages)</summary>
 
 <details>
-<summary><code>binutils-aarch64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-aarch64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-aarch64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-aarch64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2162,7 +2162,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>binutils-common</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-common_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-common_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2170,7 +2170,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libbinutils</code> — <code>2.40-2</code></summary>
+<summary><code>libbinutils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [libbinutils_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libbinutils_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2193,7 +2193,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-alpha-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-alpha-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-alpha-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-alpha-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2212,7 +2212,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-arc-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-arc-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-arc-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arc-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2231,7 +2231,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-arm-linux-gnueabi</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-arm-linux-gnueabi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-arm-linux-gnueabi_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arm-linux-gnueabi_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2250,7 +2250,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-arm-linux-gnueabihf</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-arm-linux-gnueabihf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-arm-linux-gnueabihf_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-arm-linux-gnueabihf_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2269,7 +2269,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-doc</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-doc_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-doc_2.40-2%2Bcore2.1.20261009173258_all.deb) (architecture: all)
@@ -2277,7 +2277,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-for-build</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-for-build&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-for-build_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-for-build_2.40-2%2Bcore2.1.20261009173258_all.deb) (architecture: all)
@@ -2286,7 +2286,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>binutils</code> — <code>2.40-2</code></summary>
+<summary><code>binutils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2297,7 +2297,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [binutils-common — 2.40-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-common_2.40-2%2Bcore2.1.20261009173258_amd64.deb)
 
 <details>
-<summary><code>binutils-x86-64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-x86-64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-x86-64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2312,7 +2312,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libctf-nobfd0</code> — <code>2.40-2</code></summary>
+<summary><code>libctf-nobfd0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [libctf-nobfd0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libctf-nobfd0_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2327,7 +2327,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libctf0</code> — <code>2.40-2</code></summary>
+<summary><code>libctf0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [libctf0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libctf0_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2344,7 +2344,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgprofng0</code> — <code>2.40-2</code></summary>
+<summary><code>libgprofng0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [libgprofng0_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/libgprofng0_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2373,7 +2373,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-for-host</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-for-host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-for-host_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-for-host_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2388,7 +2388,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-hppa-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-hppa-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-hppa-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-hppa-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2407,7 +2407,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-hppa64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-hppa64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-hppa64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-hppa64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2428,7 +2428,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-i686-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-i686-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-i686-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2447,7 +2447,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-i686-kfreebsd-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-i686-kfreebsd-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-i686-kfreebsd-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-kfreebsd-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2466,7 +2466,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-i686-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-i686-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-i686-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-i686-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2485,7 +2485,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-ia64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-ia64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-ia64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-ia64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2504,7 +2504,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-m68k-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-m68k-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-m68k-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-m68k-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2523,7 +2523,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-multiarch</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-multiarch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-multiarch_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-multiarch_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2544,7 +2544,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-powerpc-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-powerpc-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-powerpc-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2563,7 +2563,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-powerpc64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-powerpc64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-powerpc64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2582,7 +2582,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-powerpc64le-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-powerpc64le-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-powerpc64le-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-powerpc64le-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2601,7 +2601,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-riscv64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-riscv64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-riscv64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-riscv64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2620,7 +2620,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-s390x-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-s390x-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-s390x-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-s390x-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2639,7 +2639,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-sh4-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-sh4-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-sh4-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-sh4-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2658,7 +2658,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-source</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-source_2.40-2+core2.1.20261009173258_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-source_2.40-2%2Bcore2.1.20261009173258_all.deb) (architecture: all)
@@ -2671,7 +2671,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-sparc64-linux-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-sparc64-linux-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-sparc64-linux-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-sparc64-linux-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2690,7 +2690,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-x86-64-kfreebsd-gnu</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-x86-64-kfreebsd-gnu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-x86-64-kfreebsd-gnu_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-kfreebsd-gnu_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2709,7 +2709,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>binutils-x86-64-linux-gnux32</code> — <code>2.40-2</code></summary>
+<summary><code>binutils-x86-64-linux-gnux32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.40-2</code></summary>
 
 **Download files**
 - [binutils-x86-64-linux-gnux32_2.40-2+core2.1.20261009173258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-binutils-2.40-2-core2.1-20261009173258/binutils-x86-64-linux-gnux32_2.40-2%2Bcore2.1.20261009173258_amd64.deb) (architecture: amd64)
@@ -2728,7 +2728,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>fd-find</code> — <code>8.6.0-3</code></summary>
+<summary><code>fd-find&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.0-3</code></summary>
 
 **Download files**
 - [fd-find_8.6.0-3+core2.1.20261009114655_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-fd-find-8.6.0-3-core2.1-20261009114655/fd-find_8.6.0-3%2Bcore2.1.20261009114655_amd64.deb) (architecture: amd64)
@@ -2741,7 +2741,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lib32z1-dev</code> — <code>1:1.2.13.dfsg-1</code></summary>
+<summary><code>lib32z1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
 
 **Download files**
 - [lib32z1-dev_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/lib32z1-dev_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
@@ -2750,7 +2750,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>lib32z1</code> — <code>1:1.2.13.dfsg-1</code></summary>
+<summary><code>lib32z1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.2.13.dfsg-1</code></summary>
 
 **Download files**
 - [lib32z1_1.2.13.dfsg-1+core2.1.20261011153535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261011153535/lib32z1_1.2.13.dfsg-1%2Bcore2.1.20261011153535_amd64.deb) (architecture: amd64)
@@ -2759,7 +2759,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libc6-i386</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6-i386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6-i386_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-i386_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -2778,7 +2778,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libatrildocument-dev</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>libatrildocument-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [libatrildocument-dev_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrildocument-dev_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2787,7 +2787,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-atrildocument-1.5.0</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>gir1.2-atrildocument-1.5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [gir1.2-atrildocument-1.5.0_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/gir1.2-atrildocument-1.5.0_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2796,7 +2796,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libatrildocument3</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>libatrildocument3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [libatrildocument3_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrildocument3_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2807,7 +2807,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libdjvulibre21</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>libdjvulibre21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [libdjvulibre21_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb) (architecture: amd64)
@@ -2818,7 +2818,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libdjvulibre-text</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>libdjvulibre-text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [libdjvulibre-text_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre-text_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb) (architecture: all)
@@ -2832,7 +2832,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libkpathsea6</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libkpathsea6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libkpathsea6_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libkpathsea6_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -2845,7 +2845,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-glib8</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-glib8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-glib8_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib8_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -2858,7 +2858,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libpoppler126</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler126&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler126_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler126_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -2877,7 +2877,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libsynctex2</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libsynctex2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libsynctex2_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libsynctex2_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -2902,7 +2902,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libatrilview-dev</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>libatrilview-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [libatrilview-dev_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrilview-dev_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2911,7 +2911,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-atrilview-1.5.0</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>gir1.2-atrilview-1.5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [gir1.2-atrilview-1.5.0_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/gir1.2-atrilview-1.5.0_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2922,7 +2922,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gir1.2-atrildocument-1.5.0 — 1.26.0-2+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/gir1.2-atrildocument-1.5.0_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb)
 
 <details>
-<summary><code>libatrilview3</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>libatrilview3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [libatrilview3_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/libatrilview3_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -2945,7 +2945,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libc6-dev-x32</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6-dev-x32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6-dev-x32_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev-x32_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -2956,7 +2956,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6-dev — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libc6-dev-i386</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6-dev-i386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6-dev-i386_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev-i386_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -2971,7 +2971,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libc6-x32</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc6-x32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc6-x32_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-x32_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -2986,7 +2986,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libepub-dev</code> — <code>0.2.2-6</code></summary>
+<summary><code>libepub-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.2-6</code></summary>
 
 **Download files**
 - [libepub-dev_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/libepub-dev_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb) (architecture: amd64)
@@ -2995,7 +2995,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libepub0</code> — <code>0.2.2-6</code></summary>
+<summary><code>libepub0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.2-6</code></summary>
 
 **Download files**
 - [libepub0_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/libepub0_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb) (architecture: amd64)
@@ -3010,7 +3010,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libevince-dev</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>libevince-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [libevince-dev_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevince-dev_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb) (architecture: amd64)
@@ -3019,7 +3019,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-evince-3.0</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>gir1.2-evince-3.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [gir1.2-evince-3.0_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/gir1.2-evince-3.0_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb) (architecture: amd64)
@@ -3028,7 +3028,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libevdocument3-4</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>libevdocument3-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [libevdocument3-4_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevdocument3-4_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb) (architecture: amd64)
@@ -3051,7 +3051,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libevview3-3</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>libevview3-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [libevview3-3_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/libevview3-3_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb) (architecture: amd64)
@@ -3084,7 +3084,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libexo-2-dev</code> — <code>4.18.0-1</code></summary>
+<summary><code>libexo-2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libexo-2-dev_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-dev_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb) (architecture: amd64)
@@ -3093,7 +3093,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libexo-2-0</code> — <code>4.18.0-1</code></summary>
+<summary><code>libexo-2-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libexo-2-0_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-2-0_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb) (architecture: amd64)
@@ -3104,7 +3104,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libexo-common</code> — <code>4.18.0-1</code></summary>
+<summary><code>libexo-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libexo-common_4.18.0-1+core2.1.20261010053936_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/libexo-common_4.18.0-1%2Bcore2.1.20261010053936_all.deb) (architecture: all)
@@ -3114,7 +3114,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libxfce4util7</code> — <code>4.18.1-2</code></summary>
+<summary><code>libxfce4util7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.1-2</code></summary>
 
 **Download files**
 - [libxfce4util7_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb) (architecture: amd64)
@@ -3127,7 +3127,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libxfce4util-common</code> — <code>4.18.1-2</code></summary>
+<summary><code>libxfce4util-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.1-2</code></summary>
 
 **Download files**
 - [libxfce4util-common_4.18.1-2+core2.1.20261010053208_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-common_4.18.1-2%2Bcore2.1.20261010053208_all.deb) (architecture: all)
@@ -3139,7 +3139,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxfce4util-dev</code> — <code>4.18.1-2</code></summary>
+<summary><code>libxfce4util-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.1-2</code></summary>
 
 **Download files**
 - [libxfce4util-dev_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-dev_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb) (architecture: amd64)
@@ -3148,7 +3148,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-libxfce4util-1.0</code> — <code>4.18.1-2</code></summary>
+<summary><code>gir1.2-libxfce4util-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.1-2</code></summary>
 
 **Download files**
 - [gir1.2-libxfce4util-1.0_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb) (architecture: amd64)
@@ -3169,7 +3169,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgarcon-1-0-dev</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-1-0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-1-0-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3178,7 +3178,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libgarcon-1-dev</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-1-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3187,7 +3187,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-garcon-1.0</code> — <code>4.18.0-1</code></summary>
+<summary><code>gir1.2-garcon-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [gir1.2-garcon-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcon-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3198,7 +3198,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gir1.2-libxfce4util-1.0 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>libgarcon-1-0</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-1-0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3209,7 +3209,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libgarcon-common</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-common_4.18.0-1+core2.1.20261010054213_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-common_4.18.0-1%2Bcore2.1.20261010054213_all.deb) (architecture: all)
@@ -3231,7 +3231,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgarcon-gtk3-1-dev</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-gtk3-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-gtk3-1-dev_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-dev_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3240,7 +3240,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-garcongtk-1.0</code> — <code>4.18.0-1</code></summary>
+<summary><code>gir1.2-garcongtk-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [gir1.2-garcongtk-1.0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcongtk-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3251,7 +3251,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gir1.2-garcon-1.0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/gir1.2-garcon-1.0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 
 <details>
-<summary><code>gir1.2-libxfce4ui-2.0</code> — <code>4.18.2-2</code></summary>
+<summary><code>gir1.2-libxfce4ui-2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [gir1.2-libxfce4ui-2.0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/gir1.2-libxfce4ui-2.0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb) (architecture: amd64)
@@ -3262,7 +3262,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gir1.2-libxfce4util-1.0 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>libxfce4ui-2-0</code> — <code>4.18.2-2</code></summary>
+<summary><code>libxfce4ui-2-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [libxfce4ui-2-0_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-0_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb) (architecture: amd64)
@@ -3275,7 +3275,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libxfce4ui-common</code> — <code>4.18.2-2</code></summary>
+<summary><code>libxfce4ui-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [libxfce4ui-common_4.18.2-2+core2.1.20261010053651_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-common_4.18.2-2%2Bcore2.1.20261010053651_all.deb) (architecture: all)
@@ -3285,7 +3285,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libxfce4util7 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>libxfconf-0-3</code> — <code>4.18.0-2</code></summary>
+<summary><code>libxfconf-0-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-2</code></summary>
 
 **Download files**
 - [libxfconf-0-3_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-3_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb) (architecture: amd64)
@@ -3298,7 +3298,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>xfconf</code> — <code>4.18.0-2</code></summary>
+<summary><code>xfconf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-2</code></summary>
 
 **Download files**
 - [xfconf_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/xfconf_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb) (architecture: amd64)
@@ -3323,7 +3323,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [gir1.2-libxfce4util-1.0 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/gir1.2-libxfce4util-1.0_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>libgarcon-gtk3-1-0</code> — <code>4.18.0-1</code></summary>
+<summary><code>libgarcon-gtk3-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libgarcon-gtk3-1-0_4.18.0-1+core2.1.20261010054213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb) (architecture: amd64)
@@ -3350,7 +3350,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgarcon-gtk3-1-0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-garcon-4.18.0-1-core2.1-20261010054213/libgarcon-gtk3-1-0_4.18.0-1%2Bcore2.1.20261010054213_amd64.deb)
 
 <details>
-<summary><code>libxfce4ui-2-dev</code> — <code>4.18.2-2</code></summary>
+<summary><code>libxfce4ui-2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [libxfce4ui-2-dev_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-2-dev_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb) (architecture: amd64)
@@ -3365,7 +3365,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libxfce4util-dev — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-dev_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>libxfconf-0-dev</code> — <code>4.18.0-2</code></summary>
+<summary><code>libxfconf-0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-2</code></summary>
 
 **Download files**
 - [libxfconf-0-dev_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-dev_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb) (architecture: amd64)
@@ -3374,7 +3374,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-xfconf-0</code> — <code>4.18.0-2</code></summary>
+<summary><code>gir1.2-xfconf-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-2</code></summary>
 
 **Download files**
 - [gir1.2-xfconf-0_4.18.0-2+core2.1.20261010053410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/gir1.2-xfconf-0_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb) (architecture: amd64)
@@ -3397,7 +3397,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgpm-dev</code> — <code>1.20.7-10</code></summary>
+<summary><code>libgpm-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.20.7-10</code></summary>
 
 **Download files**
 - [libgpm-dev_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/libgpm-dev_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb) (architecture: amd64)
@@ -3408,7 +3408,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6-dev — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libgpm2</code> — <code>1.20.7-10</code></summary>
+<summary><code>libgpm2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.20.7-10</code></summary>
 
 **Download files**
 - [libgpm2_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/libgpm2_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb) (architecture: amd64)
@@ -3423,7 +3423,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libidn2-dev</code> — <code>2.3.3-1</code></summary>
+<summary><code>libidn2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
 
 **Download files**
 - [libidn2-dev_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-dev_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb) (architecture: amd64)
@@ -3436,7 +3436,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libimage-magick-q16hdri-perl</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libimage-magick-q16hdri-perl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libimage-magick-q16hdri-perl_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libimage-magick-q16hdri-perl_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3447,7 +3447,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libmagickcore-6.q16hdri-6</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16hdri-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16hdri-6_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3456,7 +3456,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>imagemagick-6-common</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-6-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-6-common_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3468,7 +3468,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libfftw3-double3</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-double3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-double3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -3487,7 +3487,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
 
 <details>
-<summary><code>libwebpdemux2</code> — <code>1.2.4-0.2+deb12u1</code></summary>
+<summary><code>libwebpdemux2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
 - [libwebpdemux2_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebpdemux2_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb) (architecture: amd64)
@@ -3508,7 +3508,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libperl5.36</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>libperl5.36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [libperl5.36_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/libperl5.36_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb) (architecture: amd64)
@@ -3523,7 +3523,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcrypt1 — 1:4.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb)
 
 <details>
-<summary><code>perl-modules-5.36</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>perl-modules-5.36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [perl-modules-5.36_5.36.0-7+deb12u4+core2.1.20261011040002_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-modules-5.36_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_all.deb) (architecture: all)
@@ -3532,7 +3532,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>perl-base</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>perl-base&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [perl-base_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-base_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb) (architecture: amd64)
@@ -3553,7 +3553,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>perl</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>perl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [perl_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb) (architecture: amd64)
@@ -3572,7 +3572,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libkpathsea-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libkpathsea-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libkpathsea-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libkpathsea-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -3585,7 +3585,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagic-dev</code> — <code>1:5.44-3</code></summary>
+<summary><code>libmagic-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
 
 **Download files**
 - [libmagic-dev_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-dev_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
@@ -3594,7 +3594,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libmagic1</code> — <code>1:5.44-3</code></summary>
+<summary><code>libmagic1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
 
 **Download files**
 - [libmagic1_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic1_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
@@ -3609,7 +3609,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
 <details>
-<summary><code>libmagic-mgc</code> — <code>1:5.44-3</code></summary>
+<summary><code>libmagic-mgc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
 
 **Download files**
 - [libmagic-mgc_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-mgc_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
@@ -3623,7 +3623,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagick++-6.q16hdri-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-6.q16hdri-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-6.q16hdri-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6.q16hdri-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3632,7 +3632,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libmagick++-6-headers</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-6-headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-6-headers_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6-headers_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3643,7 +3643,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [imagemagick-6-common — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>libmagickcore-6-headers</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6-headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6-headers_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6-headers_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3656,7 +3656,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickwand-6-headers</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-6-headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-6-headers_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6-headers_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3673,7 +3673,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagick++-6.q16hdri-8</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-6.q16hdri-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-6.q16hdri-8_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6.q16hdri-8_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3686,7 +3686,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagickcore-6.q16hdri-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
 <details>
-<summary><code>libmagickwand-6.q16hdri-6</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-6.q16hdri-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-6.q16hdri-6_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3705,7 +3705,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickcore-6.q16hdri-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16hdri-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16hdri-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3714,7 +3714,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libbz2-dev</code> — <code>1.0.8-5</code></summary>
+<summary><code>libbz2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.8-5</code></summary>
 
 **Download files**
 - [libbz2-dev_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-dev_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb) (architecture: amd64)
@@ -3729,7 +3729,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libdjvulibre-dev</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>libdjvulibre-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [libdjvulibre-dev_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre-dev_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb) (architecture: amd64)
@@ -3740,7 +3740,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdjvulibre21 — 3.5.28-2.2~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
 
 <details>
-<summary><code>libjpeg-dev</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libjpeg-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libjpeg-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -3749,7 +3749,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libjpeg62-turbo-dev</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libjpeg62-turbo-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libjpeg62-turbo-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -3768,7 +3768,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libjpeg-dev — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
 <details>
-<summary><code>libmagickcore-6-arch-config</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6-arch-config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6-arch-config_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6-arch-config_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3785,7 +3785,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagickcore-6.q16hdri-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
 <details>
-<summary><code>libmagickcore-6.q16hdri-6-extra</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16hdri-6-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16hdri-6-extra_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16hdri-6-extra_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3810,7 +3810,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickwand-6.q16hdri-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-6.q16hdri-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-6.q16hdri-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16hdri-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3831,7 +3831,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagick++-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3842,7 +3842,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [imagemagick-6-common — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>libmagick++-6.q16-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-6.q16-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-6.q16-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6.q16-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3853,7 +3853,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagick++-6-headers — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6-headers_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>libmagick++-6.q16-8</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagick++-6.q16-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagick++-6.q16-8_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagick%2B%2B-6.q16-8_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3864,7 +3864,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libmagickcore-6.q16-6</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16-6_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3895,7 +3895,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickwand-6.q16-6</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-6.q16-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-6.q16-6_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3914,7 +3914,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickcore-6.q16-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3933,7 +3933,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmagickcore-6.q16-6 — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16-6_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb)
 
 <details>
-<summary><code>libmagickcore-6.q16-6-extra</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-6.q16-6-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-6.q16-6-extra_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-6.q16-6-extra_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3958,7 +3958,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickwand-6.q16-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-6.q16-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-6.q16-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-6.q16-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -3981,7 +3981,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickcore-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickcore-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickcore-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickcore-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -3996,7 +3996,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmagickwand-dev</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libmagickwand-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libmagickwand-dev_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libmagickwand-dev_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -4011,7 +4011,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmupdf-dev</code> — <code>1.21.1+ds2-1+deb12u1</code></summary>
+<summary><code>libmupdf-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.1+ds2-1+deb12u1</code></summary>
 
 **Download files**
 - [libmupdf-dev_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/libmupdf-dev_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb) (architecture: amd64)
@@ -4019,7 +4019,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libperl-dev</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>libperl-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [libperl-dev_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/libperl-dev_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb) (architecture: amd64)
@@ -4036,7 +4036,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-cpp-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-cpp-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-cpp-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-cpp-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4045,7 +4045,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libpoppler-cpp0v5</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-cpp0v5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-cpp0v5_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-cpp0v5_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4060,7 +4060,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4075,7 +4075,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-glib-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-glib-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-glib-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4084,7 +4084,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-poppler-0.18</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>gir1.2-poppler-0.18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [gir1.2-poppler-0.18_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/gir1.2-poppler-0.18_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4105,7 +4105,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-private-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-private-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-private-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-private-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4118,7 +4118,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-qt5-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-qt5-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-qt5-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt5-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4129,7 +4129,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpoppler-dev — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
 
 <details>
-<summary><code>libpoppler-qt5-1</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-qt5-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-qt5-1_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt5-1_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4146,7 +4146,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-qt6-dev</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-qt6-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-qt6-dev_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt6-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4157,7 +4157,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpoppler-dev — 22.12.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-dev_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb)
 
 <details>
-<summary><code>libpoppler-qt6-3</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-qt6-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-qt6-3_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-qt6-3_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -4174,7 +4174,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpspell-dev</code> — <code>0.60.8-4</code></summary>
+<summary><code>libpspell-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.60.8-4</code></summary>
 
 **Download files**
 - [libpspell-dev_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libpspell-dev_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb) (architecture: amd64)
@@ -4183,7 +4183,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libaspell-dev</code> — <code>0.60.8-4</code></summary>
+<summary><code>libaspell-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.60.8-4</code></summary>
 
 **Download files**
 - [libaspell-dev_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libaspell-dev_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb) (architecture: amd64)
@@ -4192,7 +4192,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libaspell15</code> — <code>0.60.8-4</code></summary>
+<summary><code>libaspell15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.60.8-4</code></summary>
 
 **Download files**
 - [libaspell15_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/libaspell15_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb) (architecture: amd64)
@@ -4211,7 +4211,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libptexenc-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libptexenc-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libptexenc-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libptexenc-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4220,7 +4220,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libptexenc1</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libptexenc1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libptexenc1_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libptexenc1_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4237,7 +4237,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpython3.11</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>libpython3.11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [libpython3.11_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -4256,7 +4256,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libssh2-1-dev</code> — <code>1.10.0-3+deb12u1</code></summary>
+<summary><code>libssh2-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
 
 **Download files**
 - [libssh2-1-dev_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1-dev_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -4267,7 +4267,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libssh2-1 — 1.10.0-3+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libssl-dev</code> — <code>3.0.22-1~deb12u1</code></summary>
+<summary><code>libssl-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0.22-1~deb12u1</code></summary>
 
 **Download files**
 - [libssl-dev_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl-dev_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb) (architecture: amd64)
@@ -4284,7 +4284,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libsynctex-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libsynctex-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libsynctex-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libsynctex-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4297,7 +4297,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libtexlua53-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexlua53-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexlua53-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_all.deb) (architecture: all)
@@ -4306,7 +4306,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libtexlua-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexlua-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexlua-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4315,7 +4315,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libtexlua53-5</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexlua53-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexlua53-5_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53-5_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4332,7 +4332,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libtexluajit-dev</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexluajit-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexluajit-dev_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexluajit-dev_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4341,7 +4341,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libtexluajit2</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexluajit2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexluajit2_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexluajit2_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -4356,7 +4356,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libthunarx-3-dev</code> — <code>4.18.4-1</code></summary>
+<summary><code>libthunarx-3-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.4-1</code></summary>
 
 **Download files**
 - [libthunarx-3-dev_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/libthunarx-3-dev_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb) (architecture: amd64)
@@ -4365,7 +4365,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>gir1.2-thunarx-3.0</code> — <code>4.18.4-1</code></summary>
+<summary><code>gir1.2-thunarx-3.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.4-1</code></summary>
 
 **Download files**
 - [gir1.2-thunarx-3.0_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/gir1.2-thunarx-3.0_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb) (architecture: amd64)
@@ -4374,7 +4374,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libthunarx-3-0</code> — <code>4.18.4-1</code></summary>
+<summary><code>libthunarx-3-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.4-1</code></summary>
 
 **Download files**
 - [libthunarx-3-0_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/libthunarx-3-0_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb) (architecture: amd64)
@@ -4397,7 +4397,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libxfconf-0-3 — 4.18.0-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-xfconf-4.18.0-2-core2.1-20261010053410/libxfconf-0-3_4.18.0-2%2Bcore2.1.20261010053410_amd64.deb)
 
 <details>
-<summary><code>thunar-data</code> — <code>4.18.4-1</code></summary>
+<summary><code>thunar-data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.4-1</code></summary>
 
 **Download files**
 - [thunar-data_4.18.4-1+core2.1.20261010054751_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar-data_4.18.4-1%2Bcore2.1.20261010054751_all.deb) (architecture: all)
@@ -4417,7 +4417,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libtumbler-1-dev</code> — <code>4.18.0-1</code></summary>
+<summary><code>libtumbler-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libtumbler-1-dev_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/libtumbler-1-dev_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb) (architecture: amd64)
@@ -4428,7 +4428,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libglib2.0-dev — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>libtumbler-1-0</code> — <code>4.18.0-1</code></summary>
+<summary><code>libtumbler-1-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [libtumbler-1-0_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/libtumbler-1-0_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb) (architecture: amd64)
@@ -4447,7 +4447,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libturbojpeg0-dev</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libturbojpeg0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libturbojpeg0-dev_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg0-dev_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -4456,7 +4456,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libturbojpeg0</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libturbojpeg0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libturbojpeg0_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg0_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -4471,7 +4471,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libunistring-dev</code> — <code>1.0-2</code></summary>
+<summary><code>libunistring-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0-2</code></summary>
 
 **Download files**
 - [libunistring-dev_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring-dev_1.0-2%2Bcore2.1.20261012093008_amd64.deb) (architecture: amd64)
@@ -4484,7 +4484,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwebp-dev</code> — <code>1.2.4-0.2+deb12u1</code></summary>
+<summary><code>libwebp-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
 - [libwebp-dev_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp-dev_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb) (architecture: amd64)
@@ -4501,7 +4501,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwim-dev</code> — <code>1.13.6-1</code></summary>
+<summary><code>libwim-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.13.6-1</code></summary>
 
 **Download files**
 - [libwim-dev_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim-dev_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb) (architecture: amd64)
@@ -4510,7 +4510,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libwim15</code> — <code>1.13.6-1</code></summary>
+<summary><code>libwim15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.13.6-1</code></summary>
 
 **Download files**
 - [libwim15_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim15_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb) (architecture: amd64)
@@ -4525,7 +4525,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>okular-dev</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>okular-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [okular-dev_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-dev_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -4534,7 +4534,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libokular5core10</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>libokular5core10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [libokular5core10_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/libokular5core10_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -4551,7 +4551,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>perl-debug</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>perl-debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [perl-debug_5.36.0-7+deb12u4+core2.1.20261011040002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-debug_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb) (architecture: amd64)
@@ -4568,7 +4568,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>perl-doc</code> — <code>5.36.0-7+deb12u4</code></summary>
+<summary><code>perl-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.36.0-7+deb12u4</code></summary>
 
 **Download files**
 - [perl-doc_5.36.0-7+deb12u4+core2.1.20261011040002_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl-doc_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_all.deb) (architecture: all)
@@ -4581,7 +4581,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>perlmagick</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>perlmagick&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [perlmagick_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/perlmagick_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -4592,7 +4592,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [imagemagick-6-common — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>libimage-magick-perl</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libimage-magick-perl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libimage-magick-perl_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libimage-magick-perl_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -4603,7 +4603,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [imagemagick-6-common — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>libimage-magick-q16-perl</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>libimage-magick-q16-perl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [libimage-magick-q16-perl_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/libimage-magick-q16-perl_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -4628,7 +4628,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3-boto</code> — <code>2.49.0-4.1</code></summary>
+<summary><code>python3-boto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.49.0-4.1</code></summary>
 
 **Download files**
 - [python3-boto_2.49.0-4.1+core2.1.20261012055353_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python-boto-2.49.0-4.1-core2.1-20261012055353/python3-boto_2.49.0-4.1%2Bcore2.1.20261012055353_all.deb) (architecture: all)
@@ -4636,7 +4636,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3-selinux</code> — <code>3.4-1</code></summary>
+<summary><code>python3-selinux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
 - [python3-selinux_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/python3-selinux_3.4-1%2Bcore2.1.20261009190433_amd64.deb) (architecture: amd64)
@@ -4649,7 +4649,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3-tz</code> — <code>2022.7.1-4</code></summary>
+<summary><code>python3-tz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.7.1-4</code></summary>
 
 **Download files**
 - [python3-tz_2022.7.1-4+core2.1.20261012055311_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python-tz-2022.7.1-4-core2.1-20261012055311/python3-tz_2022.7.1-4%2Bcore2.1.20261012055311_all.deb) (architecture: all)
@@ -4657,7 +4657,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3.11-doc</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-doc_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-doc_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb) (architecture: all)
@@ -4665,7 +4665,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3.11-examples</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-examples&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-examples_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-examples_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb) (architecture: all)
@@ -4678,7 +4678,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3.11-full</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-full&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-full_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-full_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -4687,7 +4687,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>idle-python3.11</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>idle-python3.11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [idle-python3.11_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/idle-python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb) (architecture: all)
@@ -4700,7 +4700,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpython3.11-testsuite</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>libpython3.11-testsuite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [libpython3.11-testsuite_3.11.2-6+deb12u9+core2.1.20261009153835_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/libpython3.11-testsuite_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_all.deb) (architecture: all)
@@ -4715,7 +4715,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [python3.11 — 3.11.2-6+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb)
 
 <details>
-<summary><code>python3.11-venv</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-venv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-venv_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-venv_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -4730,7 +4730,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>python3.11-nopie</code> — <code>3.11.2-6+deb12u9</code></summary>
+<summary><code>python3.11-nopie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11.2-6+deb12u9</code></summary>
 
 **Download files**
 - [python3.11-nopie_3.11.2-6+deb12u9+core2.1.20261009153835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835/python3.11-nopie_3.11.2-6%2Bdeb12u9%2Bcore2.1.20261009153835_amd64.deb) (architecture: amd64)
@@ -4749,7 +4749,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ripgrep</code> — <code>13.0.0-4</code></summary>
+<summary><code>ripgrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13.0.0-4</code></summary>
 
 **Download files**
 - [ripgrep_13.0.0-4+core2.1.20261009115443_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443/ripgrep_13.0.0-4%2Bcore2.1.20261009115443_amd64.deb) (architecture: amd64)
@@ -4764,7 +4764,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ruby-selinux</code> — <code>3.4-1</code></summary>
+<summary><code>ruby-selinux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
 - [ruby-selinux_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/ruby-selinux_3.4-1%2Bcore2.1.20261009190433_amd64.deb) (architecture: amd64)
@@ -4779,7 +4779,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>sd</code> — <code>0.80.really.0.7.6-1+deb12u1</code></summary>
+<summary><code>sd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.80.really.0.7.6-1+deb12u1</code></summary>
 
 **Download files**
 - [sd_0.80.really.0.7.6-1+deb12u1+core2.1.20261009163957_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-sd-0.7.6-1-deb12u1-core2.1-20261009163957/sd_0.80.really.0.7.6-1%2Bdeb12u1%2Bcore2.1.20261009163957_amd64.deb) (architecture: amd64)
@@ -4797,7 +4797,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary>System &amp; libraries (44 top-level packages)</summary>
 
 <details>
-<summary><code>ash</code> — <code>0.5.12-2</code></summary>
+<summary><code>ash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.12-2</code></summary>
 
 **Download files**
 - [ash_0.5.12-2+core2.1.20261009104558_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/ash_0.5.12-2%2Bcore2.1.20261009104558_all.deb) (architecture: all)
@@ -4806,7 +4806,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>dash</code> — <code>0.5.12-2</code></summary>
+<summary><code>dash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.12-2</code></summary>
 
 **Download files**
 - [dash_0.5.12-2+core2.1.20261009104558_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-dash-0.5.12-2-core2.1-20261009104558/dash_0.5.12-2%2Bcore2.1.20261009104558_amd64.deb) (architecture: amd64)
@@ -4821,7 +4821,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>bash-builtins</code> — <code>5.2.15-2</code></summary>
+<summary><code>bash-builtins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.15-2</code></summary>
 
 **Download files**
 - [bash-builtins_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-builtins_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb) (architecture: amd64)
@@ -4830,7 +4830,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>bash</code> — <code>5.2.15-2</code></summary>
+<summary><code>bash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.15-2</code></summary>
 
 **Download files**
 - [bash_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb) (architecture: amd64)
@@ -4847,7 +4847,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>bash-doc</code> — <code>5.2.15-2</code></summary>
+<summary><code>bash-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.15-2</code></summary>
 
 **Download files**
 - [bash-doc_5.2.15-2+core2.1.20261009104102_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-doc_5.2.15-2%2Bcore2.1.20261009104102_all.deb) (architecture: all)
@@ -4855,7 +4855,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>bash-static</code> — <code>5.2.15-2</code></summary>
+<summary><code>bash-static&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.15-2</code></summary>
 
 **Download files**
 - [bash-static_5.2.15-2+core2.1.20261009104102_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-bash-5.2.15-2-core2.1-20261009104102/bash-static_5.2.15-2%2Bcore2.1.20261009104102_amd64.deb) (architecture: amd64)
@@ -4864,7 +4864,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>passwd</code> — <code>1:4.13+dfsg1-1+deb12u2</code></summary>
+<summary><code>passwd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.13+dfsg1-1+deb12u2</code></summary>
 
 **Download files**
 - [passwd_4.13+dfsg1-1+deb12u2+core2.1.20261009192822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/passwd_4.13%2Bdfsg1-1%2Bdeb12u2%2Bcore2.1.20261009192822_amd64.deb) (architecture: amd64)
@@ -4877,7 +4877,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcrypt1 — 1:4.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb)
 
 <details>
-<summary><code>libpam-modules</code> — <code>1.5.2-6+deb12u2</code></summary>
+<summary><code>libpam-modules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.2-6+deb12u2</code></summary>
 
 **Download files**
 - [libpam-modules_1.5.2-6+deb12u2+core2.1.20261009193111_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam-modules_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_amd64.deb) (architecture: amd64)
@@ -4890,7 +4890,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcrypt1 — 1:4.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb)
 
 <details>
-<summary><code>libpam-modules-bin</code> — <code>1.5.2-6+deb12u2</code></summary>
+<summary><code>libpam-modules-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.2-6+deb12u2</code></summary>
 
 **Download files**
 - [libpam-modules-bin_1.5.2-6+deb12u2+core2.1.20261009193111_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam-modules-bin_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_amd64.deb) (architecture: amd64)
@@ -4923,7 +4923,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>busybox-syslogd</code> — <code>1:1.35.0-4+deb12u1</code></summary>
+<summary><code>busybox-syslogd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.35.0-4+deb12u1</code></summary>
 
 **Download files**
 - [busybox-syslogd_1.35.0-4+deb12u1+core2.1.20261012093022_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox-syslogd_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_all.deb) (architecture: all)
@@ -4932,7 +4932,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>busybox</code> — <code>1:1.35.0-4+deb12u1</code></summary>
+<summary><code>busybox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.35.0-4+deb12u1</code></summary>
 
 **Download files**
 - [busybox_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb) (architecture: amd64)
@@ -4945,7 +4945,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>busybox-static</code> — <code>1:1.35.0-4+deb12u1</code></summary>
+<summary><code>busybox-static&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.35.0-4+deb12u1</code></summary>
 
 **Download files**
 - [busybox-static_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/busybox-static_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb) (architecture: amd64)
@@ -4955,7 +4955,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>bzip2</code> — <code>1.0.8-5</code></summary>
+<summary><code>bzip2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.8-5</code></summary>
 
 **Download files**
 - [bzip2_1.0.8-5+core2.1.20261012055218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/bzip2_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb) (architecture: amd64)
@@ -4970,7 +4970,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>bzip2-doc</code> — <code>1.0.8-5</code></summary>
+<summary><code>bzip2-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.8-5</code></summary>
 
 **Download files**
 - [bzip2-doc_1.0.8-5+core2.1.20261012055218_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/bzip2-doc_1.0.8-5%2Bcore2.1.20261012055218_all.deb) (architecture: all)
@@ -4978,7 +4978,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>coreutils</code> — <code>9.1-1</code></summary>
+<summary><code>coreutils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.1-1</code></summary>
 
 **Download files**
 - [coreutils_9.1-1+core2.1.20261009103756_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-coreutils-9.1-1-core2.1-20261009103756/coreutils_9.1-1%2Bcore2.1.20261009103756_amd64.deb) (architecture: amd64)
@@ -4989,7 +4989,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libacl1 — 2.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/libacl1_2.3.1-3%2Bcore2.1.20261009190907_amd64.deb)
 
 <details>
-<summary><code>libattr1</code> — <code>1:2.5.1-4</code></summary>
+<summary><code>libattr1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.5.1-4</code></summary>
 
 **Download files**
 - [libattr1_2.5.1-4+core2.1.20261009191027_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-attr-1-2.5.1-4-core2.1-20261009191027/libattr1_2.5.1-4%2Bcore2.1.20261009191027_amd64.deb) (architecture: amd64)
@@ -5004,7 +5004,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libgmp10</code> — <code>2:6.2.1+dfsg1-1.1</code></summary>
+<summary><code>libgmp10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:6.2.1+dfsg1-1.1</code></summary>
 
 **Download files**
 - [libgmp10_6.2.1+dfsg1-1.1+core2.1.20261009194412_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmp10_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb) (architecture: amd64)
@@ -5021,7 +5021,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>glibc-doc</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>glibc-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [glibc-doc_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/glibc-doc_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb) (architecture: all)
@@ -5029,7 +5029,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>glibc-source</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>glibc-source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [glibc-source_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/glibc-source_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb) (architecture: all)
@@ -5037,7 +5037,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>grep</code> — <code>3.8-5</code></summary>
+<summary><code>grep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8-5</code></summary>
 
 **Download files**
 - [grep_3.8-5+core2.1.20261009191150_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-grep-3.8-5-core2.1-20261009191150/grep_3.8-5%2Bcore2.1.20261009191150_amd64.deb) (architecture: amd64)
@@ -5052,7 +5052,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gzip</code> — <code>1.12-1</code></summary>
+<summary><code>gzip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12-1</code></summary>
 
 **Download files**
 - [gzip_1.12-1+core2.1.20261009191817_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/gzip_1.12-1%2Bcore2.1.20261009191817_amd64.deb) (architecture: amd64)
@@ -5065,7 +5065,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gzip-win32</code> — <code>1.12-1</code></summary>
+<summary><code>gzip-win32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12-1</code></summary>
 
 **Download files**
 - [gzip-win32_1.12-1+core2.1.20261009191817_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/gzip-win32_1.12-1%2Bcore2.1.20261009191817_all.deb) (architecture: all)
@@ -5073,7 +5073,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>kmod</code> — <code>30+20221128-1</code></summary>
+<summary><code>kmod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30+20221128-1</code></summary>
 
 **Download files**
 - [kmod_30+20221128-1+core2.1.20261009193535_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/kmod_30%2B20221128-1%2Bcore2.1.20261009193535_amd64.deb) (architecture: amd64)
@@ -5092,7 +5092,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libc-devtools</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc-devtools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc-devtools_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-devtools_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -5105,7 +5105,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>liblzma-doc</code> — <code>5.4.1-1+deb12u2</code></summary>
+<summary><code>liblzma-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1-1+deb12u2</code></summary>
 
 **Download files**
 - [liblzma-doc_5.4.1-1+deb12u2+core2.1.20261009193709_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma-doc_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_all.deb) (architecture: all)
@@ -5113,7 +5113,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libnss-myhostname</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libnss-myhostname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libnss-myhostname_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-myhostname_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5126,7 +5126,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libnss-mymachines</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libnss-mymachines&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libnss-mymachines_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-mymachines_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5139,7 +5139,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcap2 — 1:2.66-4+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
 
 <details>
-<summary><code>systemd-container</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-container&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-container_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-container_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5154,7 +5154,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libcurl4</code> — <code>7.88.1-10+deb12u15</code></summary>
+<summary><code>libcurl4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
 - [libcurl4_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl4_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
@@ -5181,7 +5181,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
 
 <details>
-<summary><code>libsystemd-shared</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libsystemd-shared&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libsystemd-shared_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd-shared_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5210,7 +5210,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5245,7 +5245,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libnss-resolve</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libnss-resolve&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libnss-resolve_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-resolve_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5256,7 +5256,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>systemd-resolved</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-resolved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-resolved_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-resolved_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5277,7 +5277,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libnss-systemd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libnss-systemd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libnss-systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libnss-systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5294,7 +5294,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpam-cap</code> — <code>1:2.66-4+deb12u3</code></summary>
+<summary><code>libpam-cap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.66-4+deb12u3</code></summary>
 
 **Download files**
 - [libpam-cap_2.66-4+deb12u3+core2.1.20261009190327_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libpam-cap_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb) (architecture: amd64)
@@ -5307,7 +5307,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libcap2 — 1:2.66-4+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327/libcap2_2.66-4%2Bdeb12u3%2Bcore2.1.20261009190327_amd64.deb)
 
 <details>
-<summary><code>libpam-runtime</code> — <code>1.5.2-6+deb12u2</code></summary>
+<summary><code>libpam-runtime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.2-6+deb12u2</code></summary>
 
 **Download files**
 - [libpam-runtime_1.5.2-6+deb12u2+core2.1.20261009193111_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam-runtime_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_all.deb) (architecture: all)
@@ -5324,7 +5324,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpam-doc</code> — <code>1.5.2-6+deb12u2</code></summary>
+<summary><code>libpam-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.2-6+deb12u2</code></summary>
 
 **Download files**
 - [libpam-doc_1.5.2-6+deb12u2+core2.1.20261009193111_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam-doc_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_all.deb) (architecture: all)
@@ -5332,7 +5332,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpam-systemd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>libpam-systemd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [libpam-systemd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libpam-systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5351,7 +5351,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [systemd — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 <details>
-<summary><code>systemd-sysv</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-sysv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-sysv_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-sysv_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5366,7 +5366,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libssl-doc</code> — <code>3.0.22-1~deb12u1</code></summary>
+<summary><code>libssl-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0.22-1~deb12u1</code></summary>
 
 **Download files**
 - [libssl-doc_3.0.22-1.deb12u1+core2.1.20261011040326_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl-doc_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_all.deb) (architecture: all)
@@ -5374,7 +5374,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>locales</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>locales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [locales_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/locales_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb) (architecture: all)
@@ -5383,7 +5383,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libc-bin</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc-bin_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-bin_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -5396,7 +5396,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libc-l10n</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>libc-l10n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [libc-l10n_2.36-9+deb12u14+core2.1.20261010052854_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc-l10n_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_all.deb) (architecture: all)
@@ -5406,7 +5406,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>locales-all</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>locales-all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [locales-all_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/locales-all_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -5419,7 +5419,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>login</code> — <code>1:4.13+dfsg1-1+deb12u2</code></summary>
+<summary><code>login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.13+dfsg1-1+deb12u2</code></summary>
 
 **Download files**
 - [login_4.13+dfsg1-1+deb12u2+core2.1.20261009192822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/login_4.13%2Bdfsg1-1%2Bdeb12u2%2Bcore2.1.20261009192822_amd64.deb) (architecture: amd64)
@@ -5440,7 +5440,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>nscd</code> — <code>2.36-9+deb12u14</code></summary>
+<summary><code>nscd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
 
 **Download files**
 - [nscd_2.36-9+deb12u14+core2.1.20261010052854_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/nscd_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb) (architecture: amd64)
@@ -5453,7 +5453,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>openssl</code> — <code>3.0.22-1~deb12u1</code></summary>
+<summary><code>openssl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0.22-1~deb12u1</code></summary>
 
 **Download files**
 - [openssl_3.0.22-1.deb12u1+core2.1.20261011040326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/openssl_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb) (architecture: amd64)
@@ -5468,7 +5468,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>sed</code> — <code>4.9-1+deb12u1</code></summary>
+<summary><code>sed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.9-1+deb12u1</code></summary>
 
 **Download files**
 - [sed_4.9-1+deb12u1+core2.1.20261009191427_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sed-4.9-1-deb12u1-core2.1-20261009191427/sed_4.9-1%2Bdeb12u1%2Bcore2.1.20261009191427_amd64.deb) (architecture: amd64)
@@ -5485,7 +5485,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-boot</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-boot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-boot_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-boot_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5498,7 +5498,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libsystemd-shared — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/libsystemd-shared_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 <details>
-<summary><code>systemd-boot-efi</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-boot-efi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-boot-efi_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-boot-efi_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5508,7 +5508,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-coredump</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-coredump&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-coredump_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-coredump_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5527,7 +5527,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-homed</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-homed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-homed_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-homed_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5550,7 +5550,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [systemd — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 <details>
-<summary><code>systemd-userdbd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-userdbd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-userdbd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-userdbd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5569,7 +5569,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-journal-remote</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-journal-remote&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-journal-remote_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-journal-remote_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5588,7 +5588,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-oomd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-oomd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-oomd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-oomd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5603,7 +5603,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [systemd — 252.39-1~deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb)
 
 <details>
-<summary><code>systemd-standalone-sysusers</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-standalone-sysusers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-standalone-sysusers_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-standalone-sysusers_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5624,7 +5624,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-standalone-tmpfiles</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-standalone-tmpfiles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-standalone-tmpfiles_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-standalone-tmpfiles_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5643,7 +5643,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-tests</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-tests_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-tests_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5682,7 +5682,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>systemd-timesyncd</code> — <code>252.39-1~deb12u2</code></summary>
+<summary><code>systemd-timesyncd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252.39-1~deb12u2</code></summary>
 
 **Download files**
 - [systemd-timesyncd_252.39-1.deb12u2+core2.1.20261010025144_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144/systemd-timesyncd_252.39-1.deb12u2%2Bcore2.1.20261010025144_amd64.deb) (architecture: amd64)
@@ -5699,7 +5699,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tar-scripts</code> — <code>1.34+dfsg-1.2+deb12u1</code></summary>
+<summary><code>tar-scripts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.34+dfsg-1.2+deb12u1</code></summary>
 
 **Download files**
 - [tar-scripts_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar-scripts_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb) (architecture: amd64)
@@ -5708,7 +5708,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>tar</code> — <code>1.34+dfsg-1.2+deb12u1</code></summary>
+<summary><code>tar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.34+dfsg-1.2+deb12u1</code></summary>
 
 **Download files**
 - [tar_1.34+dfsg-1.2+deb12u1+core2.1.20261009152714_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714/tar_1.34%2Bdfsg-1.2%2Bdeb12u1%2Bcore2.1.20261009152714_amd64.deb) (architecture: amd64)
@@ -5727,7 +5727,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>udhcpc</code> — <code>1:1.35.0-4+deb12u1</code></summary>
+<summary><code>udhcpc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.35.0-4+deb12u1</code></summary>
 
 **Download files**
 - [udhcpc_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/udhcpc_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb) (architecture: amd64)
@@ -5742,7 +5742,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>udhcpd</code> — <code>1:1.35.0-4+deb12u1</code></summary>
+<summary><code>udhcpd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:1.35.0-4+deb12u1</code></summary>
 
 **Download files**
 - [udhcpd_1.35.0-4+deb12u1+core2.1.20261012093022_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-busybox-1-1.35.0-4-deb12u1-core2.1-20261012093022/udhcpd_1.35.0-4%2Bdeb12u1%2Bcore2.1.20261012093022_amd64.deb) (architecture: amd64)
@@ -5757,7 +5757,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>uidmap</code> — <code>1:4.13+dfsg1-1+deb12u2</code></summary>
+<summary><code>uidmap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.13+dfsg1-1+deb12u2</code></summary>
 
 **Download files**
 - [uidmap_4.13+dfsg1-1+deb12u2+core2.1.20261009192822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/uidmap_4.13%2Bdfsg1-1%2Bdeb12u2%2Bcore2.1.20261009192822_amd64.deb) (architecture: amd64)
@@ -5770,7 +5770,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
 <details>
-<summary><code>libsubid4</code> — <code>1:4.13+dfsg1-1+deb12u2</code></summary>
+<summary><code>libsubid4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.13+dfsg1-1+deb12u2</code></summary>
 
 **Download files**
 - [libsubid4_4.13+dfsg1-1+deb12u2+core2.1.20261009192822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-shadow-1-4.13-dfsg1-1-deb12u2-core2.1-20261009192822/libsubid4_4.13%2Bdfsg1-1%2Bdeb12u2%2Bcore2.1.20261009192822_amd64.deb) (architecture: amd64)
@@ -5791,7 +5791,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xz-utils</code> — <code>5.4.1-1+deb12u2</code></summary>
+<summary><code>xz-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1-1+deb12u2</code></summary>
 
 **Download files**
 - [xz-utils_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb) (architecture: amd64)
@@ -5806,7 +5806,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xzdec</code> — <code>5.4.1-1+deb12u2</code></summary>
+<summary><code>xzdec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1-1+deb12u2</code></summary>
 
 **Download files**
 - [xzdec_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/xzdec_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb) (architecture: amd64)
@@ -5824,7 +5824,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary>Applications &amp; utilities (112 top-level packages)</summary>
 
 <details>
-<summary><code>7zip</code> — <code>22.01+really26.02+dfsg-0+deb12u1</code></summary>
+<summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
 
 **Download files**
 - [7zip_22.01+really26.02+dfsg-0+deb12u1+core2.1.20261009183500_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2.1.20261009183500_amd64.deb) (architecture: amd64)
@@ -5837,7 +5837,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>acl</code> — <code>2.3.1-3</code></summary>
+<summary><code>acl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.1-3</code></summary>
 
 **Download files**
 - [acl_2.3.1-3+core2.1.20261009190907_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-acl-2.3.1-3-core2.1-20261009190907/acl_2.3.1-3%2Bcore2.1.20261009190907_amd64.deb) (architecture: amd64)
@@ -5852,7 +5852,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>apvlv</code> — <code>0.4.0+repack-1</code></summary>
+<summary><code>apvlv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.4.0+repack-1</code></summary>
 
 **Download files**
 - [apvlv_0.4.0+repack-1+core2.1.20261012055524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524/apvlv_0.4.0%2Brepack-1%2Bcore2.1.20261012055524_amd64.deb) (architecture: amd64)
@@ -5871,7 +5871,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>arj</code> — <code>3.10.22-26</code></summary>
+<summary><code>arj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.10.22-26</code></summary>
 
 **Download files**
 - [arj_3.10.22-26+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-arj-3.10.22-26-core2.1-20261012055158/arj_3.10.22-26%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
@@ -5884,7 +5884,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>aspell</code> — <code>0.60.8-4</code></summary>
+<summary><code>aspell&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.60.8-4</code></summary>
 
 **Download files**
 - [aspell_0.60.8-4+core2.1.20261012055250_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/aspell_0.60.8-4%2Bcore2.1.20261012055250_amd64.deb) (architecture: amd64)
@@ -5903,7 +5903,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>aspell-doc</code> — <code>0.60.8-4</code></summary>
+<summary><code>aspell-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.60.8-4</code></summary>
 
 **Download files**
 - [aspell-doc_0.60.8-4+core2.1.20261012055250_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-aspell-0.60.8-4-core2.1-20261012055250/aspell-doc_0.60.8-4%2Bcore2.1.20261012055250_all.deb) (architecture: all)
@@ -5911,7 +5911,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>atril</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>atril&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [atril_1.26.0-2+deb12u4+core2.1.20261012055510_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/atril_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_amd64.deb) (architecture: amd64)
@@ -5920,7 +5920,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>atril-common</code> — <code>1.26.0-2+deb12u4</code></summary>
+<summary><code>atril-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.26.0-2+deb12u4</code></summary>
 
 **Download files**
 - [atril-common_1.26.0-2+deb12u4+core2.1.20261012055510_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510/atril-common_1.26.0-2%2Bdeb12u4%2Bcore2.1.20261012055510_all.deb) (architecture: all)
@@ -5938,7 +5938,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>attr</code> — <code>1:2.5.1-4</code></summary>
+<summary><code>attr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.5.1-4</code></summary>
 
 **Download files**
 - [attr_2.5.1-4+core2.1.20261009191027_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-attr-1-2.5.1-4-core2.1-20261009191027/attr_2.5.1-4%2Bcore2.1.20261009191027_amd64.deb) (architecture: amd64)
@@ -5953,7 +5953,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>btop</code> — <code>1.2.13-1</code></summary>
+<summary><code>btop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.13-1</code></summary>
 
 **Download files**
 - [btop_1.2.13-1+core2.1.20261009120005_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-btop-1.2.13-1-core2.1-20261009120005/btop_1.2.13-1%2Bcore2.1.20261009120005_amd64.deb) (architecture: amd64)
@@ -5966,7 +5966,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>catdvi</code> — <code>0.14-14</code></summary>
+<summary><code>catdvi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.14-14</code></summary>
 
 **Download files**
 - [catdvi_0.14-14+core2.1.20261012055215_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-catdvi-0.14-14-core2.1-20261012055215/catdvi_0.14-14%2Bcore2.1.20261012055215_amd64.deb) (architecture: amd64)
@@ -5981,7 +5981,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>cdrkit-doc</code> — <code>9:1.1.11-3.4</code></summary>
+<summary><code>cdrkit-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:1.1.11-3.4</code></summary>
 
 **Download files**
 - [cdrkit-doc_1.1.11-3.4+core2.1.20261012055245_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/cdrkit-doc_1.1.11-3.4%2Bcore2.1.20261012055245_all.deb) (architecture: all)
@@ -5989,7 +5989,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>dbview</code> — <code>1.0.4-5</code></summary>
+<summary><code>dbview&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.4-5</code></summary>
 
 **Download files**
 - [dbview_1.0.4-5+core2.1.20261012055207_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-dbview-1.0.4-5-core2.1-20261012055207/dbview_1.0.4-5%2Bcore2.1.20261012055207_amd64.deb) (architecture: amd64)
@@ -6002,7 +6002,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>diffutils</code> — <code>1:3.8-4</code></summary>
+<summary><code>diffutils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:3.8-4</code></summary>
 
 **Download files**
 - [diffutils_3.8-4+core2.1.20261009191615_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-diffutils-1-3.8-4-core2.1-20261009191615/diffutils_3.8-4%2Bcore2.1.20261009191615_amd64.deb) (architecture: amd64)
@@ -6015,7 +6015,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>diffutils-doc</code> — <code>1:3.8-4</code></summary>
+<summary><code>diffutils-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:3.8-4</code></summary>
 
 **Download files**
 - [diffutils-doc_3.8-4+core2.1.20261009191615_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-diffutils-1-3.8-4-core2.1-20261009191615/diffutils-doc_3.8-4%2Bcore2.1.20261009191615_all.deb) (architecture: all)
@@ -6023,7 +6023,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>djview</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>djview&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [djview_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djview_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb) (architecture: all)
@@ -6032,7 +6032,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>djview3</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>djview3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [djview3_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djview3_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb) (architecture: all)
@@ -6042,7 +6042,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>djvulibre-bin</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>djvulibre-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [djvulibre-bin_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvulibre-bin_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb) (architecture: amd64)
@@ -6051,7 +6051,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>curl</code> — <code>7.88.1-10+deb12u15</code></summary>
+<summary><code>curl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
 - [curl_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/curl_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
@@ -6074,7 +6074,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>djvulibre-desktop</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>djvulibre-desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [djvulibre-desktop_3.5.28-2.2.deb12u1+core2.1.20261012055223_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvulibre-desktop_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_all.deb) (architecture: all)
@@ -6082,7 +6082,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>djvuserve</code> — <code>3.5.28-2.2~deb12u1</code></summary>
+<summary><code>djvuserve&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.28-2.2~deb12u1</code></summary>
 
 **Download files**
 - [djvuserve_3.5.28-2.2.deb12u1+core2.1.20261012055223_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/djvuserve_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb) (architecture: amd64)
@@ -6097,7 +6097,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>e2fsck-static</code> — <code>1.47.0-2</code></summary>
+<summary><code>e2fsck-static&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [e2fsck-static_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/e2fsck-static_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6105,7 +6105,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>e2fsprogs-l10n</code> — <code>1.47.0-2</code></summary>
+<summary><code>e2fsprogs-l10n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [e2fsprogs-l10n_1.47.0-2+core2.1.20261009192320_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/e2fsprogs-l10n_1.47.0-2%2Bcore2.1.20261009192320_all.deb) (architecture: all)
@@ -6114,7 +6114,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>e2fsprogs</code> — <code>1.47.0-2</code></summary>
+<summary><code>e2fsprogs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [e2fsprogs_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/e2fsprogs_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6125,7 +6125,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libcom-err2</code> — <code>1.47.0-2</code></summary>
+<summary><code>libcom-err2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [libcom-err2_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/libcom-err2_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6138,7 +6138,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libext2fs2</code> — <code>1.47.0-2</code></summary>
+<summary><code>libext2fs2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [libext2fs2_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/libext2fs2_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6151,7 +6151,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libss2</code> — <code>1.47.0-2</code></summary>
+<summary><code>libss2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [libss2_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/libss2_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6166,7 +6166,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>logsave</code> — <code>1.47.0-2</code></summary>
+<summary><code>logsave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [logsave_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/logsave_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6183,7 +6183,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>epub-utils</code> — <code>0.2.2-6</code></summary>
+<summary><code>epub-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.2-6</code></summary>
 
 **Download files**
 - [epub-utils_0.2.2-6+core2.1.20261012055224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ebook-tools-0.2.2-6-core2.1-20261012055224/epub-utils_0.2.2-6%2Bcore2.1.20261012055224_amd64.deb) (architecture: amd64)
@@ -6198,7 +6198,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>evince</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>evince&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [evince_43.1-2+deb12u1+core2.1.20261012055507_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/evince_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_amd64.deb) (architecture: amd64)
@@ -6207,7 +6207,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>evince-common</code> — <code>43.1-2+deb12u1</code></summary>
+<summary><code>evince-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43.1-2+deb12u1</code></summary>
 
 **Download files**
 - [evince-common_43.1-2+deb12u1+core2.1.20261012055507_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-evince-43.1-2-deb12u1-core2.1-20261012055507/evince-common_43.1-2%2Bdeb12u1%2Bcore2.1.20261012055507_all.deb) (architecture: all)
@@ -6225,7 +6225,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>expat</code> — <code>2.5.0-1+deb12u4</code></summary>
+<summary><code>expat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.0-1+deb12u4</code></summary>
 
 **Download files**
 - [expat_2.5.0-1+deb12u4+core2.1.20261009195158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-expat-2.5.0-1-deb12u4-core2.1-20261009195158/expat_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261009195158_amd64.deb) (architecture: amd64)
@@ -6240,7 +6240,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>file</code> — <code>1:5.44-3</code></summary>
+<summary><code>file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
 
 **Download files**
 - [file_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/file_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
@@ -6255,7 +6255,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>fuse2fs</code> — <code>1.47.0-2</code></summary>
+<summary><code>fuse2fs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.47.0-2</code></summary>
 
 **Download files**
 - [fuse2fs_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/fuse2fs_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb) (architecture: amd64)
@@ -6272,7 +6272,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gawk</code> — <code>1:5.2.1-2</code></summary>
+<summary><code>gawk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.2.1-2</code></summary>
 
 **Download files**
 - [gawk_5.2.1-2+core2.1.20261009154053_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053/gawk_5.2.1-2%2Bcore2.1.20261009154053_amd64.deb) (architecture: amd64)
@@ -6285,7 +6285,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgmp10 — 2:6.2.1+dfsg1-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmp10_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb)
 
 <details>
-<summary><code>libmpfr6</code> — <code>4.2.0-1</code></summary>
+<summary><code>libmpfr6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.0-1</code></summary>
 
 **Download files**
 - [libmpfr6_4.2.0-1+core2.1.20261009194039_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/libmpfr6_4.2.0-1%2Bcore2.1.20261009194039_amd64.deb) (architecture: amd64)
@@ -6304,7 +6304,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>genisoimage</code> — <code>9:1.1.11-3.4</code></summary>
+<summary><code>genisoimage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:1.1.11-3.4</code></summary>
 
 **Download files**
 - [genisoimage_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/genisoimage_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb) (architecture: amd64)
@@ -6323,7 +6323,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gpm</code> — <code>1.20.7-10</code></summary>
+<summary><code>gpm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.20.7-10</code></summary>
 
 **Download files**
 - [gpm_1.20.7-10+core2.1.20261012055149_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gpm-1.20.7-10-core2.1-20261012055149/gpm_1.20.7-10%2Bcore2.1.20261012055149_amd64.deb) (architecture: amd64)
@@ -6338,7 +6338,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gv</code> — <code>1:3.7.4-2</code></summary>
+<summary><code>gv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:3.7.4-2</code></summary>
 
 **Download files**
 - [gv_3.7.4-2+core2.1.20261012055256_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gv-1-3.7.4-2-core2.1-20261012055256/gv_3.7.4-2%2Bcore2.1.20261012055256_amd64.deb) (architecture: amd64)
@@ -6351,7 +6351,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>htop</code> — <code>3.2.2-2</code></summary>
+<summary><code>htop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.2-2</code></summary>
 
 **Download files**
 - [htop_3.2.2-2+core2.1.20261009120215_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-htop-3.2.2-2-core2.1-20261009120215/htop_3.2.2-2%2Bcore2.1.20261009120215_amd64.deb) (architecture: amd64)
@@ -6368,7 +6368,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>icedax</code> — <code>9:1.1.11-3.4</code></summary>
+<summary><code>icedax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:1.1.11-3.4</code></summary>
 
 **Download files**
 - [icedax_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/icedax_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb) (architecture: amd64)
@@ -6381,7 +6381,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>idn2</code> — <code>2.3.3-1</code></summary>
+<summary><code>idn2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
 
 **Download files**
 - [idn2_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/idn2_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb) (architecture: amd64)
@@ -6398,7 +6398,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>imagemagick</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -6407,7 +6407,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>imagemagick-6.q16</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-6.q16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-6.q16_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6.q16_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -6426,7 +6426,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>imagemagick-6.q16hdri</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-6.q16hdri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-6.q16hdri_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6.q16hdri_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_amd64.deb) (architecture: amd64)
@@ -6443,7 +6443,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>imagemagick-common</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-common_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -6456,7 +6456,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>imagemagick-doc</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-doc_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-doc_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -6467,7 +6467,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [imagemagick-6-common — 8:6.9.11.60+dfsg-1.6+deb12u13 (shared dependency; all)](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-common_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb)
 
 <details>
-<summary><code>imagemagick-6-doc</code> — <code>8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
+<summary><code>imagemagick-6-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:6.9.11.60+dfsg-1.6+deb12u13</code></summary>
 
 **Download files**
 - [imagemagick-6-doc_6.9.11.60+dfsg-1.6+deb12u13+core2.1.20261011064530_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530/imagemagick-6-doc_6.9.11.60%2Bdfsg-1.6%2Bdeb12u13%2Bcore2.1.20261011064530_all.deb) (architecture: all)
@@ -6482,7 +6482,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>iproute2</code> — <code>6.1.0-3</code></summary>
+<summary><code>iproute2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.0-3</code></summary>
 
 **Download files**
 - [iproute2_6.1.0-3+core2.1.20261009193351_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/iproute2_6.1.0-3%2Bcore2.1.20261009193351_amd64.deb) (architecture: amd64)
@@ -6503,7 +6503,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>iproute2-doc</code> — <code>6.1.0-3</code></summary>
+<summary><code>iproute2-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.0-3</code></summary>
 
 **Download files**
 - [iproute2-doc_6.1.0-3+core2.1.20261009193351_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-iproute2-6.1.0-3-core2.1-20261009193351/iproute2-doc_6.1.0-3%2Bcore2.1.20261009193351_all.deb) (architecture: all)
@@ -6511,7 +6511,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>less</code> — <code>590-2.1~deb12u2</code></summary>
+<summary><code>less&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;590-2.1~deb12u2</code></summary>
 
 **Download files**
 - [less_590-2.1.deb12u2+core2.1.20261012093417_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-less-590-2.1-deb12u2-core2.1-20261012093417/less_590-2.1.deb12u2%2Bcore2.1.20261012093417_amd64.deb) (architecture: amd64)
@@ -6526,7 +6526,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lib32ncurses6</code> — <code>6.4-4</code></summary>
+<summary><code>lib32ncurses6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [lib32ncurses6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32ncurses6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6535,7 +6535,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>lib32tinfo6</code> — <code>6.4-4</code></summary>
+<summary><code>lib32tinfo6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [lib32tinfo6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32tinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6552,7 +6552,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lib32ncursesw6</code> — <code>6.4-4</code></summary>
+<summary><code>lib32ncursesw6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [lib32ncursesw6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/lib32ncursesw6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6567,7 +6567,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lib32readline8</code> — <code>8.2-1.3</code></summary>
+<summary><code>lib32readline8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2-1.3</code></summary>
 
 **Download files**
 - [lib32readline8_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/lib32readline8_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb) (architecture: amd64)
@@ -6584,7 +6584,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libcurl3-nss</code> — <code>7.88.1-10+deb12u15</code></summary>
+<summary><code>libcurl3-nss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
 - [libcurl3-nss_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-nss_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
@@ -6603,7 +6603,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libcurl4-doc</code> — <code>7.88.1-10+deb12u15</code></summary>
+<summary><code>libcurl4-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
 
 **Download files**
 - [libcurl4-doc_7.88.1-10+deb12u15+core2.1.20261009190528_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl4-doc_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_all.deb) (architecture: all)
@@ -6611,7 +6611,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libfftw3-bin</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-bin_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-bin_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -6624,7 +6624,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libfftw3-double3 — 3.3.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
 
 <details>
-<summary><code>libfftw3-long3</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-long3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-long3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-long3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -6637,7 +6637,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libfftw3-quad3</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-quad3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-quad3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-quad3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -6650,7 +6650,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libfftw3-single3</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-single3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-single3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-single3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -6665,7 +6665,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libfftw3-doc</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-doc_3.3.10-1+core2.1.20261009181939_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-doc_3.3.10-1%2Bcore2.1.20261009181939_all.deb) (architecture: all)
@@ -6673,7 +6673,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libfftw3-mpi3</code> — <code>3.3.10-1</code></summary>
+<summary><code>libfftw3-mpi3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
 - [libfftw3-mpi3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-mpi3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
@@ -6692,7 +6692,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgmp10-doc</code> — <code>2:6.2.1+dfsg1-1.1</code></summary>
+<summary><code>libgmp10-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:6.2.1+dfsg1-1.1</code></summary>
 
 **Download files**
 - [libgmp10-doc_6.2.1+dfsg1-1.1+core2.1.20261009194412_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmp10-doc_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_all.deb) (architecture: all)
@@ -6700,7 +6700,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgmpxx4ldbl</code> — <code>2:6.2.1+dfsg1-1.1</code></summary>
+<summary><code>libgmpxx4ldbl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:6.2.1+dfsg1-1.1</code></summary>
 
 **Download files**
 - [libgmpxx4ldbl_6.2.1+dfsg1-1.1+core2.1.20261009194412_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412/libgmpxx4ldbl_6.2.1%2Bdfsg1-1.1%2Bcore2.1.20261009194412_amd64.deb) (architecture: amd64)
@@ -6715,7 +6715,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libidn2-doc</code> — <code>2.3.3-1</code></summary>
+<summary><code>libidn2-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
 
 **Download files**
 - [libidn2-doc_2.3.3-1+core2.1.20261012093052_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-doc_2.3.3-1%2Bcore2.1.20261012093052_all.deb) (architecture: all)
@@ -6723,7 +6723,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libjpeg-turbo-progs</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libjpeg-turbo-progs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libjpeg-turbo-progs_2.1.5-2+core2.1.20261011153748_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg-turbo-progs_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb) (architecture: amd64)
@@ -6740,7 +6740,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libmpfr-doc</code> — <code>4.2.0-1</code></summary>
+<summary><code>libmpfr-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.0-1</code></summary>
 
 **Download files**
 - [libmpfr-doc_4.2.0-1+core2.1.20261009194039_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039/libmpfr-doc_4.2.0-1%2Bcore2.1.20261009194039_all.deb) (architecture: all)
@@ -6748,7 +6748,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libncurses5</code> — <code>6.4-4</code></summary>
+<summary><code>libncurses5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libncurses5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncurses5_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6759,7 +6759,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libtinfo5</code> — <code>6.4-4</code></summary>
+<summary><code>libtinfo5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libtinfo5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo5_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6774,7 +6774,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libncurses6</code> — <code>6.4-4</code></summary>
+<summary><code>libncurses6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libncurses6_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncurses6_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6789,7 +6789,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libncursesw5</code> — <code>6.4-4</code></summary>
+<summary><code>libncursesw5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [libncursesw5_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncursesw5_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -6804,7 +6804,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpoppler-glib-doc</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>libpoppler-glib-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [libpoppler-glib-doc_22.12.0-2+deb12u3+core2.1.20261012055344_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/libpoppler-glib-doc_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_all.deb) (architecture: all)
@@ -6812,7 +6812,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libslang2-pic</code> — <code>2.3.3-3</code></summary>
+<summary><code>libslang2-pic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
 - [libslang2-pic_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-pic_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb) (architecture: amd64)
@@ -6821,7 +6821,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>libslang2-dev</code> — <code>2.3.3-3</code></summary>
+<summary><code>libslang2-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
 - [libslang2-dev_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-dev_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb) (architecture: amd64)
@@ -6832,7 +6832,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6-dev — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6-dev_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libslang2</code> — <code>2.3.3-3</code></summary>
+<summary><code>libslang2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
 - [libslang2_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb) (architecture: amd64)
@@ -6849,7 +6849,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libtexlua53</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>libtexlua53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [libtexlua53_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libtexlua53_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_all.deb) (architecture: all)
@@ -6862,7 +6862,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libturbojpeg-java</code> — <code>1:2.1.5-2</code></summary>
+<summary><code>libturbojpeg-java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:2.1.5-2</code></summary>
 
 **Download files**
 - [libturbojpeg-java_2.1.5-2+core2.1.20261011153748_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libturbojpeg-java_2.1.5-2%2Bcore2.1.20261011153748_all.deb) (architecture: all)
@@ -6875,7 +6875,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libwim-doc</code> — <code>1.13.6-1</code></summary>
+<summary><code>libwim-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.13.6-1</code></summary>
 
 **Download files**
 - [libwim-doc_1.13.6-1+core2.1.20261012055555_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/libwim-doc_1.13.6-1%2Bcore2.1.20261012055555_all.deb) (architecture: all)
@@ -6883,7 +6883,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxcrypt-source</code> — <code>1:4.4.33-2</code></summary>
+<summary><code>libxcrypt-source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:4.4.33-2</code></summary>
 
 **Download files**
 - [libxcrypt-source_4.4.33-2+core2.1.20261009185630_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libxcrypt-source_4.4.33-2%2Bcore2.1.20261009185630_all.deb) (architecture: all)
@@ -6891,7 +6891,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxfce4ui-glade</code> — <code>4.18.2-2</code></summary>
+<summary><code>libxfce4ui-glade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [libxfce4ui-glade_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-glade_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb) (architecture: amd64)
@@ -6908,7 +6908,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxfce4ui-utils</code> — <code>4.18.2-2</code></summary>
+<summary><code>libxfce4ui-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.2-2</code></summary>
 
 **Download files**
 - [libxfce4ui-utils_4.18.2-2+core2.1.20261010053651_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651/libxfce4ui-utils_4.18.2-2%2Bcore2.1.20261010053651_amd64.deb) (architecture: amd64)
@@ -6927,7 +6927,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libxfce4util-bin</code> — <code>4.18.1-2</code></summary>
+<summary><code>libxfce4util-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.1-2</code></summary>
 
 **Download files**
 - [libxfce4util-bin_4.18.1-2+core2.1.20261010053208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util-bin_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb) (architecture: amd64)
@@ -6942,7 +6942,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>links</code> — <code>2.28-1</code></summary>
+<summary><code>links&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.28-1</code></summary>
 
 **Download files**
 - [links_2.28-1+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/links_2.28-1%2Bcore2.1.20261012055305_amd64.deb) (architecture: amd64)
@@ -6965,7 +6965,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>links2</code> — <code>2.28-1</code></summary>
+<summary><code>links2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.28-1</code></summary>
 
 **Download files**
 - [links2_2.28-1+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-links2-2.28-1-core2.1-20261012055305/links2_2.28-1%2Bcore2.1.20261012055305_amd64.deb) (architecture: amd64)
@@ -6994,7 +6994,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>locate</code> — <code>4.9.0-4</code></summary>
+<summary><code>locate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.9.0-4</code></summary>
 
 **Download files**
 - [locate_4.9.0-4+core2.1.20261009164357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/locate_4.9.0-4%2Bcore2.1.20261009164357_amd64.deb) (architecture: amd64)
@@ -7003,7 +7003,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>findutils</code> — <code>4.9.0-4</code></summary>
+<summary><code>findutils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.9.0-4</code></summary>
 
 **Download files**
 - [findutils_4.9.0-4+core2.1.20261009164357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-findutils-4.9.0-4-core2.1-20261009164357/findutils_4.9.0-4%2Bcore2.1.20261009164357_amd64.deb) (architecture: amd64)
@@ -7022,7 +7022,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>lynx</code> — <code>2.9.0dev.12-1</code></summary>
+<summary><code>lynx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.9.0dev.12-1</code></summary>
 
 **Download files**
 - [lynx_2.9.0dev.12-1+core2.1.20261012055253_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/lynx_2.9.0dev.12-1%2Bcore2.1.20261012055253_amd64.deb) (architecture: amd64)
@@ -7041,7 +7041,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtinfo6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
 
 <details>
-<summary><code>lynx-common</code> — <code>2.9.0dev.12-1</code></summary>
+<summary><code>lynx-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.9.0dev.12-1</code></summary>
 
 **Download files**
 - [lynx-common_2.9.0dev.12-1+core2.1.20261012055253_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lynx-2.9.0dev.12-1-core2.1-20261012055253/lynx-common_2.9.0dev.12-1%2Bcore2.1.20261012055253_all.deb) (architecture: all)
@@ -7053,7 +7053,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mc</code> — <code>3:4.8.29-2</code></summary>
+<summary><code>mc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:4.8.29-2</code></summary>
 
 **Download files**
 - [mc_4.8.29-2+core2.1.20261012055147_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/mc_4.8.29-2%2Bcore2.1.20261012055147_amd64.deb) (architecture: amd64)
@@ -7074,7 +7074,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libssh2-1 — 1.10.0-3+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb)
 
 <details>
-<summary><code>mc-data</code> — <code>3:4.8.29-2</code></summary>
+<summary><code>mc-data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:4.8.29-2</code></summary>
 
 **Download files**
 - [mc-data_4.8.29-2+core2.1.20261012055147_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mc-3-4.8.29-2-core2.1-20261012055147/mc-data_4.8.29-2%2Bcore2.1.20261012055147_all.deb) (architecture: all)
@@ -7084,7 +7084,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mupdf</code> — <code>1.21.1+ds2-1+deb12u1</code></summary>
+<summary><code>mupdf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.1+ds2-1+deb12u1</code></summary>
 
 **Download files**
 - [mupdf_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/mupdf_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb) (architecture: amd64)
@@ -7103,7 +7103,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>mupdf-tools</code> — <code>1.21.1+ds2-1+deb12u1</code></summary>
+<summary><code>mupdf-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.21.1+ds2-1+deb12u1</code></summary>
 
 **Download files**
 - [mupdf-tools_1.21.1+ds2-1+deb12u1+core2.1.20261012055501_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501/mupdf-tools_1.21.1%2Bds2-1%2Bdeb12u1%2Bcore2.1.20261012055501_amd64.deb) (architecture: amd64)
@@ -7122,7 +7122,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>nano</code> — <code>7.2-1+deb12u1</code></summary>
+<summary><code>nano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2-1+deb12u1</code></summary>
 
 **Download files**
 - [nano_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb) (architecture: amd64)
@@ -7139,7 +7139,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>nano-tiny</code> — <code>7.2-1+deb12u1</code></summary>
+<summary><code>nano-tiny&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2-1+deb12u1</code></summary>
 
 **Download files**
 - [nano-tiny_7.2-1+deb12u1+core2.1.20261009163909_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nano-7.2-1-deb12u1-core2.1-20261009163909/nano-tiny_7.2-1%2Bdeb12u1%2Bcore2.1.20261009163909_amd64.deb) (architecture: amd64)
@@ -7156,7 +7156,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ncmpcpp</code> — <code>0.9.2-2</code></summary>
+<summary><code>ncmpcpp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9.2-2</code></summary>
 
 **Download files**
 - [ncmpcpp_0.9.2-2+core2.1.20261009113534_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534/ncmpcpp_0.9.2-2%2Bcore2.1.20261009113534_amd64.deb) (architecture: amd64)
@@ -7179,7 +7179,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ncurses-bin</code> — <code>6.4-4</code></summary>
+<summary><code>ncurses-bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [ncurses-bin_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-bin_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -7194,7 +7194,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ncurses-doc</code> — <code>6.4-4</code></summary>
+<summary><code>ncurses-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [ncurses-doc_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-doc_6.4-4%2Bcore2.1.20261009185822_all.deb) (architecture: all)
@@ -7202,7 +7202,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ncurses-examples</code> — <code>6.4-4</code></summary>
+<summary><code>ncurses-examples&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [ncurses-examples_6.4-4+core2.1.20261009185822_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-examples_6.4-4%2Bcore2.1.20261009185822_amd64.deb) (architecture: amd64)
@@ -7219,7 +7219,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>ncurses-term</code> — <code>6.4-4</code></summary>
+<summary><code>ncurses-term&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [ncurses-term_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-term_6.4-4%2Bcore2.1.20261009185822_all.deb) (architecture: all)
@@ -7228,7 +7228,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>ncurses-base</code> — <code>6.4-4</code></summary>
+<summary><code>ncurses-base&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.4-4</code></summary>
 
 **Download files**
 - [ncurses-base_6.4-4+core2.1.20261009185822_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/ncurses-base_6.4-4%2Bcore2.1.20261009185822_all.deb) (architecture: all)
@@ -7238,7 +7238,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>neovim</code> — <code>0.7.2-7</code></summary>
+<summary><code>neovim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7.2-7</code></summary>
 
 **Download files**
 - [neovim_0.7.2-7+core2.1.20261009082328_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim_0.7.2-7%2Bcore2.1.20261009082328_amd64.deb) (architecture: amd64)
@@ -7249,7 +7249,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>neovim-runtime</code> — <code>0.7.2-7</code></summary>
+<summary><code>neovim-runtime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7.2-7</code></summary>
 
 **Download files**
 - [neovim-runtime_0.7.2-7+core2.1.20261009082328_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-neovim-0.7.2-7-core2.1-20261009082328/neovim-runtime_0.7.2-7%2Bcore2.1.20261009082328_all.deb) (architecture: all)
@@ -7259,7 +7259,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>odt2txt</code> — <code>0.5-7</code></summary>
+<summary><code>odt2txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5-7</code></summary>
 
 **Download files**
 - [odt2txt_0.5-7+core2.1.20261012055305_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-odt2txt-0.5-7-core2.1-20261012055305/odt2txt_0.5-7%2Bcore2.1.20261012055305_amd64.deb) (architecture: amd64)
@@ -7274,7 +7274,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>okular</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>okular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [okular_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -7295,7 +7295,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>okular-extra-backends</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>okular-extra-backends&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [okular-extra-backends_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-extra-backends_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -7314,7 +7314,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>okular-mobile</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>okular-mobile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [okular-mobile_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/okular-mobile_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -7325,7 +7325,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>qml-module-org-kde-okular</code> — <code>4:22.12.3-1+deb12u1</code></summary>
+<summary><code>qml-module-org-kde-okular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:22.12.3-1+deb12u1</code></summary>
 
 **Download files**
 - [qml-module-org-kde-okular_22.12.3-1+deb12u1+core2.1.20261012055453_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453/qml-module-org-kde-okular_22.12.3-1%2Bdeb12u1%2Bcore2.1.20261012055453_amd64.deb) (architecture: amd64)
@@ -7342,7 +7342,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>pcre2-utils</code> — <code>10.42-1+deb12u2</code></summary>
+<summary><code>pcre2-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
 - [pcre2-utils_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/pcre2-utils_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb) (architecture: amd64)
@@ -7353,7 +7353,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>libpcre2-16-0</code> — <code>10.42-1+deb12u2</code></summary>
+<summary><code>libpcre2-16-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
 - [libpcre2-16-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-16-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb) (architecture: amd64)
@@ -7366,7 +7366,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libpcre2-32-0</code> — <code>10.42-1+deb12u2</code></summary>
+<summary><code>libpcre2-32-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
 - [libpcre2-32-0_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-32-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb) (architecture: amd64)
@@ -7381,7 +7381,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libpcre2-8-0 — 10.42-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 
 <details>
-<summary><code>libpcre2-posix3</code> — <code>10.42-1+deb12u2</code></summary>
+<summary><code>libpcre2-posix3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.42-1+deb12u2</code></summary>
 
 **Download files**
 - [libpcre2-posix3_10.42-1+deb12u2+core2.1.20261009152649_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-posix3_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb) (architecture: amd64)
@@ -7398,7 +7398,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>poppler-utils</code> — <code>22.12.0-2+deb12u3</code></summary>
+<summary><code>poppler-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.12.0-2+deb12u3</code></summary>
 
 **Download files**
 - [poppler-utils_22.12.0-2+deb12u3+core2.1.20261012055344_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344/poppler-utils_22.12.0-2%2Bdeb12u3%2Bcore2.1.20261012055344_amd64.deb) (architecture: amd64)
@@ -7413,7 +7413,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>psmisc</code> — <code>23.6-1</code></summary>
+<summary><code>psmisc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.6-1</code></summary>
 
 **Download files**
 - [psmisc_23.6-1+core2.1.20261009192718_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-psmisc-23.6-1-core2.1-20261009192718/psmisc_23.6-1%2Bcore2.1.20261009192718_amd64.deb) (architecture: amd64)
@@ -7428,7 +7428,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>qpdfview-djvu-plugin</code> — <code>0.5.0+ds-2</code></summary>
+<summary><code>qpdfview-djvu-plugin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.0+ds-2</code></summary>
 
 **Download files**
 - [qpdfview-djvu-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-djvu-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb) (architecture: amd64)
@@ -7441,7 +7441,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdjvulibre21 — 3.5.28-2.2~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223/libdjvulibre21_3.5.28-2.2.deb12u1%2Bcore2.1.20261012055223_amd64.deb)
 
 <details>
-<summary><code>qpdfview</code> — <code>0.5.0+ds-2</code></summary>
+<summary><code>qpdfview&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.0+ds-2</code></summary>
 
 **Download files**
 - [qpdfview_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb) (architecture: amd64)
@@ -7454,7 +7454,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libsynctex2 — 2022.20220321.62855-5.1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/libsynctex2_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb)
 
 <details>
-<summary><code>qpdfview-pdf-poppler-plugin</code> — <code>0.5.0+ds-2</code></summary>
+<summary><code>qpdfview-pdf-poppler-plugin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.0+ds-2</code></summary>
 
 **Download files**
 - [qpdfview-pdf-poppler-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-pdf-poppler-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb) (architecture: amd64)
@@ -7473,7 +7473,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>qpdfview-ps-plugin</code> — <code>0.5.0+ds-2</code></summary>
+<summary><code>qpdfview-ps-plugin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.0+ds-2</code></summary>
 
 **Download files**
 - [qpdfview-ps-plugin_0.5.0+ds-2+core2.1.20261012055504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-ps-plugin_0.5.0%2Bds-2%2Bcore2.1.20261012055504_amd64.deb) (architecture: amd64)
@@ -7488,7 +7488,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>qpdfview-translations</code> — <code>0.5.0+ds-2</code></summary>
+<summary><code>qpdfview-translations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.0+ds-2</code></summary>
 
 **Download files**
 - [qpdfview-translations_0.5.0+ds-2+core2.1.20261012055504_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504/qpdfview-translations_0.5.0%2Bds-2%2Bcore2.1.20261012055504_all.deb) (architecture: all)
@@ -7501,7 +7501,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>readline-doc</code> — <code>8.2-1.3</code></summary>
+<summary><code>readline-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2-1.3</code></summary>
 
 **Download files**
 - [readline-doc_8.2-1.3+core2.1.20261009161033_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/readline-doc_8.2-1.3%2Bcore2.1.20261009161033_all.deb) (architecture: all)
@@ -7509,7 +7509,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>rlfe</code> — <code>8.2-1.3</code></summary>
+<summary><code>rlfe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2-1.3</code></summary>
 
 **Download files**
 - [rlfe_8.2-1.3+core2.1.20261009161033_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-readline-8.2-1.3-core2.1-20261009161033/rlfe_8.2-1.3%2Bcore2.1.20261009161033_amd64.deb) (architecture: amd64)
@@ -7524,7 +7524,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>selinux-utils</code> — <code>3.4-1</code></summary>
+<summary><code>selinux-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
 - [selinux-utils_3.4-1+core2.1.20261009190433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/selinux-utils_3.4-1%2Bcore2.1.20261009190433_amd64.deb) (architecture: amd64)
@@ -7541,7 +7541,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>slsh</code> — <code>2.3.3-3</code></summary>
+<summary><code>slsh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
 - [slsh_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/slsh_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb) (architecture: amd64)
@@ -7554,7 +7554,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libslang2 — 2.3.3-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb)
 
 <details>
-<summary><code>libslang2-modules</code> — <code>2.3.3-3</code></summary>
+<summary><code>libslang2-modules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
 - [libslang2-modules_2.3.3-3+core2.1.20261012055155_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-slang2-2.3.3-3-core2.1-20261012055155/libslang2-modules_2.3.3-3%2Bcore2.1.20261012055155_amd64.deb) (architecture: amd64)
@@ -7571,7 +7571,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>texlive-binaries</code> — <code>2022.20220321.62855-5.1+deb12u2</code></summary>
+<summary><code>texlive-binaries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
 - [texlive-binaries_2022.20220321.62855-5.1+deb12u2+core2.1.20261012055216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216/texlive-binaries_2022.20220321.62855-5.1%2Bdeb12u2%2Bcore2.1.20261012055216_amd64.deb) (architecture: amd64)
@@ -7590,7 +7590,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>thunar</code> — <code>4.18.4-1</code></summary>
+<summary><code>thunar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.4-1</code></summary>
 
 **Download files**
 - [thunar_4.18.4-1+core2.1.20261010054751_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-thunar-4.18.4-1-core2.1-20261010054751/thunar_4.18.4-1%2Bcore2.1.20261010054751_amd64.deb) (architecture: amd64)
@@ -7599,7 +7599,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Dependencies**
 
 <details>
-<summary><code>exo-utils</code> — <code>4.18.0-1</code></summary>
+<summary><code>exo-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [exo-utils_4.18.0-1+core2.1.20261010053936_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-exo-4.18.0-1-core2.1-20261010053936/exo-utils_4.18.0-1%2Bcore2.1.20261010053936_amd64.deb) (architecture: amd64)
@@ -7638,7 +7638,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tigervnc-scraping-server</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-scraping-server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-scraping-server_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-scraping-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -7657,7 +7657,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [perl — 5.36.0-7+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002/perl_5.36.0-7%2Bdeb12u4%2Bcore2.1.20261011040002_amd64.deb)
 
 <details>
-<summary><code>tigervnc-common</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-common_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-common_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -7674,7 +7674,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tigervnc-standalone-server</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-standalone-server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-standalone-server_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-standalone-server_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -7703,7 +7703,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tigervnc-tools</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-tools_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-tools_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -7716,7 +7716,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tigervnc-viewer</code> — <code>1.12.0+dfsg-8</code></summary>
+<summary><code>tigervnc-viewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0+dfsg-8</code></summary>
 
 **Download files**
 - [tigervnc-viewer_1.12.0+dfsg-8+core2.1.20261011154436_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436/tigervnc-viewer_1.12.0%2Bdfsg-8%2Bcore2.1.20261011154436_amd64.deb) (architecture: amd64)
@@ -7735,7 +7735,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>tumbler-plugins-extra</code> — <code>4.18.0-1</code></summary>
+<summary><code>tumbler-plugins-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [tumbler-plugins-extra_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler-plugins-extra_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb) (architecture: amd64)
@@ -7752,7 +7752,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtumbler-1-0 — 4.18.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/libtumbler-1-0_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb)
 
 <details>
-<summary><code>tumbler</code> — <code>4.18.0-1</code></summary>
+<summary><code>tumbler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [tumbler_4.18.0-1+core2.1.20261010054511_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler_4.18.0-1%2Bcore2.1.20261010054511_amd64.deb) (architecture: amd64)
@@ -7777,7 +7777,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libxfce4util7 — 4.18.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxfce4util-4.18.1-2-core2.1-20261010053208/libxfce4util7_4.18.1-2%2Bcore2.1.20261010053208_amd64.deb)
 
 <details>
-<summary><code>tumbler-common</code> — <code>4.18.0-1</code></summary>
+<summary><code>tumbler-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
 - [tumbler-common_4.18.0-1+core2.1.20261010054511_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tumbler-4.18.0-1-core2.1-20261010054511/tumbler-common_4.18.0-1%2Bcore2.1.20261010054511_all.deb) (architecture: all)
@@ -7789,7 +7789,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>unar</code> — <code>1.10.7+ds1+really1.10.1-2</code></summary>
+<summary><code>unar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.7+ds1+really1.10.1-2</code></summary>
 
 **Download files**
 - [unar_1.10.7+ds1+really1.10.1-2+core2.1.20261012055403_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403/unar_1.10.7%2Bds1%2Breally1.10.1-2%2Bcore2.1.20261012055403_amd64.deb) (architecture: amd64)
@@ -7806,7 +7806,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>unzip</code> — <code>6.0-28+deb12u1</code></summary>
+<summary><code>unzip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.0-28+deb12u1</code></summary>
 
 **Download files**
 - [unzip_6.0-28+deb12u1+core2.1.20261012055157_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-unzip-6.0-28-deb12u1-core2.1-20261012055157/unzip_6.0-28%2Bdeb12u1%2Bcore2.1.20261012055157_amd64.deb) (architecture: amd64)
@@ -7821,7 +7821,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>w3m-img</code> — <code>0.5.3+git20230121-2</code></summary>
+<summary><code>w3m-img&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.3+git20230121-2</code></summary>
 
 **Download files**
 - [w3m-img_0.5.3+git20230121-2+core2.1.20261012055311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/w3m-img_0.5.3%2Bgit20230121-2%2Bcore2.1.20261012055311_amd64.deb) (architecture: amd64)
@@ -7832,7 +7832,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
-<summary><code>w3m</code> — <code>0.5.3+git20230121-2</code></summary>
+<summary><code>w3m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5.3+git20230121-2</code></summary>
 
 **Download files**
 - [w3m_0.5.3+git20230121-2+core2.1.20261012055311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311/w3m_0.5.3%2Bgit20230121-2%2Bcore2.1.20261012055311_amd64.deb) (architecture: amd64)
@@ -7855,7 +7855,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>webp</code> — <code>1.2.4-0.2+deb12u1</code></summary>
+<summary><code>webp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4-0.2+deb12u1</code></summary>
 
 **Download files**
 - [webp_1.2.4-0.2+deb12u1+core2.1.20261011064208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/webp_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb) (architecture: amd64)
@@ -7876,7 +7876,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>wimtools</code> — <code>1.13.6-1</code></summary>
+<summary><code>wimtools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.13.6-1</code></summary>
 
 **Download files**
 - [wimtools_1.13.6-1+core2.1.20261012055555_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wimlib-1.13.6-1-core2.1-20261012055555/wimtools_1.13.6-1%2Bcore2.1.20261012055555_amd64.deb) (architecture: amd64)
@@ -7891,7 +7891,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>wodim</code> — <code>9:1.1.11-3.4</code></summary>
+<summary><code>wodim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:1.1.11-3.4</code></summary>
 
 **Download files**
 - [wodim_1.1.11-3.4+core2.1.20261012055245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cdrkit-9-1.1.11-3.4-core2.1-20261012055245/wodim_1.1.11-3.4%2Bcore2.1.20261012055245_amd64.deb) (architecture: amd64)
@@ -7906,7 +7906,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>xpdf</code> — <code>3.04+git20220601-1</code></summary>
+<summary><code>xpdf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.04+git20220601-1</code></summary>
 
 **Download files**
 - [xpdf_3.04+git20220601-1+core2.1.20261012055410_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410/xpdf_3.04%2Bgit20220601-1%2Bcore2.1.20261012055410_amd64.deb) (architecture: amd64)
@@ -7921,7 +7921,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>zathura-pdf-poppler</code> — <code>0.3.1-1</code></summary>
+<summary><code>zathura-pdf-poppler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.3.1-1</code></summary>
 
 **Download files**
 - [zathura-pdf-poppler_0.3.1-1+core2.1.20261012055457_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zathura-pdf-poppler-0.3.1-1-core2.1-20261012055457/zathura-pdf-poppler_0.3.1-1%2Bcore2.1.20261012055457_amd64.deb) (architecture: amd64)
@@ -7938,7 +7938,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>zip</code> — <code>3.0-13+deb12u1</code></summary>
+<summary><code>zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0-13+deb12u1</code></summary>
 
 **Download files**
 - [zip_3.0-13+deb12u1+core2.1.20261011040024_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zip-3.0-13-deb12u1-core2.1-20261011040024/zip_3.0-13%2Bdeb12u1%2Bcore2.1.20261011040024_amd64.deb) (architecture: amd64)
@@ -7953,7 +7953,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>zsh</code> — <code>5.9-4</code></summary>
+<summary><code>zsh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.9-4</code></summary>
 
 **Download files**
 - [zsh_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh_5.9-4%2Bcore2.1.20261009061847_amd64.deb) (architecture: amd64)
@@ -7968,7 +7968,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtinfo6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libtinfo6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
 
 <details>
-<summary><code>zsh-common</code> — <code>5.9-4</code></summary>
+<summary><code>zsh-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.9-4</code></summary>
 
 **Download files**
 - [zsh-common_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-common_5.9-4%2Bcore2.1.20261009061847_all.deb) (architecture: all)
@@ -7978,7 +7978,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>zsh-doc</code> — <code>5.9-4</code></summary>
+<summary><code>zsh-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.9-4</code></summary>
 
 **Download files**
 - [zsh-doc_5.9-4+core2.1.20261009061847_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-doc_5.9-4%2Bcore2.1.20261009061847_all.deb) (architecture: all)
@@ -7991,7 +7991,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>zsh-static</code> — <code>5.9-4</code></summary>
+<summary><code>zsh-static&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.9-4</code></summary>
 
 **Download files**
 - [zsh-static_5.9-4+core2.1.20261009061847_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zsh-5.9-4-core2.1-20261009061847/zsh-static_5.9-4%2Bcore2.1.20261009061847_amd64.deb) (architecture: amd64)
