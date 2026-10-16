@@ -16,15 +16,7 @@ The [Core 2 optimized Debian system package workflow](https://github.com/AmrUser
 
 For an update, use the [Core 2 package updater](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-package.yml). Select `optimized` or `system`, then enter any source-package name. It forces a build against the latest available Debian Bookworm source version, waits for successful publication, removes older releases for that package only after the new release exists, and refreshes this index. If the build fails, existing releases are left untouched.
 
-## Smart install/update
-
-Each package entry below includes a one-line install command. It downloads the latest release for that package, checks installed Debian package names, architectures and versions, then prepares an APT plan.
-
-The installer updates binary packages from that release **only when the same package and architecture is already installed**. It may add the primary runtime package if that package is not installed; it does not install extra `-dev`, `-doc`, `-source`, dbgsym, i386/x32 or other split packages merely because they are attached to the release. For example, selecting `glibc` updates installed `libc6` and other matching installed components, but will not add `libc6-dev`, `libc6-x32` or `libc6-i386` if they are absent.
-
-The installer distinguishes the `optimized` and `system` release families. Each command in the index specifies the correct family, so a package such as `bash` will not accidentally select the system build when you click the optimized entry, or vice versa. Manual commands can use `--kind optimized`, `--kind system`, or `--kind any`.
-
-The script verifies SHA-256 hashes where the release publishes them, shows an APT simulation, and asks before installing. It refuses plans in which APT proposes removing packages. APT resolves dependencies using your configured Debian repositories. This installer is for Debian Bookworm amd64.
+## Auto install 
 
 Run the command shown under a package heading to install/update that package. To preview instead of installing, add `--dry-run` after the package key and `--kind` value. To list package keys, optionally limited to a release family:
 
