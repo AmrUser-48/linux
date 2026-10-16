@@ -14,6 +14,7 @@ on:
           - shell-editors
           - media
           - graphics
+          - video
           - new-tools
           - thunar
           - xorg
@@ -53,6 +54,11 @@ jobs:
             shell-editors) packages=(bash zsh nano neovim) ;;
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
+            video)
+              # Core 2 graphics userspace, codecs, and common GStreamer playback plugins.
+              # Existing Core 2 releases are skipped by the release check below.
+              packages=(libdrm pixman libpciaccess libvpx ffmpeg gst-plugins-base1.0 gst-plugins-good1.0)
+              ;;
             thunar)
               # Build the XFCE libraries and supporting services before Thunar.
               # Debian build-dependencies are installed by each package workflow.
