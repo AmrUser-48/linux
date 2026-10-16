@@ -7,6 +7,7 @@ also in this repository's current Core 2 package set; stock Debian dependencies
 outside that set are intentionally omitted.
 """
 import concurrent.futures
+import html
 import json
 import pathlib
 import re
@@ -240,7 +241,184 @@ def build_tree_rows(nodes):
     return [(label.ljust(max_label + 2) + version) for label, version in rows], len(by_name)
 
 
+
+PACKAGE_CATEGORIES = (
+    ("Graphics", re.compile(r"(mesa|libdrm|pixman|xorg|xserver|wayland|libgl|libegl|libgbm|libgles|libxcb|libx11|libxext|libxi|libxrandr|libxrender|libinput|cairo|vulkan|drm)", re.I)),
+    ("Audio & video", re.compile(r"(ffmpeg|gstreamer|gst-|pipewire|pulseaudio|alsa|libav|libvpx|opus|lame|flac|mpd|mpv|sox|wavpack|vorbis|codec2|x265)", re.I)),
+    ("Development", re.compile(r"(-dev(?:$|[- ])|gcc|g\\+\\+|binutils|cmake|meson|ninja|pkg-config|python|perl|ruby|rust|golang|gdb|make)", re.I)),
+    ("System & libraries", re.compile(r"(libc6|glibc|systemd|bash|dash|coreutils|util-linux|kmod|udev|apt|dpkg|sudo|pam|openssl|openssh|busybox|procps|grep|sed|tar|gzip|xz-utils|zstd|bzip2|mount|ntfs|btrfs|login|shadow|initramfs)", re.I)),
+)
+DEFAULT_CATEGORY = "Applications & utilities"
+
+
+def package_category(name, node):
+    label = (str(name or "") + " " + str(node.get("source") or "")).lower()
+    for category, pattern in PACKAGE_CATEGORIES:
+        if pattern.search(label):
+            return category
+    return DEFAULT_CATEGORY
+
+
+def markdown_asset_label(value):
+    return str(value or "download").replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]").replace("\n", " ").strip()
+
+
+def build_tree_markdown(nodes):
+    """Render an expandable GitHub-README tree with a direct download per package."""
+    by_name = {}
+    for node in nodes:
+        name = str(node.get("package") or "").lower()
+        if not name:
+            continue
+        stamp = str(node.get("published_at") or "")
+        version = str(node.get("version") or "")
+        previous = by_name.get(name)
+        old_stamp = str((previous or {}).get("published_at") or "")
+        download = {
+            "asset_name": str(node.get("asset_name") or ""),
+            "download_url": str(node.get("download_url") or ""),
+            "architecture": str(node.get("architecture") or ""),
+            "release_url": str(node.get("release_url") or ""),
+        }
+        if previous is None or stamp > old_stamp:
+            record = dict(node)
+            record["downloads"] = [download] if download["download_url"] else []
+            by_name[name] = record
+        elif stamp == old_stamp and version == str(previous.get("version") or ""):
+            known_urls = {item.get("download_url") for item in previous.get("downloads", [])}
+            if download["download_url"] and download["download_url"] not in known_urls:
+                previous.setdefault("downloads", []).append(download)
+
+    edges = {}
+    for name, node in by_name.items():
+        relationships = []
+        for field in ("pre_depends", "depends"):
+            relationships.extend(relationship_names(node.get(field, "")))
+        edges[name] = sorted({
+            dependency for dependency in relationships
+            if dependency in by_name and dependency != name
+        })
+
+    referenced = {child for children in edges.values() for child in children}
+    roots = sorted(name for name in by_name if name not in referenced)
+    output = []
+    expanded = set()
+
+    def render_package(name, path):
+        node = by_name[name]
+        cycle = name in path
+        shared = name in expanded
+        marker = " <em>[dependency cycle]</em>" if cycle else (
+            " <em>[shared dependency]</em>" if shared else ""
+        )
+        package = html.escape(name, quote=True)
+        version = html.escape(display_version(node.get("version", "")), quote=True)
+        output.extend([
+            "<details>",
+            f"<summary><code>{package}</code> — <code>{version}</code>{marker}</summary>",
+            "",
+            "**Download files**",
+        ])
+
+        downloads = node.get("downloads") or []
+        if downloads:
+            for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
+                label = markdown_asset_label(item.get("asset_name"))
+                url = item.get("download_url") or ""
+                arch = html.escape(item.get("architecture") or "binary", quote=True)
+                if url:
+                    output.append(f"- [{label}]({url}) (architecture: {arch})")
+            release_urls = sorted({item.get("release_url") for item in downloads if item.get("release_url")})
+            for url in release_urls:
+                output.append(f"- [Release page]({url})")
+        else:
+            output.append("- _No direct binary download URL is available._")
+
+        if not shared and not cycle:
+            expanded.add(name)
+            children = edges.get(name, [])
+            if children:
+                output.extend(["", "**Dependencies**", ""])
+                for child in children:
+                    render_package(child, path | {name})
+                    output.append("")
+        output.append("</details>")
+
+    def render_category(category, names):
+        if not names:
+            return
+        output.extend([
+            "<details>",
+            f"<summary>{html.escape(category)} ({len(names)} top-level packages)</summary>",
+            "",
+        ])
+        for name in names:
+            if name not in expanded:
+                render_package(name, frozenset())
+                output.append("")
+        output.extend(["</details>", ""])
+
+    category_names = {}
+    for name in roots:
+        category_names.setdefault(package_category(name, by_name[name]), []).append(name)
+    category_order = [item[0] for item in PACKAGE_CATEGORIES] + [DEFAULT_CATEGORY]
+    for category in category_order:
+        render_category(category, sorted(category_names.get(category, [])))
+
+    # Cyclic components have no top-level node. Render each remaining component once.
+    remaining = sorted(set(by_name) - expanded)
+    if remaining:
+        output.extend([
+            "<details>",
+            f"<summary>Dependency cycles / remaining packages ({len(remaining)} packages)</summary>",
+            "",
+        ])
+        for name in remaining:
+            if name not in expanded:
+                render_package(name, frozenset())
+                output.append("")
+        output.extend(["</details>", ""])
+
+    return output, len(by_name)
+
+
 def make_tree(release_set, metadata):
+    active = {}
+    current_asset_ids = set()
+    for source, release in release_set.items():
+        for asset in visible_deb_assets(release):
+            asset_id = str(asset["id"])
+            current_asset_ids.add(asset_id)
+            record = metadata.get(asset_id)
+            if not record:
+                raise RuntimeError(f"Missing .deb control metadata for asset {asset_id} ({asset.get('name')})")
+            if record.get("architecture") not in ("amd64", "all"):
+                continue
+            record = dict(record)
+            record["source"] = source
+            record["release_tag"] = str(release.get("tag_name") or "")
+            record["published_at"] = str(release.get("published_at") or release.get("created_at") or "")
+            record["asset_name"] = str(asset.get("name") or "")
+            record["download_url"] = str(asset.get("browser_download_url") or "")
+            record["release_url"] = str(release.get("html_url") or "")
+            active[asset_id] = record
+
+    tree_lines, count = build_tree_markdown(list(active.values()))
+    output = [
+        "",
+        "Expand a category, then a package, to reveal direct .deb downloads. Expand dependency packages to continue following the real Debian Pre-Depends and Depends tree.",
+        "The tree uses the latest published Core 2 release for each source package. Dependencies not present in this Core 2 release set are supplied by stock Debian and are omitted.",
+        "Displayed versions omit this repository's +core2 build timestamp. Shared dependencies keep their own download link but are not expanded repeatedly.",
+        "Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README files cannot run a custom search box.",
+        "",
+        *tree_lines,
+        f"**Unique binary packages indexed:** {count}.",
+        "",
+    ]
+    return output, current_asset_ids
+
+
+
     active = {}
     current_asset_ids = set()
     for source, release in release_set.items():
