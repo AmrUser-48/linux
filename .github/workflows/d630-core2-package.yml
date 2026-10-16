@@ -327,6 +327,14 @@ jobs:
                 echo "Dropping debug-symbol package: $binary_package ($(basename "$deb"))"
                 rm -f "$deb"
                 ;;
+              libdrm-amdgpu1|libdrm-radeon1)
+                if [[ "$PACKAGE" == "libdrm" ]]; then
+                  echo "Dropping non-Intel GPU package from the D630 libdrm release: $binary_package"
+                  rm -f "$deb"
+                else
+                  FILTERED_DEBS+=("$deb")
+                fi
+                ;;
               *)
                 FILTERED_DEBS+=("$deb")
                 ;;
@@ -336,6 +344,24 @@ jobs:
           if (( ${#DEBS[@]} == 0 )); then
             echo "::error::No non-debug binary packages remain after filtering"
             exit 1
+          fi
+          if [[ "$PACKAGE" == "libdrm" ]]; then
+            libdrm2_found=false
+            libdrm_intel_found=false
+            for deb in "${DEBS[@]}"; do
+              case "$(dpkg-deb -f "$deb" Package)" in
+                libdrm2) libdrm2_found=true ;;
+                libdrm-intel1) libdrm_intel_found=true ;;
+                libdrm-amdgpu1|libdrm-radeon1)
+                  echo "::error::Intel-only libdrm release unexpectedly contains $(dpkg-deb -f "$deb" Package)"
+                  exit 1
+                  ;;
+              esac
+            done
+            if [[ "$libdrm2_found" != "true" || "$libdrm_intel_found" != "true" ]]; then
+              echo "::error::libdrm build must retain both libdrm2 and libdrm-intel1 for the D630"
+              exit 1
+            fi
           fi
           if [[ "$PACKAGE" == "fftw3" ]]; then
             fftw_runtime_found=false
