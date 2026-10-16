@@ -2274,7 +2274,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Audio &amp; video (27 top-level packages)</summary>
+<summary>Audio &amp; video (30 top-level packages)</summary>
 
 <details>
 <summary><code>ffmpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
@@ -3003,56 +3003,11 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>gstreamer1.0-plugins-base-apps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
+<summary><code>gstreamer1.0-opencv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
 
 **Download files**
-- [gstreamer1.0-plugins-base-apps_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base-apps_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019)
-
-**Dependencies**
-
-<details>
-<summary><code>gstreamer1.0-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
-
-**Download files**
-- [gstreamer1.0-tools_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gstreamer1.0-tools_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
-
-- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
-
-</details>
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
-
-- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
-
-- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
-
-</details>
-
-<details>
-<summary><code>gstreamer1.0-pulseaudio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
-
-**Download files**
-- [gstreamer1.0-pulseaudio_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-pulseaudio_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601)
-
-**Dependencies**
-
-<details>
-<summary><code>gstreamer1.0-plugins-good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
-
-**Download files**
-- [gstreamer1.0-plugins-good_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-plugins-good_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601)
+- [gstreamer1.0-opencv_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-opencv_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
 
 **Dependencies**
 
@@ -3078,6 +3033,97 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libtheora0 — 1.1.1+dfsg.1-16.1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347/libtheora0_1.1.1%2Bdfsg.1-16.1%2Bdeb12u1%2Bcore2.1.20261016150347_amd64.deb)
 
 </details>
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+<details>
+<summary><code>libgstreamer-opencv1.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [libgstreamer-opencv1.0-0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-opencv1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libgstreamer-plugins-bad1.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [libgstreamer-plugins-bad1.0-0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-gl1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+- [libva-drm2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva-drm2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libxcb1 — 1.15-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcb-1.15-1-core2.1-20261016151016/libxcb1_1.15-1%2Bcore2.1.20261016151016_amd64.deb)
+
+</details>
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>gstreamer1.0-plugins-bad-apps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [gstreamer1.0-plugins-bad-apps_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-plugins-bad-apps_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+<details>
+<summary><code>gstreamer1.0-plugins-bad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [gstreamer1.0-plugins-bad_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-plugins-bad_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+- [gstreamer1.0-plugins-base — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+<details>
+<summary><code>gstreamer1.0-plugins-good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
+
+**Download files**
+- [gstreamer1.0-plugins-good_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-plugins-good_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601)
+
+**Dependencies**
+
+- [gstreamer1.0-plugins-base — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 - [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
 
@@ -3127,6 +3173,167 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
 
 </details>
+
+- [libaom3 — 3.6.0-1+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330/libaom3_3.6.0-1%2Bdeb12u3%2Bcore2.1.20261016144330_amd64.deb)
+
+- [libass9 — 1:0.17.1-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820/libass9_0.17.1-1%2Bdeb12u1%2Bcore2.1.20261016142820_amd64.deb)
+
+- [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+<details>
+<summary><code>libcurl3-gnutls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
+
+**Download files**
+- [libcurl3-gnutls_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528)
+
+**Dependencies**
+
+- [libbrotli1 — 1.0.9-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-brotli-1.0.9-2-core2.1-20261016150736/libbrotli1_1.0.9-2%2Bcore2.1.20261016150736_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libidn2-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
+
+**Download files**
+- [libidn2-0_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-0_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libidn2-2.3.3-1-core2.1-20261012093052)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libunistring2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0-2</code></summary>
+
+**Download files**
+- [libunistring2_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring2_1.0-2%2Bcore2.1.20261012093008_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libunistring-1.0-2-core2.1-20261012093008)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libssh2-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
+
+**Download files**
+- [libssh2-1_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
+
+- [libdrm2 — 2.4.114-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-gl1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+- [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
+
+- [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
+- [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
+
+- [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+
+- [libva2 — 2.17.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libva-2.17.0-1-core2.1-20261016135745/libva2_2.17.0-1%2Bcore2.1.20261016135745_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libwebp7 — 1.2.4-0.2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208/libwebp7_1.2.4-0.2%2Bdeb12u1%2Bcore2.1.20261011064208_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libx265-199 — 3.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-x265-3.5-2-core2.1-20261016145405/libx265-199_3.5-2%2Bcore2.1.20261016145405_amd64.deb)
+
+</details>
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>gstreamer1.0-plugins-base-apps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
+
+**Download files**
+- [gstreamer1.0-plugins-base-apps_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base-apps_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019)
+
+**Dependencies**
+
+<details>
+<summary><code>gstreamer1.0-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-2+deb12u1</code></summary>
+
+**Download files**
+- [gstreamer1.0-tools_1.22.0-2+deb12u1+core2.1.20261011064624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gstreamer1.0-tools_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>gstreamer1.0-pulseaudio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-5+deb12u4</code></summary>
+
+**Download files**
+- [gstreamer1.0-pulseaudio_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-pulseaudio_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601)
+
+**Dependencies**
+
+- [gstreamer1.0-plugins-good — 1.22.0-5+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-plugins-good_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
 
 </details>
 
@@ -3187,6 +3394,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libgstreamer-gl1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
@@ -3221,6 +3430,33 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
 
 - [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>gstreamer1.0-wpe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [gstreamer1.0-wpe_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-wpe_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+- [gstreamer1.0-plugins-base — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libgstreamer-gl1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+- [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+
+- [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+- [libwayland-server0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-server0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
 
 </details>
 
@@ -3421,11 +3657,20 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary><code>libgstreamer-plugins-base1.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
+<summary><code>libgstreamer-plugins-bad1.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
 
 **Download files**
-- [libgstreamer-plugins-base1.0-dev_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-dev_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019)
+- [libgstreamer-plugins-bad1.0-dev_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-dev_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+**Dependencies**
+
+<details>
+<summary><code>gir1.2-gst-plugins-bad-1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-4+deb12u8</code></summary>
+
+**Download files**
+- [gir1.2-gst-plugins-bad-1.0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gir1.2-gst-plugins-bad-1.0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
 
 **Dependencies**
 
@@ -3456,6 +3701,27 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libgstreamer-plugins-base1.0-0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 </details>
+
+- [gir1.2-gstreamer-1.0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/gir1.2-gstreamer-1.0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+</details>
+
+- [libgstreamer-opencv1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-opencv1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+- [libgstreamer-plugins-bad1.0-0 — 1.22.0-4+deb12u8 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+
+<details>
+<summary><code>libgstreamer-plugins-base1.0-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.22.0-3+deb12u7</code></summary>
+
+**Download files**
+- [libgstreamer-plugins-base1.0-dev_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-dev_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019)
+
+**Dependencies**
+
+- [gir1.2-gst-plugins-base-1.0 — 1.22.0-3+deb12u7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gir1.2-gst-plugins-base-1.0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
 
 <details>
 <summary><code>libc6-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.36-9+deb12u14</code></summary>
@@ -3695,6 +3961,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
+- [libgstreamer1.0-dev — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-dev_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
+
+</details>
+
 <details>
 <summary><code>libmpv2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.35.1-4</code></summary>
 
@@ -3821,65 +4091,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
-<details>
-<summary><code>libcurl3-gnutls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.88.1-10+deb12u15</code></summary>
-
-**Download files**
-- [libcurl3-gnutls_7.88.1-10+deb12u15+core2.1.20261009190528_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528)
-
-**Dependencies**
-
-- [libbrotli1 — 1.0.9-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-brotli-1.0.9-2-core2.1-20261016150736/libbrotli1_1.0.9-2%2Bcore2.1.20261016150736_amd64.deb)
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-<details>
-<summary><code>libidn2-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-1</code></summary>
-
-**Download files**
-- [libidn2-0_2.3.3-1+core2.1.20261012093052_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libidn2-2.3.3-1-core2.1-20261012093052/libidn2-0_2.3.3-1%2Bcore2.1.20261012093052_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libidn2-2.3.3-1-core2.1-20261012093052)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-<details>
-<summary><code>libunistring2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0-2</code></summary>
-
-**Download files**
-- [libunistring2_1.0-2+core2.1.20261012093008_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libunistring-1.0-2-core2.1-20261012093008/libunistring2_1.0-2%2Bcore2.1.20261012093008_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libunistring-1.0-2-core2.1-20261012093008)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-</details>
-
-</details>
-
-<details>
-<summary><code>libssh2-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
-
-**Download files**
-- [libssh2-1_1.10.0-3+deb12u1+core2.1.20261012055158_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158/libssh2-1_1.10.0-3%2Bdeb12u1%2Bcore2.1.20261012055158_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
-
-- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
-
-</details>
-
-- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
-
-</details>
+- [libcurl3-gnutls — 7.88.1-10+deb12u15 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528/libcurl3-gnutls_7.88.1-10%2Bdeb12u15%2Bcore2.1.20261009190528_amd64.deb)
 
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-expat-2.5.0-1-deb12u4-core2.1-20261016150748/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261016150748_amd64.deb)
 
@@ -11554,7 +11766,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 733.
+**Unique binary packages indexed:** 741.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11563,7 +11775,28 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
-### vlc
+### gst-plugins-bad1.0 (optimized)
+Version: `1.22.0-4+deb12u8+core2.1~20261016163835` · Published: 2026-10-16 16:44:20 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-bad1.0`
+
+<details><summary>Files (11)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/BUILD-INFO.txt)
+- [gir1.2-gst-plugins-bad-1.0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gir1.2-gst-plugins-bad-1.0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [gstreamer1.0-opencv_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-opencv_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [gstreamer1.0-plugins-bad-apps_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-plugins-bad-apps_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [gstreamer1.0-plugins-bad_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-plugins-bad_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [gstreamer1.0-wpe_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/gstreamer1.0-wpe_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [libgstreamer-opencv1.0-0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-opencv1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [libgstreamer-plugins-bad1.0-0_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-0_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [libgstreamer-plugins-bad1.0-dev_1.22.0-4+deb12u8+core2.1.20261016163835_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/libgstreamer-plugins-bad1.0-dev_1.22.0-4%2Bdeb12u8%2Bcore2.1.20261016163835_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/release-notes.md)
+- [SHA256SUMS-core2-gst-plugins-bad1.0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835/SHA256SUMS-core2-gst-plugins-bad1.0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835)
+
+</details>
+
+### vlc (optimized)
 Version: `3.0.23-0+deb12u1+core2.1~20261016151852` · Published: 2026-10-16 15:27:01 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - vlc`
 
@@ -11597,7 +11830,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### rust-alacritty
+### rust-alacritty (optimized)
 Version: `0.11.0-4+core2.1~20261016151054` · Published: 2026-10-16 15:17:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-alacritty`
 
@@ -11611,7 +11844,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gstreamer-vaapi
+### gstreamer-vaapi (optimized)
 Version: `1.22.0-2+core2.1~20261016151532` · Published: 2026-10-16 15:16:38 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gstreamer-vaapi`
 
@@ -11625,7 +11858,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxcb
+### libxcb (optimized)
 Version: `1.15-1+core2.1~20261016151016` · Published: 2026-10-16 15:14:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxcb`
 
@@ -11687,7 +11920,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gst-libav1.0
+### gst-libav1.0 (optimized)
 Version: `1.22.0-2+core2.1~20261016151258` · Published: 2026-10-16 15:13:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-libav1.0`
 
@@ -11701,7 +11934,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### zlib
+### zlib (optimized)
 Version: `1:1.2.13.dfsg-1+core2.1~20261016151112` · Published: 2026-10-16 15:12:18 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
 
@@ -11718,7 +11951,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libpng1.6
+### libpng1.6 (optimized)
 Version: `1.6.39-2+deb12u6+core2.1~20261016150951` · Published: 2026-10-16 15:11:30 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpng1.6`
 
@@ -11734,7 +11967,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxdmcp
+### libxdmcp (optimized)
 Version: `1:1.1.2-3+core2.1~20261016151011` · Published: 2026-10-16 15:11:01 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxdmcp`
 
@@ -11749,7 +11982,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### fontconfig
+### fontconfig (optimized)
 Version: `2.14.1-4+core2.1~20261016150850` · Published: 2026-10-16 15:11:01 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fontconfig`
 
@@ -11768,7 +12001,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxau
+### libxau (optimized)
 Version: `1:1.0.9-1+core2.1~20261016151004` · Published: 2026-10-16 15:10:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxau`
 
@@ -11783,7 +12016,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libmd
+### libmd (optimized)
 Version: `1.0.4-2+core2.1~20261016150931` · Published: 2026-10-16 15:10:25 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmd`
 
@@ -11798,7 +12031,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libbsd
+### libbsd (optimized)
 Version: `0.11.7-2+core2.1~20261016150833` · Published: 2026-10-16 15:09:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libbsd`
 
@@ -11813,7 +12046,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### freetype
+### freetype (optimized)
 Version: `2.12.1+dfsg-5+deb12u4+core2.1~20261016150739` · Published: 2026-10-16 15:09:31 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - freetype`
 
@@ -11831,7 +12064,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### fonts-dejavu
+### fonts-dejavu (optimized)
 Version: `2.37-6+core2.1~20261016150744` · Published: 2026-10-16 15:09:21 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fonts-dejavu`
 
@@ -11848,7 +12081,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### brotli
+### brotli (optimized)
 Version: `1.0.9-2+core2.1~20261016150736` · Published: 2026-10-16 15:09:19 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - brotli`
 
@@ -11865,7 +12098,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### expat
+### expat (optimized)
 Version: `2.5.0-1+deb12u4+core2.1~20261016150748` · Published: 2026-10-16 15:08:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - expat`
 
@@ -11881,7 +12114,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libtheora
+### libtheora (optimized)
 Version: `1.1.1+dfsg.1-16.1+deb12u1+core2.1~20261016150347` · Published: 2026-10-16 15:04:56 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libtheora`
 
@@ -11898,7 +12131,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xvidcore
+### xvidcore (optimized)
 Version: `2:1.3.7-1+core2.1~20261016150055` · Published: 2026-10-16 15:01:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xvidcore`
 
@@ -11913,7 +12146,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mpeg2dec
+### mpeg2dec (optimized)
 Version: `0.5.1-9+core2.1~20261016145852` · Published: 2026-10-16 14:59:50 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpeg2dec`
 
@@ -11929,7 +12162,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### x265
+### x265 (optimized)
 Version: `3.5-2+core2.1~20261016145405` · Published: 2026-10-16 14:57:50 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - x265`
 
@@ -11946,7 +12179,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### x264
+### x264 (optimized)
 Version: `2:0.164.3095+gitbaee400-3+core2.1~20261016145121` · Published: 2026-10-16 14:53:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - x264`
 
@@ -11962,7 +12195,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### svt-av1
+### svt-av1 (optimized)
 Version: `1.4.1+dfsg-1+core2.1~20261016144712` · Published: 2026-10-16 14:50:22 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - svt-av1`
 
@@ -11981,7 +12214,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### aom
+### aom (optimized)
 Version: `3.6.0-1+deb12u3+core2.1~20261016144330` · Published: 2026-10-16 14:46:13 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - aom`
 
@@ -11998,7 +12231,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### dav1d
+### dav1d (optimized)
 Version: `1.0.0-2+deb12u1+core2.1~20261016144008` · Published: 2026-10-16 14:41:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dav1d`
 
@@ -12014,7 +12247,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libopenmpt
+### libopenmpt (optimized)
 Version: `0.6.9-1+core2.1~20261016143234` · Published: 2026-10-16 14:39:13 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libopenmpt`
 
@@ -12031,7 +12264,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### orc
+### orc (optimized)
 Version: `1:0.4.33-2+core2.1~20261016143016` · Published: 2026-10-16 14:31:28 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - orc`
 
@@ -12048,7 +12281,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libass
+### libass (optimized)
 Version: `1:0.17.1-1+deb12u1+core2.1~20261016142820` · Published: 2026-10-16 14:29:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libass`
 
@@ -12063,7 +12296,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libplacebo
+### libplacebo (optimized)
 Version: `4.208.0-3+core2.1~20261016142619` · Published: 2026-10-16 14:27:16 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libplacebo`
 
@@ -12078,7 +12311,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libvdpau
+### libvdpau (optimized)
 Version: `1.5-2+core2.1~20261016142429` · Published: 2026-10-16 14:25:24 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libvdpau`
 
@@ -12095,7 +12328,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### intel-media-driver
+### intel-media-driver (optimized)
 Version: `23.1.1+dfsg1-1+core2.1~20261016140210` · Published: 2026-10-16 14:22:32 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - intel-media-driver`
 
@@ -12111,7 +12344,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### intel-vaapi-driver
+### intel-vaapi-driver (optimized)
 Version: `2.4.1+dfsg1-1+core2.1~20261016135957` · Published: 2026-10-16 14:01:08 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - intel-vaapi-driver`
 
@@ -12125,7 +12358,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libva
+### libva (optimized)
 Version: `2.17.0-1+core2.1~20261016135745` · Published: 2026-10-16 13:58:54 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libva`
 
@@ -12145,7 +12378,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### cairo
+### cairo (optimized)
 Version: `1.16.0-7+core2.1~20261016135244` · Published: 2026-10-16 13:56:48 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cairo`
 
@@ -12164,7 +12397,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### openjpeg2
+### openjpeg2 (optimized)
 Version: `2.5.0-2+deb12u3+core2.1~20261016135019` · Published: 2026-10-16 13:51:38 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openjpeg2`
 
@@ -12185,7 +12418,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libpng1.6
+### libpng1.6 (optimized)
 Version: `1.6.39-2+deb12u6+core2.1~20261016134707` · Published: 2026-10-16 13:48:57 UTC
 
 <details><summary>Files (6)</summary>
@@ -12200,7 +12433,7 @@ Version: `1.6.39-2+deb12u6+core2.1~20261016134707` · Published: 2026-10-16 13:4
 
 </details>
 
-### libsdl2
+### libsdl2 (optimized)
 Version: `2.26.5+dfsg-1+core2.1~20261016134254` · Published: 2026-10-16 13:46:08 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsdl2`
 
@@ -12217,7 +12450,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libepoxy
+### libepoxy (optimized)
 Version: `1.5.10-1+core2.1~20261016134055` · Published: 2026-10-16 13:41:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libepoxy`
 
@@ -12232,7 +12465,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### wayland
+### wayland (optimized)
 Version: `1.21.0-1+core2.1~20261016133904` · Published: 2026-10-16 13:40:07 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wayland`
 
@@ -12253,7 +12486,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxvmc
+### libxvmc (optimized)
 Version: `2:1.0.12-2+core2.1~20261016133703` · Published: 2026-10-16 13:37:56 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxvmc`
 
@@ -12268,7 +12501,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxv
+### libxv (optimized)
 Version: `2:1.0.11-1.1+core2.1~20261016133515` · Published: 2026-10-16 13:36:06 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxv`
 
@@ -12283,7 +12516,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxdamage
+### libxdamage (optimized)
 Version: `1:1.1.6-1+core2.1~20261016133326` · Published: 2026-10-16 13:34:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxdamage`
 
@@ -12298,7 +12531,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxcomposite
+### libxcomposite (optimized)
 Version: `1:0.4.5-1+core2.1~20261016133125` · Published: 2026-10-16 13:32:25 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxcomposite`
 
@@ -12313,7 +12546,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxrandr
+### libxrandr (optimized)
 Version: `2:1.5.2-2+core2.1~20261016132856` · Published: 2026-10-16 13:29:53 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxrandr`
 
@@ -12328,7 +12561,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxext
+### libxext (optimized)
 Version: `2:1.3.4-1+core2.1~20261016132313` · Published: 2026-10-16 13:27:50 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxext`
 
@@ -12344,7 +12577,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libx11
+### libx11 (optimized)
 Version: `2:1.8.4-2+deb12u2+core2.1~20261016131846` · Published: 2026-10-16 13:22:18 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libx11`
 
@@ -12363,7 +12596,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gst-plugins-good1.0
+### gst-plugins-good1.0 (optimized)
 Version: `1.22.0-5+deb12u4+core2.1~20261016120601` · Published: 2026-10-16 12:10:23 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-good1.0`
 
@@ -12381,7 +12614,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gst-plugins-base1.0
+### gst-plugins-base1.0 (optimized)
 Version: `1.22.0-3+deb12u7+core2.1~20261016120019` · Published: 2026-10-16 12:03:58 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-base1.0`
 
@@ -12403,7 +12636,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libvpx
+### libvpx (optimized)
 Version: `1.12.0-1+deb12u5+core2.1~20261016115550` · Published: 2026-10-16 11:59:15 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libvpx`
 
@@ -12420,7 +12653,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libpciaccess
+### libpciaccess (optimized)
 Version: `0.17-2+core2.1~20261016115401` · Published: 2026-10-16 11:54:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpciaccess`
 
@@ -12435,7 +12668,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libdrm
+### libdrm (optimized)
 Version: `2.4.114-1+core2.1~20261016115216` · Published: 2026-10-16 11:53:16 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libdrm`
 
@@ -12456,7 +12689,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xserver-xorg-video-intel
+### xserver-xorg-video-intel (optimized)
 Version: `2:2.99.917+git20210115-1+core2.1~20261016113213` · Published: 2026-10-16 11:33:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-video-intel`
 
@@ -12470,7 +12703,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xserver-xorg-input-synaptics
+### xserver-xorg-input-synaptics (optimized)
 Version: `1.9.2-1+core2.1~20261016113016` · Published: 2026-10-16 11:31:11 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-synaptics`
 
@@ -12485,7 +12718,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xserver-xorg-input-libinput
+### xserver-xorg-input-libinput (optimized)
 Version: `1.2.1-1+core2.1~20261016112819` · Published: 2026-10-16 11:29:15 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-libinput`
 
@@ -12500,7 +12733,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xserver-xorg-input-keyboard
+### xserver-xorg-input-keyboard (optimized)
 Version: `1:1.9.0-1+core2.1~20261016112635` · Published: 2026-10-16 11:27:25 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-keyboard`
 
@@ -12514,7 +12747,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### less
+### less (optimized)
 Version: `590-2.1~deb12u2+core2.1~20261012093417` · Published: 2026-10-12 09:35:12 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - less`
 
@@ -12528,7 +12761,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### busybox
+### busybox (optimized)
 Version: `1:1.35.0-4+deb12u1+core2.1~20261012093022` · Published: 2026-10-12 09:33:49 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - busybox`
 
@@ -12546,7 +12779,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libunistring
+### libunistring (optimized)
 Version: `1.0-2+core2.1~20261012093008` · Published: 2026-10-12 09:32:34 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libunistring`
 
@@ -12561,7 +12794,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libidn2
+### libidn2 (optimized)
 Version: `2.3.3-1+core2.1~20261012093052` · Published: 2026-10-12 09:32:02 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libidn2`
 
@@ -12578,7 +12811,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### glib2.0
+### glib2.0 (optimized)
 Version: `2.74.6-2+deb12u9+core2.1~20261012055158` · Published: 2026-10-12 06:07:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - glib2.0`
 
@@ -12598,7 +12831,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### texlive-bin
+### texlive-bin (optimized)
 Version: `2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216` · Published: 2026-10-12 06:04:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - texlive-bin`
 
@@ -12624,7 +12857,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### poppler
+### poppler (optimized)
 Version: `22.12.0-2+deb12u3+core2.1~20261012055344` · Published: 2026-10-12 05:59:35 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - poppler`
 
@@ -12651,7 +12884,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### atril
+### atril (optimized)
 Version: `1.26.0-2+deb12u4+core2.1~20261012055510` · Published: 2026-10-12 05:58:44 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - atril`
 
@@ -12672,7 +12905,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### okular
+### okular (optimized)
 Version: `4:22.12.3-1+deb12u1+core2.1~20261012055453` · Published: 2026-10-12 05:58:38 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - okular`
 
@@ -12691,7 +12924,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mupdf
+### mupdf (optimized)
 Version: `1.21.1+ds2-1+deb12u1+core2.1~20261012055501` · Published: 2026-10-12 05:57:27 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mupdf`
 
@@ -12707,7 +12940,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### wimlib
+### wimlib (optimized)
 Version: `1.13.6-1+core2.1~20261012055555` · Published: 2026-10-12 05:57:15 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wimlib`
 
@@ -12724,7 +12957,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### evince
+### evince (optimized)
 Version: `43.1-2+deb12u1+core2.1~20261012055507` · Published: 2026-10-12 05:56:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - evince`
 
@@ -12743,7 +12976,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### qpdfview
+### qpdfview (optimized)
 Version: `0.5.0+ds-2+core2.1~20261012055504` · Published: 2026-10-12 05:56:50 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - qpdfview`
 
@@ -12761,7 +12994,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### apvlv
+### apvlv (optimized)
 Version: `0.4.0+repack-1+core2.1~20261012055524` · Published: 2026-10-12 05:56:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - apvlv`
 
@@ -12775,7 +13008,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### unar
+### unar (optimized)
 Version: `1.10.7+ds1+really1.10.1-2+core2.1~20261012055403` · Published: 2026-10-12 05:55:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - unar`
 
@@ -12789,7 +13022,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### zathura-pdf-poppler
+### zathura-pdf-poppler (optimized)
 Version: `0.3.1-1+core2.1~20261012055457` · Published: 2026-10-12 05:55:48 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zathura-pdf-poppler`
 
@@ -12803,7 +13036,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### wimlib
+### wimlib (optimized)
 Version: `1.13.6-1+core2.1~20261012055405` · Published: 2026-10-12 05:55:45 UTC
 
 <details><summary>Files (7)</summary>
@@ -12819,7 +13052,7 @@ Version: `1.13.6-1+core2.1~20261012055405` · Published: 2026-10-12 05:55:45 UTC
 
 </details>
 
-### xpdf
+### xpdf (optimized)
 Version: `3.04+git20220601-1+core2.1~20261012055410` · Published: 2026-10-12 05:55:34 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xpdf`
 
@@ -12833,7 +13066,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### links2
+### links2 (optimized)
 Version: `2.28-1+core2.1~20261012055305` · Published: 2026-10-12 05:55:31 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - links2`
 
@@ -12848,7 +13081,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### python-boto
+### python-boto (optimized)
 Version: `2.49.0-4.1+core2.1~20261012055353` · Published: 2026-10-12 05:55:27 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python-boto`
 
@@ -12862,7 +13095,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### djvulibre
+### djvulibre (optimized)
 Version: `3.5.28-2.2~deb12u1+core2.1~20261012055223` · Published: 2026-10-12 05:55:20 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - djvulibre`
 
@@ -12883,7 +13116,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### w3m
+### w3m (optimized)
 Version: `0.5.3+git20230121-2+core2.1~20261012055311` · Published: 2026-10-12 05:55:17 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - w3m`
 
@@ -12898,7 +13131,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### aspell
+### aspell (optimized)
 Version: `0.60.8-4+core2.1~20261012055250` · Published: 2026-10-12 05:55:13 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - aspell`
 
@@ -12916,7 +13149,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### python-tz
+### python-tz (optimized)
 Version: `2022.7.1-4+core2.1~20261012055311` · Published: 2026-10-12 05:55:02 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python-tz`
 
@@ -12930,7 +13163,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### cdrkit
+### cdrkit (optimized)
 Version: `9:1.1.11-3.4+core2.1~20261012055245` · Published: 2026-10-12 05:55:01 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cdrkit`
 
@@ -12947,7 +13180,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### lynx
+### lynx (optimized)
 Version: `2.9.0dev.12-1+core2.1~20261012055253` · Published: 2026-10-12 05:54:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lynx`
 
@@ -12962,7 +13195,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gv
+### gv (optimized)
 Version: `1:3.7.4-2+core2.1~20261012055256` · Published: 2026-10-12 05:54:41 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gv`
 
@@ -12976,7 +13209,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mc
+### mc (optimized)
 Version: `3:4.8.29-2+core2.1~20261012055147` · Published: 2026-10-12 05:54:40 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mc`
 
@@ -12991,7 +13224,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### slang2
+### slang2 (optimized)
 Version: `2.3.3-3+core2.1~20261012055155` · Published: 2026-10-12 05:54:26 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - slang2`
 
@@ -13009,7 +13242,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### file
+### file (optimized)
 Version: `1:5.44-3+core2.1~20261012055237` · Published: 2026-10-12 05:54:25 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - file`
 
@@ -13026,7 +13259,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### odt2txt
+### odt2txt (optimized)
 Version: `0.5-7+core2.1~20261012055305` · Published: 2026-10-12 05:54:23 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - odt2txt`
 
@@ -13040,7 +13273,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libssh2
+### libssh2 (optimized)
 Version: `1.10.0-3+deb12u1+core2.1~20261012055158` · Published: 2026-10-12 05:54:14 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libssh2`
 
@@ -13055,7 +13288,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### ebook-tools
+### ebook-tools (optimized)
 Version: `0.2.2-6+core2.1~20261012055224` · Published: 2026-10-12 05:54:13 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ebook-tools`
 
@@ -13071,7 +13304,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### bzip2
+### bzip2 (optimized)
 Version: `1.0.8-5+core2.1~20261012055218` · Published: 2026-10-12 05:53:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - bzip2`
 
@@ -13088,7 +13321,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### catdvi
+### catdvi (optimized)
 Version: `0.14-14+core2.1~20261012055215` · Published: 2026-10-12 05:53:50 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - catdvi`
 
@@ -13102,7 +13335,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### arj
+### arj (optimized)
 Version: `3.10.22-26+core2.1~20261012055158` · Published: 2026-10-12 05:53:49 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - arj`
 
@@ -13116,7 +13349,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### unzip
+### unzip (optimized)
 Version: `6.0-28+deb12u1+core2.1~20261012055157` · Published: 2026-10-12 05:53:44 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - unzip`
 
@@ -13130,7 +13363,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### dbview
+### dbview (optimized)
 Version: `1.0.4-5+core2.1~20261012055207` · Published: 2026-10-12 05:53:42 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dbview`
 
@@ -13144,7 +13377,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gpm
+### gpm (optimized)
 Version: `1.20.7-10+core2.1~20261012055149` · Published: 2026-10-12 05:53:41 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gpm`
 
@@ -13160,7 +13393,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### tigervnc
+### tigervnc (optimized)
 Version: `1.12.0+dfsg-8+core2.1~20261011154436` · Published: 2026-10-11 15:47:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tigervnc`
 
@@ -13179,7 +13412,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### pixman
+### pixman (optimized)
 Version: `0.42.2-1+core2.1~20261011154041` · Published: 2026-10-11 15:43:07 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pixman`
 
@@ -13194,7 +13427,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libjpeg-turbo
+### libjpeg-turbo (optimized)
 Version: `1:2.1.5-2+core2.1~20261011153748` · Published: 2026-10-11 15:39:39 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libjpeg-turbo`
 
@@ -13214,7 +13447,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### zlib
+### zlib (optimized)
 Version: `1:1.2.13.dfsg-1+core2.1~20261011153535` · Published: 2026-10-11 15:36:38 UTC
 
 <details><summary>Files (7)</summary>
@@ -13230,7 +13463,7 @@ Version: `1:1.2.13.dfsg-1+core2.1~20261011153535` · Published: 2026-10-11 15:36
 
 </details>
 
-### tigervnc
+### tigervnc (optimized)
 Version: `1.12.0+dfsg-8+core2.1~20261011153224` · Published: 2026-10-11 15:34:30 UTC
 
 <details><summary>Files (9)</summary>
@@ -13248,7 +13481,7 @@ Version: `1.12.0+dfsg-8+core2.1~20261011153224` · Published: 2026-10-11 15:34:3
 
 </details>
 
-### pixman
+### pixman (optimized)
 Version: `0.42.2-1+core2.1~20261011152845` · Published: 2026-10-11 15:31:38 UTC
 
 <details><summary>Files (5)</summary>
@@ -13262,7 +13495,7 @@ Version: `0.42.2-1+core2.1~20261011152845` · Published: 2026-10-11 15:31:38 UTC
 
 </details>
 
-### zlib
+### zlib (optimized)
 Version: `1:1.2.13.dfsg-1+core2.1~20261011152653` · Published: 2026-10-11 15:27:51 UTC
 
 <details><summary>Files (7)</summary>
@@ -13278,7 +13511,7 @@ Version: `1:1.2.13.dfsg-1+core2.1~20261011152653` · Published: 2026-10-11 15:27
 
 </details>
 
-### imagemagick
+### imagemagick (optimized)
 Version: `8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530` · Published: 2026-10-11 07:09:57 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - imagemagick`
 
@@ -13323,7 +13556,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### gstreamer1.0
+### gstreamer1.0 (optimized)
 Version: `1.22.0-2+deb12u1+core2.1~20261011064624` · Published: 2026-10-11 06:48:32 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gstreamer1.0`
 
@@ -13340,7 +13573,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libjpeg-turbo
+### libjpeg-turbo (optimized)
 Version: `1:2.1.5-2+core2.1~20261011064258` · Published: 2026-10-11 06:44:52 UTC
 
 <details><summary>Files (10)</summary>
@@ -13359,7 +13592,7 @@ Version: `1:2.1.5-2+core2.1~20261011064258` · Published: 2026-10-11 06:44:52 UT
 
 </details>
 
-### libwebp
+### libwebp (optimized)
 Version: `1.2.4-0.2+deb12u1+core2.1~20261011064208` · Published: 2026-10-11 06:43:39 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libwebp`
 
@@ -13377,7 +13610,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### perl
+### perl (optimized)
 Version: `5.36.0-7+deb12u4+core2.1~20261011040002` · Published: 2026-10-11 04:38:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - perl`
 
@@ -13397,7 +13630,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### openssl
+### openssl (optimized)
 Version: `3.0.22-1~deb12u1+core2.1~20261011040326` · Published: 2026-10-11 04:21:38 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openssl`
 
@@ -13414,7 +13647,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### openssl
+### openssl (optimized)
 Version: `3.0.22-1~deb12u1+core2.1~20261011035927` · Published: 2026-10-11 04:10:06 UTC
 
 <details><summary>Files (7)</summary>
@@ -13430,7 +13663,7 @@ Version: `3.0.22-1~deb12u1+core2.1~20261011035927` · Published: 2026-10-11 04:1
 
 </details>
 
-### zip
+### zip (optimized)
 Version: `3.0-13+deb12u1+core2.1~20261011040024` · Published: 2026-10-11 04:01:15 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zip`
 
@@ -13472,7 +13705,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### thunar
+### thunar (optimized)
 Version: `4.18.4-1+core2.1~20261010054751` · Published: 2026-10-10 05:50:00 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - thunar`
 
@@ -13490,7 +13723,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### tumbler
+### tumbler (optimized)
 Version: `4.18.0-1+core2.1~20261010054511` · Published: 2026-10-10 05:46:25 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tumbler`
 
@@ -13508,7 +13741,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### garcon
+### garcon (optimized)
 Version: `4.18.0-1+core2.1~20261010054213` · Published: 2026-10-10 05:43:19 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - garcon`
 
@@ -13529,7 +13762,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### exo
+### exo (optimized)
 Version: `4.18.0-1+core2.1~20261010053936` · Published: 2026-10-10 05:40:53 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - exo`
 
@@ -13546,7 +13779,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxfce4ui
+### libxfce4ui (optimized)
 Version: `4.18.2-2+core2.1~20261010053651` · Published: 2026-10-10 05:38:11 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4ui`
 
@@ -13565,7 +13798,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xfconf
+### xfconf (optimized)
 Version: `4.18.0-2+core2.1~20261010053410` · Published: 2026-10-10 05:35:14 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xfconf`
 
@@ -13582,7 +13815,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### libxfce4util
+### libxfce4util (optimized)
 Version: `4.18.1-2+core2.1~20261010053208` · Published: 2026-10-10 05:33:07 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfce4util`
 
@@ -13783,7 +14016,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### curl
+### curl (optimized)
 Version: `7.88.1-10+deb12u15+core2.1~20261009190528` · Published: 2026-10-09 19:41:11 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - curl`
 
@@ -14038,7 +14271,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mpv
+### mpv (optimized)
 Version: `0.35.1-4+core2.1~20261009190224` · Published: 2026-10-09 19:04:20 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpv`
 
@@ -14096,7 +14329,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### ffmpeg
+### ffmpeg (optimized)
 Version: `7:5.1.9-0+deb12u1+core2.1~20261009183944` · Published: 2026-10-09 19:00:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ffmpeg`
 
@@ -14169,7 +14402,7 @@ Version: `3.0.22-1~deb12u1+core2.1~20261009184347` · Published: 2026-10-09 18:5
 
 </details>
 
-### 7zip
+### 7zip (optimized)
 Version: `22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500` · Published: 2026-10-09 18:37:34 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - 7zip`
 
@@ -14183,7 +14416,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xz-utils
+### xz-utils (optimized)
 Version: `5.4.1-1+deb12u2+core2.1~20261009183205` · Published: 2026-10-09 18:33:57 UTC
 
 <details><summary>Files (7)</summary>
@@ -14199,7 +14432,7 @@ Version: `5.4.1-1+deb12u2+core2.1~20261009183205` · Published: 2026-10-09 18:33
 
 </details>
 
-### fftw3
+### fftw3 (optimized)
 Version: `3.3.10-1+core2.1~20261009181939` · Published: 2026-10-09 18:29:31 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fftw3`
 
@@ -14219,7 +14452,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### python3.11
+### python3.11 (optimized)
 Version: `3.11.2-6+deb12u9+core2.1~20261009153835` · Published: 2026-10-09 18:18:32 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - python3.11`
 
@@ -14244,7 +14477,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mesa
+### mesa (optimized)
 Version: `22.3.6-1+deb12u2+core2.1~20261009173146` · Published: 2026-10-09 17:53:45 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`
 
@@ -14288,7 +14521,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### rust-sd
+### rust-sd (optimized)
 Version: `0.7.6-1+deb12u1+core2.1~20261009163957` · Published: 2026-10-09 16:42:51 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-sd`
 
@@ -14302,7 +14535,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### nano
+### nano (optimized)
 Version: `7.2-1+deb12u1+core2.1~20261009163909` · Published: 2026-10-09 16:40:55 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - nano`
 
@@ -14382,7 +14615,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### xorg-server
+### xorg-server (optimized)
 Version: `2:21.1.7-3+deb12u13+core2.1~20261009120435` · Published: 2026-10-09 12:08:59 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xorg-server`
 
@@ -14402,7 +14635,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### htop
+### htop (optimized)
 Version: `3.2.2-2+core2.1~20261009120215` · Published: 2026-10-09 12:03:09 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - htop`
 
@@ -14416,7 +14649,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### btop
+### btop (optimized)
 Version: `1.2.13-1+core2.1~20261009120005` · Published: 2026-10-09 12:01:31 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - btop`
 
@@ -14430,7 +14663,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### rust-ripgrep
+### rust-ripgrep (optimized)
 Version: `13.0.0-4+core2.1~20261009115443` · Published: 2026-10-09 11:58:49 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-ripgrep`
 
@@ -14444,7 +14677,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### rust-fd-find
+### rust-fd-find (optimized)
 Version: `8.6.0-3+core2.1~20261009114655` · Published: 2026-10-09 11:50:19 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-fd-find`
 
@@ -14458,7 +14691,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### mpd
+### mpd (optimized)
 Version: `0.23.12-1+core2.1~20261009114100` · Published: 2026-10-09 11:45:54 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpd`
 
@@ -14472,7 +14705,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### ncmpcpp
+### ncmpcpp (optimized)
 Version: `0.9.2-2+core2.1~20261009113534` · Published: 2026-10-09 11:39:35 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ncmpcpp`
 
@@ -14532,7 +14765,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### neovim
+### neovim (optimized)
 Version: `0.7.2-7+core2.1~20261009082328` · Published: 2026-10-09 08:30:27 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - neovim`
 
@@ -14547,7 +14780,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### neovim
+### neovim (optimized)
 Version: `0.7.2-7+core2.1~20261009075932` · Published: 2026-10-09 08:09:16 UTC
 
 <details><summary>Files (5)</summary>
@@ -14561,7 +14794,7 @@ Version: `0.7.2-7+core2.1~20261009075932` · Published: 2026-10-09 08:09:16 UTC
 
 </details>
 
-### zsh
+### zsh (optimized)
 Version: `5.9-4+core2.1~20261009061847` · Published: 2026-10-09 06:24:36 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zsh`
 
@@ -14578,7 +14811,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### bash
+### bash (optimized)
 Version: `5.2.15-2+core2.1~20261009061252` · Published: 2026-10-09 06:17:34 UTC
 
 <details><summary>Files (7)</summary>
@@ -14594,7 +14827,7 @@ Version: `5.2.15-2+core2.1~20261009061252` · Published: 2026-10-09 06:17:34 UTC
 
 </details>
 
-### lame
+### lame (optimized)
 Version: `3.100-6+core2.1~20261009061017` · Published: 2026-10-09 06:11:33 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lame`
 
