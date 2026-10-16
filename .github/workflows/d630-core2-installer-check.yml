@@ -57,6 +57,43 @@ jobs:
           set -euo pipefail
           ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/build-with-deps.yml .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml
 
+      - name: Validate Bookworm video package source queue
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          workflow = Path(".github/workflows/d630-core2-packages-series.yml").read_text(encoding="utf-8")
+          start = workflow.index("            video)")
+          start = workflow.index("packages=(", start) + len("packages=(")
+          end = workflow.index(")", start)
+          packages = workflow[start:end].split()
+          required = {
+              # DRM, VA-API, Mesa and X11/Wayland display stack
+              "libdrm", "libpciaccess", "mesa", "libva", "intel-vaapi-driver",
+              "intel-media-driver", "libvdpau", "libxvmc", "libxv", "libx11",
+              "libxext", "libxrandr", "libxcomposite", "libxdamage", "wayland",
+              "libepoxy",
+              # SIMD image/raster and playback/rendering libraries
+              "pixman", "orc", "libjpeg-turbo", "libpng1.6", "libwebp",
+              "openjpeg2", "cairo", "glib2.0", "libsdl2", "libplacebo",
+              "libass", "libopenmpt",
+              # Bookworm source packages providing codecs and multimedia engines
+              "dav1d", "aom", "svt-av1", "x264", "x265", "mpeg2dec",
+              "xvidcore", "libtheora", "libvpx", "ffmpeg", "gstreamer1.0",
+              "gst-plugins-base1.0", "gst-plugins-good1.0", "gst-plugins-bad1.0",
+              "gst-libav1.0", "gstreamer-vaapi", "mpv", "vlc",
+              # Provides libgomp1
+              "gcc-12",
+          }
+          duplicates = sorted({package for package in packages if packages.count(package) > 1})
+          missing = sorted(required - set(packages))
+          if duplicates or missing:
+              raise SystemExit(f"Video queue validation failed; duplicates={duplicates}, missing={missing}")
+          print(f"Video queue contains {len(packages)} unique Bookworm source packages.")
+          PY
+
       - name: Validate RustDesk Core 2 build contract
         shell: bash
         run: |
