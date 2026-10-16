@@ -164,6 +164,7 @@ jobs:
             sed -i -E '/^[[:space:]]*confflags_GALLIUM += -Dintel-clc=enabled[[:space:]]*$/d' "$RULES"
             python3 - "$RULES" <<'PY'
           from pathlib import Path
+          import re
           import sys
 
           path = Path(sys.argv[1])
@@ -180,6 +181,49 @@ jobs:
               "confflags_GALLIUM := $(filter-out -Dgallium-vdpau=enabled -Dgallium-va=enabled -Dgallium-xa=enabled -Dintel-clc=enabled -Dgallium-rusticl=true,$(confflags_GALLIUM))\n"
               "confflags_GALLIUM += -Dllvm=disabled -Ddraw-use-llvm=false -Dgallium-vdpau=disabled -Dgallium-va=disabled -Dgallium-xa=disabled -Dgallium-omx=disabled -Dintel-clc=disabled\n"
           )
+          def guard_missing_driver_move(rules, source_glob, target_dir, message):
+              lines = rules.splitlines(keepends=True)
+              matches = []
+              for index, line in enumerate(lines[:-1]):
+                  if (
+                      line.lstrip(" \t").startswith(f"mv {source_glob}")
+                      and line.rstrip("\r\n").endswith("\\")
+                      and lines[index + 1].strip() == target_dir
+                  ):
+                      matches.append(index)
+              if len(matches) != 1:
+                  raise SystemExit(
+                      f"Expected exactly one Debian packaging move for {source_glob}; found {len(matches)}"
+                  )
+              index = matches[0]
+              indent = lines[index][:len(lines[index]) - len(lines[index].lstrip(" \t"))]
+              replacement = (
+                  f"{indent}if ls {source_glob} >/dev/null 2>&1; then \\\n"
+                  f"{indent}\tmv {source_glob} \\\n"
+                  f"{indent}\t   {target_dir}; \\\n"
+                  f"{indent}else \\\n"
+                  f"{indent}\techo '{message}'; \\\n"
+                  f"{indent}fi\n"
+              )
+              lines[index:index + 2] = [replacement]
+              return "".join(lines)
+
+          # This Debian rules file assumes the optional VA/VDPAU payloads exist.
+          # In the intentionally software-only/no-LLVM configuration they do not.
+          # Guard those two packaging moves instead of failing after a successful build.
+          rules = guard_missing_driver_move(
+              rules,
+              "debian/tmp/usr/lib/${DEB_HOST_MULTIARCH}/vdpau/libvdpau*.so*",
+              "debian/mesa-vdpau-drivers/usr/lib/${DEB_HOST_MULTIARCH}/vdpau/",
+              "No VDPAU payload in the D630 no-LLVM build; skipping optional move.",
+          )
+          rules = guard_missing_driver_move(
+              rules,
+              "debian/tmp/usr/lib/${DEB_HOST_MULTIARCH}/dri/*_drv_video.so",
+              "debian/mesa-va-drivers/usr/lib/${DEB_HOST_MULTIARCH}/dri/",
+              "No VA-API payload in the D630 no-LLVM build; skipping optional move.",
+          )
+
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
             grep -qF 'LLVM_ARCHS =' "$RULES"
