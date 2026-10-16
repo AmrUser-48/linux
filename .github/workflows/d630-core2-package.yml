@@ -153,7 +153,6 @@ jobs:
             echo "::error::Could not find unpacked Debian source for $PACKAGE"
             exit 1
           fi
-
           if [[ "$PACKAGE" == "mesa" ]]; then
             # D630 profile: disable LLVM-dependent renderers while preserving classic i965.
             RULES="$SOURCE_DIR/debian/rules"
@@ -180,13 +179,7 @@ jobs:
           )
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
-            grep -qE '^LLVM_ARCHS[[:space:]]*=[[:space:]]*$' "$RULES"
-            grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
-            ! grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
-            ! grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
-            echo "Configured D630 Mesa with LLVM-dependent drivers disabled."
-          fi
-
+            grep -qE '^LLVM_ARCHS[[:space:]]*=[[:space:]]*
           # The extracted source tree is sufficient for a binary-only build.
           # Remove downloaded source archive files from the temporary workspace;
           # none are copied into release artifacts.
@@ -395,18 +388,8 @@ jobs:
                 rm -f "$deb"
                 ;;
               libdrm-amdgpu1|libdrm-radeon1)
-                if [[ "$PACKAGE" == "mesa" ]]; then
-            dri_package_found=false
-            for deb in "${DEBS[@]}"; do
-              package_name="$(dpkg-deb -f "$deb" Package)"
-              depends="$(dpkg-deb -f "$deb" Depends 2>/dev/null || true)"
-              if grep -qw 'libllvm15' <<<"$depends"; then
-                echo "::error::LLVM-free Mesa artifact still depends on libllvm15: $package_name"
-                exit 1
-              fi
-              if [[ "$package_name" == "libgl1-mesa-dri" ]]; then
-                dri_package_found=true
-                if ! dpkg-deb --contents "$deb" | grep -qE '/i965_dri\\.so                  echo "Dropping non-Intel GPU package from the D630 libdrm release: $binary_package"
+                if [[ "$PACKAGE" == "libdrm" ]]; then
+                  echo "Dropping non-Intel GPU package from the D630 libdrm release: $binary_package"
                   rm -f "$deb"
                 else
                   FILTERED_DEBS+=("$deb")
@@ -422,8 +405,18 @@ jobs:
             echo "::error::No non-debug binary packages remain after filtering"
             exit 1
           fi
-          if [[ "$PACKAGE" == "libdrm" ]]; then
-            libdrm2_found=false
+          if [[ "$PACKAGE" == "mesa" ]]; then
+            dri_package_found=false
+            for deb in "${DEBS[@]}"; do
+              package_name="$(dpkg-deb -f "$deb" Package)"
+              depends="$(dpkg-deb -f "$deb" Depends 2>/dev/null || true)"
+              if grep -qw "libllvm15" <<<"$depends"; then
+                echo "::error::LLVM-free Mesa artifact still depends on libllvm15: $package_name"
+                exit 1
+              fi
+              if [[ "$package_name" == "libgl1-mesa-dri" ]]; then
+                dri_package_found=true
+                if ! dpkg-deb --contents "$deb" | grep -qE '/i965_dri\.so
             libdrm_intel_found=false
             for deb in "${DEBS[@]}"; do
               case "$(dpkg-deb -f "$deb" Package)" in
@@ -619,10 +612,10 @@ jobs:
             echo "::warning::Package release was published, but index refresh could not be dispatched."
           fi
  "$RULES"
-            grep -q 'CORE2_D630_NO_LLVM' "$RULES"
+            grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
             ! grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
             ! grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
-            echo "Configured D630 Mesa: LLVM disabled, no LLVM-only Gallium/Vulkan drivers."
+            echo "Configured D630 Mesa with LLVM-dependent drivers disabled."
           fi
 
           # The extracted source tree is sufficient for a binary-only build.
@@ -1058,24 +1051,6 @@ jobs:
             fi
             echo "Verified Mesa package set keeps i965 and has no libllvm15 runtime dependency."
           fi
-
-          if [[ "$PACKAGE" == "libdrm" ]]; then
-                  echo "Dropping non-Intel GPU package from the D630 libdrm release: $binary_package"
-                  rm -f "$deb"
-                else
-                  FILTERED_DEBS+=("$deb")
-                fi
-                ;;
-              *)
-                FILTERED_DEBS+=("$deb")
-                ;;
-            esac
-          done
-          DEBS=("${FILTERED_DEBS[@]}")
-          if (( ${#DEBS[@]} == 0 )); then
-            echo "::error::No non-debug binary packages remain after filtering"
-            exit 1
-          fi
           if [[ "$PACKAGE" == "libdrm" ]]; then
             libdrm2_found=false
             libdrm_intel_found=false
@@ -1273,10 +1248,10 @@ jobs:
             echo "::warning::Package release was published, but index refresh could not be dispatched."
           fi
  "$RULES"
-            grep -q 'CORE2_D630_NO_LLVM' "$RULES"
+            grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
             ! grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
             ! grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
-            echo "Configured D630 Mesa: LLVM disabled, no LLVM-only Gallium/Vulkan drivers."
+            echo "Configured D630 Mesa with LLVM-dependent drivers disabled."
           fi
 
           # The extracted source tree is sufficient for a binary-only build.
