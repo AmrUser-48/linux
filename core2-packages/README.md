@@ -37,7 +37,7 @@ Installer source: [`install.py`](install.py).
 
 ## Binary package dependency tree
 
-The tree is generated from the actual Debian control metadata in the latest published Core 2 .deb for each source package. It shows binary package names and their underlying Debian versions. A branch is shown when one built package declares another built package in Pre-Depends or Depends; dependencies provided by the stock Debian installation are omitted.
+The expandable tree below is the package browser. Open a category, then a package, to reveal direct .deb download links; open dependency nodes to follow the actual Debian Pre-Depends and Depends relationships. Top-level categories are navigation groupings, not dependency edges. Shared dependencies keep their own download link, but their descendants are not expanded repeatedly. Use your browser's Find command (Ctrl+F) to locate package names.
 
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->
 
@@ -8003,7 +8003,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Unique binary packages indexed:** 526.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
-## Published package downloads (newest first)
+<details>
+<summary>Published package downloads by source release (advanced)</summary>
 
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
@@ -10257,6 +10258,8 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 <!-- CORE2-PACKAGE-RELEASE-INDEX:END -->
+
+</details>
 
 ## Start a build
 
