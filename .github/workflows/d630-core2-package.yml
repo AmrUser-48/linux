@@ -172,15 +172,21 @@ jobs:
           if rules.count(anchor) != 1:
               raise SystemExit("Expected one Mesa driver-list anchor; refusing a broad rules edit")
           insertion = (
-              "# CORE2_D630_NO_LLVM: retain softpipe fallback; classic i965 is configured separately.\n"
+              "# CORE2_D630_NO_LLVM: retain classic i965 and software fallback only.\n"
               "GALLIUM_DRIVERS := swrast\n"
               "VULKAN_DRIVERS :=\n"
               "VULKAN_LAYERS :=\n"
+              "# Remove Bookworm video/compiler frontends that require unsupported Gallium drivers or LLVM.\n"
+              "confflags_GALLIUM := $(filter-out -Dgallium-vdpau=enabled -Dgallium-va=enabled -Dgallium-xa=enabled -Dintel-clc=enabled -Dgallium-rusticl=true,$(confflags_GALLIUM))\n"
+              "confflags_GALLIUM += -Dllvm=disabled -Ddraw-use-llvm=false -Dgallium-vdpau=disabled -Dgallium-va=disabled -Dgallium-xa=disabled -Dgallium-omx=disabled -Dintel-clc=disabled\n"
           )
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
             grep -qF 'LLVM_ARCHS =' "$RULES"
             grep -qF 'CORE2_D630_NO_LLVM' "$RULES"
+            grep -qF 'gallium-vdpau=disabled' "$RULES"
+            grep -qF 'gallium-va=disabled' "$RULES"
+            grep -qF 'intel-clc=disabled' "$RULES"
             ! grep -qF 'GALLIUM_DRIVERS += r300 r600' "$RULES"
             ! grep -qF 'confflags_GALLIUM += -Dintel-clc=enabled' "$RULES"
             echo "Configured D630 Mesa with LLVM-dependent drivers disabled."
@@ -355,8 +361,11 @@ jobs:
               HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
               dpkg-buildpackage -rfakeroot -us -uc -b -j2 \
               > "$BUILD_LOG_PATH" 2>&1; then
-              echo "::error::Debian package build failed for $PACKAGE; recent build log follows"
-              tail -n 200 "$BUILD_LOG_PATH" || true
+              echo "::error::Debian package build failed for $PACKAGE; filtered diagnostics follow"
+              grep -Ein -B 2 -A 4 'ERROR:|fatal error:|undefined reference|dpkg-buildpackage: error|ninja: build stopped|make\[[0-9]+\]: \*\*\*' "$BUILD_LOG_PATH" | tail -n 80 || true
+              echo "::group::Last 35 log lines"
+              tail -n 35 "$BUILD_LOG_PATH" || true
+              echo "::endgroup::"
               exit 1
             fi
             echo "Build completed. Recent Debian packaging milestones:"
