@@ -255,6 +255,14 @@ jobs:
           })
           assert kmod_asset["version"] == "30+20221128-1+core2.1~20261009193535", kmod_asset
           assert installer["canonicalize_asset_version"]("30+20221128-1+core2.1~20261009193535") == kmod_asset["version"]
+
+          # Debian asset filenames omit the epoch that dpkg metadata retains.
+          intel_asset = installer["parse_deb_asset"](
+              {"name": "xserver-xorg-video-intel_2.99.917+git20210115-1+core2.1.20261016113213_amd64.deb"},
+              "2:2.99.917+git20210115-1+core2.1~20261016113213",
+          )
+          assert intel_asset["version"] == "2:2.99.917+git20210115-1+core2.1~20261016113213", intel_asset
+          assert installer["PRIMARY"]["xserver-xorg-input-keyboard"] == ["xserver-xorg-input-kbd"]
           assert installer["canonicalize_asset_version"]("30+20221128-1+core2.1.20261009193535") == kmod_asset["version"]
 
           # dpkg-deb emits labeled fields, not bare values.
