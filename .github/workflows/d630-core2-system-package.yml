@@ -169,7 +169,7 @@ jobs:
           set -euxo pipefail
           # The requested package may be a binary package rather than the
           # Debian source-package name (for example, libmp3lame0 comes from lame).
-          SOURCE_PACKAGE="$(apt-cache show "$PACKAGE" | sed -n 's/^Source: \\([^ (]*\\).*/\\1/p' | head -n1)"
+          SOURCE_PACKAGE="$(apt-cache show "$PACKAGE" | sed -n 's/^Source: \([^ (]*\).*/\1/p' | head -n1)"
           if [[ -z "$SOURCE_PACKAGE" ]]; then
             SOURCE_PACKAGE="$PACKAGE"
           fi
