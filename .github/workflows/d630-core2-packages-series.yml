@@ -14,6 +14,7 @@ on:
           - shell-editors
           - media
           - graphics
+          - mesa-no-llvm
           - video
           - new-tools
           - thunar
@@ -59,6 +60,10 @@ jobs:
             shell-editors) packages=(bash zsh nano neovim) ;;
             media) packages=(lame zstd xz-utils 7zip ffmpeg mpv curl) ;;
             graphics) packages=(mesa) ;;
+            mesa-no-llvm)
+              # Force a fresh D630-specific Mesa release whose DRI package must not depend on libllvm15.
+              packages=(mesa)
+              ;;
             video)
               # Core 2 display/DRM, SIMD image pipelines, codecs, FFmpeg, GStreamer,
               # rendering/playback engines, and VA-API/VDPAU interfaces.
@@ -145,7 +150,7 @@ jobs:
             local package="$1"
             local started run_id attempt runs_json log_file has_release refreshed_releases
             local force_rebuild=false
-            [[ "$SERIES" == "tigervnc-rebuild" ]] && force_rebuild=true
+            [[ "$SERIES" == "tigervnc-rebuild" || "$SERIES" == "mesa-no-llvm" ]] && force_rebuild=true
 
             has_release="$(jq -r --arg prefix "core2-${package}-" '
               any(.[]; (.tag_name | startswith($prefix))
