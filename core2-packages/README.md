@@ -40,7 +40,1713 @@ Installer source: [`install.py`](install.py).
 The tree is generated from the actual Debian control metadata in the latest published Core 2 .deb for each source package. It shows binary package names and their underlying Debian versions. A branch is shown when one built package declares another built package in Pre-Depends or Depends; dependencies provided by the stock Debian installation are omitted.
 
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->
-_The dependency tree is generated automatically from published Debian packages._
+
+Latest published binary packages, grouped by real Debian Pre-Depends and Depends relationships.
+Only dependencies that are also present in the current Core 2 release set are expanded; dependencies supplied by stock Debian are omitted.
+Displayed versions omit the repository's +core2 build timestamp and retain the underlying Debian version.
+
+```text
+├── 7zip                                                         22.01+really26.02+dfsg-0+deb12u1
+│   └── libc6                                                    2.36-9+deb12u14
+├── acl                                                          2.3.1-3
+│   ├── libacl1                                                  2.3.1-3
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── apvlv                                                        0.4.0+repack-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libepub0                                                 0.2.2-6
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   ├── libglib2.0-0                                             2.74.6-2+deb12u9
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libffi8                                              3.4.4-1
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libpcre2-8-0                                         10.42-1+deb12u2
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libselinux1                                          3.4-1
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   └── libpcre2-8-0 [shared dependency]                 10.42-1+deb12u2
+│   │   └── zlib1g                                               1:1.2.13.dfsg-1
+│   │       └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   └── libpoppler-glib8                                         22.12.0-2+deb12u3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       └── libpoppler126                                        22.12.0-2+deb12u3
+│           ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│           ├── libjpeg62-turbo                                  1:2.1.5-2
+│           │   └── libc6 [shared dependency]                    2.36-9+deb12u14
+│           └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+├── arj                                                          3.10.22-26
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── ash                                                          0.5.12-2
+│   └── dash                                                     0.5.12-2
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── aspell                                                       0.60.8-4
+│   ├── libaspell15                                              0.60.8-4
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libncursesw6                                             6.4-4
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libtinfo6                                            6.4-4
+│   │       └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── aspell-doc                                                   0.60.8-4
+├── atril                                                        1.26.0-2+deb12u4
+│   ├── atril-common                                             1.26.0-2+deb12u4
+│   ├── libatrildocument3                                        1.26.0-2+deb12u4
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libdjvulibre21                                       3.5.28-2.2~deb12u1
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libdjvulibre-text                                3.5.28-2.2~deb12u1
+│   │   │   └── libjpeg62-turbo [shared dependency]              1:2.1.5-2
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── libkpathsea6                                         2022.20220321.62855-5.1+deb12u2
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libpoppler-glib8 [shared dependency]                 22.12.0-2+deb12u3
+│   │   ├── libsynctex2                                          2022.20220321.62855-5.1+deb12u2
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libatrilview3                                            1.26.0-2+deb12u4
+│   │   ├── libatrildocument3 [shared dependency]                1.26.0-2+deb12u4
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+├── attr                                                         1:2.5.1-4
+│   ├── libattr1                                                 1:2.5.1-4
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── bash-builtins                                                5.2.15-2
+│   └── bash                                                     5.2.15-2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libtinfo6 [shared dependency]                        6.4-4
+├── bash-doc                                                     5.2.15-2
+├── bash-static                                                  5.2.15-2
+│   └── passwd                                                   1:4.13+dfsg1-1+deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libcrypt1                                            1:4.4.33-2
+│       │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│       ├── libpam-modules                                       1.5.2-6+deb12u2
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libcrypt1 [shared dependency]                    1:4.4.33-2
+│       │   ├── libpam-modules-bin                               1.5.2-6+deb12u2
+│       │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   │   ├── libcrypt1 [shared dependency]                1:4.4.33-2
+│       │   │   ├── libpam0g                                     1.5.2-6+deb12u2
+│       │   │   │   └── libc6 [shared dependency]                2.36-9+deb12u14
+│       │   │   └── libselinux1 [shared dependency]              3.4-1
+│       │   ├── libpam0g [shared dependency]                     1.5.2-6+deb12u2
+│       │   └── libselinux1 [shared dependency]                  3.4-1
+│       ├── libpam0g [shared dependency]                         1.5.2-6+deb12u2
+│       └── libselinux1 [shared dependency]                      3.4-1
+├── binutils-aarch64-linux-gnu                                   2.40-2
+│   ├── binutils-common                                          2.40-2
+│   ├── libbinutils                                              2.40-2
+│   │   ├── binutils-common [shared dependency]                  2.40-2
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-alpha-linux-gnu                                     2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-arc-linux-gnu                                       2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-arm-linux-gnueabi                                   2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-arm-linux-gnueabihf                                 2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-doc                                                 2.40-2
+├── binutils-for-build                                           2.40-2
+│   ├── binutils                                                 2.40-2
+│   │   ├── binutils-common [shared dependency]                  2.40-2
+│   │   ├── binutils-x86-64-linux-gnu                            2.40-2
+│   │   │   ├── binutils-common [shared dependency]              2.40-2
+│   │   │   ├── libbinutils [shared dependency]                  2.40-2
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libctf-nobfd0                                    2.40-2
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   ├── libctf0                                          2.40-2
+│   │   │   │   ├── libbinutils [shared dependency]              2.40-2
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   ├── libgprofng0                                      2.40-2
+│   │   │   │   ├── libbinutils [shared dependency]              2.40-2
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│   │   └── libbinutils [shared dependency]                      2.40-2
+│   └── binutils-common [shared dependency]                      2.40-2
+├── binutils-for-host                                            2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   └── binutils-x86-64-linux-gnu [shared dependency]            2.40-2
+├── binutils-hppa-linux-gnu                                      2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-hppa64-linux-gnu                                    2.40-2
+│   ├── binutils [shared dependency]                             2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-i686-gnu                                            2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-i686-kfreebsd-gnu                                   2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-i686-linux-gnu                                      2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-ia64-linux-gnu                                      2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-m68k-linux-gnu                                      2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-multiarch                                           2.40-2
+│   ├── binutils [shared dependency]                             2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-powerpc-linux-gnu                                   2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-powerpc64-linux-gnu                                 2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-powerpc64le-linux-gnu                               2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-riscv64-linux-gnu                                   2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-s390x-linux-gnu                                     2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-sh4-linux-gnu                                       2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-source                                              2.40-2
+│   └── zlib1g-dev                                               1:1.2.13.dfsg-1
+│       ├── libc6-dev                                            2.36-9+deb12u14
+│       │   ├── libc-dev-bin                                     2.36-9+deb12u14
+│       │   │   └── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── binutils-sparc64-linux-gnu                                   2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-x86-64-kfreebsd-gnu                                 2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── binutils-x86-64-linux-gnux32                                 2.40-2
+│   ├── binutils-common [shared dependency]                      2.40-2
+│   ├── libbinutils [shared dependency]                          2.40-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── btop                                                         1.2.13-1
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── busybox-syslogd                                              1:1.35.0-4+deb12u1
+│   ├── busybox                                                  1:1.35.0-4+deb12u1
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── busybox-static                                           1:1.35.0-4+deb12u1
+├── bzip2                                                        1.0.8-5
+│   ├── libbz2-1.0                                               1.0.8-5
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── bzip2-doc                                                    1.0.8-5
+├── catdvi                                                       0.14-14
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libkpathsea6 [shared dependency]                         2022.20220321.62855-5.1+deb12u2
+├── cdrkit-doc                                                   9:1.1.11-3.4
+├── coreutils                                                    9.1-1
+│   ├── libacl1 [shared dependency]                              2.3.1-3
+│   ├── libattr1 [shared dependency]                             1:2.5.1-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libgmp10                                                 2:6.2.1+dfsg1-1.1
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── dbview                                                       1.0.4-5
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── diffutils                                                    1:3.8-4
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── diffutils-doc                                                1:3.8-4
+├── djview                                                       3.5.28-2.2~deb12u1
+│   └── djview3                                                  3.5.28-2.2~deb12u1
+├── djvulibre-bin                                                3.5.28-2.2~deb12u1
+│   ├── curl                                                     7.88.1-10+deb12u15
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libcurl4                                             7.88.1-10+deb12u15
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libidn2-0                                        2.3.3-1
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   └── libunistring2                                1.0-2
+│   │   │   │       └── libc6 [shared dependency]                2.36-9+deb12u14
+│   │   │   ├── libssh2-1                                        1.10.0-3+deb12u1
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   ├── libssl3                                      3.0.22-1~deb12u1
+│   │   │   │   │   └── libc6 [shared dependency]                2.36-9+deb12u14
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   ├── libssl3 [shared dependency]                      3.0.22-1~deb12u1
+│   │   │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libdjvulibre21 [shared dependency]                       3.5.28-2.2~deb12u1
+├── djvulibre-desktop                                            3.5.28-2.2~deb12u1
+├── djvuserve                                                    3.5.28-2.2~deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libdjvulibre21 [shared dependency]                       3.5.28-2.2~deb12u1
+├── e2fsck-static                                                1.47.0-2
+├── e2fsprogs-l10n                                               1.47.0-2
+│   └── e2fsprogs                                                1.47.0-2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libcom-err2                                          1.47.0-2
+│       │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│       ├── libext2fs2                                           1.47.0-2
+│       │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│       ├── libss2                                               1.47.0-2
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   └── libcom-err2 [shared dependency]                  1.47.0-2
+│       └── logsave                                              1.47.0-2
+│           └── libc6 [shared dependency]                        2.36-9+deb12u14
+├── epub-utils                                                   0.2.2-6
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libepub0 [shared dependency]                             0.2.2-6
+├── evince                                                       43.1-2+deb12u1
+│   ├── evince-common                                            43.1-2+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libevdocument3-4                                         43.1-2+deb12u1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libdjvulibre21 [shared dependency]                   3.5.28-2.2~deb12u1
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── libkpathsea6 [shared dependency]                     2022.20220321.62855-5.1+deb12u2
+│   │   ├── libpoppler-glib8 [shared dependency]                 22.12.0-2+deb12u3
+│   │   └── libsynctex2 [shared dependency]                      2022.20220321.62855-5.1+deb12u2
+│   ├── libevview3-3                                             43.1-2+deb12u1
+│   │   ├── gstreamer1.0-plugins-base                            1.22.0-3+deb12u7
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│   │   │   ├── libgstreamer-plugins-base1.0-0                   1.22.0-3+deb12u7
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   ├── libglib2.0-0 [shared dependency]             2.74.6-2+deb12u9
+│   │   │   │   ├── libgstreamer1.0-0                            1.22.0-2+deb12u1
+│   │   │   │   │   ├── libc6 [shared dependency]                2.36-9+deb12u14
+│   │   │   │   │   ├── libcap2                                  1:2.66-4+deb12u3
+│   │   │   │   │   │   └── libc6 [shared dependency]            2.36-9+deb12u14
+│   │   │   │   │   ├── libcap2-bin                              1:2.66-4+deb12u3
+│   │   │   │   │   │   ├── libc6 [shared dependency]            2.36-9+deb12u14
+│   │   │   │   │   │   └── libcap2 [shared dependency]          1:2.66-4+deb12u3
+│   │   │   │   │   └── libglib2.0-0 [shared dependency]         2.74.6-2+deb12u9
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   └── libgstreamer1.0-0 [shared dependency]            1.22.0-2+deb12u1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libevdocument3-4 [shared dependency]                 43.1-2+deb12u1
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── libgstreamer-plugins-base1.0-0 [shared dependency]   1.22.0-3+deb12u7
+│   │   └── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+│   └── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+├── expat                                                        2.5.0-1+deb12u4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libexpat1                                                2.5.0-1+deb12u4
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── fd-find                                                      8.6.0-3
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── ffmpeg                                                       7:5.1.9-0+deb12u1
+│   ├── libavcodec59                                             7:5.1.9-0+deb12u1
+│   │   ├── libavutil57                                          7:5.1.9-0+deb12u1
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   └── libdrm2                                          2.4.114-1
+│   │   │       ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │       └── libdrm-common                                2.4.114-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── liblzma5                                             5.4.1-1+deb12u2
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libmp3lame0                                          3.100-6
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libswresample4                                       7:5.1.9-0+deb12u1
+│   │   │   ├── libavutil57 [shared dependency]                  7:5.1.9-0+deb12u1
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libvpx7                                              1.12.0-1+deb12u5
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libwebp7                                             1.2.4-0.2+deb12u1
+│   │   │   └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   ├── libwebpmux3                                          1.2.4-0.2+deb12u1
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   └── libwebp7 [shared dependency]                     1.2.4-0.2+deb12u1
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libavdevice59                                            7:5.1.9-0+deb12u1
+│   │   ├── libavcodec59 [shared dependency]                     7:5.1.9-0+deb12u1
+│   │   ├── libavfilter8                                         7:5.1.9-0+deb12u1
+│   │   │   ├── libavcodec59 [shared dependency]                 7:5.1.9-0+deb12u1
+│   │   │   ├── libavformat59                                    7:5.1.9-0+deb12u1
+│   │   │   │   ├── libavcodec59 [shared dependency]             7:5.1.9-0+deb12u1
+│   │   │   │   ├── libavutil57 [shared dependency]              7:5.1.9-0+deb12u1
+│   │   │   │   ├── libbz2-1.0 [shared dependency]               1.0.8-5
+│   │   │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   │   └── zlib1g [shared dependency]                   1:1.2.13.dfsg-1
+│   │   │   ├── libavutil57 [shared dependency]                  7:5.1.9-0+deb12u1
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libpostproc56                                    7:5.1.9-0+deb12u1
+│   │   │   │   ├── libavutil57 [shared dependency]              7:5.1.9-0+deb12u1
+│   │   │   │   └── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   ├── libswresample4 [shared dependency]               7:5.1.9-0+deb12u1
+│   │   │   ├── libswscale6                                      7:5.1.9-0+deb12u1
+│   │   │   │   ├── libavutil57 [shared dependency]              7:5.1.9-0+deb12u1
+│   │   │   │   └── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│   │   ├── libavformat59 [shared dependency]                    7:5.1.9-0+deb12u1
+│   │   ├── libavutil57 [shared dependency]                      7:5.1.9-0+deb12u1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libdrm2 [shared dependency]                          2.4.114-1
+│   ├── libavfilter8 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavformat59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavutil57 [shared dependency]                          7:5.1.9-0+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpostproc56 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libswresample4 [shared dependency]                       7:5.1.9-0+deb12u1
+│   └── libswscale6 [shared dependency]                          7:5.1.9-0+deb12u1
+├── ffmpeg-doc                                                   7:5.1.9-0+deb12u1
+├── file                                                         1:5.44-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libmagic1                                                1:5.44-3
+│       ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── liblzma5 [shared dependency]                         5.4.1-1+deb12u2
+│       ├── libmagic-mgc                                         1:5.44-3
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── fuse2fs                                                      1.47.0-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcom-err2 [shared dependency]                          1.47.0-2
+│   └── libext2fs2 [shared dependency]                           1.47.0-2
+├── gawk                                                         1:5.2.1-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libgmp10 [shared dependency]                             2:6.2.1+dfsg1-1.1
+│   ├── libmpfr6                                                 4.2.0-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libgmp10 [shared dependency]                         2:6.2.1+dfsg1-1.1
+│   └── libreadline8                                             8.2-1.3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libtinfo6 [shared dependency]                        6.4-4
+│       └── readline-common                                      8.2-1.3
+├── genisoimage                                                  9:1.1.11-3.4
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libmagic1 [shared dependency]                            1:5.44-3
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── glibc-doc                                                    2.36-9+deb12u14
+├── glibc-source                                                 2.36-9+deb12u14
+├── gpm                                                          1.20.7-10
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libgpm2                                                  1.20.7-10
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── grep                                                         3.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+├── gstreamer1.0-alsa                                            1.22.0-3+deb12u7
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gstreamer1.0-gl                                              1.22.0-3+deb12u7
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-gl1.0-0                                     1.22.0-3+deb12u7
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libdrm2 [shared dependency]                          2.4.114-1
+│   │   ├── libgbm1                                              22.3.6-1+deb12u2
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libdrm2 [shared dependency]                      2.4.114-1
+│   │   │   └── libexpat1 [shared dependency]                    2.5.0-1+deb12u4
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── libgstreamer-plugins-base1.0-0 [shared dependency]   1.22.0-3+deb12u7
+│   │   └── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   ├── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+│   └── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+├── gstreamer1.0-gtk3                                            1.22.0-5+deb12u4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-gl1.0-0 [shared dependency]                 1.22.0-3+deb12u7
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gstreamer1.0-plugins-base-apps                               1.22.0-3+deb12u7
+│   ├── gstreamer1.0-tools                                       1.22.0-2+deb12u1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   └── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gstreamer1.0-pulseaudio                                      1.22.0-5+deb12u4
+│   └── gstreamer1.0-plugins-good                                1.22.0-5+deb12u4
+│       ├── gstreamer1.0-plugins-base [shared dependency]        1.22.0-3+deb12u7
+│       ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       ├── libgstreamer-plugins-base1.0-0 [shared dependency]   1.22.0-3+deb12u7
+│       ├── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+│       ├── libjpeg62-turbo [shared dependency]                  1:2.1.5-2
+│       ├── libmp3lame0 [shared dependency]                      3.100-6
+│       ├── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│       ├── libvpx7 [shared dependency]                          1.12.0-1+deb12u5
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── gstreamer1.0-qt5                                             1.22.0-5+deb12u4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-gl1.0-0 [shared dependency]                 1.22.0-3+deb12u7
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gstreamer1.0-qt6                                             1.22.0-5+deb12u4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-gl1.0-0 [shared dependency]                 1.22.0-3+deb12u7
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gstreamer1.0-x                                               1.22.0-3+deb12u7
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-0 [shared dependency]                    1.22.0-2+deb12u1
+├── gv                                                           1:3.7.4-2
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── gzip                                                         1.12-1
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── gzip-win32                                                   1.12-1
+├── htop                                                         3.2.2-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── icedax                                                       9:1.1.11-3.4
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── idn2                                                         2.3.3-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libidn2-0 [shared dependency]                            2.3.3-1
+│   └── libunistring2 [shared dependency]                        1.0-2
+├── imagemagick                                                  8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── imagemagick-6.q16                                        8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libmagickcore-6.q16-6                                8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── imagemagick-6-common                             8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libbz2-1.0 [shared dependency]                   1.0.8-5
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libfftw3-double3                                 3.3.10-1
+│       │   │   └── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   ├── libjpeg62-turbo [shared dependency]              1:2.1.5-2
+│       │   ├── liblzma5 [shared dependency]                     5.4.1-1+deb12u2
+│       │   ├── libwebp7 [shared dependency]                     1.2.4-0.2+deb12u1
+│       │   ├── libwebpdemux2                                    1.2.4-0.2+deb12u1
+│       │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   │   └── libwebp7 [shared dependency]                 1.2.4-0.2+deb12u1
+│       │   ├── libwebpmux3 [shared dependency]                  1.2.4-0.2+deb12u1
+│       │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│       └── libmagickwand-6.q16-6                                8:6.9.11.60+dfsg-1.6+deb12u13
+│           ├── imagemagick-6-common [shared dependency]         8:6.9.11.60+dfsg-1.6+deb12u13
+│           ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│           └── libmagickcore-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+├── imagemagick-6.q16hdri                                        8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libmagickcore-6.q16hdri-6                                8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── imagemagick-6-common [shared dependency]             8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libfftw3-double3 [shared dependency]                 3.3.10-1
+│   │   ├── libjpeg62-turbo [shared dependency]                  1:2.1.5-2
+│   │   ├── liblzma5 [shared dependency]                         5.4.1-1+deb12u2
+│   │   ├── libwebp7 [shared dependency]                         1.2.4-0.2+deb12u1
+│   │   ├── libwebpdemux2 [shared dependency]                    1.2.4-0.2+deb12u1
+│   │   ├── libwebpmux3 [shared dependency]                      1.2.4-0.2+deb12u1
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   └── libmagickwand-6.q16hdri-6                                8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── imagemagick-6-common [shared dependency]             8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libmagickcore-6.q16hdri-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+├── imagemagick-common                                           8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+├── imagemagick-doc                                              8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── imagemagick-6-doc                                        8:6.9.11.60+dfsg-1.6+deb12u13
+│       └── imagemagick-6-common [shared dependency]             8:6.9.11.60+dfsg-1.6+deb12u13
+├── iproute2                                                     6.1.0-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libcap2-bin [shared dependency]                          1:2.66-4+deb12u3
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   └── libtirpc3                                                1.3.3+ds-1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libtirpc-common                                      1.3.3+ds-1
+├── iproute2-doc                                                 6.1.0-3
+├── kmod                                                         30+20221128-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libkmod2                                                 30+20221128-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── liblzma5 [shared dependency]                         5.4.1-1+deb12u2
+│   │   └── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│   ├── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+│   └── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+├── lame                                                         3.100-6
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libmp3lame0 [shared dependency]                          3.100-6
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── lame-doc                                                     3.100-6
+├── less                                                         590-2.1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── lib32ncurses6                                                6.4-4
+│   ├── lib32tinfo6                                              6.4-4
+│   │   └── libc6-i386                                           2.36-9+deb12u14
+│   │       └── libc6 [shared dependency]                        2.36-9+deb12u14
+│   └── libc6-i386 [shared dependency]                           2.36-9+deb12u14
+├── lib32ncursesw6                                               6.4-4
+│   ├── lib32tinfo6 [shared dependency]                          6.4-4
+│   └── libc6-i386 [shared dependency]                           2.36-9+deb12u14
+├── lib32readline8                                               8.2-1.3
+│   ├── lib32tinfo6 [shared dependency]                          6.4-4
+│   ├── libc6-i386 [shared dependency]                           2.36-9+deb12u14
+│   └── readline-common [shared dependency]                      8.2-1.3
+├── lib32z1-dev                                                  1:1.2.13.dfsg-1
+│   ├── lib32z1                                                  1:1.2.13.dfsg-1
+│   │   └── libc6-i386 [shared dependency]                       2.36-9+deb12u14
+│   └── zlib1g-dev [shared dependency]                           1:1.2.13.dfsg-1
+├── libatrildocument-dev                                         1.26.0-2+deb12u4
+│   ├── gir1.2-atrildocument-1.5.0                               1.26.0-2+deb12u4
+│   │   └── libatrildocument3 [shared dependency]                1.26.0-2+deb12u4
+│   └── libatrildocument3 [shared dependency]                    1.26.0-2+deb12u4
+├── libatrilview-dev                                             1.26.0-2+deb12u4
+│   ├── gir1.2-atrilview-1.5.0                                   1.26.0-2+deb12u4
+│   │   ├── gir1.2-atrildocument-1.5.0 [shared dependency]       1.26.0-2+deb12u4
+│   │   └── libatrilview3 [shared dependency]                    1.26.0-2+deb12u4
+│   └── libatrilview3 [shared dependency]                        1.26.0-2+deb12u4
+├── libavcodec-extra                                             7:5.1.9-0+deb12u1
+│   └── libavcodec-extra59                                       7:5.1.9-0+deb12u1
+│       ├── libavutil57 [shared dependency]                      7:5.1.9-0+deb12u1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       ├── liblzma5 [shared dependency]                         5.4.1-1+deb12u2
+│       ├── libmp3lame0 [shared dependency]                      3.100-6
+│       ├── libswresample4 [shared dependency]                   7:5.1.9-0+deb12u1
+│       ├── libvpx7 [shared dependency]                          1.12.0-1+deb12u5
+│       ├── libwebp7 [shared dependency]                         1.2.4-0.2+deb12u1
+│       ├── libwebpmux3 [shared dependency]                      1.2.4-0.2+deb12u1
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── libavfilter-extra                                            7:5.1.9-0+deb12u1
+│   └── libavfilter-extra8                                       7:5.1.9-0+deb12u1
+│       ├── libavcodec59 [shared dependency]                     7:5.1.9-0+deb12u1
+│       ├── libavformat59 [shared dependency]                    7:5.1.9-0+deb12u1
+│       ├── libavutil57 [shared dependency]                      7:5.1.9-0+deb12u1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libpostproc56 [shared dependency]                    7:5.1.9-0+deb12u1
+│       ├── libswresample4 [shared dependency]                   7:5.1.9-0+deb12u1
+│       ├── libswscale6 [shared dependency]                      7:5.1.9-0+deb12u1
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── libavformat-extra                                            7:5.1.9-0+deb12u1
+│   └── libavformat-extra59                                      7:5.1.9-0+deb12u1
+│       ├── libavcodec59 [shared dependency]                     7:5.1.9-0+deb12u1
+│       ├── libavutil57 [shared dependency]                      7:5.1.9-0+deb12u1
+│       ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── libc-devtools                                                2.36-9+deb12u14
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── libc6-dev-x32                                                2.36-9+deb12u14
+│   ├── libc6-dev [shared dependency]                            2.36-9+deb12u14
+│   ├── libc6-dev-i386                                           2.36-9+deb12u14
+│   │   ├── libc6-dev [shared dependency]                        2.36-9+deb12u14
+│   │   └── libc6-i386 [shared dependency]                       2.36-9+deb12u14
+│   └── libc6-x32                                                2.36-9+deb12u14
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libcurl3-nss                                                 7.88.1-10+deb12u15
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libidn2-0 [shared dependency]                            2.3.3-1
+│   ├── libssh2-1 [shared dependency]                            1.10.0-3+deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libcurl4-doc                                                 7.88.1-10+deb12u15
+├── libd3dadapter9-mesa                                          22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1                                           2.4.114-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libdrm2 [shared dependency]                          2.4.114-1
+│   ├── libdrm-intel1                                            2.4.114-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libdrm2 [shared dependency]                          2.4.114-1
+│   │   └── libpciaccess0                                        0.17-2
+│   │       ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │       └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│   ├── libdrm-nouveau2                                          2.4.114-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libdrm2 [shared dependency]                          2.4.114-1
+│   ├── libdrm-radeon1                                           2.4.114-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libdrm2 [shared dependency]                          2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   ├── libudev1                                                 252.39-1~deb12u2
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libdrm-tests                                                 2.4.114-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1 [shared dependency]                       2.4.114-1
+│   └── libdrm2 [shared dependency]                              2.4.114-1
+├── libegl-mesa0                                                 22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   ├── libgbm1 [shared dependency]                              22.3.6-1+deb12u2
+│   └── libglapi-mesa                                            22.3.6-1+deb12u2
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libegl1-mesa                                                 22.3.6-1+deb12u2
+├── libepub-dev                                                  0.2.2-6
+│   └── libepub0 [shared dependency]                             0.2.2-6
+├── libevince-dev                                                43.1-2+deb12u1
+│   ├── gir1.2-evince-3.0                                        43.1-2+deb12u1
+│   │   ├── libevdocument3-4 [shared dependency]                 43.1-2+deb12u1
+│   │   └── libevview3-3 [shared dependency]                     43.1-2+deb12u1
+│   ├── libevdocument3-4 [shared dependency]                     43.1-2+deb12u1
+│   ├── libevview3-3 [shared dependency]                         43.1-2+deb12u1
+│   └── libglib2.0-dev                                           2.74.6-2+deb12u9
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       ├── libglib2.0-bin                                       2.74.6-2+deb12u9
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│       │   └── libglib2.0-data                                  2.74.6-2+deb12u9
+│       ├── libglib2.0-dev-bin                                   2.74.6-2+deb12u9
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   └── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│       └── zlib1g-dev [shared dependency]                       1:1.2.13.dfsg-1
+├── libexo-2-dev                                                 4.18.0-1
+│   ├── libexo-2-0                                               4.18.0-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libexo-common                                        4.18.0-1
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   └── libxfce4util7                                        4.18.1-2
+│   │       ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │       ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│   │       └── libxfce4util-common                              4.18.1-2
+│   └── libxfce4util-dev                                         4.18.1-2
+│       ├── gir1.2-libxfce4util-1.0                              4.18.1-2
+│       │   └── libxfce4util7 [shared dependency]                4.18.1-2
+│       ├── libglib2.0-dev [shared dependency]                   2.74.6-2+deb12u9
+│       └── libxfce4util7 [shared dependency]                    4.18.1-2
+├── libfftw3-bin                                                 3.3.10-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libfftw3-double3 [shared dependency]                     3.3.10-1
+│   ├── libfftw3-long3                                           3.3.10-1
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   ├── libfftw3-quad3                                           3.3.10-1
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libfftw3-single3                                         3.3.10-1
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libfftw3-doc                                                 3.3.10-1
+├── libfftw3-mpi3                                                3.3.10-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libfftw3-double3 [shared dependency]                     3.3.10-1
+│   ├── libfftw3-long3 [shared dependency]                       3.3.10-1
+│   └── libfftw3-single3 [shared dependency]                     3.3.10-1
+├── libgarcon-1-0-dev                                            4.18.0-1
+│   └── libgarcon-1-dev                                          4.18.0-1
+│       ├── gir1.2-garcon-1.0                                    4.18.0-1
+│       │   ├── gir1.2-libxfce4util-1.0 [shared dependency]      4.18.1-2
+│       │   └── libgarcon-1-0                                    4.18.0-1
+│       │       ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │       ├── libgarcon-common                             4.18.0-1
+│       │       ├── libglib2.0-0 [shared dependency]             2.74.6-2+deb12u9
+│       │       └── libxfce4util7 [shared dependency]            4.18.1-2
+│       └── libgarcon-1-0 [shared dependency]                    4.18.0-1
+├── libgarcon-gtk3-1-dev                                         4.18.0-1
+│   ├── gir1.2-garcongtk-1.0                                     4.18.0-1
+│   │   ├── gir1.2-garcon-1.0 [shared dependency]                4.18.0-1
+│   │   ├── gir1.2-libxfce4ui-2.0                                4.18.2-2
+│   │   │   ├── gir1.2-libxfce4util-1.0 [shared dependency]      4.18.1-2
+│   │   │   └── libxfce4ui-2-0                                   4.18.2-2
+│   │   │       ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │       ├── libglib2.0-0 [shared dependency]             2.74.6-2+deb12u9
+│   │   │       ├── libxfce4ui-common                            4.18.2-2
+│   │   │       ├── libxfce4util7 [shared dependency]            4.18.1-2
+│   │   │       └── libxfconf-0-3                                4.18.0-2
+│   │   │           ├── libc6 [shared dependency]                2.36-9+deb12u14
+│   │   │           ├── libglib2.0-0 [shared dependency]         2.74.6-2+deb12u9
+│   │   │           └── xfconf                                   4.18.0-2
+│   │   │               ├── libc6 [shared dependency]            2.36-9+deb12u14
+│   │   │               ├── libglib2.0-0 [shared dependency]     2.74.6-2+deb12u9
+│   │   │               └── libxfce4util7 [shared dependency]    4.18.1-2
+│   │   ├── gir1.2-libxfce4util-1.0 [shared dependency]          4.18.1-2
+│   │   └── libgarcon-gtk3-1-0                                   4.18.0-1
+│   │       ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │       ├── libgarcon-1-0 [shared dependency]                4.18.0-1
+│   │       ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│   │       ├── libxfce4ui-2-0 [shared dependency]               4.18.2-2
+│   │       └── libxfce4util7 [shared dependency]                4.18.1-2
+│   ├── libgarcon-1-dev [shared dependency]                      4.18.0-1
+│   ├── libgarcon-gtk3-1-0 [shared dependency]                   4.18.0-1
+│   └── libxfce4ui-2-dev                                         4.18.2-2
+│       ├── gir1.2-libxfce4ui-2.0 [shared dependency]            4.18.2-2
+│       ├── libxfce4ui-2-0 [shared dependency]                   4.18.2-2
+│       ├── libxfce4util-dev [shared dependency]                 4.18.1-2
+│       └── libxfconf-0-dev                                      4.18.0-2
+│           ├── gir1.2-xfconf-0                                  4.18.0-2
+│           │   └── libxfconf-0-3 [shared dependency]            4.18.0-2
+│           ├── libglib2.0-dev [shared dependency]               2.74.6-2+deb12u9
+│           └── libxfconf-0-3 [shared dependency]                4.18.0-2
+├── libgl1-mesa-glx                                              22.3.6-1+deb12u2
+│   └── libglx-mesa0                                             22.3.6-1+deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libdrm2 [shared dependency]                          2.4.114-1
+│       ├── libexpat1 [shared dependency]                        2.5.0-1+deb12u4
+│       ├── libgl1-mesa-dri                                      22.3.6-1+deb12u2
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libdrm-amdgpu1 [shared dependency]               2.4.114-1
+│       │   ├── libdrm-intel1 [shared dependency]                2.4.114-1
+│       │   ├── libdrm-nouveau2 [shared dependency]              2.4.114-1
+│       │   ├── libdrm-radeon1 [shared dependency]               2.4.114-1
+│       │   ├── libdrm2 [shared dependency]                      2.4.114-1
+│       │   ├── libexpat1 [shared dependency]                    2.5.0-1+deb12u4
+│       │   ├── libglapi-mesa [shared dependency]                22.3.6-1+deb12u2
+│       │   └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+│       └── libglapi-mesa [shared dependency]                    22.3.6-1+deb12u2
+├── libgles2-mesa                                                22.3.6-1+deb12u2
+├── libglib2.0-doc                                               2.74.6-2+deb12u9
+├── libglib2.0-tests                                             2.74.6-2+deb12u9
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libglib2.0-dev-bin [shared dependency]                   2.74.6-2+deb12u9
+│   ├── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+│   └── python3.11                                               3.11.2-6+deb12u9
+│       ├── libpython3.11-stdlib                                 3.11.2-6+deb12u9
+│       │   ├── libbz2-1.0 [shared dependency]                   1.0.8-5
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libcrypt1 [shared dependency]                    1:4.4.33-2
+│       │   ├── libffi8 [shared dependency]                      3.4.4-1
+│       │   ├── liblzma5 [shared dependency]                     5.4.1-1+deb12u2
+│       │   ├── libncursesw6 [shared dependency]                 6.4-4
+│       │   ├── libpython3.11-minimal                            3.11.2-6+deb12u9
+│       │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   │   └── libssl3 [shared dependency]                  3.0.22-1~deb12u1
+│       │   ├── libreadline8 [shared dependency]                 8.2-1.3
+│       │   ├── libtinfo6 [shared dependency]                    6.4-4
+│       │   └── libtirpc3 [shared dependency]                    1.3.3+ds-1
+│       └── python3.11-minimal                                   3.11.2-6+deb12u9
+│           ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│           ├── libexpat1 [shared dependency]                    2.5.0-1+deb12u4
+│           ├── libpython3.11-minimal [shared dependency]        3.11.2-6+deb12u9
+│           └── zlib1g [shared dependency]                       1:1.2.13.dfsg-1
+├── libgmp10-doc                                                 2:6.2.1+dfsg1-1.1
+├── libgmpxx4ldbl                                                2:6.2.1+dfsg1-1.1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libgmp10 [shared dependency]                             2:6.2.1+dfsg1-1.1
+├── libgpm-dev                                                   1.20.7-10
+│   ├── libc6-dev [shared dependency]                            2.36-9+deb12u14
+│   └── libgpm2 [shared dependency]                              1.20.7-10
+├── libgstreamer-plugins-base1.0-dev                             1.22.0-3+deb12u7
+│   ├── gir1.2-gst-plugins-base-1.0                              1.22.0-3+deb12u7
+│   │   ├── gir1.2-gstreamer-1.0                                 1.22.0-2+deb12u1
+│   │   │   └── libgstreamer1.0-0 [shared dependency]            1.22.0-2+deb12u1
+│   │   ├── libgstreamer-gl1.0-0 [shared dependency]             1.22.0-3+deb12u7
+│   │   └── libgstreamer-plugins-base1.0-0 [shared dependency]   1.22.0-3+deb12u7
+│   ├── libc6-dev [shared dependency]                            2.36-9+deb12u14
+│   ├── libdrm-dev                                               2.4.114-1
+│   │   ├── libdrm-amdgpu1 [shared dependency]                   2.4.114-1
+│   │   ├── libdrm-intel1 [shared dependency]                    2.4.114-1
+│   │   ├── libdrm-nouveau2 [shared dependency]                  2.4.114-1
+│   │   ├── libdrm-radeon1 [shared dependency]                   2.4.114-1
+│   │   ├── libdrm2 [shared dependency]                          2.4.114-1
+│   │   └── libpciaccess-dev                                     0.17-2
+│   │       └── libpciaccess0 [shared dependency]                0.17-2
+│   ├── libglib2.0-dev [shared dependency]                       2.74.6-2+deb12u9
+│   ├── libgstreamer-gl1.0-0 [shared dependency]                 1.22.0-3+deb12u7
+│   ├── libgstreamer-plugins-base1.0-0 [shared dependency]       1.22.0-3+deb12u7
+│   └── libgstreamer1.0-dev                                      1.22.0-2+deb12u1
+│       ├── gir1.2-gstreamer-1.0 [shared dependency]             1.22.0-2+deb12u1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libc6-dev [shared dependency]                        2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       ├── libglib2.0-dev [shared dependency]                   2.74.6-2+deb12u9
+│       └── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+├── libidn2-dev                                                  2.3.3-1
+│   └── libidn2-0 [shared dependency]                            2.3.3-1
+├── libidn2-doc                                                  2.3.3-1
+├── libimage-magick-q16hdri-perl                                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libmagickcore-6.q16hdri-6 [shared dependency]            8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libperl5.36                                              5.36.0-7+deb12u4
+│   │   ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libcrypt1 [shared dependency]                        1:4.4.33-2
+│   │   ├── perl-modules-5.36                                    5.36.0-7+deb12u4
+│   │   │   └── perl-base                                        5.36.0-7+deb12u4
+│   │   │       ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│   │   │       └── libcrypt1 [shared dependency]                1:4.4.33-2
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   └── perl                                                     5.36.0-7+deb12u4
+│       ├── libperl5.36 [shared dependency]                      5.36.0-7+deb12u4
+│       ├── perl-base [shared dependency]                        5.36.0-7+deb12u4
+│       └── perl-modules-5.36 [shared dependency]                5.36.0-7+deb12u4
+├── libjpeg-turbo-progs                                          1:2.1.5-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   └── libturbojpeg0                                            1:2.1.5-2
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libkpathsea-dev                                              2022.20220321.62855-5.1+deb12u2
+│   └── libkpathsea6 [shared dependency]                         2022.20220321.62855-5.1+deb12u2
+├── liblzma-doc                                                  5.4.1-1+deb12u2
+├── libmagic-dev                                                 1:5.44-3
+│   └── libmagic1 [shared dependency]                            1:5.44-3
+├── libmagick++-6.q16hdri-dev                                    8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libmagick++-6-headers                                    8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── imagemagick-6-common [shared dependency]             8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libmagickcore-6-headers                              8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   │   └── imagemagick-6-common [shared dependency]         8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   └── libmagickwand-6-headers                              8:6.9.11.60+dfsg-1.6+deb12u13
+│   │       ├── imagemagick-6-common [shared dependency]         8:6.9.11.60+dfsg-1.6+deb12u13
+│   │       └── libmagickcore-6-headers [shared dependency]      8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libmagick++-6.q16hdri-8                                  8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libmagickcore-6.q16hdri-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   └── libmagickwand-6.q16hdri-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── libmagickcore-6.q16hdri-dev                              8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libbz2-dev                                           1.0.8-5
+│   │   │   ├── libbz2-1.0 [shared dependency]                   1.0.8-5
+│   │   │   └── libc6-dev [shared dependency]                    2.36-9+deb12u14
+│   │   ├── libdjvulibre-dev                                     3.5.28-2.2~deb12u1
+│   │   │   ├── libdjvulibre21 [shared dependency]               3.5.28-2.2~deb12u1
+│   │   │   └── libjpeg-dev                                      1:2.1.5-2
+│   │   │       └── libjpeg62-turbo-dev                          1:2.1.5-2
+│   │   │           └── libjpeg62-turbo [shared dependency]      1:2.1.5-2
+│   │   ├── libjpeg-dev [shared dependency]                      1:2.1.5-2
+│   │   ├── libmagickcore-6-arch-config                          8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   │   ├── imagemagick-6-common [shared dependency]         8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   │   └── libmagickcore-6-headers [shared dependency]      8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libmagickcore-6.q16hdri-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   ├── libmagickcore-6.q16hdri-6-extra                      8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libdjvulibre21 [shared dependency]               3.5.28-2.2~deb12u1
+│   │   │   ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│   │   │   ├── libmagickcore-6.q16hdri-6 [shared dependency]    8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   │   └── libmagickwand-6.q16hdri-6 [shared dependency]    8:6.9.11.60+dfsg-1.6+deb12u13
+│   │   └── zlib1g-dev [shared dependency]                       1:1.2.13.dfsg-1
+│   └── libmagickwand-6.q16hdri-dev                              8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagickcore-6.q16hdri-6-extra [shared dependency]  8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagickcore-6.q16hdri-dev [shared dependency]      8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagickwand-6-headers [shared dependency]          8:6.9.11.60+dfsg-1.6+deb12u13
+│       └── libmagickwand-6.q16hdri-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+├── libmagick++-dev                                              8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── libmagick++-6.q16-dev                                    8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagick++-6-headers [shared dependency]            8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagick++-6.q16-8                                  8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libmagickcore-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   └── libmagickwand-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libmagickcore-6.q16-dev                              8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libbz2-dev [shared dependency]                   1.0.8-5
+│       │   ├── libdjvulibre-dev [shared dependency]             3.5.28-2.2~deb12u1
+│       │   ├── libjpeg-dev [shared dependency]                  1:2.1.5-2
+│       │   ├── libmagickcore-6-arch-config [shared dependency]  8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libmagickcore-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libmagickcore-6.q16-6-extra                      8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   │   ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │   │   ├── libdjvulibre21 [shared dependency]           3.5.28-2.2~deb12u1
+│       │   │   ├── libglib2.0-0 [shared dependency]             2.74.6-2+deb12u9
+│       │   │   ├── libmagickcore-6.q16-6 [shared dependency]    8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   │   └── libmagickwand-6.q16-6 [shared dependency]    8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   └── zlib1g-dev [shared dependency]                   1:1.2.13.dfsg-1
+│       └── libmagickwand-6.q16-dev                              8:6.9.11.60+dfsg-1.6+deb12u13
+│           ├── libmagickcore-6.q16-6-extra [shared dependency]  8:6.9.11.60+dfsg-1.6+deb12u13
+│           ├── libmagickcore-6.q16-dev [shared dependency]      8:6.9.11.60+dfsg-1.6+deb12u13
+│           ├── libmagickwand-6-headers [shared dependency]      8:6.9.11.60+dfsg-1.6+deb12u13
+│           └── libmagickwand-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+├── libmagickcore-dev                                            8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── libmagickcore-6.q16-dev [shared dependency]              8:6.9.11.60+dfsg-1.6+deb12u13
+├── libmagickwand-dev                                            8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── libmagickwand-6.q16-dev [shared dependency]              8:6.9.11.60+dfsg-1.6+deb12u13
+├── libmpfr-doc                                                  4.2.0-1
+├── libmpv2                                                      0.35.1-4
+│   ├── libavcodec59 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavdevice59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavfilter8 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavformat59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavutil57 [shared dependency]                          7:5.1.9-0+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libgbm1 [shared dependency]                              22.3.6-1+deb12u2
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libswresample4 [shared dependency]                       7:5.1.9-0+deb12u1
+│   ├── libswscale6 [shared dependency]                          7:5.1.9-0+deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libmupdf-dev                                                 1.21.1+ds2-1+deb12u1
+├── libncurses5                                                  6.4-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo5                                                6.4-4
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libncurses6                                                  6.4-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── libncursesw5                                                 6.4-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo5 [shared dependency]                            6.4-4
+├── libnss-myhostname                                            252.39-1~deb12u2
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── libnss-mymachines                                            252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   └── systemd-container                                        252.39-1~deb12u2
+│       ├── libacl1 [shared dependency]                          2.3.1-3
+│       ├── libbz2-1.0 [shared dependency]                       1.0.8-5
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libcurl4 [shared dependency]                         7.88.1-10+deb12u15
+│       ├── liblzma5 [shared dependency]                         5.4.1-1+deb12u2
+│       ├── libselinux1 [shared dependency]                      3.4-1
+│       ├── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│       ├── libsystemd-shared                                    252.39-1~deb12u2
+│       │   ├── libacl1 [shared dependency]                      2.3.1-3
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libcap2 [shared dependency]                      1:2.66-4+deb12u3
+│       │   ├── libcrypt1 [shared dependency]                    1:4.4.33-2
+│       │   ├── libkmod2 [shared dependency]                     30+20221128-1
+│       │   ├── liblzma5 [shared dependency]                     5.4.1-1+deb12u2
+│       │   ├── libpam0g [shared dependency]                     1.5.2-6+deb12u2
+│       │   ├── libselinux1 [shared dependency]                  3.4-1
+│       │   └── libssl3 [shared dependency]                      3.0.22-1~deb12u1
+│       ├── systemd                                              252.39-1~deb12u2
+│       │   ├── libacl1 [shared dependency]                      2.3.1-3
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libcap2 [shared dependency]                      1:2.66-4+deb12u3
+│       │   ├── libkmod2 [shared dependency]                     30+20221128-1
+│       │   ├── liblzma5 [shared dependency]                     5.4.1-1+deb12u2
+│       │   ├── libselinux1 [shared dependency]                  3.4-1
+│       │   ├── libssl3 [shared dependency]                      3.0.22-1~deb12u1
+│       │   ├── libsystemd-shared [shared dependency]            252.39-1~deb12u2
+│       │   └── libsystemd0                                      252.39-1~deb12u2
+│       │       ├── libc6 [shared dependency]                    2.36-9+deb12u14
+│       │       ├── libcap2 [shared dependency]                  1:2.66-4+deb12u3
+│       │       └── liblzma5 [shared dependency]                 5.4.1-1+deb12u2
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── libnss-resolve                                               252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── systemd-resolved                                         252.39-1~deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│       ├── libsystemd-shared [shared dependency]                252.39-1~deb12u2
+│       └── systemd [shared dependency]                          252.39-1~deb12u2
+├── libnss-systemd                                               252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   └── systemd [shared dependency]                              252.39-1~deb12u2
+├── libosmesa6                                                   22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglapi-mesa [shared dependency]                        22.3.6-1+deb12u2
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libpam-cap                                                   1:2.66-4+deb12u3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libpam-runtime                                           1.5.2-6+deb12u2
+│   │   └── libpam-modules [shared dependency]                   1.5.2-6+deb12u2
+│   └── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+├── libpam-doc                                                   1.5.2-6+deb12u2
+├── libpam-systemd                                               252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libpam-runtime [shared dependency]                       1.5.2-6+deb12u2
+│   ├── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+│   ├── systemd [shared dependency]                              252.39-1~deb12u2
+│   └── systemd-sysv                                             252.39-1~deb12u2
+│       └── systemd [shared dependency]                          252.39-1~deb12u2
+├── libperl-dev                                                  5.36.0-7+deb12u4
+│   ├── libc6-dev [shared dependency]                            2.36-9+deb12u14
+│   ├── libperl5.36 [shared dependency]                          5.36.0-7+deb12u4
+│   └── perl [shared dependency]                                 5.36.0-7+deb12u4
+├── libpixman-1-dev                                              0.42.2-1
+│   └── libpixman-1-0                                            0.42.2-1
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libpoppler-cpp-dev                                           22.12.0-2+deb12u3
+│   ├── libpoppler-cpp0v5                                        22.12.0-2+deb12u3
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libpoppler126 [shared dependency]                    22.12.0-2+deb12u3
+│   └── libpoppler-dev                                           22.12.0-2+deb12u3
+│       └── libpoppler126 [shared dependency]                    22.12.0-2+deb12u3
+├── libpoppler-glib-dev                                          22.12.0-2+deb12u3
+│   ├── gir1.2-poppler-0.18                                      22.12.0-2+deb12u3
+│   │   └── libpoppler-glib8 [shared dependency]                 22.12.0-2+deb12u3
+│   ├── libglib2.0-dev [shared dependency]                       2.74.6-2+deb12u9
+│   ├── libpoppler-dev [shared dependency]                       22.12.0-2+deb12u3
+│   └── libpoppler-glib8 [shared dependency]                     22.12.0-2+deb12u3
+├── libpoppler-glib-doc                                          22.12.0-2+deb12u3
+├── libpoppler-private-dev                                       22.12.0-2+deb12u3
+│   └── libpoppler-dev [shared dependency]                       22.12.0-2+deb12u3
+├── libpoppler-qt5-dev                                           22.12.0-2+deb12u3
+│   ├── libpoppler-dev [shared dependency]                       22.12.0-2+deb12u3
+│   └── libpoppler-qt5-1                                         22.12.0-2+deb12u3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libpoppler126 [shared dependency]                    22.12.0-2+deb12u3
+├── libpoppler-qt6-dev                                           22.12.0-2+deb12u3
+│   ├── libpoppler-dev [shared dependency]                       22.12.0-2+deb12u3
+│   └── libpoppler-qt6-3                                         22.12.0-2+deb12u3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libpoppler126 [shared dependency]                    22.12.0-2+deb12u3
+├── libpspell-dev                                                0.60.8-4
+│   ├── libaspell-dev                                            0.60.8-4
+│   │   └── libaspell15 [shared dependency]                      0.60.8-4
+│   └── libaspell15 [shared dependency]                          0.60.8-4
+├── libptexenc-dev                                               2022.20220321.62855-5.1+deb12u2
+│   └── libptexenc1                                              2022.20220321.62855-5.1+deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libkpathsea6 [shared dependency]                     2022.20220321.62855-5.1+deb12u2
+├── libpython3.11                                                3.11.2-6+deb12u9
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   ├── libpython3.11-stdlib [shared dependency]                 3.11.2-6+deb12u9
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libslang2-pic                                                2.3.3-3
+│   └── libslang2-dev                                            2.3.3-3
+│       ├── libc6-dev [shared dependency]                        2.36-9+deb12u14
+│       └── libslang2                                            2.3.3-3
+│           └── libc6 [shared dependency]                        2.36-9+deb12u14
+├── libssh2-1-dev                                                1.10.0-3+deb12u1
+│   ├── libssh2-1 [shared dependency]                            1.10.0-3+deb12u1
+│   ├── libssl-dev                                               3.0.22-1~deb12u1
+│   │   └── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│   └── zlib1g-dev [shared dependency]                           1:1.2.13.dfsg-1
+├── libssl-doc                                                   3.0.22-1~deb12u1
+├── libsynctex-dev                                               2022.20220321.62855-5.1+deb12u2
+│   └── libsynctex2 [shared dependency]                          2022.20220321.62855-5.1+deb12u2
+├── libtexlua53                                                  2022.20220321.62855-5.1+deb12u2
+│   └── libtexlua53-5                                            2022.20220321.62855-5.1+deb12u2
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libtexlua53-dev                                              2022.20220321.62855-5.1+deb12u2
+│   └── libtexlua-dev                                            2022.20220321.62855-5.1+deb12u2
+│       └── libtexlua53-5 [shared dependency]                    2022.20220321.62855-5.1+deb12u2
+├── libtexluajit-dev                                             2022.20220321.62855-5.1+deb12u2
+│   └── libtexluajit2                                            2022.20220321.62855-5.1+deb12u2
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libthunarx-3-dev                                             4.18.4-1
+│   ├── gir1.2-thunarx-3.0                                       4.18.4-1
+│   │   └── libthunarx-3-0                                       4.18.4-1
+│   │       ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │       ├── libexo-2-0 [shared dependency]                   4.18.0-1
+│   │       ├── libglib2.0-0 [shared dependency]                 2.74.6-2+deb12u9
+│   │       ├── libpcre2-8-0 [shared dependency]                 10.42-1+deb12u2
+│   │       ├── libxfce4ui-2-0 [shared dependency]               4.18.2-2
+│   │       ├── libxfce4util7 [shared dependency]                4.18.1-2
+│   │       ├── libxfconf-0-3 [shared dependency]                4.18.0-2
+│   │       └── thunar-data                                      4.18.4-1
+│   ├── libglib2.0-dev [shared dependency]                       2.74.6-2+deb12u9
+│   ├── libthunarx-3-0 [shared dependency]                       4.18.4-1
+│   └── thunar-data [shared dependency]                          4.18.4-1
+├── libtumbler-1-dev                                             4.18.0-1
+│   ├── libglib2.0-dev [shared dependency]                       2.74.6-2+deb12u9
+│   └── libtumbler-1-0                                           4.18.0-1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       └── libxfce4util7 [shared dependency]                    4.18.1-2
+├── libturbojpeg-java                                            1:2.1.5-2
+│   └── libturbojpeg0 [shared dependency]                        1:2.1.5-2
+├── libturbojpeg0-dev                                            1:2.1.5-2
+│   └── libturbojpeg0 [shared dependency]                        1:2.1.5-2
+├── libunistring-dev                                             1.0-2
+│   └── libunistring2 [shared dependency]                        1.0-2
+├── libvpx-dev                                                   1.12.0-1+deb12u5
+│   └── libvpx7 [shared dependency]                              1.12.0-1+deb12u5
+├── libvpx-doc                                                   1.12.0-1+deb12u5
+├── libwayland-egl1-mesa                                         22.3.6-1+deb12u2
+├── libwebp-dev                                                  1.2.4-0.2+deb12u1
+│   ├── libwebp7 [shared dependency]                             1.2.4-0.2+deb12u1
+│   ├── libwebpdemux2 [shared dependency]                        1.2.4-0.2+deb12u1
+│   └── libwebpmux3 [shared dependency]                          1.2.4-0.2+deb12u1
+├── libwim-dev                                                   1.13.6-1
+│   └── libwim15                                                 1.13.6-1
+│       └── libc6 [shared dependency]                            2.36-9+deb12u14
+├── libwim-doc                                                   1.13.6-1
+├── libxatracker2                                                22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-intel1 [shared dependency]                        2.4.114-1
+│   ├── libdrm-nouveau2 [shared dependency]                      2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── libxcrypt-source                                             1:4.4.33-2
+├── libxfce4ui-glade                                             4.18.2-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   └── libxfce4ui-2-0 [shared dependency]                       4.18.2-2
+├── libxfce4ui-utils                                             4.18.2-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libxfce4ui-2-0 [shared dependency]                       4.18.2-2
+│   └── libxfce4util7 [shared dependency]                        4.18.1-2
+├── libxfce4util-bin                                             4.18.1-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libxfce4util7 [shared dependency]                        4.18.1-2
+├── links                                                        2.28-1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libgpm2 [shared dependency]                              1.20.7-10
+│   ├── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── links2                                                       2.28-1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgpm2 [shared dependency]                              1.20.7-10
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   ├── libwebp7 [shared dependency]                             1.2.4-0.2+deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── locales                                                      2.36-9+deb12u14
+│   ├── libc-bin                                                 2.36-9+deb12u14
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── libc-l10n                                                2.36-9+deb12u14
+├── locales-all                                                  2.36-9+deb12u14
+│   └── libc-l10n [shared dependency]                            2.36-9+deb12u14
+├── locate                                                       4.9.0-4
+│   ├── findutils                                                4.9.0-4
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── libselinux1 [shared dependency]                      3.4-1
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── login                                                        1:4.13+dfsg1-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcrypt1 [shared dependency]                            1:4.4.33-2
+│   ├── libpam-modules [shared dependency]                       1.5.2-6+deb12u2
+│   ├── libpam-runtime [shared dependency]                       1.5.2-6+deb12u2
+│   └── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+├── lynx                                                         2.9.0dev.12-1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libidn2-0 [shared dependency]                            2.3.3-1
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   ├── libtinfo6 [shared dependency]                            6.4-4
+│   ├── lynx-common                                              2.9.0dev.12-1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mc                                                           3:4.8.29-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libext2fs2 [shared dependency]                           1.47.0-2
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libgpm2 [shared dependency]                              1.20.7-10
+│   ├── libslang2 [shared dependency]                            2.3.3-3
+│   ├── libssh2-1 [shared dependency]                            1.10.0-3+deb12u1
+│   └── mc-data                                                  3:4.8.29-2
+├── mesa-opencl-icd                                              22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1 [shared dependency]                       2.4.114-1
+│   ├── libdrm-nouveau2 [shared dependency]                      2.4.114-1
+│   ├── libdrm-radeon1 [shared dependency]                       2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mesa-va-drivers                                              22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1 [shared dependency]                       2.4.114-1
+│   ├── libdrm-nouveau2 [shared dependency]                      2.4.114-1
+│   ├── libdrm-radeon1 [shared dependency]                       2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mesa-vdpau-drivers                                           22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1 [shared dependency]                       2.4.114-1
+│   ├── libdrm-nouveau2 [shared dependency]                      2.4.114-1
+│   ├── libdrm-radeon1 [shared dependency]                       2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mesa-vulkan-drivers                                          22.3.6-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-amdgpu1 [shared dependency]                       2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mpd                                                          0.23.12-1
+│   ├── libavcodec59 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavformat59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavutil57 [shared dependency]                          7:5.1.9-0+deb12u1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcurl3-gnutls                                          7.88.1-10+deb12u15
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libidn2-0 [shared dependency]                        2.3.3-1
+│   │   ├── libssh2-1 [shared dependency]                        1.10.0-3+deb12u1
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   ├── libmp3lame0 [shared dependency]                          3.100-6
+│   ├── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mpv                                                          0.35.1-4
+│   ├── libavcodec59 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavdevice59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavfilter8 [shared dependency]                         7:5.1.9-0+deb12u1
+│   ├── libavformat59 [shared dependency]                        7:5.1.9-0+deb12u1
+│   ├── libavutil57 [shared dependency]                          7:5.1.9-0+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libgbm1 [shared dependency]                              22.3.6-1+deb12u2
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libswresample4 [shared dependency]                       7:5.1.9-0+deb12u1
+│   ├── libswscale6 [shared dependency]                          7:5.1.9-0+deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mupdf                                                        1.21.1+ds2-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── mupdf-tools                                                  1.21.1+ds2-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── nano                                                         7.2-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── nano-tiny                                                    7.2-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── ncmpcpp                                                      0.9.2-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcurl3-gnutls [shared dependency]                      7.88.1-10+deb12u15
+│   ├── libfftw3-double3 [shared dependency]                     3.3.10-1
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   ├── libreadline8 [shared dependency]                         8.2-1.3
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── ncurses-bin                                                  6.4-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── ncurses-doc                                                  6.4-4
+├── ncurses-examples                                             6.4-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libncursesw6 [shared dependency]                         6.4-4
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── ncurses-term                                                 6.4-4
+│   └── ncurses-base                                             6.4-4
+├── neovim                                                       0.7.2-7
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── neovim-runtime                                           0.7.2-7
+├── nscd                                                         2.36-9+deb12u14
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── odt2txt                                                      0.5-7
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── okular                                                       4:22.12.3-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libokular5core10                                         4:22.12.3-1+deb12u1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+│   ├── libpoppler-qt5-1 [shared dependency]                     22.12.0-2+deb12u3
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── okular-dev                                                   4:22.12.3-1+deb12u1
+│   └── libokular5core10 [shared dependency]                     4:22.12.3-1+deb12u1
+├── okular-extra-backends                                        4:22.12.3-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdjvulibre21 [shared dependency]                       3.5.28-2.2~deb12u1
+│   ├── libepub0 [shared dependency]                             0.2.2-6
+│   └── libokular5core10 [shared dependency]                     4:22.12.3-1+deb12u1
+├── okular-mobile                                                4:22.12.3-1+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── qml-module-org-kde-okular                                4:22.12.3-1+deb12u1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libokular5core10 [shared dependency]                 4:22.12.3-1+deb12u1
+├── openssl                                                      3.0.22-1~deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+├── pcre2-utils                                                  10.42-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpcre2-16-0                                            10.42-1+deb12u2
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   ├── libpcre2-32-0                                            10.42-1+deb12u2
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   ├── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+│   └── libpcre2-posix3                                          10.42-1+deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libpcre2-8-0 [shared dependency]                     10.42-1+deb12u2
+├── perl-debug                                                   5.36.0-7+deb12u4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcrypt1 [shared dependency]                            1:4.4.33-2
+│   └── perl [shared dependency]                                 5.36.0-7+deb12u4
+├── perl-doc                                                     5.36.0-7+deb12u4
+│   └── perl [shared dependency]                                 5.36.0-7+deb12u4
+├── perlmagick                                                   8:6.9.11.60+dfsg-1.6+deb12u13
+│   ├── imagemagick-6-common [shared dependency]                 8:6.9.11.60+dfsg-1.6+deb12u13
+│   └── libimage-magick-perl                                     8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── imagemagick-6-common [shared dependency]             8:6.9.11.60+dfsg-1.6+deb12u13
+│       ├── libimage-magick-q16-perl                             8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│       │   ├── libmagickcore-6.q16-6 [shared dependency]        8:6.9.11.60+dfsg-1.6+deb12u13
+│       │   ├── libperl5.36 [shared dependency]                  5.36.0-7+deb12u4
+│       │   └── perl [shared dependency]                         5.36.0-7+deb12u4
+│       └── perl [shared dependency]                             5.36.0-7+deb12u4
+├── poppler-utils                                                22.12.0-2+deb12u3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libpoppler126 [shared dependency]                        22.12.0-2+deb12u3
+├── psmisc                                                       23.6-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libtinfo6 [shared dependency]                            6.4-4
+├── python3-boto                                                 2.49.0-4.1
+├── python3-selinux                                              3.4-1
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── python3-tz                                                   2022.7.1-4
+├── python3.11-doc                                               3.11.2-6+deb12u9
+├── python3.11-examples                                          3.11.2-6+deb12u9
+│   └── python3.11 [shared dependency]                           3.11.2-6+deb12u9
+├── python3.11-full                                              3.11.2-6+deb12u9
+│   ├── idle-python3.11                                          3.11.2-6+deb12u9
+│   │   └── python3.11 [shared dependency]                       3.11.2-6+deb12u9
+│   ├── libpython3.11-testsuite                                  3.11.2-6+deb12u9
+│   │   └── python3.11 [shared dependency]                       3.11.2-6+deb12u9
+│   ├── python3.11 [shared dependency]                           3.11.2-6+deb12u9
+│   └── python3.11-venv                                          3.11.2-6+deb12u9
+│       └── python3.11 [shared dependency]                       3.11.2-6+deb12u9
+├── python3.11-nopie                                             3.11.2-6+deb12u9
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libexpat1 [shared dependency]                            2.5.0-1+deb12u4
+│   ├── python3.11-minimal [shared dependency]                   3.11.2-6+deb12u9
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── qpdfview-djvu-plugin                                         0.5.0+ds-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdjvulibre21 [shared dependency]                       3.5.28-2.2~deb12u1
+│   └── qpdfview                                                 0.5.0+ds-2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libsynctex2 [shared dependency]                      2022.20220321.62855-5.1+deb12u2
+│       └── qpdfview-pdf-poppler-plugin                          0.5.0+ds-2
+│           ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│           └── libpoppler-qt5-1 [shared dependency]             22.12.0-2+deb12u3
+├── qpdfview-ps-plugin                                           0.5.0+ds-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── qpdfview [shared dependency]                             0.5.0+ds-2
+├── qpdfview-translations                                        0.5.0+ds-2
+│   └── qpdfview [shared dependency]                             0.5.0+ds-2
+├── readline-doc                                                 8.2-1.3
+├── ripgrep                                                      13.0.0-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+├── rlfe                                                         8.2-1.3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libreadline8 [shared dependency]                         8.2-1.3
+├── ruby-selinux                                                 3.4-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── sd                                                           0.80.really.0.7.6-1+deb12u1
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── sed                                                          4.9-1+deb12u1
+│   ├── libacl1 [shared dependency]                              2.3.1-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── selinux-utils                                                3.4-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpcre2-8-0 [shared dependency]                         10.42-1+deb12u2
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── slsh                                                         2.3.3-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libslang2 [shared dependency]                            2.3.3-3
+│   └── libslang2-modules                                        2.3.3-3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── systemd-boot                                                 252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   └── systemd-boot-efi                                         252.39-1~deb12u2
+├── systemd-coredump                                             252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   └── systemd [shared dependency]                              252.39-1~deb12u2
+├── systemd-homed                                                252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libpam-runtime [shared dependency]                       1.5.2-6+deb12u2
+│   ├── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   ├── systemd [shared dependency]                              252.39-1~deb12u2
+│   └── systemd-userdbd                                          252.39-1~deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libsystemd-shared [shared dependency]                252.39-1~deb12u2
+│       └── systemd [shared dependency]                          252.39-1~deb12u2
+├── systemd-journal-remote                                       252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcurl4 [shared dependency]                             7.88.1-10+deb12u15
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   └── systemd [shared dependency]                              252.39-1~deb12u2
+├── systemd-oomd                                                 252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   ├── systemd [shared dependency]                              252.39-1~deb12u2
+│   └── systemd-standalone-sysusers                              252.39-1~deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libcap2 [shared dependency]                          1:2.66-4+deb12u3
+│       ├── libcrypt1 [shared dependency]                        1:4.4.33-2
+│       └── libselinux1 [shared dependency]                      3.4-1
+├── systemd-standalone-tmpfiles                                  252.39-1~deb12u2
+│   ├── libacl1 [shared dependency]                              2.3.1-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   └── libselinux1 [shared dependency]                          3.4-1
+├── systemd-tests                                                252.39-1~deb12u2
+│   ├── libacl1 [shared dependency]                              2.3.1-3
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libcrypt1 [shared dependency]                            1:4.4.33-2
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libkmod2 [shared dependency]                             30+20221128-1
+│   ├── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   ├── libssl3 [shared dependency]                              3.0.22-1~deb12u1
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   ├── libudev1 [shared dependency]                             252.39-1~deb12u2
+│   ├── systemd [shared dependency]                              252.39-1~deb12u2
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── systemd-timesyncd                                            252.39-1~deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libsystemd-shared [shared dependency]                    252.39-1~deb12u2
+│   └── systemd [shared dependency]                              252.39-1~deb12u2
+├── tar-scripts                                                  1.34+dfsg-1.2+deb12u1
+│   └── tar                                                      1.34+dfsg-1.2+deb12u1
+│       ├── libacl1 [shared dependency]                          2.3.1-3
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       └── libselinux1 [shared dependency]                      3.4-1
+├── texlive-binaries                                             2022.20220321.62855-5.1+deb12u2
+│   ├── libmpfr6 [shared dependency]                             4.2.0-1
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libptexenc1 [shared dependency]                          2022.20220321.62855-5.1+deb12u2
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── thunar                                                       4.18.4-1
+│   ├── exo-utils                                                4.18.0-1
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libexo-2-0 [shared dependency]                       4.18.0-1
+│   │   ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│   │   ├── libxfce4ui-2-0 [shared dependency]                   4.18.2-2
+│   │   └── libxfce4util7 [shared dependency]                    4.18.1-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libexo-2-0 [shared dependency]                           4.18.0-1
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libthunarx-3-0 [shared dependency]                       4.18.4-1
+│   ├── libxfce4ui-2-0 [shared dependency]                       4.18.2-2
+│   ├── libxfce4util7 [shared dependency]                        4.18.1-2
+│   ├── libxfconf-0-3 [shared dependency]                        4.18.0-2
+│   └── thunar-data [shared dependency]                          4.18.4-1
+├── tigervnc-scraping-server                                     1.12.0+dfsg-8
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── perl [shared dependency]                                 5.36.0-7+deb12u4
+│   ├── tigervnc-common                                          1.12.0+dfsg-8
+│   │   └── libc6 [shared dependency]                            2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── tigervnc-standalone-server                                   1.12.0+dfsg-8
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   ├── perl [shared dependency]                                 5.36.0-7+deb12u4
+│   ├── tigervnc-common [shared dependency]                      1.12.0+dfsg-8
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── tigervnc-tools                                               1.12.0+dfsg-8
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── tigervnc-viewer                                              1.12.0+dfsg-8
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── tigervnc-xorg-extension                                      1.12.0+dfsg-8
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libpam0g [shared dependency]                             1.5.2-6+deb12u2
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── xserver-xorg-core                                        2:21.1.7-3+deb12u13
+│   │   ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│   │   ├── libdrm2 [shared dependency]                          2.4.114-1
+│   │   ├── libgbm1 [shared dependency]                          22.3.6-1+deb12u2
+│   │   ├── libpciaccess0 [shared dependency]                    0.17-2
+│   │   ├── libpixman-1-0 [shared dependency]                    0.42.2-1
+│   │   ├── libselinux1 [shared dependency]                      3.4-1
+│   │   ├── libsystemd0 [shared dependency]                      252.39-1~deb12u2
+│   │   ├── libudev1 [shared dependency]                         252.39-1~deb12u2
+│   │   ├── udev                                                 252.39-1~deb12u2
+│   │   │   ├── libacl1 [shared dependency]                      2.3.1-3
+│   │   │   ├── libc6 [shared dependency]                        2.36-9+deb12u14
+│   │   │   ├── libcap2 [shared dependency]                      1:2.66-4+deb12u3
+│   │   │   ├── libkmod2 [shared dependency]                     30+20221128-1
+│   │   │   ├── libselinux1 [shared dependency]                  3.4-1
+│   │   │   └── libudev1 [shared dependency]                     252.39-1~deb12u2
+│   │   └── xserver-common                                       2:21.1.7-3+deb12u13
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── tumbler-plugins-extra                                        4.18.0-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcurl3-gnutls [shared dependency]                      7.88.1-10+deb12u15
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   ├── libtumbler-1-0 [shared dependency]                       4.18.0-1
+│   └── tumbler                                                  4.18.0-1
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libglib2.0-0 [shared dependency]                     2.74.6-2+deb12u9
+│       ├── libgstreamer-plugins-base1.0-0 [shared dependency]   1.22.0-3+deb12u7
+│       ├── libgstreamer1.0-0 [shared dependency]                1.22.0-2+deb12u1
+│       ├── libjpeg62-turbo [shared dependency]                  1:2.1.5-2
+│       ├── libpoppler-glib8 [shared dependency]                 22.12.0-2+deb12u3
+│       ├── libtumbler-1-0 [shared dependency]                   4.18.0-1
+│       ├── libxfce4util7 [shared dependency]                    4.18.1-2
+│       └── tumbler-common                                       4.18.0-1
+├── udhcpc                                                       1:1.35.0-4+deb12u1
+│   ├── busybox [shared dependency]                              1:1.35.0-4+deb12u1
+│   └── busybox-static [shared dependency]                       1:1.35.0-4+deb12u1
+├── udhcpd                                                       1:1.35.0-4+deb12u1
+│   ├── busybox [shared dependency]                              1:1.35.0-4+deb12u1
+│   └── busybox-static [shared dependency]                       1:1.35.0-4+deb12u1
+├── uidmap                                                       1:4.13+dfsg1-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   └── libsubid4                                                1:4.13+dfsg1-1+deb12u2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libcrypt1 [shared dependency]                        1:4.4.33-2
+│       ├── libpam0g [shared dependency]                         1.5.2-6+deb12u2
+│       └── libselinux1 [shared dependency]                      3.4-1
+├── unar                                                         1.10.7+ds1+really1.10.1-2
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── zlib1g [shared dependency]                               1:1.2.13.dfsg-1
+├── unzip                                                        6.0-28+deb12u1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── vpx-tools                                                    1.12.0-1+deb12u5
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libvpx7 [shared dependency]                              1.12.0-1+deb12u5
+├── w3m-img                                                      0.5.3+git20230121-2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── w3m                                                      0.5.3+git20230121-2
+│       ├── libc6 [shared dependency]                            2.36-9+deb12u14
+│       ├── libgpm2 [shared dependency]                          1.20.7-10
+│       ├── libssl3 [shared dependency]                          3.0.22-1~deb12u1
+│       ├── libtinfo6 [shared dependency]                        6.4-4
+│       └── zlib1g [shared dependency]                           1:1.2.13.dfsg-1
+├── webp                                                         1.2.4-0.2+deb12u1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libjpeg62-turbo [shared dependency]                      1:2.1.5-2
+│   ├── libwebp7 [shared dependency]                             1.2.4-0.2+deb12u1
+│   ├── libwebpdemux2 [shared dependency]                        1.2.4-0.2+deb12u1
+│   └── libwebpmux3 [shared dependency]                          1.2.4-0.2+deb12u1
+├── wimtools                                                     1.13.6-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libwim15 [shared dependency]                             1.13.6-1
+├── wodim                                                        9:1.1.11-3.4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+├── xnest                                                        2:21.1.7-3+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   └── xserver-common [shared dependency]                       2:21.1.7-3+deb12u13
+├── xorg-server-source                                           2:21.1.7-3+deb12u13
+├── xpdf                                                         3.04+git20220601-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── libpoppler126 [shared dependency]                        22.12.0-2+deb12u3
+├── xserver-xephyr                                               2:21.1.7-3+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   ├── libudev1 [shared dependency]                             252.39-1~deb12u2
+│   └── xserver-common [shared dependency]                       2:21.1.7-3+deb12u13
+├── xserver-xorg-input-kbd                                       1:1.9.0-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── xserver-xorg-core [shared dependency]                    2:21.1.7-3+deb12u13
+├── xserver-xorg-input-libinput                                  1.2.1-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── xserver-xorg-core [shared dependency]                    2:21.1.7-3+deb12u13
+├── xserver-xorg-input-libinput-dev                              1.2.1-1
+├── xserver-xorg-input-synaptics                                 1.9.2-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── xserver-xorg-core [shared dependency]                    2:21.1.7-3+deb12u13
+├── xserver-xorg-input-synaptics-dev                             1.9.2-1
+├── xserver-xorg-legacy                                          2:21.1.7-3+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── xserver-common [shared dependency]                       2:21.1.7-3+deb12u13
+├── xserver-xorg-video-intel                                     2:2.99.917+git20210115-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libdrm-intel1 [shared dependency]                        2.4.114-1
+│   ├── libdrm2 [shared dependency]                              2.4.114-1
+│   ├── libpciaccess0 [shared dependency]                        0.17-2
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libudev1 [shared dependency]                             252.39-1~deb12u2
+│   └── xserver-xorg-core [shared dependency]                    2:21.1.7-3+deb12u13
+├── xvfb                                                         2:21.1.7-3+deb12u13
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libpixman-1-0 [shared dependency]                        0.42.2-1
+│   ├── libselinux1 [shared dependency]                          3.4-1
+│   ├── libsystemd0 [shared dependency]                          252.39-1~deb12u2
+│   └── xserver-common [shared dependency]                       2:21.1.7-3+deb12u13
+├── xz-utils                                                     5.4.1-1+deb12u2
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   └── liblzma5 [shared dependency]                             5.4.1-1+deb12u2
+├── xzdec                                                        5.4.1-1+deb12u2
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── zathura-pdf-poppler                                          0.3.1-1
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libglib2.0-0 [shared dependency]                         2.74.6-2+deb12u9
+│   └── libpoppler-glib8 [shared dependency]                     22.12.0-2+deb12u3
+├── zip                                                          3.0-13+deb12u1
+│   ├── libbz2-1.0 [shared dependency]                           1.0.8-5
+│   └── libc6 [shared dependency]                                2.36-9+deb12u14
+├── zsh                                                          5.9-4
+│   ├── libc6 [shared dependency]                                2.36-9+deb12u14
+│   ├── libcap2 [shared dependency]                              1:2.66-4+deb12u3
+│   ├── libtinfo6 [shared dependency]                            6.4-4
+│   └── zsh-common                                               5.9-4
+├── zsh-doc                                                      5.9-4
+│   └── zsh-common [shared dependency]                           5.9-4
+└── zsh-static                                                   5.9-4
+```
+
+Binary packages shown: 526. Shared dependencies are marked [shared dependency] instead of expanding repeatedly.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 ## Published package downloads (newest first)
