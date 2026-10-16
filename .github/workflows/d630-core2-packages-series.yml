@@ -1,5 +1,5 @@
 name: Core 2 optimized Debian package train
-run-name: "Core2 package train: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}"
+run-name: "Core2 package train: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[xorg-series]') && 'xorg') || 'new-tools' }}"
 
 on:
   workflow_dispatch:
@@ -16,11 +16,13 @@ on:
           - graphics
           - new-tools
           - thunar
+          - xorg
           - tigervnc
           - tigervnc-rebuild
   push:
     paths:
       - ".ci/core2-package-train-trigger.txt"
+      - ".ci/core2-xorg-trigger.txt"
       - ".ci/core2-thunar-trigger.txt"
       - ".ci/core2-tigervnc-trigger.txt"
       - ".ci/core2-tigervnc-rebuild-trigger.txt"
@@ -40,7 +42,7 @@ jobs:
     timeout-minutes: 360
     env:
       GH_TOKEN: ${{ github.token }}
-      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || 'new-tools' }}
+      SERIES: ${{ inputs.series || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-rebuild]') && 'tigervnc-rebuild') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[tigervnc-series]') && 'tigervnc') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[thunar-series]') && 'thunar') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[xorg-series]') && 'xorg') || 'new-tools' }}
     steps:
       - name: Build packages sequentially, skipping ready releases
         shell: bash
@@ -62,6 +64,11 @@ jobs:
               # pixman (pixel operations), then TigerVNC itself.
               # The rebuild variant intentionally emits fresh optimized releases.
               packages=(zlib libjpeg-turbo pixman tigervnc)
+              ;;
+            xorg)
+              # Build every source package represented by the installed X.Org package list.
+              # Existing Core 2 releases (including xorg-server) are skipped automatically.
+              packages=(xorg-server xserver-xorg-input-keyboard xserver-xorg-input-libinput xserver-xorg-input-synaptics xserver-xorg-video-intel xorg)
               ;;
             new-tools)
               # Python interpreter, FFTW, MPD/clients, Rust CLI tools, monitors,
