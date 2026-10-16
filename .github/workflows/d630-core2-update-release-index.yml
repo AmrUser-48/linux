@@ -34,7 +34,7 @@ jobs:
             core2-packages/dependency-metadata.json
           sparse-checkout-cone-mode: false
 
-      - name: Rebuild package index (newest first, collapsed asset list per release)
+      - name: Rebuild expandable package dependency tree and downloads
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
