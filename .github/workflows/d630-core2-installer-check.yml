@@ -129,6 +129,7 @@ jobs:
                   "libxkbcommon", "libxkbfile", "libxfont",
               },
               "java-runtime": {"openjdk-17"},
+              "mesa-no-llvm": {"mesa"},
           }
           for series, required in expected.items():
               packages = queue(series)
@@ -142,6 +143,21 @@ jobs:
 
           if "gcc-12" in queue("runtime-extra"):
               raise SystemExit("gcc-12 must not be duplicated; its compiler/runtime build is handled separately")
+
+          builder = Path(".github/workflows/d630-core2-package.yml").read_text(encoding="utf-8")
+          required_mesa_contract = {
+              "Mesa source disables LLVM architecture build": 'sed -i -E \'s/^LLVM_ARCHS[[:space:]]*=.*/LLVM_ARCHS =/\' "$RULES"' in builder,
+              "Mesa uses only the swrast Gallium fallback": "CORE2_D630_NO_LLVM" in builder and "GALLIUM_DRIVERS := swrast" in builder,
+              "Mesa disables Vulkan driver output": "VULKAN_DRIVERS :=" in builder and "VULKAN_LAYERS :=" in builder,
+              "Mesa release rejects libllvm15 dependencies": 'grep -qw "libllvm15"' in builder,
+              "Mesa release retains classic i965": 'grep -q "/i965_dri.so"' in builder,
+              "mesa-no-llvm forces a replacement build": '"mesa-no-llvm" ]] && force_rebuild=true' in workflow,
+          }
+          for label, passed in required_mesa_contract.items():
+              print(("PASS" if passed else "FAIL") + ": " + label)
+          failures = [label for label, passed in required_mesa_contract.items() if not passed]
+          if failures:
+              raise SystemExit(f"Mesa no-LLVM validation failed: {failures}")
           PY
 
       - name: Validate RustDesk Core 2 build contract
