@@ -223,6 +223,12 @@ jobs:
               "debian/mesa-va-drivers/usr/lib/${DEB_HOST_MULTIARCH}/dri/",
               "No VA-API payload in the D630 no-LLVM build; skipping optional move.",
           )
+          rules = guard_missing_driver_move(
+              rules,
+              "debian/tmp/etc/OpenCL/vendors/rusticl.icd",
+              "debian/mesa-opencl-icd/etc/OpenCL/vendors",
+              "No Rusticl ICD in the D630 no-LLVM build; skipping optional move.",
+          )
 
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
           PY
