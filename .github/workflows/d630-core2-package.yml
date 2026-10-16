@@ -166,6 +166,44 @@ jobs:
             sed -i -E 's/^RUSTICL_ARCHS[[:space:]]*=.*/RUSTICL_ARCHS =/' "$RULES"
             sed -i -E '/^[[:space:]]*GALLIUM_DRIVERS += r300 r600[[:space:]]*$/d' "$RULES"
             sed -i -E '/^[[:space:]]*confflags_GALLIUM += -Dintel-clc=enabled[[:space:]]*$/d' "$RULES"
+
+            # Drop binary packages for frontends intentionally disabled in this
+            # software-only/no-LLVM profile. Their Debian .install manifests
+            # otherwise make dh_install --fail-missing abort after compilation.
+            CONTROL_TEMPLATE="$SOURCE_DIR/debian/control.in"
+            python3 - "$CONTROL_TEMPLATE" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          path = Path(sys.argv[1])
+          control = path.read_text(encoding="utf-8")
+          dropped = {
+              "libxatracker2",
+              "libxatracker-dev",
+              "libd3dadapter9-mesa",
+              "libd3dadapter9-mesa-dev",
+          }
+          blocks = re.split(r"(?m)(?=^Package: )", control)
+          retained = []
+          found = {name: 0 for name in dropped}
+          for block in blocks:
+              match = re.match(r"Package: ([^\\s]+)", block)
+              if match and match.group(1) in dropped:
+                  found[match.group(1)] += 1
+              else:
+                  retained.append(block)
+          invalid = sorted(name for name, count in found.items() if count != 1)
+          if invalid:
+              raise SystemExit(f"Expected one stanza per disabled optional package; invalid: {invalid}")
+          control = "".join(retained)
+          for name in dropped:
+              if re.search(rf"(?m)^Package: {re.escape(name)}(?:\\s|$)", control):
+                  raise SystemExit(f"Disabled optional package remains in control.in: {name}")
+          path.write_text(control, encoding="utf-8")
+          print("Removed XA and D3D9 package stanzas from the no-LLVM package set.")
+          PY
+
             python3 - "$RULES" <<'PY'
           from pathlib import Path
           import re
@@ -177,13 +215,15 @@ jobs:
           if rules.count(anchor) != 1:
               raise SystemExit("Expected one Mesa driver-list anchor; refusing a broad rules edit")
           insertion = (
-              "# CORE2_D630_NO_LLVM: retain classic i965 and software fallback only.\n"
+              "# CORE2_D630_NO_LLVM: build classic Intel DRI plus Gallium software fallback.\n"
               "GALLIUM_DRIVERS := swrast\n"
               "VULKAN_DRIVERS :=\n"
               "VULKAN_LAYERS :=\n"
-              "# Remove Bookworm video/compiler frontends that require unsupported Gallium drivers or LLVM.\n"
-              "confflags_GALLIUM := $(filter-out -Dgallium-vdpau=enabled -Dgallium-va=enabled -Dgallium-xa=enabled -Dintel-clc=enabled -Dgallium-rusticl=true,$(confflags_GALLIUM))\n"
-              "confflags_GALLIUM += -Dllvm=disabled -Ddraw-use-llvm=false -Dgallium-vdpau=disabled -Dgallium-va=disabled -Dgallium-xa=disabled -Dgallium-omx=disabled -Dintel-clc=disabled\n"
+              "# Force the classic DRI modules required by the GM965/X3100; do not rely on auto-detection.\n"
+              "confflags += -Ddri-drivers=\\\"['i915','i965']\\\"\n"
+              "# Disable optional frontends whose package payloads are absent in this profile.\n"
+              "confflags_GALLIUM := $(filter-out -Dgallium-vdpau=enabled -Dgallium-va=enabled -Dgallium-xa=enabled -Dgallium-nine=true -Dintel-clc=enabled -Dgallium-rusticl=true,$(confflags_GALLIUM))\n"
+              "confflags_GALLIUM += -Dllvm=disabled -Ddraw-use-llvm=false -Dgallium-vdpau=disabled -Dgallium-va=disabled -Dgallium-xa=disabled -Dgallium-nine=false -Dgallium-omx=disabled -Dintel-clc=disabled\n"
           )
           def guard_missing_driver_move(rules, source_glob, target_dir, message):
               lines = rules.splitlines(keepends=True)
