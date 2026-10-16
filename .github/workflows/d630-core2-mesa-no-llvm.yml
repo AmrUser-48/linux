@@ -1,0 +1,24 @@
+name: Build D630 Mesa without LLVM
+run-name: "D630 Mesa no-LLVM rebuild"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-mesa-no-llvm.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mesa:
+    name: Force-build corrected Mesa package set
+    uses: ./.github/workflows/d630-core2-package.yml
+    with:
+      package: mesa
+      force_rebuild: true
+      refresh_index: true
+    permissions:
+      actions: write
+      contents: write
