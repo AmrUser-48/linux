@@ -1,5 +1,5 @@
 name: Build D630 Mesa without LLVM
-run-name: "D630 Mesa no-LLVM rebuild (Crocus/i915; omit unsupported XA/D3D9 packages)"
+run-name: "D630 Mesa no-LLVM rebuild (remove empty LLVM/Rusticl dependency qualifiers)"
 
 on:
   push:
