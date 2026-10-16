@@ -40,6 +40,64 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### xserver-xorg-video-intel (optimized)
+Version: `2:2.99.917+git20210115-1+core2.1~20261016113213` · Published: 2026-10-16 11:33:52 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-video-intel`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213/release-notes.md)
+- [SHA256SUMS-core2-xserver-xorg-video-intel.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213/SHA256SUMS-core2-xserver-xorg-video-intel.txt)
+- [xserver-xorg-video-intel_2.99.917+git20210115-1+core2.1.20261016113213_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213/xserver-xorg-video-intel_2.99.917%2Bgit20210115-1%2Bcore2.1.20261016113213_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213)
+
+</details>
+
+### xserver-xorg-input-synaptics (optimized)
+Version: `1.9.2-1+core2.1~20261016113016` · Published: 2026-10-16 11:31:11 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-synaptics`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/release-notes.md)
+- [SHA256SUMS-core2-xserver-xorg-input-synaptics.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/SHA256SUMS-core2-xserver-xorg-input-synaptics.txt)
+- [xserver-xorg-input-synaptics-dev_1.9.2-1+core2.1.20261016113016_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/xserver-xorg-input-synaptics-dev_1.9.2-1%2Bcore2.1.20261016113016_all.deb)
+- [xserver-xorg-input-synaptics_1.9.2-1+core2.1.20261016113016_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016/xserver-xorg-input-synaptics_1.9.2-1%2Bcore2.1.20261016113016_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xserver-xorg-input-synaptics-1.9.2-1-core2.1-20261016113016)
+
+</details>
+
+### xserver-xorg-input-libinput (optimized)
+Version: `1.2.1-1+core2.1~20261016112819` · Published: 2026-10-16 11:29:15 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-libinput`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/release-notes.md)
+- [SHA256SUMS-core2-xserver-xorg-input-libinput.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/SHA256SUMS-core2-xserver-xorg-input-libinput.txt)
+- [xserver-xorg-input-libinput-dev_1.2.1-1+core2.1.20261016112819_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/xserver-xorg-input-libinput-dev_1.2.1-1%2Bcore2.1.20261016112819_all.deb)
+- [xserver-xorg-input-libinput_1.2.1-1+core2.1.20261016112819_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819/xserver-xorg-input-libinput_1.2.1-1%2Bcore2.1.20261016112819_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xserver-xorg-input-libinput-1.2.1-1-core2.1-20261016112819)
+
+</details>
+
+### xserver-xorg-input-keyboard (optimized)
+Version: `1:1.9.0-1+core2.1~20261016112635` · Published: 2026-10-16 11:27:25 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-input-keyboard`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635/release-notes.md)
+- [SHA256SUMS-core2-xserver-xorg-input-keyboard.txt](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635/SHA256SUMS-core2-xserver-xorg-input-keyboard.txt)
+- [xserver-xorg-input-kbd_1.9.0-1+core2.1.20261016112635_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635/xserver-xorg-input-kbd_1.9.0-1%2Bcore2.1.20261016112635_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xserver-xorg-input-keyboard-1-1.9.0-1-core2.1-20261016112635)
+
+</details>
+
 ### less (optimized)
 Version: `590-2.1~deb12u2+core2.1~20261012093417` · Published: 2026-10-12 09:35:12 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - less`
