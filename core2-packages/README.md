@@ -40,6 +40,99 @@ Installer source: [`install.py`](install.py).
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### gst-plugins-good1.0 (optimized)
+Version: `1.22.0-5+deb12u4+core2.1~20261016120601` · Published: 2026-10-16 12:10:23 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-good1.0`
+
+<details><summary>Files (8)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/BUILD-INFO.txt)
+- [gstreamer1.0-gtk3_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-gtk3_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
+- [gstreamer1.0-plugins-good_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-plugins-good_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
+- [gstreamer1.0-pulseaudio_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-pulseaudio_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
+- [gstreamer1.0-qt5_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-qt5_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
+- [gstreamer1.0-qt6_1.22.0-5+deb12u4+core2.1.20261016120601_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/gstreamer1.0-qt6_1.22.0-5%2Bdeb12u4%2Bcore2.1.20261016120601_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/release-notes.md)
+- [SHA256SUMS-core2-gst-plugins-good1.0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601/SHA256SUMS-core2-gst-plugins-good1.0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601)
+
+</details>
+
+### gst-plugins-base1.0 (optimized)
+Version: `1.22.0-3+deb12u7+core2.1~20261016120019` · Published: 2026-10-16 12:03:58 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gst-plugins-base1.0`
+
+<details><summary>Files (12)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/BUILD-INFO.txt)
+- [gir1.2-gst-plugins-base-1.0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gir1.2-gst-plugins-base-1.0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [gstreamer1.0-alsa_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-alsa_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [gstreamer1.0-gl_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-gl_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [gstreamer1.0-plugins-base-apps_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base-apps_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [gstreamer1.0-plugins-base_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-plugins-base_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [gstreamer1.0-x_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/gstreamer1.0-x_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [libgstreamer-gl1.0-0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-gl1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [libgstreamer-plugins-base1.0-0_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-0_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [libgstreamer-plugins-base1.0-dev_1.22.0-3+deb12u7+core2.1.20261016120019_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/libgstreamer-plugins-base1.0-dev_1.22.0-3%2Bdeb12u7%2Bcore2.1.20261016120019_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/release-notes.md)
+- [SHA256SUMS-core2-gst-plugins-base1.0.txt](https://github.com/AmrUser-48/linux/releases/download/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019/SHA256SUMS-core2-gst-plugins-base1.0.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019)
+
+</details>
+
+### libvpx (optimized)
+Version: `1.12.0-1+deb12u5+core2.1~20261016115550` · Published: 2026-10-16 11:59:15 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libvpx`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/BUILD-INFO.txt)
+- [libvpx-dev_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx-dev_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
+- [libvpx-doc_1.12.0-1+deb12u5+core2.1.20261016115550_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx-doc_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_all.deb)
+- [libvpx7_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx7_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/release-notes.md)
+- [SHA256SUMS-core2-libvpx.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/SHA256SUMS-core2-libvpx.txt)
+- [vpx-tools_1.12.0-1+deb12u5+core2.1.20261016115550_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/vpx-tools_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550)
+
+</details>
+
+### libpciaccess (optimized)
+Version: `0.17-2+core2.1~20261016115401` · Published: 2026-10-16 11:54:51 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpciaccess`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/BUILD-INFO.txt)
+- [libpciaccess-dev_0.17-2+core2.1.20261016115401_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/libpciaccess-dev_0.17-2%2Bcore2.1.20261016115401_amd64.deb)
+- [libpciaccess0_0.17-2+core2.1.20261016115401_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/libpciaccess0_0.17-2%2Bcore2.1.20261016115401_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/release-notes.md)
+- [SHA256SUMS-core2-libpciaccess.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libpciaccess-0.17-2-core2.1-20261016115401/SHA256SUMS-core2-libpciaccess.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpciaccess-0.17-2-core2.1-20261016115401)
+
+</details>
+
+### libdrm (optimized)
+Version: `2.4.114-1+core2.1~20261016115216` · Published: 2026-10-16 11:53:16 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libdrm`
+
+<details><summary>Files (11)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/BUILD-INFO.txt)
+- [libdrm-amdgpu1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-amdgpu1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm-common_2.4.114-1+core2.1.20261016115216_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-common_2.4.114-1%2Bcore2.1.20261016115216_all.deb)
+- [libdrm-dev_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-dev_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm-intel1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-intel1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm-nouveau2_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-nouveau2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm-radeon1_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-radeon1_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm-tests_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm-tests_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [libdrm2_2.4.114-1+core2.1.20261016115216_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/libdrm2_2.4.114-1%2Bcore2.1.20261016115216_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/release-notes.md)
+- [SHA256SUMS-core2-libdrm.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libdrm-2.4.114-1-core2.1-20261016115216/SHA256SUMS-core2-libdrm.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216)
+
+</details>
+
 ### xserver-xorg-video-intel (optimized)
 Version: `2:2.99.917+git20210115-1+core2.1~20261016113213` · Published: 2026-10-16 11:33:52 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xserver-xorg-video-intel`
