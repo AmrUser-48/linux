@@ -245,7 +245,7 @@ def build_tree_rows(nodes):
 PACKAGE_CATEGORIES = (
     ("Graphics", re.compile(r"(mesa|libdrm|pixman|xorg|xserver|wayland|libgl|libegl|libgbm|libgles|libxcb|libx11|libxext|libxi|libxrandr|libxrender|libinput|cairo|vulkan|drm)", re.I)),
     ("Audio & video", re.compile(r"(ffmpeg|gstreamer|gst-|pipewire|pulseaudio|alsa|libav|libvpx|opus|lame|flac|mpd|mpv|sox|wavpack|vorbis|codec2|x265)", re.I)),
-    ("Development", re.compile(r"(-dev(?:$|[- ])|gcc|g\\+\\+|binutils|cmake|meson|ninja|pkg-config|python|perl|ruby|rust|golang|gdb|make)", re.I)),
+    ("Development", re.compile(r"(-dev(?:$|[- ])|gcc|g\+\+|binutils|cmake|meson|ninja|pkg-config|python|perl|ruby|rust|golang|gdb|make)", re.I)),
     ("System & libraries", re.compile(r"(libc6|glibc|systemd|bash|dash|coreutils|util-linux|kmod|udev|apt|dpkg|sudo|pam|openssl|openssh|busybox|procps|grep|sed|tar|gzip|xz-utils|zstd|bzip2|mount|ntfs|btrfs|login|shadow|initramfs)", re.I)),
 )
 DEFAULT_CATEGORY = "Applications & utilities"
