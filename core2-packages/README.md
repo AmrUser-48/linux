@@ -8636,7 +8636,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Applications &amp; utilities (151 top-level packages)</summary>
+<summary>Applications &amp; utilities (152 top-level packages)</summary>
 
 <details>
 <summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
@@ -10820,6 +10820,57 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>telegram-desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.6.5+ds-2</code></summary>
+
+**Download files**
+- [telegram-desktop_4.6.5+ds-2+core2.1.20261017193804_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/telegram-desktop_4.6.5%2Bds-2%2Bcore2.1.20261017193804_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804)
+
+**Dependencies**
+
+- [libavcodec59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavcodec59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libavformat59 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavformat59_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libavutil57 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libavutil57_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
+
+- [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+
+- [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libswscale6 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswscale6_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
+
+- [libvpx7 — 1.12.0-1+deb12u5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550/libvpx7_1.12.0-1%2Bdeb12u5%2Bcore2.1.20261016115550_amd64.deb)
+
+- [libwayland-client0 — 1.21.0-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-wayland-1.21.0-1-core2.1-20261016133904/libwayland-client0_1.21.0-1%2Bcore2.1.20261016133904_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+- [libxcb-record0 — 1.15-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcb-1.15-1-core2.1-20261016151016/libxcb-record0_1.15-1%2Bcore2.1.20261016151016_amd64.deb)
+
+- [libxcb-screensaver0 — 1.15-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcb-1.15-1-core2.1-20261016151016/libxcb-screensaver0_1.15-1%2Bcore2.1.20261016151016_amd64.deb)
+
+- [libxcb1 — 1.15-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcb-1.15-1-core2.1-20261016151016/libxcb1_1.15-1%2Bcore2.1.20261016151016_amd64.deb)
+
+- [libxcomposite1 — 1:0.4.5-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125/libxcomposite1_0.4.5-1%2Bcore2.1.20261016133125_amd64.deb)
+
+- [libxdamage1 — 1:1.1.6-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326/libxdamage1_1.1.6-1%2Bcore2.1.20261016133326_amd64.deb)
+
+- [libxext6 — 2:1.3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxext-2-1.3.4-1-core2.1-20261016132313/libxext6_1.3.4-1%2Bcore2.1.20261016132313_amd64.deb)
+
+- [libxrandr2 — 2:1.5.2-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856/libxrandr2_1.5.2-2%2Bcore2.1.20261016132856_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>texlive-binaries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.20220321.62855-5.1+deb12u2</code></summary>
 
 **Download files**
@@ -11721,7 +11772,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 748.
+**Unique binary packages indexed:** 749.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11730,6 +11781,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### telegram-desktop (optimized)
+Version: `4.6.5+ds-2+core2.1~20261017193804` · Published: 2026-10-17 20:33:10 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - telegram-desktop`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/release-notes.md)
+- [SHA256SUMS-core2-telegram-desktop.txt](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/SHA256SUMS-core2-telegram-desktop.txt)
+- [TELEGRAM-CUSTOMIZATIONS.txt](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/TELEGRAM-CUSTOMIZATIONS.txt)
+- [telegram-desktop_4.6.5+ds-2+core2.1.20261017193804_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804/telegram-desktop_4.6.5%2Bds-2%2Bcore2.1.20261017193804_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804)
+
+</details>
+
 ### libseccomp (system)
 Version: `2.5.4-1+deb12u1+core2.1~20261017010131` · Published: 2026-10-17 01:07:04 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libseccomp`
