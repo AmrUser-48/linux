@@ -254,8 +254,22 @@ jobs:
 
           cd "$SOURCE_DIR"
           if [[ "$PACKAGE" == "libseccomp" ]]; then
-            # Debian Bookworm setup.py checks that its staged site-packages
-            # directory is on sys.path; expose the staging path during install.
+            # Keep setuptools from placing the extension inside a .egg directory.
+            # Debian's python3-seccomp.install expects seccomp.cpython-*.so directly
+            # under site-packages; Debian's newer source carries this upstream fix.
+            python3 - "$SOURCE_DIR/src/python/Makefile.am" <<'PY'
+          from pathlib import Path
+          import sys
+
+          path = Path(sys.argv[1])
+          source = path.read_text()
+          needle = "\t\t--record=\${DESTDIR}/\${pyexecdir}/install_files.txt"
+          replacement = needle + " \\\n\t\t--single-version-externally-managed"
+          if source.count(needle) != 1:
+              raise SystemExit(f"Expected one libseccomp PY_INSTALL record line in {path}")
+          path.write_text(source.replace(needle, replacement))
+          PY
+            # The Bookworm setup.py check also needs the staging directory on sys.path.
             export PYTHONPATH="$SOURCE_DIR/debian/tmp/usr/lib/python3.11/site-packages${PYTHONPATH:+:$PYTHONPATH}"
           fi
           runuser --preserve-environment --user "$BUILD_USER" -- env \
