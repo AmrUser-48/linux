@@ -1,1 +1,2 @@
 Retry Core 2 runtime libraries after removing root-owned libseccomp staging directory.
+Fix setuptools egg packaging for libseccomp Python binding with --single-version-externally-managed.
