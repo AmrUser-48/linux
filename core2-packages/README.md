@@ -4157,7 +4157,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Development (103 top-level packages)</summary>
+<summary>Development (105 top-level packages)</summary>
 
 <details>
 <summary><code>alacritty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.11.0-4</code></summary>
@@ -6761,6 +6761,30 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libseccomp-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.4-1+deb12u1</code></summary>
+
+**Download files**
+- [libseccomp-dev_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp-dev_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
+
+**Dependencies**
+
+<details>
+<summary><code>libseccomp2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.4-1+deb12u1</code></summary>
+
+**Download files**
+- [libseccomp2_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
 <summary><code>libssh2-1-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.10.0-3+deb12u1</code></summary>
 
 **Download files**
@@ -7404,6 +7428,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>python3-seccomp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.4-1+deb12u1</code></summary>
+
+**Download files**
+- [python3-seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/python3-seccomp_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>python3-selinux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
@@ -7946,6 +7983,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
+- [libseccomp2 — 2.5.4-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
@@ -7973,6 +8012,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libpam0g — 1.5.2-6+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111/libpam0g_1.5.2-6%2Bdeb12u2%2Bcore2.1.20261009193111_amd64.deb)
 
+- [libseccomp2 — 2.5.4-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
@@ -7997,6 +8038,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libkmod2 — 30+20221128-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-kmod-30-20221128-1-core2.1-20261009193535/libkmod2_30%2B20221128-1%2Bcore2.1.20261009193535_amd64.deb)
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
+
+- [libseccomp2 — 2.5.4-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
 
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
@@ -8435,6 +8478,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
 
+- [libseccomp2 — 2.5.4-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+
 - [libselinux1 — 3.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libselinux-3.4-1-core2.1-20261009190433/libselinux1_3.4-1%2Bcore2.1.20261009190433_amd64.deb)
 
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
@@ -8591,7 +8636,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Applications &amp; utilities (150 top-level packages)</summary>
+<summary>Applications &amp; utilities (151 top-level packages)</summary>
 
 <details>
 <summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
@@ -10694,6 +10739,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>seccomp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5.4-1+deb12u1</code></summary>
+
+**Download files**
+- [seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/seccomp_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libseccomp2 — 2.5.4-1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>selinux-utils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4-1</code></summary>
 
 **Download files**
@@ -11661,7 +11721,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 744.
+**Unique binary packages indexed:** 748.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11670,6 +11730,23 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### libseccomp (system)
+Version: `2.5.4-1+deb12u1+core2.1~20261017010131` · Published: 2026-10-17 01:07:04 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libseccomp`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/BUILD-INFO.txt)
+- [libseccomp-dev_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp-dev_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+- [libseccomp2_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/libseccomp2_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+- [python3-seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/python3-seccomp_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/release-notes.md)
+- [seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/seccomp_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
+- [SHA256SUMS-core2-libseccomp.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/SHA256SUMS-core2-libseccomp.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
+
+</details>
+
 ### mesa (optimized)
 Version: `22.3.6-1+deb12u2+core2.1~20261016214939` · Published: 2026-10-16 21:59:48 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`

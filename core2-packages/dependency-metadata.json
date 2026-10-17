@@ -9710,6 +9710,58 @@
       "release_tag": "core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939",
       "source": "mesa",
       "version": "22.3.6-1+deb12u2+core2.1~20261016214939"
+    },
+    "649134811": {
+      "architecture": "amd64",
+      "asset_id": "649134811",
+      "asset_name": "seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb",
+      "depends": "libc6 (>= 2.34), libseccomp2 (>= 2.2.1)",
+      "package": "seccomp",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-17T01:07:04Z",
+      "release_tag": "core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131",
+      "source": "libseccomp",
+      "version": "2.5.4-1+deb12u1+core2.1~20261017010131"
+    },
+    "649134814": {
+      "architecture": "amd64",
+      "asset_id": "649134814",
+      "asset_name": "libseccomp2_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb",
+      "depends": "libc6 (>= 2.14)",
+      "package": "libseccomp2",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-17T01:07:04Z",
+      "release_tag": "core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131",
+      "source": "libseccomp",
+      "version": "2.5.4-1+deb12u1+core2.1~20261017010131"
+    },
+    "649134817": {
+      "architecture": "amd64",
+      "asset_id": "649134817",
+      "asset_name": "libseccomp-dev_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb",
+      "depends": "libseccomp2 (= 2.5.4-1+deb12u1+core2.1~20261017010131)",
+      "package": "libseccomp-dev",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-17T01:07:04Z",
+      "release_tag": "core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131",
+      "source": "libseccomp",
+      "version": "2.5.4-1+deb12u1+core2.1~20261017010131"
+    },
+    "649134820": {
+      "architecture": "amd64",
+      "asset_id": "649134820",
+      "asset_name": "python3-seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb",
+      "depends": "libc6 (>= 2.14), python3 (<< 3.12), python3 (>= 3.11~)",
+      "package": "python3-seccomp",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-17T01:07:04Z",
+      "release_tag": "core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131",
+      "source": "libseccomp",
+      "version": "2.5.4-1+deb12u1+core2.1~20261017010131"
     }
   },
   "schema": 1
