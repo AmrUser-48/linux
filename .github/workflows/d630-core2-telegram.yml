@@ -1,0 +1,22 @@
+name: Telegram Desktop Core 2 package
+run-name: "Telegram Desktop (Core 2) package"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-telegram.yml"
+      - ".github/workflows/d630-core2-package.yml"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  telegram-desktop:
+    uses: ./.github/workflows/d630-core2-package.yml
+    with:
+      package: telegram-desktop
+      force_rebuild: false
+      refresh_index: true
