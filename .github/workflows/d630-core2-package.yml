@@ -338,13 +338,16 @@ jobs:
             PANEL_CPP="$SOURCE_DIR/Telegram/SourceFiles/chat_helpers/tabbed_panel.cpp"
             PANEL_H="$SOURCE_DIR/Telegram/SourceFiles/chat_helpers/tabbed_panel.h"
             SETTINGS_CPP="$SOURCE_DIR/Telegram/SourceFiles/settings/settings_experimental.cpp"
-            test -f "$CONTROL" && test -f "$PANEL_CPP" && test -f "$PANEL_H" && test -f "$SETTINGS_CPP"
-            python3 - "$CONTROL" "$PANEL_CPP" "$PANEL_H" "$SETTINGS_CPP" <<'PY'
+            OVERLAY_CPP="$SOURCE_DIR/Telegram/SourceFiles/media/view/media_view_overlay_widget.cpp"
+            LOCALSTORAGE_CPP="$SOURCE_DIR/Telegram/SourceFiles/storage/localstorage.cpp"
+            FILTER_CPP="$SOURCE_DIR/Telegram/SourceFiles/ui/filter_icon_panel.cpp"
+            test -f "$CONTROL" && test -f "$PANEL_CPP" && test -f "$PANEL_H" && test -f "$SETTINGS_CPP" && test -f "$OVERLAY_CPP" && test -f "$LOCALSTORAGE_CPP" && test -f "$FILTER_CPP"
+            python3 - "$CONTROL" "$PANEL_CPP" "$PANEL_H" "$SETTINGS_CPP" "$OVERLAY_CPP" "$LOCALSTORAGE_CPP" "$FILTER_CPP" <<'PY'
           from pathlib import Path
           import re
           import sys
 
-          control_path, cpp_path, header_path, settings_path = map(Path, sys.argv[1:])
+          control_path, cpp_path, header_path, settings_path, overlay_path, storage_path, filter_path = map(Path, sys.argv[1:])
           control = control_path.read_text(encoding="utf-8")
           blocks = re.split(r"(?m)(?=^Package: )", control)
           package_found = 0
@@ -464,6 +467,60 @@ jobs:
               "",
               "experimental hover option",
           )
+
+          # No-random-popups.patch wires this option into the media viewer,
+          # settings-folder hover, and legacy local-storage migration. This
+          # profile removes the option entirely, so undo those patch additions
+          # while preserving click-only behavior.
+          overlay_text = overlay_path.read_text(encoding="utf-8")
+          lookup = '\t_ignoringDropdown = base::options::lookup<bool>(\n\t\tChatHelpers::kOptionTabbedPanelShowOnClick).value();'
+          count = overlay_text.count(lookup)
+          if count != 2:
+              raise SystemExit(f"Expected two media-view option references from No-random-popups.patch; found {count}")
+          overlay_text = overlay_text.replace(lookup, '\t_ignoringDropdown = false;')
+          for added_include in ('#include "base/options.h"\n', '#include "chat_helpers/tabbed_panel.h"\n'):
+              if overlay_text.count(added_include) != 1:
+                  raise SystemExit(f"Expected one media-view include added by No-random-popups.patch: {added_include.strip()}")
+              overlay_text = overlay_text.replace(added_include, "", 1)
+          overlay_path.write_text(overlay_text, encoding="utf-8")
+
+          storage_text = storage_path.read_text(encoding="utf-8")
+          migration = (
+              '\t\tif (_oldSettingsVersion < 3005002 /* v3.5.2 */) {\n'
+              '\t\t\tQFile toggle(cWorkingDir() + u"tdata/nopopupdropdown"_q);\n'
+              '\t\t\tif (toggle.exists()) {\n'
+              '\t\t\t\tbase::options::lookup<bool>(\n'
+              '\t\t\t\t\tChatHelpers::kOptionTabbedPanelShowOnClick).set(true);\n'
+              '\t\t\t\tif (toggle.size() == 0) {\n'
+              '\t\t\t\t\ttoggle.remove();\n'
+              '\t\t\t\t}\n'
+              '\t\t\t}\n'
+              '\t\t}\n'
+          )
+          if storage_text.count(migration) != 1:
+              raise SystemExit("Expected one legacy popup-option migration from No-random-popups.patch")
+          storage_text = storage_text.replace(migration, "", 1)
+          for added_include in ('#include "base/options.h"\n', '#include "chat_helpers/tabbed_panel.h"\n'):
+              if storage_text.count(added_include) != 1:
+                  raise SystemExit(f"Expected one local-storage include added by No-random-popups.patch: {added_include.strip()}")
+              storage_text = storage_text.replace(added_include, "", 1)
+          storage_path.write_text(storage_text, encoding="utf-8")
+
+          filter_text = filter_path.read_text(encoding="utf-8")
+          filter_pattern = r'void FilterIconPanel::otherEnter\(\) \{\n[ \t]*(?:const[ \t]+)?auto[ \t]+&opt = base::options::lookup<bool>\(\n[ \t]*ChatHelpers::kOptionTabbedPanelShowOnClick\);\n[ \t]*if \(opt\.value\(\)\) return;\n[ \t]*showAnimated\(\);\n\}'
+          filter_text, count = re.subn(filter_pattern, 'void FilterIconPanel::otherEnter() {\n}', filter_text, count=1)
+          if count != 1:
+              raise SystemExit("Expected the folder-hover option hook from No-random-popups.patch")
+          for added_include in ('#include "base/options.h"\n', '#include "chat_helpers/tabbed_panel.h"\n'):
+              if filter_text.count(added_include) != 1:
+                  raise SystemExit(f"Expected one filter-panel include added by No-random-popups.patch: {added_include.strip()}")
+              filter_text = filter_text.replace(added_include, "", 1)
+          filter_path.write_text(filter_text, encoding="utf-8")
+
+          for source_file in (cpp_path, header_path, settings_path, overlay_path, storage_path, filter_path):
+              if "kOptionTabbedPanelShowOnClick" in source_file.read_text(encoding="utf-8"):
+                  raise SystemExit(f"Removed option still has references in {source_file}")
+          print("Telegram patch applied: click-only panels, no dangling option references, and optional Recommends removed.")
           if "Recommends:" in "\n".join(
               block for block in blocks
               if re.match(r"Package:\s*telegram-desktop(?:\s|$)", block)
