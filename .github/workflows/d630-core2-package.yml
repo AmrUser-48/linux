@@ -333,6 +333,151 @@ jobs:
                -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' \
                -o -name '*.tar.bz2' -o -name '*.tar.zst' \) -delete
 
+          if [[ "$PACKAGE" == "telegram-desktop" ]]; then
+            CONTROL="$SOURCE_DIR/debian/control"
+            PANEL_CPP="$SOURCE_DIR/Telegram/SourceFiles/chat_helpers/tabbed_panel.cpp"
+            PANEL_H="$SOURCE_DIR/Telegram/SourceFiles/chat_helpers/tabbed_panel.h"
+            SETTINGS_CPP="$SOURCE_DIR/Telegram/SourceFiles/settings/settings_experimental.cpp"
+            test -f "$CONTROL" && test -f "$PANEL_CPP" && test -f "$PANEL_H" && test -f "$SETTINGS_CPP"
+            python3 - "$CONTROL" "$PANEL_CPP" "$PANEL_H" "$SETTINGS_CPP" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          control_path, cpp_path, header_path, settings_path = map(Path, sys.argv[1:])
+          control = control_path.read_text(encoding="utf-8")
+          blocks = re.split(r"(?m)(?=^Package: )", control)
+          package_found = 0
+          for index, stanza in enumerate(blocks):
+              match = re.match(r"Package:\s*(\S+)", stanza)
+              if not match or match.group(1) != "telegram-desktop":
+                  continue
+              lines = stanza.splitlines(keepends=True)
+              output = []
+              dropping = False
+              removed = 0
+              for line in lines:
+                  if dropping and line[:1].isspace():
+                      continue
+                  dropping = False
+                  if re.match(r"^Recommends:", line):
+                      dropping = True
+                      removed += 1
+                      continue
+                  output.append(line)
+              if removed != 1:
+                  raise SystemExit(f"Expected one Recommends field in telegram-desktop stanza; found {removed}")
+              blocks[index] = "".join(output)
+              package_found += 1
+          if package_found != 1:
+              raise SystemExit(f"Expected one telegram-desktop binary stanza; found {package_found}")
+          control_path.write_text("".join(blocks), encoding="utf-8")
+
+          def replace_once(path, old, new, label):
+              text = path.read_text(encoding="utf-8")
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"Expected one {label} anchor in {path}; found {count}")
+              path.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          replace_once(
+              cpp_path,
+              '#include "base/options.h"\n',
+              "",
+              "base/options include",
+          )
+          replace_once(
+              cpp_path,
+              '''base::options::toggle TabbedPanelShowOnClick({
+          \t.id = kOptionTabbedPanelShowOnClick,
+          \t.name = "Show tabbed panel by click",
+          \t.description = "Show Emoji / Stickers / GIFs panel only after a click.",
+          });
+          ''',
+              "",
+              "tabbed-panel option",
+          )
+          replace_once(
+              cpp_path,
+              'const char kOptionTabbedPanelShowOnClick[] = "tabbed-panel-show-on-click";\n',
+              "",
+              "tabbed-panel option identifier",
+          )
+          replace_once(
+              cpp_path,
+              '''void TabbedPanel::otherEnter() {
+          \tshowAnimated();
+          }
+
+          void TabbedPanel::otherLeave() {
+          \tif (preventAutoHide()) {
+          \t\treturn;
+          \t}
+
+          \tif (_a_opacity.animating()) {
+          \t\thideByTimerOrLeave();
+          \t} else {
+          \t\t_hideTimer.callOnce(0);
+          \t}
+          }
+          ''',
+              "",
+              "hover show/hide handlers",
+          )
+          replace_once(
+              cpp_path,
+              '''bool TabbedPanel::eventFilter(QObject *obj, QEvent *e) {
+          \tif (TabbedPanelShowOnClick.value()) {
+          \t\treturn false;
+          \t} else if (e->type() == QEvent::Enter) {
+          \t\totherEnter();
+          \t} else if (e->type() == QEvent::Leave) {
+          \t\totherLeave();
+          \t}
+          \treturn false;
+          }
+          ''',
+              "",
+              "hover event filter",
+          )
+          replace_once(
+              header_path,
+              'extern const char kOptionTabbedPanelShowOnClick[];\n',
+              "",
+              "tabbed-panel option declaration",
+          )
+          replace_once(
+              header_path,
+              '\tvoid otherEnter();\n\tvoid otherLeave();\n',
+              "",
+              "hover handler declarations",
+          )
+          replace_once(
+              header_path,
+              '\tbool eventFilter(QObject *obj, QEvent *e) override;\n',
+              "",
+              "eventFilter override declaration",
+          )
+          replace_once(
+              settings_path,
+              '\taddToggle(ChatHelpers::kOptionTabbedPanelShowOnClick);\n',
+              "",
+              "experimental hover option",
+          )
+          if "Recommends:" in "\n".join(
+              block for block in blocks
+              if re.match(r"Package:\s*telegram-desktop(?:\s|$)", block)
+          ):
+              raise SystemExit("telegram-desktop Recommends field was not removed")
+          print("Telegram patch applied: removed optional Recommends and disabled panel auto-open on hover.")
+          PY
+            printf '%s\n' \
+              'Package: telegram-desktop (Debian Bookworm source)' \
+              'UI: Emoji/sticker panel opens by explicit click; hover auto-open removed globally.' \
+              'Dependencies: optional Recommends removed; hard runtime Depends retained.' \
+              > "$GITHUB_WORKSPACE/release-artifacts/TELEGRAM-CUSTOMIZATIONS.txt"
+          fi
+
           if [[ "$PACKAGE" == "neovim" ]]; then
             # Debian's CI test command forces an unavailable Tree-sitter C parser
             # to be fatal. Without a parser fixture in this source package, let
