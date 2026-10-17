@@ -263,7 +263,7 @@ jobs:
 
           path = Path(sys.argv[1])
           source = path.read_text()
-          needle = "\t\t--record=\${DESTDIR}/\${pyexecdir}/install_files.txt"
+          needle = "\t\t--record=${DESTDIR}/${pyexecdir}/install_files.txt"
           replacement = needle + " \\\n\t\t--single-version-externally-managed"
           if source.count(needle) != 1:
               raise SystemExit(f"Expected one libseccomp PY_INSTALL record line in {path}")
