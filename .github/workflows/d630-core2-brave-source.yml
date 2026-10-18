@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: core2-brave-source
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -46,7 +46,17 @@ jobs:
             /opt/ghc \
             /usr/local/.ghcup \
             /usr/local/share/powershell \
-            /opt/hostedtoolcache/CodeQL; do
+            /opt/hostedtoolcache/CodeQL \
+            /opt/hostedtoolcache/Go \
+            /opt/hostedtoolcache/Ruby \
+            /opt/hostedtoolcache/Perl \
+            /opt/hostedtoolcache/Python \
+            /opt/hostedtoolcache/PyPy \
+            /opt/hostedtoolcache/PHP \
+            /opt/hostedtoolcache/Swift \
+            /usr/share/swift \
+            /usr/local/swift \
+            /usr/local/go; do
             if sudo test -e "$path"; then
               sudo du -sh "$path" 2>/dev/null || true
               sudo rm -rf "$path"
@@ -58,17 +68,22 @@ jobs:
           FREE_GB="$(df -BG --output=avail "$GITHUB_WORKSPACE" | tail -n 1 | tr -cd '0-9')"
           MEM_GB="$(( $(awk '/MemTotal/ {print $2}' /proc/meminfo) / 1024 / 1024 ))"
           CURRENT_SWAP_GB="$(awk 'NR > 1 {total += $3} END {printf "%d", total / 1024 / 1024}' /proc/swaps)"
-          if (( MEM_GB <= 10 )); then TARGET_SWAP_GB=24; else TARGET_SWAP_GB=16; fi
+          # Previous run reached 12 GiB total (2 GiB baseline + 10 GiB added).
+          # Target 22 GiB total, i.e. another 10 GiB over the previous run.
+          TARGET_SWAP_GB=22
           ADD_SWAP_GB=$((TARGET_SWAP_GB - CURRENT_SWAP_GB))
           if (( ADD_SWAP_GB < 0 )); then ADD_SWAP_GB=0; fi
 
-          # Keep at least 100 GB available for the Chromium checkout and release build.
+          # Preserve at least 100 GiB for Chromium source sync and the Release build.
           if (( FREE_GB < 100 )); then
-            echo "::error::Only $FREE_GB GB free after SDK cleanup; Chromium source builds require about 100 GB."
+            echo "::error::Only $FREE_GB GiB free after SDK cleanup; Chromium source builds require about 100 GiB."
             exit 1
           fi
           MAX_SWAP_GB=$((FREE_GB - 100))
-          if (( ADD_SWAP_GB > MAX_SWAP_GB )); then ADD_SWAP_GB="$MAX_SWAP_GB"; fi
+          if (( ADD_SWAP_GB > MAX_SWAP_GB )); then
+            echo "::error::Cannot provision $ADD_SWAP_GB GiB swap while preserving 100 GiB free; only $MAX_SWAP_GB GiB can be added. More SDK/cache cleanup is required."
+            exit 1
+          fi
           if (( ADD_SWAP_GB > 0 )); then
             sudo rm -f /swapfile-brave
             sudo fallocate -l "$ADD_SWAP_GB"G /swapfile-brave
