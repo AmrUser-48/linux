@@ -173,7 +173,7 @@ jobs:
           # If there is no same-named binary package (e.g. source package libseccomp),
           # use the supplied name as the source package instead of aborting under pipefail.
           SOURCE_METADATA="$(apt-cache show "$PACKAGE" 2>/dev/null || true)"
-          SOURCE_PACKAGE="$(printf '%s\\n' "$SOURCE_METADATA" | sed -n 's/^Source: \\([^ (]*\\).*/\\1/p' | sed -n '1p')"
+          SOURCE_PACKAGE="$(printf '%s\n' "$SOURCE_METADATA" | awk -v wanted="$PACKAGE" 'BEGIN { RS=""; FS="\n" } { pkg=""; src=""; for (i=1; i<=NF; i++) { if ($i ~ /^Package: /) { pkg=$i; sub(/^Package: /, "", pkg) } else if ($i ~ /^Source: /) { src=$i; sub(/^Source: /, "", src) } } if (pkg == wanted) { if (src == "") src=pkg; split(src, fields, /[[:space:]]+/); print fields[1]; exit } }')\"
           if [[ -z "$SOURCE_PACKAGE" ]]; then
             SOURCE_PACKAGE="$PACKAGE"
           fi
