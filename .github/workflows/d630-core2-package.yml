@@ -112,13 +112,28 @@ jobs:
             ca-certificates curl git file xz-utils zstd jq cmake meson ninja-build \
             python3 pkg-config quilt
 
-      - name: Select Core 2 optimization profile
+      - name: Resolve Debian source package name
+        id: resolve_source
         shell: bash
         env:
           PACKAGE: ${{ inputs.package }}
         run: |
+          set -euo pipefail
+          SOURCE_METADATA="$(apt-cache show "$PACKAGE" 2>/dev/null || true)"
+          SOURCE_PACKAGE="$(printf '%s\n' "$SOURCE_METADATA" | awk -v wanted="$PACKAGE" 'BEGIN { RS=""; FS="\n" } { pkg=""; src=""; for (i=1; i<=NF; i++) { if ($i ~ /^Package: /) { pkg=$i; sub(/^Package: /, "", pkg) } else if ($i ~ /^Source: /) { src=$i; sub(/^Source: /, "", src) } } if (pkg == wanted) { if (src == "") src=pkg; split(src, fields, /[[:space:]]+/); print fields[1]; exit } }')"
+          if [[ -z "$SOURCE_PACKAGE" ]]; then
+            SOURCE_PACKAGE="$PACKAGE"
+          fi
+          echo "source_package=$SOURCE_PACKAGE" >> "$GITHUB_OUTPUT"
+          echo "Requested package: $PACKAGE; Debian source package: $SOURCE_PACKAGE"
+      - name: Select Core 2 optimization profile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          SOURCE_PACKAGE: ${{ steps.resolve_source.outputs.source_package }}
+        run: |
           set -euxo pipefail
-          case "$PACKAGE" in
+          case "$SOURCE_PACKAGE" in
             lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils|zlib|libjpeg-turbo|pixman|tigervnc) opt="-O3" ;;
             *) opt="-O2" ;;
           esac
@@ -135,14 +150,15 @@ jobs:
         shell: bash
         env:
           PACKAGE: ${{ inputs.package }}
+          SOURCE_PACKAGE: ${{ steps.resolve_source.outputs.source_package }}
         run: |
           set -euxo pipefail
-          apt-get build-dep -y "$PACKAGE"
+          apt-get build-dep -y "$SOURCE_PACKAGE"
 
           SRCROOT="$GITHUB_WORKSPACE/source-tree"
           mkdir -p "$SRCROOT" "$GITHUB_WORKSPACE/release-artifacts"
           cd "$SRCROOT"
-          apt-get source "$PACKAGE"
+          apt-get source "$SOURCE_PACKAGE"
 
           # apt-get source downloads source archives for the build. Keep those
           # inputs in the temporary workspace only; release assets are binaries,
@@ -150,7 +166,7 @@ jobs:
 
           SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
-            echo "::error::Could not find unpacked Debian source for $PACKAGE"
+            echo "::error::Could not find unpacked Debian source for $SOURCE_PACKAGE (requested package: $PACKAGE)"
             exit 1
           fi
           if [[ "$PACKAGE" == "mesa" ]]; then
@@ -611,7 +627,7 @@ jobs:
           # Wrap rustc instead of replacing those flags: inject only the Core 2
           # target CPU and let Debian's original rustc/linker flags pass through.
           case "$PACKAGE" in
-            rust-bat|rust-fd-find|rust-sd|rust-ripgrep)
+            rust-bat|bat|rust-fd-find|rust-sd|rust-ripgrep)
               RUSTC_WRAPPER_PATH="$CORE2_SOURCE_DIR/.core2-rustc-wrapper"
               RUSTC_LOG_PATH="$CORE2_SOURCE_DIR/.core2-rustc-invocations.log"
               printf '%s\n' '#!/bin/sh' 'set -eu' 'compiler="$1"' 'shift' 'echo "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"' 'exec "$compiler" -C target-cpu=core2 "$@"' > "$RUSTC_WRAPPER_PATH"
