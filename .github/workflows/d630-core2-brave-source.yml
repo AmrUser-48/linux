@@ -187,6 +187,7 @@ jobs:
           gn_args_safebrowsing_api_endpoint=safebrowsing.brave.com
           gn_args_service_key_aichat=core2-local-build
           gn_args_service_key_stt=core2-local-build
+gn_args_service_key_search=core2-local-build
           EOF
 
           npm install --global pnpm@11.11.0
