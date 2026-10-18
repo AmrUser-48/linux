@@ -1,0 +1,23 @@
+name: Build and publish bat for Core 2
+run-name: "Core2 bat package"
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-bat.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  build:
+    name: Build Debian source package rust-bat
+    uses: ./.github/workflows/d630-core2-package.yml
+    with:
+      package: rust-bat
+      force_rebuild: false
+      refresh_index: true
