@@ -4157,7 +4157,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Development (105 top-level packages)</summary>
+<summary>Development (107 top-level packages)</summary>
 
 <details>
 <summary><code>alacritty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.11.0-4</code></summary>
@@ -4175,6 +4175,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libfreetype6 — 2.12.1+dfsg-5+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-freetype-2.12.1-dfsg-5-deb12u4-core2.1-20261016150739/libfreetype6_2.12.1%2Bdfsg-5%2Bdeb12u4%2Bcore2.1.20261016150739_amd64.deb)
 
 - [libxcb1 — 1.15-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxcb-1.15-1-core2.1-20261016151016/libxcb1_1.15-1%2Bcore2.1.20261016151016_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>bat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.22.1-4</code></summary>
+
+**Download files**
+- [bat_0.22.1-4+core2.1.20261018000710_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/bat_0.22.1-4%2Bcore2.1.20261018000710_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-bat-0.22.1-4-core2.1-20261018000710)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 </details>
 
@@ -6701,6 +6714,14 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
 
+</details>
+
+<details>
+<summary><code>librust-bat-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.22.1-4</code></summary>
+
+**Download files**
+- [librust-bat-dev_0.22.1-4+core2.1.20261018000710_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/librust-bat-dev_0.22.1-4%2Bcore2.1.20261018000710_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-bat-0.22.1-4-core2.1-20261018000710)
 </details>
 
 <details>
@@ -11772,7 +11793,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 749.
+**Unique binary packages indexed:** 751.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11781,6 +11802,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### rust-bat (optimized)
+Version: `0.22.1-4+core2.1~20261018000710` · Published: 2026-10-18 00:12:44 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-bat`
+
+<details><summary>Files (5)</summary>
+
+- [bat_0.22.1-4+core2.1.20261018000710_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/bat_0.22.1-4%2Bcore2.1.20261018000710_amd64.deb)
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/BUILD-INFO.txt)
+- [librust-bat-dev_0.22.1-4+core2.1.20261018000710_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/librust-bat-dev_0.22.1-4%2Bcore2.1.20261018000710_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/release-notes.md)
+- [SHA256SUMS-core2-rust-bat.txt](https://github.com/AmrUser-48/linux/releases/download/core2-rust-bat-0.22.1-4-core2.1-20261018000710/SHA256SUMS-core2-rust-bat.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-bat-0.22.1-4-core2.1-20261018000710)
+
+</details>
+
 ### telegram-desktop (optimized)
 Version: `4.6.5+ds-2+core2.1~20261017193804` · Published: 2026-10-17 20:33:10 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - telegram-desktop`
