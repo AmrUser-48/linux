@@ -70,7 +70,7 @@ def request_json(url):
 
 def package_and_version(release):
     title = str(release.get("name") or "").strip()
-    for prefix in ("Core 2 optimized ", "Core 2 system ", "Core 2 trimmed "):
+    for prefix in ("Core 2 optimized ", "Core 2 system "):
         if title.lower().startswith(prefix.lower()):
             description = title[len(prefix):].strip()
             match = re.match(r"^(.*?)\s+(\S+)$", description)
