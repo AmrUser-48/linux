@@ -28,7 +28,7 @@ def flatten_releases(payload):
 
 def package_and_version(release):
     title = (release.get("name") or "").strip()
-    for prefix in ("Core 2 optimized ", "Core 2 system "):
+    for prefix in ("Core 2 optimized ", "Core 2 system ", "Core 2 trimmed "):
         if title.lower().startswith(prefix.lower()):
             description = title[len(prefix):].strip()
             match = re.match(r"^(.*?)\s+(\S+)$", description)
