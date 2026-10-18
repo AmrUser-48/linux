@@ -1,0 +1,269 @@
+name: Trim Brave Browser for Core 2 Debian
+run-name: "Trim Brave Browser: ${{ inputs.version }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Upstream Brave stable version (for example 1.97.59) or latest
+        required: true
+        default: latest
+        type: string
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: core2-brave-browser
+  cancel-in-progress: false
+
+jobs:
+  repack:
+    name: Repack and trim upstream Brave .deb
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION_INPUT: ${{ inputs.version }}
+
+    steps:
+      - name: Install packaging tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            binutils ca-certificates curl dpkg-dev file jq xz-utils
+
+      - name: Download, trim, and validate upstream package
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          REQUESTED_VERSION=""
+          if [[ "$VERSION_INPUT" == "latest" ]]; then
+            API_URL="https://api.github.com/repos/brave/brave-browser/releases/latest"
+          else
+            REQUESTED_VERSION="$(printf '%s' "$VERSION_INPUT" | sed 's/^v//')"
+            if [[ ! "$REQUESTED_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "::error::Version must be 'latest' or a stable version such as 1.97.59."
+              exit 1
+            fi
+            API_URL="https://api.github.com/repos/brave/brave-browser/releases/tags/v$REQUESTED_VERSION"
+          fi
+
+          RELEASE_JSON="$(curl -fsSL \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'User-Agent: AmrUser-48-linux-core2-brave' \
+            "$API_URL")"
+          TAG="$(jq -er '.tag_name' <<<"$RELEASE_JSON")"
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Upstream tag is not a stable version tag: $TAG"
+            exit 1
+          fi
+          if [[ "$(jq -r '.draft' <<<"$RELEASE_JSON")" != "false" || "$(jq -r '.prerelease' <<<"$RELEASE_JSON")" != "false" ]]; then
+            echo "::error::Refusing to package a draft or prerelease."
+            exit 1
+          fi
+          if [[ -n "$REQUESTED_VERSION" && "$TAG" != "v$REQUESTED_VERSION" ]]; then
+            echo "::error::Requested version does not match upstream tag $TAG."
+            exit 1
+          fi
+
+          UPSTREAM_VERSION="${TAG#v}"
+          DEB_NAME="brave-browser_${UPSTREAM_VERSION}_amd64.deb"
+          ASSET_URL="$(jq -er --arg name "$DEB_NAME" \
+            '([.assets[] | select(.name == $name) | .browser_download_url] | first) // empty' \
+            <<<"$RELEASE_JSON")"
+          SHA_URL="$(jq -er --arg name "$DEB_NAME.sha256" \
+            '([.assets[] | select(.name == $name) | .browser_download_url] | first) // empty' \
+            <<<"$RELEASE_JSON")"
+          if [[ -z "$ASSET_URL" || -z "$SHA_URL" ]]; then
+            echo "::error::Missing official amd64 .deb or its SHA-256 sidecar for $TAG."
+            exit 1
+          fi
+
+          WORK="$RUNNER_TEMP/brave-trim"
+          rm -rf "$WORK"
+          mkdir -p "$WORK/root" "$WORK/release"
+          UPSTREAM_DEB="$WORK/$DEB_NAME"
+          curl -fL --retry 3 --retry-delay 2 "$ASSET_URL" -o "$UPSTREAM_DEB"
+          curl -fsSL --retry 3 "$SHA_URL" -o "$WORK/upstream.sha256"
+          EXPECTED_SHA="$(tr -cs '[:xdigit:]' '\n' < "$WORK/upstream.sha256" | awk 'length($0) == 64 { print; exit }')"
+          if [[ ! "$EXPECTED_SHA" =~ ^[[:xdigit:]]{64}$ ]]; then
+            echo "::error::Could not parse upstream SHA-256 sidecar."
+            exit 1
+          fi
+          printf '%s  %s\n' "$EXPECTED_SHA" "$UPSTREAM_DEB" | sha256sum -c -
+
+          dpkg-deb --extract "$UPSTREAM_DEB" "$WORK/root"
+          dpkg-deb --control "$UPSTREAM_DEB" "$WORK/control"
+          ROOT="$WORK/root"
+          CONTROL="$WORK/control"
+          BROWSER_DIR="$ROOT/opt/brave.com/brave"
+          LOCALE_DIR="$BROWSER_DIR/locales"
+
+          if [[ ! -x "$BROWSER_DIR/brave" || ! -d "$LOCALE_DIR" || ! -s "$LOCALE_DIR/en-US.pak" ]]; then
+            echo "::error::Unexpected Brave package layout; refusing to trim an unrecognized payload."
+            exit 1
+          fi
+
+          ORIGINAL_PACKAGE_BYTES="$(stat -c '%s' "$UPSTREAM_DEB")"
+          ORIGINAL_INSTALLED_BYTES="$(find "$ROOT" -type f -printf '%s\n' | awk '{ sum += $1 } END { printf "%.0f", sum }')"
+          LOCALE_FILES_REMOVED="$(find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -printf '.' | wc -c)"
+          LOCALE_BYTES_REMOVED="$(find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -printf '%s\n' | awk '{ sum += $1 } END { printf "%.0f", sum }')"
+          if (( LOCALE_FILES_REMOVED == 0 )); then
+            echo "::error::No non-English locale packs found; refusing to publish an unchanged locale payload."
+            exit 1
+          fi
+
+          find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -delete
+          echo "Removed $LOCALE_FILES_REMOVED non-English locale packs ($LOCALE_BYTES_REMOVED uncompressed bytes); retained en-US.pak."
+
+          # Preserve the upstream chrome-sandbox setuid policy when extracting as
+          # the unprivileged GitHub runner user, then let dpkg-deb record root ownership.
+          SANDBOX_MODE="$(dpkg-deb --contents "$UPSTREAM_DEB" | awk '$NF ~ /\/chrome-sandbox$/ { print $1; exit }')"
+          if [[ -f "$BROWSER_DIR/chrome-sandbox" && -n "$SANDBOX_MODE" ]]; then
+            if [[ "$SANDBOX_MODE" == *s* ]]; then
+              chmod u+s "$BROWSER_DIR/chrome-sandbox"
+            else
+              chmod u-s "$BROWSER_DIR/chrome-sandbox"
+            fi
+          fi
+
+          ELF_FILES_REDUCED=0
+          ELF_BYTES_SAVED=0
+          while IFS= read -r -d '' candidate; do
+            if [[ "$candidate" == "$BROWSER_DIR/chrome-sandbox" ]]; then
+              continue
+            fi
+            if file -b "$candidate" | grep -q '^ELF '; then
+              before="$(stat -c '%s' "$candidate")"
+              if strip --strip-unneeded "$candidate" 2>/dev/null; then
+                after="$(stat -c '%s' "$candidate")"
+                if (( before > after )); then
+                  ELF_FILES_REDUCED=$((ELF_FILES_REDUCED + 1))
+                  ELF_BYTES_SAVED=$((ELF_BYTES_SAVED + before - after))
+                fi
+              fi
+            fi
+          done < <(find "$BROWSER_DIR" -type f -print0)
+
+          # Keep package file-integrity metadata consistent with the changed payload.
+          if [[ -f "$CONTROL/md5sums" ]]; then
+            (cd "$ROOT" && find . -type f -printf '%P\0' | LC_ALL=C sort -z | xargs -0 -r md5sum) > "$CONTROL/md5sums"
+          fi
+
+          UPSTREAM_PACKAGE_VERSION="$(dpkg-deb -f "$UPSTREAM_DEB" Version)"
+          PACKAGE_VERSION="$UPSTREAM_PACKAGE_VERSION+core2.1~$(date -u +%Y%m%d%H%M%S)"
+          if ! dpkg --compare-versions "$PACKAGE_VERSION" gt "$UPSTREAM_PACKAGE_VERSION"; then
+            echo "::error::Generated Debian version does not sort after upstream version."
+            exit 1
+          fi
+          INSTALLED_BYTES="$(find "$ROOT" -type f -printf '%s\n' | awk '{ sum += $1 } END { printf "%.0f", sum }')"
+          INSTALLED_KB="$(((INSTALLED_BYTES + 1023) / 1024))"
+          if [[ "$(grep -c '^Version:' "$CONTROL/control" || true)" != "1" || "$(grep -c '^Installed-Size:' "$CONTROL/control" || true)" != "1" ]]; then
+            echo "::error::Unexpected Debian control metadata; expected one Version and Installed-Size field."
+            exit 1
+          fi
+          sed -i -E \
+            -e "s/^Version:.*/Version: $PACKAGE_VERSION/" \
+            -e "s/^Installed-Size:.*/Installed-Size: $INSTALLED_KB/" \
+            "$CONTROL/control"
+
+          OUTPUT_DEB="$WORK/release/brave-browser_${PACKAGE_VERSION}_amd64.deb"
+          dpkg-deb --build --root-owner-group --uniform-compression -Zxz -z6 "$ROOT" "$OUTPUT_DEB"
+          test "$(dpkg-deb -f "$OUTPUT_DEB" Package)" = "brave-browser"
+          test "$(dpkg-deb -f "$OUTPUT_DEB" Architecture)" = "amd64"
+          test "$(dpkg-deb -f "$OUTPUT_DEB" Version)" = "$PACKAGE_VERSION"
+          dpkg-deb --contents "$OUTPUT_DEB" > "$WORK/final-files.txt"
+          awk '
+            $NF ~ /\/locales\/[^/]+\.pak$/ {
+              if ($NF == "./opt/brave.com/brave/locales/en-US.pak") english = 1
+              else bad = 1
+            }
+            END { exit !(english == 1 && bad == 0) }
+          ' "$WORK/final-files.txt" || {
+            echo "::error::Final package does not contain exactly the retained en-US locale pack."
+            exit 1
+          }
+
+          FINAL_PACKAGE_BYTES="$(stat -c '%s' "$OUTPUT_DEB")"
+          SAVED_INSTALLED_BYTES="$((ORIGINAL_INSTALLED_BYTES - INSTALLED_BYTES))"
+          SAFE_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="core2-brave-browser-$SAFE_VERSION"
+
+          cat > "$WORK/release/BUILD-INFO.txt" <<EOF
+          Package: brave-browser
+          Upstream stable release: $TAG
+          Upstream Debian version: $UPSTREAM_PACKAGE_VERSION
+          Trimmed Debian version: $PACKAGE_VERSION
+          Architecture: amd64
+          Upstream SHA-256: $EXPECTED_SHA
+          Non-English locale packs removed: $LOCALE_FILES_REMOVED
+          Uncompressed locale bytes removed: $LOCALE_BYTES_REMOVED
+          ELF files reduced by strip --strip-unneeded: $ELF_FILES_REDUCED
+          ELF bytes removed by stripping: $ELF_BYTES_SAVED
+          Total installed payload bytes removed: $SAVED_INSTALLED_BYTES
+          Upstream .deb bytes: $ORIGINAL_PACKAGE_BYTES
+          Repacked .deb bytes: $FINAL_PACKAGE_BYTES
+          Build type: upstream official binary repack; not rebuilt with -march=core2
+          EOF
+
+          cd "$WORK/release"
+          sha256sum "$(basename "$OUTPUT_DEB")" BUILD-INFO.txt > SHA256SUMS-core2-brave-browser.txt
+          {
+            echo "upstream_version=$UPSTREAM_VERSION"
+            echo "package_version=$PACKAGE_VERSION"
+            echo "release_tag=$RELEASE_TAG"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "### Brave package trimming results"
+            echo
+            echo "- Upstream release: $TAG"
+            echo "- Removed non-English locale packs: $LOCALE_FILES_REMOVED ($LOCALE_BYTES_REMOVED bytes)"
+            echo "- ELF files reduced: $ELF_FILES_REDUCED ($ELF_BYTES_SAVED bytes saved)"
+            echo "- Installed payload reduction: $SAVED_INSTALLED_BYTES bytes"
+            echo "- Compressed .deb: $ORIGINAL_PACKAGE_BYTES → $FINAL_PACKAGE_BYTES bytes"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish trimmed package release
+        shell: bash
+        env:
+          UPSTREAM_VERSION: ${{ steps.package.outputs.upstream_version }}
+          PACKAGE_VERSION: ${{ steps.package.outputs.package_version }}
+          RELEASE_TAG: ${{ steps.package.outputs.release_tag }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/brave-trim/release"
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Release $RELEASE_TAG already exists; refusing to overwrite it."
+            exit 1
+          fi
+
+          cat > release-notes.md <<EOF
+          ## Core 2 trimmed Brave Browser
+
+          Repackaged from the official Brave stable release $UPSTREAM_VERSION.
+
+          - Removed non-English Chromium locale .pak files; en-US.pak is retained.
+          - Applied strip --strip-unneeded to eligible ELF files under /opt/brave.com/brave.
+          - Kept chrome-sandbox unstripped and preserved its upstream setuid policy.
+          - Rebuilt DEBIAN/md5sums and updated Installed-Size.
+          - Preserved upstream runtime dependencies, browser resources, codecs, dictionaries, and software-rendering components.
+          - This is an upstream binary repack, not a source rebuild or a claim of -march=core2 compilation.
+          - SHA-256 checksums cover the trimmed .deb and build metadata.
+          EOF
+
+          gh release create "$RELEASE_TAG" ./*.deb BUILD-INFO.txt SHA256SUMS-core2-brave-browser.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Core 2 trimmed brave-browser $PACKAGE_VERSION" \
+            --notes-file release-notes.md
+
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh."
+          else
+            echo "::warning::Release published, but the package index refresh could not be dispatched."
+          fi
