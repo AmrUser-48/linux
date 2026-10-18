@@ -611,7 +611,7 @@ jobs:
           # Wrap rustc instead of replacing those flags: inject only the Core 2
           # target CPU and let Debian's original rustc/linker flags pass through.
           case "$PACKAGE" in
-            rust-fd-find|rust-sd|rust-ripgrep)
+            rust-bat|rust-fd-find|rust-sd|rust-ripgrep)
               RUSTC_WRAPPER_PATH="$CORE2_SOURCE_DIR/.core2-rustc-wrapper"
               RUSTC_LOG_PATH="$CORE2_SOURCE_DIR/.core2-rustc-invocations.log"
               printf '%s\n' '#!/bin/sh' 'set -eu' 'compiler="$1"' 'shift' 'echo "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"' 'exec "$compiler" -C target-cpu=core2 "$@"' > "$RUSTC_WRAPPER_PATH"
@@ -724,7 +724,7 @@ jobs:
           fi
 
           case "$PACKAGE" in
-            rust-fd-find|rust-sd|rust-ripgrep)
+            rust-bat|rust-fd-find|rust-sd|rust-ripgrep)
               if [[ ! -s "$CORE2_RUSTC_LOG" ]]; then
                 echo "::error::The Core 2 Rust compiler wrapper was not invoked for $PACKAGE"
                 exit 1
