@@ -1,0 +1,493 @@
+name: Build Brave Browser from source for Core 2
+run-name: "Core2 Brave source build"
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Brave stable version (for example 1.97.59), or latest
+        required: true
+        default: latest
+        type: string
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/d630-core2-brave-source.yml
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: core2-brave-source
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compile and package Brave for Core 2
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION_INPUT: ${{ github.event_name == 'workflow_dispatch' && inputs.version || 'latest' }}
+      DEBIAN_FRONTEND: noninteractive
+
+    steps:
+      - name: Free disk space and provision swap
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Disk usage before cleanup ==="
+          df -h "$GITHUB_WORKSPACE"
+          echo "=== Removing unrelated preinstalled SDKs ==="
+          for path in \
+            /usr/local/lib/android/sdk \
+            /usr/share/dotnet \
+            /opt/ghc \
+            /usr/local/.ghcup \
+            /usr/local/share/powershell \
+            /opt/hostedtoolcache/CodeQL; do
+            if sudo test -e "$path"; then
+              sudo du -sh "$path" 2>/dev/null || true
+              sudo rm -rf "$path"
+            fi
+          done
+          sudo apt-get clean
+          df -h "$GITHUB_WORKSPACE"
+
+          FREE_GB="$(df -BG --output=avail "$GITHUB_WORKSPACE" | tail -n 1 | tr -cd '0-9')"
+          MEM_GB="$(( $(awk '/MemTotal/ {print $2}' /proc/meminfo) / 1024 / 1024 ))"
+          CURRENT_SWAP_GB="$(awk 'NR > 1 {total += $3} END {printf "%d", total / 1024 / 1024}' /proc/swaps)"
+          if (( MEM_GB <= 10 )); then TARGET_SWAP_GB=24; else TARGET_SWAP_GB=16; fi
+          ADD_SWAP_GB=$((TARGET_SWAP_GB - CURRENT_SWAP_GB))
+          if (( ADD_SWAP_GB < 0 )); then ADD_SWAP_GB=0; fi
+
+          # Keep at least 100 GB available for the Chromium checkout and release build.
+          if (( FREE_GB < 100 )); then
+            echo "::error::Only $FREE_GB GB free after SDK cleanup; Chromium source builds require about 100 GB."
+            exit 1
+          fi
+          MAX_SWAP_GB=$((FREE_GB - 100))
+          if (( ADD_SWAP_GB > MAX_SWAP_GB )); then ADD_SWAP_GB="$MAX_SWAP_GB"; fi
+          if (( ADD_SWAP_GB > 0 )); then
+            sudo rm -f /swapfile-brave
+            sudo fallocate -l "$ADD_SWAP_GB"G /swapfile-brave
+            sudo chmod 600 /swapfile-brave
+            sudo mkswap /swapfile-brave
+            sudo swapon /swapfile-brave
+          fi
+          echo "RAM: $MEM_GB GB; active swap before step: $CURRENT_SWAP_GB GB; additional swap: $ADD_SWAP_GB GB."
+          free -h
+          df -h "$GITHUB_WORKSPACE"
+
+      - name: Install source-build tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential binutils ca-certificates curl dpkg-dev file git gh jq \
+            python3 xz-utils
+          sudo apt-get clean
+
+      - name: Select and verify upstream stable source version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$VERSION_INPUT" == "latest" ]]; then
+            API_URL="https://api.github.com/repos/brave/brave-browser/releases/latest"
+          else
+            VERSION="$(printf '%s' "$VERSION_INPUT" | sed 's/^v//')"
+            if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "::error::Version must be 'latest' or a stable version such as 1.97.59."
+              exit 1
+            fi
+            API_URL="https://api.github.com/repos/brave/brave-browser/releases/tags/v$VERSION"
+          fi
+          RELEASE_JSON="$(curl -fsSL \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'User-Agent: AmrUser-48-linux-core2-brave-source-build' \
+            "$API_URL")"
+          TAG="$(jq -er '.tag_name' <<<"$RELEASE_JSON")"
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ||
+             [[ "$(jq -r '.draft' <<<"$RELEASE_JSON")" != "false" ]] ||
+             [[ "$(jq -r '.prerelease' <<<"$RELEASE_JSON")" != "false" ]]; then
+            echo "::error::Upstream response is not a stable Brave release: $TAG"
+            exit 1
+          fi
+          VERSION="$(printf '%s' "$VERSION_INPUT" | sed 's/^v//')"
+          if [[ "$VERSION_INPUT" != "latest" && "$TAG" != "v$VERSION" ]]; then
+            echo "::error::Requested source version does not match upstream tag $TAG."
+            exit 1
+          fi
+          UPSTREAM_VERSION="$(printf '%s' "$TAG" | sed 's/^v//')"
+          {
+            echo "upstream_tag=$TAG"
+            echo "upstream_version=$UPSTREAM_VERSION"
+          } >> "$GITHUB_OUTPUT"
+          echo "Pinned Brave source tag: $TAG"
+
+      - name: Set up Node.js and pnpm
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.16.0
+
+      - name: Clone Brave source and initialize Chromium dependencies
+        id: sync
+        shell: bash
+        env:
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        run: |
+          set -euo pipefail
+          WORK="$GITHUB_WORKSPACE"
+          mkdir -p "$WORK/src"
+          git clone --depth 1 --branch "$UPSTREAM_TAG" \
+            https://github.com/brave/brave-core.git "$WORK/src/brave"
+          cd "$WORK/src/brave"
+
+          # Public-build placeholders allow compilation without private service credentials.
+          # Some API-dependent features may be unavailable in this personal build.
+          cat > .env <<'EOF'
+          is_brave_release_build=0
+          gn_args_is_official_build=true
+          gn_args_symbol_level=0
+          gn_args_blink_symbol_level=0
+          gn_args_v8_symbol_level=0
+          gn_args_brave_google_api_endpoint=https://www.googleapis.com/geolocation/v1/geolocate?key=
+          gn_args_brave_google_api_key=core2-local-build
+          gn_args_brave_pref_hash_seed=core2-local-build
+          gn_args_brave_services_key=core2-local-build
+          gn_args_brave_services_key_id=core2-local-build
+          gn_args_brave_stats_api_key=core2-local-build
+          gn_args_brave_stats_updater_url=https://updates.bravesoftware.com/service/update2
+          gn_args_brave_sync_endpoint=https://sync-v2.brave.com/v2
+          gn_args_brave_variations_server_url=https://variations.brave.com/seed
+          gn_args_dcheck_always_on=false
+          gn_args_email_aliases_api_key=core2-local-build
+          gn_args_google_default_client_id=core2-local-build
+          gn_args_google_default_client_secret=core2-local-build
+          gn_args_goma_server_host=
+          gn_args_safebrowsing_api_endpoint=safebrowsing.brave.com
+          gn_args_service_key_aichat=core2-local-build
+          gn_args_service_key_stt=core2-local-build
+          EOF
+
+          npm install --global pnpm@11.11.0
+          pnpm --version
+          pnpm install --frozen-lockfile
+
+          run_with_heartbeat() {
+            local log_path="$1"
+            shift
+            "$@" >"$log_path" 2>&1 &
+            local pid=$!
+            while kill -0 "$pid" 2>/dev/null; do
+              sleep 60
+              echo "Still running: $*"
+              df -h "$GITHUB_WORKSPACE"
+              free -h
+            done
+            if wait "$pid"; then
+              tail -n 35 "$log_path" || true
+            else
+              local rc=$?
+              echo "::error::Command failed: $*"
+              tail -n 160 "$log_path" || true
+              return "$rc"
+            fi
+          }
+
+          # Brave's sync script supports --no-history to avoid full Git histories.
+          run_with_heartbeat "$WORK/brave-sync.log" \
+            node ./build/commands/scripts/sync.ts --init --no-history
+          echo "source_version=$UPSTREAM_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Install Linux build dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE"
+          if ! ./src/build/install-build-deps.sh >"$GITHUB_WORKSPACE/build-deps.log" 2>&1; then
+            echo "::error::Brave/Chromium build dependency installation failed."
+            tail -n 160 "$GITHUB_WORKSPACE/build-deps.log" || true
+            exit 1
+          fi
+          tail -n 45 "$GITHUB_WORKSPACE/build-deps.log"
+          sudo apt-get clean
+          df -h "$GITHUB_WORKSPACE"
+
+      - name: Configure all x64 compiler targets for Core 2
+        shell: bash
+        run: |
+          set -euo pipefail
+          CONFIG="$GITHUB_WORKSPACE/src/build/config/compiler_cpu_abi.gn"
+          test -f "$CONFIG"
+          python3 - "$CONFIG" <<'PY'
+          from pathlib import Path
+          import sys
+
+          path = Path(sys.argv[1])
+          text = path.read_text(encoding="utf-8")
+          anchor = '    cpu_abi_cflags += [ "-msse3" ]'
+          replacement = '''    cpu_abi_cflags += [
+              "-msse3",
+              "-march=core2",
+              "-mtune=core2",
+            ]'''
+          count = text.count(anchor)
+          if count != 1:
+              raise SystemExit(f"Expected exactly one x64 ABI flag anchor; found {count}. Refusing a broad compiler-config edit.")
+          path.write_text(text.replace(anchor, replacement, 1), encoding="utf-8")
+          PY
+          grep -qF '"-march=core2"' "$CONFIG"
+          grep -qF '"-mtune=core2"' "$CONFIG"
+          echo "Core 2 flags inserted into Chromium's common x64 compiler ABI flags."
+          sed -n '/if (current_cpu == "x64") {/,/} else if (current_cpu == "x86") {/p' "$CONFIG" | head -n 24
+
+      - name: Compile Brave Release and build Linux package
+        id: compile
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/src/brave"
+          BUILD_LOG="$GITHUB_WORKSPACE/brave-build.log"
+          pnpm run create_dist Release \
+            --gn=symbol_level:0 \
+            --gn=blink_symbol_level:0 \
+            --gn=v8_symbol_level:0 \
+            --ninja=-j2 >"$BUILD_LOG" 2>&1 &
+          BUILD_PID=$!
+          while kill -0 "$BUILD_PID" 2>/dev/null; do
+            sleep 60
+            echo "Brave Release build is still running."
+            date -u
+            df -h "$GITHUB_WORKSPACE"
+            free -h
+            tail -n 4 "$BUILD_LOG" || true
+          done
+          if wait "$BUILD_PID"; then
+            echo "Brave source build completed."
+          else
+            RC=$?
+            echo "::error::Brave source build failed with exit code $RC."
+            grep -Ein -B 2 -A 5 'fatal error:|undefined reference|FAILED:|ninja: build stopped|error:|failed to|not found' "$BUILD_LOG" | tail -n 120 || true
+            echo "::group::Last 100 build log lines"
+            tail -n 100 "$BUILD_LOG" || true
+            echo "::endgroup::"
+            exit "$RC"
+          fi
+          grep -E 'Done\. Made|Packaging|Creating|brave-browser_.*\.deb|ninja: Entering|BUILD SUCCESS' "$BUILD_LOG" | tail -n 60 || true
+          test -d "$GITHUB_WORKSPACE/src/out/Release"
+
+      - name: Trim locales and symbols, version the Core 2 package
+        id: package
+        shell: bash
+        env:
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        run: |
+          set -euo pipefail
+          WORK="$GITHUB_WORKSPACE/brave-package-work"
+          ROOT="$WORK/root"
+          CONTROL="$WORK/control"
+          RELEASE_DIR="$GITHUB_WORKSPACE/release-artifacts"
+          mkdir -p "$WORK" "$RELEASE_DIR"
+
+          SOURCE_DEB=""
+          while IFS= read -r -d '' candidate; do
+            if [[ "$(dpkg-deb -f "$candidate" Package 2>/dev/null || true)" == "brave-browser" &&
+                  "$(dpkg-deb -f "$candidate" Architecture 2>/dev/null || true)" == "amd64" ]]; then
+              SOURCE_DEB="$candidate"
+              break
+            fi
+          done < <(find "$GITHUB_WORKSPACE/src/out/Release" -maxdepth 1 -type f -name '*.deb' -print0)
+          if [[ -z "$SOURCE_DEB" ]]; then
+            echo "::error::The source build did not produce an amd64 brave-browser .deb."
+            find "$GITHUB_WORKSPACE/src/out/Release" -maxdepth 1 -type f -printf '%f %s bytes\n' || true
+            exit 1
+          fi
+
+          BUILD_VERSION="$(dpkg-deb -f "$SOURCE_DEB" Version)"
+          PACKAGE_VERSION="$BUILD_VERSION+core2.1~$(date -u +%Y%m%d%H%M%S)"
+          if ! dpkg --compare-versions "$PACKAGE_VERSION" gt "$BUILD_VERSION"; then
+            echo "::error::Core 2 package version does not sort after the Brave source version."
+            exit 1
+          fi
+
+          mkdir -p "$ROOT"
+          sudo dpkg-deb --extract "$SOURCE_DEB" "$ROOT"
+          sudo dpkg-deb --control "$SOURCE_DEB" "$CONTROL"
+          sudo mkdir -p "$ROOT/DEBIAN"
+          sudo cp -a "$CONTROL/." "$ROOT/DEBIAN/"
+
+          BROWSER_DIR="$ROOT/opt/brave.com/brave"
+          LOCALE_DIR="$BROWSER_DIR/locales"
+          if [[ ! -x "$BROWSER_DIR/brave" || ! -d "$LOCALE_DIR" || ! -s "$LOCALE_DIR/en-US.pak" ]]; then
+            echo "::error::Unexpected Brave .deb layout; refusing to prune an unrecognized package."
+            exit 1
+          fi
+
+          ORIGINAL_PACKAGE_BYTES="$(stat -c '%s' "$SOURCE_DEB")"
+          ORIGINAL_INSTALLED_BYTES="$(find "$ROOT" -type f -printf '%s\n' | awk '{sum += $1} END {printf "%.0f", sum}')"
+          LOCALE_FILES_REMOVED="$(find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -printf '.' | wc -c)"
+          LOCALE_BYTES_REMOVED="$(find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -printf '%s\n' | awk '{sum += $1} END {printf "%.0f", sum}')"
+          if (( LOCALE_FILES_REMOVED == 0 )); then
+            echo "::error::No non-English locale packs found."
+            exit 1
+          fi
+          sudo find "$LOCALE_DIR" -maxdepth 1 -type f -name '*.pak' ! -name 'en-US.pak' -delete
+          echo "Removed $LOCALE_FILES_REMOVED non-English locale packs ($LOCALE_BYTES_REMOVED uncompressed bytes); retained en-US.pak."
+
+          ELF_FILES_REDUCED=0
+          ELF_BYTES_SAVED=0
+          while IFS= read -r -d '' candidate; do
+            case "$candidate" in
+              */chrome-sandbox|*/brave_sandbox|*/chrome_sandbox) continue ;;
+            esac
+            if file -b "$candidate" | grep -q '^ELF '; then
+              before="$(stat -c '%s' "$candidate")"
+              if sudo strip --strip-unneeded "$candidate" 2>/dev/null; then
+                after="$(stat -c '%s' "$candidate")"
+                if (( before > after )); then
+                  ELF_FILES_REDUCED=$((ELF_FILES_REDUCED + 1))
+                  ELF_BYTES_SAVED=$((ELF_BYTES_SAVED + before - after))
+                fi
+              fi
+            fi
+          done < <(find "$BROWSER_DIR" -type f -print0)
+
+          INSTALLED_KB="$(du -sk --exclude=DEBIAN "$ROOT" | awk '{print $1}')"
+          if [[ "$(grep -c '^Version:' "$ROOT/DEBIAN/control" || true)" != "1" ||
+                "$(grep -c '^Installed-Size:' "$ROOT/DEBIAN/control" || true)" != "1" ]]; then
+            echo "::error::Unexpected Brave package control metadata."
+            exit 1
+          fi
+          sudo sed -i -E \
+            -e "s/^Version:.*/Version: $PACKAGE_VERSION/" \
+            -e "s/^Installed-Size:.*/Installed-Size: $INSTALLED_KB/" \
+            "$ROOT/DEBIAN/control"
+
+          # Regenerate payload MD5 sums after removing locales and stripping ELF files.
+          sudo bash -c 'cd "$1" && find . -type f ! -path "./DEBIAN/*" -printf "%P\0" | LC_ALL=C sort -z | xargs -0 -r md5sum' _ "$ROOT" > "$WORK/md5sums"
+          sudo install -m 0644 "$WORK/md5sums" "$ROOT/DEBIAN/md5sums"
+
+          FINAL_DEB="$RELEASE_DIR/brave-browser_$(printf '%s' "$PACKAGE_VERSION")_amd64.deb"
+          sudo dpkg-deb --build --root-owner-group --uniform-compression -Zxz -z6 "$ROOT" "$FINAL_DEB"
+          sudo chown "$USER":"$(id -gn)" "$FINAL_DEB"
+          test "$(dpkg-deb -f "$FINAL_DEB" Package)" = "brave-browser"
+          test "$(dpkg-deb -f "$FINAL_DEB" Architecture)" = "amd64"
+          test "$(dpkg-deb -f "$FINAL_DEB" Version)" = "$PACKAGE_VERSION"
+          dpkg-deb --contents "$FINAL_DEB" > "$WORK/final-files.txt"
+          awk '
+            $NF ~ /\/locales\/[^/]+\.pak$/ {
+              if ($NF == "./opt/brave.com/brave/locales/en-US.pak") english = 1
+              else bad = 1
+            }
+            END { exit !(english == 1 && bad == 0) }
+          ' "$WORK/final-files.txt" || {
+            echo "::error::Final package does not contain exactly the retained en-US locale pack."
+            exit 1
+          }
+
+          FINAL_PACKAGE_BYTES="$(stat -c '%s' "$FINAL_DEB")"
+          FINAL_INSTALLED_BYTES="$(find "$ROOT" -type f -printf '%s\n' | awk '{sum += $1} END {printf "%.0f", sum}')"
+          SAVED_INSTALLED_BYTES="$((ORIGINAL_INSTALLED_BYTES - FINAL_INSTALLED_BYTES))"
+          SAFE_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="core2-brave-browser-$SAFE_VERSION"
+
+          cat > "$RELEASE_DIR/BUILD-INFO.txt" <<EOF
+          Package: brave-browser
+          Build: Brave/Chromium source build; not an upstream .deb repack
+          Brave source tag: $UPSTREAM_TAG
+          Brave source version: $UPSTREAM_VERSION
+          Built Debian package version: $BUILD_VERSION
+          Core 2 package version: $PACKAGE_VERSION
+          Chromium version: pinned by brave-core $UPSTREAM_TAG
+          Architecture: amd64
+          Compiler flags: -march=core2 -mtune=core2 in Chromium common x64 ABI flags
+          Build configuration: Release, symbol_level=0, blink_symbol_level=0, v8_symbol_level=0
+          Non-English locale .pak files removed: $LOCALE_FILES_REMOVED
+          Uncompressed locale bytes removed: $LOCALE_BYTES_REMOVED
+          ELF files reduced by strip --strip-unneeded: $ELF_FILES_REDUCED
+          ELF bytes removed by stripping: $ELF_BYTES_SAVED
+          Total installed payload bytes removed: $SAVED_INSTALLED_BYTES
+          Source-build .deb bytes: $ORIGINAL_PACKAGE_BYTES
+          Final trimmed .deb bytes: $FINAL_PACKAGE_BYTES
+          API configuration: placeholder values; some server-integrated features may require valid credentials
+          EOF
+
+          cd "$RELEASE_DIR"
+          sha256sum "$(basename "$FINAL_DEB")" BUILD-INFO.txt > SHA256SUMS-core2-brave-browser.txt
+          {
+            echo "package_version=$PACKAGE_VERSION"
+            echo "release_tag=$RELEASE_TAG"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "### Brave Core 2 source-build summary"
+            echo
+            echo "- Brave source: $UPSTREAM_TAG"
+            echo "- Package version: $PACKAGE_VERSION"
+            echo "- Removed non-English locale packs: $LOCALE_FILES_REMOVED ($LOCALE_BYTES_REMOVED bytes)"
+            echo "- Stripped ELF files: $ELF_FILES_REDUCED ($ELF_BYTES_SAVED bytes saved)"
+            echo "- Installed payload bytes removed: $SAVED_INSTALLED_BYTES"
+            echo "- Compressed .deb: $ORIGINAL_PACKAGE_BYTES → $FINAL_PACKAGE_BYTES bytes"
+          } >> "$GITHUB_STEP_SUMMARY"
+          ls -lh "$FINAL_DEB" BUILD-INFO.txt SHA256SUMS-core2-brave-browser.txt
+
+      - name: Upload build logs and package artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: brave-core2-source-build-${{ github.run_id }}
+          path: |
+            brave-sync.log
+            build-deps.log
+            brave-build.log
+            release-artifacts/*
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Publish source-built Brave package release
+        if: success()
+        shell: bash
+        env:
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          PACKAGE_VERSION: ${{ steps.package.outputs.package_version }}
+          RELEASE_TAG: ${{ steps.package.outputs.release_tag }}
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Release $RELEASE_TAG already exists; refusing to overwrite it."
+            exit 1
+          fi
+          cat > release-notes.md <<EOF
+          ## Core 2 source-built Brave Browser
+
+          Brave was compiled from source tag $UPSTREAM_TAG (version $UPSTREAM_VERSION)
+          for the Intel Core 2 target, then packaged and trimmed for an English-language
+          desktop install.
+
+          - Chromium is pinned by Brave's own source manifest for $UPSTREAM_TAG.
+          - Added -march=core2 -mtune=core2 to Chromium's common x64 compiler ABI flags.
+          - Built the Release configuration with symbol levels set to zero.
+          - Removed non-English locale .pak files, retaining en-US.pak.
+          - Applied strip --strip-unneeded to eligible ELF files, excluding sandbox binaries.
+          - Updated Debian package metadata and regenerated payload MD5 sums.
+          - Placeholder API values are used because private service credentials are not bundled; features requiring real credentials may be unavailable.
+          - SHA-256 checksums cover the package and build metadata.
+          EOF
+          gh release create "$RELEASE_TAG" ./*.deb BUILD-INFO.txt SHA256SUMS-core2-brave-browser.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Core 2 source-built brave-browser $PACKAGE_VERSION" \
+            --notes-file release-notes.md
+
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package index refresh."
+          else
+            echo "::warning::Package release created, but release-index refresh could not be dispatched."
+          fi
