@@ -258,6 +258,7 @@ jobs:
             --gn=symbol_level:0 \
             --gn=blink_symbol_level:0 \
             --gn=v8_symbol_level:0 \
+            --gn=use_debug_fission:false \
             --ninja=-j2 >"$BUILD_LOG" 2>&1 &
           BUILD_PID=$!
           while kill -0 "$BUILD_PID" 2>/dev/null; do
