@@ -173,6 +173,11 @@ jobs:
             -e "s/^Installed-Size:.*/Installed-Size: $INSTALLED_KB/" \
             "$CONTROL/control"
 
+          # dpkg-deb --extract does not copy control metadata into the payload.
+          # Install the edited metadata under DEBIAN/ before rebuilding the .deb.
+          mkdir -p "$ROOT/DEBIAN"
+          cp -a "$CONTROL/." "$ROOT/DEBIAN/"
+
           OUTPUT_DEB="$WORK/release/brave-browser_${PACKAGE_VERSION}_amd64.deb"
           dpkg-deb --build --root-owner-group --uniform-compression -Zxz -z6 "$ROOT" "$OUTPUT_DEB"
           test "$(dpkg-deb -f "$OUTPUT_DEB" Package)" = "brave-browser"
