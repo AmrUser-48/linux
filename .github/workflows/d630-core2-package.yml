@@ -164,7 +164,7 @@ jobs:
           # inputs in the temporary workspace only; release assets are binaries,
           # checksums, and build metadata, never .dsc/.orig.tar/.debian.tar files.
 
-          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${SOURCE_PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
             echo "::error::Could not find unpacked Debian source for $SOURCE_PACKAGE (requested package: $PACKAGE)"
             exit 1
