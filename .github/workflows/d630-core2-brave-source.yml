@@ -346,13 +346,13 @@ jobs:
           OUT="$GITHUB_WORKSPACE/src/out/Release"
           mkdir -p "$OUT"
 
-          # Give the build about 3h30m, then interrupt it cleanly and save the changed outputs.
+          # Give the build about 3h40m, then interrupt it cleanly and save the changed outputs.
           # Ninja/Siso state files and object files remain in out/Release for the next runner.
           BASELINE="$RUNNER_TEMP/brave-state-baseline"
           touch -d '10 seconds ago' "$BASELINE"
           echo "Checkpoint baseline: $LAST_CHECKPOINT"
-          echo "Starting incremental build with no swap; checkpoint timeout is 210 minutes."
-          timeout --signal=INT --kill-after=90s 210m pnpm run create_dist Release \
+          echo "Starting incremental build with no swap; checkpoint timeout is 220 minutes."
+          timeout --signal=INT --kill-after=90s 220m pnpm run create_dist Release \
             --gn=symbol_level:0 \
             --gn=blink_symbol_level:0 \
             --gn=v8_symbol_level:0 \
