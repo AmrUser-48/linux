@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: core2-brave-source
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -33,10 +33,20 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
 
     steps:
-      - name: Free disk space and provision swap
+      - name: Free disk space and disable swap completely
         shell: bash
         run: |
           set -euo pipefail
+          # No swap during compilation: page-out would slow the Core 2-targeted build.
+          sudo swapoff -a
+          sudo rm -f /swapfile-brave /swapfile
+          ACTIVE_SWAP="$(awk 'NR > 1 {n++} END {print n+0}' /proc/swaps)"
+          if (( ACTIVE_SWAP != 0 )); then
+            cat /proc/swaps
+            echo "::error::Swap is still active; refusing to continue."
+            exit 1
+          fi
+
           echo "=== Disk usage before cleanup ==="
           df -h "$GITHUB_WORKSPACE"
           echo "=== Removing unrelated preinstalled SDKs ==="
@@ -66,34 +76,12 @@ jobs:
           df -h "$GITHUB_WORKSPACE"
 
           FREE_GB="$(df -BG --output=avail "$GITHUB_WORKSPACE" | tail -n 1 | tr -cd '0-9')"
-          MEM_GB="$(( $(awk '/MemTotal/ {print $2}' /proc/meminfo) / 1024 / 1024 ))"
-          CURRENT_SWAP_GB="$(awk 'NR > 1 {total += $3} END {printf "%d", total / 1024 / 1024}' /proc/swaps)"
-          # Add 10 GiB to the runner's existing swap; keep the 100 GiB Chromium disk reserve.
-          TARGET_SWAP_GB=$((CURRENT_SWAP_GB + 10))
-          ADD_SWAP_GB=$((TARGET_SWAP_GB - CURRENT_SWAP_GB))
-          if (( ADD_SWAP_GB < 0 )); then ADD_SWAP_GB=0; fi
-
-          # Preserve at least 100 GiB for Chromium source sync and the Release build.
           if (( FREE_GB < 100 )); then
             echo "::error::Only $FREE_GB GiB free after SDK cleanup; Chromium source builds require about 100 GiB."
             exit 1
           fi
-          MAX_SWAP_GB=$((FREE_GB - 100))
-          if (( ADD_SWAP_GB > MAX_SWAP_GB )); then
-            echo "::error::Cannot provision $ADD_SWAP_GB GiB swap while preserving 100 GiB free; only $MAX_SWAP_GB GiB can be added. More SDK/cache cleanup is required."
-            exit 1
-          fi
-          if (( ADD_SWAP_GB > 0 )); then
-            sudo rm -f /swapfile-brave
-            sudo fallocate -l "$ADD_SWAP_GB"G /swapfile-brave
-            sudo chmod 600 /swapfile-brave
-            sudo mkswap /swapfile-brave
-            sudo swapon /swapfile-brave
-          fi
-          echo "RAM: $MEM_GB GB; active swap before step: $CURRENT_SWAP_GB GB; additional swap: $ADD_SWAP_GB GB."
+          echo "Swap is disabled; $FREE_GB GiB disk space is available before sync/build."
           free -h
-          df -h "$GITHUB_WORKSPACE"
-
       - name: Install source-build tools
         shell: bash
         run: |
@@ -101,7 +89,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             build-essential binutils ca-certificates curl dpkg-dev file git gh jq \
-            python3 xz-utils
+            python3 xz-utils zstd
           sudo apt-get clean
 
       - name: Select and verify upstream stable source version
@@ -262,14 +250,106 @@ jobs:
           echo "Core 2 flags inserted into Chromium's common x64 compiler ABI flags."
           sed -n '/if (current_cpu == "x64") {/,/} else if (current_cpu == "x86") {/p' "$CONFIG" | head -n 24
 
+      - name: Restore incremental Chromium build state
+        id: state
+        shell: bash
+        env:
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        run: |
+          set -euo pipefail
+          WORK="$GITHUB_WORKSPACE"
+          OUT="$WORK/src/out/Release"
+          STATE_TAG="core2-brave-state-v${UPSTREAM_VERSION}"
+          STATE_DIR="$RUNNER_TEMP/brave-state"
+          mkdir -p "$OUT" "$STATE_DIR"
+
+          CHROMIUM_REVISION="$(git -C "$WORK/src" rev-parse HEAD)"
+          CPU_CONFIG_SHA="$(sha256sum "$WORK/src/build/config/compiler_cpu_abi.gn" | awk '{print $1}')"
+          ENV_SHA="$(sha256sum "$WORK/src/brave/.env" | awk '{print $1}')"
+          BUILD_ARGS='Release;symbol_level=0;blink_symbol_level=0;v8_symbol_level=0;use_debug_fission=false;ninja=j:2'
+          FINGERPRINT="$(printf '%s\n' "$UPSTREAM_TAG" "$CHROMIUM_REVISION" "$CPU_CONFIG_SHA" "$ENV_SHA" "$BUILD_ARGS" | sha256sum | awk '{print $1}')"
+
+          ASSET_LIST="$STATE_DIR/assets.txt"
+          : > "$ASSET_LIST"
+          if gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' > "$ASSET_LIST" 2>/dev/null; then
+            RELEASE_EXISTS=true
+          else
+            RELEASE_EXISTS=false
+          fi
+
+          MAX_ASSET_CP="$(sed -nE 's/^state-c([0-9]{4})-(manifest\.txt|part-[0-9]{3})$/\1/p' "$ASSET_LIST" | sort | tail -n 1)"
+          MAX_ASSET_CP="${MAX_ASSET_CP:-0000}"
+          NEXT_NUM=$((10#$MAX_ASSET_CP + 1))
+          printf -v NEXT_CP '%04d' "$NEXT_NUM"
+
+          mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\.txt$/\1/p' "$ASSET_LIST" | sort -u)
+          LAST_CP=0000
+          if [[ "$RELEASE_EXISTS" == true && ${#COMPLETE_IDS[@]} -gt 0 ]]; then
+            echo "Found state release $STATE_TAG; restoring completed checkpoint deltas."
+            for CP in "${COMPLETE_IDS[@]}"; do
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+                --pattern "state-c${CP}-manifest.txt" --dir "$STATE_DIR"
+              MANIFEST="$STATE_DIR/state-c${CP}-manifest.txt"
+
+              if ! grep -qx "fingerprint=$FINGERPRINT" "$MANIFEST"; then
+                echo "::error::Checkpoint $CP is incompatible with current Brave/Chromium source or build configuration."
+                echo "Expected fingerprint: $FINGERPRINT"
+                grep -E '^(upstream_tag|chromium_revision|fingerprint)=' "$MANIFEST" || true
+                exit 1
+              fi
+              EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
+              ACTUAL_PARTS="$(grep -Fxc "state-c${CP}-part-" "$ASSET_LIST" || true)"
+              ACTUAL_PARTS="$(grep -Ec "^state-c${CP}-part-[0-9]{3}$" "$ASSET_LIST" || true)"
+              if [[ -z "$EXPECTED_PARTS" || "$EXPECTED_PARTS" != "$ACTUAL_PARTS" || "$EXPECTED_PARTS" == 0 ]]; then
+                echo "::error::Checkpoint $CP is incomplete: expected $EXPECTED_PARTS parts, found $ACTUAL_PARTS."
+                exit 1
+              fi
+
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+                --pattern "state-c${CP}-part-*" --dir "$STATE_DIR"
+              mapfile -t PARTS < <(find "$STATE_DIR" -maxdepth 1 -type f -name "state-c${CP}-part-*" -print | sort)
+              if (( ${#PARTS[@]} != EXPECTED_PARTS )); then
+                echo "::error::Downloaded part count does not match checkpoint $CP manifest."
+                exit 1
+              fi
+              echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
+              cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
+              LAST_CP="$CP"
+            done
+          else
+            echo "No completed checkpoint found; this run starts the first saved build segment."
+          fi
+
+          {
+            echo "state_tag=$STATE_TAG"
+            echo "last_checkpoint=$LAST_CP"
+            echo "next_checkpoint=$NEXT_CP"
+            echo "chromium_revision=$CHROMIUM_REVISION"
+            echo "fingerprint=$FINGERPRINT"
+          } >> "$GITHUB_OUTPUT"
+          echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
+          df -h "$GITHUB_WORKSPACE"
       - name: Compile Brave Release and build Linux package
         id: compile
         shell: bash
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          LAST_CHECKPOINT: ${{ steps.state.outputs.last_checkpoint }}
         run: |
           set -euo pipefail
           cd "$GITHUB_WORKSPACE/src/brave"
           BUILD_LOG="$GITHUB_WORKSPACE/brave-build.log"
-          pnpm run create_dist Release \
+          OUT="$GITHUB_WORKSPACE/src/out/Release"
+          mkdir -p "$OUT"
+
+          # Give the build about 3h30m, then interrupt it cleanly and save the changed outputs.
+          # Ninja/Siso state files and object files remain in out/Release for the next runner.
+          BASELINE="$RUNNER_TEMP/brave-state-baseline"
+          touch -d '10 seconds ago' "$BASELINE"
+          echo "Checkpoint baseline: $LAST_CHECKPOINT"
+          echo "Starting incremental build with no swap; checkpoint timeout is 210 minutes."
+          timeout --signal=INT --kill-after=90s 210m pnpm run create_dist Release \
             --gn=symbol_level:0 \
             --gn=blink_symbol_level:0 \
             --gn=v8_symbol_level:0 \
@@ -284,10 +364,18 @@ jobs:
             free -h
             tail -n 4 "$BUILD_LOG" || true
           done
-          if wait "$BUILD_PID"; then
-            echo "Brave source build completed."
-          else
-            RC=$?
+          set +e
+          wait "$BUILD_PID"
+          RC=$?
+          set -e
+
+          if (( RC == 124 )); then
+            echo "Build segment reached its planned time boundary; outputs will be checkpointed."
+            echo "checkpoint=true" >> "$GITHUB_OUTPUT"
+            tail -n 20 "$BUILD_LOG" || true
+            exit 0
+          fi
+          if (( RC != 0 )); then
             echo "::error::Brave source build failed with exit code $RC."
             grep -Ein -B 2 -A 5 'fatal error:|undefined reference|FAILED:|ninja: build stopped|error:|failed to|not found' "$BUILD_LOG" | tail -n 120 || true
             echo "::group::Last 100 build log lines"
@@ -295,10 +383,14 @@ jobs:
             echo "::endgroup::"
             exit "$RC"
           fi
+
+          echo "Brave source build completed."
+          echo "checkpoint=false" >> "$GITHUB_OUTPUT"
           grep -E 'Done\. Made|Packaging|Creating|brave-browser_.*\.deb|ninja: Entering|BUILD SUCCESS' "$BUILD_LOG" | tail -n 60 || true
-          test -d "$GITHUB_WORKSPACE/src/out/Release"
+          test -d "$OUT"
 
       - name: Trim locales and symbols, version the Core 2 package
+        if: steps.compile.outputs.checkpoint != 'true'
         id: package
         shell: bash
         env:
@@ -466,8 +558,108 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
+      - name: Save and upload incremental build checkpoint
+        id: save_state
+        if: success() && steps.compile.outputs.checkpoint == 'true'
+        shell: bash
+        env:
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          STATE_TAG: ${{ steps.state.outputs.state_tag }}
+          LAST_CHECKPOINT: ${{ steps.state.outputs.last_checkpoint }}
+          NEXT_CHECKPOINT: ${{ steps.state.outputs.next_checkpoint }}
+          CHROMIUM_REVISION: ${{ steps.state.outputs.chromium_revision }}
+          FINGERPRINT: ${{ steps.state.outputs.fingerprint }}
+        run: |
+          set -euo pipefail
+          WORK="$GITHUB_WORKSPACE"
+          OUT="$WORK/src/out/Release"
+          PART_DIR="$RUNNER_TEMP/brave-state-parts"
+          FILE_LIST="$RUNNER_TEMP/brave-state-files.list"
+          BASELINE="$RUNNER_TEMP/brave-state-baseline"
+          mkdir -p "$PART_DIR"
+          rm -f "$PART_DIR"/state-c${NEXT_CHECKPOINT}-part-*
+          : > "$FILE_LIST"
+
+          if [[ "$LAST_CHECKPOINT" == "0000" ]]; then
+            echo "Capturing complete output tree for the initial checkpoint."
+            (cd "$OUT" && find . \( -type f -o -type l \) -print0) > "$FILE_LIST"
+          else
+            echo "Capturing files added or changed since checkpoint $LAST_CHECKPOINT."
+            (cd "$OUT" && find . \( -type f -o -type l \) -newer "$BASELINE" -print0) > "$FILE_LIST"
+          fi
+
+          FILE_COUNT="$(tr -cd '\000' < "$FILE_LIST" | wc -c)"
+          if (( FILE_COUNT == 0 )); then
+            echo "::error::No build outputs changed during the timed segment; refusing to publish an empty checkpoint."
+            exit 1
+          fi
+          echo "Files in checkpoint delta: $FILE_COUNT"
+          echo "=== Space before checkpoint compression ==="
+          df -h "$GITHUB_WORKSPACE"
+
+          PREFIX="$PART_DIR/state-c${NEXT_CHECKPOINT}-part-"
+          set -o pipefail
+          tar --create --file=- --directory="$OUT" --null --files-from="$FILE_LIST" --no-recursion \
+            | zstd -T0 -3 -c \
+            | split -b 1700M -d -a 3 - "$PREFIX"
+
+          mapfile -t PARTS < <(find "$PART_DIR" -maxdepth 1 -type f -name "state-c${NEXT_CHECKPOINT}-part-*" -print | sort)
+          if (( ${#PARTS[@]} == 0 )); then
+            echo "::error::Checkpoint archive did not produce any parts."
+            exit 1
+          fi
+
+          if ! gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+              --title "Temporary Brave/Chromium build state $UPSTREAM_TAG" \
+              --notes "Temporary incremental build checkpoints for the Core 2 Brave source build. Assets are split into files smaller than GitHub's per-asset limit. This release is build state, not a browser package." \
+              --prerelease
+          fi
+
+          for PART in "${PARTS[@]}"; do
+            echo "Uploading $(basename "$PART") ($(stat -c '%s' "$PART") bytes)"
+            gh release upload "$STATE_TAG" "$PART" --repo "$GITHUB_REPOSITORY"
+          done
+
+          MANIFEST="$PART_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
+          cat > "$MANIFEST" <<EOF
+          format=1
+          checkpoint=$NEXT_CHECKPOINT
+          upstream_tag=$UPSTREAM_TAG
+          chromium_revision=$CHROMIUM_REVISION
+          fingerprint=$FINGERPRINT
+          file_count=$FILE_COUNT
+          part_count=${#PARTS[@]}
+          created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          EOF
+          # The manifest is uploaded last; its presence means all parts were uploaded.
+          gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
+          {
+            echo "### Brave build checkpoint saved"
+            echo
+            echo "- Source: $UPSTREAM_TAG"
+            echo "- Chromium revision: $CHROMIUM_REVISION"
+            echo "- Completed checkpoint: $NEXT_CHECKPOINT"
+            echo "- Changed files stored: $FILE_COUNT"
+            echo "- Compressed parts: ${#PARTS[@]}"
+            echo "- State release: $STATE_TAG"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Queue the next Brave compilation session
+        if: success() && steps.compile.outputs.checkpoint == 'true' && steps.save_state.outcome == 'success'
+        shell: bash
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        run: |
+          set -euo pipefail
+          echo "Checkpoint is durable; queueing the next runner session for Brave $UPSTREAM_VERSION."
+          gh workflow run d630-core2-brave-source.yml \
+            --repo "$GITHUB_REPOSITORY" --ref master \
+            -f version="$UPSTREAM_VERSION"
+
       - name: Publish source-built Brave package release
-        if: success()
+        if: success() && steps.compile.outputs.checkpoint != 'true'
         shell: bash
         env:
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
@@ -506,4 +698,19 @@ jobs:
             echo "Dispatched package index refresh."
           else
             echo "::warning::Package release created, but release-index refresh could not be dispatched."
+          fi
+
+      - name: Remove temporary build-state release after final package publication
+        if: success() && steps.compile.outputs.checkpoint != 'true'
+        shell: bash
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        run: |
+          set -euo pipefail
+          STATE_TAG="core2-brave-state-v${UPSTREAM_VERSION}"
+          if gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+            echo "Removed temporary build-state release $STATE_TAG after publishing the final package."
+          else
+            echo "No temporary build-state release to remove."
           fi
