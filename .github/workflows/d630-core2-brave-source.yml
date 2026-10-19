@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: core2-brave-source
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
