@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: core2-brave-source
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -180,7 +180,6 @@ jobs:
 
           npm install --global pnpm@11.11.0
           pnpm --version
-          pnpm install --frozen-lockfile
 
           run_with_heartbeat() {
             local log_path="$1"
@@ -192,6 +191,7 @@ jobs:
               echo "Still running: $*"
               df -h "$GITHUB_WORKSPACE"
               free -h
+              tail -n 3 "$log_path" || true
             done
             if wait "$pid"; then
               tail -n 35 "$log_path" || true
@@ -202,6 +202,8 @@ jobs:
               return "$rc"
             fi
           }
+
+          run_with_heartbeat "$WORK/pnpm-install.log" pnpm install --frozen-lockfile
 
           # Brave's sync script supports --no-history to avoid full Git histories.
           run_with_heartbeat "$WORK/brave-sync.log" \
@@ -299,7 +301,6 @@ jobs:
                 exit 1
               fi
               EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
-              ACTUAL_PARTS="$(grep -Fxc "state-c${CP}-part-" "$ASSET_LIST" || true)"
               ACTUAL_PARTS="$(grep -Ec "^state-c${CP}-part-[0-9]{3}$" "$ASSET_LIST" || true)"
               if [[ -z "$EXPECTED_PARTS" || "$EXPECTED_PARTS" != "$ACTUAL_PARTS" || "$EXPECTED_PARTS" == 0 ]]; then
                 echo "::error::Checkpoint $CP is incomplete: expected $EXPECTED_PARTS parts, found $ACTUAL_PARTS."
@@ -315,6 +316,8 @@ jobs:
               fi
               echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
               cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
+              # Avoid holding all downloaded checkpoint archives beside the restored build tree.
+              rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
             done
           else
@@ -551,6 +554,7 @@ jobs:
         with:
           name: brave-core2-source-build-${{ github.run_id }}
           path: |
+            pnpm-install.log
             brave-sync.log
             build-deps.log
             brave-build.log
