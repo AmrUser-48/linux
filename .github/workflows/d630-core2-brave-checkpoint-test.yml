@@ -1,0 +1,227 @@
+name: Test Brave checkpoint save and restore
+run-name: "Brave checkpoint round-trip test"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: brave-checkpoint-roundtrip-test
+  cancel-in-progress: false
+
+jobs:
+  save-checkpoint:
+    name: Save a synthetic checkpoint to a temporary release
+    runs-on: ubuntu-22.04
+    outputs:
+      state_tag: ${{ steps.save.outputs.state_tag }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Install zstd if necessary
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends zstd
+          fi
+
+      - name: Archive, compress, split, and upload a test checkpoint
+        id: save
+        shell: bash
+        env:
+          STATE_TAG: core2-brave-checkpoint-test-${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/brave-checkpoint-test"
+          OUT="$WORK/out/Release"
+          PART_DIR="$WORK/parts"
+          FILE_LIST="$WORK/files.list"
+          TREE_LIST="$WORK/source-tree.txt"
+          mkdir -p "$OUT/subdir" "$PART_DIR"
+
+          # Include ordinary text, an incompressible multi-megabyte file, and a symlink.
+          printf 'Brave checkpoint round-trip test, run %s\n' "$GITHUB_RUN_ID" > "$OUT/alpha.txt"
+          dd if=/dev/urandom of="$OUT/subdir/random.bin" bs=1M count=3 status=none
+          ln -s alpha.txt "$OUT/current.txt"
+
+          (cd "$OUT" && find . \\( -type f -o -type l \\) -print0 | sort -z) > "$FILE_LIST"
+          FILE_COUNT="$(tr -cd '\\000' < "$FILE_LIST" | wc -c | awk '{print $1}')"
+          if [[ "$FILE_COUNT" -lt 3 ]]; then
+            echo "::error::Test fixture is incomplete; expected at least 3 files and symlinks."
+            exit 1
+          fi
+
+          # Produce a stable inventory so the restored tree can be compared byte-for-byte.
+          (
+            cd "$OUT"
+            {
+              find . -type f -print0 | sort -z | xargs -0 sha256sum
+              find . -type l -printf 'link %p -> %l\n'
+            } | sort
+          ) > "$TREE_LIST"
+          TREE_SHA256="$(sha256sum "$TREE_LIST" | awk '{print $1}')"
+
+          PREFIX="$PART_DIR/state-c0001-part-"
+          set -o pipefail
+          # Keep this option order aligned with the production workflow.
+          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \\
+            | zstd -T0 -3 -c \\
+            | split -b 1M -d -a 3 - "$PREFIX"
+
+          mapfile -t PARTS < <(find "$PART_DIR" -maxdepth 1 -type f -name 'state-c0001-part-*' -print | sort)
+          PART_COUNT="${#PARTS[@]}"
+          if (( PART_COUNT < 2 )); then
+            echo "::error::Checkpoint did not split into multiple parts; the split/restore path was not exercised."
+            exit 1
+          fi
+
+          # The run-specific release isolates this test from real Brave build-state releases.
+          gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+            --target "$GITHUB_SHA" --title "Temporary checkpoint test $GITHUB_RUN_ID" \\
+            --notes "Disposable synthetic checkpoint used by the Brave save/restore test workflow." --prerelease
+
+          for PART in "${PARTS[@]}"; do
+            echo "Uploading $(basename "$PART") ($(stat -c '%s' "$PART") bytes)"
+            gh release upload "$STATE_TAG" "$PART" --repo "$GITHUB_REPOSITORY"
+          done
+
+          MANIFEST="$PART_DIR/state-c0001-manifest.txt"
+          cat > "$MANIFEST" <<EOF
+          format=1
+          checkpoint=0001
+          fingerprint=test-$GITHUB_RUN_ID
+          file_count=$FILE_COUNT
+          part_count=$PART_COUNT
+          tree_sha256=$TREE_SHA256
+          EOF
+          # Upload the manifest last, like the production workflow, so it marks a complete checkpoint.
+          gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
+
+          {
+            echo "### Synthetic checkpoint saved"
+            echo
+            echo "- Temporary release: `$STATE_TAG`"
+            echo "- Files and symlinks: $FILE_COUNT"
+            echo "- Zstandard split parts: $PART_COUNT"
+            echo "- Manifest uploaded last: yes"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "state_tag=$STATE_TAG" >> "$GITHUB_OUTPUT"
+
+  restore-checkpoint:
+    name: Download and restore the saved checkpoint
+    runs-on: ubuntu-22.04
+    needs: save-checkpoint
+    env:
+      GH_TOKEN: ${{ github.token }}
+      STATE_TAG: ${{ needs.save-checkpoint.outputs.state_tag }}
+    steps:
+      - name: Install zstd if necessary
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends zstd
+          fi
+
+      - name: Download, validate, extract, and compare
+        shell: bash
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/brave-checkpoint-restore"
+          RESTORE_DIR="$WORK/downloads"
+          RESTORED_OUT="$WORK/restored/Release"
+          TREE_LIST="$WORK/restored-tree.txt"
+          mkdir -p "$RESTORE_DIR" "$RESTORED_OUT"
+
+          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+            --json assets --jq '.assets[].name' > "$WORK/assets.txt"
+          grep -qx 'state-c0001-manifest.txt' "$WORK/assets.txt" || {
+            echo "::error::Checkpoint manifest is missing; it should be published only after all parts."
+            exit 1
+          }
+
+          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+            --pattern 'state-c0001-manifest.txt' --dir "$RESTORE_DIR"
+          MANIFEST="$RESTORE_DIR/state-c0001-manifest.txt"
+          EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
+          EXPECTED_FILES="$(sed -n 's/^file_count=//p' "$MANIFEST")"
+          EXPECTED_TREE_SHA256="$(sed -n 's/^tree_sha256=//p' "$MANIFEST")"
+          ACTUAL_ASSET_PARTS="$(grep -Ec '^state-c0001-part-[0-9]{3}$' "$WORK/assets.txt" || true)"
+
+          if [[ -z "$EXPECTED_PARTS" || "$EXPECTED_PARTS" != "$ACTUAL_ASSET_PARTS" ||
+                ! "$EXPECTED_PARTS" =~ ^[1-9][0-9]*$ ]]; then
+            echo "::error::Checkpoint part count mismatch: manifest=$EXPECTED_PARTS, release=$ACTUAL_ASSET_PARTS."
+            exit 1
+          fi
+          if [[ -z "$EXPECTED_FILES" || -z "$EXPECTED_TREE_SHA256" ]]; then
+            echo "::error::Checkpoint manifest is missing file-count or tree-hash metadata."
+            exit 1
+          fi
+
+          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+            --pattern 'state-c0001-part-*' --dir "$RESTORE_DIR"
+          mapfile -t PARTS < <(find "$RESTORE_DIR" -maxdepth 1 -type f -name 'state-c0001-part-*' -print | sort)
+          if (( ${#PARTS[@]} != EXPECTED_PARTS )); then
+            echo "::error::Downloaded part count does not match the manifest."
+            exit 1
+          fi
+
+          set -o pipefail
+          cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$RESTORED_OUT"
+
+          RESTORED_FILES="$(find "$RESTORED_OUT" \\( -type f -o -type l \\) -printf '.' | wc -c | awk '{print $1}')"
+          (
+            cd "$RESTORED_OUT"
+            {
+              find . -type f -print0 | sort -z | xargs -0 sha256sum
+              find . -type l -printf 'link %p -> %l\n'
+            } | sort
+          ) > "$TREE_LIST"
+          RESTORED_TREE_SHA256="$(sha256sum "$TREE_LIST" | awk '{print $1}')"
+
+          if [[ "$RESTORED_FILES" != "$EXPECTED_FILES" ||
+                "$RESTORED_TREE_SHA256" != "$EXPECTED_TREE_SHA256" ]]; then
+            echo "::error::Restored tree does not match the saved checkpoint."
+            echo "Expected files/hash: $EXPECTED_FILES / $EXPECTED_TREE_SHA256"
+            echo "Restored files/hash: $RESTORED_FILES / $RESTORED_TREE_SHA256"
+            exit 1
+          fi
+
+          {
+            echo "### Synthetic checkpoint restored successfully"
+            echo
+            echo "- Temporary release: `$STATE_TAG`"
+            echo "- Files and symlinks verified: $RESTORED_FILES"
+            echo "- Split parts downloaded and concatenated: ${#PARTS[@]}"
+            echo "- Restored tree SHA-256: `$RESTORED_TREE_SHA256`"
+            echo "- Content and symlink targets match: yes"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  cleanup:
+    name: Delete the temporary test release
+    if: always()
+    runs-on: ubuntu-22.04
+    needs:
+      - save-checkpoint
+      - restore-checkpoint
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      STATE_TAG: core2-brave-checkpoint-test-${{ github.run_id }}
+    steps:
+      - name: Remove temporary release and tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+            echo "Deleted temporary test release and tag: $STATE_TAG"
+          else
+            echo "No temporary test release was created; nothing to clean up."
+          fi
