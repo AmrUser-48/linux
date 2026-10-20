@@ -1,0 +1,95 @@
+name: Core 2 optimized Debian package batch
+run-name: "Core2 package batch: ${{ inputs.packages }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "Debian Bookworm source-package names, separated by spaces or commas"
+        required: true
+        type: string
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  resolve-packages:
+    name: Validate package list
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.parse.outputs.packages }}
+    steps:
+      - name: Parse and validate package names
+        id: parse
+        shell: bash
+        env:
+          PACKAGES_INPUT: ${{ inputs.packages }}
+        run: |
+          set -euo pipefail
+          PACKAGES_JSON="$(python3 - <<'PY'
+          import json
+          import os
+          import re
+
+          raw = os.environ.get("PACKAGES_INPUT", "")
+          names = [name for name in re.split(r"[\\s,]+", raw.strip()) if name]
+          if not names:
+              raise SystemExit("No package names provided. Enter names separated by spaces or commas.")
+          invalid = [name for name in names if not re.fullmatch(r"[a-z0-9][a-z0-9+.-]{0,254}", name)]
+          if invalid:
+              raise SystemExit("Invalid Debian source package name(s): " + ", ".join(invalid))
+          unique = list(dict.fromkeys(names))
+          if len(unique) > 20:
+              raise SystemExit(f"Requested {len(unique)} unique packages; the batch limit is 20.")
+          print(json.dumps(unique, separators=(",", ":")))
+          PY
+          )"
+          echo "packages=$PACKAGES_JSON" >> "$GITHUB_OUTPUT"
+
+          python3 - "$PACKAGES_JSON" >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json
+          import sys
+
+          packages = json.loads(sys.argv[1])
+          print("### Core 2 package batch")
+          print()
+          print(f"Validated **{len(packages)}** unique package(s).")
+          print()
+          for package in packages:
+              print(f"- `{package}`")
+          print()
+          print("Builds run at most two at a time. Existing package releases are skipped by the reusable build workflow.")
+          PY
+
+  build-packages:
+    name: "Build ${{ matrix.package }}"
+    needs: resolve-packages
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        package: ${{ fromJSON(needs.resolve-packages.outputs.packages) }}
+    uses: ./.github/workflows/d630-core2-package.yml
+    with:
+      package: ${{ matrix.package }}
+      force_rebuild: false
+      refresh_index: false
+
+  refresh-release-index:
+    name: Refresh Core 2 package index
+    needs:
+      - resolve-packages
+      - build-packages
+    if: ${{ always() && needs.resolve-packages.result == 'success' && needs.build-packages.result != 'cancelled' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rebuild package index after the batch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml \\
+            --repo "$GITHUB_REPOSITORY" --ref master
+          echo "Dispatched the Core 2 release-index refresh."
