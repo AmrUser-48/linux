@@ -17375,6 +17375,18 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### Temporary Brave/Chromium build state v1.97.59 (optimized)
+Published: 2026-10-20 19:55:07 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - temporary brave/chromium build state v1.97.59`
+
+<details><summary>Files (2)</summary>
+
+- [state-c0001-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-manifest.txt)
+- [state-c0001-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-part-000)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-brave-state-v1.97.59)
+
+</details>
+
 ### feh (optimized)
 Version: `3.9.1-2+core2.1~20261020171043` · Published: 2026-10-20 17:12:23 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - feh`
