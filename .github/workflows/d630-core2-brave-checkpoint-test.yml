@@ -48,8 +48,8 @@ jobs:
           dd if=/dev/urandom of="$OUT/subdir/random.bin" bs=1M count=3 status=none
           ln -s alpha.txt "$OUT/current.txt"
 
-          (cd "$OUT" && find . \\( -type f -o -type l \\) -print0 | sort -z) > "$FILE_LIST"
-          FILE_COUNT="$(tr -cd '\\000' < "$FILE_LIST" | wc -c | awk '{print $1}')"
+          (cd "$OUT" && find . \( -type f -o -type l \) -print0 | sort -z) > "$FILE_LIST"
+          FILE_COUNT="$(tr -cd '\000' < "$FILE_LIST" | wc -c | awk '{print $1}')"
           if [[ "$FILE_COUNT" -lt 3 ]]; then
             echo "::error::Test fixture is incomplete; expected at least 3 files and symlinks."
             exit 1
@@ -68,8 +68,8 @@ jobs:
           PREFIX="$PART_DIR/state-c0001-part-"
           set -o pipefail
           # Keep this option order aligned with the production workflow.
-          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \\
-            | zstd -T0 -3 -c \\
+          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
+            | zstd -T0 -3 -c \
             | split -b 1M -d -a 3 - "$PREFIX"
 
           mapfile -t PARTS < <(find "$PART_DIR" -maxdepth 1 -type f -name 'state-c0001-part-*' -print | sort)
@@ -80,8 +80,8 @@ jobs:
           fi
 
           # The run-specific release isolates this test from real Brave build-state releases.
-          gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
-            --target "$GITHUB_SHA" --title "Temporary checkpoint test $GITHUB_RUN_ID" \\
+          gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" --title "Temporary checkpoint test $GITHUB_RUN_ID" \
             --notes "Disposable synthetic checkpoint used by the Brave save/restore test workflow." --prerelease
 
           for PART in "${PARTS[@]}"; do
@@ -138,14 +138,14 @@ jobs:
           TREE_LIST="$WORK/restored-tree.txt"
           mkdir -p "$RESTORE_DIR" "$RESTORED_OUT"
 
-          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
             --json assets --jq '.assets[].name' > "$WORK/assets.txt"
           grep -qx 'state-c0001-manifest.txt' "$WORK/assets.txt" || {
             echo "::error::Checkpoint manifest is missing; it should be published only after all parts."
             exit 1
           }
 
-          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
             --pattern 'state-c0001-manifest.txt' --dir "$RESTORE_DIR"
           MANIFEST="$RESTORE_DIR/state-c0001-manifest.txt"
           EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
@@ -163,7 +163,7 @@ jobs:
             exit 1
           fi
 
-          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
             --pattern 'state-c0001-part-*' --dir "$RESTORE_DIR"
           mapfile -t PARTS < <(find "$RESTORE_DIR" -maxdepth 1 -type f -name 'state-c0001-part-*' -print | sort)
           if (( ${#PARTS[@]} != EXPECTED_PARTS )); then
@@ -174,7 +174,7 @@ jobs:
           set -o pipefail
           cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$RESTORED_OUT"
 
-          RESTORED_FILES="$(find "$RESTORED_OUT" \\( -type f -o -type l \\) -printf '.' | wc -c | awk '{print $1}')"
+          RESTORED_FILES="$(find "$RESTORED_OUT" \( -type f -o -type l \) -printf '.' | wc -c | awk '{print $1}')"
           (
             cd "$RESTORED_OUT"
             {
