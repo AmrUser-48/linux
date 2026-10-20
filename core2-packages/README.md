@@ -8657,7 +8657,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Applications &amp; utilities (152 top-level packages)</summary>
+<summary>Applications &amp; utilities (153 top-level packages)</summary>
 
 <details>
 <summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
@@ -11086,6 +11086,23 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>tilda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.4-1</code></summary>
+
+**Download files**
+- [tilda_1.5.4-1+core2.1.20261020154326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tilda-1.5.4-1-core2.1-20261020154326/tilda_1.5.4-1%2Bcore2.1.20261020154326_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tilda-1.5.4-1-core2.1-20261020154326)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+- [libx11-6 — 2:1.8.4-2+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846/libx11-6_1.8.4-2%2Bdeb12u2%2Bcore2.1.20261016131846_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>tumbler-plugins-extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.18.0-1</code></summary>
 
 **Download files**
@@ -11793,7 +11810,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 751.
+**Unique binary packages indexed:** 752.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -11802,6 +11819,20 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### tilda (optimized)
+Version: `1.5.4-1+core2.1~20261020154326` · Published: 2026-10-20 15:44:35 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tilda`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tilda-1.5.4-1-core2.1-20261020154326/BUILD-INFO.txt)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-tilda-1.5.4-1-core2.1-20261020154326/release-notes.md)
+- [SHA256SUMS-core2-tilda.txt](https://github.com/AmrUser-48/linux/releases/download/core2-tilda-1.5.4-1-core2.1-20261020154326/SHA256SUMS-core2-tilda.txt)
+- [tilda_1.5.4-1+core2.1.20261020154326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tilda-1.5.4-1-core2.1-20261020154326/tilda_1.5.4-1%2Bcore2.1.20261020154326_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tilda-1.5.4-1-core2.1-20261020154326)
+
+</details>
+
 ### rust-bat (optimized)
 Version: `0.22.1-4+core2.1~20261018000710` · Published: 2026-10-18 00:12:44 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-bat`
