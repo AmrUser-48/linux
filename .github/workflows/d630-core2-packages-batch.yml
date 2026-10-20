@@ -33,7 +33,7 @@ jobs:
           import re
 
           raw = os.environ.get("PACKAGES_INPUT", "")
-          names = [name for name in re.split(r"[\\s,]+", raw.strip()) if name]
+          names = [name for name in re.split(r"[\s,]+", raw.strip()) if name]
           if not names:
               raise SystemExit("No package names provided. Enter names separated by spaces or commas.")
           invalid = [name for name in names if not re.fullmatch(r"[a-z0-9][a-z0-9+.-]{0,254}", name)]
@@ -90,6 +90,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          gh workflow run d630-core2-update-release-index.yml \\
+          gh workflow run d630-core2-update-release-index.yml \
             --repo "$GITHUB_REPOSITORY" --ref master
           echo "Dispatched the Core 2 release-index refresh."
