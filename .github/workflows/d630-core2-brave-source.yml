@@ -604,7 +604,7 @@ jobs:
 
           PREFIX="$PART_DIR/state-c${NEXT_CHECKPOINT}-part-"
           set -o pipefail
-          tar --create --file=- --directory="$OUT" --null --files-from="$FILE_LIST" --no-recursion \
+          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
             | zstd -T0 -3 -c \
             | split -b 1700M -d -a 3 - "$PREFIX"
 
