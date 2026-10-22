@@ -12221,7 +12221,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Applications &amp; utilities (239 top-level packages)</summary>
+<summary>Applications &amp; utilities (240 top-level packages)</summary>
 
 <details>
 <summary><code>7zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.01+really26.02+dfsg-0+deb12u1</code></summary>
@@ -16208,6 +16208,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>sfk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.0.0+git50bbdede-1</code></summary>
+
+**Download files**
+- [sfk_2.0.0+git50bbdede-1+core2.1.20261022175640_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/sfk_2.0.0%2Bgit50bbdede-1%2Bcore2.1.20261022175640_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sfk-2.0.0-git50bbdede-20261022175640)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>slsh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3-3</code></summary>
 
 **Download files**
@@ -17366,7 +17379,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 1078.
+**Unique binary packages indexed:** 1079.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -17375,14 +17388,69 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### sfk (optimized)
+Published: 2026-10-22 17:57:32 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sfk`
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/BUILD-INFO.txt)
+- [ldd.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/ldd.txt)
+- [package-smoke.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/package-smoke.txt)
+- [sfk-core2-amd64](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/sfk-core2-amd64)
+- [sfk-smoke.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/sfk-smoke.txt)
+- [sfk_2.0.0+git50bbdede-1+core2.1.20261022175640_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/sfk_2.0.0%2Bgit50bbdede-1%2Bcore2.1.20261022175640_amd64.deb)
+- [SHA256SUMS.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175640/SHA256SUMS.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sfk-2.0.0-git50bbdede-20261022175640)
+
+</details>
+
+### sfk (optimized)
+Published: 2026-10-22 17:57:16 UTC
+
+<details><summary>Files (7)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/BUILD-INFO.txt)
+- [ldd.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/ldd.txt)
+- [package-smoke.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/package-smoke.txt)
+- [sfk-core2-amd64](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/sfk-core2-amd64)
+- [sfk-smoke.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/sfk-smoke.txt)
+- [sfk_2.0.0+git50bbdede-1+core2.1.20261022175627_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/sfk_2.0.0%2Bgit50bbdede-1%2Bcore2.1.20261022175627_amd64.deb)
+- [SHA256SUMS.txt](https://github.com/AmrUser-48/linux/releases/download/core2-sfk-2.0.0-git50bbdede-20261022175627/SHA256SUMS.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sfk-2.0.0-git50bbdede-20261022175627)
+
+</details>
+
 ### Temporary Brave/Chromium build state v1.97.59 (optimized)
 Published: 2026-10-20 19:55:07 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - temporary brave/chromium build state v1.97.59`
 
-<details><summary>Files (2)</summary>
+<details><summary>Files (24)</summary>
 
 - [state-c0001-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-manifest.txt)
 - [state-c0001-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-part-000)
+- [state-c0002-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0002-manifest.txt)
+- [state-c0002-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0002-part-000)
+- [state-c0003-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0003-manifest.txt)
+- [state-c0003-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0003-part-000)
+- [state-c0004-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0004-manifest.txt)
+- [state-c0004-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0004-part-000)
+- [state-c0005-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0005-manifest.txt)
+- [state-c0005-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0005-part-000)
+- [state-c0006-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0006-manifest.txt)
+- [state-c0006-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0006-part-000)
+- [state-c0007-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0007-manifest.txt)
+- [state-c0007-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0007-part-000)
+- [state-c0008-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0008-manifest.txt)
+- [state-c0008-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0008-part-000)
+- [state-c0009-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0009-manifest.txt)
+- [state-c0009-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0009-part-000)
+- [state-c0010-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0010-manifest.txt)
+- [state-c0010-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0010-part-000)
+- [state-c0011-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0011-manifest.txt)
+- [state-c0011-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0011-part-000)
+- [state-c0012-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0012-manifest.txt)
+- [state-c0012-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0012-part-000)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-brave-state-v1.97.59)
 
 </details>
