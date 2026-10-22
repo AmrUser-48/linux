@@ -1,3 +1,11 @@
+
+      - name: Refresh Core 2 package index
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
 name: Build SFK for Intel Core 2
 run-name: "SFK Core 2 build ${{ github.run_number }}"
 
@@ -64,8 +72,8 @@ jobs:
           g++ -O2 -pipe -march=core2 -mtune=core2 -Isrc -s \
             src/sfk.cpp src/sfkext.cpp src/sfkpack.cpp -o sfk
 
-          ./sfk version > "$OUT/sfk-version.txt" 2>&1
-          grep -Eiq 'SFK|version|2\.0\.0' "$OUT/sfk-version.txt"
+          ./sfk echo SFK_CORE2_SMOKE > "$OUT/sfk-smoke.txt" 2>&1
+          grep -Fq 'SFK_CORE2_SMOKE' "$OUT/sfk-smoke.txt"
           file sfk | tee "$OUT/file.txt"
           grep -q 'ELF 64-bit' "$OUT/file.txt"
           readelf -lW sfk | grep -q 'INTERP'
@@ -96,8 +104,8 @@ jobs:
           dpkg-deb -I "$OUT/sfk_${PACKAGE_VERSION}_amd64.deb"
           mkdir -p "$RUNNER_TEMP/package-test"
           dpkg-deb -x "$OUT/sfk_${PACKAGE_VERSION}_amd64.deb" "$RUNNER_TEMP/package-test"
-          "$RUNNER_TEMP/package-test/usr/bin/sfk" version > "$OUT/package-version-test.txt" 2>&1
-          grep -Eiq 'SFK|version|2\.0\.0' "$OUT/package-version-test.txt"
+          "$RUNNER_TEMP/package-test/usr/bin/sfk" echo SFK_CORE2_PACKAGE_SMOKE > "$OUT/package-smoke.txt" 2>&1
+          grep -Fq 'SFK_CORE2_PACKAGE_SMOKE' "$OUT/package-smoke.txt"
 
           {
             echo "Package: sfk"
@@ -110,6 +118,7 @@ jobs:
             echo "Linkage: dynamic (not static)"
             echo "Runtime dependencies:"
             cat "$OUT/ldd.txt"
+            echo "Smoke test: sfk echo passed on the build binary and extracted .deb"
             echo "Built: $(date -u --iso-8601=seconds)"
           } > "$OUT/BUILD-INFO.txt"
 
@@ -127,7 +136,7 @@ jobs:
           EOF
 
           cd "$OUT"
-          sha256sum sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt sfk-version.txt > SHA256SUMS.txt
+          sha256sum sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt > SHA256SUMS.txt
           echo "package_version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
           echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
           ls -lh sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt SHA256SUMS.txt
@@ -141,8 +150,8 @@ jobs:
             dist/sfk-core2-amd64
             dist/BUILD-INFO.txt
             dist/ldd.txt
-            dist/sfk-version.txt
-            dist/package-version-test.txt
+            dist/sfk-smoke.txt
+            dist/package-smoke.txt
             dist/SHA256SUMS.txt
             dist/release-notes.md
           if-no-files-found: error
@@ -153,6 +162,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      actions: write
       contents: write
     env:
       GH_TOKEN: ${{ github.token }}
