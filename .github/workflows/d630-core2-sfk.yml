@@ -1,0 +1,183 @@
+name: Build SFK for Intel Core 2
+run-name: "SFK Core 2 build ${{ github.run_number }}"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-sfk.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build dynamic SFK binary and Debian package
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      SFK_SOURCE_COMMIT: 50bbdede80f96ab7cd14d179a8035692842ea04b
+    outputs:
+      package_version: ${{ steps.package.outputs.package_version }}
+      release_tag: ${{ steps.package.outputs.release_tag }}
+    steps:
+      - name: Install compiler and packaging tools
+        shell: bash
+        run: |
+          set -euxo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends build-essential binutils ca-certificates dpkg-dev file git
+
+      - name: Fetch pinned upstream source
+        shell: bash
+        run: |
+          set -euxo pipefail
+          SRC="$RUNNER_TEMP/sfk-source"
+          mkdir -p "$SRC"
+          git -C "$SRC" init
+          git -C "$SRC" remote add origin https://github.com/sfktools/swissfileknife.git
+          git -C "$SRC" fetch --depth=1 origin "$SFK_SOURCE_COMMIT"
+          git -C "$SRC" checkout --detach FETCH_HEAD
+          test "$(git -C "$SRC" rev-parse HEAD)" = "$SFK_SOURCE_COMMIT"
+
+      - name: Compile, test and package
+        id: package
+        shell: bash
+        run: |
+          set -euxo pipefail
+          SRC="$RUNNER_TEMP/sfk-source"
+          OUT="$GITHUB_WORKSPACE/dist"
+          ROOT="$RUNNER_TEMP/sfk-package"
+          BUILD_ID="$(date -u +%Y%m%d%H%M%S)"
+          PACKAGE_VERSION="2.0.0+git50bbdede-1+core2.1~$BUILD_ID"
+          RELEASE_TAG="core2-sfk-2.0.0-git50bbdede-$BUILD_ID"
+          mkdir -p "$OUT"
+          cd "$SRC"
+
+          # Upstream Unix build; no -static and no libcurl/wget linkage.
+          g++ -O2 -pipe -march=core2 -mtune=core2 -Isrc -s \
+            src/sfk.cpp src/sfkext.cpp src/sfkpack.cpp -o sfk
+
+          ./sfk version > "$OUT/sfk-version.txt" 2>&1
+          grep -Eiq 'SFK|version|2\.0\.0' "$OUT/sfk-version.txt"
+          file sfk | tee "$OUT/file.txt"
+          grep -q 'ELF 64-bit' "$OUT/file.txt"
+          readelf -lW sfk | grep -q 'INTERP'
+          ldd sfk | tee "$OUT/ldd.txt"
+          ! grep -q 'not a dynamic executable' "$OUT/ldd.txt"
+          ! grep -q 'not found' "$OUT/ldd.txt"
+
+          install -Dm0755 sfk "$OUT/sfk-core2-amd64"
+          install -Dm0755 sfk "$ROOT/usr/bin/sfk"
+          install -Dm0644 "$SRC/bsd-license.txt" "$ROOT/usr/share/doc/sfk/copyright"
+          install -Dm0644 "$SRC/README.md" "$ROOT/usr/share/doc/sfk/README.upstream"
+          install -Dm0644 "$SRC/changes.txt" "$ROOT/usr/share/doc/sfk/changelog.upstream"
+          install -d "$ROOT/DEBIAN"
+          cat > "$ROOT/DEBIAN/control" <<EOF
+          Package: sfk
+          Version: $PACKAGE_VERSION
+          Section: utils
+          Priority: optional
+          Architecture: amd64
+          Maintainer: AmrUser-48 <66784815+AmrUser-48@users.noreply.github.com>
+          Depends: libc6, libgcc-s1, libstdc++6
+          Description: Swiss File Knife command-line toolkit
+           More than 100 tools for search, replace, conversion, archive operations,
+           checksums and network transfer. Built for Intel Core 2 amd64 systems.
+          EOF
+
+          dpkg-deb --build --root-owner-group "$ROOT" "$OUT/sfk_${PACKAGE_VERSION}_amd64.deb"
+          dpkg-deb -I "$OUT/sfk_${PACKAGE_VERSION}_amd64.deb"
+          mkdir -p "$RUNNER_TEMP/package-test"
+          dpkg-deb -x "$OUT/sfk_${PACKAGE_VERSION}_amd64.deb" "$RUNNER_TEMP/package-test"
+          "$RUNNER_TEMP/package-test/usr/bin/sfk" version > "$OUT/package-version-test.txt" 2>&1
+          grep -Eiq 'SFK|version|2\.0\.0' "$OUT/package-version-test.txt"
+
+          {
+            echo "Package: sfk"
+            echo "Package version: $PACKAGE_VERSION"
+            echo "Upstream repository: https://github.com/sfktools/swissfileknife"
+            echo "Upstream commit: $SFK_SOURCE_COMMIT"
+            echo "Target: amd64 / Intel Core 2"
+            echo "Compiler: $(g++ --version | head -n 1)"
+            echo "Flags: -O2 -pipe -march=core2 -mtune=core2"
+            echo "Linkage: dynamic (not static)"
+            echo "Runtime dependencies:"
+            cat "$OUT/ldd.txt"
+            echo "Built: $(date -u --iso-8601=seconds)"
+          } > "$OUT/BUILD-INFO.txt"
+
+          cat > "$OUT/release-notes.md" <<EOF
+          ## Swiss File Knife for Intel Core 2
+
+          Built for Debian 12 Bookworm / amd64 from pinned upstream commit `$SFK_SOURCE_COMMIT`.
+
+          - Compiler flags: `-O2 -pipe -march=core2 -mtune=core2`
+          - Dynamically linked against Debian system libraries; no static executable.
+          - Debian package: `sfk`, including upstream license and changelog.
+          - Runtime dependencies: `libc6`, `libgcc-s1`, `libstdc++6`.
+          - Both the binary and installed package were smoke-tested before publication.
+          - `sfk-core2-amd64` is the standalone dynamically linked executable.
+          EOF
+
+          cd "$OUT"
+          sha256sum sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt sfk-version.txt > SHA256SUMS.txt
+          echo "package_version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+          ls -lh sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt SHA256SUMS.txt
+
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: sfk-core2-${{ github.run_id }}
+          path: |
+            dist/sfk_*.deb
+            dist/sfk-core2-amd64
+            dist/BUILD-INFO.txt
+            dist/ldd.txt
+            dist/sfk-version.txt
+            dist/package-version-test.txt
+            dist/SHA256SUMS.txt
+            dist/release-notes.md
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    name: Publish SFK release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
+      PACKAGE_VERSION: ${{ needs.build.outputs.package_version }}
+    steps:
+      - name: Download tested build
+        uses: actions/download-artifact@v4
+        with:
+          name: sfk-core2-${{ github.run_id }}
+          path: dist
+
+      - name: Publish release assets
+        shell: bash
+        run: |
+          set -euxo pipefail
+          gh release create "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "SFK $PACKAGE_VERSION - Intel Core 2" \
+            --notes-file dist/release-notes.md \
+            dist/*.deb \
+            dist/sfk-core2-amd64 \
+            dist/BUILD-INFO.txt \
+            dist/ldd.txt \
+            dist/sfk-version.txt \
+            dist/package-version-test.txt \
+            dist/SHA256SUMS.txt
