@@ -12,7 +12,52 @@ permissions:
   contents: read
 
 jobs:
+  release-check:
+    name: Repair or detect existing build for this SFK source
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      published: ${{ steps.check.outputs.published }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SFK_SOURCE_COMMIT: 50bbdede80f96ab7cd14d179a8035692842ea04b
+      SFK_RELEASE_VERSION: 2.0.0
+    steps:
+      - name: Check pinned source release and repair release notes
+        id: check
+        shell: bash
+        run: |
+          set -euo pipefail
+          short_commit="${SFK_SOURCE_COMMIT:0:8}"
+          prefix="core2-sfk-${SFK_RELEASE_VERSION}-git${short_commit}-"
+          releases="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" | jq -s 'flatten')"
+          tag="$(jq -r --arg prefix "$prefix" '[.[] | select(((.tag_name // "") | startswith($prefix)))] | sort_by(.created_at) | last | .tag_name // ""' <<<"$releases")"
+          if [[ -z "$tag" ]]; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat > "$RUNNER_TEMP/sfk-release-notes.md" <<EOF
+          ## Swiss File Knife for Intel Core 2
+
+          Built for Debian 12 Bookworm / amd64 from pinned upstream commit: $SFK_SOURCE_COMMIT.
+
+          - Compiler flags: -O2 -pipe -march=core2 -mtune=core2
+          - Dynamically linked against Debian system libraries; not a static executable.
+          - Debian package: sfk, including the upstream license and changelog.
+          - Runtime dependencies: libc6, libgcc-s1, libstdc++6.
+          - The build binary and extracted Debian package both passed the sfk echo smoke test.
+          - The release includes the standalone executable, .deb, linkage report, build metadata, and SHA-256 checksums.
+          EOF
+          gh release edit "$tag" --repo "$GITHUB_REPOSITORY" \
+            --title "SFK 2.0.0 - Intel Core 2" \
+            --notes-file "$RUNNER_TEMP/sfk-release-notes.md"
+          echo "published=true" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: release-check
+    if: needs.release-check.outputs.published != 'true'
     name: Build dynamic SFK binary and Debian package
     runs-on: ubuntu-22.04
     timeout-minutes: 30
@@ -117,18 +162,18 @@ jobs:
           cat > "$OUT/release-notes.md" <<EOF
           ## Swiss File Knife for Intel Core 2
 
-          Built for Debian 12 Bookworm / amd64 from pinned upstream commit `$SFK_SOURCE_COMMIT`.
+          Built for Debian 12 Bookworm / amd64 from pinned upstream commit: $SFK_SOURCE_COMMIT.
 
-          - Compiler flags: `-O2 -pipe -march=core2 -mtune=core2`
+          - Compiler flags: -O2 -pipe -march=core2 -mtune=core2
           - Dynamically linked against Debian system libraries; no static executable.
-          - Debian package: `sfk`, including upstream license and changelog.
-          - Runtime dependencies: `libc6`, `libgcc-s1`, `libstdc++6`.
-          - Both the binary and installed package were smoke-tested before publication.
-          - `sfk-core2-amd64` is the standalone dynamically linked executable.
+          - Debian package: sfk, including the upstream license and changelog.
+          - Runtime dependencies: libc6, libgcc-s1, libstdc++6.
+          - Both the binary and installed package passed the sfk echo smoke test.
+          - sfk-core2-amd64 is the standalone dynamically linked executable.
           EOF
 
           cd "$OUT"
-          sha256sum sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt > SHA256SUMS.txt
+          sha256sum sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt sfk-smoke.txt package-smoke.txt > SHA256SUMS.txt
           echo "package_version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
           echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
           ls -lh sfk_*.deb sfk-core2-amd64 BUILD-INFO.txt ldd.txt SHA256SUMS.txt
