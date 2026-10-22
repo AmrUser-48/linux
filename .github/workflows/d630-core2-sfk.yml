@@ -1,11 +1,3 @@
-
-      - name: Refresh Core 2 package index
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
 name: Build SFK for Intel Core 2
 run-name: "SFK Core 2 build ${{ github.run_number }}"
 
@@ -188,6 +180,14 @@ jobs:
             dist/sfk-core2-amd64 \
             dist/BUILD-INFO.txt \
             dist/ldd.txt \
-            dist/sfk-version.txt \
-            dist/package-version-test.txt \
+            dist/sfk-smoke.txt \
+            dist/package-smoke.txt \
             dist/SHA256SUMS.txt
+      - name: Refresh Core 2 package index
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
+
