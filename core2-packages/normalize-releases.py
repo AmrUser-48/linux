@@ -294,11 +294,11 @@ def main():
                 old_body, info_values,
             )
             metadata["primary_binary"] = primary_binary
-            body = body.replace(
-                json.dumps(metadata, sort_keys=True, ensure_ascii=False, separators=(",", ":")),
-                json.dumps(metadata, sort_keys=True, ensure_ascii=False, separators=(",", ":")),
-                1,
-            )
+            old_marker = body.splitlines()[0]
+            new_marker = "<!-- core2-release-metadata: " + json.dumps(
+                metadata, sort_keys=True, ensure_ascii=False, separators=(",", ":")
+            ) + " -->"
+            body = body.replace(old_marker, new_marker, 1)
             title = f"{display} {package_version} (Intel Core 2 · Debian 12)"
             with tempfile.TemporaryDirectory(prefix="core2-release-notes-") as temp:
                 notes_path = pathlib.Path(temp) / "release-notes.md"
