@@ -239,7 +239,7 @@ def release_notes(package, source_version, package_version, kind, description, p
             f"- Compiler flags: `{flags}`.",
             f"- Linkage: {linkage}; linked against Debian system libraries.",
             (f"- Debian runtime dependencies: `{depends}`." if depends else
-             "- Runtime dependencies are declared in the Debian package control metadata; install the .deb with APT to resolve them."),",
+             "- Runtime dependencies are declared in the Debian package control metadata; install the .deb with APT to resolve them."),
             f"- {smoke.rstrip('.')}.",
             "- The release includes the Debian package, standalone executable, build metadata, linkage report, smoke-test output, and checksums where attached.",
         ])
