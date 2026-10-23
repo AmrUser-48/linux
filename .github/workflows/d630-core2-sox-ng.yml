@@ -74,19 +74,19 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
-      SOURCE_REF: ${{ inputs.source_ref }}
-      CFLAGS_APPEND: ${{ inputs.cflags_append }}
-      CXXFLAGS_APPEND: ${{ inputs.cxxflags_append }}
-      CPPFLAGS_APPEND: ${{ inputs.cppflags_append }}
-      LDFLAGS_APPEND: ${{ inputs.ldflags_append }}
-      SOX_NG_CONFIGURE_FLAGS: ${{ inputs.configure_flags }}
-      BUILD_JOBS: ${{ inputs.build_jobs }}
-      DEB_CFLAGS_MAINT_APPEND: ${{ inputs.cflags_append }}
-      DEB_CXXFLAGS_MAINT_APPEND: ${{ inputs.cxxflags_append }}
-      DEB_CPPFLAGS_MAINT_APPEND: ${{ inputs.cppflags_append }}
-      DEB_LDFLAGS_MAINT_APPEND: ${{ inputs.ldflags_append }}
-      DEB_BUILD_MAINT_OPTIONS: ${{ inputs.hardening_options }}
-      DEB_BUILD_OPTIONS: ${{ inputs.deb_build_options }}
+      SOURCE_REF: ${{ inputs.source_ref || 'sox_ng-14.8.1' }}
+      CFLAGS_APPEND: ${{ inputs.cflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
+      CXXFLAGS_APPEND: ${{ inputs.cxxflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
+      CPPFLAGS_APPEND: ${{ inputs.cppflags_append || '' }}
+      LDFLAGS_APPEND: ${{ inputs.ldflags_append || '' }}
+      SOX_NG_CONFIGURE_FLAGS: ${{ inputs.configure_flags || '--with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng' }}
+      BUILD_JOBS: ${{ inputs.build_jobs || '4' }}
+      DEB_CFLAGS_MAINT_APPEND: ${{ inputs.cflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
+      DEB_CXXFLAGS_MAINT_APPEND: ${{ inputs.cxxflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
+      DEB_CPPFLAGS_MAINT_APPEND: ${{ inputs.cppflags_append || '' }}
+      DEB_LDFLAGS_MAINT_APPEND: ${{ inputs.ldflags_append || '' }}
+      DEB_BUILD_MAINT_OPTIONS: ${{ inputs.hardening_options || 'hardening=+all' }}
+      DEB_BUILD_OPTIONS: ${{ inputs.deb_build_options || 'noautodbgsym' }}
       GH_TOKEN: ${{ github.token }}
 
     steps:
