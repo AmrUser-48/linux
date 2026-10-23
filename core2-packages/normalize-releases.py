@@ -309,6 +309,8 @@ def main():
             if int(existing_metadata.get("schema_version", 0) or 0) >= 2:
                 skipped += 1
                 continue
+        else:
+            existing_metadata = {}
         try:
             info_asset = next((a for a in assets if str(a.get("name") or "").lower() == "build-info.txt"), None)
             flags_asset = next((a for a in assets if str(a.get("name") or "").lower() == "core2-flags.txt"), None)
