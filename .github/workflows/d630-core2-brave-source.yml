@@ -301,19 +301,48 @@ jobs:
           NEXT_NUM=$((10#$MAX_ASSET_CP + 1))
           printf -v NEXT_CP '%04d' "$NEXT_NUM"
 
-          mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\.txt$/\1/p' "$ASSET_LIST" | sort -u)
+          mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\\.txt$/\\1/p' "$ASSET_LIST" | sort -u)
           LAST_CP=0000
           if [[ "$RELEASE_EXISTS" == true && ${#COMPLETE_IDS[@]} -gt 0 ]]; then
-            echo "Found state release $STATE_TAG; restoring completed checkpoint deltas."
+            # A full snapshot contains the complete output tree. Do not download
+            # or apply deltas from before the newest full snapshot.
+            MANIFEST_PROBE="$RUNNER_TEMP/brave-state-manifest-probe"
+            mkdir -p "$MANIFEST_PROBE"
+            BASE_CP=""
             for CP in "${COMPLETE_IDS[@]}"; do
-              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+              if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+                --pattern "state-c${CP}-manifest.txt" --dir "$MANIFEST_PROBE"; then
+                if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
+                  BASE_CP="$CP"
+                fi
+              else
+                echo "::warning::Could not inspect old checkpoint manifest $CP; it will not be restored."
+              fi
+            done
+            if [[ -z "$BASE_CP" ]]; then
+              echo "::error::No downloadable full-snapshot checkpoint exists; refusing to restore an incomplete chain."
+              exit 1
+            fi
+
+            RESTORE_IDS=()
+            for CP in "${COMPLETE_IDS[@]}"; do
+              if [[ "$CP" < "$BASE_CP" ]]; then
+                echo "Skipping superseded checkpoint $CP; full snapshot $BASE_CP replaces it."
+              else
+                RESTORE_IDS+=("$CP")
+              fi
+            done
+            echo "Restoring from full snapshot $BASE_CP and subsequent deltas only."
+
+            for CP in "${RESTORE_IDS[@]}"; do
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
                 --pattern "state-c${CP}-manifest.txt" --dir "$STATE_DIR"
               MANIFEST="$STATE_DIR/state-c${CP}-manifest.txt"
 
               if ! grep -qx "fingerprint=$FINGERPRINT" "$MANIFEST"; then
                 echo "::error::Checkpoint $CP is incompatible with current Brave/Chromium source or build configuration."
                 echo "Expected fingerprint: $FINGERPRINT"
-                grep -E '^(upstream_tag|chromium_revision|fingerprint)=' "$MANIFEST" || true
+                grep -E '^(upstream_tag|chromium_revision|fingerprint|full_snapshot)=' "$MANIFEST" || true
                 exit 1
               fi
               EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
@@ -323,7 +352,7 @@ jobs:
                 exit 1
               fi
 
-              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
                 --pattern "state-c${CP}-part-*" --dir "$STATE_DIR"
               mapfile -t PARTS < <(find "$STATE_DIR" -maxdepth 1 -type f -name "state-c${CP}-part-*" -print | sort)
               if (( ${#PARTS[@]} != EXPECTED_PARTS )); then
@@ -332,10 +361,10 @@ jobs:
               fi
               echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
               cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
-              # Avoid holding all downloaded checkpoint archives beside the restored build tree.
               rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
             done
+            rm -rf "$MANIFEST_PROBE"
           else
             echo "No completed checkpoint found; this run starts the first saved build segment."
           fi
@@ -721,21 +750,32 @@ jobs:
             if [[ "$ASSET_NAME" =~ ^state-c([0-9]{4})-(manifest\.txt|part-[0-9]{3})$ ]]; then
               CP="${BASH_REMATCH[1]}"
               if [[ "$CP" != "$PRESERVE_CHECKPOINT" ]]; then
-                echo "Deleting superseded checkpoint asset $ASSET_NAME"
-                gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$ASSET_ID"
+                echo "Deleting superseded checkpoint asset $ASSET_NAME (ID $ASSET_ID)"
+                if gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$ASSET_ID" >/dev/null; then
+                  echo "Deleted $ASSET_NAME."
+                else
+                  echo "::warning::GitHub refused to delete $ASSET_NAME (ID $ASSET_ID); this is non-fatal because checkpoint $PRESERVE_CHECKPOINT is a verified full snapshot."
+                fi
               fi
             fi
           done < "$ASSETS"
-          echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; removed older deltas."
+          REMAINING_OLD="$(gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | grep -Ec '^state-c(000[1-9]|00[1-9][0-9])-((manifest\\.txt)|part-[0-9]{3})
+
+ || true)"
+          if [[ "$REMAINING_OLD" != "0" ]]; then
+            echo "::warning::$REMAINING_OLD superseded checkpoint assets remain in the release; restore will ignore those before full snapshot $PRESERVE_CHECKPOINT."
+          else
+            echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; older deltas removed."
+          fi
 
       - name: Queue the next Brave compilation session
-        if: success() && steps.compile.outputs.checkpoint == 'true' && steps.save_state.outcome == 'success'
+        if: success() && steps.save_state.outcome == 'success' && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true')
         shell: bash
         env:
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
         run: |
           set -euo pipefail
-          echo "Checkpoint is durable; queueing the next runner session for Brave $UPSTREAM_VERSION."
+          echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION."
           gh workflow run d630-core2-brave-source.yml \
             --repo "$GITHUB_REPOSITORY" --ref master \
             -f version="$UPSTREAM_VERSION"
