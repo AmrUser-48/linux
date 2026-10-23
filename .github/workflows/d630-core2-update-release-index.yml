@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: core2-release-index-sparse
+  group: core2-release-index-normalize-v2
   cancel-in-progress: false
 
 jobs:
@@ -26,6 +26,7 @@ jobs:
     steps:
       - name: Checkout latest master
         uses: actions/checkout@v4
+        timeout-minutes: 5
         with:
           ref: master
           fetch-depth: 1
