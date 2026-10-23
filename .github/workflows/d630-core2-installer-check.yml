@@ -8,6 +8,10 @@ on:
       - "core2-packages/README.md"
       - "core2-packages/install.py"
       - "core2-packages/update-index.py"
+      - "core2-packages/release-notes.py"
+      - "core2-packages/normalize-releases.py"
+      - ".github/workflows/d630-core2-sox-ng.yml"
+      - ".github/workflows/d630-core2-normalize-releases.yml"
       - ".github/workflows/d630-core2-installer-check.yml"
       - ".github/workflows/build-with-deps.yml"
       - ".github/workflows/d630-core2-package.yml"
@@ -49,13 +53,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check Python syntax
-        run: python3 -m py_compile core2-packages/install.py core2-packages/update-index.py
+        run: python3 -m py_compile core2-packages/install.py core2-packages/update-index.py core2-packages/release-notes.py core2-packages/normalize-releases.py
 
       - name: Parse affected package workflows as YAML
         shell: bash
         run: |
           set -euo pipefail
-          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/build-with-deps.yml .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path, aliases: true); puts "YAML OK: #{path}" }' .github/workflows/build-with-deps.yml .github/workflows/d630-core2-package.yml .github/workflows/d630-core2-system-package.yml .github/workflows/d630-core2-recover-release.yml .github/workflows/d630-core2-prune-dev-debug.yml .github/workflows/d630-core2-update-package.yml .github/workflows/d630-core2-update-release-index.yml .github/workflows/d630-core2-packages-series.yml .github/workflows/d630-core2-system-packages-series.yml .github/workflows/d630-core2-rustdesk.yml .github/workflows/d630-core2-sox-ng.yml .github/workflows/d630-core2-normalize-releases.yml
 
       - name: Validate Bookworm video package source queue
         shell: bash
@@ -148,7 +152,7 @@ jobs:
               "Mesa config enables Crocus and i915 for GM965/X3100 without LLVM": "CORE2_D630_NO_LLVM" in builder and "GALLIUM_DRIVERS := swrast crocus i915" in builder,
               "Mesa disables Vulkan driver output": "VULKAN_DRIVERS :=" in builder and "VULKAN_LAYERS :=" in builder,
               "Mesa release rejects libllvm15 dependencies": 'grep -qw "libllvm15"' in builder,
-              "Mesa package validation requires Crocus for GM965": 'grep -q "/crocus_dri.so"' in builder,
+              "Mesa package validation requires Crocus for GM965": 'grep "/crocus_dri.so"' in builder and 'LLVM-free Mesa artifact omitted the required Intel Crocus Gallium driver' in builder,
               "mesa-no-llvm forces a replacement build": '"mesa-no-llvm" ]] && force_rebuild=true' in workflow,
           }
           for label, passed in required_mesa_contract.items():
