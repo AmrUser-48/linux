@@ -69,6 +69,18 @@ def request_json(url):
     return json.loads(request_bytes(url).decode("utf-8"))
 
 def package_and_version(release):
+    body = str(release.get("body") or "")
+    marker = re.search(r"(?m)^<!-- core2-release-metadata: (\{.*\}) -->$", body)
+    if marker:
+        try:
+            metadata = json.loads(marker.group(1))
+        except (json.JSONDecodeError, TypeError):
+            metadata = {}
+        package = str(metadata.get("source_package") or "").strip().lower()
+        version = str(metadata.get("package_version") or "").strip()
+        if package:
+            return package, version or None
+
     title = str(release.get("name") or "").strip()
     for prefix in ("Core 2 optimized ", "Core 2 system ", "Core 2 source-built "):
         if title.lower().startswith(prefix.lower()):

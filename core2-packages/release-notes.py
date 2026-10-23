@@ -107,7 +107,7 @@ def main() -> int:
     display = human_name(package)
     release_title = f"{display} {package_version} (Intel Core 2 · Debian 12)"
     metadata = {
-        "schema_version": 2,
+        "schema_version": 3,
         "source_package": package,
         "display_name": display,
         "source_version": source_version,
@@ -142,9 +142,15 @@ def main() -> int:
         "",
         f"- **Package build version:** `{package_version}`",
         "- **Target:** Debian 12 Bookworm, amd64, Intel Core 2 family.",
-        f"- **Compiler profile:** `{compiler_profile}`.",
-        "- Debian compiler/linker hardening defaults are retained. See `BUILD-INFO.txt` for the effective CFLAGS and CXXFLAGS used by the build.",
     ]
+    standard_profiles = {
+        "-O2 -march=core2 -mtune=core2",
+        "-O2 -pipe -march=core2 -mtune=core2",
+    }
+    if package.lower() == "sox-ng" or compiler_profile not in standard_profiles:
+        lines.append(f"- **Package-specific compiler profile:** `{compiler_profile}`.")
+    if package.lower() == "sox-ng":
+        lines.append("- Debian compiler/linker hardening remains enabled; see `CORE2-FLAGS.txt` for effective flags.")
     if build_mode:
         lines.append(f"- **Build/test mode:** {build_mode}.")
     if "rust" in build_mode.lower() or package.lower() in {"rust-sd", "cargo", "rustc"}:

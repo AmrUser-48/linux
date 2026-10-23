@@ -3,14 +3,6 @@ run-name: "Normalize Core 2 release metadata"
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-    paths:
-      - ".github/workflows/d630-core2-normalize-releases.yml"
-      - "core2-packages/normalize-releases.py"
-  release:
-    types: [published]
 
 permissions:
   contents: write

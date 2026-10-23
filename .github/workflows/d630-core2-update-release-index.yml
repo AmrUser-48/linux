@@ -9,6 +9,7 @@ on:
     paths:
       - ".github/workflows/d630-core2-update-release-index.yml"
       - "core2-packages/update-index.py"
+      - "core2-packages/normalize-releases.py"
   release:
     types: [published]
 
@@ -31,6 +32,7 @@ jobs:
           sparse-checkout: |
             core2-packages/README.md
             core2-packages/update-index.py
+            core2-packages/normalize-releases.py
             core2-packages/dependency-metadata.json
           sparse-checkout-cone-mode: false
 
@@ -48,6 +50,14 @@ jobs:
             git checkout -B master origin/master
             gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/releases?per_page=100" > "$RUNNER_TEMP/core2-releases.json"
 
+            # GITHUB_TOKEN-created releases may not trigger a release event.
+            # Normalize titles/notes before rebuilding the README index.
+            if python3 core2-packages/normalize-releases.py "$RUNNER_TEMP/core2-releases.json"; then
+              echo "Release titles and notes normalized."
+            else
+              echo "::warning::Some release notes could not be normalized; continuing with the README refresh."
+            fi
+            gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/releases?per_page=100" > "$RUNNER_TEMP/core2-releases.json"
             python3 core2-packages/update-index.py \
               "core2-packages/README.md" \
               "core2-packages/dependency-metadata.json" \

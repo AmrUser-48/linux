@@ -185,7 +185,7 @@ def release_notes(package, source_version, package_version, kind, description, p
     display = DISPLAY_NAMES.get(package.lower(), package)
     profile_summary = summary_profile(profile)
     metadata = {
-        "schema_version": 2,
+        "schema_version": 3,
         "source_package": package,
         "display_name": display,
         "source_version": source_version,
@@ -277,9 +277,13 @@ def release_notes(package, source_version, package_version, kind, description, p
             "",
             f"- **Package build version:** `{package_version}`",
             "- **Target:** Debian 12 Bookworm, amd64, Intel Core 2 family.",
-            f"- **Compiler profile:** `{profile_summary}`.",
-            "- Debian compiler/linker hardening defaults are retained where present; attached build metadata records the available effective flags.",
         ])
+        standard_profiles = {
+            "-O2 -march=core2 -mtune=core2",
+            "-O2 -pipe -march=core2 -mtune=core2",
+        }
+        if package.lower() not in {"sox-ng", "mesa", "sfk", "rustdesk"} and profile_summary not in standard_profiles:
+            lines.append(f"- **Package-specific compiler profile:** `{profile_summary}`; see `CORE2-FLAGS.txt` for full effective flags.")
         if package.lower() == "glibc":
             lines.extend([
                 "",
@@ -332,7 +336,11 @@ def main():
                 str(existing_metadata.get("source_package") or "").lower() == "sox-ng"
                 and "Native Opus encoder" not in old_body
             )
-            if schema_version >= 2 and not mesa_notes_missing and not sox_notes_missing:
+            expected_display = str(existing_metadata.get("display_name") or "")
+            expected_version = str(existing_metadata.get("package_version") or "")
+            expected_title = (f"{expected_display} {expected_version} (Intel Core 2 · Debian 12)" if expected_display and expected_version else "")
+            title_needs_update = not expected_title or str(release.get("name") or "").strip() != expected_title
+            if schema_version >= 3 and not mesa_notes_missing and not sox_notes_missing and not title_needs_update:
                 skipped += 1
                 continue
         else:
