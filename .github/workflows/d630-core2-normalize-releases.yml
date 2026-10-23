@@ -1,0 +1,56 @@
+name: Normalize Core 2 package release names and notes
+run-name: "Normalize Core 2 release metadata"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-normalize-releases.yml"
+      - "core2-packages/normalize-releases.py"
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: core2-release-normalization
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    name: Normalize published Debian package releases
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout latest release metadata scripts
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+
+      - name: Standardize release titles and notes from real package metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
+            > "$RUNNER_TEMP/core2-releases.json"
+          python3 core2-packages/normalize-releases.py "$RUNNER_TEMP/core2-releases.json"
+
+      - name: Refresh package README index
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched package README refresh after release normalization."
+          else
+            echo "::warning::Release metadata was normalized, but the README refresh could not be dispatched."
+          fi
