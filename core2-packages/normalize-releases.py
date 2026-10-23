@@ -207,10 +207,15 @@ def release_notes(package, source_version, package_version, kind, description, p
 
     if package.lower() == "sox-ng":
         source_ref = info_values.get("stable source ref", "sox_ng-14.8.1")
+        source_commit = info_values.get("stable source commit") or info_values.get("source commit", "")
+        source_sentence = f"Built from the stable upstream SoX NG {source_version} source ref `{source_ref}`"
+        if source_commit:
+            source_sentence += f" at source commit `{source_commit}`"
+        source_sentence += " for Debian 12 Bookworm amd64."
         encoder_commit = re.search(r"Encoder backport: upstream commit ([0-9a-f]{7,40})", old_body, re.I)
         commit = encoder_commit.group(1) if encoder_commit else "ed26bb80b6b89065b597b46ff40ed2b42de8b89d"
         lines.extend([
-            f"Built from the stable upstream SoX NG {source_version} source ref `{source_ref}` for Debian 12 Bookworm amd64.",
+            source_sentence,
             "",
             "## Features and verification",
             "",
