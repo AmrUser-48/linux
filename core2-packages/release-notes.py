@@ -175,6 +175,16 @@ def main() -> int:
             "",
             "> **System-critical package:** this release can contain `libc6`, `libc-bin`, locales, and related runtime components. Do not install the complete set on a working system without a tested recovery path and a known-good backup.",
         ])
+    if package.lower() == "mesa":
+        lines.extend([
+            "",
+            "## D630 no-LLVM configuration",
+            "",
+            "- LLVM support is disabled in the Mesa build.",
+            "- Gallium drivers: Crocus, i915, and software rasterizer (swrast); Crocus is included for Intel GM965/X3100.",
+            "- Vulkan drivers/layers and the Mesa OpenCL ICD are excluded from this package set.",
+            "- CI verifies no runtime dependency on `libllvm15` and checks that `libgl1-mesa-dri` contains `crocus_dri.so`.",
+        ])
     details_path = os.environ.get("RELEASE_DETAILS_FILE", "").strip()
     if details_path:
         details = pathlib.Path(details_path)
