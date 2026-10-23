@@ -301,7 +301,7 @@ jobs:
           NEXT_NUM=$((10#$MAX_ASSET_CP + 1))
           printf -v NEXT_CP '%04d' "$NEXT_NUM"
 
-          mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\\.txt$/\\1/p' "$ASSET_LIST" | sort -u)
+          mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\.txt$/\1/p' "$ASSET_LIST" | sort -u)
           LAST_CP=0000
           if [[ "$RELEASE_EXISTS" == true && ${#COMPLETE_IDS[@]} -gt 0 ]]; then
             # A full snapshot contains the complete output tree. Do not download
