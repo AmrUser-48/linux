@@ -450,7 +450,7 @@ jobs:
           - Standard command names: sox, soxi, play, rec
           - Binary package: sox-ng; Conflicts/Replaces: sox
           - Shared library and dynamic modules: libsox-ng5
-          - Debug-symbol packages: not generated automatically
+          - DEB_BUILD_OPTIONS: ${DEB_BUILD_OPTIONS}
 
           Dynamic format modules make the core library thinner, but add module files
           and runtime loading overhead. This does not guarantee a smaller total
