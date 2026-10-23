@@ -58,7 +58,9 @@ jobs:
             exit 1
           fi
 
-          SOURCE_DIR="$GITHUB_WORKSPACE/sox-ng-source"
+          BUILD_ROOT="$GITHUB_WORKSPACE/build-work"
+          mkdir -p "$BUILD_ROOT"
+          SOURCE_DIR="$BUILD_ROOT/sox-ng-source"
           git clone --depth 1 --branch "$SOURCE_REF" \
             https://codeberg.org/sox_ng/sox_ng.git "$SOURCE_DIR"
           cd "$SOURCE_DIR"
@@ -247,10 +249,17 @@ jobs:
           grep -q -- '-mtune=core2' <<<"$CFLAGS"
           grep -q -- '-pipe' <<<"$CFLAGS"
 
-          dpkg-buildpackage -b -uc -us -j4
+          BUILD_USER=core2build
+          if ! id "$BUILD_USER" >/dev/null 2>&1; then
+            useradd --create-home --shell /bin/bash "$BUILD_USER"
+          fi
+          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/build-work"
+          runuser --preserve-environment --user "$BUILD_USER" -- env \
+            HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
+            dpkg-buildpackage -rfakeroot -b -uc -us -j4
 
           shopt -s nullglob
-          DEBS=( "$GITHUB_WORKSPACE"/*.deb )
+          DEBS=( "$GITHUB_WORKSPACE/build-work"/*.deb )
           if (( ${#DEBS[@]} != 2 )); then
             printf 'Expected exactly two runtime .deb packages; found %s\n' "${#DEBS[@]}"
             printf '%s\n' "${DEBS[@]}"
