@@ -138,7 +138,7 @@ jobs:
           if text.count(needle) != 1:
               raise SystemExit("Expected exactly one Opus libopusfile probe in configure.ac.")
           encoder_probe = '''
-           AC_CHECK_LIB(opusenc, opus_encoder_create,
+           AC_CHECK_LIB(opusenc, ope_encoder_create_pull,
             OPUS_LIBS="$OPUS_LIBS -lopusenc"
             AC_DEFINE([HAVE_OPUSENC], 1, [Define to 1 to use libopusenc]),
             using_opusenc=no, $OPUS_LIBS $OGG_VORBIS_LIBS)'''
@@ -448,7 +448,8 @@ jobs:
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Conflicts)" = sox
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Replaces)" = sox
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --with-dyn-default "* ]]; then
-            dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\.so'
+            dpkg-deb -c "${LIB_DEB[0]}" > /tmp/libsox-ng5-contents.txt
+            grep -q 'libsox_ng_fmt_opus\.so' /tmp/libsox-ng5-contents.txt
           fi
           apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
 
