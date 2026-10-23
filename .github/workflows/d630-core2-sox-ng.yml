@@ -1,7 +1,12 @@
 name: Core 2 optimized SoX NG Debian package
-run-name: "Core 2 SoX NG (dynamic format handlers): ${{ inputs.source_ref }}"
+run-name: "Core 2 SoX NG stable with native Opus encoder: ${{ inputs.source_ref || 'sox_ng-14.8.1' }}"
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/d630-core2-sox-ng.yml
   workflow_dispatch:
     inputs:
       source_ref:
@@ -117,29 +122,50 @@ jobs:
             https://codeberg.org/sox_ng/sox_ng.git "$SOURCE_DIR"
           cd "$SOURCE_DIR"
           SOURCE_COMMIT="$(git rev-parse HEAD)"
+          OPUS_ENCODER_COMMIT="ed26bb80b6b89065b597b46ff40ed2b42de8b89d"
 
-          # Fix this printf-format issue only when present in the selected source.
-          # Stable releases without the development-branch Opus encoder need no patch.
+          # Backport the upstream Opus writer into the stable 14.8.1 source.
+          git fetch --no-tags --depth=1 origin "$OPUS_ENCODER_COMMIT"
+          git show "$OPUS_ENCODER_COMMIT:src/opus.c" > /tmp/sox-ng-opus.c
+          install -m 0644 /tmp/sox-ng-opus.c src/opus.c
+
           python3 - <<'PY'
           from pathlib import Path
 
-          path = Path("src/opus.c")
-          source = path.read_text()
+          configure = Path("configure.ac")
+          text = configure.read_text()
+          needle = ' AC_CHECK_LIB(opusfile, op_open_callbacks, OPUS_LIBS="$OPUS_LIBS -lopusfile", using_opus=no, $OPUS_LIBS $OGG_VORBIS_LIBS)'
+          if text.count(needle) != 1:
+              raise SystemExit("Expected exactly one Opus libopusfile probe in configure.ac.")
+          encoder_probe = '''
+           AC_CHECK_LIB(opusenc, opus_encoder_create,
+            OPUS_LIBS="$OPUS_LIBS -lopusenc"
+            AC_DEFINE([HAVE_OPUSENC], 1, [Define to 1 to use libopusenc]),
+            using_opusenc=no, $OPUS_LIBS $OGG_VORBIS_LIBS)'''
+          configure.write_text(text.replace(needle, needle + encoder_probe, 1))
+
+          manpage = Path("soxformat_ng.7")
+          text = manpage.read_text()
+          old = "SoX can only read Opus files, not write them."
+          new = r"SoX can read and write Opus files when built with libopusenc; \fB\-t sndfile\fR can only read them."
+          if text.count(old) != 1:
+              raise SystemExit("Expected stable Opus read-only note exactly once in soxformat_ng.7.")
+          manpage.write_text(text.replace(old, new, 1))
+
+          opus = Path("src/opus.c")
+          text = opus.read_text()
           old = "lsx_fail(ope_strerror(retval));"
           new = 'lsx_fail("%s", ope_strerror(retval));'
-          count = source.count(old)
-          if count > 1:
-              raise SystemExit(
-                  f"Expected at most one vulnerable lsx_fail() call in {path}, found {count}"
-              )
-          if count == 1:
-              path.write_text(source.replace(old, new, 1))
-              print("Patched printf-format use in src/opus.c.")
-          else:
-              print("No vulnerable call in this source revision; no patch needed.")
+          if text.count(old) != 1:
+              raise SystemExit(f"Expected exactly one vulnerable lsx_fail() call in {opus}, found {text.count(old)}")
+          opus.write_text(text.replace(old, new, 1))
+          if "ope_encoder_write_float" not in opus.read_text():
+              raise SystemExit("Backported src/opus.c does not contain the Opus encoder.")
           PY
+
           git diff --check
-          git diff -- src/opus.c
+          git diff -- src/opus.c configure.ac soxformat_ng.7
+          echo "OPUS_ENCODER_COMMIT=$OPUS_ENCODER_COMMIT" >> "$GITHUB_ENV"
 
           autoreconf -fi
 
@@ -391,22 +417,21 @@ jobs:
             exit 1
           fi
 
-          if grep -q 'ope_encoder_write_float' src/opus.c &&
-             grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
-            SOX_NG_HAS_OPUS_ENCODER=true
-            printf 'Native Opus encoder: enabled (HAVE_OPUSENC=1)\n' \
-              >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
-          else
-            SOX_NG_HAS_OPUS_ENCODER=false
-            printf 'Native Opus encoder: not present in this upstream source revision\n' \
-              >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+          if ! grep -q 'ope_encoder_write_float' src/opus.c ||
+             ! grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
+            echo "::error::Native Opus encoder is not enabled; refusing to package a decoder-only build."
+            grep -E 'opus|HAVE_OPUSENC' config.log | tail -n 60 || true
+            exit 1
           fi
-          echo "SOX_NG_HAS_OPUS_ENCODER=$SOX_NG_HAS_OPUS_ENCODER" >> "$GITHUB_ENV"
+          SOX_NG_HAS_OPUS_ENCODER=true
+          printf 'Native Opus encoder: enabled (HAVE_OPUSENC=1)\n' \
+            >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+          echo "SOX_NG_HAS_OPUS_ENCODER=true" >> "$GITHUB_ENV"
 
           cd "$GITHUB_WORKSPACE/release-artifacts"
           sha256sum ./*.deb > SHA256SUMS-core2-sox-ng.txt
-          printf 'Upstream: https://codeberg.org/sox_ng/sox_ng\nSource ref: %s\nSource commit: %s\nUpstream version: %s\nDebian package version: %s\nTarget: amd64 / Intel Core 2\nNative Opus encoder: %s\n' \
-            "$SOURCE_REF" "$SOURCE_COMMIT" "$UPSTREAM_VERSION" "$PACKAGE_VERSION" "$SOX_NG_HAS_OPUS_ENCODER" \
+          printf 'Upstream: https://codeberg.org/sox_ng/sox_ng\nStable source ref: %s\nStable source commit: %s\nOpus encoder backport commit: %s\nUpstream version: %s\nDebian package version: %s\nTarget: amd64 / Intel Core 2\nNative Opus encoder: %s\n' \
+            "$SOURCE_REF" "$SOURCE_COMMIT" "$OPUS_ENCODER_COMMIT" "$UPSTREAM_VERSION" "$PACKAGE_VERSION" "$SOX_NG_HAS_OPUS_ENCODER" \
             > BUILD-INFO.txt
           ls -lh ./*.deb ./*.txt
 
@@ -444,21 +469,12 @@ jobs:
           TEST_DIR="$(mktemp -d)"
           trap 'rm -rf "$TEST_DIR"' EXIT
           "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
-          if [[ "$SOX_NG_HAS_OPUS_ENCODER" == "true" ]]; then
-            "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
-          else
-            ffmpeg -hide_banner -loglevel error -y -i "$TEST_DIR/input.wav" \
-              -c:a libopus "$TEST_DIR/encoded.opus"
-          fi
+          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
           "$SOX_CMD" "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
           test -s "$TEST_DIR/encoded.opus"
           test -s "$TEST_DIR/decoded.wav"
           "$SOXI_CMD" "$TEST_DIR/encoded.opus"
-          if [[ "$SOX_NG_HAS_OPUS_ENCODER" == "true" ]]; then
-            echo "PASS: configured command names, native Opus encoder, and Opus decoder."
-          else
-            echo "PASS: configured command names and Opus decoder; FFmpeg generated the test Opus file because this source revision has no native encoder."
-          fi
+          echo "PASS: configured command names, native SoX NG Opus encoder, and Opus decoder."
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -484,8 +500,8 @@ jobs:
           - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
           - Build parallelism: ${BUILD_JOBS}
           - Format handlers: controlled by configure options; --with-dyn-default loads optional handlers as modules
-          - Opus decoding: tested after package installation
-          - Native Opus encoder: ${SOX_NG_HAS_OPUS_ENCODER}
+          - Native Opus encoding and decoding: both tested directly through SoX NG
+          - Encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}; stable source base ${SOURCE_REF}
           - Standard command names: sox, soxi, play, rec
           - Binary package: sox-ng; Conflicts/Replaces: sox
           - Shared library and dynamic modules: libsox-ng5
