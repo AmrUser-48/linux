@@ -2698,7 +2698,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Audio &amp; video (35 top-level packages)</summary>
+<summary>Audio &amp; video (45 top-level packages)</summary>
 
 <details>
 <summary><code>ffmpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:5.1.9-0+deb12u1</code></summary>
@@ -2868,6 +2868,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libopus0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1-3</code></summary>
+
+**Download files**
+- [libopus0_1.3.1-3+core2.1.20261023192526_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-1.3.1-3-core2.1-20261023192526)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libsvtav1enc1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1+dfsg-1</code></summary>
 
 **Download files**
@@ -2907,6 +2920,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 - [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
+
+<details>
+<summary><code>libogg0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.5-3</code></summary>
+
+**Download files**
+- [libogg0_1.3.5-3+core2.1.20261023192506_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libogg-1.3.5-3-core2.1-20261023192506)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
 
 </details>
 
@@ -3320,6 +3346,34 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 **Download files**
 - [ffmpeg-doc_5.1.9-0+deb12u1+core2.1.20261009183944_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/ffmpeg-doc_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_all.deb) (architecture: all)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944)
+</details>
+
+<details>
+<summary><code>flac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [flac_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/flac_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libflac12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [libflac12_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+</details>
+
 </details>
 
 <details>
@@ -4060,6 +4114,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libgstreamer1.0-0 — 1.22.0-2+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624/libgstreamer1.0-0_1.22.0-2%2Bdeb12u1%2Bcore2.1.20261011064624_amd64.deb)
 
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
 - [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
 
 - [libtheora0 — 1.1.1+dfsg.1-16.1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347/libtheora0_1.1.1%2Bdfsg.1-16.1%2Bdeb12u1%2Bcore2.1.20261016150347_amd64.deb)
@@ -4186,6 +4244,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libcairo2 — 1.16.0-7 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-cairo-1.16.0-7-core2.1-20261016135244/libcairo2_1.16.0-7%2Bcore2.1.20261016135244_amd64.deb)
 
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
 - [libgdk-pixbuf-2.0-0 — 2.42.10+dfsg-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747/libgdk-pixbuf-2.0-0_2.42.10%2Bdfsg-1%2Bdeb12u4%2Bcore2.1.20261020155747_amd64.deb)
 
 - [libglib2.0-0 — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-0_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
@@ -4295,6 +4355,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
 
 - [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
 
 - [liborc-0.4-0 — 1:0.4.33-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-orc-1-0.4.33-2-core2.1-20261016143016/liborc-0.4-0_0.4.33-2%2Bcore2.1.20261016143016_amd64.deb)
 
@@ -5698,6 +5760,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libopenjp2-7 — 2.5.0-2+deb12u3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019/libopenjp2-7_2.5.0-2%2Bdeb12u3%2Bcore2.1.20261016135019_amd64.deb)
 
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
 - [libsvtav1enc1 — 1.4.1+dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712/libsvtav1enc1_1.4.1%2Bdfsg-1%2Bcore2.1.20261016144712_amd64.deb)
 
 - [libswresample4 — 7:5.1.9-0+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944/libswresample4_5.1.9-0%2Bdeb12u1%2Bcore2.1.20261009183944_amd64.deb)
@@ -5810,6 +5874,66 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
+</details>
+
+<details>
+<summary><code>libflac++-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [libflac++-dev_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac%2B%2B-dev_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+**Dependencies**
+
+<details>
+<summary><code>libflac++10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [libflac++10_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac%2B%2B10_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libflac-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [libflac-dev_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac-dev_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+**Dependencies**
+
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
+<details>
+<summary><code>libogg-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.5-3</code></summary>
+
+**Download files**
+- [libogg-dev_1.3.5-3+core2.1.20261023192506_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg-dev_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libogg-1.3.5-3-core2.1-20261023192506)
+
+**Dependencies**
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+</details>
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libflac-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.2+ds-2</code></summary>
+
+**Download files**
+- [libflac-doc_1.4.2+ds-2+core2.1.20261023192521_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac-doc_1.4.2%2Bds-2%2Bcore2.1.20261023192521_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
 </details>
 
 <details>
@@ -6063,6 +6187,103 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
+<summary><code>libopus-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1-3</code></summary>
+
+**Download files**
+- [libopus-doc_1.3.1-3+core2.1.20261023192526_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus-doc_1.3.1-3%2Bcore2.1.20261023192526_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-1.3.1-3-core2.1-20261023192526)
+</details>
+
+<details>
+<summary><code>libopusenc-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.1-2</code></summary>
+
+**Download files**
+- [libopusenc-dev_0.2.1-2+core2.1.20261023192524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc-dev_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524)
+
+**Dependencies**
+
+<details>
+<summary><code>libopus-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1-3</code></summary>
+
+**Download files**
+- [libopus-dev_1.3.1-3+core2.1.20261023192526_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus-dev_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-1.3.1-3-core2.1-20261023192526)
+
+**Dependencies**
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libopusenc0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.1-2</code></summary>
+
+**Download files**
+- [libopusenc0_0.2.1-2+core2.1.20261023192524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc0_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libopusenc-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2.1-2</code></summary>
+
+**Download files**
+- [libopusenc-doc_0.2.1-2+core2.1.20261023192524_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc-doc_0.2.1-2%2Bcore2.1.20261023192524_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524)
+</details>
+
+<details>
+<summary><code>libopusfile-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.12-4</code></summary>
+
+**Download files**
+- [libopusfile-dev_0.12-4+core2.1.20261023192513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile-dev_0.12-4%2Bcore2.1.20261023192513_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513)
+
+**Dependencies**
+
+- [libogg-dev — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg-dev_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopus-dev — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus-dev_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
+<details>
+<summary><code>libopusfile0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.12-4</code></summary>
+
+**Download files**
+- [libopusfile0_0.12-4+core2.1.20261023192513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile0_0.12-4%2Bcore2.1.20261023192513_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
+- [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
+
+</details>
+
+</details>
+
+<details>
+<summary><code>libopusfile-doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.12-4</code></summary>
+
+**Download files**
+- [libopusfile-doc_0.12-4+core2.1.20261023192513_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile-doc_0.12-4%2Bcore2.1.20261023192513_all.deb) (architecture: all)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513)
+</details>
+
+<details>
 <summary><code>libvpx-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12.0-1+deb12u5</code></summary>
 
 **Download files**
@@ -6133,11 +6354,17 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libexpat1 — 2.5.0-1+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-expat-2.5.0-1-deb12u4-core2.1-20261016150748/libexpat1_2.5.0-1%2Bdeb12u4%2Bcore2.1.20261016150748_amd64.deb)
 
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
 - [libicu72 — 72.1-3+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-icu-72.1-3-deb12u1-core2.1-20261020160050/libicu72_72.1-3%2Bdeb12u1%2Bcore2.1.20261020160050_amd64.deb)
 
 - [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
 
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
 - [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
 
 - [libpcre2-8-0 — 10.42-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649/libpcre2-8-0_10.42-1%2Bdeb12u2%2Bcore2.1.20261009152649_amd64.deb)
 
@@ -6215,6 +6442,109 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libxv1 — 2:1.0.11-1.1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515/libxv1_1.0.11-1.1%2Bcore2.1.20261016133515_amd64.deb)
 
 - [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>opus-tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2-1</code></summary>
+
+**Download files**
+- [opus-tools_0.2-1+core2.1.20261023192504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-tools-0.2-1-core2.1-20261023192504/opus-tools_0.2-1%2Bcore2.1.20261023192504_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-tools-0.2-1-core2.1-20261023192504)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+
+- [libopusenc0 — 0.2.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc0_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb)
+
+- [libopusfile0 — 0.12-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile0_0.12-4%2Bcore2.1.20261023192513_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>sox-ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.8.1</code></summary>
+
+**Download files**
+- [sox-ng_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/sox-ng_14.8.1%2Bcore2.1.20261023204446_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023204446)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libsox-ng5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.8.1</code></summary>
+
+**Download files**
+- [libsox-ng5_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/libsox-ng5_14.8.1%2Bcore2.1.20261023204446_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023204446)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+<details>
+<summary><code>libfftw3-double3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
+
+**Download files**
+- [libfftw3-double3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
+<details>
+<summary><code>libmagic1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
+
+**Download files**
+- [libmagic1_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic1_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237)
+
+**Dependencies**
+
+- [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+- [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
+
+<details>
+<summary><code>libmagic-mgc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
+
+**Download files**
+- [libmagic-mgc_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-mgc_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237)
+</details>
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
+
+- [libmp3lame0 — 3.100-6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051/libmp3lame0_3.100-6%2Bcore2.1.20261016213051_amd64.deb)
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopusenc0 — 0.2.1-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc0_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb)
+
+- [libopusfile0 — 0.12-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile0_0.12-4%2Bcore2.1.20261023192513_amd64.deb)
+
+- [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016150951/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016150951_amd64.deb)
+
+- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
+
+</details>
 
 </details>
 
@@ -8508,18 +8838,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
-<details>
-<summary><code>libfftw3-double3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
-
-**Download files**
-- [libfftw3-double3_3.3.10-1+core2.1.20261009181939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939)
-
-**Dependencies**
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-</details>
+- [libfftw3-double3 — 3.3.10-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-fftw3-3.3.10-1-core2.1-20261009181939/libfftw3-double3_3.3.10-1%2Bcore2.1.20261009181939_amd64.deb)
 
 - [libfontconfig1 — 2.14.1-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-fontconfig-2.14.1-4-core2.1-20261016150850/libfontconfig1_2.14.1-4%2Bcore2.1.20261016150850_amd64.deb)
 
@@ -8836,32 +9155,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 **Dependencies**
 
-<details>
-<summary><code>libmagic1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
-
-**Download files**
-- [libmagic1_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic1_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237)
-
-**Dependencies**
-
-- [libbz2-1.0 — 1.0.8-5 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-bzip2-1.0.8-5-core2.1-20261012055218/libbz2-1.0_1.0.8-5%2Bcore2.1.20261012055218_amd64.deb)
-
-- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
-
-- [liblzma5 — 5.4.1-1+deb12u2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/liblzma5_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
-
-<details>
-<summary><code>libmagic-mgc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:5.44-3</code></summary>
-
-**Download files**
-- [libmagic-mgc_5.44-3+core2.1.20261012055237_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic-mgc_5.44-3%2Bcore2.1.20261012055237_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237)
-</details>
-
-- [zlib1g — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
-
-</details>
+- [libmagic1 — 1:5.44-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-file-1-5.44-3-core2.1-20261012055237/libmagic1_5.44-3%2Bcore2.1.20261012055237_amd64.deb)
 
 </details>
 
@@ -9480,6 +9774,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 **Dependencies**
 
+- [libogg-dev — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg-dev_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
 - [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
 
 - [zlib1g-dev — 1:1.2.13.dfsg-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/zlib1g-dev_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
@@ -10057,6 +10353,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347)
 
 **Dependencies**
+
+- [libogg-dev — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg-dev_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
 
 - [libtheora0 — 1.1.1+dfsg.1-16.1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347/libtheora0_1.1.1%2Bdfsg.1-16.1%2Bdeb12u1%2Bcore2.1.20261016150347_amd64.deb)
 
@@ -15148,6 +15446,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
 - [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016150951/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016150951_amd64.deb)
 
 - [libtheora0 — 1.1.1+dfsg.1-16.1+deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347/libtheora0_1.1.1%2Bdfsg.1-16.1%2Bdeb12u1%2Bcore2.1.20261016150347_amd64.deb)
@@ -15873,6 +16173,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
 - [libopenmpt0 — 0.6.9-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libopenmpt-0.6.9-1-core2.1-20261016143234/libopenmpt0_0.6.9-1%2Bcore2.1.20261016143234_amd64.deb)
 
 </details>
@@ -16291,6 +16593,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libjpeg62-turbo — 1:2.1.5-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748/libjpeg62-turbo_2.1.5-2%2Bcore2.1.20261011153748_amd64.deb)
 
 - [liblz4-1 — 1.9.4-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-lz4-1.9.4-1-core2.1-20261020161626/liblz4-1_1.9.4-1%2Bcore2.1.20261020161626_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
 
 - [libssl3 — 3.0.22-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326/libssl3_3.0.22-1.deb12u1%2Bcore2.1.20261011040326_amd64.deb)
 
@@ -16811,6 +17115,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 - [libdbus-1-3 — 1.14.10-1~deb12u1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524/libdbus-1-3_1.14.10-1.deb12u1%2Bcore2.1.20261020155524_amd64.deb)
 
+- [libflac12 — 1.4.2+ds-2 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+
 - [libfontconfig1 — 2.14.1-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-fontconfig-2.14.1-4-core2.1-20261016150850/libfontconfig1_2.14.1-4%2Bcore2.1.20261016150850_amd64.deb)
 
 - [libfreetype6 — 2.12.1+dfsg-5+deb12u4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-freetype-2.12.1-dfsg-5-deb12u4-core2.1-20261016150739/libfreetype6_2.12.1%2Bdfsg-5%2Bdeb12u4%2Bcore2.1.20261016150739_amd64.deb)
@@ -16832,6 +17138,10 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libmpeg2-4 — 0.5.1-9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-mpeg2dec-0.5.1-9-core2.1-20261016145852/libmpeg2-4_0.5.1-9%2Bcore2.1.20261016145852_amd64.deb)
 
 - [libncursesw6 — 6.4-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-ncurses-6.4-4-core2.1-20261009185822/libncursesw6_6.4-4%2Bcore2.1.20261009185822_amd64.deb)
+
+- [libogg0 — 1.3.5-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+
+- [libopus0 — 1.3.1-3 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
 
 - [libpng16-16 — 1.6.39-2+deb12u6 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016150951/libpng16-16_1.6.39-2%2Bdeb12u6%2Bcore2.1.20261016150951_amd64.deb)
 
@@ -17379,7 +17689,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 1079.
+**Unique binary packages indexed:** 1099.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -17388,6 +17698,117 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### sox-ng (system)
+Version: `14.8.1+core2.1~20261023204446` · Published: 2026-10-23 20:45:40 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/BUILD-INFO.txt)
+- [CORE2-FLAGS.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/CORE2-FLAGS.txt)
+- [libsox-ng5_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/libsox-ng5_14.8.1%2Bcore2.1.20261023204446_amd64.deb)
+- [SHA256SUMS-core2-sox-ng.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/SHA256SUMS-core2-sox-ng.txt)
+- [sox-ng_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/sox-ng_14.8.1%2Bcore2.1.20261023204446_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023204446)
+
+</details>
+
+### opus (optimized)
+Version: `1.3.1-3+core2.1~20261023192526` · Published: 2026-10-23 19:27:26 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opus`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/BUILD-INFO.txt)
+- [libopus-dev_1.3.1-3+core2.1.20261023192526_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus-dev_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+- [libopus-doc_1.3.1-3+core2.1.20261023192526_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus-doc_1.3.1-3%2Bcore2.1.20261023192526_all.deb)
+- [libopus0_1.3.1-3+core2.1.20261023192526_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/libopus0_1.3.1-3%2Bcore2.1.20261023192526_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/release-notes.md)
+- [SHA256SUMS-core2-opus.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opus-1.3.1-3-core2.1-20261023192526/SHA256SUMS-core2-opus.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-1.3.1-3-core2.1-20261023192526)
+
+</details>
+
+### flac (optimized)
+Version: `1.4.2+ds-2+core2.1~20261023192521` · Published: 2026-10-23 19:26:46 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - flac`
+
+<details><summary>Files (9)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/BUILD-INFO.txt)
+- [flac_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/flac_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+- [libflac++-dev_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac%2B%2B-dev_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+- [libflac++10_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac%2B%2B10_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+- [libflac-dev_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac-dev_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+- [libflac-doc_1.4.2+ds-2+core2.1.20261023192521_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac-doc_1.4.2%2Bds-2%2Bcore2.1.20261023192521_all.deb)
+- [libflac12_1.4.2+ds-2+core2.1.20261023192521_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/libflac12_1.4.2%2Bds-2%2Bcore2.1.20261023192521_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/release-notes.md)
+- [SHA256SUMS-core2-flac.txt](https://github.com/AmrUser-48/linux/releases/download/core2-flac-1.4.2-ds-2-core2.1-20261023192521/SHA256SUMS-core2-flac.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521)
+
+</details>
+
+### libopusenc (optimized)
+Version: `0.2.1-2+core2.1~20261023192524` · Published: 2026-10-23 19:26:17 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libopusenc`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/BUILD-INFO.txt)
+- [libopusenc-dev_0.2.1-2+core2.1.20261023192524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc-dev_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb)
+- [libopusenc-doc_0.2.1-2+core2.1.20261023192524_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc-doc_0.2.1-2%2Bcore2.1.20261023192524_all.deb)
+- [libopusenc0_0.2.1-2+core2.1.20261023192524_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/libopusenc0_0.2.1-2%2Bcore2.1.20261023192524_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/release-notes.md)
+- [SHA256SUMS-core2-libopusenc.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libopusenc-0.2.1-2-core2.1-20261023192524/SHA256SUMS-core2-libopusenc.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524)
+
+</details>
+
+### opusfile (optimized)
+Version: `0.12-4+core2.1~20261023192513` · Published: 2026-10-23 19:26:06 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opusfile`
+
+<details><summary>Files (6)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/BUILD-INFO.txt)
+- [libopusfile-dev_0.12-4+core2.1.20261023192513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile-dev_0.12-4%2Bcore2.1.20261023192513_amd64.deb)
+- [libopusfile-doc_0.12-4+core2.1.20261023192513_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile-doc_0.12-4%2Bcore2.1.20261023192513_all.deb)
+- [libopusfile0_0.12-4+core2.1.20261023192513_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/libopusfile0_0.12-4%2Bcore2.1.20261023192513_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/release-notes.md)
+- [SHA256SUMS-core2-opusfile.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opusfile-0.12-4-core2.1-20261023192513/SHA256SUMS-core2-opusfile.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513)
+
+</details>
+
+### opus-tools (optimized)
+Version: `0.2-1+core2.1~20261023192504` · Published: 2026-10-23 19:25:58 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opus-tools`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opus-tools-0.2-1-core2.1-20261023192504/BUILD-INFO.txt)
+- [opus-tools_0.2-1+core2.1.20261023192504_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-opus-tools-0.2-1-core2.1-20261023192504/opus-tools_0.2-1%2Bcore2.1.20261023192504_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-opus-tools-0.2-1-core2.1-20261023192504/release-notes.md)
+- [SHA256SUMS-core2-opus-tools.txt](https://github.com/AmrUser-48/linux/releases/download/core2-opus-tools-0.2-1-core2.1-20261023192504/SHA256SUMS-core2-opus-tools.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-opus-tools-0.2-1-core2.1-20261023192504)
+
+</details>
+
+### libogg (optimized)
+Version: `1.3.5-3+core2.1~20261023192506` · Published: 2026-10-23 19:25:57 UTC
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libogg`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/BUILD-INFO.txt)
+- [libogg-dev_1.3.5-3+core2.1.20261023192506_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg-dev_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+- [libogg0_1.3.5-3+core2.1.20261023192506_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/libogg0_1.3.5-3%2Bcore2.1.20261023192506_amd64.deb)
+- [release-notes.md](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/release-notes.md)
+- [SHA256SUMS-core2-libogg.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libogg-1.3.5-3-core2.1-20261023192506/SHA256SUMS-core2-libogg.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libogg-1.3.5-3-core2.1-20261023192506)
+
+</details>
+
 ### sfk (optimized)
 Published: 2026-10-22 17:57:32 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sfk`
@@ -17425,7 +17846,7 @@ Published: 2026-10-22 17:57:16 UTC
 Published: 2026-10-20 19:55:07 UTC
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - temporary brave/chromium build state v1.97.59`
 
-<details><summary>Files (24)</summary>
+<details><summary>Files (36)</summary>
 
 - [state-c0001-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-manifest.txt)
 - [state-c0001-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0001-part-000)
@@ -17451,6 +17872,18 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 - [state-c0011-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0011-part-000)
 - [state-c0012-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0012-manifest.txt)
 - [state-c0012-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0012-part-000)
+- [state-c0013-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0013-manifest.txt)
+- [state-c0013-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0013-part-000)
+- [state-c0014-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0014-manifest.txt)
+- [state-c0014-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0014-part-000)
+- [state-c0015-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0015-manifest.txt)
+- [state-c0015-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0015-part-000)
+- [state-c0016-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0016-manifest.txt)
+- [state-c0016-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0016-part-000)
+- [state-c0017-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0017-manifest.txt)
+- [state-c0017-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0017-part-000)
+- [state-c0018-manifest.txt](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0018-manifest.txt)
+- [state-c0018-part-000](https://github.com/AmrUser-48/linux/releases/download/core2-brave-state-v1.97.59/state-c0018-part-000)
 - [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-brave-state-v1.97.59)
 
 </details>
