@@ -228,6 +228,18 @@ def release_notes(package, source_version, package_version, kind, description, p
         config = re.search(r"(?m)^CONFIGURE_FLAGS=(.+)$", flags_text)
         if config:
             lines.extend(["", f"**Configure options:** `{config.group(1).strip()}`"])
+    elif package.lower() == "mesa":
+        lines.extend([
+            "Built for the Dell Latitude D630's Intel GM965/X3100 graphics using Debian 12 Bookworm amd64.",
+            "",
+            "## D630 no-LLVM configuration",
+            "",
+            "- LLVM support was disabled in the Mesa build.",
+            "- Gallium drivers: Crocus, i915, and software rasterizer (swrast); Crocus is included for the GM965/X3100.",
+            "- Vulkan drivers/layers and the Mesa OpenCL ICD are excluded from this package set.",
+            "- CI verifies that the runtime packages do not depend on `libllvm15` and that `libgl1-mesa-dri` contains `crocus_dri.so`.",
+            f"- **Compiler profile:** `{summary_profile(profile)}`; see `CORE2-FLAGS.txt` for the complete effective flags.",
+        ])
     elif package.lower() == "sfk":
         repository = info_values.get("upstream repository", "https://github.com/sfktools/swissfileknife")
         commit = info_values.get("upstream commit", "")
@@ -311,7 +323,16 @@ def main():
                 existing_metadata = json.loads(match.group(1)) if match else {}
             except (json.JSONDecodeError, TypeError):
                 existing_metadata = {}
-            if int(existing_metadata.get("schema_version", 0) or 0) >= 2:
+            schema_version = int(existing_metadata.get("schema_version", 0) or 0)
+            mesa_notes_missing = (
+                str(existing_metadata.get("source_package") or "").lower() == "mesa"
+                and "D630 no-LLVM configuration" not in old_body
+            )
+            sox_notes_missing = (
+                str(existing_metadata.get("source_package") or "").lower() == "sox-ng"
+                and "Native Opus encoder" not in old_body
+            )
+            if schema_version >= 2 and not mesa_notes_missing and not sox_notes_missing:
                 skipped += 1
                 continue
         else:
