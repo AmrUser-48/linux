@@ -120,13 +120,23 @@ def main() -> int:
         "target": "Debian 12 Bookworm / amd64 / Intel Core 2",
     }
 
+    if package.lower() == "sox-ng":
+        source_ref = os.environ.get("SOURCE_REF", "sox_ng-14.8.1")
+        source_commit = os.environ.get("SOURCE_COMMIT", "")
+        source_sentence = f"Built from stable upstream SoX NG {source_version} source ref `{source_ref}`"
+        if source_commit:
+            source_sentence += f" at commit `{source_commit}`"
+        source_sentence += " for Debian 12 Bookworm amd64."
+    else:
+        source_sentence = f"Built from the Debian Bookworm source package `{package}` version `{source_version}`, with Debian packaging and patches retained."
+
     lines = [
         f"<!-- core2-release-metadata: {json.dumps(metadata, sort_keys=True, ensure_ascii=False, separators=(',', ':'))} -->",
         f"# {display} {source_version}",
         "",
         description,
         "",
-        f"Built from the Debian Bookworm source package `{package}` version `{source_version}`, with Debian packaging and patches retained.",
+        source_sentence,
         "",
         "## Build",
         "",
