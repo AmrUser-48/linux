@@ -1,4 +1,4 @@
-name: Stop obsolete Brave run 31
+name: Dispatch Brave state compaction
 
 on:
   push:
@@ -9,15 +9,16 @@ permissions:
   actions: write
 
 jobs:
-  cancel:
+  dispatch:
     runs-on: ubuntu-22.04
     steps:
-      - name: Cancel obsolete build
+      - name: Cancel stale helper and dispatch compaction-only run
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
         shell: bash
         run: |
           set -euo pipefail
-          gh run cancel 39968163674 --repo "$REPOSITORY"
-          echo "Cancellation requested for obsolete Brave run 31."
+          gh run cancel 39970776549 --repo "$REPOSITORY" || true
+          gh workflow run d630-core2-brave-source.yml --repo "$REPOSITORY" --ref master -f version=1.97.59 -f compact_state=true
+          echo "Dispatched checkpoint compaction."
