@@ -9,6 +9,50 @@ on:
         required: true
         type: string
         default: main
+      cflags_append:
+        description: Space-separated C compiler flags appended to Debian defaults
+        required: true
+        type: string
+        default: "-O2 -pipe -march=core2 -mtune=core2"
+      cxxflags_append:
+        description: Space-separated C++ compiler flags appended to Debian defaults
+        required: true
+        type: string
+        default: "-O2 -pipe -march=core2 -mtune=core2"
+      cppflags_append:
+        description: Preprocessor flags appended to Debian defaults; empty is allowed
+        required: false
+        type: string
+        default: ""
+      ldflags_append:
+        description: Linker flags appended to Debian defaults; empty is allowed
+        required: false
+        type: string
+        default: ""
+      configure_flags:
+        description: Complete space-separated SoX NG configure options; replace this string to change options
+        required: true
+        type: string
+        default: "--with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng"
+      hardening_options:
+        description: dpkg-buildflags hardening profile
+        required: true
+        type: string
+        default: "hardening=+all"
+      deb_build_options:
+        description: DEB_BUILD_OPTIONS, for example noautodbgsym or nocheck
+        required: true
+        type: string
+        default: "noautodbgsym"
+      build_jobs:
+        description: Number of parallel build jobs
+        required: true
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "4"
+        default: "4"
 
 permissions:
   actions: write
@@ -26,10 +70,18 @@ jobs:
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
       SOURCE_REF: ${{ inputs.source_ref }}
-      DEB_CFLAGS_MAINT_APPEND: "-O2 -pipe -march=core2 -mtune=core2"
-      DEB_CXXFLAGS_MAINT_APPEND: "-O2 -pipe -march=core2 -mtune=core2"
-      DEB_BUILD_MAINT_OPTIONS: hardening=+all
-      DEB_BUILD_OPTIONS: "parallel=4 noautodbgsym"
+      CFLAGS_APPEND: ${{ inputs.cflags_append }}
+      CXXFLAGS_APPEND: ${{ inputs.cxxflags_append }}
+      CPPFLAGS_APPEND: ${{ inputs.cppflags_append }}
+      LDFLAGS_APPEND: ${{ inputs.ldflags_append }}
+      SOX_NG_CONFIGURE_FLAGS: ${{ inputs.configure_flags }}
+      BUILD_JOBS: ${{ inputs.build_jobs }}
+      DEB_CFLAGS_MAINT_APPEND: ${{ inputs.cflags_append }}
+      DEB_CXXFLAGS_MAINT_APPEND: ${{ inputs.cxxflags_append }}
+      DEB_CPPFLAGS_MAINT_APPEND: ${{ inputs.cppflags_append }}
+      DEB_LDFLAGS_MAINT_APPEND: ${{ inputs.ldflags_append }}
+      DEB_BUILD_MAINT_OPTIONS: ${{ inputs.hardening_options }}
+      DEB_BUILD_OPTIONS: ${{ inputs.deb_build_options }}
       GH_TOKEN: ${{ github.token }}
 
     steps:
@@ -142,16 +194,12 @@ jobs:
 
           cat > debian/rules <<'EOF'
           #!/usr/bin/make -f
-          export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-          export DEB_CFLAGS_MAINT_APPEND = -O2 -pipe -march=core2 -mtune=core2
-          export DEB_CXXFLAGS_MAINT_APPEND = -O2 -pipe -march=core2 -mtune=core2
-          export DEB_BUILD_OPTIONS = parallel=4 noautodbgsym
 
           %:
           	dh $@
 
           override_dh_auto_configure:
-          	dh_auto_configure -- --with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng
+          	./debian/configure-wrapper
 
           override_dh_auto_install:
           	dh_auto_install --destdir=debian/tmp
@@ -163,9 +211,23 @@ jobs:
           	rm -rf debian/tmp/usr/share/doc/sox-ng
 
           override_dh_auto_test:
-          	@echo "Upstream source-tree tests skipped because dynamic modules use the install-time module path; package-installed Opus tests run in CI."
+          	@echo "Upstream source-tree tests skipped; package-installed Opus tests run in CI."
           EOF
           chmod 755 debian/rules
+
+          cat > debian/configure-wrapper <<'EOF'
+          #!/bin/sh
+          set -eu
+          python3 - <<'PY'
+          import os
+          import shlex
+          import subprocess
+
+          options = shlex.split(os.environ.get("SOX_NG_CONFIGURE_FLAGS", ""))
+          subprocess.run(["dh_auto_configure", "--", *options], check=True)
+          PY
+          EOF
+          chmod 755 debian/configure-wrapper
 
           printf '%s\n' '3.0 (native)' > debian/source/format
           cat > debian/changelog <<EOF
@@ -234,21 +296,45 @@ jobs:
           mkdir -p "$GITHUB_WORKSPACE/release-artifacts"
 
           CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
           CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"
           LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
           {
-            printf 'CFLAGS=%s\n' "$CFLAGS"
-            printf 'CPPFLAGS=%s\n' "$CPPFLAGS"
-            printf 'LDFLAGS=%s\n' "$LDFLAGS"
-            printf '%s\n' \
-              'SoX NG configure options: --with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no' \
-              'Target: Debian 12 Bookworm, amd64, Intel Core 2' \
-              'Debian hardening: hardening=+all; automatic dbgsym packages disabled'
+            printf 'CFLAGS=%s\\n' "$CFLAGS"
+            printf 'CXXFLAGS=%s\\n' "$CXXFLAGS"
+            printf 'CPPFLAGS=%s\\n' "$CPPFLAGS"
+            printf 'LDFLAGS=%s\\n' "$LDFLAGS"
+            printf 'CFLAGS_APPEND=%s\\n' "$CFLAGS_APPEND"
+            printf 'CXXFLAGS_APPEND=%s\\n' "$CXXFLAGS_APPEND"
+            printf 'CPPFLAGS_APPEND=%s\\n' "$CPPFLAGS_APPEND"
+            printf 'LDFLAGS_APPEND=%s\\n' "$LDFLAGS_APPEND"
+            printf 'CONFIGURE_FLAGS=%s\\n' "$SOX_NG_CONFIGURE_FLAGS"
+            printf 'HARDENING_OPTIONS=%s\\n' "$DEB_BUILD_MAINT_OPTIONS"
+            printf 'DEB_BUILD_OPTIONS=%s\\n' "$DEB_BUILD_OPTIONS"
+            printf 'BUILD_JOBS=%s\\n' "$BUILD_JOBS"
+            printf '%s\\n' 'Target: Debian 12 Bookworm amd64; Debian build flags retained'
           } > "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
-          grep -q -- '-O2' <<<"$CFLAGS"
-          grep -q -- '-march=core2' <<<"$CFLAGS"
-          grep -q -- '-mtune=core2' <<<"$CFLAGS"
-          grep -q -- '-pipe' <<<"$CFLAGS"
+
+          check_flags() {
+            local name="$1" requested="$2" actual="$3"
+            local -a requested_flags actual_flags
+            read -r -a requested_flags <<< "$requested"
+            read -r -a actual_flags <<< "$actual"
+            for flag in "${requested_flags[@]}"; do
+              local found=false
+              for actual_flag in "${actual_flags[@]}"; do
+                if [[ "$actual_flag" == "$flag" ]]; then found=true; break; fi
+              done
+              if [[ "$found" != true ]]; then
+                echo "::error::$name does not contain requested flag: $flag"
+                exit 1
+              fi
+            done
+          }
+          check_flags CFLAGS "$CFLAGS_APPEND" "$CFLAGS"
+          check_flags CXXFLAGS "$CXXFLAGS_APPEND" "$CXXFLAGS"
+          check_flags CPPFLAGS "$CPPFLAGS_APPEND" "$CPPFLAGS"
+          check_flags LDFLAGS "$LDFLAGS_APPEND" "$LDFLAGS"
 
           BUILD_USER=core2build
           if ! id "$BUILD_USER" >/dev/null 2>&1; then
@@ -257,7 +343,7 @@ jobs:
           chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/build-work"
           runuser --preserve-environment --user "$BUILD_USER" -- env \
             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
-            dpkg-buildpackage -rfakeroot -b -uc -us -j4
+            dpkg-buildpackage -rfakeroot -b -uc -us -j"$BUILD_JOBS"
 
           shopt -s nullglob
           DEBS=( "$GITHUB_WORKSPACE/build-work"/*.deb )
@@ -298,24 +384,34 @@ jobs:
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Package)" = sox-ng
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Conflicts)" = sox
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Replaces)" = sox
-          dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\.so'
+          if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --with-dyn-default "* ]]; then
+            dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\\.so'
+          fi
           apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
 
-          test -x /usr/bin/sox_ng
-          test -L /usr/bin/sox
-          test "$(readlink -f /usr/bin/sox)" = /usr/bin/sox_ng
-          sox --version
-          sox --help >/dev/null
+          if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --enable-replace "* ]]; then
+            SOX_CMD=sox
+            SOXI_CMD=soxi
+            test -x /usr/bin/sox_ng
+            test -L /usr/bin/sox
+            test "$(readlink -f /usr/bin/sox)" = /usr/bin/sox_ng
+          else
+            SOX_CMD=sox_ng
+            SOXI_CMD=soxi_ng
+            test -x /usr/bin/sox_ng
+          fi
+          "$SOX_CMD" --version
+          "$SOX_CMD" --help >/dev/null
 
           TEST_DIR="$(mktemp -d)"
           trap 'rm -rf "$TEST_DIR"' EXIT
-          sox -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
-          sox "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
-          sox "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
+          "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
+          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
+          "$SOX_CMD" "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
           test -s "$TEST_DIR/encoded.opus"
           test -s "$TEST_DIR/decoded.wav"
-          soxi "$TEST_DIR/encoded.opus"
-          echo "PASS: standard sox command, dynamic Opus encoder, and Opus decoder."
+          "$SOXI_CMD" "$TEST_DIR/encoded.opus"
+          echo "PASS: configured command names, Opus encoder, and Opus decoder."
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -337,11 +433,10 @@ jobs:
           Built from upstream SoX NG ${UPSTREAM_VERSION} (${SOURCE_REF}), source commit ${SOURCE_COMMIT}.
 
           - Debian target: Bookworm amd64
-          - Compiler profile: Debian hardening plus -O2 -pipe -march=core2 -mtune=core2
-          - Format handlers: --with-dyn-default (optional formats loaded as modules)
-          - FFmpeg: enabled for extra input formats
-          - Curl: enabled as the preferred URL-fetch command over wget
-          - URL input: prefer the curl executable
+          - Compiler/linker flags: see CORE2-FLAGS.txt for requested and effective values
+          - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
+          - Build parallelism: ${BUILD_JOBS}
+          - Format handlers: controlled by configure options; --with-dyn-default loads optional handlers as modules
           - Opus: encoder and decoder built and tested
           - Standard command names: sox, soxi, play, rec
           - Binary package: sox-ng; Conflicts/Replaces: sox
