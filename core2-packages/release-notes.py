@@ -71,6 +71,7 @@ def main() -> int:
     kind = os.environ.get("RELEASE_KIND", "optimized").strip().lower()
     opt_level = os.environ.get("OPT_LEVEL", "-O2").strip() or "-O2"
     build_mode = os.environ.get("BUILD_MODE", "").strip()
+    compiler_profile = os.environ.get("COMPILER_PROFILE", "").strip() or f"{opt_level} -pipe -march=core2 -mtune=core2"
     if not package or not package_version:
         raise SystemExit("PACKAGE and PACKAGE_VERSION must be set.")
 
@@ -113,7 +114,7 @@ def main() -> int:
         "kind": kind,
         "description": description,
         "primary_binary": primary["package"],
-        "compiler_profile": f"{opt_level} -pipe -march=core2 -mtune=core2",
+        "compiler_profile": compiler_profile,
         "build_mode": build_mode,
         "target": "Debian 12 Bookworm / amd64 / Intel Core 2",
     }
@@ -130,7 +131,7 @@ def main() -> int:
         "",
         f"- **Package build version:** `{package_version}`",
         "- **Target:** Debian 12 Bookworm, amd64, Intel Core 2 family.",
-        f"- **Compiler profile:** `{opt_level} -pipe -march=core2 -mtune=core2`.",
+        f"- **Compiler profile:** `{compiler_profile}`.",
         "- Debian compiler/linker hardening defaults are retained. See `BUILD-INFO.txt` for the effective CFLAGS and CXXFLAGS used by the build.",
     ]
     if build_mode:
@@ -163,6 +164,13 @@ def main() -> int:
             "",
             "> **System-critical package:** this release can contain `libc6`, `libc-bin`, locales, and related runtime components. Do not install the complete set on a working system without a tested recovery path and a known-good backup.",
         ])
+    details_path = os.environ.get("RELEASE_DETAILS_FILE", "").strip()
+    if details_path:
+        details = pathlib.Path(details_path)
+        if details.is_file():
+            details_text = details.read_text(encoding="utf-8").strip()
+            if details_text:
+                lines.extend(["", details_text])
     pathlib.Path("release-title.txt").write_text(release_title + "\n", encoding="utf-8")
     pathlib.Path("release-notes.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Release title: {release_title}")
