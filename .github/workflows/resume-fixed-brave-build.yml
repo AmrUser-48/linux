@@ -1,0 +1,23 @@
+name: Resume fixed Core2 Brave build
+
+on:
+  push:
+    paths:
+      - .github/workflows/resume-fixed-brave-build.yml
+
+permissions:
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Dispatch fixed Brave checkpoint build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-brave-source.yml --repo "$REPOSITORY" --ref master -f version=1.97.59
+          echo "Dispatched fixed Brave source build from checkpoint state."
