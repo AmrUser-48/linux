@@ -9,6 +9,11 @@ on:
         required: true
         default: latest
         type: string
+      compact_state:
+        description: Consolidate checkpoint deltas into one verified full snapshot and prune old assets
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [master]
     paths:
@@ -345,6 +350,7 @@ jobs:
           echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
           df -h "$GITHUB_WORKSPACE"
       - name: Compile Brave Release and build Linux package
+        if: inputs.compact_state != true
         id: compile
         shell: bash
         env:
@@ -404,7 +410,7 @@ jobs:
           test -d "$OUT"
 
       - name: Trim locales and symbols, version the Core 2 package
-        if: steps.compile.outputs.checkpoint != 'true'
+        if: inputs.compact_state != true && steps.compile.outputs.checkpoint != 'true'
         id: package
         shell: bash
         env:
@@ -560,7 +566,7 @@ jobs:
           ls -lh "$FINAL_DEB" BUILD-INFO.txt SHA256SUMS-core2-brave-browser.txt
 
       - name: Upload build logs and package artifacts
-        if: always()
+        if: always() && inputs.compact_state != true
         uses: actions/upload-artifact@v4
         with:
           name: brave-core2-source-build-${{ github.run_id }}
@@ -575,9 +581,10 @@ jobs:
 
       - name: Save and upload incremental build checkpoint
         id: save_state
-        if: success() && steps.compile.outputs.checkpoint == 'true'
+        if: success() && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true')
         shell: bash
         env:
+          COMPACT_STATE: ${{ inputs.compact_state }}
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
           STATE_TAG: ${{ steps.state.outputs.state_tag }}
@@ -596,8 +603,12 @@ jobs:
           rm -f "$PART_DIR"/state-c${NEXT_CHECKPOINT}-part-*
           : > "$FILE_LIST"
 
-          if [[ "$LAST_CHECKPOINT" == "0000" ]]; then
-            echo "Capturing complete output tree for the initial checkpoint."
+          if [[ "$COMPACT_STATE" == "true" || "$LAST_CHECKPOINT" == "0000" ]]; then
+            if [[ "$COMPACT_STATE" == "true" ]]; then
+              echo "Capturing a full output snapshot through checkpoint $LAST_CHECKPOINT."
+            else
+              echo "Capturing complete output tree for the initial checkpoint."
+            fi
             (cd "$OUT" && find . \( -type f -o -type l \) -print0) > "$FILE_LIST"
           else
             echo "Capturing files added or changed since checkpoint $LAST_CHECKPOINT."
@@ -625,6 +636,10 @@ jobs:
             exit 1
           fi
 
+          # Validate the compressed stream and tar archive before replacing prior state.
+          cat "${PARTS[@]}" | zstd -t
+          cat "${PARTS[@]}" | zstd -d -c | tar -tf - >/dev/null
+
           if ! gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
               --title "Temporary Brave/Chromium build state $UPSTREAM_TAG" \
@@ -646,10 +661,23 @@ jobs:
           fingerprint=$FINGERPRINT
           file_count=$FILE_COUNT
           part_count=${#PARTS[@]}
+          full_snapshot=$([[ "$COMPACT_STATE" == "true" || "$LAST_CHECKPOINT" == "0000" ]] && echo true || echo false)
+          covers_through=$LAST_CHECKPOINT
           created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
           # The manifest is uploaded last; its presence means all parts were uploaded.
           gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
+
+          # Verify the remote manifest and every part before any checkpoint cleanup.
+          REMOTE_ASSETS="$RUNNER_TEMP/brave-state-remote-assets.txt"
+          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' > "$REMOTE_ASSETS"
+          grep -qx "state-c${NEXT_CHECKPOINT}-manifest.txt" "$REMOTE_ASSETS"
+          REMOTE_PARTS="$(grep -Ec "^state-c${NEXT_CHECKPOINT}-part-[0-9]{3}$" "$REMOTE_ASSETS" || true)"
+          if [[ "$REMOTE_PARTS" != "${#PARTS[@]}" ]]; then
+            echo "::error::Remote snapshot verification failed; preserving all prior checkpoints."
+            exit 1
+          fi
+          echo "part_count=${#PARTS[@]}" >> "$GITHUB_OUTPUT"
           {
             echo "### Brave build checkpoint saved"
             echo
@@ -660,6 +688,45 @@ jobs:
             echo "- Compressed parts: ${#PARTS[@]}"
             echo "- State release: $STATE_TAG"
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Prune obsolete checkpoint deltas after full snapshot
+        if: success() && inputs.compact_state == true && steps.save_state.outcome == 'success'
+        shell: bash
+        env:
+          STATE_TAG: ${{ steps.state.outputs.state_tag }}
+          PRESERVE_CHECKPOINT: ${{ steps.state.outputs.next_checkpoint }}
+          EXPECTED_PARTS: ${{ steps.save_state.outputs.part_count }}
+        run: |
+          set -euo pipefail
+          PART_DIR="$RUNNER_TEMP/brave-state-parts"
+          MANIFEST="$PART_DIR/state-c${PRESERVE_CHECKPOINT}-manifest.txt"
+          grep -qx 'full_snapshot=true' "$MANIFEST" || {
+            echo "::error::The new checkpoint is not a full snapshot; preserving all previous checkpoints."
+            exit 1
+          }
+
+          ASSETS="$RUNNER_TEMP/brave-state-cleanup-assets.tsv"
+          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | [.id, .name] | @tsv' > "$ASSETS"
+          awk -F '\t' -v cp="$PRESERVE_CHECKPOINT" '$2 == "state-c" cp "-manifest.txt" {found=1} END {exit !found}' "$ASSETS" || {
+            echo "::error::Remote snapshot manifest is missing; preserving all previous checkpoints."
+            exit 1
+          }
+          ACTUAL_PARTS="$(awk -F '\t' -v cp="$PRESERVE_CHECKPOINT" '$2 ~ ("^state-c" cp "-part-[0-9][0-9][0-9]$") {n++} END {print n+0}' "$ASSETS")"
+          if [[ "$ACTUAL_PARTS" != "$EXPECTED_PARTS" || "$EXPECTED_PARTS" == "0" ]]; then
+            echo "::error::Remote snapshot parts are incomplete; preserving all previous checkpoints."
+            exit 1
+          fi
+
+          while IFS=$'\t' read -r ASSET_ID ASSET_NAME; do
+            if [[ "$ASSET_NAME" =~ ^state-c([0-9]{4})-(manifest\.txt|part-[0-9]{3})$ ]]; then
+              CP="${BASH_REMATCH[1]}"
+              if [[ "$CP" != "$PRESERVE_CHECKPOINT" ]]; then
+                echo "Deleting superseded checkpoint asset $ASSET_NAME"
+                gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$ASSET_ID"
+              fi
+            fi
+          done < "$ASSETS"
+          echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; removed older deltas."
 
       - name: Queue the next Brave compilation session
         if: success() && steps.compile.outputs.checkpoint == 'true' && steps.save_state.outcome == 'success'
@@ -674,7 +741,7 @@ jobs:
             -f version="$UPSTREAM_VERSION"
 
       - name: Publish source-built Brave package release
-        if: success() && steps.compile.outputs.checkpoint != 'true'
+        if: inputs.compact_state != true && success() && steps.compile.outputs.checkpoint != 'true'
         shell: bash
         env:
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
@@ -716,7 +783,7 @@ jobs:
           fi
 
       - name: Remove temporary build-state release after final package publication
-        if: success() && steps.compile.outputs.checkpoint != 'true'
+        if: inputs.compact_state != true && success() && steps.compile.outputs.checkpoint != 'true'
         shell: bash
         env:
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
