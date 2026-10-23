@@ -759,9 +759,7 @@ jobs:
               fi
             fi
           done < "$ASSETS"
-          REMAINING_OLD="$(gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | grep -Ec '^state-c(000[1-9]|00[1-9][0-9])-((manifest\\.txt)|part-[0-9]{3})
-
- || true)"
+          REMAINING_OLD="$(gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | awk -v keep="$PRESERVE_CHECKPOINT" '$0 ~ /^state-c[0-9][0-9][0-9][0-9]-(manifest\.txt|part-[0-9][0-9][0-9])$/ { cp = substr($0, 8, 4); if (cp < keep) n++ } END { print n+0 }')" 
           if [[ "$REMAINING_OLD" != "0" ]]; then
             echo "::warning::$REMAINING_OLD superseded checkpoint assets remain in the release; restore will ignore those before full snapshot $PRESERVE_CHECKPOINT."
           else
