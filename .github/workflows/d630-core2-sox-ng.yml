@@ -117,6 +117,25 @@ jobs:
             https://codeberg.org/sox_ng/sox_ng.git "$SOURCE_DIR"
           cd "$SOURCE_DIR"
           SOURCE_COMMIT="$(git rev-parse HEAD)"
+
+          # lsx_fail() is printf-like: do not pass ope_strerror() as a format string.
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("src/opus.c")
+          source = path.read_text()
+          old = "lsx_fail(ope_strerror(retval));"
+          new = 'lsx_fail("%s", ope_strerror(retval));'
+          count = source.count(old)
+          if count != 1:
+              raise SystemExit(
+                  f"Expected exactly one vulnerable lsx_fail() call in {path}, found {count}"
+              )
+          path.write_text(source.replace(old, new, 1))
+          PY
+          git diff --check
+          git diff -- src/opus.c
+
           autoreconf -fi
 
           UPSTREAM_VERSION="$(sed -n 's/^AC_INIT(\[sox_ng\], \[\([^]]*\)\].*/\1/p' configure.ac | head -n 1)"
