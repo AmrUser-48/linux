@@ -8,7 +8,7 @@ on:
         description: Upstream SoX NG branch or tag
         required: true
         type: string
-        default: main
+        default: sox_ng-14.8.1
       cflags_append:
         description: Space-separated C compiler flags appended to Debian defaults
         required: true
@@ -118,7 +118,8 @@ jobs:
           cd "$SOURCE_DIR"
           SOURCE_COMMIT="$(git rev-parse HEAD)"
 
-          # lsx_fail() is printf-like: do not pass ope_strerror() as a format string.
+          # Fix this printf-format issue only when present in the selected source.
+          # Stable releases without the development-branch Opus encoder need no patch.
           python3 - <<'PY'
           from pathlib import Path
 
@@ -127,11 +128,15 @@ jobs:
           old = "lsx_fail(ope_strerror(retval));"
           new = 'lsx_fail("%s", ope_strerror(retval));'
           count = source.count(old)
-          if count != 1:
+          if count > 1:
               raise SystemExit(
-                  f"Expected exactly one vulnerable lsx_fail() call in {path}, found {count}"
+                  f"Expected at most one vulnerable lsx_fail() call in {path}, found {count}"
               )
-          path.write_text(source.replace(old, new, 1))
+          if count == 1:
+              path.write_text(source.replace(old, new, 1))
+              print("Patched printf-format use in src/opus.c.")
+          else:
+              print("No vulnerable call in this source revision; no patch needed.")
           PY
           git diff --check
           git diff -- src/opus.c
@@ -386,17 +391,22 @@ jobs:
             exit 1
           fi
 
-          if ! grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
-            echo "::error::Configure did not enable libopusenc; Opus encoding is missing."
-            exit 1
+          if grep -q 'ope_encoder_write_float' src/opus.c &&
+             grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
+            SOX_NG_HAS_OPUS_ENCODER=true
+            printf 'Native Opus encoder: enabled (HAVE_OPUSENC=1)\n' \
+              >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+          else
+            SOX_NG_HAS_OPUS_ENCODER=false
+            printf 'Native Opus encoder: not present in this upstream source revision\n' \
+              >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
           fi
-          printf 'Opus encoder configure check: HAVE_OPUSENC=1\n' \
-            >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+          echo "SOX_NG_HAS_OPUS_ENCODER=$SOX_NG_HAS_OPUS_ENCODER" >> "$GITHUB_ENV"
 
           cd "$GITHUB_WORKSPACE/release-artifacts"
           sha256sum ./*.deb > SHA256SUMS-core2-sox-ng.txt
-          printf 'Upstream: https://codeberg.org/sox_ng/sox_ng\nSource ref: %s\nSource commit: %s\nUpstream version: %s\nDebian package version: %s\nTarget: amd64 / Intel Core 2\n' \
-            "$SOURCE_REF" "$SOURCE_COMMIT" "$UPSTREAM_VERSION" "$PACKAGE_VERSION" \
+          printf 'Upstream: https://codeberg.org/sox_ng/sox_ng\nSource ref: %s\nSource commit: %s\nUpstream version: %s\nDebian package version: %s\nTarget: amd64 / Intel Core 2\nNative Opus encoder: %s\n' \
+            "$SOURCE_REF" "$SOURCE_COMMIT" "$UPSTREAM_VERSION" "$PACKAGE_VERSION" "$SOX_NG_HAS_OPUS_ENCODER" \
             > BUILD-INFO.txt
           ls -lh ./*.deb ./*.txt
 
@@ -434,12 +444,21 @@ jobs:
           TEST_DIR="$(mktemp -d)"
           trap 'rm -rf "$TEST_DIR"' EXIT
           "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
-          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
+          if [[ "$SOX_NG_HAS_OPUS_ENCODER" == "true" ]]; then
+            "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
+          else
+            ffmpeg -hide_banner -loglevel error -y -i "$TEST_DIR/input.wav" \
+              -c:a libopus "$TEST_DIR/encoded.opus"
+          fi
           "$SOX_CMD" "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
           test -s "$TEST_DIR/encoded.opus"
           test -s "$TEST_DIR/decoded.wav"
           "$SOXI_CMD" "$TEST_DIR/encoded.opus"
-          echo "PASS: configured command names, Opus encoder, and Opus decoder."
+          if [[ "$SOX_NG_HAS_OPUS_ENCODER" == "true" ]]; then
+            echo "PASS: configured command names, native Opus encoder, and Opus decoder."
+          else
+            echo "PASS: configured command names and Opus decoder; FFmpeg generated the test Opus file because this source revision has no native encoder."
+          fi
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -465,7 +484,8 @@ jobs:
           - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
           - Build parallelism: ${BUILD_JOBS}
           - Format handlers: controlled by configure options; --with-dyn-default loads optional handlers as modules
-          - Opus: encoder and decoder built and tested
+          - Opus decoding: tested after package installation
+          - Native Opus encoder: ${SOX_NG_HAS_OPUS_ENCODER}
           - Standard command names: sox, soxi, play, rec
           - Binary package: sox-ng; Conflicts/Replaces: sox
           - Shared library and dynamic modules: libsox-ng5
