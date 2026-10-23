@@ -165,10 +165,25 @@ def markdown(value):
     return re.sub(r"\s+", " ", str(value or "")).strip().replace("|", "\\|")
 
 
+def summary_profile(profile):
+    if not str(profile).startswith("CFLAGS="):
+        return profile
+    cflags = str(profile).split("; CXXFLAGS=", 1)[0].removeprefix("CFLAGS=")
+    tokens = cflags.split()
+    optimizations = [token for token in tokens if re.fullmatch(r"-O(?:[0-3]|s|g|fast)", token)]
+    summary = [optimizations[-1] if optimizations else "-O2"]
+    for flag in ("-pipe", "-march=core2", "-mtune=core2"):
+        if flag in tokens:
+            summary.append(flag)
+    return " ".join(summary)
+
+
 def release_notes(package, source_version, package_version, kind, description, profile,
                   asset_names, build_info, flags_text, old_body, info_values):
     display = DISPLAY_NAMES.get(package.lower(), package)
+    profile_summary = summary_profile(profile)
     metadata = {
+        "schema_version": 2,
         "source_package": package,
         "display_name": display,
         "source_version": source_version,
@@ -199,6 +214,7 @@ def release_notes(package, source_version, package_version, kind, description, p
             "",
             f"- Native Opus encoder backported from upstream commit `{commit}`.",
             "- CI installed the package and verified direct SoX NG WAV-to-Opus encoding followed by Opus-to-WAV decoding; FFmpeg was not used to encode the test file.",
+            f"- **Compiler profile:** `{profile_summary}`; Debian hardening is retained. See `CORE2-FLAGS.txt` for full effective CFLAGS/CXXFLAGS/LDFLAGS.",
             "- Provides the conventional `sox`, `soxi`, `play`, and `rec` command names.",
             "- Dynamic format handlers are enabled; this changes handler loading but does not guarantee a smaller total installation.",
         ])
@@ -207,7 +223,7 @@ def release_notes(package, source_version, package_version, kind, description, p
             lines.extend(["", f"**Configure options:** `{config.group(1).strip()}`"])
     elif package.lower() in {"rustdesk", "sfk"}:
         lines.extend([
-            f"Built for Debian 12 Bookworm amd64 on Intel Core 2 using the build profile `{profile}`.",
+            f"Built for Debian 12 Bookworm amd64 on Intel Core 2 using the compiler profile `{profile_summary}`.",
             "",
             "## Build-specific details",
             "",
@@ -222,7 +238,7 @@ def release_notes(package, source_version, package_version, kind, description, p
             "",
             f"- **Package build version:** `{package_version}`",
             "- **Target:** Debian 12 Bookworm, amd64, Intel Core 2 family.",
-            f"- **Compiler profile:** `{profile}`.",
+            f"- **Compiler profile:** `{profile_summary}`.",
             "- Debian compiler/linker hardening defaults are retained where present; attached build metadata records the available effective flags.",
         ])
         if package.lower() == "glibc":
@@ -263,8 +279,14 @@ def main():
             continue
         old_body = str(release.get("body") or "")
         if "core2-release-metadata:" in old_body:
-            skipped += 1
-            continue
+            match = re.search(r"(?m)^<!-- core2-release-metadata: (\{.*\}) -->$", old_body)
+            try:
+                existing_metadata = json.loads(match.group(1)) if match else {}
+            except (json.JSONDecodeError, TypeError):
+                existing_metadata = {}
+            if int(existing_metadata.get("schema_version", 0) or 0) >= 2:
+                skipped += 1
+                continue
         try:
             info_asset = next((a for a in assets if str(a.get("name") or "").lower() == "build-info.txt"), None)
             flags_asset = next((a for a in assets if str(a.get("name") or "").lower() == "core2-flags.txt"), None)
