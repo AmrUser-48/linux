@@ -26,7 +26,25 @@ def flatten_releases(payload):
     return [item for page in payload for item in page] if payload and isinstance(payload[0], list) else payload
 
 
+def release_metadata(release):
+    body = str(release.get("body") or "")
+    match = re.search(r"(?m)^<!-- core2-release-metadata: (\{.*\}) -->$", body)
+    if not match:
+        return {}
+    try:
+        value = json.loads(match.group(1))
+    except (json.JSONDecodeError, TypeError):
+        return {}
+    return value if isinstance(value, dict) else {}
+
+
 def package_and_version(release):
+    metadata = release_metadata(release)
+    if metadata.get("source_package"):
+        return (
+            str(metadata["source_package"]).strip(),
+            str(metadata.get("package_version") or metadata.get("source_version") or "").strip(),
+        )
     title = (release.get("name") or "").strip()
     for prefix in ("Core 2 optimized ", "Core 2 system ", "Core 2 source-built "):
         if title.lower().startswith(prefix.lower()):
@@ -541,17 +559,20 @@ def main():
         raw_date = release.get("published_at") or release.get("created_at") or ""
         published = raw_date.replace("T", " ").replace("Z", " UTC").strip()
         package, version = package_and_version(release)
+        metadata = release_metadata(release)
+        display_name = str(metadata.get("display_name") or package).strip()
+        description = str(metadata.get("description") or "").strip()
         package = package.replace("|", "\\|").replace("\\n", " ").strip() or "package"
         selector = package.strip().lower()
         release_kind = "system" if str(release.get("tag_name") or "").startswith("core2-system-") else "optimized"
 
+        lines.append(f"### {display_name} ({release_kind})")
         if version:
-            lines.append(f"### {package} ({release_kind})")
             lines.append(f"Version: {chr(96)}{version}{chr(96)} · Published: {published}")
-        else:
-            lines.append(f"### {package} ({release_kind})")
-            if published:
-                lines.append(f"Published: {published}")
+        elif published:
+            lines.append(f"Published: {published}")
+        if description:
+            lines.append(f"**Description:** {description}")
 
         if selector not in install_command_written:
             command = f"curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - {selector}"
