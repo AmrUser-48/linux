@@ -300,19 +300,19 @@ jobs:
           CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"
           LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
           {
-            printf 'CFLAGS=%s\\n' "$CFLAGS"
-            printf 'CXXFLAGS=%s\\n' "$CXXFLAGS"
-            printf 'CPPFLAGS=%s\\n' "$CPPFLAGS"
-            printf 'LDFLAGS=%s\\n' "$LDFLAGS"
-            printf 'CFLAGS_APPEND=%s\\n' "$CFLAGS_APPEND"
-            printf 'CXXFLAGS_APPEND=%s\\n' "$CXXFLAGS_APPEND"
-            printf 'CPPFLAGS_APPEND=%s\\n' "$CPPFLAGS_APPEND"
-            printf 'LDFLAGS_APPEND=%s\\n' "$LDFLAGS_APPEND"
-            printf 'CONFIGURE_FLAGS=%s\\n' "$SOX_NG_CONFIGURE_FLAGS"
-            printf 'HARDENING_OPTIONS=%s\\n' "$DEB_BUILD_MAINT_OPTIONS"
-            printf 'DEB_BUILD_OPTIONS=%s\\n' "$DEB_BUILD_OPTIONS"
-            printf 'BUILD_JOBS=%s\\n' "$BUILD_JOBS"
-            printf '%s\\n' 'Target: Debian 12 Bookworm amd64; Debian build flags retained'
+            printf 'CFLAGS=%s\n' "$CFLAGS"
+            printf 'CXXFLAGS=%s\n' "$CXXFLAGS"
+            printf 'CPPFLAGS=%s\n' "$CPPFLAGS"
+            printf 'LDFLAGS=%s\n' "$LDFLAGS"
+            printf 'CFLAGS_APPEND=%s\n' "$CFLAGS_APPEND"
+            printf 'CXXFLAGS_APPEND=%s\n' "$CXXFLAGS_APPEND"
+            printf 'CPPFLAGS_APPEND=%s\n' "$CPPFLAGS_APPEND"
+            printf 'LDFLAGS_APPEND=%s\n' "$LDFLAGS_APPEND"
+            printf 'CONFIGURE_FLAGS=%s\n' "$SOX_NG_CONFIGURE_FLAGS"
+            printf 'HARDENING_OPTIONS=%s\n' "$DEB_BUILD_MAINT_OPTIONS"
+            printf 'DEB_BUILD_OPTIONS=%s\n' "$DEB_BUILD_OPTIONS"
+            printf 'BUILD_JOBS=%s\n' "$BUILD_JOBS"
+            printf '%s\n' 'Target: Debian 12 Bookworm amd64; Debian build flags retained'
           } > "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
 
           check_flags() {
@@ -347,16 +347,25 @@ jobs:
 
           shopt -s nullglob
           DEBS=( "$GITHUB_WORKSPACE/build-work"/*.deb )
-          if (( ${#DEBS[@]} != 2 )); then
-            printf 'Expected exactly two runtime .deb packages; found %s\n' "${#DEBS[@]}"
-            printf '%s\n' "${DEBS[@]}"
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::No Debian packages were produced."
             exit 1
           fi
+          FOUND_SOX=false
+          FOUND_LIB=false
           for deb in "${DEBS[@]}"; do
             arch="$(dpkg-deb -f "$deb" Architecture)"
             test "$arch" = amd64
+            case "$(dpkg-deb -f "$deb" Package)" in
+              sox-ng) FOUND_SOX=true ;;
+              libsox-ng5) FOUND_LIB=true ;;
+            esac
             cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
           done
+          if [[ "$FOUND_SOX" != true || "$FOUND_LIB" != true ]]; then
+            echo "::error::Required sox-ng and libsox-ng5 runtime packages were not both produced."
+            exit 1
+          fi
 
           if ! grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
             echo "::error::Configure did not enable libopusenc; Opus encoding is missing."
@@ -385,7 +394,7 @@ jobs:
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Conflicts)" = sox
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Replaces)" = sox
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --with-dyn-default "* ]]; then
-            dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\\.so'
+            dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\.so'
           fi
           apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
 
