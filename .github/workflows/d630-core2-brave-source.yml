@@ -310,7 +310,7 @@ jobs:
             mkdir -p "$MANIFEST_PROBE"
             BASE_CP=""
             for CP in "${COMPLETE_IDS[@]}"; do
-              if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+              if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-manifest.txt" --dir "$MANIFEST_PROBE"; then
                 if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
                   BASE_CP="$CP"
@@ -335,7 +335,7 @@ jobs:
             echo "Restoring from full snapshot $BASE_CP and subsequent deltas only."
 
             for CP in "${RESTORE_IDS[@]}"; do
-              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-manifest.txt" --dir "$STATE_DIR"
               MANIFEST="$STATE_DIR/state-c${CP}-manifest.txt"
 
@@ -352,7 +352,7 @@ jobs:
                 exit 1
               fi
 
-              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \\
+              gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-part-*" --dir "$STATE_DIR"
               mapfile -t PARTS < <(find "$STATE_DIR" -maxdepth 1 -type f -name "state-c${CP}-part-*" -print | sort)
               if (( ${#PARTS[@]} != EXPECTED_PARTS )); then
