@@ -317,8 +317,19 @@ def main():
             build_info = read_asset_text(info_asset) if info_asset else ""
             flags_text = read_asset_text(flags_asset) if flags_asset else ""
             parsed = title_parts(release, build_info)
+            if not parsed and existing_metadata.get("source_package"):
+                # On later passes the release title is already human-readable, so
+                # recover the source package/version from our marker rather than
+                # trying to infer it from "SoX NG ..." or another display name.
+                package = str(existing_metadata.get("source_package") or "")
+                source_version = str(existing_metadata.get("source_version") or "")
+                package_version = str(existing_metadata.get("package_version") or "")
+                if package.lower() == "sfk":
+                    source_version = re.sub(r"-\d+\+core2\.\d+~\d{14}$", "", source_version)
+                if package and package_version:
+                    parsed = (package, source_version or package_version, package_version, parse_key_values(build_info))
             if not parsed:
-                print(f"SKIP {tag}: cannot identify source package/version from title or BUILD-INFO.txt")
+                print(f"SKIP {tag}: cannot identify source package/version from title, BUILD-INFO.txt, or existing metadata")
                 skipped += 1
                 continue
             package, source_version, package_version, info_values = parsed
