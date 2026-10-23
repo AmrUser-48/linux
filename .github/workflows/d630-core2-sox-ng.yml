@@ -1,0 +1,355 @@
+name: Core 2 optimized SoX NG Debian package
+run-name: "Core 2 SoX NG (dynamic format handlers): ${{ inputs.source_ref }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: Upstream SoX NG branch or tag
+        required: true
+        type: string
+        default: main
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  build:
+    name: Build and test SoX NG for Core 2
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      SOURCE_REF: ${{ inputs.source_ref }}
+      DEB_CFLAGS_MAINT_APPEND: "-O2 -pipe -march=core2 -mtune=core2"
+      DEB_CXXFLAGS_MAINT_APPEND: "-O2 -pipe -march=core2 -mtune=core2"
+      DEB_BUILD_MAINT_OPTIONS: hardening=+all
+      DEB_BUILD_OPTIONS: "parallel=4 noautodbgsym"
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Install Debian 12 build dependencies and all available codec development libraries
+        shell: bash
+        run: |
+          set -euxo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            autoconf automake build-essential ca-certificates curl debhelper devscripts \
+            dpkg-dev fakeroot file ffmpeg gh git ladspa-sdk libao-dev libasound2-dev \
+            libcurl4-openssl-dev libebur128-dev libfftw3-dev libflac-dev libgsm1-dev \
+            libid3tag0-dev libltdl-dev libmad0-dev libmagic-dev libmp3lame-dev \
+            libogg-dev libopus-dev libopusenc-dev libopusfile-dev \
+            libopencore-amrnb-dev libopencore-amrwb-dev libpng-dev libpulse-dev \
+            libsndfile1-dev libspeexdsp-dev libtool libtool-bin libtwolame-dev \
+            libvorbis-dev libwavpack-dev pkg-config
+
+      - name: Fetch upstream source and prepare Debian packaging
+        id: source
+        shell: bash
+        run: |
+          set -euxo pipefail
+          if [[ ! "$SOURCE_REF" =~ ^[A-Za-z0-9._/-]+$ ]]; then
+            echo "::error::Invalid upstream ref: $SOURCE_REF"
+            exit 1
+          fi
+
+          SOURCE_DIR="$GITHUB_WORKSPACE/sox-ng-source"
+          git clone --depth 1 --branch "$SOURCE_REF" \
+            https://codeberg.org/sox_ng/sox_ng.git "$SOURCE_DIR"
+          cd "$SOURCE_DIR"
+          SOURCE_COMMIT="$(git rev-parse HEAD)"
+          autoreconf -fi
+
+          UPSTREAM_VERSION="$(sed -n 's/^AC_INIT(\[sox_ng\], \[\([^]]*\)\].*/\1/p' configure.ac | head -n 1)"
+          if [[ -z "$UPSTREAM_VERSION" ]]; then
+            echo "::error::Could not extract upstream version from configure.ac"
+            exit 1
+          fi
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          PACKAGE_VERSION="${UPSTREAM_VERSION}+core2.1~${BUILD_STAMP}"
+          BUILD_DATE="$(date -u -R)"
+
+          mkdir -p debian/source
+          cat > debian/control <<'EOF'
+          Source: sox-ng
+          Section: sound
+          Priority: optional
+          Maintainer: Core 2 package builder <noreply@example.invalid>
+          Build-Depends:
+           debhelper-compat (= 13),
+           autoconf,
+           automake,
+           libtool,
+           libtool-bin,
+           pkg-config,
+           ladspa-sdk,
+           libao-dev,
+           libasound2-dev,
+           libcurl4-openssl-dev,
+           libebur128-dev,
+           libfftw3-dev,
+           libflac-dev,
+           libgsm1-dev,
+           libid3tag0-dev,
+           libltdl-dev,
+           libmad0-dev,
+           libmagic-dev,
+           libmp3lame-dev,
+           libogg-dev,
+           libopus-dev,
+           libopusenc-dev,
+           libopusfile-dev,
+           libopencore-amrnb-dev,
+           libopencore-amrwb-dev,
+           libpng-dev,
+           libpulse-dev,
+           libsndfile1-dev,
+           libspeexdsp-dev,
+           libtwolame-dev,
+           libvorbis-dev,
+           libwavpack-dev
+          Standards-Version: 4.6.2
+          Rules-Requires-Root: no
+
+          Package: libsox-ng5
+          Architecture: any
+          Multi-Arch: same
+          Pre-Depends: ${misc:Pre-Depends}
+          Depends: ${shlibs:Depends}, ${misc:Depends}
+          Description: SoX NG shared library and dynamic format handlers
+           Shared runtime library and optional dynamically loaded format handlers
+           built from upstream SoX NG for Intel Core 2.
+
+          Package: sox-ng
+          Architecture: any
+          Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+          Recommends: ffmpeg
+          Conflicts: sox
+          Replaces: sox
+          Description: Swiss Army knife of sound processing (SoX NG)
+           SoX NG command-line audio processing utility, optimized for Intel Core 2.
+           The package provides the conventional sox, soxi, play, and rec command
+           names while replacing Debian's non-NG sox package.
+          EOF
+
+          cat > debian/rules <<'EOF'
+          #!/usr/bin/make -f
+          export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+          export DEB_CFLAGS_MAINT_APPEND = -O2 -pipe -march=core2 -mtune=core2
+          export DEB_CXXFLAGS_MAINT_APPEND = -O2 -pipe -march=core2 -mtune=core2
+          export DEB_BUILD_OPTIONS = parallel=4 noautodbgsym
+
+          %:
+          	dh $@
+
+          override_dh_auto_configure:
+          	dh_auto_configure -- --with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng
+
+          override_dh_auto_install:
+          	dh_auto_install --destdir=debian/tmp
+          	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.a
+          	find debian/tmp/usr/lib -type f -name '*.la' -delete
+          	find debian/tmp/usr/lib -type l -name '*.la' -delete
+          	rm -f debian/tmp/usr/include/sox.h debian/tmp/usr/include/sox_ng.h
+          	rmdir debian/tmp/usr/include 2>/dev/null || true
+          	rm -rf debian/tmp/usr/share/doc/sox-ng
+
+          override_dh_auto_test:
+          	@echo "Upstream source-tree tests skipped because dynamic modules use the install-time module path; package-installed Opus tests run in CI."
+          EOF
+          chmod 755 debian/rules
+
+          printf '%s\n' '3.0 (native)' > debian/source/format
+          cat > debian/changelog <<EOF
+          sox-ng (${PACKAGE_VERSION}) bookworm; urgency=medium
+
+            * Build upstream SoX NG with Core 2 optimization and Debian hardening.
+            * Enable dynamic optional format handlers and FFmpeg integration.
+            * Verify native Opus encoding and decoding after package installation.
+
+           -- Core 2 package builder <noreply@example.invalid>  ${BUILD_DATE}
+          EOF
+
+          cat > debian/libsox-ng5.install <<'EOF'
+          usr/lib/*/libsox_ng.so.5*
+          usr/lib/*/sox_ng/*
+          EOF
+          cat > debian/sox-ng.install <<'EOF'
+          usr/bin/*
+          usr/share/man/man1/*
+          usr/share/man/man7/*
+          EOF
+          : > debian/sox-ng.docs
+          for doc in INSTALL ChangeLog README README.md README-sox_ng.md COPYING; do
+            [[ ! -f "$doc" ]] || printf '%s\n' "$doc" >> debian/sox-ng.docs
+          done
+
+          cat > debian/copyright <<'EOF'
+          Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+          Upstream-Name: SoX NG
+          Source: https://codeberg.org/sox_ng/sox_ng
+
+          Files: *
+          Copyright: Copyright holders identified in the individual source files
+          License: GPL-2+
+           This program is free software; you can redistribute it and/or modify it
+           under the terms of the GNU General Public License as published by the
+           Free Software Foundation; either version 2 of the License, or (at your
+           option) any later version.
+           .
+           This program is distributed in the hope that it will be useful, but
+           WITHOUT ANY WARRANTY; without even the implied warranty of
+           MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+           Public License for more details.
+           .
+           On Debian systems, the complete text of the GNU General Public License
+           version 2 can be found in /usr/share/common-licenses/GPL-2.
+          EOF
+
+          {
+            echo "SOURCE_DIR=$SOURCE_DIR"
+            echo "SOURCE_COMMIT=$SOURCE_COMMIT"
+            echo "UPSTREAM_VERSION=$UPSTREAM_VERSION"
+            echo "PACKAGE_VERSION=$PACKAGE_VERSION"
+          } >> "$GITHUB_ENV"
+          {
+            echo "source_commit=$SOURCE_COMMIT"
+            echo "upstream_version=$UPSTREAM_VERSION"
+            echo "package_version=$PACKAGE_VERSION"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Compile and create Debian packages
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd "$SOURCE_DIR"
+          mkdir -p "$GITHUB_WORKSPACE/release-artifacts"
+
+          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"
+          LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
+          {
+            printf 'CFLAGS=%s\n' "$CFLAGS"
+            printf 'CPPFLAGS=%s\n' "$CPPFLAGS"
+            printf 'LDFLAGS=%s\n' "$LDFLAGS"
+            printf '%s\n' \
+              'SoX NG configure options: --with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no' \
+              'Target: Debian 12 Bookworm, amd64, Intel Core 2' \
+              'Debian hardening: hardening=+all; automatic dbgsym packages disabled'
+          } > "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+          grep -q -- '-O2' <<<"$CFLAGS"
+          grep -q -- '-march=core2' <<<"$CFLAGS"
+          grep -q -- '-mtune=core2' <<<"$CFLAGS"
+          grep -q -- '-pipe' <<<"$CFLAGS"
+
+          dpkg-buildpackage -b -uc -us -j4
+
+          shopt -s nullglob
+          DEBS=( "$GITHUB_WORKSPACE"/*.deb )
+          if (( ${#DEBS[@]} != 2 )); then
+            printf 'Expected exactly two runtime .deb packages; found %s\n' "${#DEBS[@]}"
+            printf '%s\n' "${DEBS[@]}"
+            exit 1
+          fi
+          for deb in "${DEBS[@]}"; do
+            arch="$(dpkg-deb -f "$deb" Architecture)"
+            test "$arch" = amd64
+            cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
+          done
+
+          if ! grep -q '^#define HAVE_OPUSENC 1' src/soxconfig.h; then
+            echo "::error::Configure did not enable libopusenc; Opus encoding is missing."
+            exit 1
+          fi
+          printf 'Opus encoder configure check: HAVE_OPUSENC=1\n' \
+            >> "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
+
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          sha256sum ./*.deb > SHA256SUMS-core2-sox-ng.txt
+          printf 'Upstream: https://codeberg.org/sox_ng/sox_ng\nSource ref: %s\nSource commit: %s\nUpstream version: %s\nDebian package version: %s\nTarget: amd64 / Intel Core 2\n' \
+            "$SOURCE_REF" "$SOURCE_COMMIT" "$UPSTREAM_VERSION" "$PACKAGE_VERSION" \
+            > BUILD-INFO.txt
+          ls -lh ./*.deb ./*.txt
+
+      - name: Verify package metadata and dynamic Opus module
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          SOX_DEB=( ./sox-ng_*.deb )
+          LIB_DEB=( ./libsox-ng5_*.deb )
+          test "${#SOX_DEB[@]}" -eq 1
+          test "${#LIB_DEB[@]}" -eq 1
+          test "$(dpkg-deb -f "${SOX_DEB[0]}" Package)" = sox-ng
+          test "$(dpkg-deb -f "${SOX_DEB[0]}" Conflicts)" = sox
+          test "$(dpkg-deb -f "${SOX_DEB[0]}" Replaces)" = sox
+          dpkg-deb -c "${LIB_DEB[0]}" | grep -q 'libsox_ng_fmt_opus\.so'
+          apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
+
+          test -x /usr/bin/sox_ng
+          test -L /usr/bin/sox
+          test "$(readlink -f /usr/bin/sox)" = /usr/bin/sox_ng
+          sox --version
+          sox --help >/dev/null
+
+          TEST_DIR="$(mktemp -d)"
+          trap 'rm -rf "$TEST_DIR"' EXIT
+          sox -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
+          sox "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
+          sox "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
+          test -s "$TEST_DIR/encoded.opus"
+          test -s "$TEST_DIR/decoded.wav"
+          soxi "$TEST_DIR/encoded.opus"
+          echo "PASS: standard sox command, dynamic Opus encoder, and Opus decoder."
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-sox-ng-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Publish Core 2 SoX NG release
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="core2-system-sox-ng-${TAG_VERSION}"
+          cat > "$GITHUB_WORKSPACE/release-artifacts/release-notes.md" <<EOF
+          ## SoX NG for Intel Core 2
+
+          Built from upstream SoX NG ${UPSTREAM_VERSION} (${SOURCE_REF}), source commit ${SOURCE_COMMIT}.
+
+          - Debian target: Bookworm amd64
+          - Compiler profile: Debian hardening plus -O2 -pipe -march=core2 -mtune=core2
+          - Format handlers: --with-dyn-default (optional formats loaded as modules)
+          - FFmpeg: enabled for extra input formats
+          - Opus: encoder and decoder built and tested
+          - Standard command names: sox, soxi, play, rec
+          - Binary package: sox-ng; Conflicts/Replaces: sox
+          - Shared library and dynamic modules: libsox-ng5
+          - Debug-symbol packages: not generated automatically
+
+          Dynamic format modules make the core library thinner, but add module files
+          and runtime loading overhead. This does not guarantee a smaller total
+          installed footprint or faster processing than the default static-handler
+          arrangement.
+          EOF
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          gh release create "$RELEASE_TAG" ./*.deb ./*.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Core 2 system sox-ng $PACKAGE_VERSION" \
+            --notes-file release-notes.md
+
+          if gh workflow run d630-core2-update-release-index.yml \
+            --repo "$GITHUB_REPOSITORY" --ref master; then
+            echo "Dispatched Core 2 package index refresh."
+          else
+            echo "::warning::Release published; package index refresh could not be dispatched."
+          fi
