@@ -107,6 +107,7 @@ def main() -> int:
     display = human_name(package)
     release_title = f"{display} {package_version} (Intel Core 2 · Debian 12)"
     metadata = {
+        "schema_version": 2,
         "source_package": package,
         "display_name": display,
         "source_version": source_version,
