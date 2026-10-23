@@ -20,11 +20,12 @@ permissions:
 
 concurrency:
   group: core2-brave-source
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     name: Compile and package Brave for Core 2
+    if: github.event_name != 'push'
     runs-on: ubuntu-22.04
     timeout-minutes: 360
     env:
@@ -265,6 +266,16 @@ jobs:
           STATE_TAG="core2-brave-state-v${UPSTREAM_VERSION}"
           STATE_DIR="$RUNNER_TEMP/brave-state"
           mkdir -p "$OUT" "$STATE_DIR"
+
+          # Checkpointed outputs retain mtimes from earlier runners. A fresh source
+          # checkout makes unchanged inputs look newer, causing Ninja to recompile
+          # previously completed objects. Normalize input mtimes to a fixed old epoch;
+          # keep the entire output tree untouched so restored outputs remain newer.
+          find "$WORK/src" \
+            -path '*/.git' -prune -o \
+            -path "$WORK/src/out" -prune -o \
+            -type f -exec touch -d '@946684800' {} +
+          echo "Normalized source/input mtimes for incremental checkpoint reuse."
 
           CHROMIUM_REVISION="$(git -C "$WORK/src" rev-parse HEAD)"
           CPU_CONFIG_SHA="$(sha256sum "$WORK/src/build/config/compiler_cpu_abi.gn" | awk '{print $1}')"
