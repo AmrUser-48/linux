@@ -238,7 +238,8 @@ def release_notes(package, source_version, package_version, kind, description, p
             f"- Upstream commit: `{commit or 'recorded in BUILD-INFO.txt'}`.",
             f"- Compiler flags: `{flags}`.",
             f"- Linkage: {linkage}; linked against Debian system libraries.",
-            f"- Debian runtime dependencies: `{depends or 'see package control metadata'}`.",
+            (f"- Debian runtime dependencies: `{depends}`." if depends else
+             "- Runtime dependencies are declared in the Debian package control metadata; install the .deb with APT to resolve them."),",
             f"- {smoke.rstrip('.')}.",
             "- The release includes the Debian package, standalone executable, build metadata, linkage report, smoke-test output, and checksums where attached.",
         ])
@@ -321,17 +322,45 @@ def main():
             package, source_version, package_version, info_values = parsed
             kind = "system" if tag.startswith("core2-system-") else "optimized"
             profile, cflags, cxxflags, flag_values = parse_profile(build_info, flags_text)
-            primary = select_primary_asset(package, deb_assets)
-            if primary is None:
-                print(f"SKIP {tag}: no downloadable .deb asset")
-                skipped += 1
-                continue
-            description = deb_field(primary, "Description").splitlines()[0].strip()
-            primary_binary = deb_field(primary, "Package")
+            # Existing schema-v1 release notes already carry the real Debian Description
+            # and primary binary. Reuse them to avoid downloading hundreds of .deb files
+            # merely to reformat notes; inspect a .deb only for releases without metadata.
+            if existing_metadata:
+                primary_binary = str(existing_metadata.get("primary_binary") or "")
+                description = str(existing_metadata.get("description") or "")
+                primary = None
+                if primary_binary:
+                    primary = next(
+                        (
+                            asset for asset in deb_assets
+                            if str(asset.get("name") or "").split("_", 1)[0].lower() == primary_binary.lower()
+                        ),
+                        None,
+                    )
+                if not primary:
+                    primary = select_primary_asset(package, deb_assets)
+                if not primary_binary:
+                    primary_binary = primary_binary or str(existing_metadata.get("primary_binary") or "")
+                if not description or not primary_binary:
+                    if primary is None:
+                        print(f"SKIP {tag}: no downloadable .deb asset")
+                        skipped += 1
+                        continue
+                    description = deb_field(primary, "Description").splitlines()[0].strip()
+                    primary_binary = deb_field(primary, "Package")
+            else:
+                primary = select_primary_asset(package, deb_assets)
+                if primary is None:
+                    print(f"SKIP {tag}: no downloadable .deb asset")
+                    skipped += 1
+                    continue
+                description = deb_field(primary, "Description").splitlines()[0].strip()
+                primary_binary = deb_field(primary, "Package")
+                if package.lower() == "sfk":
+                    info_values["debian depends"] = deb_field(primary, "Depends")
             if not description:
-                raise RuntimeError(f"Description field is empty for {primary.get('name')}")
+                raise RuntimeError(f"Description field is empty for {primary.get('name') if primary else primary_binary}")
             info_values["binary package"] = primary_binary
-            info_values["debian depends"] = deb_field(primary, "Depends")
             display, metadata, body = release_notes(
                 package, source_version, package_version, kind, description, profile,
                 [str(a.get("name") or "") for a in assets], build_info, flags_text,
