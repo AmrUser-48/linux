@@ -45,7 +45,7 @@ jobs:
             libid3tag0-dev libltdl-dev libmad0-dev libmagic-dev libmp3lame-dev \
             libogg-dev libopus-dev libopusenc-dev libopusfile-dev \
             libopencore-amrnb-dev libopencore-amrwb-dev libpng-dev libpulse-dev \
-            libsndfile1-dev libspeexdsp-dev libtool libtool-bin libtwolame-dev \
+            libsndfile1-dev libsndio-dev libspeexdsp-dev libtool libtool-bin libtwolame-dev \
             libvorbis-dev libwavpack-dev pkg-config
 
       - name: Fetch upstream source and prepare Debian packaging
@@ -111,6 +111,7 @@ jobs:
            libpng-dev,
            libpulse-dev,
            libsndfile1-dev,
+           libsndio-dev,
            libspeexdsp-dev,
            libtwolame-dev,
            libvorbis-dev,
@@ -157,8 +158,8 @@ jobs:
           	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.a
           	find debian/tmp/usr/lib -type f -name '*.la' -delete
           	find debian/tmp/usr/lib -type l -name '*.la' -delete
-          	rm -f debian/tmp/usr/include/sox.h debian/tmp/usr/include/sox_ng.h
-          	rmdir debian/tmp/usr/include 2>/dev/null || true
+          	# Runtime-only package: no development headers, static API docs, or installed upstream docs.
+          	rm -rf debian/tmp/usr/include debian/tmp/usr/share/man/man3
           	rm -rf debian/tmp/usr/share/doc/sox-ng
 
           override_dh_auto_test:
@@ -240,7 +241,7 @@ jobs:
             printf 'CPPFLAGS=%s\n' "$CPPFLAGS"
             printf 'LDFLAGS=%s\n' "$LDFLAGS"
             printf '%s\n' \
-              'SoX NG configure options: --with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no' \
+              'SoX NG configure options: --with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no' \
               'Target: Debian 12 Bookworm, amd64, Intel Core 2' \
               'Debian hardening: hardening=+all; automatic dbgsym packages disabled'
           } > "$GITHUB_WORKSPACE/release-artifacts/CORE2-FLAGS.txt"
@@ -339,6 +340,7 @@ jobs:
           - Compiler profile: Debian hardening plus -O2 -pipe -march=core2 -mtune=core2
           - Format handlers: --with-dyn-default (optional formats loaded as modules)
           - FFmpeg: enabled for extra input formats
+          - Curl: enabled as the preferred URL-fetch command over wget
           - URL input: prefer the curl executable
           - Opus: encoder and decoder built and tested
           - Standard command names: sox, soxi, play, rec
