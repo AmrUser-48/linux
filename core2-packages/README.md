@@ -6472,8 +6472,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary><code>sox-ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.8.1</code></summary>
 
 **Download files**
-- [sox-ng_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/sox-ng_14.8.1%2Bcore2.1.20261023204446_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023204446)
+- [sox-ng_14.8.1+core2.1.20261023214105_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/sox-ng_14.8.1%2Bcore2.1.20261023214105_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105)
 
 **Dependencies**
 
@@ -6483,8 +6483,8 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 <summary><code>libsox-ng5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.8.1</code></summary>
 
 **Download files**
-- [libsox-ng5_14.8.1+core2.1.20261023204446_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023204446/libsox-ng5_14.8.1%2Bcore2.1.20261023204446_amd64.deb) (architecture: amd64)
-- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023204446)
+- [libsox-ng5_14.8.1+core2.1.20261023214105_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/libsox-ng5_14.8.1%2Bcore2.1.20261023214105_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105)
 
 **Dependencies**
 
@@ -17698,9 +17698,25 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
-### sox-ng (system)
-Version: `14.8.1+core2.1~20261023204446` · Published: 2026-10-23 20:45:40 UTC
+### SoX NG (system)
+Version: `14.8.1+core2.1~20261023214105` · Published: 2026-10-23 21:42:00 UTC
+**Description:** Swiss Army knife of sound processing (SoX NG)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
+
+<details><summary>Files (5)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/BUILD-INFO.txt)
+- [CORE2-FLAGS.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/CORE2-FLAGS.txt)
+- [libsox-ng5_14.8.1+core2.1.20261023214105_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/libsox-ng5_14.8.1%2Bcore2.1.20261023214105_amd64.deb)
+- [SHA256SUMS-core2-sox-ng.txt](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/SHA256SUMS-core2-sox-ng.txt)
+- [sox-ng_14.8.1+core2.1.20261023214105_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261023214105/sox-ng_14.8.1%2Bcore2.1.20261023214105_amd64.deb)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105)
+
+</details>
+
+### SoX NG (system)
+Version: `14.8.1+core2.1~20261023204446` · Published: 2026-10-23 20:45:40 UTC
+**Description:** Swiss Army knife of sound processing (SoX NG)
 
 <details><summary>Files (5)</summary>
 
@@ -17713,8 +17729,9 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### opus (optimized)
+### Opus (optimized)
 Version: `1.3.1-3+core2.1~20261023192526` · Published: 2026-10-23 19:27:26 UTC
+**Description:** Opus codec runtime library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opus`
 
 <details><summary>Files (6)</summary>
@@ -17731,6 +17748,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### flac (optimized)
 Version: `1.4.2+ds-2+core2.1~20261023192521` · Published: 2026-10-23 19:26:46 UTC
+**Description:** Free Lossless Audio Codec - command line tools
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - flac`
 
 <details><summary>Files (9)</summary>
@@ -17750,6 +17768,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libopusenc (optimized)
 Version: `0.2.1-2+core2.1~20261023192524` · Published: 2026-10-23 19:26:17 UTC
+**Description:** High-level API for encoding Opus audio streams (library)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libopusenc`
 
 <details><summary>Files (6)</summary>
@@ -17766,6 +17785,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### opusfile (optimized)
 Version: `0.12-4+core2.1~20261023192513` · Published: 2026-10-23 19:26:06 UTC
+**Description:** High-level API for basic manipulation of Ogg Opus audio streams
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opusfile`
 
 <details><summary>Files (6)</summary>
@@ -17780,8 +17800,9 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### opus-tools (optimized)
+### Opus Tools (optimized)
 Version: `0.2-1+core2.1~20261023192504` · Published: 2026-10-23 19:25:58 UTC
+**Description:** Opus codec command line tools
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - opus-tools`
 
 <details><summary>Files (4)</summary>
@@ -17796,6 +17817,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libogg (optimized)
 Version: `1.3.5-3+core2.1~20261023192506` · Published: 2026-10-23 19:25:57 UTC
+**Description:** Ogg bitstream library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libogg`
 
 <details><summary>Files (5)</summary>
@@ -17809,8 +17831,9 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### sfk (optimized)
-Published: 2026-10-22 17:57:32 UTC
+### Swiss File Knife (SFK) (optimized)
+Version: `2.0.0+git50bbdede-1+core2.1~20261022175640` · Published: 2026-10-22 17:57:32 UTC
+**Description:** Swiss File Knife command-line toolkit
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sfk`
 
 <details><summary>Files (7)</summary>
@@ -17826,8 +17849,9 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 </details>
 
-### sfk (optimized)
-Published: 2026-10-22 17:57:16 UTC
+### Swiss File Knife (SFK) (optimized)
+Version: `2.0.0+git50bbdede-1+core2.1~20261022175627` · Published: 2026-10-22 17:57:16 UTC
+**Description:** Swiss File Knife command-line toolkit
 
 <details><summary>Files (7)</summary>
 
@@ -17890,6 +17914,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### feh (optimized)
 Version: `3.9.1-2+core2.1~20261020171043` · Published: 2026-10-20 17:12:23 UTC
+**Description:** imlib2 based image viewer
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - feh`
 
 <details><summary>Files (4)</summary>
@@ -17904,6 +17929,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libzstd (optimized)
 Version: `1.5.4+dfsg2-5+core2.1~20261020161546` · Published: 2026-10-20 16:27:16 UTC
+**Description:** fast lossless compression algorithm
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libzstd`
 
 <details><summary>Files (6)</summary>
@@ -17920,6 +17946,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### vte2.91 (optimized)
 Version: `0.70.6-2~deb12u1+core2.1~20261020162049` · Published: 2026-10-20 16:26:02 UTC
+**Description:** GObject introspection data for the VTE library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - vte2.91`
 
 <details><summary>Files (12)</summary>
@@ -17942,6 +17969,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### lz4 (optimized)
 Version: `1.9.4-1+core2.1~20261020161626` · Published: 2026-10-20 16:23:20 UTC
+**Description:** Fast LZ compression algorithm library - tool
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lz4`
 
 <details><summary>Files (7)</summary>
@@ -17959,6 +17987,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### xkeyboard-config (optimized)
 Version: `2.35.1-1+core2.1~20261020162047` · Published: 2026-10-20 16:21:39 UTC
+**Description:** X Keyboard Extension (XKB) configuration data
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xkeyboard-config`
 
 <details><summary>Files (4)</summary>
@@ -17973,6 +18002,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### tiff (optimized)
 Version: `4.5.0-6+deb12u4+core2.1~20261020161933` · Published: 2026-10-20 16:21:14 UTC
+**Description:** Tag Image File Format (TIFF) library -- C++ interface
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tiff`
 
 <details><summary>Files (10)</summary>
@@ -17993,6 +18023,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### shared-mime-info (optimized)
 Version: `2.2-1+core2.1~20261020161923` · Published: 2026-10-20 16:20:21 UTC
+**Description:** FreeDesktop.org shared MIME database and spec
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - shared-mime-info`
 
 <details><summary>Files (4)</summary>
@@ -18007,6 +18038,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### p11-kit (optimized)
 Version: `0.24.1-2+core2.1~20261020161738` · Published: 2026-10-20 16:19:55 UTC
+**Description:** p11-glue utilities
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - p11-kit`
 
 <details><summary>Files (8)</summary>
@@ -18025,6 +18057,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### pango1.0 (optimized)
 Version: `1.50.12+ds-1+core2.1~20261020161751` · Published: 2026-10-20 16:19:32 UTC
+**Description:** Layout and rendering of internationalized text (transitional package)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pango1.0`
 
 <details><summary>Files (13)</summary>
@@ -18048,6 +18081,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### nettle (optimized)
 Version: `3.8.1-2+core2.1~20261020161715` · Published: 2026-10-20 16:18:40 UTC
+**Description:** low level cryptographic library (binary tools)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - nettle`
 
 <details><summary>Files (7)</summary>
@@ -18065,6 +18099,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxml2 (optimized)
 Version: `2.9.14+dfsg-1.3~deb12u6+core2.1~20261020161513` · Published: 2026-10-20 16:18:01 UTC
+**Description:** GNOME XML library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxml2`
 
 <details><summary>Files (8)</summary>
@@ -18083,6 +18118,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libgcrypt20 (optimized)
 Version: `1.10.1-3+deb12u1+core2.1~20261020161004` · Published: 2026-10-20 16:16:42 UTC
+**Description:** LGPL Crypto library - runtime library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libgcrypt20`
 
 <details><summary>Files (7)</summary>
@@ -18100,6 +18136,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### gnutls28 (optimized)
 Version: `3.7.9-2+deb12u7+core2.1~20261020155800` · Published: 2026-10-20 16:16:41 UTC
+**Description:** GNU TLS library - C++ runtime library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gnutls28`
 
 <details><summary>Files (11)</summary>
@@ -18121,6 +18158,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxrender (optimized)
 Version: `1:0.9.10-1.1+core2.1~20261020161528` · Published: 2026-10-20 16:16:22 UTC
+**Description:** X Rendering Extension client library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxrender`
 
 <details><summary>Files (5)</summary>
@@ -18136,6 +18174,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxkbcommon (optimized)
 Version: `1.5.0-1+core2.1~20261020161422` · Published: 2026-10-20 16:15:27 UTC
+**Description:** library to query available RMLVO
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxkbcommon`
 
 <details><summary>Files (11)</summary>
@@ -18157,6 +18196,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxi (optimized)
 Version: `2:1.8-1+core2.1~20261020161349` · Published: 2026-10-20 16:15:05 UTC
+**Description:** X11 Input extension library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxi`
 
 <details><summary>Files (5)</summary>
@@ -18172,6 +18212,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxinerama (optimized)
 Version: `2:1.1.4-3+core2.1~20261020161404` · Published: 2026-10-20 16:14:58 UTC
+**Description:** X11 Xinerama extension library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxinerama`
 
 <details><summary>Files (5)</summary>
@@ -18187,6 +18228,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxfixes (optimized)
 Version: `1:6.0.0-2+core2.1~20261020161340` · Published: 2026-10-20 16:14:39 UTC
+**Description:** X11 miscellaneous 'fixes' extension library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxfixes`
 
 <details><summary>Files (5)</summary>
@@ -18202,6 +18244,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libxcursor (optimized)
 Version: `1:1.2.1-1+core2.1~20261020161324` · Published: 2026-10-20 16:14:21 UTC
+**Description:** X cursor management library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxcursor`
 
 <details><summary>Files (5)</summary>
@@ -18217,6 +18260,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libtasn1-6 (optimized)
 Version: `4.19.0-2+deb12u1+core2.1~20261020161215` · Published: 2026-10-20 16:13:39 UTC
+**Description:** Manage ASN.1 structures (runtime)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libtasn1-6`
 
 <details><summary>Files (7)</summary>
@@ -18234,6 +18278,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libthai (optimized)
 Version: `0.1.29-1+core2.1~20261020161219` · Published: 2026-10-20 16:13:14 UTC
+**Description:** Thai language support library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libthai`
 
 <details><summary>Files (7)</summary>
@@ -18251,6 +18296,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libsepol (optimized)
 Version: `3.4-2.1+core2.1~20261020161145` · Published: 2026-10-20 16:12:54 UTC
+**Description:** Security Enhanced Linux policy utility programs
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsepol`
 
 <details><summary>Files (6)</summary>
@@ -18267,6 +18313,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libgpg-error (optimized)
 Version: `1.46-1+core2.1~20261020161016` · Published: 2026-10-20 16:12:46 UTC
+**Description:** GnuPG development runtime library (executable tools)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libgpg-error`
 
 <details><summary>Files (8)</summary>
@@ -18285,6 +18332,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libtext-glob-perl (optimized)
 Version: `0.11-3+core2.1~20261020161151` · Published: 2026-10-20 16:12:35 UTC
+**Description:** Perl module for matching globbing patterns against text
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libtext-glob-perl`
 
 <details><summary>Files (4)</summary>
@@ -18299,6 +18347,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libsemanage (optimized)
 Version: `3.4-1+core2.1~20261020161025` · Published: 2026-10-20 16:11:39 UTC
+**Description:** SELinux policy management utilities
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsemanage`
 
 <details><summary>Files (9)</summary>
@@ -18318,6 +18367,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### krb5 (optimized)
 Version: `1.20.1-2+deb12u5+core2.1~20261020160614` · Published: 2026-10-20 16:11:03 UTC
+**Description:** TLS plugin for MIT Kerberos
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - krb5`
 
 <details><summary>Files (26)</summary>
@@ -18354,6 +18404,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libnumber-compare-perl (optimized)
 Version: `0.03-3+core2.1~20261020161009` · Published: 2026-10-20 16:11:01 UTC
+**Description:** module for performing numeric comparisons in Perl
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libnumber-compare-perl`
 
 <details><summary>Files (4)</summary>
@@ -18368,6 +18419,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### gtk+3.0 (optimized)
 Version: `3.24.38-2~deb12u3+core2.1~20261020155945` · Published: 2026-10-20 16:10:55 UTC
+**Description:** GNOME Accessibility Implementation Library -- shared libraries
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gtk+3.0`
 
 <details><summary>Files (14)</summary>
@@ -18392,6 +18444,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libfile-find-rule-perl (optimized)
 Version: `0.34-4~deb12u1+core2.1~20261020160848` · Published: 2026-10-20 16:09:29 UTC
+**Description:** module to search for files based on rules
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libfile-find-rule-perl`
 
 <details><summary>Files (4)</summary>
@@ -18406,6 +18459,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libdeflate (optimized)
 Version: `1.14-1+core2.1~20261020160817` · Published: 2026-10-20 16:09:15 UTC
+**Description:** tools for whole-buffer compression and decompression library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libdeflate`
 
 <details><summary>Files (6)</summary>
@@ -18422,6 +18476,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libdatrie (optimized)
 Version: `0.2.13-2+core2.1~20261020160819` · Published: 2026-10-20 16:09:11 UTC
+**Description:** Programs for double-array trie library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libdatrie`
 
 <details><summary>Files (7)</summary>
@@ -18439,6 +18494,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libconfuse (optimized)
 Version: `3.3-3+core2.1~20261020160734` · Published: 2026-10-20 16:08:33 UTC
+**Description:** Common files for libConfuse
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libconfuse`
 
 <details><summary>Files (7)</summary>
@@ -18456,6 +18512,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### lerc (optimized)
 Version: `4.0.0+ds-2+core2.1~20261020160636` · Published: 2026-10-20 16:08:00 UTC
+**Description:** Python 3 bindings to the Limited Error Raster Compression library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lerc`
 
 <details><summary>Files (6)</summary>
@@ -18472,6 +18529,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### icu (optimized)
 Version: `72.1-3+deb12u1+core2.1~20261020160050` · Published: 2026-10-20 16:07:38 UTC
+**Description:** Development utilities for International Components for Unicode
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - icu`
 
 <details><summary>Files (7)</summary>
@@ -18489,6 +18547,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### libcap-ng (optimized)
 Version: `0.8.3-1+core2.1~20261020160633` · Published: 2026-10-20 16:07:35 UTC
+**Description:** alternate POSIX capabilities library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libcap-ng`
 
 <details><summary>Files (7)</summary>
@@ -18506,6 +18565,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### lcms2 (optimized)
 Version: `2.14-2+deb12u1+core2.1~20261020160533` · Published: 2026-10-20 16:06:37 UTC
+**Description:** Little CMS 2 color management library (utilities)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lcms2`
 
 <details><summary>Files (6)</summary>
@@ -18522,6 +18582,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### json-c (optimized)
 Version: `0.16-2+core2.1~20261020160448` · Published: 2026-10-20 16:05:43 UTC
+**Description:** JSON manipulation library - shared library
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - json-c`
 
 <details><summary>Files (6)</summary>
@@ -18538,6 +18599,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### harfbuzz (optimized)
 Version: `6.0.0+dfsg-3+core2.1~20261020160021` · Published: 2026-10-20 16:05:42 UTC
+**Description:** OpenType text shaping engine ICU backend
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - harfbuzz`
 
 <details><summary>Files (11)</summary>
@@ -18559,6 +18621,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### jbigkit (optimized)
 Version: `2.1-6.1+core2.1~20261020160309` · Published: 2026-10-20 16:04:01 UTC
+**Description:** JBIGkit binaries
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - jbigkit`
 
 <details><summary>Files (7)</summary>
@@ -18576,6 +18639,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### db5.3 (optimized)
 Version: `5.3.28+dfsg2-1+core2.1~20261020155531` · Published: 2026-10-20 16:04:00 UTC
+**Description:** Berkeley v5.3 SQL Database Utilities
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - db5.3`
 
 <details><summary>Files (18)</summary>
@@ -18604,6 +18668,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### iptables (optimized)
 Version: `1.8.9-2+core2.1~20261020160244` · Published: 2026-10-20 16:03:58 UTC
+**Description:** administration tools for packet filtering and NAT
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - iptables`
 
 <details><summary>Files (12)</summary>
@@ -18626,6 +18691,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### hicolor-icon-theme (optimized)
 Version: `0.17-2+core2.1~20261020160041` · Published: 2026-10-20 16:01:56 UTC
+**Description:** default fallback theme for FreeDesktop.org icon themes
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - hicolor-icon-theme`
 
 <details><summary>Files (4)</summary>
@@ -18640,6 +18706,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### graphite2 (optimized)
 Version: `1.3.14-1+deb12u1+core2.1~20261020160000` · Published: 2026-10-20 16:01:22 UTC
+**Description:** Python bindings for libgraphite2
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - graphite2`
 
 <details><summary>Files (8)</summary>
@@ -18658,6 +18725,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### dbus (optimized)
 Version: `1.14.10-1~deb12u1+core2.1~20261020155524` · Published: 2026-10-20 16:00:09 UTC
+**Description:** simple interprocess messaging system (system message bus)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dbus`
 
 <details><summary>Files (14)</summary>
@@ -18706,6 +18774,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### gdk-pixbuf (optimized)
 Version: `2.42.10+dfsg-1+deb12u4+core2.1~20261020155747` · Published: 2026-10-20 15:59:22 UTC
+**Description:** GDK Pixbuf library - GObject-Introspection
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gdk-pixbuf`
 
 <details><summary>Files (10)</summary>
@@ -18726,6 +18795,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### gdbm (optimized)
 Version: `1.23-3+core2.1~20261020155702` · Published: 2026-10-20 15:58:22 UTC
+**Description:** GNU dbm database routines (legacy support runtime version)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gdbm`
 
 <details><summary>Files (9)</summary>
@@ -18745,6 +18815,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### fribidi (optimized)
 Version: `1.0.8-2.1+core2.1~20261020155618` · Published: 2026-10-20 15:57:17 UTC
+**Description:** Free Implementation of the Unicode BiDi algorithm (utility)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fribidi`
 
 <details><summary>Files (6)</summary>
@@ -18761,6 +18832,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### cups (optimized)
 Version: `2.4.2-3+deb12u9+core2.1~20261020155438` · Published: 2026-10-20 15:56:38 UTC
+**Description:** Common UNIX Printing System(tm) - PPD/driver support, web interface
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cups`
 
 <details><summary>Files (16)</summary>
@@ -18787,6 +18859,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### dconf (optimized)
 Version: `0.40.0-4+core2.1~20261020155533` · Published: 2026-10-20 15:56:35 UTC
+**Description:** simple configuration storage system - utilities
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - dconf`
 
 <details><summary>Files (9)</summary>
@@ -18806,6 +18879,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### colord (optimized)
 Version: `1.4.6-2.2+core2.1~20261020155348` · Published: 2026-10-20 15:55:15 UTC
+**Description:** system service to manage device colour profiles -- system daemon
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - colord`
 
 <details><summary>Files (13)</summary>
@@ -18843,6 +18917,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### avahi (optimized)
 Version: `0.8-10+deb12u1+core2.1~20261020155255` · Published: 2026-10-20 15:54:36 UTC
+**Description:** GObject introspection data for Avahi
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - avahi`
 
 <details><summary>Files (26)</summary>
@@ -18879,6 +18954,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### audit (optimized)
 Version: `1:3.0.9-1+core2.1~20261020155244` · Published: 2026-10-20 15:54:23 UTC
+**Description:** Dynamic library for security auditing - common files
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - audit`
 
 <details><summary>Files (12)</summary>
@@ -18901,6 +18977,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### at-spi2-core (optimized)
 Version: `2.46.0-5+core2.1~20261020155253` · Published: 2026-10-20 15:54:23 UTC
+**Description:** Assistive Technology Service Provider Interface (D-Bus core)
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - at-spi2-core`
 
 <details><summary>Files (16)</summary>
@@ -18927,6 +19004,7 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 
 ### argon2 (optimized)
 Version: `0~20171227-0.3+deb12u1+core2.1~20261020155240` · Published: 2026-10-20 15:53:44 UTC
+**Description:** memory-hard hashing function - utility
 Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - argon2`
 
 <details><summary>Files (7)</summary>
