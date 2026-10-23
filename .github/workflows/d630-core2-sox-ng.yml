@@ -130,7 +130,7 @@ jobs:
           Package: sox-ng
           Architecture: any
           Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-          Recommends: ffmpeg
+          Recommends: ffmpeg, curl
           Conflicts: sox
           Replaces: sox
           Description: Swiss Army knife of sound processing (SoX NG)
@@ -150,7 +150,7 @@ jobs:
           	dh $@
 
           override_dh_auto_configure:
-          	dh_auto_configure -- --with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng
+          	dh_auto_configure -- --with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng
 
           override_dh_auto_install:
           	dh_auto_install --destdir=debian/tmp
@@ -339,6 +339,7 @@ jobs:
           - Compiler profile: Debian hardening plus -O2 -pipe -march=core2 -mtune=core2
           - Format handlers: --with-dyn-default (optional formats loaded as modules)
           - FFmpeg: enabled for extra input formats
+          - URL input: prefer the curl executable
           - Opus: encoder and decoder built and tested
           - Standard command names: sox, soxi, play, rec
           - Binary package: sox-ng; Conflicts/Replaces: sox
