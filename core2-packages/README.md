@@ -6491,6 +6491,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
 
 <details>
+<summary><code>libebur128-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.6-1</code></summary>
+
+**Download files**
+- [libebur128-1_1.2.6-1+core2.1.20261023221125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/libebur128-1_1.2.6-1%2Bcore2.1.20261023221125_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libebur128-1-1.2.6-1-core2.1-20261023221125)
+
+**Dependencies**
+
+- [libc6 — 2.36-9+deb12u14 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854/libc6_2.36-9%2Bdeb12u14%2Bcore2.1.20261010052854_amd64.deb)
+
+</details>
+
+<details>
 <summary><code>libfftw3-double3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.10-1</code></summary>
 
 **Download files**
@@ -6581,7 +6594,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 </details>
 
 <details>
-<summary>Development (139 top-level packages)</summary>
+<summary>Development (140 top-level packages)</summary>
 
 <details>
 <summary><code>alacritty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.11.0-4</code></summary>
@@ -8012,6 +8025,19 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 - [libdconf1 — 0.40.0-4 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-dconf-0.40.0-4-core2.1-20261020155533/libdconf1_0.40.0-4%2Bcore2.1.20261020155533_amd64.deb)
 
 - [libglib2.0-dev — 2.74.6-2+deb12u9 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158/libglib2.0-dev_2.74.6-2%2Bdeb12u9%2Bcore2.1.20261012055158_amd64.deb)
+
+</details>
+
+<details>
+<summary><code>libebur128-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.6-1</code></summary>
+
+**Download files**
+- [libebur128-dev_1.2.6-1+core2.1.20261023221125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/libebur128-dev_1.2.6-1%2Bcore2.1.20261023221125_amd64.deb) (architecture: amd64)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libebur128-1-1.2.6-1-core2.1-20261023221125)
+
+**Dependencies**
+
+- [libebur128-1 — 1.2.6-1 (shared dependency; amd64)](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/libebur128-1_1.2.6-1%2Bcore2.1.20261023221125_amd64.deb)
 
 </details>
 
@@ -17689,7 +17715,7 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 
 </details>
 
-**Unique binary packages indexed:** 1099.
+**Unique binary packages indexed:** 1101.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 <details>
@@ -17698,6 +17724,21 @@ Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README
 The index below is refreshed after successful package builds and package-series runs. It lists installable `.deb` files, build metadata, checksums, and release notes inside collapsed file lists. New builds exclude `-dbg`/`-dbgsym` binaries and do not publish source archives; the index also hides those assets from historical releases.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### libebur128-1 (optimized)
+Version: `1.2.6-1+core2.1~20261023221125` · Published: 2026-10-23 22:20:11 UTC
+**Description:** implementation of the EBU R128 loudness standard
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libebur128-1`
+
+<details><summary>Files (4)</summary>
+
+- [BUILD-INFO.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/BUILD-INFO.txt)
+- [libebur128-1_1.2.6-1+core2.1.20261023221125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/libebur128-1_1.2.6-1%2Bcore2.1.20261023221125_amd64.deb)
+- [libebur128-dev_1.2.6-1+core2.1.20261023221125_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/libebur128-dev_1.2.6-1%2Bcore2.1.20261023221125_amd64.deb)
+- [SHA256SUMS-core2-libebur128-1.txt](https://github.com/AmrUser-48/linux/releases/download/core2-libebur128-1-1.2.6-1-core2.1-20261023221125/SHA256SUMS-core2-libebur128-1.txt)
+- [Release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libebur128-1-1.2.6-1-core2.1-20261023221125)
+
+</details>
+
 ### SoX NG (system)
 Version: `14.8.1+core2.1~20261023214105` · Published: 2026-10-23 21:42:00 UTC
 **Description:** Swiss Army knife of sound processing (SoX NG)

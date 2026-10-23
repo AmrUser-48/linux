@@ -14325,6 +14325,32 @@
       "release_tag": "core2-system-sox-ng-14.8.1-core2.1-20261023214105",
       "source": "sox-ng",
       "version": "14.8.1+core2.1~20261023214105"
+    },
+    "670574214": {
+      "architecture": "amd64",
+      "asset_id": "670574214",
+      "asset_name": "libebur128-1_1.2.6-1+core2.1.20261023221125_amd64.deb",
+      "depends": "libc6 (>= 2.29)",
+      "package": "libebur128-1",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-23T22:20:11Z",
+      "release_tag": "core2-libebur128-1-1.2.6-1-core2.1-20261023221125",
+      "source": "libebur128-1",
+      "version": "1.2.6-1+core2.1~20261023221125"
+    },
+    "670574215": {
+      "architecture": "amd64",
+      "asset_id": "670574215",
+      "asset_name": "libebur128-dev_1.2.6-1+core2.1.20261023221125_amd64.deb",
+      "depends": "libebur128-1 (= 1.2.6-1+core2.1~20261023221125)",
+      "package": "libebur128-dev",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-10-23T22:20:11Z",
+      "release_tag": "core2-libebur128-1-1.2.6-1-core2.1-20261023221125",
+      "source": "libebur128-1",
+      "version": "1.2.6-1+core2.1~20261023221125"
     }
   },
   "schema": 1
