@@ -90,6 +90,11 @@ jobs:
       GH_TOKEN: ${{ github.token }}
 
     steps:
+      - name: Checkout package release metadata helper
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
       - name: Install Debian 12 build dependencies and all available codec development libraries
         shell: bash
         run: |
@@ -491,32 +496,32 @@ jobs:
           set -euo pipefail
           TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
           RELEASE_TAG="core2-system-sox-ng-${TAG_VERSION}"
-          cat > "$GITHUB_WORKSPACE/release-artifacts/release-notes.md" <<EOF
-          ## SoX NG for Intel Core 2
-
-          Built from upstream SoX NG ${UPSTREAM_VERSION} (${SOURCE_REF}), source commit ${SOURCE_COMMIT}.
-
-          - Debian target: Bookworm amd64
-          - Compiler/linker flags: see CORE2-FLAGS.txt for requested and effective values
-          - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
-          - Build parallelism: ${BUILD_JOBS}
-          - Format handlers: controlled by configure options; --with-dyn-default loads optional handlers as modules
-          - Native Opus encoding and decoding: both tested directly through SoX NG
-          - Encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}; stable source base ${SOURCE_REF}
-          - Standard command names: sox, soxi, play, rec
-          - Binary package: sox-ng; Conflicts/Replaces: sox
-          - Shared library and dynamic modules: libsox-ng5
-          - DEB_BUILD_OPTIONS: ${DEB_BUILD_OPTIONS}
-
-          Dynamic format modules make the core library thinner, but add module files
-          and runtime loading overhead. This does not guarantee a smaller total
-          installed footprint or faster processing than the default static-handler
-          arrangement.
-          EOF
           cd "$GITHUB_WORKSPACE/release-artifacts"
+          cat > release-details.md <<EOF
+          ## SoX NG build-specific details
+
+          - Stable upstream source: SoX NG ${UPSTREAM_VERSION}, ref ${SOURCE_REF}, commit ${SOURCE_COMMIT}.
+          - Native Opus encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}.
+          - CI installed the package and verified direct SoX NG WAV-to-Opus encoding followed by Opus-to-WAV decoding; FFmpeg was not used for encoding.
+          - Conventional commands: `sox`, `soxi`, `play`, and `rec`.
+          - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
+          - Dynamic format handlers: enabled by `--with-dyn-default`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
+          - Build jobs: ${BUILD_JOBS}; `DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}`.
+          EOF
+
+          export PACKAGE=sox-ng
+          export SOURCE_VERSION="$UPSTREAM_VERSION"
+          export RELEASE_KIND=system
+          export OPT_LEVEL=-O2
+          export BUILD_MODE="stable upstream release with native Opus encoder backport"
+          export COMPILER_PROFILE="$CFLAGS_APPEND"
+          export RELEASE_DETAILS_FILE="$GITHUB_WORKSPACE/release-artifacts/release-details.md"
+          python3 "$GITHUB_WORKSPACE/core2-packages/release-notes.py"
+          RELEASE_TITLE="$(cat release-title.txt)"
+          rm -f release-title.txt
           gh release create "$RELEASE_TAG" ./*.deb ./*.txt \
             --repo "$GITHUB_REPOSITORY" \
-            --title "Core 2 system sox-ng $PACKAGE_VERSION" \
+            --title "$RELEASE_TITLE" \
             --notes-file release-notes.md
 
           if gh workflow run d630-core2-update-release-index.yml \
