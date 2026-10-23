@@ -1,0 +1,23 @@
+name: Stop obsolete Brave run 31
+
+on:
+  push:
+    paths:
+      - .github/workflows/stop-brave-run-31.yml
+
+permissions:
+  actions: write
+
+jobs:
+  cancel:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Cancel obsolete build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run cancel 39968163674 --repo "$REPOSITORY"
+          echo "Cancellation requested for obsolete Brave run 31."
