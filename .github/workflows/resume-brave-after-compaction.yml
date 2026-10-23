@@ -1,0 +1,42 @@
+name: Resume Brave build after safe compaction
+
+on:
+  push:
+    paths:
+      - .github/workflows/resume-brave-after-compaction.yml
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  resume:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    steps:
+      - name: Wait for the one compaction run and validate its snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          COMPACT_RUN_ID=39972385577
+          STATE_TAG=core2-brave-state-v1.97.59
+          gh run watch "$COMPACT_RUN_ID" --repo "$REPOSITORY" --exit-status
+
+          VERIFY_DIR="$RUNNER_TEMP/brave-compact-verify"
+          mkdir -p "$VERIFY_DIR"
+          gh release download "$STATE_TAG" --repo "$REPOSITORY" --pattern "state-c0018-manifest.txt" --dir "$VERIFY_DIR"
+          grep -qx 'full_snapshot=true' "$VERIFY_DIR/state-c0018-manifest.txt"
+
+          ASSETS="$RUNNER_TEMP/brave-compact-assets.txt"
+          gh release view "$STATE_TAG" --repo "$REPOSITORY" --json assets --jq '.assets[].name' > "$ASSETS"
+          grep -qx "state-c0018-manifest.txt" "$ASSETS"
+          if grep -Eq '^state-c00(0[1-9]|1[0-7])-(manifest\.txt|part-[0-9]{3})$' "$ASSETS"; then
+            echo "::error::Old checkpoint deltas remain; refusing to resume the build."
+            exit 1
+          fi
+
+          gh workflow run d630-core2-brave-source.yml --repo "$REPOSITORY" --ref master -f version=1.97.59 -f compact_state=false
+          echo "Verified the consolidated checkpoint; queued the real Brave compilation session."
