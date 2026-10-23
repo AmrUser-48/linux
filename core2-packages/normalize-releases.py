@@ -108,6 +108,8 @@ def title_parts(release, build_info):
             version = match.group(1)
     if not source_version:
         source_version = version
+        if package.lower() == "sfk":
+            source_version = re.sub(r"-\d+\+core2\.\d+~\d{14}$", "", source_version)
     if not version:
         return None
     return package, source_version, version, values
@@ -221,7 +223,26 @@ def release_notes(package, source_version, package_version, kind, description, p
         config = re.search(r"(?m)^CONFIGURE_FLAGS=(.+)$", flags_text)
         if config:
             lines.extend(["", f"**Configure options:** `{config.group(1).strip()}`"])
-    elif package.lower() in {"rustdesk", "sfk"}:
+    elif package.lower() == "sfk":
+        repository = info_values.get("upstream repository", "https://github.com/sfktools/swissfileknife")
+        commit = info_values.get("upstream commit", "")
+        flags = info_values.get("flags", profile_summary)
+        linkage = info_values.get("linkage", "dynamic")
+        depends = info_values.get("debian depends", "")
+        smoke = info_values.get("smoke test", "SFK package smoke test passed")
+        lines.extend([
+            f"Built from the upstream Swiss File Knife repository ({repository}) for Debian 12 Bookworm amd64.",
+            "",
+            "## Build and verification",
+            "",
+            f"- Upstream commit: `{commit or 'recorded in BUILD-INFO.txt'}`.",
+            f"- Compiler flags: `{flags}`.",
+            f"- Linkage: {linkage}; linked against Debian system libraries.",
+            f"- Debian runtime dependencies: `{depends or 'see package control metadata'}`.",
+            f"- {smoke.rstrip('.')}.",
+            "- The release includes the Debian package, standalone executable, build metadata, linkage report, smoke-test output, and checksums where attached.",
+        ])
+    elif package.lower() == "rustdesk":
         lines.extend([
             f"Built for Debian 12 Bookworm amd64 on Intel Core 2 using the compiler profile `{profile_summary}`.",
             "",
@@ -310,6 +331,7 @@ def main():
             if not description:
                 raise RuntimeError(f"Description field is empty for {primary.get('name')}")
             info_values["binary package"] = primary_binary
+            info_values["debian depends"] = deb_field(primary, "Depends")
             display, metadata, body = release_notes(
                 package, source_version, package_version, kind, description, profile,
                 [str(a.get("name") or "") for a in assets], build_info, flags_text,
