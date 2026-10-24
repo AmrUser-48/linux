@@ -13,7 +13,7 @@ _SOX_NG_GLOBAL_OPTIONS=(
 )
 _SOX_NG_GLOBAL_ARG_OPTIONS=(
   -A --buffer --input-buffer --combine --effects-file --help-effect
-  --help-format --keymap --play-rate-arg --plot --replay-gain --temp -k
+  --help-format --keymap --play-rate-arg --plot --replay-gain --temp -h -k
 )
 _SOX_NG_FORMAT_OPTIONS=(
   --add-comment --comment --comment-file --endian --ignore-length --no-glob
@@ -188,6 +188,7 @@ _sox_ng_type_candidates() {
   local -a types=()
   case $_SOX_NG_FILE_COUNT in
     0) types=("${_SOX_NG_READ_FORMATS[@]}") ;;
+    1) types=("${_SOX_NG_READ_FORMATS[@]}" "${_SOX_NG_WRITE_FORMATS[@]}") ;;
     *) types=("${_SOX_NG_WRITE_FORMATS[@]}") ;;
   esac
   types+=("${_SOX_NG_DEVICES[@]}" null sox)
@@ -224,6 +225,10 @@ _sox_ng_completion() {
   case $prev in
     -t|--type)
       _sox_ng_type_candidates
+      return 0
+      ;;
+    -h)
+      _sox_ng_add_words "${_SOX_NG_EFFECTS[*]} ${_SOX_NG_FORMATS[*]} ${_SOX_NG_DEVICES[*]} all"
       return 0
       ;;
     --help-effect)
