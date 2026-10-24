@@ -479,7 +479,7 @@ jobs:
 
           bash -n "$GITHUB_WORKSPACE/core2-packages/sox-ng.bash-completion"
           bash -n "$GITHUB_WORKSPACE/core2-packages/test-sox-ng-completion.sh"
-          SOX_NG_COMPLETION_FILE=/usr/share/bash-completion/completions/sox "$GITHUB_WORKSPACE/core2-packages/test-sox-ng-completion.sh"
+          SOX_NG_COMPLETION_FILE=/usr/share/bash-completion/completions/sox bash "$GITHUB_WORKSPACE/core2-packages/test-sox-ng-completion.sh"
 
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --enable-replace "* ]]; then
             SOX_CMD=sox
