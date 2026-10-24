@@ -108,15 +108,19 @@ fi
 if _sox_ng_has_word m4a "${_SOX_NG_FORMATS[@]}" &&
    ! _sox_ng_has_word m4a "${_SOX_NG_WRITE_FORMATS[@]}"; then
   complete_line sox input.wav output.wav -t m4a
+  contains m4a
+  if _sox_ng_has_word m4a "${COMPREPLY[@]}"; then
+    echo 'FAIL: read-only m4a was offered at explicit output type position' >&2
+    exit 1
+  fi
   if _sox_ng_has_word m4a "${COMPREPLY[@]}"; then
     echo 'FAIL: read-only m4a was offered as an output format' >&2
     exit 1
   fi
+  # After exactly one input, another input or the output is still possible;
+  # allow the union of readable and writable types until the output filename exists.
   complete_line sox input.wav -t m4a
-  if _sox_ng_has_word m4a "${COMPREPLY[@]}"; then
-    echo 'FAIL: read-only m4a was offered after an input file' >&2
-    exit 1
-  fi
+  contains m4a
 fi
 
 # The first completion should query SoX exactly three times. Subsequent Tab
