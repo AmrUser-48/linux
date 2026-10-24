@@ -392,15 +392,15 @@ jobs:
               {"package": "sox-ng", "version": "14.8.1+core2.1~20261023214105",
                "depends": "libsox-ng5 (= 14.8.1+core2.1~20261023214105), libc6 (>= 2.34)",
                "published_at": "2026-10-23", "asset_name": "sox-ng_14.8.1+core2.1.20261023214105_amd64.deb",
-               "architecture": "amd64", "download_url": "https://example.invalid/sox-ng.deb"},
+               "architecture": "amd64", "download_url": "https://example.invalid/sox-ng.deb", "release_url": "https://example.invalid/sox-ng-release"},
               {"package": "libsox-ng5", "version": "14.8.1+core2.1~20261023214105",
                "depends": "libebur128-1 (>= 1.0.1), libao4 (>= 1.1.0)",
                "published_at": "2026-10-23", "asset_name": "libsox-ng5_14.8.1+core2.1.20261023214105_amd64.deb",
-               "architecture": "amd64", "download_url": "https://example.invalid/libsox-ng5.deb"},
+               "architecture": "amd64", "download_url": "https://example.invalid/libsox-ng5.deb", "release_url": "https://example.invalid/libsox-ng5-release"},
               {"package": "libebur128-1", "version": "1.2.6-1+core2.1~20261023221125",
                "depends": "libc6 (>= 2.29)", "published_at": "2026-10-24",
                "asset_name": "libebur128-1_1.2.6-1+core2.1.20261023221125_amd64.deb",
-               "architecture": "amd64", "download_url": "https://example.invalid/libebur128.deb"},
+               "architecture": "amd64", "download_url": "https://example.invalid/libebur128.deb", "release_url": "https://example.invalid/libebur128-release"},
           ]
           sox_tree, sox_count = treegen["build_tree_markdown"](sox_nodes)
           sox_result = chr(10).join(sox_tree)
@@ -408,7 +408,7 @@ jobs:
           assert "libebur128-1" in sox_result, "SoX NG's transitive libebur128 dependency must be visible"
           assert sox_result.index("sox-ng") < sox_result.index("libsox-ng5") < sox_result.index("libebur128-1"), "SoX NG must show the transitive dependency path"
           assert "libao4 (&gt;= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
-          assert "https://example.invalid/libebur128.deb" in sox_result
+          assert "https://example.invalid/libebur128-release" in sox_result, "dependency links should target the indexed release page"
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
           assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
