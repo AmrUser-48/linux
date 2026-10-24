@@ -298,7 +298,7 @@ def markdown_asset_label(value):
 
 
 def build_tree_markdown(nodes):
-    """Render an expandable GitHub-README tree with a direct download per package."""
+    """Render compact, clickable runtime-dependency trees grouped by category."""
     by_name = {}
     for node in nodes:
         name = str(node.get("package") or "").lower()
@@ -335,8 +335,15 @@ def build_tree_markdown(nodes):
 
     referenced = {child for children in edges.values() for child in children}
     roots = sorted(name for name in by_name if name not in referenced)
-    output = []
+    output = [
+        "",
+        "Expand a category to see one compact dependency tree per top-level binary package.",
+        "Every Pre-Depends and Depends relationship is shown with its version constraint. Links point to matching Core 2 .deb builds; dependencies not rebuilt in this repository are shown as Debian Bookworm leaves.",
+        "Alternatives are marked as choices. Shared dependencies link back to where their subtree was first expanded, avoiding a huge repeated tree. Use Ctrl+F to locate a package or dependency.",
+        "",
+    ]
     expanded = set()
+    first_path = {}
     package_width = max(28, min(44, max((len(name) for name in by_name), default=28)))
     version_width = max((len(display_version(node.get("version", ""))) for node in by_name.values()), default=1)
 
@@ -352,111 +359,61 @@ def build_tree_markdown(nodes):
         candidates.sort(key=lambda item: (item.get("architecture") != "amd64", item.get("architecture", "")))
         return candidates[0]["download_url"] if candidates else str(target.get("release_url") or "")
 
-    def dependency_closure(name):
-        found = set()
-        pending = list(edges.get(name, []))
-        while pending:
-            child = pending.pop()
-            if child in found or child == name:
-                continue
-            found.add(child)
-            pending.extend(edges.get(child, []))
-        return sorted(found)
+    def package_label(name, node):
+        version = display_version(node.get("version", ""))
+        description = ""
+        if str(node.get("primary_binary") or "").lower() == name:
+            description = str(node.get("release_description") or "").strip()
+        label = f"{name} {version}"
+        if description:
+            label += f" — {description}"
+        return label
 
-    def render_package(name, path):
+    def linked_package(name, label):
+        url = dependency_url(name)
+        safe_label = html.escape(label, quote=False)
+        if url:
+            return f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
+        return f"<code>{safe_label}</code>"
+
+    def render_dependencies(name, path, depth):
         node = by_name[name]
-        cycle = name in path
-        shared = name in expanded
-        package = html.escape(name, quote=True)
-        raw_version = display_version(node.get("version", ""))
-        version = html.escape(raw_version, quote=True)
-        name_padding = "&nbsp;" * max(2, package_width - len(name))
-        version_padding = "&nbsp;" * max(0, version_width - len(raw_version))
-        downloads = node.get("downloads") or []
-
-        # A repeated node links to its .deb, while its full dependencies remain
-        # visible in the first expanded instance of the node.
-        if shared or cycle:
-            flag = "dependency cycle" if cycle else "shared dependency"
-            for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
-                url = item.get("download_url") or ""
-                arch = html.escape(item.get("architecture") or "binary", quote=True)
-                if url:
-                    output.append(f"- [{package} — {version} ({flag}; {arch})]({url})")
-            if not downloads:
-                output.append(f"- {package} — {version} ({flag})")
-            return
-
-        output.extend([
-            "<details>",
-            f"<summary><code>{package}{name_padding}{version_padding}{version}</code></summary>",
-            "",
-            "**Download files**",
-        ])
-
-        if downloads:
-            for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
-                label = markdown_asset_label(item.get("asset_name"))
-                url = item.get("download_url") or ""
-                arch = html.escape(item.get("architecture") or "binary", quote=True)
-                if url:
-                    output.append(f"- [{label}]({url}) (architecture: {arch})")
-            release_urls = sorted({item.get("release_url") for item in downloads if item.get("release_url")})
-            for url in release_urls:
-                output.append(f"- [Release page]({url})")
-        else:
-            output.append("- _No direct binary download URL is available._")
-
-        # Show every real Debian relationship. External dependencies used to be
-        # silently omitted, which made this look like a complete tree when it was not.
-        output.extend(["", "**Declared runtime dependencies**", ""])
-        relation_count = 0
+        indent = "  " * depth
         for field in ("pre_depends", "depends"):
+            relation = "Pre-Depends" if field == "pre_depends" else "Depends"
             for alternatives in relationship_clauses(node.get(field, "")):
-                relation_count += 1
-                rendered = []
-                for option in alternatives:
-                    label = html.escape(option["label"], quote=False)
-                    url = dependency_url(option["name"])
-                    if url:
-                        rendered.append(
-                            f'<a href="{html.escape(url, quote=True)}"><code>{label}</code></a> — Core 2 build available'
-                        )
-                    else:
-                        rendered.append(
-                            f"<code>{label}</code> — Debian Bookworm dependency; no Core 2 build in this index"
-                        )
-                relation = "Pre-Depends" if field == "pre_depends" else "Depends"
                 qualifier = " (one alternative)" if len(alternatives) > 1 else ""
-                output.append(f"- **{relation}{qualifier}:** " + " or ".join(rendered))
-        if not relation_count:
-            output.append("- None declared.")
-
-        # Expose transitive Core 2 dependencies without requiring users to open
-        # every nested spoiler first; the expandable tree below preserves paths.
-        if not path:
-            closure = dependency_closure(name)
-            if closure:
-                output.extend([
-                    "",
-                    f"**Core 2 dependency closure — {len(closure)} packages, direct and transitive**",
-                    "",
-                ])
-                for index in range(0, len(closure), 8):
-                    output.append("- " + ", ".join(
-                        f"<code>{html.escape(child, quote=True)}</code>"
-                        for child in closure[index:index + 8]
-                    ))
-
-        if not shared and not cycle:
-            expanded.add(name)
-            children = edges.get(name, [])
-            if children:
-                output.extend(["", "**Expand available Core 2 dependency packages**", ""])
-                for child in children:
-                    render_package(child, path | {name})
-                    output.append("")
-        output.append("</details>")
+                for option in alternatives:
+                    dependency = option["name"]
+                    target = by_name.get(dependency)
+                    label = option["label"]
+                    if target:
+                        link = linked_package(dependency, label)
+                        target_version = display_version(target.get("version", ""))
+                        if dependency in path:
+                            status = " — dependency cycle"
+                            output.append(f"{indent}- **{relation}{qualifier}:** {link}{status}")
+                            continue
+                        if dependency in expanded:
+                            prior = first_path.get(dependency, dependency)
+                            output.append(
+                                f"{indent}- **{relation}{qualifier}:** {link} "
+                                f"— shared dependency; expanded under <code>{html.escape(prior, quote=True)}</code>"
+                            )
+                            continue
+                        output.append(
+                            f"{indent}- **{relation}{qualifier}:** {link} "
+                            f"— Core 2 build {html.escape(target_version, quote=False)}"
+                        )
+                        expanded.add(dependency)
+                        first_path[dependency] = " > ".join(path + [dependency])
+                        render_dependencies(dependency, path + [dependency], depth + 1)
+                    else:
+                        safe_label = html.escape(label, quote=False)
+                        output.append(
+                            f"{indent}- **{relation}{qualifier}:** <code>{safe_label}</code> "
+                            "— Debian Bookworm dependency; no Core 2 build in this index"
+                        )
 
     def render_category(category, names):
         if not names:
@@ -467,9 +424,16 @@ def build_tree_markdown(nodes):
             "",
         ])
         for name in names:
-            if name not in expanded:
-                render_package(name, frozenset())
-                output.append("")
+            if name in expanded:
+                continue
+            node = by_name[name]
+            label = package_label(name, node)
+            url = dependency_url(name) or str(node.get("release_url") or "")
+            output.append(f"- {linked_package(name, label)}")
+            expanded.add(name)
+            first_path[name] = name
+            render_dependencies(name, [name], 1)
+            output.append("")
         output.extend(["</details>", ""])
 
     category_names = {}
@@ -479,7 +443,6 @@ def build_tree_markdown(nodes):
     for category in category_order:
         render_category(category, sorted(category_names.get(category, [])))
 
-    # Cyclic components have no top-level node. Render each remaining component once.
     remaining = sorted(set(by_name) - expanded)
     if remaining:
         output.extend([
@@ -488,9 +451,14 @@ def build_tree_markdown(nodes):
             "",
         ])
         for name in remaining:
-            if name not in expanded:
-                render_package(name, frozenset())
-                output.append("")
+            if name in expanded:
+                continue
+            node = by_name[name]
+            output.append(f"- {linked_package(name, package_label(name, node))}")
+            expanded.add(name)
+            first_path[name] = name
+            render_dependencies(name, [name], 1)
+            output.append("")
         output.extend(["</details>", ""])
 
     return output, len(by_name)
@@ -515,16 +483,17 @@ def make_tree(release_set, metadata):
             record["asset_name"] = str(asset.get("name") or "")
             record["download_url"] = str(asset.get("browser_download_url") or "")
             record["release_url"] = str(release.get("html_url") or "")
+            release_info = release_metadata(release)
+            record["primary_binary"] = str(release_info.get("primary_binary") or "")
+            record["release_description"] = str(release_info.get("description") or "")
             active[asset_id] = record
 
     tree_lines, count = build_tree_markdown(list(active.values()))
     output = [
         "",
-        "Expand a category, then a package, to view downloads and its declared runtime dependencies.",
-        "Every Pre-Depends and Depends clause is shown, including version constraints and alternatives. Dependencies with a matching Core 2 build link to that download; other dependencies are explicitly labelled as Debian Bookworm packages not rebuilt here.",
-        "Each top-level package also lists its complete transitive closure of packages available in this Core 2 index, so dependencies are visible without repeatedly expanding every nested level.",
-        "Package headings shorten this repository's build timestamp for readability; dependency version constraints remain exact as declared in each .deb. Shared dependencies keep their download link and are not recursively expanded over and over.",
-        "Use your browser's Find command (Ctrl+F) to locate a package or dependency; GitHub README files cannot run a custom search box.",
+        "Expand a category to see one compact dependency tree per top-level binary package.",
+        "Every Pre-Depends and Depends relationship is shown with its version constraint. Links point to matching Core 2 .deb builds; dependencies not rebuilt in this repository are shown as Debian Bookworm leaves.",
+        "Alternatives are marked as choices. Shared dependencies link back to where their subtree was first expanded, avoiding a huge repeated tree. Use Ctrl+F to locate a package or dependency.",
         "",
         *tree_lines,
         f"**Unique binary packages indexed:** {count}.",

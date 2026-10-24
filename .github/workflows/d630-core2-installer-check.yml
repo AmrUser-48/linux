@@ -343,17 +343,18 @@ jobs:
               tree_start = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->")
               tree_end = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->")
               tree_result = result[tree_start:tree_end]
-              assert "Declared runtime dependencies" in tree_result
+              assert "Depends" in tree_result
               assert "libc6 (&gt;= 2.34)" in tree_result
               assert "Debian Bookworm dependency; no Core 2 build in this index" in tree_result
               assert "<summary>Development (1 top-level packages)</summary>" in tree_result
-              assert "<summary><code>python3.11-dev" in tree_result and "3.11.2-1</code></summary>" in tree_result
-              assert "[python3.11-dev_3.11.2-1_amd64.deb](https://example.invalid/python-dev.deb)" in tree_result
-              assert "[python3.11_3.11.2-1_amd64.deb](https://example.invalid/python.deb)" in tree_result
+              assert "[<code>python3.11-dev 3.11.2-1 —" not in tree_result
+              assert "python3.11-dev 3.11.2-1" in tree_result
+              assert "https://example.invalid/python-dev.deb" in tree_result
+              assert "https://example.invalid/python.deb" in tree_result
               assert "<summary>System &amp; libraries (1 top-level packages)</summary>" in tree_result
               assert "python3.11-dev" in result and "python3.11" in result and "kmod" in result
               assert "3.11.2-1" in result and "30+20221128-1" in result
-              assert "+core2.1~20261010000000" not in result.split("CORE2-PACKAGE-DEPENDENCY-TREE:END")[0]
+              assert "python3.11 (= 3.11.2-1+core2.1~20261010000000)" in tree_result, "exact dependency constraints must retain the Core 2 package version"
               cache = json.loads(metadata_file.read_text(encoding="utf-8"))
               assert set(cache["assets"]) == {"1", "2", "3"}, cache["assets"]
           print("Package index and dependency-tree checks passed.")
@@ -404,7 +405,7 @@ jobs:
           sox_result = chr(10).join(sox_tree)
           assert sox_count == 3, sox_count
           assert "libebur128-1" in sox_result, "SoX NG's transitive libebur128 dependency must be visible"
-          assert "Core 2 dependency closure — 2 packages, direct and transitive" in sox_result
+          assert sox_result.index("sox-ng") < sox_result.index("libsox-ng5") < sox_result.index("libebur128-1"), "SoX NG must show the transitive dependency path"
           assert "libao4 (>= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
           assert "https://example.invalid/libebur128.deb" in sox_result
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
