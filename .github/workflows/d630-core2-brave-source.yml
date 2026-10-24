@@ -24,7 +24,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: core2-brave-source
+  # The push-triggered job is intentionally skipped; give it a unique group so
+  # merging a workflow fix does not cancel an active six-hour build.
+  group: ${{ github.event_name == 'push' && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
   cancel-in-progress: true
 
 jobs:
@@ -361,6 +363,15 @@ jobs:
               fi
               echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
               cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
+              if grep -qx 'full_snapshot=true' "$MANIFEST"; then
+                EXPECTED_FILES="$(sed -n 's/^file_count=//p' "$MANIFEST")"
+                RESTORED_FILES="$(cd "$OUT" && find . \( -type f -o -type l \) -print | wc -l)"
+                if [[ -z "$EXPECTED_FILES" || "$RESTORED_FILES" != "$EXPECTED_FILES" ]]; then
+                  echo "::error::Restored full snapshot $CP contains $RESTORED_FILES files; manifest expects $EXPECTED_FILES."
+                  exit 1
+                fi
+                echo "Verified full snapshot $CP: $RESTORED_FILES files restored."
+              fi
               rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
             done
@@ -377,6 +388,24 @@ jobs:
             echo "fingerprint=$FINGERPRINT"
           } >> "$GITHUB_OUTPUT"
           echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
+          if [[ "$LAST_CP" != "0000" ]]; then
+            if [[ ! -s "$OUT/.siso_deps" ]]; then
+              echo "::error::Restored output tree has no Siso dependency database (.siso_deps); refusing to restart compilation without verified state."
+              find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
+              exit 1
+            fi
+            if ! find "$OUT" -maxdepth 1 -type f -name '.siso_fs_state*' -size +0c -print -quit | grep -q .; then
+              echo "::error::Restored output tree has no Siso filesystem state; refusing to restart compilation without verified state."
+              find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
+              exit 1
+            fi
+            RESTORED_OBJECTS="$(find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -print | wc -l)"
+            if (( RESTORED_OBJECTS == 0 )); then
+              echo "::error::Checkpoint $LAST_CP contains no compiled object files."
+              exit 1
+            fi
+            echo "Verified restored Siso state: .siso_deps and filesystem state present; $RESTORED_OBJECTS object/archive files."
+          fi
           df -h "$GITHUB_WORKSPACE"
       - name: Compile Brave Release and build Linux package
         if: inputs.compact_state != true
@@ -392,10 +421,7 @@ jobs:
           OUT="$GITHUB_WORKSPACE/src/out/Release"
           mkdir -p "$OUT"
 
-          # Give the build about 3h40m, then interrupt it cleanly and save the changed outputs.
-          # Ninja/Siso state files and object files remain in out/Release for the next runner.
-          BASELINE="$RUNNER_TEMP/brave-state-baseline"
-          touch -d '10 seconds ago' "$BASELINE"
+          # Stop after one compile segment; the next runner restores a complete output snapshot.
           echo "Checkpoint baseline: $LAST_CHECKPOINT"
           echo "Starting incremental build with no swap; checkpoint timeout is 220 minutes."
           timeout --signal=INT --kill-after=90s 220m pnpm run create_dist Release \
@@ -412,6 +438,10 @@ jobs:
             df -h "$GITHUB_WORKSPACE"
             free -h
             tail -n 4 "$BUILD_LOG" || true
+            if [[ -s "$OUT/siso.INFO" ]]; then
+              echo "=== Siso state/reuse diagnostics ==="
+              grep -Ei 'hashfs loaderr|load fs state|failed to load fs state|corrupt|discard|clean:|state.*journal' "$OUT/siso.INFO" | tail -n 8 || true
+            fi
           done
           set +e
           wait "$BUILD_PID"
@@ -437,6 +467,29 @@ jobs:
           echo "checkpoint=false" >> "$GITHUB_OUTPUT"
           grep -E 'Done\. Made|Packaging|Creating|brave-browser_.*\.deb|ninja: Entering|BUILD SUCCESS' "$BUILD_LOG" | tail -n 60 || true
           test -d "$OUT"
+
+      - name: Capture Siso diagnostics
+        if: always() && inputs.compact_state != true
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$GITHUB_WORKSPACE/src/out/Release"
+          if [[ -s "$OUT/siso.INFO" ]]; then
+            cp "$OUT/siso.INFO" "$GITHUB_WORKSPACE/siso.INFO"
+            echo "Captured Siso filesystem-state diagnostics."
+          else
+            echo "Siso INFO log not found or empty."
+          fi
+          if [[ -s "$OUT/siso_output" ]]; then
+            tail -c 2097152 "$OUT/siso_output" > "$GITHUB_WORKSPACE/siso-output-tail.log"
+            echo "Captured the last 2 MiB of Siso action output."
+          fi
+          if [[ -s "$OUT/.siso_fs_state" ]]; then
+            stat -c 'Restored/final .siso_fs_state: size=%s bytes mtime=%y' "$OUT/.siso_fs_state"
+          fi
+          if [[ -s "$OUT/.siso_deps" ]]; then
+            stat -c 'Restored/final .siso_deps: size=%s bytes mtime=%y' "$OUT/.siso_deps"
+          fi
 
       - name: Trim locales and symbols, version the Core 2 package
         if: inputs.compact_state != true && steps.compile.outputs.checkpoint != 'true'
@@ -604,6 +657,8 @@ jobs:
             brave-sync.log
             build-deps.log
             brave-build.log
+            siso.INFO
+            siso-output-tail.log
             release-artifacts/*
           if-no-files-found: warn
           retention-days: 7
@@ -627,29 +682,23 @@ jobs:
           OUT="$WORK/src/out/Release"
           PART_DIR="$RUNNER_TEMP/brave-state-parts"
           FILE_LIST="$RUNNER_TEMP/brave-state-files.list"
-          BASELINE="$RUNNER_TEMP/brave-state-baseline"
           mkdir -p "$PART_DIR"
           rm -f "$PART_DIR"/state-c${NEXT_CHECKPOINT}-part-*
           : > "$FILE_LIST"
 
-          if [[ "$COMPACT_STATE" == "true" || "$LAST_CHECKPOINT" == "0000" ]]; then
-            if [[ "$COMPACT_STATE" == "true" ]]; then
-              echo "Capturing a full output snapshot through checkpoint $LAST_CHECKPOINT."
-            else
-              echo "Capturing complete output tree for the initial checkpoint."
-            fi
-            (cd "$OUT" && find . \( -type f -o -type l \) -print0) > "$FILE_LIST"
-          else
-            echo "Capturing files added or changed since checkpoint $LAST_CHECKPOINT."
-            (cd "$OUT" && find . \( -type f -o -type l \) -newer "$BASELINE" -print0) > "$FILE_LIST"
-          fi
+          # Siso's dependency and filesystem-state files must match the complete set
+          # of restored objects. Timestamp-only deltas can omit state files, causing
+          # the next runner to schedule already-compiled objects again. Save a full,
+          # self-contained output snapshot at every boundary instead.
+          echo "Capturing full output snapshot $NEXT_CHECKPOINT (previous checkpoint $LAST_CHECKPOINT)."
+          (cd "$OUT" && find . \( -type f -o -type l \) -print0) > "$FILE_LIST"
 
           FILE_COUNT="$(tr -cd '\000' < "$FILE_LIST" | wc -c)"
           if (( FILE_COUNT == 0 )); then
             echo "::error::No build outputs changed during the timed segment; refusing to publish an empty checkpoint."
             exit 1
           fi
-          echo "Files in checkpoint delta: $FILE_COUNT"
+          echo "Files in checkpoint snapshot: $FILE_COUNT"
           echo "=== Space before checkpoint compression ==="
           df -h "$GITHUB_WORKSPACE"
 
@@ -667,7 +716,12 @@ jobs:
 
           # Validate the compressed stream and tar archive before replacing prior state.
           cat "${PARTS[@]}" | zstd -t
-          cat "${PARTS[@]}" | zstd -d -c | tar -tf - >/dev/null
+          ARCHIVE_FILE_COUNT="$(cat "${PARTS[@]}" | zstd -d -c | tar -tf - | wc -l)"
+          if [[ "$ARCHIVE_FILE_COUNT" != "$FILE_COUNT" ]]; then
+            echo "::error::Snapshot archive contains $ARCHIVE_FILE_COUNT entries; expected $FILE_COUNT."
+            exit 1
+          fi
+          echo "Validated full snapshot archive: $ARCHIVE_FILE_COUNT entries."
 
           if ! gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
@@ -690,8 +744,8 @@ jobs:
           fingerprint=$FINGERPRINT
           file_count=$FILE_COUNT
           part_count=${#PARTS[@]}
-          full_snapshot=$([[ "$COMPACT_STATE" == "true" || "$LAST_CHECKPOINT" == "0000" ]] && echo true || echo false)
-          covers_through=$LAST_CHECKPOINT
+          full_snapshot=true
+          covers_through=$NEXT_CHECKPOINT
           created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
           # The manifest is uploaded last; its presence means all parts were uploaded.
@@ -706,20 +760,28 @@ jobs:
             echo "::error::Remote snapshot verification failed; preserving all prior checkpoints."
             exit 1
           fi
+          VERIFY_DIR="$RUNNER_TEMP/brave-state-verify"
+          mkdir -p "$VERIFY_DIR"
+          gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern "state-c${NEXT_CHECKPOINT}-manifest.txt" --dir "$VERIFY_DIR"
+          grep -qx "full_snapshot=true" "$VERIFY_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
+          grep -qx "file_count=$FILE_COUNT" "$VERIFY_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
+          echo "Remote full snapshot $NEXT_CHECKPOINT verified: $FILE_COUNT files, $REMOTE_PARTS part(s)."
           echo "part_count=${#PARTS[@]}" >> "$GITHUB_OUTPUT"
+          echo "full_snapshot=true" >> "$GITHUB_OUTPUT"
           {
             echo "### Brave build checkpoint saved"
             echo
             echo "- Source: $UPSTREAM_TAG"
             echo "- Chromium revision: $CHROMIUM_REVISION"
             echo "- Completed checkpoint: $NEXT_CHECKPOINT"
-            echo "- Changed files stored: $FILE_COUNT"
+            echo "- Files in full output snapshot: $FILE_COUNT"
             echo "- Compressed parts: ${#PARTS[@]}"
             echo "- State release: $STATE_TAG"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Prune obsolete checkpoint deltas after full snapshot
-        if: success() && inputs.compact_state == true && steps.save_state.outcome == 'success'
+      - name: Prune obsolete checkpoints after verified full snapshot
+        if: success() && steps.save_state.outcome == 'success' && steps.save_state.outputs.full_snapshot == 'true'
         shell: bash
         env:
           STATE_TAG: ${{ steps.state.outputs.state_tag }}
@@ -763,7 +825,7 @@ jobs:
           if [[ "$REMAINING_OLD" != "0" ]]; then
             echo "::warning::$REMAINING_OLD superseded checkpoint assets remain in the release; restore will ignore those before full snapshot $PRESERVE_CHECKPOINT."
           else
-            echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; older deltas removed."
+            echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; all superseded checkpoints removed."
           fi
 
       - name: Queue the next Brave compilation session
@@ -775,7 +837,7 @@ jobs:
           set -euo pipefail
           echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION."
           gh workflow run d630-core2-brave-source.yml \
-            --repo "$GITHUB_REPOSITORY" --ref master \
+            --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
             -f version="$UPSTREAM_VERSION"
 
       - name: Publish source-built Brave package release
