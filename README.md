@@ -10,7 +10,7 @@ The package index lists each source package's latest published release, Debian p
 
 Release titles use a consistent format: `Package Name Debian-Version (Intel Core 2 · Debian 12)`. Release notes lead with the real Debian binary-package description and document package-specific features, restrictions, and verification. Compiler flags are listed when a package uses a non-default profile or unusual build settings; routine packages do not repeat identical Core 2 flags in every release description.
 
-The release-index workflow normalizes existing release titles and notes before regenerating the package list, keeping older releases consistent with new builds.
+Use the single [**Refresh package releases, dependency tree, and README index** workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-update-release-index.yml) to normalize published release titles and notes, rebuild the dependency tree from the actual Debian package metadata, and refresh this package list. Package publication workflows also trigger the same refresh automatically.
 
 
 
