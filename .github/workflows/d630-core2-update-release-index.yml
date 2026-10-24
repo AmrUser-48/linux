@@ -1,5 +1,5 @@
-name: Refresh Core 2 package release index
-run-name: "Refresh Core 2 package links"
+name: Refresh package releases, dependency tree and README
+run-name: "Normalize releases + rebuild dependency tree and package index"
 
 on:
   workflow_dispatch:
@@ -63,6 +63,13 @@ jobs:
               "core2-packages/README.md" \
               "core2-packages/dependency-metadata.json" \
               "$RUNNER_TEMP/core2-releases.json"
+
+            README_BYTES="$(wc -c < core2-packages/README.md)"
+            echo "Generated package README size: ${README_BYTES} bytes"
+            if (( README_BYTES > 950000 )); then
+              echo "::error::Generated package README exceeds the 950 KB rendering budget."
+              exit 1
+            fi
 
             git add core2-packages/README.md core2-packages/dependency-metadata.json
             if git diff --cached --quiet; then
