@@ -349,8 +349,8 @@ jobs:
               assert "<summary>Development (1 top-level packages)</summary>" in tree_result
               assert "[<code>python3.11-dev 3.11.2-1 —" not in tree_result
               assert "python3.11-dev 3.11.2-1" in tree_result
-              assert "https://example.invalid/python-dev.deb" in tree_result
-              assert "https://example.invalid/python.deb" in tree_result
+              assert "https://example.invalid/python-dev.deb" in result, "release index must retain the direct package download"
+              assert "https://example.invalid/python.deb" in result, "release index must retain the direct package download"
               assert "<summary>System &amp; libraries (1 top-level packages)</summary>" in tree_result
               assert "python3.11-dev" in result and "python3.11" in result and "kmod" in result
               assert "3.11.2-1" in result and "30+20221128-1" in result
