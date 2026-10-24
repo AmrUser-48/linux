@@ -348,11 +348,10 @@ jobs:
               assert "Depends" in tree_result
               assert "libc6 (&gt;= 2.34)" in tree_result
               assert "Debian Bookworm package; not rebuilt here" in tree_result
-              assert "<summary>Development (1 top-level packages)</summary>" not in tree_result
               assert "python3.11-dev" not in tree_result, "development packages must not appear in the runtime tree"
               assert "https://example.invalid/python-dev.deb" in result, "release index must retain the direct package download"
               assert "https://example.invalid/python.deb" in result, "release index must retain the direct package download"
-              assert "<summary>System &amp; libraries (1 top-level packages)</summary>" in tree_result
+              assert "<summary>System &amp; libraries (1 packages)</summary>" in tree_result
               assert "python3.11-dev" in result and "python3.11" in result and "kmod" in result
               assert "3.11.2-1" in result and "30+20221128-1" in result
               assert "libkmod2 (&gt;= 30)" in tree_result, "dependency version constraints must be preserved"
@@ -406,10 +405,10 @@ jobs:
           sox_tree, sox_count = treegen["build_tree_markdown"](sox_nodes)
           sox_result = chr(10).join(sox_tree)
           assert sox_count == 3, sox_count
-          assert "libebur128-1" in sox_result, "SoX NG's transitive libebur128 dependency must be visible"
-          assert sox_result.index("sox-ng") < sox_result.index("libsox-ng5") < sox_result.index("libebur128-1"), "SoX NG must show the transitive dependency path"
+          assert "**Verified SoX NG dependency path:** <code>sox-ng</code> → <code>libsox-ng5</code> → <code>libebur128-1</code>" in sox_result, "the transitive path must be derived from package control metadata"
+          assert "#core2-package-libsox-ng5" in sox_result and "#core2-package-libebur128-1" in sox_result, "Core 2 dependency links should jump to the next package entry"
           assert "libao4 (&gt;= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
-          assert "https://example.invalid/libebur128-release" in sox_result, "dependency links should target the indexed release page"
+          assert "https://example.invalid/libebur128-release" not in sox_result, "runtime dependency traversal should use internal package anchors"
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
           assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
