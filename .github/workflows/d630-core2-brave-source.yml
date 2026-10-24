@@ -361,6 +361,15 @@ jobs:
               fi
               echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
               cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
+              if grep -qx 'full_snapshot=true' "$MANIFEST"; then
+                EXPECTED_FILES="$(sed -n 's/^file_count=//p' "$MANIFEST")"
+                RESTORED_FILES="$(cd "$OUT" && find . \( -type f -o -type l \) -print | wc -l)"
+                if [[ -z "$EXPECTED_FILES" || "$RESTORED_FILES" != "$EXPECTED_FILES" ]]; then
+                  echo "::error::Restored full snapshot $CP contains $RESTORED_FILES files; manifest expects $EXPECTED_FILES."
+                  exit 1
+                fi
+                echo "Verified full snapshot $CP: $RESTORED_FILES files restored."
+              fi
               rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
             done
@@ -377,6 +386,24 @@ jobs:
             echo "fingerprint=$FINGERPRINT"
           } >> "$GITHUB_OUTPUT"
           echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
+          if [[ "$LAST_CP" != "0000" ]]; then
+            if [[ ! -s "$OUT/.siso_deps" ]]; then
+              echo "::error::Restored output tree has no Siso dependency database (.siso_deps); refusing to restart compilation without verified state."
+              find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
+              exit 1
+            fi
+            if ! find "$OUT" -maxdepth 1 -type f -name '.siso_fs_state*' -size +0c -print -quit | grep -q .; then
+              echo "::error::Restored output tree has no Siso filesystem state; refusing to restart compilation without verified state."
+              find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
+              exit 1
+            fi
+            RESTORED_OBJECTS="$(find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -print | wc -l)"
+            if (( RESTORED_OBJECTS == 0 )); then
+              echo "::error::Checkpoint $LAST_CP contains no compiled object files."
+              exit 1
+            fi
+            echo "Verified restored Siso state: .siso_deps and filesystem state present; $RESTORED_OBJECTS object/archive files."
+          fi
           df -h "$GITHUB_WORKSPACE"
       - name: Compile Brave Release and build Linux package
         if: inputs.compact_state != true
