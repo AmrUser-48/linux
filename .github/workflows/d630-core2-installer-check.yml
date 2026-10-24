@@ -340,12 +340,12 @@ jobs:
                   assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
               assert "<details><summary>Files (4)</summary>" in result
               assert "**Unique binary packages indexed:** 3." in result
-          assert "Declared runtime dependencies" in tree_result
-          assert "libc6 (&gt;= 2.34)" in tree_result
-          assert "Debian Bookworm dependency; no Core 2 build in this index" in tree_result
               tree_start = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->")
               tree_end = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->")
               tree_result = result[tree_start:tree_end]
+              assert "Declared runtime dependencies" in tree_result
+              assert "libc6 (&gt;= 2.34)" in tree_result
+              assert "Debian Bookworm dependency; no Core 2 build in this index" in tree_result
               assert "<summary>Development (1 top-level packages)</summary>" in tree_result
               assert "<summary><code>python3.11-dev" in tree_result and "3.11.2-1</code></summary>" in tree_result
               assert "[python3.11-dev_3.11.2-1_amd64.deb](https://example.invalid/python-dev.deb)" in tree_result
