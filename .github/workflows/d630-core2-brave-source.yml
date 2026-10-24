@@ -806,7 +806,7 @@ jobs:
           set -euo pipefail
           echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION."
           gh workflow run d630-core2-brave-source.yml \
-            --repo "$GITHUB_REPOSITORY" --ref master \
+            --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
             -f version="$UPSTREAM_VERSION"
 
       - name: Publish source-built Brave package release
