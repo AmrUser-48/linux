@@ -536,8 +536,8 @@ def main():
     document, _ = re.subn(
         r"(?ms)^<details>\n<summary>Published package downloads by source release \(advanced\)</summary>\n.*?(?=<!-- CORE2-PACKAGE-RELEASE-INDEX:START -->)",
         "## Latest package releases\n\n"
-        "One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; "
-        "the linked release page contains build metadata, checksums, full release notes, and historical builds.\n\n",
+        "One latest published release per Debian source package is listed here, with a direct link to its primary .deb when available. "
+        "The linked release page contains every binary asset, build metadata, checksums, full release notes, and historical builds.\n\n",
         document,
         count=1,
     )
@@ -586,14 +586,21 @@ def main():
             ],
             key=lambda asset: str(asset.get("name") or "").lower(),
         )
+        primary_binary = str(metadata.get("primary_binary") or package).strip().lower()
+        primary = next(
+            (
+                asset for asset in debs
+                if str(asset.get("name") or "").lower().startswith(primary_binary + "_")
+            ),
+            None,
+        )
+        if primary:
+            asset_name = markdown_asset_label(primary.get("name"))
+            lines.append(f"**Main .deb:** [{asset_name}]({primary['browser_download_url']})")
         if debs:
-            lines.append("")
-            lines.append("**Binary downloads:**")
-            for asset in debs:
-                name = markdown_asset_label(asset.get("name"))
-                lines.append(f"- [{name}]({asset['browser_download_url']})")
+            lines.append(f"**Binary packages in release:** {len(debs)}")
         if release.get("html_url"):
-            lines.append(f"**Details and historical versions:** [release page]({release['html_url']})")
+            lines.append(f"**All files, checksums and historical builds:** [release page]({release['html_url']})")
         lines.append("")
     if not lines:
         lines = ["_No Core 2 package releases have been published yet._", ""]
