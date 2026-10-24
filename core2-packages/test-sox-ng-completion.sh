@@ -67,10 +67,37 @@ complete_line sox --play-rate-arg ''
 contains -l
 complete_line sox -A ''
 contains 440
-if ((${#_SOX_NG_DEVICES[@]})); then
-  complete_line sox -t "${_SOX_NG_DEVICES[0]:0:1}"
-  contains "${_SOX_NG_DEVICES[0]}"
-fi
+# Device names are offered only for directions advertised by the format handler.
+complete_line sox -t ''
+for device in "${_SOX_NG_DEVICES[@]}"; do
+  if _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}"; then
+    contains "$device"
+  elif _sox_ng_has_word "$device" "${COMPREPLY[@]}"; then
+    echo "FAIL: write-only device $device was offered as an input format" >&2
+    exit 1
+  fi
+done
+
+complete_line sox input.wav output.wav -t ''
+for device in "${_SOX_NG_DEVICES[@]}"; do
+  if _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}"; then
+    contains "$device"
+  elif _sox_ng_has_word "$device" "${COMPREPLY[@]}"; then
+    echo "FAIL: read-only device $device was offered as an output format" >&2
+    exit 1
+  fi
+done
+
+complete_line sox input.wav -t ''
+for device in "${_SOX_NG_DEVICES[@]}"; do
+  if _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}" ||
+     _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}"; then
+    contains "$device"
+  elif _sox_ng_has_word "$device" "${COMPREPLY[@]}"; then
+    echo "FAIL: unsupported device $device was offered for a file" >&2
+    exit 1
+  fi
+done
 
 complete_line sox input.wav output.wav ga
 contains gain
