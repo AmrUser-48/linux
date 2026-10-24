@@ -351,13 +351,8 @@ def build_tree_markdown(nodes):
         target = by_name.get(dependency)
         if not target:
             return ""
-        candidates = [
-            item for item in (target.get("downloads") or [])
-            if str(item.get("asset_name") or "").split("_", 1)[0].lower() == dependency
-            and item.get("download_url")
-        ]
-        candidates.sort(key=lambda item: (item.get("architecture") != "amd64", item.get("architecture", "")))
-        return candidates[0]["download_url"] if candidates else str(target.get("release_url") or "")
+        # Avoid repeating the long .deb URL on every dependency edge.
+        return str(target.get("release_url") or "")
 
     def package_label(name, node):
         version = display_version(node.get("version", ""))
@@ -369,9 +364,13 @@ def build_tree_markdown(nodes):
             label += f" — {description}"
         return label
 
+    def display_relation_label(value):
+        # Keep package-specific versions readable without repeating the build timestamp.
+        return re.sub(r"(\\+core2\\.\\d+)[.~]\\d{14}", r"\\1~BUILD", str(value or ""))
+
     def linked_package(name, label):
         url = dependency_url(name)
-        safe_label = html.escape(label, quote=False)
+        safe_label = html.escape(display_relation_label(label), quote=False)
         if url:
             return f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
         return f"<code>{safe_label}</code>"
@@ -395,10 +394,9 @@ def build_tree_markdown(nodes):
                             output.append(f"{indent}- **{relation}{qualifier}:** {link}{status}")
                             continue
                         if dependency in expanded:
-                            prior = first_path.get(dependency, dependency)
                             output.append(
-                                f"{indent}- **{relation}{qualifier}:** {link} "
-                                f"— shared dependency; expanded under <code>{html.escape(prior, quote=True)}</code>"
+                                f"{indent}- **{relation}{qualifier}:** <code>{html.escape(display_relation_label(label), quote=False)}</code> "
+                                "— shared dependency; tree shown above"
                             )
                             continue
                         output.append(
@@ -409,10 +407,10 @@ def build_tree_markdown(nodes):
                         first_path[dependency] = " > ".join(path + [dependency])
                         render_dependencies(dependency, path + [dependency], depth + 1)
                     else:
-                        safe_label = html.escape(label, quote=False)
+                        safe_label = html.escape(display_relation_label(label), quote=False)
                         output.append(
                             f"{indent}- **{relation}{qualifier}:** <code>{safe_label}</code> "
-                            "— Debian Bookworm dependency; no Core 2 build in this index"
+                            "— Debian Bookworm package; not rebuilt here"
                         )
 
     def render_category(category, names):

@@ -345,7 +345,7 @@ jobs:
               tree_result = result[tree_start:tree_end]
               assert "Depends" in tree_result
               assert "libc6 (&gt;= 2.34)" in tree_result
-              assert "Debian Bookworm dependency; no Core 2 build in this index" in tree_result
+              assert "Debian Bookworm package; not rebuilt here" in tree_result
               assert "<summary>Development (1 top-level packages)</summary>" in tree_result
               assert "[<code>python3.11-dev 3.11.2-1 —" not in tree_result
               assert "python3.11-dev 3.11.2-1" in tree_result
@@ -406,7 +406,7 @@ jobs:
           assert sox_count == 3, sox_count
           assert "libebur128-1" in sox_result, "SoX NG's transitive libebur128 dependency must be visible"
           assert sox_result.index("sox-ng") < sox_result.index("libsox-ng5") < sox_result.index("libebur128-1"), "SoX NG must show the transitive dependency path"
-          assert "libao4 (>= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
+          assert "libao4 (&gt;= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
           assert "https://example.invalid/libebur128.deb" in sox_result
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
