@@ -298,13 +298,13 @@ def markdown_asset_label(value):
 
 
 def runtime_tree_package(name):
-    """Exclude non-runtime split packages from the dependency browser."""
+    """Exclude development/documentation/debug split packages from the runtime view."""
     lower = str(name or "").lower()
     return not lower.endswith(("-dev", "-doc", "-dbg", "-dbgsym", "-debug", "-udeb"))
 
 
 def build_tree_markdown(nodes):
-    """Render compact recursive runtime dependency trees with Debian leaves."""
+    """Render a compact, searchable direct-dependency browser for runtime binaries."""
     all_by_name = {}
     for node in nodes:
         name = str(node.get("package") or "").lower()
@@ -312,192 +312,124 @@ def build_tree_markdown(nodes):
             continue
         stamp = str(node.get("published_at") or "")
         previous = all_by_name.get(name)
-        old_stamp = str((previous or {}).get("published_at") or "")
-        if previous is None or stamp >= old_stamp:
+        previous_stamp = str((previous or {}).get("published_at") or "")
+        if previous is None or stamp >= previous_stamp:
             all_by_name[name] = node
 
-    by_name = {
+    runtime = {
         name: node for name, node in all_by_name.items()
         if runtime_tree_package(name)
     }
-    edges = {}
-    for name, node in by_name.items():
-        relationships = []
-        for field in ("pre_depends", "depends"):
-            relationships.extend(relationship_names(node.get(field, "")))
-        edges[name] = sorted({
-            dependency for dependency in relationships
-            if dependency in by_name and dependency != name
-        })
-
-    referenced = {child for children in edges.values() for child in children}
-    roots = sorted(name for name in by_name if name not in referenced)
-    output = []
-    expanded = set()
-    first_path = {}
 
     def display_relation_label(value):
         return re.sub(r"(\+core2\.\d+)[.~]\d{14}", r"\1~BUILD", str(value or ""))
 
     def package_label(name, node):
         version = display_version(node.get("version", ""))
-        description = ""
+        label = f"{name} {version}".strip()
         if str(node.get("primary_binary") or "").lower() == name:
             description = str(node.get("release_description") or "").strip()
-        label = f"{name} {version}"
-        if description:
-            label += f" — {description}"
+            if description:
+                label += f" — {description}"
         return label
 
-    def linked_package(name, label):
+    def linked_dependency(name, label):
         safe_label = html.escape(display_relation_label(label), quote=False)
+        target = runtime.get(name)
+        if target:
+            # Link to the package's own direct dependency list instead of
+            # recursively duplicating its entire subtree under every parent.
+            return f'<a href="#core2-package-{html.escape(name, quote=True)}"><code>{safe_label}</code></a>'
         target = all_by_name.get(name)
-        url = str((target or {}).get("release_url") or "")
-        if url:
-            return f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
-        return f"<code>{safe_label}</code>"
+        if target:
+            url = str(target.get("release_url") or "")
+            if url:
+                return (
+                    f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
+                    " <em>(non-runtime Core 2 package)</em>"
+                )
+            return f"<code>{safe_label}</code> <em>(non-runtime Core 2 package)</em>"
+        return f"<code>{safe_label}</code> <em>(Debian Bookworm)</em>"
 
-    def render_dependencies(name, path, depth):
-        node = by_name[name]
-        indent = "  " * depth
+    output = [
+        "",
+        "Each package below shows its direct Pre-Depends and Depends from the published .deb. "
+        "Core 2 dependencies link to their own entry, so follow links to inspect the next level without duplicating entire subtrees. "
+        "Stock Debian dependencies are labelled; development, documentation, and debug split packages are excluded from this runtime view.",
+        "",
+    ]
+
+    # Generate a concrete example path from package control metadata.
+    def find_path(start, target, path):
+        if start == target:
+            return path
+        node = runtime.get(start)
+        if not node:
+            return None
+        dependencies = []
         for field in ("pre_depends", "depends"):
-            relation = "Pre-Depends" if field == "pre_depends" else "Depends"
-            debian_leaves = []
-            nonruntime_core2 = []
-            for alternatives in relationship_clauses(node.get(field, "")):
-                if len(alternatives) > 1:
-                    output.append(f"{indent}- **{relation} (choose one alternative):**")
-                    for option in alternatives:
-                        dependency = option["name"]
-                        link = linked_package(dependency, option["label"])
-                        if dependency in by_name:
-                            if dependency in path:
-                                output.append(f"{indent}  - {link} — dependency cycle")
-                            elif dependency in expanded:
-                                where = first_path.get(dependency, dependency)
-                                output.append(
-                                    f"{indent}  - {link} — shared; first expanded under "
-                                    f"<code>{html.escape(where, quote=False)}</code>"
-                                )
-                            else:
-                                output.append(f'{indent}  - <a id="core2-package-{dependency}"></a>{link} — Core 2 alternative')
-                                expanded.add(dependency)
-                                first_path[dependency] = " > ".join(path + [dependency])
-                                render_dependencies(dependency, path + [dependency], depth + 2)
-                        elif dependency in all_by_name:
-                            nonruntime_core2.append(link + " — non-runtime Core 2 package")
-                        else:
-                            debian_leaves.append(link + " — Debian Bookworm package")
-                    continue
+            dependencies.extend(relationship_names(node.get(field, "")))
+        for child in dependencies:
+            if child in runtime and child not in path:
+                found = find_path(child, target, path + [child])
+                if found:
+                    return found
+        return None
 
-                option = alternatives[0]
-                dependency = option["name"]
-                link = linked_package(dependency, option["label"])
-                if dependency in by_name:
-                    if dependency in path:
-                        output.append(f"{indent}- **{relation}:** {link} — dependency cycle")
-                    elif dependency in expanded:
-                        where = first_path.get(dependency, dependency)
-                        output.append(
-                            f"{indent}- **{relation}:** {link} — shared; first expanded under "
-                            f"<code>{html.escape(where, quote=False)}</code>"
-                        )
-                    else:
-                        target_version = display_version(by_name[dependency].get("version", ""))
-                        output.append(
-                            f'{indent}- <a id="core2-package-{dependency}"></a>**{relation}:** '
-                            f"{link} — Core 2 build {html.escape(target_version, quote=False)}"
-                        )
-                        expanded.add(dependency)
-                        first_path[dependency] = " > ".join(path + [dependency])
-                        render_dependencies(dependency, path + [dependency], depth + 1)
-                elif dependency in all_by_name:
-                    nonruntime_core2.append(
-                        link + " — Core 2 development/documentation/debug package, omitted from runtime tree"
-                    )
-                else:
-                    debian_leaves.append(link + " — Debian Bookworm package; not rebuilt here")
-
-            if debian_leaves:
-                output.append(
-                    f"{indent}- **{relation} (Debian Bookworm; not rebuilt here):** "
-                    + "; ".join(debian_leaves)
-                )
-            if nonruntime_core2:
-                output.append(
-                    f"{indent}- **{relation} (non-runtime Core 2 packages):** "
-                    + "; ".join(nonruntime_core2)
-                )
-
-    def render_category(category, names):
-        if not names:
-            return
+    sox_path = find_path("sox-ng", "libebur128-1", ["sox-ng"]) if "sox-ng" in runtime else None
+    if sox_path:
         output.extend([
-            "<details>",
-            f"<summary>{html.escape(category)} ({len(names)} top-level packages)</summary>",
+            "**Verified SoX NG dependency path:** "
+            + " → ".join("<code>" + name + "</code>" for name in sox_path),
             "",
         ])
-        for name in sorted(names):
-            if name in expanded:
-                continue
-            node = by_name[name]
-            label = package_label(name, node)
-            url = str(node.get("release_url") or "")
-            safe_label = html.escape(label, quote=False)
-            if url:
-                safe_label = f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
-            else:
-                safe_label = f"<code>{safe_label}</code>"
-            output.extend([
-                "<details>",
-                f"<summary>{safe_label}</summary>",
-                "",
-                f'<a id="core2-package-{name}"></a>',
-            ])
-            expanded.add(name)
-            first_path[name] = name
-            render_dependencies(name, [name], 0)
-            output.extend(["", "</details>", ""])
-        output.extend(["</details>", ""])
 
     category_names = {}
-    for name in roots:
-        category_names.setdefault(package_category(name, by_name[name]), []).append(name)
+    for name, node in runtime.items():
+        category_names.setdefault(package_category(name, node), []).append(name)
+
     category_order = [item[0] for item in PACKAGE_CATEGORIES] + [DEFAULT_CATEGORY]
     for category in category_order:
-        render_category(category, category_names.get(category, []))
-
-    remaining = sorted(set(by_name) - expanded)
-    if remaining:
+        names = sorted(category_names.get(category, []))
+        if not names:
+            continue
         output.extend([
             "<details>",
-            f"<summary>Cycles / remaining runtime packages ({len(remaining)})</summary>",
+            f"<summary>{html.escape(category)} ({len(names)} packages)</summary>",
             "",
         ])
-        for name in remaining:
-            if name in expanded:
-                continue
-            node = by_name[name]
-            label = package_label(name, node)
-            url = str(node.get("release_url") or "")
-            safe_label = html.escape(label, quote=False)
-            if url:
-                safe_label = f'<a href="{html.escape(url, quote=True)}"><code>{safe_label}</code></a>'
-            else:
-                safe_label = f"<code>{safe_label}</code>"
+        for name in names:
+            node = runtime[name]
+            label = html.escape(package_label(name, node), quote=False)
+            release_url = str(node.get("release_url") or "")
+            if release_url:
+                label = f'<a href="{html.escape(release_url, quote=True)}">{label}</a>'
             output.extend([
                 "<details>",
-                f"<summary>{safe_label}</summary>",
+                f'<summary id="core2-package-{html.escape(name, quote=True)}"><code>{label}</code></summary>',
                 "",
-                f'<a id="core2-package-{name}"></a>',
             ])
-            expanded.add(name)
-            first_path[name] = name
-            render_dependencies(name, [name], 0)
+
+            for field in ("pre_depends", "depends"):
+                raw = str(node.get(field) or "").strip()
+                if not raw:
+                    continue
+                relation = "Pre-Depends" if field == "pre_depends" else "Depends"
+                clauses = []
+                for alternatives in relationship_clauses(raw):
+                    rendered = [linked_dependency(option["name"], option["label"]) for option in alternatives]
+                    if len(rendered) > 1:
+                        clauses.append("one of: " + " | ".join(rendered))
+                    else:
+                        clauses.append(rendered[0])
+                if clauses:
+                    output.append(f"- **{relation}:** " + "; ".join(clauses))
+            if not str(node.get("pre_depends") or "").strip() and not str(node.get("depends") or "").strip():
+                output.append("- No declared Pre-Depends or Depends.")
             output.extend(["", "</details>", ""])
         output.extend(["</details>", ""])
 
-    return output, len(by_name)
+    return output, len(runtime)
 
 def make_tree(release_set, metadata):
     active = {}
