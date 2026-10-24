@@ -354,7 +354,8 @@ jobs:
               assert "<summary>System &amp; libraries (1 top-level packages)</summary>" in tree_result
               assert "python3.11-dev" in result and "python3.11" in result and "kmod" in result
               assert "3.11.2-1" in result and "30+20221128-1" in result
-              assert "python3.11 (= 3.11.2-1+core2.1~20261010000000)" in tree_result, "exact dependency constraints must retain the Core 2 package version"
+              assert "python3.11 (= 3.11.2-1+core2.1~BUILD)" in tree_result, "dependency labels should abbreviate only the build timestamp"
+              assert "python3.11_3.11.2-1_amd64.deb" in result, "the package index must retain the actual installable asset"
               cache = json.loads(metadata_file.read_text(encoding="utf-8"))
               assert set(cache["assets"]) == {"1", "2", "3"}, cache["assets"]
           print("Package index and dependency-tree checks passed.")
