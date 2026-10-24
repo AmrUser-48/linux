@@ -520,6 +520,7 @@ jobs:
           retention-days: 7
 
       - name: Publish Core 2 SoX NG release
+        if: github.ref == 'refs/heads/master'
         shell: bash
         run: |
           set -euo pipefail
@@ -532,10 +533,10 @@ jobs:
           - Stable upstream source: SoX NG ${UPSTREAM_VERSION}, ref ${SOURCE_REF}, commit ${SOURCE_COMMIT}.
           - Native Opus encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}.
           - CI installed the package and verified direct SoX NG WAV-to-Opus encoding followed by Opus-to-WAV decoding; FFmpeg was not used for encoding.
-          - Conventional commands: `sox`, `soxi`, `play`, and `rec`.
+          - Conventional commands: \`sox\`, \`soxi\`, \`play\`, and \`rec\`.
           - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
-          - Dynamic format handlers: enabled by `--with-dyn-default`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
-          - Build jobs: ${BUILD_JOBS}; `DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}`.
+          - Dynamic format handlers: enabled by \`--with-dyn-default\`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
+          - Build jobs: ${BUILD_JOBS}; \`DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}\`.
           EOF
 
           export PACKAGE=sox-ng
