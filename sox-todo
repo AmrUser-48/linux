@@ -1,0 +1,31 @@
+# SoX NG TODO — continue 2026-10-25
+
+## Goal
+
+Finish the fast, context-aware Bash completion for the Core 2 SoX NG package in `AmrUser-48/linux`. Global-option grammar stays hand-written. Runtime capabilities are cached per user; a normal Tab press must not start SoX.
+
+## Current implementation
+
+- `core2-packages/sox-ng.bash-completion` — hand-written option/argument grammar; context-sensitive completion for `-t`, formats, devices, filenames, effect names, effect flags, and documented flag values.
+- `core2-packages/sox-ng-completion-cache.py` — reads the installed binary’s help output and writes safe Bash arrays for available formats, read/write capability, devices, effects, effect flags, and enumerated values.
+- `core2-packages/test-sox-ng-completion.sh` — completion and cache-reuse tests.
+- `.github/workflows/d630-core2-sox-ng.yml` — package integration and smoke tests.
+- Work is on PR #1, branch `sox-ng-bash-completion`; it has not been merged. M4A/M4B writing is out of scope; reading support already works.
+
+## Next steps
+
+1. **Run the full SoX NG package workflow on this branch.** The workflow was edited to install and test completion, but a successful end-to-end run has not been verified yet.
+2. **Validate the metadata parser against the exact packaged SoX NG 14.8.1 help output.** Check `--help`, `--help-format all`, and `--help-effect all`; inspect whether every format’s read/write status and every device/effect name is parsed correctly.
+3. **Fix and verify completion grammar.** Check which global options actually take arguments; distinguish global options from per-file format options; ensure `-t` suggests read formats for inputs and writable formats for outputs; ensure `-m/-M/-T` are not treated as argument-taking options; test paths with spaces and partially typed `--option=value`.
+4. **Test real effect syntax and parameters.** Include `gain`, filters, `dither`, `stat`, the installed loudness/EBU R128 functionality, and any optional effects compiled into this package. Do not hard-code an effect or flag as supported if the installed build does not report it.
+5. **Verify cache invalidation and latency.** The first completion may query SoX to build the cache; later Tab presses should use the cache only. Check invalidation after executable, completion, and dynamic-handler updates, plus concurrent cache creation.
+6. **Review package integration.** Confirm the completion files and cache generator land at the intended paths, Bash loads both `sox` and `sox_ng` completion names, and Python is only needed for cache refresh—not each Tab press.
+7. **Run the completion test script against the packaged binary, fix any failures, and re-check the PR diff.** Only then mark the PR ready; do not merge without the successful CI result.
+
+## Acceptance criteria
+
+- No SoX subprocess on ordinary Tab presses after cache creation.
+- Global option grammar is maintained by hand; dynamic formats/devices/effects/effect options come from the installed SoX NG binary.
+- Read-only formats are never suggested as output formats.
+- Effect flags and documented enumerated values are completed in effect context without being confused with global/file-format options.
+- Tests pass using the package built by the workflow, not only a different host SoX version.
