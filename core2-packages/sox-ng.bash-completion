@@ -185,13 +185,33 @@ _sox_ng_scan_line() {
 }
 
 _sox_ng_type_candidates() {
-  local -a types=()
+  local -a types=() devices=()
+  local device
   case $_SOX_NG_FILE_COUNT in
     0) types=("${_SOX_NG_READ_FORMATS[@]}") ;;
     1) types=("${_SOX_NG_READ_FORMATS[@]}" "${_SOX_NG_WRITE_FORMATS[@]}") ;;
     *) types=("${_SOX_NG_WRITE_FORMATS[@]}") ;;
   esac
-  types+=("${_SOX_NG_DEVICES[@]}" null sox)
+
+  # Device drivers are formats too, but not all drivers support both directions.
+  # Derive input/output eligibility from the cached --help-format report.
+  for device in "${_SOX_NG_DEVICES[@]}"; do
+    case $_SOX_NG_FILE_COUNT in
+      0)
+        _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}" && devices+=("$device")
+        ;;
+      1)
+        if _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}" ||
+           _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}"; then
+          devices+=("$device")
+        fi
+        ;;
+      *)
+        _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}" && devices+=("$device")
+        ;;
+    esac
+  done
+  types+=("${devices[@]}" null sox)
   _sox_ng_add_words "$(printf '%s ' "${types[@]}")"
 }
 
