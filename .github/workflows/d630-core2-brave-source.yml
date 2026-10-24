@@ -24,7 +24,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: core2-brave-source
+  # The push-triggered job is intentionally skipped; give it a unique group so
+  # merging a workflow fix does not cancel an active six-hour build.
+  group: ${{ github.event_name == 'push' && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
   cancel-in-progress: true
 
 jobs:
@@ -436,6 +438,10 @@ jobs:
             df -h "$GITHUB_WORKSPACE"
             free -h
             tail -n 4 "$BUILD_LOG" || true
+            if [[ -s "$OUT/siso.INFO" ]]; then
+              echo "=== Siso state/reuse diagnostics ==="
+              grep -Ei 'hashfs loaderr|load fs state|failed to load fs state|corrupt|discard|clean:|state.*journal' "$OUT/siso.INFO" | tail -n 8 || true
+            fi
           done
           set +e
           wait "$BUILD_PID"
@@ -461,6 +467,29 @@ jobs:
           echo "checkpoint=false" >> "$GITHUB_OUTPUT"
           grep -E 'Done\. Made|Packaging|Creating|brave-browser_.*\.deb|ninja: Entering|BUILD SUCCESS' "$BUILD_LOG" | tail -n 60 || true
           test -d "$OUT"
+
+      - name: Capture Siso diagnostics
+        if: always() && inputs.compact_state != true
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$GITHUB_WORKSPACE/src/out/Release"
+          if [[ -s "$OUT/siso.INFO" ]]; then
+            cp "$OUT/siso.INFO" "$GITHUB_WORKSPACE/siso.INFO"
+            echo "Captured Siso filesystem-state diagnostics."
+          else
+            echo "Siso INFO log not found or empty."
+          fi
+          if [[ -s "$OUT/siso_output" ]]; then
+            tail -c 2097152 "$OUT/siso_output" > "$GITHUB_WORKSPACE/siso-output-tail.log"
+            echo "Captured the last 2 MiB of Siso action output."
+          fi
+          if [[ -s "$OUT/.siso_fs_state" ]]; then
+            stat -c 'Restored/final .siso_fs_state: size=%s bytes mtime=%y' "$OUT/.siso_fs_state"
+          fi
+          if [[ -s "$OUT/.siso_deps" ]]; then
+            stat -c 'Restored/final .siso_deps: size=%s bytes mtime=%y' "$OUT/.siso_deps"
+          fi
 
       - name: Trim locales and symbols, version the Core 2 package
         if: inputs.compact_state != true && steps.compile.outputs.checkpoint != 'true'
@@ -628,6 +657,8 @@ jobs:
             brave-sync.log
             build-deps.log
             brave-build.log
+            siso.INFO
+            siso-output-tail.log
             release-artifacts/*
           if-no-files-found: warn
           retention-days: 7
@@ -744,7 +775,7 @@ jobs:
             echo "- Source: $UPSTREAM_TAG"
             echo "- Chromium revision: $CHROMIUM_REVISION"
             echo "- Completed checkpoint: $NEXT_CHECKPOINT"
-            echo "- Changed files stored: $FILE_COUNT"
+            echo "- Files in full output snapshot: $FILE_COUNT"
             echo "- Compressed parts: ${#PARTS[@]}"
             echo "- State release: $STATE_TAG"
           } >> "$GITHUB_STEP_SUMMARY"
