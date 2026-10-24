@@ -1,8 +1,17 @@
-# SoX NG TODO — continue 2026-10-25
+# SoX NG TODO — updated 2026-10-24
 
 ## Goal
 
 Finish the fast, context-aware Bash completion for the Core 2 SoX NG package in `AmrUser-48/linux`. Global-option grammar stays hand-written. Runtime capabilities are cached per user; a normal Tab press must not start SoX.
+
+## CI status
+
+- GitHub Actions run [#15](https://github.com/AmrUser-48/linux/actions/runs/40127158846) passed on SoX NG 14.8.1.
+- The package-installed completion test printed: `PASS: formats, effects, effect flags/values, read-only filtering, and cache reuse.`
+- The package smoke tests passed an effect chain (`gain`, filters, `rate`, `dither`), the `loudness` effect, `stat -e` output checks, and native Opus encode/decode.
+- That successful run also published release tag `core2-system-sox-ng-14.8.1-core2.1-20261024195252` from the feature-branch-triggered workflow. This was unintended for a feature/test run; inspect the release before deciding whether it should remain. The workflow now restricts future release publication to `master`.
+- A workflow quoting bug caused Markdown backticks in release details to be executed as shell substitutions; the feature-branch workflow was fixed, and the next CI run must verify the corrected release-note behavior.
+
 
 ## Current implementation
 
@@ -14,7 +23,7 @@ Finish the fast, context-aware Bash completion for the Core 2 SoX NG package in 
 
 ## Next steps
 
-1. **Run the full SoX NG package workflow on this branch.** The workflow was edited to install and test completion, but a successful end-to-end run has not been verified yet.
+1. **Verify the latest CI run after the release-step guard and release-note quoting fix.** It must build/package/test completion successfully and must not publish a release from `sox-ng-bash-completion`.
 2. **Validate the metadata parser against the exact packaged SoX NG 14.8.1 help output.** Check `--help`, `--help-format all`, and `--help-effect all`; inspect whether every format’s read/write status and every device/effect name is parsed correctly.
 3. **Fix and verify completion grammar.** Check which global options actually take arguments; distinguish global options from per-file format options; ensure `-t` suggests read formats for inputs and writable formats for outputs; ensure `-m/-M/-T` are not treated as argument-taking options; test paths with spaces and partially typed `--option=value`.
 4. **Test real effect syntax and parameters.** Include `gain`, filters, `dither`, `stat`, the installed loudness/EBU R128 functionality, and any optional effects compiled into this package. Do not hard-code an effect or flag as supported if the installed build does not report it.
