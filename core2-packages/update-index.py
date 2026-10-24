@@ -193,6 +193,22 @@ def relationship_names(value):
                     names.append(name)
     return names
 
+def relationship_clauses(value):
+    """Keep each Debian dependency clause and its alternatives with version constraints."""
+    clauses = []
+    for clause in split_relations(value, ","):
+        alternatives = []
+        for alternative in split_relations(clause, "|"):
+            match = PACKAGE_NAME_RE.match(alternative)
+            if match:
+                alternatives.append({
+                    "name": match.group(1).lower(),
+                    "label": alternative.strip(),
+                })
+        if alternatives:
+            clauses.append(alternatives)
+    return clauses
+
 
 def display_version(version):
     return CORE2_STAMP.sub("", str(version or ""))
@@ -324,13 +340,33 @@ def build_tree_markdown(nodes):
     package_width = max(28, min(44, max((len(name) for name in by_name), default=28)))
     version_width = max((len(display_version(node.get("version", ""))) for node in by_name.values()), default=1)
 
+    def dependency_url(dependency):
+        target = by_name.get(dependency)
+        if not target:
+            return ""
+        candidates = [
+            item for item in (target.get("downloads") or [])
+            if str(item.get("asset_name") or "").split("_", 1)[0].lower() == dependency
+            and item.get("download_url")
+        ]
+        candidates.sort(key=lambda item: (item.get("architecture") != "amd64", item.get("architecture", "")))
+        return candidates[0]["download_url"] if candidates else str(target.get("release_url") or "")
+
+    def dependency_closure(name):
+        found = set()
+        pending = list(edges.get(name, []))
+        while pending:
+            child = pending.pop()
+            if child in found or child == name:
+                continue
+            found.add(child)
+            pending.extend(edges.get(child, []))
+        return sorted(found)
+
     def render_package(name, path):
         node = by_name[name]
         cycle = name in path
         shared = name in expanded
-        marker = " <em>[dependency cycle]</em>" if cycle else (
-            " <em>[shared dependency]</em>" if shared else ""
-        )
         package = html.escape(name, quote=True)
         raw_version = display_version(node.get("version", ""))
         version = html.escape(raw_version, quote=True)
@@ -338,8 +374,8 @@ def build_tree_markdown(nodes):
         version_padding = "&nbsp;" * max(0, version_width - len(raw_version))
         downloads = node.get("downloads") or []
 
-        # A repeated dependency links directly to its .deb instead of repeating
-        # a full spoiler and release link every time a shared library is used.
+        # A repeated node links to its .deb, while its full dependencies remain
+        # visible in the first expanded instance of the node.
         if shared or cycle:
             flag = "dependency cycle" if cycle else "shared dependency"
             for item in sorted(downloads, key=lambda entry: (entry.get("asset_name", "").lower(), entry.get("architecture", ""))):
@@ -371,11 +407,52 @@ def build_tree_markdown(nodes):
         else:
             output.append("- _No direct binary download URL is available._")
 
+        # Show every real Debian relationship. External dependencies used to be
+        # silently omitted, which made this look like a complete tree when it was not.
+        output.extend(["", "**Declared runtime dependencies**", ""])
+        relation_count = 0
+        for field in ("pre_depends", "depends"):
+            for alternatives in relationship_clauses(node.get(field, "")):
+                relation_count += 1
+                rendered = []
+                for option in alternatives:
+                    label = html.escape(option["label"], quote=False)
+                    url = dependency_url(option["name"])
+                    if url:
+                        rendered.append(
+                            f'<a href="{html.escape(url, quote=True)}"><code>{label}</code></a> — Core 2 build available'
+                        )
+                    else:
+                        rendered.append(
+                            f"<code>{label}</code> — Debian Bookworm dependency; no Core 2 build in this index"
+                        )
+                relation = "Pre-Depends" if field == "pre_depends" else "Depends"
+                qualifier = " (one alternative)" if len(alternatives) > 1 else ""
+                output.append(f"- **{relation}{qualifier}:** " + " or ".join(rendered))
+        if not relation_count:
+            output.append("- None declared.")
+
+        # Expose transitive Core 2 dependencies without requiring users to open
+        # every nested spoiler first; the expandable tree below preserves paths.
+        if not path:
+            closure = dependency_closure(name)
+            if closure:
+                output.extend([
+                    "",
+                    f"**Core 2 dependency closure — {len(closure)} packages, direct and transitive**",
+                    "",
+                ])
+                for index in range(0, len(closure), 8):
+                    output.append("- " + ", ".join(
+                        f"<code>{html.escape(child, quote=True)}</code>"
+                        for child in closure[index:index + 8]
+                    ))
+
         if not shared and not cycle:
             expanded.add(name)
             children = edges.get(name, [])
             if children:
-                output.extend(["", "**Dependencies**", ""])
+                output.extend(["", "**Expand available Core 2 dependency packages**", ""])
                 for child in children:
                     render_package(child, path | {name})
                     output.append("")
@@ -443,54 +520,17 @@ def make_tree(release_set, metadata):
     tree_lines, count = build_tree_markdown(list(active.values()))
     output = [
         "",
-        "Expand a category, then a package, to reveal direct .deb downloads. Expand dependency packages to continue following the real Debian Pre-Depends and Depends tree.",
-        "The tree uses the latest published Core 2 release for each source package. Dependencies not present in this Core 2 release set are supplied by stock Debian and are omitted.",
-        "Displayed versions omit this repository's +core2 build timestamp. Shared dependencies keep their own download link but are not expanded repeatedly.",
-        "Use your browser's Find command (Ctrl+F) to locate a package name; GitHub README files cannot run a custom search box.",
+        "Expand a category, then a package, to view downloads and its declared runtime dependencies.",
+        "Every Pre-Depends and Depends clause is shown, including version constraints and alternatives. Dependencies with a matching Core 2 build link to that download; other dependencies are explicitly labelled as Debian Bookworm packages not rebuilt here.",
+        "Each top-level package also lists its complete transitive closure of packages available in this Core 2 index, so dependencies are visible without repeatedly expanding every nested level.",
+        "Package headings shorten this repository's build timestamp for readability; dependency version constraints remain exact as declared in each .deb. Shared dependencies keep their download link and are not recursively expanded over and over.",
+        "Use your browser's Find command (Ctrl+F) to locate a package or dependency; GitHub README files cannot run a custom search box.",
         "",
         *tree_lines,
         f"**Unique binary packages indexed:** {count}.",
         "",
     ]
     return output, current_asset_ids
-
-
-
-    active = {}
-    current_asset_ids = set()
-    for source, release in release_set.items():
-        for asset in visible_deb_assets(release):
-            asset_id = str(asset["id"])
-            current_asset_ids.add(asset_id)
-            record = metadata.get(asset_id)
-            if not record:
-                raise RuntimeError(f"Missing .deb control metadata for asset {asset_id} ({asset.get('name')})")
-            if record.get("architecture") not in ("amd64", "all"):
-                continue
-            record = dict(record)
-            record["source"] = source
-            record["release_tag"] = str(release.get("tag_name") or "")
-            record["published_at"] = str(release.get("published_at") or release.get("created_at") or "")
-            active[asset_id] = record
-
-    nodes = list(active.values())
-    rows, count = build_tree_rows(nodes)
-    tick = chr(96) * 3
-    output = [
-        "",
-        "Latest published binary packages, grouped by real Debian Pre-Depends and Depends relationships.",
-        "Only dependencies that are also present in the current Core 2 release set are expanded; dependencies supplied by stock Debian are omitted.",
-        "Displayed versions omit the repository's +core2 build timestamp and retain the underlying Debian version.",
-        "",
-        tick + "text",
-        *rows,
-        tick,
-        "",
-        f"Binary packages shown: {count}. Shared dependencies are marked [shared dependency] instead of expanding repeatedly.",
-        "",
-    ]
-    return output, current_asset_ids
-
 
 def main():
     if len(sys.argv) != 4:

@@ -244,6 +244,7 @@ jobs:
           assert readme_path.count("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->") == 1
           assert readme_path.count("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->") == 1
           assert "update-index.py" in index_workflow
+          assert "normalize-releases.py" in index_workflow, "one refresh action must normalize notes and rebuild the index/tree"
           assert "dependency-metadata.json" in index_workflow
           assert "workflow_dispatch:" in index_workflow
           assert "release:" in index_workflow and "types: [published]" in index_workflow
@@ -339,6 +340,9 @@ jobs:
                   assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
               assert "<details><summary>Files (4)</summary>" in result
               assert "**Unique binary packages indexed:** 3." in result
+          assert "Declared runtime dependencies" in tree_result
+          assert "libc6 (&gt;= 2.34)" in tree_result
+          assert "Debian Bookworm dependency; no Core 2 build in this index" in tree_result
               tree_start = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->")
               tree_end = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->")
               tree_result = result[tree_start:tree_end]
@@ -381,6 +385,28 @@ jobs:
           assert any("libgl1-mesa-dri" in row and row.rstrip().endswith("22.3.6-1") for row in tree_rows), tree_rows
           assert any("libdrm-intel1" in row and row.rstrip().endswith("2.4.114-1") for row in tree_rows), tree_rows
           assert any("libdrm2 [shared dependency]" in row for row in tree_rows), tree_rows
+
+          sox_nodes = [
+              {"package": "sox-ng", "version": "14.8.1+core2.1~20261023214105",
+               "depends": "libsox-ng5 (= 14.8.1+core2.1~20261023214105), libc6 (>= 2.34)",
+               "published_at": "2026-10-23", "asset_name": "sox-ng_14.8.1+core2.1.20261023214105_amd64.deb",
+               "architecture": "amd64", "download_url": "https://example.invalid/sox-ng.deb"},
+              {"package": "libsox-ng5", "version": "14.8.1+core2.1~20261023214105",
+               "depends": "libebur128-1 (>= 1.0.1), libao4 (>= 1.1.0)",
+               "published_at": "2026-10-23", "asset_name": "libsox-ng5_14.8.1+core2.1.20261023214105_amd64.deb",
+               "architecture": "amd64", "download_url": "https://example.invalid/libsox-ng5.deb"},
+              {"package": "libebur128-1", "version": "1.2.6-1+core2.1~20261023221125",
+               "depends": "libc6 (>= 2.29)", "published_at": "2026-10-24",
+               "asset_name": "libebur128-1_1.2.6-1+core2.1.20261023221125_amd64.deb",
+               "architecture": "amd64", "download_url": "https://example.invalid/libebur128.deb"},
+          ]
+          sox_tree, sox_count = treegen["build_tree_markdown"](sox_nodes)
+          sox_result = chr(10).join(sox_tree)
+          assert sox_count == 3, sox_count
+          assert "libebur128-1" in sox_result, "SoX NG's transitive libebur128 dependency must be visible"
+          assert "Core 2 dependency closure — 2 packages, direct and transitive" in sox_result
+          assert "libao4 (>= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
+          assert "https://example.invalid/libebur128.deb" in sox_result
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
           assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
