@@ -48,9 +48,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>cairo-perf-utils 1.16.0-7</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6 (&gt;= 2.34)</code></a> — Core 2 build 2.36-9+deb12u14
     - **Depends:** <code>libgcc-s1</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo-script-interpreter2 (= 1.16.0-7+core2.1~20261016135244)</code></a> — Core 2 build 1.16.0-7
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo-script-interpreter2 (= 1.16.0-7+core2.1~BUILD)</code></a> — Core 2 build 1.16.0-7
     - **Depends:** <code>libc6 (&gt;= 2.29)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo2 (= 1.16.0-7+core2.1~20261016135244)</code></a> — Core 2 build 1.16.0-7
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo2 (= 1.16.0-7+core2.1~BUILD)</code></a> — Core 2 build 1.16.0-7
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fontconfig-2.14.1-4-core2.1-20261016150850"><code>libfontconfig1 (&gt;= 2.12.6)</code></a> — Core 2 build 2.14.1-4
         - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
@@ -65,7 +65,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
             - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>zlib1g (&gt;= 1:1.2.11.dfsg)</code></a> — Core 2 build 1:1.2.13.dfsg-1
               - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
           - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fontconfig-2.14.1-4-core2.1-20261016150850"><code>fontconfig-config (&gt;= 2.14.1-4+core2.1~20261016150850)</code></a> — Core 2 build 2.14.1-4
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fontconfig-2.14.1-4-core2.1-20261016150850"><code>fontconfig-config (&gt;= 2.14.1-4+core2.1~BUILD)</code></a> — Core 2 build 2.14.1-4
           - **Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
           - **Depends (one alternative):** <code>debconf-2.0</code> — Debian Bookworm package; not rebuilt here
           - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fonts-dejavu-2.37-6-core2.1-20261016150744"><code>fonts-dejavu-core</code></a> — Core 2 build 2.37-6
@@ -112,7 +112,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>liblzo2-2 (&gt;= 2.02)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~20261016135244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libfontconfig1 (&gt;= 2.12.6)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpixman-1-0 (&gt;= 0.10.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
@@ -124,8 +124,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo2-doc 1.16.0-7</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-tests 2.4.114-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm2 (= 2.4.114-1+core2.1~20261016115216)</code></a> — Core 2 build 2.4.114-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-common (&gt;= 2.4.114-1+core2.1~20261016115216)</code></a> — Core 2 build 2.4.114-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm2 (= 2.4.114-1+core2.1~BUILD)</code></a> — Core 2 build 2.4.114-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-common (&gt;= 2.4.114-1+core2.1~BUILD)</code></a> — Core 2 build 2.4.114-1
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-amdgpu1 (&gt;= 2.4.77)</code></a> — Core 2 build 2.4.114-1
@@ -136,7 +136,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libdrm2 (&gt;= 2.4.109)</code> — shared dependency; tree shown above
   - **Depends:** <code>libexpat1 (&gt;= 2.0.1)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libgbm1 (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code></a> — Core 2 build 22.3.6-1+deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libgbm1 (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 22.3.6-1+deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libdrm2 (&gt;= 2.4.75)</code> — shared dependency; tree shown above
     - **Depends:** <code>libexpat1 (&gt;= 2.0.1)</code> — shared dependency; tree shown above
@@ -145,14 +145,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707"><code>libffi8 (&gt;= 3.4)</code></a> — Core 2 build 3.4.4-1
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.4)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code></a> — Core 2 build 22.3.6-1+deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 22.3.6-1+deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904"><code>libwayland-client0 (&gt;= 1.20.0)</code></a> — Core 2 build 1.21.0-1
     - **Depends:** <code>libc6 (&gt;= 2.28)</code> — shared dependency; tree shown above
     - **Depends:** <code>libffi8 (&gt;= 3.4)</code> — shared dependency; tree shown above
   - **Depends:** <code>libwayland-server0 (&gt;= 1.15.0)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a> — Core 2 build 2:1.8.4-2+deb12u2
-    - **Depends:** <code>libx11-6 (= 2:1.8.4-2+deb12u2+core2.1~20261016131846)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libx11-6 (= 2:1.8.4-2+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dri2-0 (&gt;= 1.8)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
@@ -187,7 +187,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libdrm2 (&gt;= 2.4.75)</code> — shared dependency; tree shown above
     - **Depends:** <code>libexpat1 (&gt;= 2.0.1)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libx11-6 (&gt;= 2:1.4.99.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libx11-xcb1 (&gt;= 2:1.8.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb-dri2-0 (&gt;= 1.8)</code> — shared dependency; tree shown above
@@ -218,7 +218,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libdrm2 (&gt;= 2.4.75)</code> — shared dependency; tree shown above
       - **Depends:** <code>libexpat1 (&gt;= 2.0.1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 3.4)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libsensors5 (&gt;= 1:3.5.0)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libzstd-1.5.4-dfsg2-5-core2.1-20261020161546"><code>libzstd1 (&gt;= 1.5.2)</code></a> — Core 2 build 1.5.4+dfsg2-5
@@ -241,7 +241,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>python3-distutils</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>python3:any</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code></a> — Core 2 build 2.74.6-2+deb12u9
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.74.6-2+deb12u9
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libffi8 (&gt;= 3.4)</code> — shared dependency; tree shown above
       - **Depends:** <code>libmount1 (&gt;= 2.35.2-7~)</code> — Debian Bookworm package; not rebuilt here
@@ -267,16 +267,16 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>zlib1g (&gt;= 1:1.2.3.3)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11</code></a> — Core 2 build 3.11.2-6+deb12u9
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-minimal (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code></a> — Core 2 build 3.11.2-6+deb12u9
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 3.11.2-6+deb12u9
       - **Pre-Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code></a> — Core 2 build 3.11.2-6+deb12u9
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 3.11.2-6+deb12u9
         - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326"><code>libssl3 (&gt;= 3.0.0)</code></a> — Core 2 build 3.0.22-1~deb12u1
           - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
       - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11-stdlib (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code></a> — Core 2 build 3.11.2-6+deb12u9
-      - **Depends:** <code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11-stdlib (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 3.11.2-6+deb12u9
+      - **Depends:** <code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends (one alternative):** <code>media-types</code> — Debian Bookworm package; not rebuilt here
       - **Depends (one alternative):** <code>mime-support</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-bzip2-1.0.8-5-core2.1-20261012055218"><code>libbz2-1.0</code></a> — Core 2 build 1.0.8-5
@@ -289,7 +289,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libffi8 (&gt;= 3.4)</code> — shared dependency; tree shown above
       - **Depends:** <code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libncursesw6 (&gt;= 6.1)</code></a> — Core 2 build 6.4-4
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libtinfo6 (= 6.4-4+core2.1~20261009185822)</code></a> — Core 2 build 6.4-4
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libtinfo6 (= 6.4-4+core2.1~BUILD)</code></a> — Core 2 build 6.4-4
           - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libnsl2 (&gt;= 1.0)</code> — Debian Bookworm package; not rebuilt here
@@ -311,15 +311,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
             - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
             - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrb5support0 (&gt;= 1.20)</code></a> — Core 2 build 1.20.1-2+deb12u5
               - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
+          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
             - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
             - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
             - **Depends:** <code>libk5crypto3 (&gt;= 1.20)</code> — shared dependency; tree shown above
             - **Depends:** <code>libkeyutils1 (&gt;= 1.5.9)</code> — Debian Bookworm package; not rebuilt here
-            - **Depends:** <code>libkrb5support0 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+            - **Depends:** <code>libkrb5support0 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
             - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
           - **Depends:** <code>libkrb5support0 (&gt;= 1.15~beta1)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337"><code>libtirpc-common (&gt;= 1.3.3+ds-1+core2.1~20261009195337)</code></a> — Core 2 build 1.3.3+ds-1
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libtirpc-1.3.3-ds-1-core2.1-20261009195337"><code>libtirpc-common (&gt;= 1.3.3+ds-1+core2.1~BUILD)</code></a> — Core 2 build 1.3.3+ds-1
       - **Depends:** <code>libuuid1 (&gt;= 2.20.1)</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>media-types</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>mime-support</code> — Debian Bookworm package; not rebuilt here
@@ -340,48 +340,48 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code> — shared dependency; tree shown above
       - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpcre2-8-0 (&gt;= 10.22)</code> — shared dependency; tree shown above
   - **Depends:** <code>libstdc++6 (&gt;= 4.1.1)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libosmesa6-dev 22.3.6-1+deb12u2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libosmesa6 (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code></a> — Core 2 build 22.3.6-1+deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libosmesa6 (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 22.3.6-1+deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.4)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-  - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>mesa-common-dev (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code></a> — Core 2 build 22.3.6-1+deb12u2
+  - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>mesa-common-dev (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 22.3.6-1+deb12u2
     - **Depends:** <code>libgl-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libglx-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846"><code>libx11-dev</code></a> — Core 2 build 2:1.8.4-2+deb12u2
-      - **Depends:** <code>libx11-6 (= 2:1.8.4-2+deb12u2+core2.1~20261016131846)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libx11-6 (= 2:1.8.4-2+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxau-1-1.0.9-1-core2.1-20261016151004"><code>libxau-dev</code></a> — Core 2 build 1:1.0.9-1
-        - **Depends:** <code>libxau6 (= 1:1.0.9-1+core2.1~20261016151004)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxau6 (= 1:1.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxdmcp-1-1.1.2-3-core2.1-20261016151011"><code>libxdmcp-dev</code></a> — Core 2 build 1:1.1.2-3
-        - **Depends:** <code>libxdmcp6 (= 1:1.1.2-3+core2.1~20261016151011)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxdmcp6 (= 1:1.1.2-3+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>x11proto-core-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>x11proto-dev (&gt;= 2019.2-1)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>xtrans-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb1-dev</code></a> — Core 2 build 1.15-1
-        - **Depends:** <code>libxcb1 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxcb1 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libpthread-stubs0-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libxau-dev (&gt;= 1:1.0.0-1)</code> — shared dependency; tree shown above
         - **Depends:** <code>libxdmcp-dev (&gt;= 1:1.0.0-1)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-dev (&gt;= 2.4.95)</code></a> — Core 2 build 2.4.114-1
-      - **Depends:** <code>libdrm2 (= 2.4.114-1+core2.1~20261016115216)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libdrm-intel1 (= 2.4.114-1+core2.1~20261016115216)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-radeon1 (= 2.4.114-1+core2.1~20261016115216)</code></a> — Core 2 build 2.4.114-1
+      - **Depends:** <code>libdrm2 (= 2.4.114-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdrm-intel1 (= 2.4.114-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-radeon1 (= 2.4.114-1+core2.1~BUILD)</code></a> — Core 2 build 2.4.114-1
         - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libdrm2 (&gt;= 2.4.108)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-nouveau2 (= 2.4.114-1+core2.1~20261016115216)</code></a> — Core 2 build 2.4.114-1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdrm-2.4.114-1-core2.1-20261016115216"><code>libdrm-nouveau2 (= 2.4.114-1+core2.1~BUILD)</code></a> — Core 2 build 2.4.114-1
         - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
         - **Depends:** <code>libdrm2 (&gt;= 2.4.108)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libdrm-amdgpu1 (= 2.4.114-1+core2.1~20261016115216)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdrm-amdgpu1 (= 2.4.114-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpciaccess-0.17-2-core2.1-20261016115401"><code>libpciaccess-dev</code></a> — Core 2 build 0.17-2
-        - **Depends:** <code>libpciaccess0 (= 0.17-2+core2.1~20261016115401)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpciaccess0 (= 0.17-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libgl-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904"><code>libwayland-doc 1.21.0-1</code></a>
@@ -396,24 +396,24 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846"><code>libx11-doc 2:1.8.4-2+deb12u2</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-composite0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-composite0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-composite0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xfixes0-dev</code></a> — Core 2 build 1.15-1
-    - **Depends:** <code>libxcb-xfixes0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxcb-xfixes0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-render0-dev</code></a> — Core 2 build 1.15-1
-      - **Depends:** <code>libxcb-render0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxcb-render0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-shape0-dev</code></a> — Core 2 build 1.15-1
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-shape0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-shape0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
         - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-damage0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-damage0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-damage0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
@@ -422,97 +422,97 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-doc 1.15-1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dpms0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dpms0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dpms0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dri2-0-dev 1.15-1</code></a>
-  - **Depends:** <code>libxcb-dri2-0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxcb-dri2-0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-dri3-dev 1.15-1</code></a>
-  - **Depends:** <code>libxcb-dri3-0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxcb-dri3-0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-glx0-dev 1.15-1</code></a>
-  - **Depends:** <code>libxcb-glx0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxcb-glx0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-present-dev 1.15-1</code></a>
-  - **Depends:** <code>libxcb-present0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxcb-present0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-randr0-dev</code></a> — Core 2 build 1.15-1
-    - **Depends:** <code>libxcb-randr0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxcb-randr0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb-render0-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb-xfixes0-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-sync-dev</code></a> — Core 2 build 1.15-1
-    - **Depends:** <code>libxcb-sync1 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxcb-sync1 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-record0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-record0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-record0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-res0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-res0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-res0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-screensaver0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-screensaver0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-screensaver0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xf86dri0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xf86dri0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xf86dri0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinerama0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinerama0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinerama0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinput-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinput0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xinput0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1 (&gt;= 1.8)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb-xfixes0-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xtest0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xtest0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xtest0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xvmc0-dev 1.15-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xvmc0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xvmc0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xv0-dev</code></a> — Core 2 build 1.15-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xv0 (= 1.15-1+core2.1~20261016151016)</code></a> — Core 2 build 1.15-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xv0 (= 1.15-1+core2.1~BUILD)</code></a> — Core 2 build 1.15-1
       - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-shm0-dev</code></a> — Core 2 build 1.15-1
-      - **Depends:** <code>libxcb-shm0 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxcb-shm0 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313"><code>libxext-doc 2:1.3.4-1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436"><code>tigervnc-xorg-extension 1.12.0+dfsg-8</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xserver-xorg-core (&gt;= 2:1.7.7)</code></a> — Core 2 build 2:21.1.7-3+deb12u13
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~20261009120435)</code></a> — Core 2 build 2:21.1.7-3+deb12u13
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 2:21.1.7-3+deb12u13
       - **Depends:** <code>x11-common</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xkeyboard-config-2.35.1-1-core2.1-20261020162047"><code>xkb-data</code></a> — Core 2 build 2.35.1-1
       - **Depends:** <code>x11-xkb-utils</code> — Debian Bookworm package; not rebuilt here
@@ -530,11 +530,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
       - **Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
       - **Depends:** <code>adduser</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libudev1 (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libudev1 (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libegl1</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libaudit1 (&gt;= 1:2.2.1)</code></a> — Core 2 build 1:3.0.9-1
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libaudit-common (&gt;= 1:3.0.9-1+core2.1~20261020155244)</code></a> — Core 2 build 1:3.0.9-1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libaudit-common (&gt;= 1:3.0.9-1+core2.1~BUILD)</code></a> — Core 2 build 1:3.0.9-1
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcap-ng-0.8.3-1-core2.1-20261020160633"><code>libcap-ng0 (&gt;= 0.7.9)</code></a> — Core 2 build 0.8.3-1
         - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
@@ -592,7 +592,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xnest 2:21.1.7-3+deb12u13</code></a>
-  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~20261009120435)</code> — shared dependency; tree shown above
+  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbsd0 (&gt;= 0.7.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -610,7 +610,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xorg-server-source 2:21.1.7-3+deb12u13</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xserver-xephyr 2:21.1.7-3+deb12u13</code></a>
-  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~20261009120435)</code> — shared dependency; tree shown above
+  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbsd0 (&gt;= 0.7.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -673,7 +673,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends (one alternative):** <code>x11proto-core-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xserver-xorg-legacy 2:21.1.7-3+deb12u13</code></a>
-  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~20261009120435)</code> — shared dependency; tree shown above
+  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>debconf-2.0</code> — Debian Bookworm package; not rebuilt here
@@ -721,7 +721,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>xserver-xorg-core (&gt;= 2:21.1.1)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xorg-server-2-21.1.7-3-deb12u13-core2.1-20261009120435"><code>xvfb 2:21.1.7-3+deb12u13</code></a>
-  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~20261009120435)</code> — shared dependency; tree shown above
+  - **Depends:** <code>xserver-common (&gt;= 2:21.1.7-3+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbsd0 (&gt;= 0.7.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -744,7 +744,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavcodec59 (&gt;= 7:5.0)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330"><code>libaom3 (&gt;= 3.2.0)</code></a> — Core 2 build 3.6.0-1+deb12u3
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Depends:** <code>libdrm2 (&gt;= 2.4.66)</code> — shared dependency; tree shown above
       - **Depends:** <code>libmfx1 (&gt;= 18.4.0)</code> — Debian Bookworm package; not rebuilt here
@@ -843,10 +843,10 @@ Alternatives are marked as choices. Shared dependencies link back to where their
           - **Depends:** <code>libglib2.0-0 (&gt;= 2.31.8)</code> — shared dependency; tree shown above
           - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-graphite2-1.3.14-1-deb12u1-core2.1-20261020160000"><code>libgraphite2-3 (&gt;= 1.2.2)</code></a> — Core 2 build 1.3.14-1+deb12u1
             - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavformat59 (&gt;= 7:5.0)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
-        - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libbluray2 (&gt;= 1:0.2.2)</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libbz2-1.0</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -868,7 +868,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libzmq5 (&gt;= 4.0.1+dfsg)</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>zlib1g (&gt;= 1:1.2.0.2)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Depends:** <code>libflite1 (&gt;= 1.4-release-9~)</code> — Debian Bookworm package; not rebuilt here
@@ -895,7 +895,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libswresample4 (&gt;= 7:5.1)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libswscale6 (&gt;= 7:5.0)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
-        - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libva2 (&gt;= 1.7.3)</code> — shared dependency; tree shown above
       - **Depends:** <code>libvidstab1.1</code> — Debian Bookworm package; not rebuilt here
@@ -906,8 +906,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends (one alternative):** <code>ocl-icd-libopencl1 (&gt;= 1.0)</code> — Debian Bookworm package; not rebuilt here
       - **Depends (one alternative):** <code>libopencl-1.2-1</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavformat59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavformat59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcaca0 (&gt;= 0.99.beta20)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code> — Debian Bookworm package; not rebuilt here
@@ -1034,7 +1034,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>gtk-update-icon-cache</code></a> — Core 2 build 3.24.38-2~deb12u3
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.40.0)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
-          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf2.0-common (&gt;= 2.42.10+dfsg-1+deb12u4+core2.1~20261020155747)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
+          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf2.0-common (&gt;= 2.42.10+dfsg-1+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
           - **Depends:** <code>shared-mime-info</code> — shared dependency; tree shown above
           - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
           - **Depends:** <code>libglib2.0-0 (&gt;= 2.59.0)</code> — shared dependency; tree shown above
@@ -1075,7 +1075,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libatk1.0-0 (&gt;= 2.35.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo-gobject2 (&gt;= 1.14.0)</code></a> — Core 2 build 1.16.0-7
-      - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~20261016135244)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-0 (&gt;= 2.14.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>libcolord2 (&gt;= 0.1.10)</code></a> — Core 2 build 1.4.6-2.2
@@ -1085,9 +1085,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libudev1 (&gt;= 196)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcups2 (&gt;= 1.7.0)</code></a> — Core 2 build 2.4.2-3+deb12u9
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-client3 (&gt;= 0.6.16)</code></a> — Core 2 build 0.8-10+deb12u1
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
           - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common-data (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
+          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common-data (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libdbus-1-3 (&gt;= 1.9.14)</code> — shared dependency; tree shown above
       - **Depends:** <code>libavahi-common3 (&gt;= 0.6.16)</code> — shared dependency; tree shown above
@@ -1122,14 +1122,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libfontconfig1 (&gt;= 2.13.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-0 (&gt;= 2.62.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libharfbuzz0b (&gt;= 2.6.0)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code></a> — Core 2 build 1.50.12+ds-1
+      - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code></a> — Core 2 build 1.50.12+ds-1
         - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
         - **Depends:** <code>libfontconfig1 (&gt;= 2.13.0)</code> — shared dependency; tree shown above
         - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-0 (&gt;= 2.67.3)</code> — shared dependency; tree shown above
         - **Depends:** <code>libharfbuzz0b (&gt;= 5.1.0)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpangoft2-1.0-0 (&gt;= 1.44.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libwayland-client0 (&gt;= 1.20.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libwayland-cursor0 (&gt;= 1.14.91)</code> — shared dependency; tree shown above
@@ -1146,12 +1146,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libxinerama1 (&gt;= 2:1.1.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxkbcommon0 (&gt;= 0.5.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxrandr2 (&gt;= 2:1.5.0)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~20261020155945)</code></a> — Core 2 build 3.24.38-2~deb12u3
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~BUILD)</code></a> — Core 2 build 3.24.38-2~deb12u3
       - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>dconf-gsettings-backend</code></a> — Core 2 build 0.40.0-4
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>dconf-service (&lt;&lt; 0.40.0-4+core2.1~20261020155533.1~), dconf-service (&gt;= 0.40.0-4+core2.1~20261020155533), libdconf1 (= 0.40.0-4+core2.1~20261020155533), libc6 (&gt;= 2.14)</code></a> — Core 2 build 0.40.0-4
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>dconf-service (&lt;&lt; 0.40.0-4+core2.1~BUILD.1~), dconf-service (&gt;= 0.40.0-4+core2.1~BUILD), libdconf1 (= 0.40.0-4+core2.1~BUILD), libc6 (&gt;= 2.14)</code></a> — Core 2 build 0.40.0-4
           - **Depends (one alternative):** <code>default-dbus-session-bus</code> — Debian Bookworm package; not rebuilt here
           - **Depends (one alternative):** <code>dbus-session-bus</code> — Debian Bookworm package; not rebuilt here
-          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>libdconf1 (= 0.40.0-4+core2.1~20261020155533)</code></a> — Core 2 build 0.40.0-4
+          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>libdconf1 (= 0.40.0-4+core2.1~BUILD)</code></a> — Core 2 build 0.40.0-4
             - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
             - **Depends:** <code>libglib2.0-0 (&gt;= 2.55.2)</code> — shared dependency; tree shown above
           - **Depends:** <code>procps</code> — Debian Bookworm package; not rebuilt here
@@ -1174,7 +1174,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.32)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.68)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>libgstreamer-opencv1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code></a> — Core 2 build 1.22.0-4+deb12u8
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>libgstreamer-opencv1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-4+deb12u8
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.68)</code> — shared dependency; tree shown above
@@ -1206,7 +1206,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libvisual-0.4-0 (&gt;= 0.4.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libvorbis0a (&gt;= 1.3.1)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libvorbisenc2 (&gt;= 1.3.1)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code></a> — Core 2 build 1.22.0-4+deb12u8
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-4+deb12u8
     - **Depends:** <code>libc6 (&gt;= 2.29)</code> — shared dependency; tree shown above
     - **Depends:** <code>libdrm2 (&gt;= 2.3.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.68)</code> — shared dependency; tree shown above
@@ -1220,7 +1220,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libwayland-client0 (&gt;= 1.20.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbcommon-x11-0 (&gt;= 0.5.0)</code></a> — Core 2 build 1.5.0-1
-      - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.17)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb-xkb1</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1 (&gt;= 1.6)</code> — shared dependency; tree shown above
@@ -1232,7 +1232,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgstreamer1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>gstreamer1.0-plugins-bad (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code></a> — Core 2 build 1.22.0-4+deb12u8
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>gstreamer1.0-plugins-bad (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-4+deb12u8
     - **Depends:** <code>libaom3 (&gt;= 3.2.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libass9 (&gt;= 1:0.13.6)</code> — shared dependency; tree shown above
     - **Depends:** <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> — Debian Bookworm package; not rebuilt here
@@ -1273,7 +1273,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libgme0 (&gt;= 0.6.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libgsm1 (&gt;= 1.0.18)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libgstreamer-gl1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgstreamer1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgtk-3-0 (&gt;= 3.15.0)</code> — shared dependency; tree shown above
@@ -1457,7 +1457,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libwpewebkit-1.1-0 (&gt;= 2.28.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libxkbcommon0 (&gt;= 1.0.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>gstreamer1.0-plugins-base</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019"><code>gstreamer1.0-x 1.22.0-3+deb12u7</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
@@ -1481,57 +1481,57 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051"><code>lame-doc 3.100-6</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-compat-libdnssd-dev 0.8-10+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-compat-libdnssd1 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-compat-libdnssd1 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-      - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+      - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>libdbus-1-dev</code></a> — Core 2 build 1.14.10-1~deb12u1
-      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>xml-core (&gt;= 0.14)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-core-dev 0.8-10+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.15)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-gobject-dev 0.8-10+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-gobject0 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-      - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-gobject0 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+      - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.2.5)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-0 (&gt;= 2.16.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.37.3)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>gir1.2-avahi-0.6 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>gir1.2-avahi-0.6 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-gobject0 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-gobject0 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-dev</code></a> — Core 2 build 2.74.6-2+deb12u9
     - **Depends:** <code>libffi-dev (&gt;= 3.3)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-bin (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code></a> — Core 2 build 2.74.6-2+deb12u9
+    - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-bin (= 2.74.6-2+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.74.6-2+deb12u9
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-glib2.0-2.74.6-2-deb12u9-core2.1-20261012055158"><code>libglib2.0-data</code></a> — Core 2 build 2.74.6-2+deb12u9
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libelf1 (&gt;= 0.142)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libglib2.0-dev-bin (= 2.74.6-2+deb12u9+core2.1~20261012055158)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libglib2.0-0 (= 2.74.6-2+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libglib2.0-dev-bin (= 2.74.6-2+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libmount-dev (&gt;= 2.35.2-7~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libpcre2-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libselinux1-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>zlib1g-dev</code></a> — Core 2 build 1:1.2.13.dfsg-1
-      - **Depends:** <code>zlib1g (= 1:1.2.13.dfsg-1+core2.1~20261016151112)</code> — shared dependency; tree shown above
+      - **Depends:** <code>zlib1g (= 1:1.2.13.dfsg-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-dev</code></a> — Core 2 build 2.36-9+deb12u14
-        - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc-dev-bin (= 2.36-9+deb12u14+core2.1~20261010052854)</code></a> — Core 2 build 2.36-9+deb12u14
+        - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc-dev-bin (= 2.36-9+deb12u14+core2.1~BUILD)</code></a> — Core 2 build 2.36-9+deb12u14
           - **Depends:** <code>libc6 (&gt;&gt; 2.36)</code> — shared dependency; tree shown above
           - **Depends:** <code>libc6 (&lt;&lt; 2.37)</code> — shared dependency; tree shown above
         - **Depends:** <code>linux-libc-dev</code> — Debian Bookworm package; not rebuilt here
@@ -1539,26 +1539,26 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libnsl-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>rpcsvc-proto</code> — Debian Bookworm package; not rebuilt here
       - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-glib-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-glib-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-common-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-ui-gtk3-dev 0.8-10+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-ui-gtk3-0 (= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>libavahi-ui-gtk3-0 (= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-glib1 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdbm-1.23-3-core2.1-20261020155702"><code>libgdbm6 (&gt;= 1.16)</code></a> — Core 2 build 1.23-3
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.37.3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgtk-3-0 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-glib-dev (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-client-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-glib-dev (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgtk-3-dev</code></a> — Core 2 build 3.24.38-2~deb12u3
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>gir1.2-gtk-3.0 (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code></a> — Core 2 build 3.24.38-2~deb12u3
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>gir1.2-gtk-3.0 (= 3.24.38-2~deb12u3+core2.1~BUILD)</code></a> — Core 2 build 3.24.38-2~deb12u3
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>gir1.2-atk-1.0 (&gt;= 2.35.1)</code></a> — Core 2 build 2.46.0-5
         - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libatk1.0-0 (&gt;= 2.35.1)</code> — shared dependency; tree shown above
@@ -1573,56 +1573,56 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>gir1.2-harfbuzz-0.0 (&gt;= 2.6.0)</code></a> — Core 2 build 6.0.0+dfsg-3
           - **Depends:** <code>gir1.2-freedesktop</code> — Debian Bookworm package; not rebuilt here
           - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
-        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code></a> — Core 2 build 1.50.12+ds-1
+        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code></a> — Core 2 build 1.50.12+ds-1
           - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
           - **Depends:** <code>libfontconfig1 (&gt;= 2.13.0)</code> — shared dependency; tree shown above
           - **Depends:** <code>libglib2.0-0 (&gt;= 2.62.0)</code> — shared dependency; tree shown above
-          - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-          - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
           - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
           - **Depends:** <code>libxft2 (&gt;&gt; 2.1.1)</code> — Debian Bookworm package; not rebuilt here
           - **Depends:** <code>libxrender1</code> — shared dependency; tree shown above
       - **Depends:** <code>libgtk-3-0 (&gt;= 3.24.24)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgtk-3-common</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>libatk-bridge2.0-dev (&gt;= 2.15.1)</code></a> — Core 2 build 2.46.0-5
-      - **Depends:** <code>libatk-bridge2.0-0 (= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libatk-bridge2.0-0 (= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>libatk1.0-dev</code></a> — Core 2 build 2.46.0-5
-        - **Depends:** <code>libatk1.0-0 (= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
-        - **Depends:** <code>gir1.2-atk-1.0 (= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libatk1.0-0 (= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>gir1.2-atk-1.0 (= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>libatspi2.0-dev</code></a> — Core 2 build 2.46.0-5
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>gir1.2-atspi-2.0 (= 2.46.0-5+core2.1~20261020155253)</code></a> — Core 2 build 2.46.0-5
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>gir1.2-atspi-2.0 (= 2.46.0-5+core2.1~BUILD)</code></a> — Core 2 build 2.46.0-5
           - **Depends:** <code>gir1.2-freedesktop</code> — Debian Bookworm package; not rebuilt here
           - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
-          - **Depends:** <code>libatspi2.0-0 (&gt;= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libatspi2.0-0 (= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libatspi2.0-0 (&gt;= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libatspi2.0-0 (= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
         - **Depends:** <code>libdbus-1-dev</code> — shared dependency; tree shown above
         - **Depends:** <code>libxtst-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libatk1.0-dev (&gt;= 2.35.1)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244"><code>libcairo2-dev (&gt;= 1.14.0)</code></a> — Core 2 build 1.16.0-7
-      - **Depends:** <code>libcairo-gobject2 (= 1.16.0-7+core2.1~20261016135244)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libcairo-script-interpreter2 (= 1.16.0-7+core2.1~20261016135244)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~20261016135244)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libcairo-gobject2 (= 1.16.0-7+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libcairo-script-interpreter2 (= 1.16.0-7+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libcairo2 (= 1.16.0-7+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fontconfig-2.14.1-4-core2.1-20261016150850"><code>libfontconfig-dev (&gt;= 2.2.95)</code></a> — Core 2 build 2.14.1-4
-        - **Depends:** <code>libfontconfig1 (= 2.14.1-4+core2.1~20261016150850)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libfontconfig1 (= 2.14.1-4+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-expat-2.5.0-1-deb12u4-core2.1-20261016150748"><code>libexpat1-dev</code></a> — Core 2 build 2.5.0-1+deb12u4
-          - **Depends:** <code>libexpat1 (= 2.5.0-1+deb12u4+core2.1~20261016150748)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libexpat1 (= 2.5.0-1+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-freetype-2.12.1-dfsg-5-deb12u4-core2.1-20261016150739"><code>libfreetype-dev (&gt;= 2.8.1)</code></a> — Core 2 build 2.12.1+dfsg-5+deb12u4
-          - **Depends:** <code>libfreetype6 (= 2.12.1+dfsg-5+deb12u4+core2.1~20261016150739)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libfreetype6 (= 2.12.1+dfsg-5+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
           - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-brotli-1.0.9-2-core2.1-20261016150736"><code>libbrotli-dev</code></a> — Core 2 build 1.0.9-2
-            - **Depends:** <code>libbrotli1 (= 1.0.9-2+core2.1~20261016150736)</code> — shared dependency; tree shown above
+            - **Depends:** <code>libbrotli1 (= 1.0.9-2+core2.1~BUILD)</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
           - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016150951"><code>libpng-dev</code></a> — Core 2 build 1.6.39-2+deb12u6
-            - **Depends:** <code>libpng16-16 (= 1.6.39-2+deb12u6+core2.1~20261016150951)</code> — shared dependency; tree shown above
+            - **Depends:** <code>libpng16-16 (= 1.6.39-2+deb12u6+core2.1~BUILD)</code> — shared dependency; tree shown above
             - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>zlib1g-dev</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libz-dev</code> — Debian Bookworm package; not rebuilt here
@@ -1631,7 +1631,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libfreetype-dev (&gt;= 2.1.10)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pixman-0.42.2-1-core2.1-20261011154041"><code>libpixman-1-dev (&gt;= 0.22.0)</code></a> — Core 2 build 0.42.2-1
-        - **Depends:** <code>libpixman-1-0 (= 0.42.2-1+core2.1~20261011154041)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpixman-1-0 (= 0.42.2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libpng-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libsm-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
@@ -1639,11 +1639,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libxcb-shm0-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1-dev (&gt;= 1.6)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxext-2-1.3.4-1-core2.1-20261016132313"><code>libxext-dev</code></a> — Core 2 build 2:1.3.4-1
-        - **Depends:** <code>libxext6 (= 2:1.3.4-1+core2.1~20261016132313)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxext6 (= 2:1.3.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxrender-1-0.9.10-1.1-core2.1-20261020161528"><code>libxrender-dev (&gt;= 0.6)</code></a> — Core 2 build 1:0.9.10-1.1
-        - **Depends:** <code>libxrender1 (= 1:0.9.10-1.1+core2.1~20261020161528)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxrender1 (= 1:0.9.10-1.1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libx11-dev (&gt;= 2:1.0.0)</code> — shared dependency; tree shown above
         - **Depends:** <code>x11proto-render-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>x11proto-core-dev</code> — Debian Bookworm package; not rebuilt here
@@ -1652,52 +1652,52 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libglvnd-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libepoxy-1.5.10-1-core2.1-20261016134055"><code>libepoxy-dev (&gt;= 1.0)</code></a> — Core 2 build 1.5.10-1
       - **Depends:** <code>libegl-dev</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libepoxy0 (= 1.5.10-1+core2.1~20261016134055)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libepoxy0 (= 1.5.10-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgl-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libfontconfig-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fribidi-1.0.8-2.1-core2.1-20261020155618"><code>libfribidi-dev (&gt;= 0.19.7)</code></a> — Core 2 build 1.0.8-2.1
-      - **Depends:** <code>libfribidi0 (= 1.0.8-2.1+core2.1~20261020155618)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libfribidi0 (= 1.0.8-2.1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf-2.0-dev (&gt;= 2.40.0)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
-      - **Depends:** <code>gir1.2-gdkpixbuf-2.0 (= 2.42.10+dfsg-1+deb12u4+core2.1~20261020155747)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libgdk-pixbuf-2.0-0 (= 2.42.10+dfsg-1+deb12u4+core2.1~20261020155747)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf2.0-bin (= 2.42.10+dfsg-1+deb12u4+core2.1~20261020155747)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
+      - **Depends:** <code>gir1.2-gdkpixbuf-2.0 (= 2.42.10+dfsg-1+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libgdk-pixbuf-2.0-0 (= 2.42.10+dfsg-1+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>libgdk-pixbuf2.0-bin (= 2.42.10+dfsg-1+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 2.42.10+dfsg-1+deb12u4
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.35.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-0 (&gt;= 2.56.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-dev (&gt;= 2.56.0)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libjpeg-dev</code></a> — Core 2 build 1:2.1.5-2
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libjpeg62-turbo-dev (&gt;= 1:2.1.5-2+core2.1~20261011153748)</code></a> — Core 2 build 1:2.1.5-2
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libjpeg62-turbo-dev (&gt;= 1:2.1.5-2+core2.1~BUILD)</code></a> — Core 2 build 1:2.1.5-2
           - **Depends:** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-          - **Depends:** <code>libjpeg62-turbo (= 1:2.1.5-2+core2.1~20261011153748)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libjpeg62-turbo (= 1:2.1.5-2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libpng-dev (&lt;&lt; 1.7), libpng-dev (&gt;= 1.6), libtiff-dev, shared-mime-info</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-dev (&gt;= 2.57.2)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>libpango1.0-dev (&gt;= 1.44.0)</code></a> — Core 2 build 1.50.12+ds-1
-      - **Depends:** <code>gir1.2-pango-1.0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+      - **Depends:** <code>gir1.2-pango-1.0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcairo2-dev (&gt;= 1.12.10)</code> — shared dependency; tree shown above
       - **Depends:** <code>libfontconfig-dev (&gt;= 2.13.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libfreetype-dev (&gt;= 2.1.7)</code> — shared dependency; tree shown above
       - **Depends:** <code>libfribidi-dev (&gt;= 1.0.6)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-dev (&gt;= 2.62.0)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-dev (&gt;= 2.6.0)</code></a> — Core 2 build 6.0.0+dfsg-3
-        - **Depends:** <code>libharfbuzz0b (= 6.0.0+dfsg-3+core2.1~20261020160021)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-icu0 (= 6.0.0+dfsg-3+core2.1~20261020160021)</code></a> — Core 2 build 6.0.0+dfsg-3
+        - **Depends:** <code>libharfbuzz0b (= 6.0.0+dfsg-3+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-icu0 (= 6.0.0+dfsg-3+core2.1~BUILD)</code></a> — Core 2 build 6.0.0+dfsg-3
           - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
           - **Depends:** <code>libharfbuzz0b (&gt;= 0.9.4)</code> — shared dependency; tree shown above
           - **Depends:** <code>libicu72 (&gt;= 72.1~rc-1~)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-gobject0 (= 6.0.0+dfsg-3+core2.1~20261020160021)</code></a> — Core 2 build 6.0.0+dfsg-3
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-gobject0 (= 6.0.0+dfsg-3+core2.1~BUILD)</code></a> — Core 2 build 6.0.0+dfsg-3
           - **Depends:** <code>libc6 (&gt;= 2.2.5)</code> — shared dependency; tree shown above
           - **Depends:** <code>libglib2.0-0 (&gt;= 2.14.0)</code> — shared dependency; tree shown above
           - **Depends:** <code>libharfbuzz0b (&gt;= 5.1.0)</code> — shared dependency; tree shown above
-        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-subset0 (= 6.0.0+dfsg-3+core2.1~20261020160021)</code></a> — Core 2 build 6.0.0+dfsg-3
+        - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-harfbuzz-6.0.0-dfsg-3-core2.1-20261020160021"><code>libharfbuzz-subset0 (= 6.0.0+dfsg-3+core2.1~BUILD)</code></a> — Core 2 build 6.0.0+dfsg-3
           - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
           - **Depends:** <code>libharfbuzz0b (&gt;= 5.1.0)</code> — shared dependency; tree shown above
-        - **Depends:** <code>gir1.2-harfbuzz-0.0 (= 6.0.0+dfsg-3+core2.1~20261020160021)</code> — shared dependency; tree shown above
+        - **Depends:** <code>gir1.2-harfbuzz-0.0 (= 6.0.0+dfsg-3+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-graphite2-1.3.14-1-deb12u1-core2.1-20261020160000"><code>libgraphite2-dev</code></a> — Core 2 build 1.3.14-1+deb12u1
-          - **Depends:** <code>libgraphite2-3 (= 1.3.14-1+deb12u1+core2.1~20261020160000)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libgraphite2-3 (= 1.3.14-1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-icu-72.1-3-deb12u1-core2.1-20261020160050"><code>libicu-dev</code></a> — Core 2 build 72.1-3+deb12u1
-          - **Depends:** <code>libicu72 (= 72.1-3+deb12u1+core2.1~20261020160050)</code> — shared dependency; tree shown above
-          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-icu-72.1-3-deb12u1-core2.1-20261020160050"><code>icu-devtools (&gt;= 72.1-3+deb12u1+core2.1~20261020160050)</code></a> — Core 2 build 72.1-3+deb12u1
+          - **Depends:** <code>libicu72 (= 72.1-3+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+          - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-icu-72.1-3-deb12u1-core2.1-20261020160050"><code>icu-devtools (&gt;= 72.1-3+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 72.1-3+deb12u1
             - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
             - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
             - **Depends:** <code>libicu72 (&gt;= 72.1~rc-1~)</code> — shared dependency; tree shown above
@@ -1705,95 +1705,95 @@ Alternatives are marked as choices. Shared dependencies link back to where their
           - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
           - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libfreetype-dev</code> — shared dependency; tree shown above
-      - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libthai-0.1.29-1-core2.1-20261020161219"><code>libthai-dev (&gt;= 0.1.22-3~)</code></a> — Core 2 build 0.1.29-1
         - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdatrie-0.2.13-2-core2.1-20261020160819"><code>libdatrie-dev</code></a> — Core 2 build 0.2.13-2
-          - **Depends:** <code>libdatrie1 (= 0.2.13-2+core2.1~20261020160819)</code> — shared dependency; tree shown above
+          - **Depends:** <code>libdatrie1 (= 0.2.13-2+core2.1~BUILD)</code> — shared dependency; tree shown above
           - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
-        - **Depends:** <code>libthai0 (= 0.1.29-1+core2.1~20261020161219)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libthai0 (= 0.1.29-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev (&gt;= 2:1.3.3-2)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxft-dev (&gt;= 2.1.14-2)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libxrender-dev (&gt;= 1:0.9.0.2-2)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>pango1.0-tools (= 1.50.12+ds-1+core2.1~20261020161751)</code></a> — Core 2 build 1.50.12+ds-1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pango1.0-1.50.12-ds-1-core2.1-20261020161751"><code>pango1.0-tools (= 1.50.12+ds-1+core2.1~BUILD)</code></a> — Core 2 build 1.50.12+ds-1
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libcairo2 (&gt;= 1.12.10)</code> — shared dependency; tree shown above
         - **Depends:** <code>libfontconfig1 (&gt;= 2.13.0)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-0 (&gt;= 2.62.0)</code> — shared dependency; tree shown above
         - **Depends:** <code>libharfbuzz0b (&gt;= 5.1.0)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libpangoxft-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
         - **Depends:** <code>libxft2 (&gt;&gt; 2.1.1)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904"><code>libwayland-dev (&gt;= 1.9.91)</code></a> — Core 2 build 1.21.0-1
-      - **Depends:** <code>libwayland-client0 (= 1.21.0-1+core2.1~20261016133904)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libwayland-server0 (= 1.21.0-1+core2.1~20261016133904)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libwayland-cursor0 (= 1.21.0-1+core2.1~20261016133904)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libwayland-egl1 (= 1.21.0-1+core2.1~20261016133904)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904"><code>libwayland-bin (= 1.21.0-1+core2.1~20261016133904)</code></a> — Core 2 build 1.21.0-1
+      - **Depends:** <code>libwayland-client0 (= 1.21.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libwayland-server0 (= 1.21.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libwayland-cursor0 (= 1.21.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libwayland-egl1 (= 1.21.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wayland-1.21.0-1-core2.1-20261016133904"><code>libwayland-bin (= 1.21.0-1+core2.1~BUILD)</code></a> — Core 2 build 1.21.0-1
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libexpat1 (&gt;= 2.0.1)</code> — shared dependency; tree shown above
         - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
       - **Depends:** <code>libffi-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcomposite-1-0.4.5-1-core2.1-20261016133125"><code>libxcomposite-dev</code></a> — Core 2 build 1:0.4.5-1
-      - **Depends:** <code>libxcomposite1 (= 1:0.4.5-1+core2.1~20261016133125)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxcomposite1 (= 1:0.4.5-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfixes-1-6.0.0-2-core2.1-20261020161340"><code>libxfixes-dev</code></a> — Core 2 build 1:6.0.0-2
-        - **Depends:** <code>libxfixes3 (= 1:6.0.0-2+core2.1~20261020161340)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libxfixes3 (= 1:6.0.0-2+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
         - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcursor-1-1.2.1-1-core2.1-20261020161324"><code>libxcursor-dev</code></a> — Core 2 build 1:1.2.1-1
-      - **Depends:** <code>libxcursor1 (= 1:1.2.1-1+core2.1~20261020161324)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxcursor1 (= 1:1.2.1-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxrender-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxfixes-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxdamage-1-1.1.6-1-core2.1-20261016133326"><code>libxdamage-dev</code></a> — Core 2 build 1:1.1.6-1
-      - **Depends:** <code>libxdamage1 (= 1:1.1.6-1+core2.1~20261016133326)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxdamage1 (= 1:1.1.6-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxfixes-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libxfixes-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxi-2-1.8-1-core2.1-20261020161349"><code>libxi-dev</code></a> — Core 2 build 2:1.8-1
-      - **Depends:** <code>libxi6 (= 2:1.8-1+core2.1~20261020161349)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxi6 (= 2:1.8-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxfixes-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>x11proto-dev (&gt;= 2021.5)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>xorg-sgml-doctools (&gt;= 1:1.5)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxinerama-2-1.1.4-3-core2.1-20261020161404"><code>libxinerama-dev</code></a> — Core 2 build 2:1.1.4-3
-      - **Depends:** <code>libxinerama1 (= 2:1.1.4-3+core2.1~20261020161404)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxinerama1 (= 2:1.1.4-3+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbcommon-dev</code></a> — Core 2 build 1.5.0-1
-      - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxrandr-2-1.5.2-2-core2.1-20261016132856"><code>libxrandr-dev</code></a> — Core 2 build 2:1.5.2-2
-      - **Depends:** <code>libxrandr2 (= 2:1.5.2-2+core2.1~20261016132856)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxrandr2 (= 2:1.5.2-2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libxrender-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>wayland-protocols (&gt;= 1.17)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavcodec-extra 7:5.1.9-0+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavcodec-extra59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavcodec-extra59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
     - **Depends:** <code>libaom3 (&gt;= 3.2.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libaribb24-0 (&gt;= 1.0.3)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcodec2-1.0 (&gt;= 1.0.5)</code> — Debian Bookworm package; not rebuilt here
@@ -1831,11 +1831,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavfilter-extra 7:5.1.9-0+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavfilter-extra8 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavfilter-extra8 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
     - **Depends:** <code>libass9 (&gt;= 1:0.13.6)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libavformat59 (&gt;= 7:5.0)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
     - **Depends:** <code>libflite1 (&gt;= 1.4-release-9~)</code> — Debian Bookworm package; not rebuilt here
@@ -1865,9 +1865,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavformat-extra 7:5.1.9-0+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavformat-extra59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
-    - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~20261009183944)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944"><code>libavformat-extra59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 7:5.1.9-0+deb12u1
+    - **Depends:** <code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libbluray2 (&gt;= 1:0.2.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libbz2-1.0</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -1885,23 +1885,23 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>zlib1g (&gt;= 1:1.2.0.2)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521"><code>libflac++-dev 1.4.2+ds-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521"><code>libflac++10 (= 1.4.2+ds-2+core2.1~20261023192521)</code></a> — Core 2 build 1.4.2+ds-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521"><code>libflac++10 (= 1.4.2+ds-2+core2.1~BUILD)</code></a> — Core 2 build 1.4.2+ds-2
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libflac12 (&gt;= 1.4.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521"><code>libflac-dev</code></a> — Core 2 build 1.4.2+ds-2
-    - **Depends:** <code>libflac12 (= 1.4.2+ds-2+core2.1~20261023192521)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libflac12 (= 1.4.2+ds-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libogg-1.3.5-3-core2.1-20261023192506"><code>libogg-dev</code></a> — Core 2 build 1.3.5-3
-      - **Depends:** <code>libogg0 (= 1.3.5-3+core2.1~20261023192506)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libogg0 (= 1.3.5-3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-flac-1.4.2-ds-2-core2.1-20261023192521"><code>libflac-doc 1.4.2+ds-2</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>libgstreamer-plugins-bad1.0-dev 1.22.0-4+deb12u8</code></a>
-  - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgstreamer-opencv1.0-0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgstreamer-opencv1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624"><code>libgstreamer1.0-dev</code></a> — Core 2 build 1.22.0-2+deb12u1
-    - **Depends:** <code>libgstreamer1.0-0 (= 1.22.0-2+deb12u1+core2.1~20261011064624)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgstreamer1.0-0 (= 1.22.0-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
@@ -1910,40 +1910,40 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libdw-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.62.0)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624"><code>gir1.2-gstreamer-1.0 (= 1.22.0-2+deb12u1+core2.1~20261011064624)</code></a> — Core 2 build 1.22.0-2+deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gstreamer1.0-1.22.0-2-deb12u1-core2.1-20261011064624"><code>gir1.2-gstreamer-1.0 (= 1.22.0-2+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-2+deb12u1
       - **Depends:** <code>gir1.2-glib-2.0 (&gt;= 0.9.12-4~)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libgstreamer1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019"><code>libgstreamer-plugins-base1.0-dev</code></a> — Core 2 build 1.22.0-3+deb12u7
-    - **Depends:** <code>libgstreamer-plugins-base1.0-0 (= 1.22.0-3+deb12u7+core2.1~20261016120019)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgstreamer-gl1.0-0 (= 1.22.0-3+deb12u7+core2.1~20261016120019)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgstreamer-plugins-base1.0-0 (= 1.22.0-3+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgstreamer-gl1.0-0 (= 1.22.0-3+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libgstreamer1.0-dev (&gt;= 1.16.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016"><code>liborc-0.4-dev (&gt;= 1:0.4.24)</code></a> — Core 2 build 1:0.4.33-2
-      - **Depends:** <code>liborc-0.4-0 (= 1:0.4.33-2+core2.1~20261016143016)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016"><code>liborc-0.4-dev-bin:any (= 1:0.4.33-2+core2.1~20261016143016)</code></a> — Core 2 build 1:0.4.33-2
+      - **Depends:** <code>liborc-0.4-0 (= 1:0.4.33-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016"><code>liborc-0.4-dev-bin:any (= 1:0.4.33-2+core2.1~BUILD)</code></a> — Core 2 build 1:0.4.33-2
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>liborc-0.4-0 (&gt;= 1:0.4.25)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgl-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libegl-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libgles-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libx11-2-1.8.4-2-deb12u2-core2.1-20261016131846"><code>libx11-xcb-dev</code></a> — Core 2 build 2:1.8.4-2+deb12u2
-      - **Depends:** <code>libx11-xcb1 (= 2:1.8.4-2+deb12u2+core2.1~20261016131846)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libx11-xcb1 (= 2:1.8.4-2+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libwayland-dev (&gt;= 1.11)</code> — shared dependency; tree shown above
     - **Depends:** <code>libdrm-dev (&gt;= 2.4.55)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939"><code>libgbm-dev</code></a> — Core 2 build 22.3.6-1+deb12u2
-      - **Depends:** <code>libgbm1 (= 22.3.6-1+deb12u2+core2.1~20261016214939)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libgbm1 (= 22.3.6-1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgudev-1.0-dev (&gt;= 147)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019"><code>gir1.2-gst-plugins-base-1.0 (= 1.22.0-3+deb12u7+core2.1~20261016120019)</code></a> — Core 2 build 1.22.0-3+deb12u7
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019"><code>gir1.2-gst-plugins-base-1.0 (= 1.22.0-3+deb12u7+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-3+deb12u7
       - **Depends:** <code>gir1.2-glib-2.0 (&gt;= 0.9.12-4~)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>gir1.2-gstreamer-1.0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgstreamer-gl1.0-0 (&gt;= 1.20.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>gir1.2-gst-plugins-bad-1.0 (= 1.22.0-4+deb12u8+core2.1~20261016163835)</code></a> — Core 2 build 1.22.0-4+deb12u8
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835"><code>gir1.2-gst-plugins-bad-1.0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a> — Core 2 build 1.22.0-4+deb12u8
     - **Depends:** <code>gir1.2-freedesktop (&gt;= 0.9.12-4~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-glib-2.0 (&gt;= 0.9.12-4~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gst-plugins-base-1.0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
@@ -1952,7 +1952,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libopencv-dev (&gt;= 2.3.0)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261016213051"><code>libmp3lame-dev 3.100-6</code></a>
-  - **Depends:** <code>libmp3lame0 (= 3.100-6+core2.1~20261016213051)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libmp3lame0 (= 3.100-6+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224"><code>libmpv2 0.35.1-4</code></a>
   - **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> — Debian Bookworm package; not rebuilt here
@@ -2012,8 +2012,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524"><code>libopusenc-dev 0.2.1-2</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-opus-1.3.1-3-core2.1-20261023192526"><code>libopus-dev</code></a> — Core 2 build 1.3.1-3
-    - **Depends:** <code>libopus0 (= 1.3.1-3+core2.1~20261023192526)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524"><code>libopusenc0 (= 0.2.1-2+core2.1~20261023192524)</code></a> — Core 2 build 0.2.1-2
+    - **Depends:** <code>libopus0 (= 1.3.1-3+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopusenc-0.2.1-2-core2.1-20261023192524"><code>libopusenc0 (= 0.2.1-2+core2.1~BUILD)</code></a> — Core 2 build 0.2.1-2
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libopus0 (&gt;= 1.3~beta+20180516)</code> — shared dependency; tree shown above
 
@@ -2022,7 +2022,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513"><code>libopusfile-dev 0.12-4</code></a>
   - **Depends:** <code>libogg-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libopus-dev</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513"><code>libopusfile0 (= 0.12-4+core2.1~20261023192513)</code></a> — Core 2 build 0.12-4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513"><code>libopusfile0 (= 0.12-4+core2.1~BUILD)</code></a> — Core 2 build 0.12-4
     - **Depends:** <code>libc6 (&gt;= 2.28)</code> — shared dependency; tree shown above
     - **Depends:** <code>libogg0 (&gt;= 1.1.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libopus0 (&gt;= 1.1)</code> — shared dependency; tree shown above
@@ -2031,12 +2031,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-opusfile-0.12-4-core2.1-20261023192513"><code>libopusfile-doc 0.12-4</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550"><code>libvpx-dev 1.12.0-1+deb12u5</code></a>
-  - **Depends:** <code>libvpx7 (= 1.12.0-1+deb12u5+core2.1~20261016115550)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvpx7 (= 1.12.0-1+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550"><code>libvpx-doc 1.12.0-1+deb12u5</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-x265-3.5-2-core2.1-20261016145405"><code>libx265-dev 3.5-2</code></a>
-  - **Depends:** <code>libx265-199 (= 3.5-2+core2.1~20261016145405)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libx265-199 (= 3.5-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-x265-3.5-2-core2.1-20261016145405"><code>libx265-doc 3.5-2</code></a>
   - **Depends:** <code>libjs-sphinxdoc (&gt;= 5.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2173,7 +2173,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libopusfile0 (&gt;= 0.5)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105"><code>sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105"><code>libsox-ng5 (= 14.8.1+core2.1~20261023214105)</code></a> — Core 2 build 14.8.1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261023214105"><code>libsox-ng5 (= 14.8.1+core2.1~BUILD)</code></a> — Core 2 build 14.8.1
     - **Depends:** <code>libao4 (&gt;= 1.1.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libasound2 (&gt;= 1.0.16)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
@@ -2193,7 +2193,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
       - **Depends:** <code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code> — shared dependency; tree shown above
       - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237"><code>libmagic-mgc (= 1:5.44-3+core2.1~20261012055237)</code></a> — Core 2 build 1:5.44-3
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237"><code>libmagic-mgc (= 1:5.44-3+core2.1~BUILD)</code></a> — Core 2 build 1:5.44-3
     - **Depends:** <code>libmp3lame0 (&gt;= 3.100)</code> — shared dependency; tree shown above
     - **Depends:** <code>libogg0 (&gt;= 1.0rc3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> — Debian Bookworm package; not rebuilt here
@@ -2214,7 +2214,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550"><code>vpx-tools 1.12.0-1+deb12u5 — VP8 and VP9 video codec encoding/decoding tools</code></a>
-  - **Depends:** <code>libvpx7 (= 1.12.0-1+deb12u5+core2.1~20261016115550)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvpx7 (= 1.12.0-1+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libstdc++6 (&gt;= 5.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2243,12 +2243,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libgit2-1.5 (&gt;= 1.5.0)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-aarch64-linux-gnu 2.40-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-common (= 2.40-2+core2.1~20261009173258)</code></a> — Core 2 build 2.40-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a> — Core 2 build 2.40-2
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>libbinutils (&gt;= 2.39.50)</code></a> — Core 2 build 2.40-2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
-    - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+    - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2256,7 +2256,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-alpha-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2264,7 +2264,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-arc-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2272,7 +2272,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-arm-linux-gnueabi 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2281,7 +2281,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-arm-linux-gnueabihf 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2293,22 +2293,22 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-for-build 2.40-2</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils (&gt;= 2.30-2)</code></a> — Core 2 build 2.40-2
-    - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libbinutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-x86-64-linux-gnu (= 2.40-2+core2.1~20261009173258)</code></a> — Core 2 build 2.40-2
-      - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libbinutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+    - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libbinutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-x86-64-linux-gnu (= 2.40-2+core2.1~BUILD)</code></a> — Core 2 build 2.40-2
+      - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libbinutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>libctf-nobfd0 (&gt;= 2.36)</code></a> — Core 2 build 2.40-2
         - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
         - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>libctf0 (&gt;= 2.36)</code></a> — Core 2 build 2.40-2
-        - **Depends:** <code>libbinutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libbinutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
         - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>libgprofng0 (&gt;= 2.40-2+core2.1~20261009173258)</code></a> — Core 2 build 2.40-2
-        - **Depends:** <code>libbinutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>libgprofng0 (&gt;= 2.40-2+core2.1~BUILD)</code></a> — Core 2 build 2.40-2
+        - **Depends:** <code>libbinutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libgcc-s1 (&gt;= 3.3.1)</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libstdc++6 (&gt;= 5.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2321,10 +2321,10 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-for-host 2.40-2</code></a>
   - **Depends:** <code>binutils-x86-64-linux-gnu:any (&gt;= 2.30-2)</code> — shared dependency; tree shown above
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-hppa-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2337,11 +2337,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>binutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-i686-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2350,7 +2350,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-i686-kfreebsd-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2359,7 +2359,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-i686-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2368,7 +2368,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-ia64-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2376,7 +2376,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-m68k-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2388,11 +2388,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>binutils (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-powerpc-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2401,7 +2401,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-powerpc64-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2410,7 +2410,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-powerpc64le-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2419,7 +2419,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-riscv64-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2427,7 +2427,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-s390x-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2436,7 +2436,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-sh4-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libjansson4 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
@@ -2451,10 +2451,10 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libjansson-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libzstd-1.5.4-dfsg2-5-core2.1-20261020161546"><code>libzstd-dev</code></a> — Core 2 build 1.5.4+dfsg2-5
-    - **Depends:** <code>libzstd1 (= 1.5.4+dfsg2-5+core2.1~20261020161546)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libzstd1 (= 1.5.4+dfsg2-5+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-sparc64-linux-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2463,7 +2463,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-x86-64-kfreebsd-gnu 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2472,7 +2472,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258"><code>binutils-x86-64-linux-gnux32 2.40-2</code></a>
-  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~20261009173258)</code> — shared dependency; tree shown above
+  - **Depends:** <code>binutils-common (= 2.40-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbinutils (&gt;= 2.39.50)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 4.2)</code> — Debian Bookworm package; not rebuilt here
@@ -2494,32 +2494,32 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>golang-redhat-audit-dev 1:3.0.9-1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>lib32z1-dev 1:1.2.13.dfsg-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>lib32z1 (= 1:1.2.13.dfsg-1+core2.1~20261016151112)</code></a> — Core 2 build 1:1.2.13.dfsg-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>lib32z1 (= 1:1.2.13.dfsg-1+core2.1~BUILD)</code></a> — Core 2 build 1:1.2.13.dfsg-1
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-i386 (&gt;= 2.4)</code></a> — Core 2 build 2.36-9+deb12u14
-      - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
-  - **Depends:** <code>zlib1g-dev (= 1:1.2.13.dfsg-1+core2.1~20261016151112)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>zlib1g-dev (= 1:1.2.13.dfsg-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>lib32c-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330"><code>libaom-dev 3.6.0-1+deb12u3</code></a>
-  - **Depends:** <code>libaom3 (= 3.6.0-1+deb12u3+core2.1~20261016144330)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libaom3 (= 3.6.0-1+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apparmor-3.0.8-3-core2.1-20261020155241"><code>libapparmor-dev 3.0.8-3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apparmor-3.0.8-3-core2.1-20261020155241"><code>libapparmor1 (= 3.0.8-3+core2.1~20261020155241)</code></a> — Core 2 build 3.0.8-3
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apparmor-3.0.8-3-core2.1-20261020155241"><code>libapparmor1 (= 3.0.8-3+core2.1~BUILD)</code></a> — Core 2 build 3.0.8-3
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-argon2-0-20171227-0.3-deb12u1-core2.1-20261020155240"><code>libargon2-dev 0~20171227-0.3+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-argon2-0-20171227-0.3-deb12u1-core2.1-20261020155240"><code>libargon2-1 (= 0~20171227-0.3+deb12u1+core2.1~20261020155240)</code></a> — Core 2 build 0~20171227-0.3+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-argon2-0-20171227-0.3-deb12u1-core2.1-20261020155240"><code>libargon2-1 (= 0~20171227-0.3+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0~20171227-0.3+deb12u1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820"><code>libass-dev 1:0.17.1-1+deb12u1</code></a>
-  - **Depends:** <code>libass9 (= 1:0.17.1-1+deb12u1+core2.1~20261016142820)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libass9 (= 1:0.17.1-1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libfontconfig-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libfreetype-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libfribidi-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libharfbuzz-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrildocument-dev 1.26.0-2+deb12u4</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code></a> — Core 2 build 1.26.0-2+deb12u4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 1.26.0-2+deb12u4
     - **Depends:** <code>libjs-mathjax</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -2529,7 +2529,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libjpeg62-turbo (&gt;= 1.3.1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223"><code>libdjvulibre-text (&gt;= 3.5.28-2.2~deb12u1+core2.1~20261012055223)</code></a> — Core 2 build 3.5.28-2.2~deb12u1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223"><code>libdjvulibre-text (&gt;= 3.5.28-2.2~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.5.28-2.2~deb12u1
     - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.37.3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgtk-3-0 (&gt;= 3.21.4)</code> — shared dependency; tree shown above
@@ -2538,7 +2538,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpango-1.0-0 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-glib8 (&gt;= 0.22.1)</code></a> — Core 2 build 22.12.0-2+deb12u3
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
         - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
         - **Depends:** <code>libfontconfig1 (&gt;= 2.12.6)</code> — shared dependency; tree shown above
         - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
@@ -2563,15 +2563,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libtiff6 (&gt;= 4.0.3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>gir1.2-atrildocument-1.5.0 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code></a> — Core 2 build 1.26.0-2+deb12u4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>gir1.2-atrildocument-1.5.0 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 1.26.0-2+deb12u4
     - **Depends:** <code>gir1.2-gdkpixbuf-2.0</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0</code> — shared dependency; tree shown above
     - **Depends:** <code>libatrildocument3 (&gt;= 1.24.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrilview-dev 1.26.0-2+deb12u4</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrilview3 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code></a> — Core 2 build 1.26.0-2+deb12u4
-    - **Depends:** <code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>libatrilview3 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 1.26.0-2+deb12u4
+    - **Depends:** <code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libatk1.0-0 (&gt;= 1.12.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.29)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
@@ -2579,39 +2579,39 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libgtk-3-0 (&gt;= 3.21.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpango-1.0-0 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libwebkit2gtk-4.1-0 (&gt;= 2.5.3)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>gir1.2-atrilview-1.5.0 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code></a> — Core 2 build 1.26.0-2+deb12u4
-    - **Depends:** <code>gir1.2-atrildocument-1.5.0 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>gir1.2-atrilview-1.5.0 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 1.26.0-2+deb12u4
+    - **Depends:** <code>gir1.2-atrildocument-1.5.0 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-gdkpixbuf-2.0</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0</code> — shared dependency; tree shown above
     - **Depends:** <code>libatrilview3 (&gt;= 1.20.1)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libaudit-dev 1:3.0.9-1</code></a>
-  - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcap-ng-0.8.3-1-core2.1-20261020160633"><code>libcap-ng-dev</code></a> — Core 2 build 0.8.3-1
-    - **Depends:** <code>libcap-ng0 (= 0.8.3-1+core2.1~20261020160633)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libcap-ng0 (= 0.8.3-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libauparse-dev 1:3.0.9-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libauparse0 (= 1:3.0.9-1+core2.1~20261020155244)</code></a> — Core 2 build 1:3.0.9-1
-    - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code></a> — Core 2 build 1:3.0.9-1
+    - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.17)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libbsd-0.11.7-2-core2.1-20261016150833"><code>libbsd-dev 0.11.7-2</code></a>
-  - **Depends:** <code>libbsd0 (= 0.11.7-2+core2.1~20261016150833)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libbsd0 (= 0.11.7-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmd-1.0.4-2-core2.1-20261016150931"><code>libmd-dev</code></a> — Core 2 build 1.0.4-2
-    - **Depends:** <code>libmd0 (= 1.0.4-2+core2.1~20261016150931)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmd0 (= 1.0.4-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-dev-x32 2.36-9+deb12u14</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-x32 (= 2.36-9+deb12u14+core2.1~20261010052854)</code></a> — Core 2 build 2.36-9+deb12u14
-    - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-dev-i386 (= 2.36-9+deb12u14+core2.1~20261010052854)</code></a> — Core 2 build 2.36-9+deb12u14
-    - **Depends:** <code>libc6-i386 (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libc6-dev (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libc6-dev (= 2.36-9+deb12u14+core2.1~20261010052854)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-x32 (= 2.36-9+deb12u14+core2.1~BUILD)</code></a> — Core 2 build 2.36-9+deb12u14
+    - **Depends:** <code>libc6 (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc6-dev-i386 (= 2.36-9+deb12u14+core2.1~BUILD)</code></a> — Core 2 build 2.36-9+deb12u14
+    - **Depends:** <code>libc6-i386 (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libc6-dev (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libc6-dev (= 2.36-9+deb12u14+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>libcolorhug-dev 1.4.6-2.2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>gir1.2-colorhug-1.0 (= 1.4.6-2.2+core2.1~20261020155348)</code></a> — Core 2 build 1.4.6-2.2
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>gir1.2-colord-1.0 (= 1.4.6-2.2+core2.1~20261020155348)</code></a> — Core 2 build 1.4.6-2.2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>gir1.2-colorhug-1.0 (= 1.4.6-2.2+core2.1~BUILD)</code></a> — Core 2 build 1.4.6-2.2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>gir1.2-colord-1.0 (= 1.4.6-2.2+core2.1~BUILD)</code></a> — Core 2 build 1.4.6-2.2
       - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libcolord2 (&gt;= 1.4.5)</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
@@ -2622,67 +2622,67 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libglib2.0-0 (&gt;= 2.58)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgusb2 (&gt;= 0.2.7)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>libcolord-dev</code></a> — Core 2 build 1.4.6-2.2
-    - **Depends:** <code>gir1.2-colord-1.0 (= 1.4.6-2.2+core2.1~20261020155348)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libcolord2 (= 1.4.6-2.2+core2.1~20261020155348)</code> — shared dependency; tree shown above
+    - **Depends:** <code>gir1.2-colord-1.0 (= 1.4.6-2.2+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libcolord2 (= 1.4.6-2.2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-dev (&gt;= 2.58)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libcolorhug2 (= 1.4.6-2.2+core2.1~20261020155348)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcolorhug2 (= 1.4.6-2.2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libgusb-dev (&gt;= 0.2.7)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse-dev 3.3-3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse2 (= 3.3-3+core2.1~20261020160734)</code></a> — Core 2 build 3.3-3
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse2 (= 3.3-3+core2.1~BUILD)</code></a> — Core 2 build 3.3-3
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse-common (&gt;= 3.3-3+core2.1~20261020160734)</code></a> — Core 2 build 3.3-3
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse-common (&gt;= 3.3-3+core2.1~BUILD)</code></a> — Core 2 build 3.3-3
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dav1d-1.0.0-2-deb12u1-core2.1-20261016144008"><code>libdav1d-dev 1.0.0-2+deb12u1</code></a>
-  - **Depends:** <code>libdav1d6 (= 1.0.0-2+deb12u1+core2.1~20261016144008)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdav1d6 (= 1.0.0-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3++-dev 5.3.28+dfsg2-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3++ (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3++ (= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-dev (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
-    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-dev (= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
+    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-java-dev 5.3.28+dfsg2-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-java (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-java-jni (&gt;= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-java (= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-java-jni (&gt;= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-sql-dev 5.3.28+dfsg2-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-sql (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-sql (= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-stl-dev 5.3.28+dfsg2-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-stl (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code></a> — Core 2 build 5.3.28+dfsg2-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-stl (= 5.3.28+dfsg2-1+core2.1~BUILD)</code></a> — Core 2 build 5.3.28+dfsg2-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>libdconf-dev 0.40.0-4</code></a>
-  - **Depends:** <code>libdconf1 (= 0.40.0-4+core2.1~20261020155533)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdconf1 (= 0.40.0-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-dev (&gt;= 2.25.7)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libebur128-1-1.2.6-1-core2.1-20261023221125"><code>libebur128-dev 1.2.6-1</code></a>
-  - **Depends:** <code>libebur128-1 (= 1.2.6-1+core2.1~20261023221125)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libebur128-1 (= 1.2.6-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ebook-tools-0.2.2-6-core2.1-20261012055224"><code>libepub-dev 0.2.2-6</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ebook-tools-0.2.2-6-core2.1-20261012055224"><code>libepub0 (= 0.2.2-6+core2.1~20261012055224)</code></a> — Core 2 build 0.2.2-6
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ebook-tools-0.2.2-6-core2.1-20261012055224"><code>libepub0 (= 0.2.2-6+core2.1~BUILD)</code></a> — Core 2 build 0.2.2-6
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libzip4 (&gt;= 0.10)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>libevince-dev 43.1-2+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>gir1.2-evince-3.0 (= 43.1-2+deb12u1+core2.1~20261012055507)</code></a> — Core 2 build 43.1-2+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>gir1.2-evince-3.0 (= 43.1-2+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 43.1-2+deb12u1
     - **Depends:** <code>gir1.2-gdkpixbuf-2.0 (&gt;= 2.40)</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-glib-2.0 (&gt;= 1.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0 (&gt;= 3.22.0)</code> — shared dependency; tree shown above
@@ -2714,13 +2714,13 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libgstreamer1.0-0 (&gt;= 1.0.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgtk-3-0 (&gt;= 3.22.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libpango-1.0-0 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libevdocument3-4 (= 43.1-2+deb12u1+core2.1~20261012055507)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libevview3-3 (= 43.1-2+deb12u1+core2.1~20261012055507)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libevdocument3-4 (= 43.1-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libevview3-3 (= 43.1-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-dev (&gt;= 2.38.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgtk-3-dev (&gt;= 3.16.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936"><code>libexo-2-dev 4.18.0-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936"><code>libexo-2-0 (= 4.18.0-1+core2.1~20261010053936)</code></a> — Core 2 build 4.18.0-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936"><code>libexo-2-0 (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936"><code>libexo-common</code></a> — Core 2 build 4.18.0-1
     - **Depends:** <code>libatk1.0-0 (&gt;= 1.12.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
@@ -2734,23 +2734,23 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libglib2.0-0 (&gt;= 2.55.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgtk-3-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4util-4.18.1-2-core2.1-20261010053208"><code>libxfce4util-dev (&gt;= 4.10.0)</code></a> — Core 2 build 4.18.1-2
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4util-4.18.1-2-core2.1-20261010053208"><code>gir1.2-libxfce4util-1.0 (= 4.18.1-2+core2.1~20261010053208)</code></a> — Core 2 build 4.18.1-2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4util-4.18.1-2-core2.1-20261010053208"><code>gir1.2-libxfce4util-1.0 (= 4.18.1-2+core2.1~BUILD)</code></a> — Core 2 build 4.18.1-2
       - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libxfce4util7 (&gt;= 4.17.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
-    - **Depends:** <code>libxfce4util7 (= 4.18.1-2+core2.1~20261010053208)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxfce4util7 (= 4.18.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libfile-find-rule-perl-0.34-4-deb12u1-core2.1-20261020160848"><code>libfile-find-rule-perl 0.34-4~deb12u1 — module to search for files based on rules</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl:any</code></a> — Core 2 build 5.36.0-7+deb12u4
     - **Pre-Depends:** <code>dpkg (&gt;= 1.17.17)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl-base (= 5.36.0-7+deb12u4+core2.1~20261011040002)</code></a> — Core 2 build 5.36.0-7+deb12u4
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl-base (= 5.36.0-7+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 5.36.0-7+deb12u4
       - **Pre-Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Pre-Depends:** <code>libcrypt1 (&gt;= 1:4.1.0)</code> — shared dependency; tree shown above
       - **Pre-Depends:** <code>dpkg (&gt;= 1.17.17)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl-modules-5.36 (&gt;= 5.36.0-7+deb12u4+core2.1~20261011040002)</code></a> — Core 2 build 5.36.0-7+deb12u4
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl-modules-5.36 (&gt;= 5.36.0-7+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 5.36.0-7+deb12u4
       - **Pre-Depends:** <code>dpkg (&gt;= 1.17.17)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>perl-base (&gt;= 5.36.0-1)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>libperl5.36 (= 5.36.0-7+deb12u4+core2.1~20261011040002)</code></a> — Core 2 build 5.36.0-7+deb12u4
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>libperl5.36 (= 5.36.0-7+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 5.36.0-7+deb12u4
       - **Depends:** <code>libbz2-1.0</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcrypt1 (&gt;= 1:4.1.0)</code> — shared dependency; tree shown above
@@ -2760,16 +2760,16 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libgdbm6 (&gt;= 1.16)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgdbm6 (&gt;= 1.21)</code> — shared dependency; tree shown above
       - **Depends:** <code>zlib1g (&gt;= 1:1.2.2.3)</code> — shared dependency; tree shown above
-      - **Depends:** <code>perl-modules-5.36 (&gt;= 5.36.0-7+deb12u4+core2.1~20261011040002)</code> — shared dependency; tree shown above
+      - **Depends:** <code>perl-modules-5.36 (&gt;= 5.36.0-7+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libnumber-compare-perl-0.03-3-core2.1-20261020161009"><code>libnumber-compare-perl</code></a> — Core 2 build 0.03-3
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtext-glob-perl-0.11-3-core2.1-20261020161151"><code>libtext-glob-perl</code></a> — Core 2 build 0.11-3
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fontconfig-2.14.1-4-core2.1-20261016150850"><code>libfontconfig1-dev 2.14.1-4</code></a>
-  - **Depends:** <code>libfontconfig-dev (= 2.14.1-4+core2.1~20261016150850)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libfontconfig-dev (= 2.14.1-4+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgail-3-dev 3.24.38-2~deb12u3</code></a>
   - **Depends:** <code>libatk1.0-dev</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgail-3-0 (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code></a> — Core 2 build 3.24.38-2~deb12u3
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgail-3-0 (= 3.24.38-2~deb12u3+core2.1~BUILD)</code></a> — Core 2 build 3.24.38-2~deb12u3
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>at-spi2-core</code></a> — Core 2 build 2.46.0-5
       - **Depends:** <code>libatspi2.0-0 (&gt;= 2.9.90)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -2783,14 +2783,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libatk1.0-0 (&gt;= 2.35.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.57.2)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpango-1.0-0 (&gt;= 1.44.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libgtk-3-dev (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgtk-3-dev (= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>libgarcon-1-0-dev 4.18.0-1</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>libgarcon-1-dev</code></a> — Core 2 build 4.18.0-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>gir1.2-garcon-1.0 (= 4.18.0-1+core2.1~20261010054213)</code></a> — Core 2 build 4.18.0-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>gir1.2-garcon-1.0 (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
       - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>gir1.2-libxfce4util-1.0</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>libgarcon-1-0 (&gt;= 4.17.1)</code></a> — Core 2 build 4.18.0-1
@@ -2798,11 +2798,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libglib2.0-0 (&gt;= 2.67.3+git20210214)</code> — shared dependency; tree shown above
         - **Depends:** <code>libxfce4util7 (&gt;= 4.9.0)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgarcon-1-0 (= 4.18.0-1+core2.1~20261010054213)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgarcon-1-0 (= 4.18.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>libgarcon-gtk3-1-dev 4.18.0-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>gir1.2-garcongtk-1.0 (= 4.18.0-1+core2.1~20261010054213)</code></a> — Core 2 build 4.18.0-1
-    - **Depends:** <code>gir1.2-garcon-1.0 (= 4.18.0-1+core2.1~20261010054213)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-garcon-4.18.0-1-core2.1-20261010054213"><code>gir1.2-garcongtk-1.0 (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
+    - **Depends:** <code>gir1.2-garcon-1.0 (= 4.18.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651"><code>gir1.2-libxfce4ui-2.0</code></a> — Core 2 build 4.18.2-2
@@ -2840,19 +2840,19 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libgtk-3-0 (&gt;= 3.9.10)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxfce4ui-2-0 (&gt;= 4.15.6)</code> — shared dependency; tree shown above
       - **Depends:** <code>libxfce4util7 (&gt;= 4.15.3)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgarcon-gtk3-1-0 (= 4.18.0-1+core2.1~20261010054213)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgarcon-gtk3-1-0 (= 4.18.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgarcon-1-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxfce4ui-4.18.2-2-core2.1-20261010053651"><code>libxfce4ui-2-dev</code></a> — Core 2 build 4.18.2-2
-    - **Depends:** <code>gir1.2-libxfce4ui-2.0 (= 4.18.2-2+core2.1~20261010053651)</code> — shared dependency; tree shown above
+    - **Depends:** <code>gir1.2-libxfce4ui-2.0 (= 4.18.2-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgtk-3-dev</code> — shared dependency; tree shown above
-    - **Depends:** <code>libxfce4ui-2-0 (= 4.18.2-2+core2.1~20261010053651)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxfce4ui-2-0 (= 4.18.2-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxfce4util-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xfconf-4.18.0-2-core2.1-20261010053410"><code>libxfconf-0-dev</code></a> — Core 2 build 4.18.0-2
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xfconf-4.18.0-2-core2.1-20261010053410"><code>gir1.2-xfconf-0 (= 4.18.0-2+core2.1~20261010053410)</code></a> — Core 2 build 4.18.0-2
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xfconf-4.18.0-2-core2.1-20261010053410"><code>gir1.2-xfconf-0 (= 4.18.0-2+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-2
         - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libxfconf-0-3 (&gt;= 4.12.1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
-      - **Depends:** <code>libxfconf-0-3 (= 4.18.0-2+core2.1~20261010053410)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxfconf-0-3 (= 4.18.0-2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libgcrypt20-1.10.1-3-deb12u1-core2.1-20261020161004"><code>libgcrypt-mingw-w64-dev 1.10.1-3+deb12u1</code></a>
@@ -2861,9 +2861,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libgcrypt20-1.10.1-3-deb12u1-core2.1-20261020161004"><code>libgcrypt20-dev 1.10.1-3+deb12u1</code></a>
   - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libgcrypt20 (= 1.10.1-3+deb12u1+core2.1~20261020161004)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgcrypt20 (= 1.10.1-3+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libgpg-error-1.46-1-core2.1-20261020161016"><code>libgpg-error-dev</code></a> — Core 2 build 1.46-1
-    - **Depends:** <code>libgpg-error0 (= 1.46-1+core2.1~20261020161016)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgpg-error0 (= 1.46-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdbm-1.23-3-core2.1-20261020155702"><code>libgdbm-compat-dev 1.23-3</code></a>
   - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
@@ -2871,18 +2871,18 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdbm-1.23-3-core2.1-20261020155702"><code>libgdbm-dev</code></a> — Core 2 build 1.23-3
     - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libgdbm6 (= 1.23-3+core2.1~20261020155702)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgdbm-compat4 (= 1.23-3+core2.1~20261020155702)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgdbm6 (= 1.23-3+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgdbm-compat4 (= 1.23-3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gpm-1.20.7-10-core2.1-20261012055149"><code>libgpm-dev 1.20.7-10</code></a>
   - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gpm-1.20.7-10-core2.1-20261012055149"><code>libgpm2 (= 1.20.7-10+core2.1~20261012055149)</code></a> — Core 2 build 1.20.7-10
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gpm-1.20.7-10-core2.1-20261012055149"><code>libgpm2 (= 1.20.7-10+core2.1~BUILD)</code></a> — Core 2 build 1.20.7-10
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210"><code>libigfxcmrt-dev 23.1.1+dfsg1-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210"><code>libigfxcmrt7 (= 23.1.1+dfsg1-1+core2.1~20261016140210)</code></a> — Core 2 build 23.1.1+dfsg1-1
-    - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210"><code>intel-media-va-driver (= 23.1.1+dfsg1-1+core2.1~20261016140210)</code></a> — Core 2 build 23.1.1+dfsg1-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210"><code>libigfxcmrt7 (= 23.1.1+dfsg1-1+core2.1~BUILD)</code></a> — Core 2 build 23.1.1+dfsg1-1
+    - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210"><code>intel-media-va-driver (= 23.1.1+dfsg1-1+core2.1~BUILD)</code></a> — Core 2 build 23.1.1+dfsg1-1
       - **Depends:** <code>libva-driver-abi-1.17</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
@@ -2931,22 +2931,22 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libperl5.36 (&gt;= 5.36.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libiptc-dev 1.8.9-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip4tc-dev (= 1.8.9-2+core2.1~20261020160244)</code></a> — Core 2 build 1.8.9-2
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip4tc2 (= 1.8.9-2+core2.1~20261020160244)</code></a> — Core 2 build 1.8.9-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip4tc-dev (= 1.8.9-2+core2.1~BUILD)</code></a> — Core 2 build 1.8.9-2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip4tc2 (= 1.8.9-2+core2.1~BUILD)</code></a> — Core 2 build 1.8.9-2
       - **Depends:** <code>libc6 (&gt;= 2.28)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip6tc-dev (= 1.8.9-2+core2.1~20261020160244)</code></a> — Core 2 build 1.8.9-2
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip6tc2 (= 1.8.9-2+core2.1~20261020160244)</code></a> — Core 2 build 1.8.9-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip6tc-dev (= 1.8.9-2+core2.1~BUILD)</code></a> — Core 2 build 1.8.9-2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libip6tc2 (= 1.8.9-2+core2.1~BUILD)</code></a> — Core 2 build 1.8.9-2
       - **Depends:** <code>libc6 (&gt;= 2.28)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-json-c-0.16-2-core2.1-20261020160448"><code>libjson-c-dev 0.16-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-json-c-0.16-2-core2.1-20261020160448"><code>libjson-c5 (= 0.16-2+core2.1~20261020160448)</code></a> — Core 2 build 0.16-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-json-c-0.16-2-core2.1-20261020160448"><code>libjson-c5 (= 0.16-2+core2.1~BUILD)</code></a> — Core 2 build 0.16-2
     - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libkpathsea-dev 2022.20220321.62855-5.1+deb12u2</code></a>
-  - **Depends:** <code>libkpathsea6 (= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libkpathsea6 (= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrad-dev 1.20.1-2+deb12u5</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrad0 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrad0 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
     - **Depends:** <code>libc6 (&gt;= 2.25)</code> — shared dependency; tree shown above
     - **Depends:** <code>libk5crypto3 (&gt;= 1.20)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkrb5-3 (&gt;= 1.6.dfsg.2)</code> — shared dependency; tree shown above
@@ -2955,14 +2955,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libverto-dev (&gt;= 0.2.4)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkrb5-dev 1.20.1-2+deb12u5</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>krb5-multidev (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
-    - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libk5crypto3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgssapi-krb5-2 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libgssrpc4 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>krb5-multidev (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
+    - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libk5crypto3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgssapi-krb5-2 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libgssrpc4 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgssapi-krb5-2 (&gt;= 1.17)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkadm5srv-mit12 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkadm5srv-mit12 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgssapi-krb5-2 (&gt;= 1.6.dfsg.2)</code> — shared dependency; tree shown above
@@ -2977,7 +2977,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libkrb5support0 (&gt;= 1.15~beta1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libkrb5-3 (&gt;= 1.15~beta1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libkrb5support0 (&gt;= 1.17)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkadm5clnt-mit12 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code></a> — Core 2 build 1.20.1-2+deb12u5
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>libkadm5clnt-mit12 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a> — Core 2 build 1.20.1-2+deb12u5
       - **Depends:** <code>libc6 (&gt;= 2.25)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgssapi-krb5-2 (&gt;= 1.17)</code> — shared dependency; tree shown above
@@ -2988,24 +2988,24 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>comerr-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626"><code>liblz4-dev 1.9.4-1</code></a>
-  - **Depends:** <code>liblz4-1 (= 1.9.4-1+core2.1~20261020161626)</code> — shared dependency; tree shown above
+  - **Depends:** <code>liblz4-1 (= 1.9.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237"><code>libmagic-dev 1:5.44-3</code></a>
-  - **Depends:** <code>libmagic1 (= 1:5.44-3+core2.1~20261012055237)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libmagic1 (= 1:5.44-3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16hdri-dev 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
         - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-        - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16hdri-8 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+        - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16hdri-8 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libmagickcore-6.q16hdri-6 (&gt;= 8:6.9.10.2)</code> — shared dependency; tree shown above
@@ -3014,18 +3014,18 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 3.3.1)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libgomp1 (&gt;= 4.9)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libmagickcore-6.q16hdri-6 (&gt;= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickcore-6.q16hdri-6 (&gt;= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
       - **Depends:** <code>imagemagick-6-common (&gt;= 8:6.9.6.2+dfsg-3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6-arch-config (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6-arch-config (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickcore-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>imagemagick-6-common (&gt;= 8:6.9.6.2+dfsg-3)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libmagickcore-6.q16hdri-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16hdri-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <code>libmagickcore-6.q16hdri-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16hdri-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcairo2 (&gt;= 1.6.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libdjvulibre21 (&gt;= 3.5.28)</code> — shared dependency; tree shown above
@@ -3038,20 +3038,20 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libwmflite-0.2-7 (&gt;= 0.2.12)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-bzip2-1.0.8-5-core2.1-20261012055218"><code>libbz2-dev</code></a> — Core 2 build 1.0.8-5
-      - **Depends:** <code>libbz2-1.0 (= 1.0.8-5+core2.1~20261012055218)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libbz2-1.0 (= 1.0.8-5+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
       - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223"><code>libdjvulibre-dev</code></a> — Core 2 build 3.5.28-2.2~deb12u1
-      - **Depends:** <code>libdjvulibre21 (= 3.5.28-2.2~deb12u1+core2.1~20261012055223)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdjvulibre21 (= 3.5.28-2.2~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libjpeg-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libexif-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-freetype-2.12.1-dfsg-5-deb12u4-core2.1-20261016150739"><code>libfreetype6-dev</code></a> — Core 2 build 2.12.1+dfsg-5+deb12u4
-      - **Depends:** <code>libfreetype-dev (= 2.12.1+dfsg-5+deb12u4+core2.1~20261016150739)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libfreetype-dev (= 2.12.1+dfsg-5+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libjpeg-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019"><code>libopenjp2-7-dev</code></a> — Core 2 build 2.5.0-2+deb12u3
-      - **Depends:** <code>libopenjp2-7 (= 2.5.0-2+deb12u3+core2.1~20261016135019)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libopenjp2-7 (= 2.5.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lcms2-2.14-2-deb12u1-core2.1-20261020160533"><code>liblcms2-dev</code></a> — Core 2 build 2.14-2+deb12u1
-      - **Depends:** <code>liblcms2-2 (= 2.14-2+deb12u1+core2.1~20261020160533)</code> — shared dependency; tree shown above
+      - **Depends:** <code>liblcms2-2 (= 2.14-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>liblqr-1-0-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libltdl-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libopenexr-dev</code> — Debian Bookworm package; not rebuilt here
@@ -3061,49 +3061,49 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
       - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jbigkit-2.1-6.1-core2.1-20261020160309"><code>libjbig-dev</code></a> — Core 2 build 2.1-6.1
-        - **Depends:** <code>libjbig0 (= 2.1-6.1+core2.1~20261020160309)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libjbig0 (= 2.1-6.1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libjpeg-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>liblzma-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libzstd-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208"><code>libwebp-dev</code></a> — Core 2 build 1.2.4-0.2+deb12u1
-        - **Depends:** <code>libwebp7 (= 1.2.4-0.2+deb12u1+core2.1~20261011064208)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libwebpmux3 (= 1.2.4-0.2+deb12u1+core2.1~20261011064208)</code> — shared dependency; tree shown above
-        - **Depends:** <code>libwebpdemux2 (= 1.2.4-0.2+deb12u1+core2.1~20261011064208)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libtiff6 (= 4.5.0-6+deb12u4+core2.1~20261020161933)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tiff-4.5.0-6-deb12u4-core2.1-20261020161933"><code>libtiffxx6 (= 4.5.0-6+deb12u4+core2.1~20261020161933)</code></a> — Core 2 build 4.5.0-6+deb12u4
+        - **Depends:** <code>libwebp7 (= 1.2.4-0.2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libwebpmux3 (= 1.2.4-0.2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libwebpdemux2 (= 1.2.4-0.2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libtiff6 (= 4.5.0-6+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tiff-4.5.0-6-deb12u4-core2.1-20261020161933"><code>libtiffxx6 (= 4.5.0-6+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 4.5.0-6+deb12u4
         - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
         - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libtiff6 (&gt;= 4.0.3)</code> — shared dependency; tree shown above
       - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdeflate-1.14-1-core2.1-20261020160817"><code>libdeflate-dev</code></a> — Core 2 build 1.14-1
-        - **Depends:** <code>libdeflate0 (= 1.14-1+core2.1~20261020160817)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libdeflate0 (= 1.14-1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lerc-4.0.0-ds-2-core2.1-20261020160636"><code>liblerc-dev</code></a> — Core 2 build 4.0.0+ds-2
-        - **Depends:** <code>liblerc4 (= 4.0.0+ds-2+core2.1~20261020160636)</code> — shared dependency; tree shown above
+        - **Depends:** <code>liblerc4 (= 4.0.0+ds-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libwmf-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxml2-2.9.14-dfsg-1.3-deb12u6-core2.1-20261020161513"><code>libxml2-dev</code></a> — Core 2 build 2.9.14+dfsg-1.3~deb12u6
       - **Depends:** <code>libicu-dev</code> — shared dependency; tree shown above
-      - **Depends:** <code>libxml2 (= 2.9.14+dfsg-1.3~deb12u6+core2.1~20261020161513)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libxml2 (= 2.9.14+dfsg-1.3~deb12u6+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxt-dev</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libmagickwand-6.q16hdri-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libmagickcore-6.q16hdri-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libmagickcore-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmagickwand-6.q16hdri-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmagickcore-6.q16hdri-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libmagickcore-6.q16hdri-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-dev 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16-dev</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libmagick++-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16-8 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <code>libmagick++-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagick++-6.q16-8 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16-6 (&gt;= 8:6.9.10.2)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
@@ -3138,15 +3138,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
         - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
         - **Depends:** <code>libgcc-s1 (&gt;= 3.3.1)</code> — Debian Bookworm package; not rebuilt here
         - **Depends:** <code>libgomp1 (&gt;= 4.9)</code> — Debian Bookworm package; not rebuilt here
-        - **Depends:** <code>libmagickcore-6.q16-6 (&gt;= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+        - **Depends:** <code>libmagickcore-6.q16-6 (&gt;= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
         - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
         - **Depends:** <code>imagemagick-6-common (&gt;= 8:6.9.6.2+dfsg-3)</code> — shared dependency; tree shown above
       - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libmagickcore-6-arch-config (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libmagickcore-6.q16-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+      - **Depends:** <code>libmagickcore-6-arch-config (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickcore-6.q16-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-6.q16-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
         - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
         - **Depends:** <code>libcairo2 (&gt;= 1.6.0)</code> — shared dependency; tree shown above
         - **Depends:** <code>libdjvulibre21 (&gt;= 3.5.28)</code> — shared dependency; tree shown above
@@ -3178,27 +3178,27 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libxt-dev</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
       - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libmagickwand-6.q16-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libmagickcore-6.q16-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libmagickcore-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickwand-6-headers (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickwand-6.q16-6 (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickcore-6.q16-6-extra (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libmagickcore-6.q16-dev (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickcore-dev 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libmagickcore-6.q16-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libmagickwand-dev 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libmagickwand-6.q16-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpeg2dec-0.5.1-9-core2.1-20261016145852"><code>libmpeg2-4-dev 0.5.1-9</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpeg2dec-0.5.1-9-core2.1-20261016145852"><code>libmpeg2-4 (= 0.5.1-9+core2.1~20261016145852)</code></a> — Core 2 build 0.5.1-9
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpeg2dec-0.5.1-9-core2.1-20261016145852"><code>libmpeg2-4 (= 0.5.1-9+core2.1~BUILD)</code></a> — Core 2 build 0.5.1-9
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
   - **Depends:** <code>pkg-config</code> — Debian Bookworm package; not rebuilt here
 
@@ -3207,34 +3207,34 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234"><code>libopenmpt-dev 0.6.9-1</code></a>
   - **Depends:** <code>libmpg123-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libogg-dev</code> — shared dependency; tree shown above
-  - **Depends:** <code>libopenmpt0 (= 0.6.9-1+core2.1~20261016143234)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libopenmpt0 (= 0.6.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libvorbis-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>libperl-dev 5.36.0-7+deb12u4</code></a>
-  - **Depends:** <code>perl:any (= 5.36.0-7+deb12u4+core2.1~20261011040002)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libperl5.36 (= 5.36.0-7+deb12u4+core2.1~20261011040002)</code> — shared dependency; tree shown above
+  - **Depends:** <code>perl:any (= 5.36.0-7+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libperl5.36 (= 5.36.0-7+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libplacebo-4.208.0-3-core2.1-20261016142619"><code>libplacebo-dev 4.208.0-3</code></a>
-  - **Depends:** <code>libplacebo208 (= 4.208.0-3+core2.1~20261016142619)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libplacebo208 (= 4.208.0-3+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libepoxy-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>liblcms2-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libvulkan-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-cpp-dev 22.12.0-2+deb12u3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-cpp0v5 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
-    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-cpp0v5 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
+    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
-    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
+    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-glib-dev 22.12.0-2+deb12u3</code></a>
-  - **Depends:** <code>libpoppler-glib8 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>gir1.2-poppler-0.18 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
+  - **Depends:** <code>libpoppler-glib8 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>gir1.2-poppler-0.18 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
     - **Depends:** <code>gir1.2-freedesktop (&gt;= 1.42.0-2~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-glib-2.0 (&gt;= 1.42.0-2~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libpoppler-glib8 (&gt;= 22.08.0)</code> — shared dependency; tree shown above
@@ -3242,11 +3242,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libcairo2-dev (&gt;= 1.10.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-private-dev 22.12.0-2+deb12u3</code></a>
-  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt5-dev 22.12.0-2+deb12u3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt5-1 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
-    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt5-1 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
+    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.32)</code> — shared dependency; tree shown above
     - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>liblcms2-2 (&gt;= 2.2+git20110628)</code> — shared dependency; tree shown above
@@ -3255,35 +3255,35 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends (one alternative):** <code>libqt5gui5-gles (&gt;= 5.14.1)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libqt5xml5 (&gt;= 5.0.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>qtbase5-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt6-dev 22.12.0-2+deb12u3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt6-3 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code></a> — Core 2 build 22.12.0-2+deb12u3
-    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-qt6-3 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a> — Core 2 build 22.12.0-2+deb12u3
+    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.32)</code> — shared dependency; tree shown above
     - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>liblcms2-2 (&gt;= 2.2+git20110628)</code> — shared dependency; tree shown above
     - **Depends:** <code>libqt6core6 (&gt;= 6.4.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libqt6gui6 (&gt;= 6.1.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpoppler-dev (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>qt6-base-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250"><code>libpspell-dev 0.60.8-4</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250"><code>libaspell15 (= 0.60.8-4+core2.1~20261012055250)</code></a> — Core 2 build 0.60.8-4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250"><code>libaspell15 (= 0.60.8-4+core2.1~BUILD)</code></a> — Core 2 build 0.60.8-4
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250"><code>libaspell-dev</code></a> — Core 2 build 0.60.8-4
-    - **Depends:** <code>libaspell15 (= 0.60.8-4+core2.1~20261012055250)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libaspell15 (= 0.60.8-4+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libptexenc-dev 2022.20220321.62855-5.1+deb12u2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libptexenc1 (= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libptexenc1 (= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkpathsea6 (&gt;= 2022.20220321.62855)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11 3.11.2-6+deb12u9</code></a>
-  - **Depends:** <code>libpython3.11-stdlib (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpython3.11-stdlib (= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
   - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
@@ -3339,7 +3339,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libibus-1.0-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libpulse-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libsamplerate0-dev</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libsdl2-2.0-0 (= 2.26.5+dfsg-1+core2.1~20261016134254)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsdl2-2.0-0 (= 2.26.5+dfsg-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libsndio-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libudev-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libwayland-dev</code> — shared dependency; tree shown above
@@ -3354,21 +3354,21 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libxss-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libxt-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxv-2-1.0.11-1.1-core2.1-20261016133515"><code>libxv-dev</code></a> — Core 2 build 2:1.0.11-1.1
-    - **Depends:** <code>libxv1 (= 2:1.0.11-1.1+core2.1~20261016133515)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxv1 (= 2:1.0.11-1.1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libxext-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>x11proto-video-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libxxf86vm-dev</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131"><code>libseccomp-dev 2.5.4-1+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131"><code>libseccomp2 (= 2.5.4-1+deb12u1+core2.1~20261017010131)</code></a> — Core 2 build 2.5.4-1+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131"><code>libseccomp2 (= 2.5.4-1+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 2.5.4-1+deb12u1
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsemanage-3.4-1-core2.1-20261020161025"><code>libsemanage-dev 3.4-1</code></a>
   - **Depends:** <code>libbz2-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libselinux1-dev (&gt;= 3.4)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsemanage-3.4-1-core2.1-20261020161025"><code>libsemanage2 (= 3.4-1+core2.1~20261020161025)</code></a> — Core 2 build 3.4-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsemanage-3.4-1-core2.1-20261020161025"><code>libsemanage-common (&gt;= 3.4-1+core2.1~20261020161025)</code></a> — Core 2 build 3.4-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsemanage-3.4-1-core2.1-20261020161025"><code>libsemanage2 (= 3.4-1+core2.1~BUILD)</code></a> — Core 2 build 3.4-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsemanage-3.4-1-core2.1-20261020161025"><code>libsemanage-common (&gt;= 3.4-1+core2.1~BUILD)</code></a> — Core 2 build 3.4-1
     - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libbz2-1.0</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -3376,42 +3376,42 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsepol-3.4-2.1-core2.1-20261020161145"><code>libsepol2 (&gt;= 3.4)</code></a> — Core 2 build 3.4-2.1
       - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsepol-3.4-2.1-core2.1-20261020161145"><code>libsepol-dev (&gt;= 3.4)</code></a> — Core 2 build 3.4-2.1
-    - **Depends:** <code>libsepol2 (= 3.4-2.1+core2.1~20261020161145)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libsepol2 (= 3.4-2.1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158"><code>libssh2-1-dev 1.10.0-3+deb12u1</code></a>
-  - **Depends:** <code>libssh2-1 (= 1.10.0-3+deb12u1+core2.1~20261012055158)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libssh2-1 (= 1.10.0-3+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openssl-3.0.22-1-deb12u1-core2.1-20261011040326"><code>libssl-dev</code></a> — Core 2 build 3.0.22-1~deb12u1
-    - **Depends:** <code>libssl3 (= 3.0.22-1~deb12u1+core2.1~20261011040326)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libssl3 (= 3.0.22-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1dec-dev 1.4.1+dfsg-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1-dev (= 1.4.1+dfsg-1+core2.1~20261016144712)</code></a> — Core 2 build 1.4.1+dfsg-1
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1dec0 (= 1.4.1+dfsg-1+core2.1~20261016144712)</code></a> — Core 2 build 1.4.1+dfsg-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1-dev (= 1.4.1+dfsg-1+core2.1~BUILD)</code></a> — Core 2 build 1.4.1+dfsg-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1dec0 (= 1.4.1+dfsg-1+core2.1~BUILD)</code></a> — Core 2 build 1.4.1+dfsg-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-svt-av1-1.4.1-dfsg-1-core2.1-20261016144712"><code>libsvtav1enc-dev 1.4.1+dfsg-1</code></a>
-  - **Depends:** <code>libsvtav1-dev (= 1.4.1+dfsg-1+core2.1~20261016144712)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsvtav1enc1 (= 1.4.1+dfsg-1+core2.1~20261016144712)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsvtav1-dev (= 1.4.1+dfsg-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsvtav1enc1 (= 1.4.1+dfsg-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libsynctex-dev 2022.20220321.62855-5.1+deb12u2</code></a>
-  - **Depends:** <code>libsynctex2 (= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsynctex2 (= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexlua53-dev 2022.20220321.62855-5.1+deb12u2</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexlua-dev</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexlua53-5 (= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexlua53-5 (= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexluajit-dev 2022.20220321.62855-5.1+deb12u2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexluajit2 (= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>libtexluajit2 (= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 2022.20220321.62855-5.1+deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.3)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347"><code>libtheora-dev 1.1.1+dfsg.1-16.1+deb12u1</code></a>
   - **Depends:** <code>libogg-dev</code> — shared dependency; tree shown above
-  - **Depends:** <code>libtheora0 (= 1.1.1+dfsg.1-16.1+deb12u1+core2.1~20261016150347)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libtheora0 (= 1.1.1+dfsg.1-16.1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751"><code>libthunarx-3-dev 4.18.4-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751"><code>gir1.2-thunarx-3.0 (= 4.18.4-1+core2.1~20261010054751)</code></a> — Core 2 build 4.18.4-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751"><code>gir1.2-thunarx-3.0 (= 4.18.4-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.4-1
     - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751"><code>libthunarx-3-0 (&gt;= 4.17.6)</code></a> — Core 2 build 4.18.4-1
@@ -3431,47 +3431,47 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libxfconf-0-3 (&gt;= 4.6.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libgtk-3-dev</code> — shared dependency; tree shown above
-  - **Depends:** <code>libthunarx-3-0 (= 4.18.4-1+core2.1~20261010054751)</code> — shared dependency; tree shown above
-  - **Depends:** <code>thunar-data (= 4.18.4-1+core2.1~20261010054751)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libthunarx-3-0 (= 4.18.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>thunar-data (= 4.18.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tiff-4.5.0-6-deb12u4-core2.1-20261020161933"><code>libtiff5-dev 4.5.0-6+deb12u4</code></a>
   - **Depends:** <code>libtiff-dev (&gt;= 4.0.10-1)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>libtumbler-1-dev 4.18.0-1</code></a>
   - **Depends:** <code>libglib2.0-dev</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>libtumbler-1-0 (= 4.18.0-1+core2.1~20261010054511)</code></a> — Core 2 build 4.18.0-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>libtumbler-1-0 (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libglib2.0-0 (&gt;= 2.55.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxfce4util7 (&gt;= 4.17.1~)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libturbojpeg0-dev 1:2.1.5-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libturbojpeg0 (= 1:2.1.5-2+core2.1~20261011153748)</code></a> — Core 2 build 1:2.1.5-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libturbojpeg0 (= 1:2.1.5-2+core2.1~BUILD)</code></a> — Core 2 build 1:2.1.5-2
     - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libunistring-1.0-2-core2.1-20261012093008"><code>libunistring-dev 1.0-2</code></a>
-  - **Depends:** <code>libunistring2 (= 1.0-2+core2.1~20261012093008)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libunistring2 (= 1.0-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745"><code>libva-dev 2.17.0-1</code></a>
-  - **Depends:** <code>libva-drm2 (= 2.17.0-1+core2.1~20261016135745)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745"><code>libva-glx2 (= 2.17.0-1+core2.1~20261016135745)</code></a> — Core 2 build 2.17.0-1
+  - **Depends:** <code>libva-drm2 (= 2.17.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libva-2.17.0-1-core2.1-20261016135745"><code>libva-glx2 (= 2.17.0-1+core2.1~BUILD)</code></a> — Core 2 build 2.17.0-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgl1</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libva-x11-2 (&gt;= 1.0.3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libva2 (&gt;= 2.17.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libva2 (&lt;&lt; 2.17.0.1), libx11-6</code> — shared dependency; tree shown above
-  - **Depends:** <code>libva-wayland2 (= 2.17.0-1+core2.1~20261016135745)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libva-x11-2 (= 2.17.0-1+core2.1~20261016135745)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libva2 (= 2.17.0-1+core2.1~20261016135745)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libva-wayland2 (= 2.17.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libva-x11-2 (= 2.17.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libva2 (= 2.17.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libwayland-dev</code> — shared dependency; tree shown above
   - **Depends:** <code>libset-scalar-perl</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429"><code>libvdpau-dev 1.5-2</code></a>
-  - **Depends:** <code>libvdpau1 (= 1.5-2+core2.1~20261016142429)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvdpau1 (= 1.5-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libx11-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlc-dev 3.0.23-0+deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlc5 (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlc5 (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlccore9 (&gt;= 3.0.23)</code></a> — Core 2 build 3.0.23-0+deb12u1
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -3479,15 +3479,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libidn12 (&gt;= 1.13)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlccore-dev 3.0.23-0+deb12u1</code></a>
-  - **Depends:** <code>libvlccore9 (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvlccore9 (= 3.0.23-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-dev 0.70.6-2~deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>gir1.2-vte-2.91 (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code></a> — Core 2 build 0.70.6-2~deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>gir1.2-vte-2.91 (= 0.70.6-2~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.70.6-2~deb12u1
     - **Depends:** <code>gir1.2-freedesktop (&gt;= 0.9.12)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-3.0 (&gt;= 3.24.22)</code> — shared dependency; tree shown above
     - **Depends:** <code>gir1.2-pango-1.0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-0 (&gt;= 0.69.90)</code></a> — Core 2 build 0.70.6-2~deb12u1
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-common (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code></a> — Core 2 build 0.70.6-2~deb12u1
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-common (= 0.70.6-2~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.70.6-2~deb12u1
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libatk1.0-0 (&gt;= 1.12.4)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -3508,44 +3508,44 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutls28-dev (&gt;= 3.2.7)</code></a> — Core 2 build 3.7.9-2+deb12u7
     - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutls-dane0 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code></a> — Core 2 build 3.7.9-2+deb12u7
-      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutls-dane0 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code></a> — Core 2 build 3.7.9-2+deb12u7
+      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libunbound8 (&gt;= 1.8.0)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutls-openssl27 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code></a> — Core 2 build 3.7.9-2+deb12u7
-      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutls-openssl27 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code></a> — Core 2 build 3.7.9-2+deb12u7
+      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutlsxx30 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code></a> — Core 2 build 3.7.9-2+deb12u7
-      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~20261020155800)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gnutls28-3.7.9-2-deb12u7-core2.1-20261020155800"><code>libgnutlsxx30 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code></a> — Core 2 build 3.7.9-2+deb12u7
+      - **Depends:** <code>libgnutls30 (= 3.7.9-2+deb12u7+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libidn2-2.3.3-1-core2.1-20261012093052"><code>libidn2-dev</code></a> — Core 2 build 2.3.3-1
-      - **Depends:** <code>libidn2-0 (= 2.3.3-1+core2.1~20261012093052)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libidn2-0 (= 2.3.3-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-p11-kit-0.24.1-2-core2.1-20261020161738"><code>libp11-kit-dev</code></a> — Core 2 build 0.24.1-2
-      - **Depends:** <code>libp11-kit0 (= 0.24.1-2+core2.1~20261020161738)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libp11-kit0 (= 0.24.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtasn1-6-4.19.0-2-deb12u1-core2.1-20261020161215"><code>libtasn1-6-dev</code></a> — Core 2 build 4.19.0-2+deb12u1
-      - **Depends:** <code>libtasn1-6 (= 4.19.0-2+deb12u1+core2.1~20261020161215)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libtasn1-6 (= 4.19.0-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nettle-3.8.1-2-core2.1-20261020161715"><code>nettle-dev (&gt;= 3.6)</code></a> — Core 2 build 3.8.1-2
-      - **Depends:** <code>libnettle8 (= 3.8.1-2+core2.1~20261020161715)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libhogweed6 (= 3.8.1-2+core2.1~20261020161715)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libnettle8 (= 3.8.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libhogweed6 (= 3.8.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libgmp-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libgtk-3-dev (&gt;= 3.12.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpango1.0-dev (&gt;= 1.22.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpcre2-dev (&gt;= 10.21)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libvte-2.91-0 (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvte-2.91-0 (= 0.70.6-2~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libvte-2.91-common</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-gtk4-dev 0.70.6-2~deb12u1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>gir1.2-vte-3.91 (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code></a> — Core 2 build 0.70.6-2~deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>gir1.2-vte-3.91 (= 0.70.6-2~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.70.6-2~deb12u1
     - **Depends:** <code>gir1.2-freedesktop (&gt;= 0.9.12)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-graphene-1.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-gtk-4.0</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>gir1.2-pango-1.0 (&gt;= 1.22.0)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049"><code>libvte-2.91-gtk4-0 (&gt;= 0.69.90)</code></a> — Core 2 build 0.70.6-2~deb12u1
-      - **Depends:** <code>libvte-2.91-common (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libvte-2.91-common (= 0.70.6-2~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcairo2 (&gt;= 1.10.0)</code> — shared dependency; tree shown above
       - **Depends:** <code>libfribidi0 (&gt;= 1.0.0)</code> — shared dependency; tree shown above
@@ -3565,45 +3565,45 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libgtk-4-dev</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libpango1.0-dev (&gt;= 1.22.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpcre2-dev (&gt;= 10.21)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libvte-2.91-gtk4-0 (= 0.70.6-2~deb12u1+core2.1~20261020162049)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libvte-2.91-gtk4-0 (= 0.70.6-2~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libvte-2.91-common</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055555"><code>libwim-dev 1.13.6-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055555"><code>libwim15 (= 1.13.6-1+core2.1~20261012055555)</code></a> — Core 2 build 1.13.6-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055555"><code>libwim15 (= 1.13.6-1+core2.1~BUILD)</code></a> — Core 2 build 1.13.6-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libfuse2 (&gt;= 2.8)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libntfs-3g89</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-x264-2-0.164.3095-gitbaee400-3-core2.1-20261016145121"><code>libx264-dev 2:0.164.3095+gitbaee400-3</code></a>
-  - **Depends:** <code>libx264-164 (= 2:0.164.3095+gitbaee400-3+core2.1~20261016145121)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libx264-164 (= 2:0.164.3095+gitbaee400-3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbcommon-x11-dev 1.5.0-1</code></a>
-  - **Depends:** <code>libxkbcommon-x11-0 (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libxkbcommon-dev (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxkbcommon-x11-0 (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxkbcommon-dev (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxcb-1.15-1-core2.1-20261016151016"><code>libxcb-xkb-dev</code></a> — Core 2 build 1.15-1
-    - **Depends:** <code>libxcb-xkb1 (= 1.15-1+core2.1~20261016151016)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libxcb-xkb1 (= 1.15-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxcb1-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbregistry-dev 1.5.0-1</code></a>
-  - **Depends:** <code>libxkbcommon-dev (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbregistry0 (= 1.5.0-1+core2.1~20261020161422)</code></a> — Core 2 build 1.5.0-1
-    - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~20261020161422)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxkbcommon-dev (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxkbcommon-1.5.0-1-core2.1-20261020161422"><code>libxkbregistry0 (= 1.5.0-1+core2.1~BUILD)</code></a> — Core 2 build 1.5.0-1
+    - **Depends:** <code>libxkbcommon0 (= 1.5.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxml2-dev</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libxtables-dev 1.8.9-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libxtables12 (= 1.8.9-2+core2.1~20261020160244)</code></a> — Core 2 build 1.8.9-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libxtables12 (= 1.8.9-2+core2.1~BUILD)</code></a> — Core 2 build 1.8.9-2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xvidcore-2-1.3.7-1-core2.1-20261016150055"><code>libxvidcore-dev 2:1.3.7-1</code></a>
-  - **Depends:** <code>libxvidcore4 (= 2:1.3.7-1+core2.1~20261016150055)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxvidcore4 (= 2:1.3.7-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxvmc-2-1.0.12-2-core2.1-20261016133703"><code>libxvmc-dev 2:1.0.12-2</code></a>
-  - **Depends:** <code>libxvmc1 (= 2:1.0.12-2+core2.1~20261016133703)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxvmc1 (= 2:1.0.12-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libx11-dev (&gt;= 2:1.0.0-1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libxext-dev (&gt;= 1:1.0.0-2)</code> — shared dependency; tree shown above
   - **Depends:** <code>x11proto-dev</code> — Debian Bookworm package; not rebuilt here
@@ -3613,7 +3613,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libkf5config-dev (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libkf5coreaddons-dev (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libkf5xmlgui-dev (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453"><code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~20261012055453)</code></a> — Core 2 build 4:22.12.3-1+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453"><code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 4:22.12.3-1+deb12u1
     - **Depends:** <code>kio</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.33)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkf5archive5 (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
@@ -3648,7 +3648,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>qtbase5-private-dev (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-perl-5.36.0-7-deb12u4-core2.1-20261011040002"><code>perl-debug 5.36.0-7+deb12u4</code></a>
-  - **Depends:** <code>perl (= 5.36.0-7+deb12u4+core2.1~20261011040002)</code> — shared dependency; tree shown above
+  - **Depends:** <code>perl (= 5.36.0-7+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcrypt1 (&gt;= 1:4.1.0)</code> — shared dependency; tree shown above
 
@@ -3657,11 +3657,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>perlmagick 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libimage-magick-perl</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>perl:any</code> — shared dependency; tree shown above
-    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>libimage-magick-q16-perl</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
       - **Pre-Depends:** <code>dpkg (&gt;= 1.17.11)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>perl (&gt;= 5.36.0-7+deb12u4)</code> — shared dependency; tree shown above
@@ -3671,8 +3671,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libperl5.36 (&gt;= 5.36.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>python3-audit 1:3.0.9-1</code></a>
-  - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>python3 (&lt;&lt; 3.12), python3 (&gt;= 3.11~), python3:any, libc6 (&gt;= 2.14)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python-boto-2.49.0-4.1-core2.1-20261012055353"><code>python3-boto 2.49.0-4.1 — Python interface to Amazon's Web Services - Python 3.x</code></a>
@@ -3716,15 +3716,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libjs-underscore</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-examples 3.11.2-6+deb12u9</code></a>
-  - **Depends:** <code>python3.11:any (&gt;= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>python3.11:any (&gt;= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-full 3.11.2-6+deb12u9</code></a>
-  - **Depends:** <code>python3.11 (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>python3.11 (= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>libpython3.11-testsuite</code></a> — Core 2 build 3.11.2-6+deb12u9
-    - **Depends:** <code>python3.11 (&gt;= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+    - **Depends:** <code>python3.11 (&gt;= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>net-tools</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-venv (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code></a> — Core 2 build 3.11.2-6+deb12u9
-    - **Depends:** <code>python3.11 (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-venv (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 3.11.2-6+deb12u9
+    - **Depends:** <code>python3.11 (= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>python3-pip-whl (&gt;= 22.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>python3-setuptools-whl</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>python3.11-distutils</code> — Debian Bookworm package; not rebuilt here
@@ -3740,7 +3740,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>ca-certificates</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835"><code>python3.11-nopie 3.11.2-6+deb12u9</code></a>
-  - **Depends:** <code>python3.11-minimal (= 3.11.2-6+deb12u9+core2.1~20261009153835)</code> — shared dependency; tree shown above
+  - **Depends:** <code>python3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
   - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.2.0)</code> — shared dependency; tree shown above
@@ -3784,7 +3784,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>dpkg (&gt;= 1.19.1)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-bash-5.2.15-2-core2.1-20261009104102"><code>bash-builtins 5.2.15-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-bash-5.2.15-2-core2.1-20261009104102"><code>bash (= 5.2.15-2+core2.1~20261009104102)</code></a> — Core 2 build 5.2.15-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-bash-5.2.15-2-core2.1-20261009104102"><code>bash (= 5.2.15-2+core2.1~BUILD)</code></a> — Core 2 build 5.2.15-2
     - **Pre-Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
     - **Pre-Depends:** <code>libtinfo6 (&gt;= 6)</code> — shared dependency; tree shown above
     - **Depends:** <code>base-files (&gt;= 2.1.12)</code> — Debian Bookworm package; not rebuilt here
@@ -3811,7 +3811,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Pre-Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
       - **Pre-Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
       - **Pre-Depends (one alternative):** <code>debconf-2.0</code> — Debian Bookworm package; not rebuilt here
-      - **Pre-Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111"><code>libpam-modules-bin (= 1.5.2-6+deb12u2+core2.1~20261009193111)</code></a> — Core 2 build 1.5.2-6+deb12u2
+      - **Pre-Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111"><code>libpam-modules-bin (= 1.5.2-6+deb12u2+core2.1~BUILD)</code></a> — Core 2 build 1.5.2-6+deb12u2
         - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
         - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
         - **Depends:** <code>libcrypt1 (&gt;= 1:4.3.0)</code> — shared dependency; tree shown above
@@ -3827,7 +3827,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>lsb-base</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-bzip2-1.0.8-5-core2.1-20261012055218"><code>bzip2 1.0.8-5 — high-quality block-sorting file compressor - utilities</code></a>
-  - **Depends:** <code>libbz2-1.0 (= 1.0.8-5+core2.1~20261012055218)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libbz2-1.0 (= 1.0.8-5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-bzip2-1.0.8-5-core2.1-20261012055218"><code>bzip2-doc 1.0.8-5</code></a>
@@ -3862,10 +3862,10 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code> — shared dependency; tree shown above
   - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libkmod2 (= 30+20221128-1+core2.1~20261009193535)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libkmod2 (= 30+20221128-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>libatk-adaptor 2.46.0-5</code></a>
-  - **Depends:** <code>libatk-bridge2.0-0 (&gt;= 2.46.0-5+core2.1~20261020155253)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libatk-bridge2.0-0 (&gt;= 2.46.0-5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.62)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-glibc-2.36-9-deb12u14-core2.1-20261010052854"><code>libc-devtools 2.36-9+deb12u14</code></a>
@@ -3880,7 +3880,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libnss-mymachines 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcap2 (&gt;= 1:2.10)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-container (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-container (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
     - **Depends:** <code>libacl1 (&gt;= 2.2.23)</code> — shared dependency; tree shown above
     - **Depends:** <code>libbz2-1.0</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -3901,7 +3901,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libseccomp2 (&gt;= 2.3.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
     - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
       - **Depends:** <code>libacl1 (&gt;= 2.2.23)</code> — shared dependency; tree shown above
       - **Depends:** <code>libapparmor1 (&gt;= 2.13)</code> — shared dependency; tree shown above
       - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
@@ -3940,26 +3940,26 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libkmod2 (&gt;= 15)</code> — shared dependency; tree shown above
       - **Depends:** <code>libp11-kit0 (&gt;= 0.23.18.1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libseccomp2 (&gt;= 2.3.1)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libsystemd0 (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libsystemd0 (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>mount</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>default-dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libnss-resolve 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-resolved (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-resolved (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>default-dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libnss-systemd 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcap2 (&gt;= 1:2.10)</code> — shared dependency; tree shown above
-  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apparmor-3.0.8-3-core2.1-20261020155241"><code>libpam-apparmor 3.0.8-3</code></a>
   - **Depends:** <code>libapparmor1 (&gt;= 2.6~devel)</code> — shared dependency; tree shown above
@@ -4018,14 +4018,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-boot 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-boot-efi (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-boot-efi (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-coredump 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>liblz4-1 (&gt;= 0.0~r130)</code> — shared dependency; tree shown above
   - **Depends:** <code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>systemd</code> — shared dependency; tree shown above
 
@@ -4038,24 +4038,24 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libp11-kit0 (&gt;= 0.23.18.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpam0g (&gt;= 1.1.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-userdbd (= 252.39-1~deb12u2+core2.1~20261010025144)</code></a> — Core 2 build 252.39-1~deb12u2
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-userdbd (= 252.39-1~deb12u2+core2.1~BUILD)</code></a> — Core 2 build 252.39-1~deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpam-runtime</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-journal-remote 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcurl4 (&gt;= 7.16.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libmicrohttpd12 (&gt;= 0.9.50)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>systemd</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-oomd 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>systemd</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-standalone-sysusers</code></a> — Core 2 build 252.39-1~deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -4086,17 +4086,17 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libseccomp2 (&gt;= 2.3.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
   - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd0 (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd0 (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libudev1 (&gt;= 247)</code> — shared dependency; tree shown above
   - **Depends:** <code>libzstd1 (&gt;= 1.5.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
-  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>python3</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>systemd-timesyncd 252.39-1~deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libsystemd-shared (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>systemd</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-tar-1.34-dfsg-1.2-deb12u1-core2.1-20261009152714"><code>tar-scripts 1.34+dfsg-1.2+deb12u1</code></a>
@@ -4179,7 +4179,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apparmor-3.0.8-3-core2.1-20261020155241"><code>apparmor-utils 3.0.8-3</code></a>
   - **Depends:** <code>apparmor</code> — shared dependency; tree shown above
-  - **Depends:** <code>python3-apparmor (= 3.0.8-3+core2.1~20261020155241)</code> — shared dependency; tree shown above
+  - **Depends:** <code>python3-apparmor (= 3.0.8-3+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>python3:any</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-apvlv-0.4.0-repack-1-core2.1-20261012055524"><code>apvlv 0.4.0+repack-1 — PDF viewer with Vim-like behaviour</code></a>
@@ -4205,7 +4205,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aspell-0.60.8-4-core2.1-20261012055250"><code>aspell 0.60.8-4 — GNU Aspell spell-checker</code></a>
-  - **Depends:** <code>libaspell15 (= 0.60.8-4+core2.1~20261012055250)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libaspell15 (= 0.60.8-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libncursesw6 (&gt;= 6)</code> — shared dependency; tree shown above
   - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
@@ -4217,9 +4217,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>at-spi2-doc 2.46.0-5</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>atril 1.26.0-2+deb12u4 — MATE document viewer</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>atril-common (&gt;= 1.26.0-2+deb12u4+core2.1~20261012055510)</code></a> — Core 2 build 1.26.0-2+deb12u4
-  - **Depends:** <code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libatrilview3 (= 1.26.0-2+deb12u4+core2.1~20261012055510)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-atril-1.26.0-2-deb12u4-core2.1-20261012055510"><code>atril-common (&gt;= 1.26.0-2+deb12u4+core2.1~BUILD)</code></a> — Core 2 build 1.26.0-2+deb12u4
+  - **Depends:** <code>libatrildocument3 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libatrilview3 (= 1.26.0-2+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>shared-mime-info</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>dconf-gsettings-backend</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>gsettings-backend</code> — Debian Bookworm package; not rebuilt here
@@ -4235,14 +4235,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libxml2 (&gt;= 2.7.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-attr-1-2.5.1-4-core2.1-20261009191027"><code>attr 1:2.5.1-4 — utilities for manipulating filesystem extended attributes</code></a>
-  - **Depends:** <code>libattr1 (= 1:2.5.1-4+core2.1~20261009191027)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libattr1 (= 1:2.5.1-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>audispd-plugins 1:3.0.9-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>auditd (= 1:3.0.9-1+core2.1~20261020155244)</code></a> — Core 2 build 1:3.0.9-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244"><code>auditd (= 1:3.0.9-1+core2.1~BUILD)</code></a> — Core 2 build 1:3.0.9-1
     - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libaudit1 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>mawk</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-gawk-1-5.2.1-2-core2.1-20261009154053"><code>gawk</code></a> — Core 2 build 1:5.2.1-2
       - **Pre-Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -4257,7 +4257,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libgssapi-krb5-2 (&gt;= 1.17)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkrb5-3 (&gt;= 1.6.dfsg.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libwrap0 (&gt;= 7.6-4~)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~20261020155244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcap-ng0 (&gt;= 0.7.9)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgssapi-krb5-2 (&gt;= 1.17)</code> — shared dependency; tree shown above
@@ -4271,18 +4271,18 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-discover 0.8-10+deb12u1</code></a>
   - **Depends:** <code>python3:any</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>python3-avahi (&gt;= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>python3-avahi (&gt;= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
     - **Depends:** <code>python3:any</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>python3-gdbm</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libavahi-common-data (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-common-data (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>python3-dbus</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>python3-dbus</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>python3-gi</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>gir1.2-glib-2.0</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>gir1.2-gtk-3.0</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-daemon (&gt;= 0.8-10+deb12u1+core2.1~20261020155255)</code></a> — Core 2 build 0.8-10+deb12u1
-    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-daemon (&gt;= 0.8-10+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 0.8-10+deb12u1
+    - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libavahi-core7 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcap2 (&gt;= 1:2.10)</code> — shared dependency; tree shown above
     - **Depends:** <code>libdaemon0 (&gt;= 0.14)</code> — Debian Bookworm package; not rebuilt here
@@ -4293,25 +4293,25 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends (one alternative):** <code>dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-dnsconfd 0.8-10+deb12u1</code></a>
-  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libdaemon0 (&gt;= 0.10)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>avahi-daemon (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>avahi-daemon (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-ui-utils 0.8-10+deb12u1</code></a>
-  - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-ui-gtk3-0 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-ui-gtk3-0 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.12.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgtk-3-0 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-avahi-0.8-10-deb12u1-core2.1-20261020155255"><code>avahi-utils 0.8-10+deb12u1</code></a>
-  - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-client3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libavahi-common3 (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgdbm6 (&gt;= 1.16)</code> — shared dependency; tree shown above
-  - **Depends:** <code>avahi-daemon (= 0.8-10+deb12u1+core2.1~20261020155255)</code> — shared dependency; tree shown above
+  - **Depends:** <code>avahi-daemon (= 0.8-10+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-brotli-1.0.9-2-core2.1-20261016150736"><code>brotli 1.0.9-2 — lossless compression algorithm and format (command line utility)</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -4333,7 +4333,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>argyll</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>colord</code></a> — Core 2 build 1.4.6-2.2
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-acl-2.3.1-3-core2.1-20261009190907"><code>acl</code></a> — Core 2 build 2.3.1-3
-      - **Depends:** <code>libacl1 (= 2.3.1-3+core2.1~20261009190907)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libacl1 (= 2.3.1-3+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>adduser</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348"><code>colord-data</code></a> — Core 2 build 1.4.6-2.2
@@ -4364,18 +4364,18 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>liblcms2-2 (&gt;= 2.2+git20110628)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups 2.4.2-3+deb12u9 — Common UNIX Printing System(tm) - PPD/driver support, web interface</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-client (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-client (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
     - **Depends:** <code>adduser</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
-    - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
+    - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-core-drivers (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-daemon (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
+  - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-core-drivers (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-daemon (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
       - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>adduser</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>bc</code> — Debian Bookworm package; not rebuilt here
-      - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>lsb-base</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>procps</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>ssl-cert</code> — Debian Bookworm package; not rebuilt here
@@ -4388,23 +4388,23 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libpaper1</code> — Debian Bookworm package; not rebuilt here
       - **Depends:** <code>libsystemd0</code> — shared dependency; tree shown above
     - **Depends:** <code>cups-filters-core-drivers</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>cups-daemon (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>cups-daemon (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>cups-filters</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-ppdc</code></a> — Core 2 build 2.4.2-3+deb12u9
-    - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+    - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcups2 (&gt;= 2.3~b6)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-server-common (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-server-common (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
   - **Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>debconf-2.0</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>ghostscript</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>poppler-utils</code></a> — Core 2 build 22.12.0-2+deb12u3
-    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~20261012055344)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.12.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
@@ -4419,15 +4419,15 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libusb-1.0-0 (&gt;= 2:1.0.16)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-bsd 2.4.2-3+deb12u9</code></a>
-  - **Depends:** <code>cups-client (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
-  - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>cups-client (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>cups-common (&gt;= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>debconf-2.0</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>cups-ipp-utils 2.4.2-3+deb12u9</code></a>
-  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libavahi-client3 (&gt;= 0.6.16)</code> — shared dependency; tree shown above
   - **Depends:** <code>libavahi-common3 (&gt;= 0.6.16)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.36)</code> — shared dependency; tree shown above
@@ -4442,42 +4442,42 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>db5.3-sql-util 5.3.28+dfsg2-1 — Berkeley v5.3 SQL Database Utilities</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libdb5.3-sql</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>db5.3-util 5.3.28+dfsg2-1</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-1-doc 1.14.10-1~deb12u1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-tests 1.14.10-1~deb12u1</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus</code></a> — Core 2 build 1.14.10-1~deb12u1
     - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code></a> — Core 2 build 1.14.10-1~deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 1.14.10-1~deb12u1
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code></a> — Core 2 build 1.14.10-1~deb12u1
-      - **Depends:** <code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
-      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~20261020155524)</code></a> — Core 2 build 1.14.10-1~deb12u1
+      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 1.14.10-1~deb12u1
+      - **Depends:** <code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+      - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 1.14.10-1~deb12u1
       - **Depends:** <code>libapparmor1 (&gt;= 2.8.94)</code> — shared dependency; tree shown above
       - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libcap-ng0 (&gt;= 0.7.9)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
       - **Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
       - **Depends:** <code>libsystemd0</code> — shared dependency; tree shown above
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-system-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~20261020155524)</code></a> — Core 2 build 1.14.10-1~deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-system-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~BUILD)</code></a> — Core 2 build 1.14.10-1~deb12u1
       - **Depends:** <code>adduser</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
     - **Depends:** <code>libsystemd0</code> — shared dependency; tree shown above
   - **Depends:** <code>libapparmor1 (&gt;= 2.10)</code> — shared dependency; tree shown above
   - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcap-ng0 (&gt;= 0.7.9)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libexpat1 (&gt;= 2.1~beta3)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.37.6)</code> — shared dependency; tree shown above
   - **Depends:** <code>libselinux1 (&gt;= 3.1~)</code> — shared dependency; tree shown above
@@ -4485,14 +4485,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-user-session 1.14.10-1~deb12u1</code></a>
-  - **Depends (one alternative):** <code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+  - **Depends (one alternative):** <code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>dbus-broker</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+  - **Depends:** <code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144"><code>libpam-systemd</code></a> — Core 2 build 252.39-1~deb12u2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcap2 (&gt;= 1:2.10)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpam0g (&gt;= 0.99.7.1)</code> — shared dependency; tree shown above
-    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~20261010025144)</code> — shared dependency; tree shown above
+    - **Depends:** <code>systemd (= 252.39-1~deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libpam-runtime</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>default-dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>dbus-system-bus</code> — Debian Bookworm package; not rebuilt here
@@ -4501,18 +4501,18 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>systemd</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbus-1.14.10-1-deb12u1-core2.1-20261020155524"><code>dbus-x11 1.14.10-1~deb12u1</code></a>
-  - **Depends:** <code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
-  - **Depends:** <code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
-  - **Depends:** <code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+  - **Depends:** <code>dbus-bin (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>dbus-daemon (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>dbus-session-bus-common (&gt;= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~20261020155524)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdbus-1-3 (= 1.14.10-1~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dbview-1.0.4-5-core2.1-20261012055207"><code>dbview 1.0.4-5 — view dBase III files</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>dconf-cli 0.40.0-4 — simple configuration storage system - utilities</code></a>
-  - **Depends:** <code>libdconf1 (= 0.40.0-4+core2.1~20261020155533)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdconf1 (= 0.40.0-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.44.0)</code> — shared dependency; tree shown above
 
@@ -4530,13 +4530,13 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223"><code>djvulibre-bin 3.5.28-2.2~deb12u1</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdjvulibre21 (= 3.5.28-2.2~deb12u1+core2.1~20261012055223)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdjvulibre21 (= 3.5.28-2.2~deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libtiff6 (&gt;= 4.0.3)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528"><code>curl</code></a> — Core 2 build 7.88.1-10+deb12u15
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libcurl4 (= 7.88.1-10+deb12u15+core2.1~20261009190528)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libcurl4 (= 7.88.1-10+deb12u15+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-djvulibre-3.5.28-2.2-deb12u1-core2.1-20261012055223"><code>djvulibre-desktop 3.5.28-2.2~deb12u1</code></a>
@@ -4550,11 +4550,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>e2fsck-static 1.47.0-2</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>e2fsprogs-l10n 1.47.0-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>e2fsprogs (&gt;= 1.47.0-2+core2.1~20261009192320)</code></a> — Core 2 build 1.47.0-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>e2fsprogs (&gt;= 1.47.0-2+core2.1~BUILD)</code></a> — Core 2 build 1.47.0-2
     - **Pre-Depends:** <code>libblkid1 (&gt;= 2.36)</code> — Debian Bookworm package; not rebuilt here
     - **Pre-Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Pre-Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
-    - **Pre-Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>libext2fs2 (= 1.47.0-2+core2.1~20261009192320)</code></a> — Core 2 build 1.47.0-2
+    - **Pre-Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>libext2fs2 (= 1.47.0-2+core2.1~BUILD)</code></a> — Core 2 build 1.47.0-2
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Pre-Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>libss2 (&gt;= 1.38)</code></a> — Core 2 build 1.47.0-2
       - **Depends:** <code>libcom-err2</code> — shared dependency; tree shown above
@@ -4562,17 +4562,17 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Pre-Depends:** <code>libuuid1 (&gt;= 2.16)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320"><code>logsave</code></a> — Core 2 build 1.47.0-2
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>e2fsprogs (&lt;&lt; 1.47.0-2+core2.1~20261009192320+c~)</code> — shared dependency; tree shown above
+  - **Depends:** <code>e2fsprogs (&lt;&lt; 1.47.0-2+core2.1~BUILD+c~)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ebook-tools-0.2.2-6-core2.1-20261012055224"><code>epub-utils 0.2.2-6 — tools to work with the EPUB file format</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libepub0 (= 0.2.2-6+core2.1~20261012055224)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libepub0 (= 0.2.2-6+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>evince 43.1-2+deb12u1 — Document (PostScript, PDF) viewer</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>evince-common (&gt;= 43.1-2+deb12u1+core2.1~20261012055507)</code></a> — Core 2 build 43.1-2+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-evince-43.1-2-deb12u1-core2.1-20261012055507"><code>evince-common (&gt;= 43.1-2+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 43.1-2+deb12u1
   - **Depends:** <code>gsettings-desktop-schemas</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libevdocument3-4 (= 43.1-2+deb12u1+core2.1~20261012055507)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libevview3-3 (= 43.1-2+deb12u1+core2.1~20261012055507)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libevdocument3-4 (= 43.1-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libevview3-3 (= 43.1-2+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>shared-mime-info</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>dconf-gsettings-backend</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>gsettings-backend</code> — Debian Bookworm package; not rebuilt here
@@ -4591,7 +4591,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-expat-2.5.0-1-deb12u4-core2.1-20261016150748"><code>expat 2.5.0-1+deb12u4 — XML parsing C library - example application</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libexpat1 (&gt;= 2.5.0-1+deb12u4+core2.1~20261016150748)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libexpat1 (&gt;= 2.5.0-1+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-feh-3.9.1-2-core2.1-20261020171043"><code>feh 3.9.1-2 — imlib2 based image viewer</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -4605,7 +4605,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-file-1-5.44-3-core2.1-20261012055237"><code>file 1:5.44-3 — Recognize the type of data in a file using "magic" numbers</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libmagic1 (= 1:5.44-3+core2.1~20261012055237)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libmagic1 (= 1:5.44-3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fonts-dejavu-2.37-6-core2.1-20261016150744"><code>fonts-dejavu-web 2.37-6</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fonts-dejavu-2.37-6-core2.1-20261016150744"><code>fonts-dejavu</code></a> — Core 2 build 2.37-6
@@ -4625,12 +4625,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libblkid1 (&gt;= 2.16)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libext2fs2 (= 1.47.0-2+core2.1~20261009192320)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libext2fs2 (= 1.47.0-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libfuse2 (&gt;= 2.8)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libuuid1 (&gt;= 2.16)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gdk-pixbuf-2.42.10-dfsg-1-deb12u4-core2.1-20261020155747"><code>gdk-pixbuf-tests 2.42.10+dfsg-1+deb12u4</code></a>
-  - **Depends:** <code>libgdk-pixbuf-2.0-0 (= 2.42.10+dfsg-1+deb12u4+core2.1~20261020155747)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgdk-pixbuf-2.0-0 (= 2.42.10+dfsg-1+deb12u4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.56.0)</code> — shared dependency; tree shown above
 
@@ -4670,7 +4670,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libepoxy0 (&gt;= 1.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.40.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.59.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgtk-3-0 (= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libharfbuzz0b (&gt;= 2.2.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpango-1.0-0 (&gt;= 1.44.3)</code> — shared dependency; tree shown above
   - **Depends:** <code>libpangocairo-1.0-0 (&gt;= 1.44.0)</code> — shared dependency; tree shown above
@@ -4723,14 +4723,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>imagemagick-common 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>imagemagick-doc 8:6.9.11.60+dfsg-1.6+deb12u13</code></a>
   - **Pre-Depends:** <code>dpkg (&gt;= 1.17.5)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+  - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-imagemagick-8-6.9.11.60-dfsg-1.6-deb12u13-core2.1-20261011064530"><code>imagemagick-6-doc (&gt;&gt; 8:6.9.2.10+dfsg-1)</code></a> — Core 2 build 8:6.9.11.60+dfsg-1.6+deb12u13
     - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~20261011064530)</code> — shared dependency; tree shown above
+    - **Depends:** <code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-iproute2-6.1.0-3-core2.1-20261009193351"><code>iproute2 6.1.0-3 — networking and traffic control tools</code></a>
   - **Depends (one alternative):** <code>debconf (&gt;= 0.5)</code> — Debian Bookworm package; not rebuilt here
@@ -4750,9 +4750,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-iproute2-6.1.0-3-core2.1-20261009193351"><code>iproute2-doc 6.1.0-3</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>iptables 1.8.9-2 — administration tools for packet filtering and NAT</code></a>
-  - **Depends:** <code>libip4tc2 (= 1.8.9-2+core2.1~20261020160244)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libip6tc2 (= 1.8.9-2+core2.1~20261020160244)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libxtables12 (= 1.8.9-2+core2.1~20261020160244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libip4tc2 (= 1.8.9-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libip6tc2 (= 1.8.9-2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libxtables12 (= 1.8.9-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>netbase (&gt;= 6.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libmnl0 (&gt;= 1.0.3-4~)</code> — Debian Bookworm package; not rebuilt here
@@ -4777,7 +4777,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libk5crypto3 (&gt;= 1.18.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkadm5srv-mit12 (&gt;= 1.18.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkdb5-10 (&gt;= 1.20.1)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5support0 (&gt;= 1.13~alpha1+dfsg)</code> — shared dependency; tree shown above
   - **Depends:** <code>libss2 (&gt;= 1.01)</code> — shared dependency; tree shown above
   - **Depends:** <code>libverto1 (&gt;= 0.2.4)</code> — Debian Bookworm package; not rebuilt here
@@ -4791,7 +4791,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libk5crypto3 (&gt;= 1.20)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkadm5srv-mit12 (&gt;= 1.18.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkdb5-10 (&gt;= 1.20.1)</code> — shared dependency; tree shown above
-    - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libkrb5support0 (&gt;= 1.20)</code> — shared dependency; tree shown above
     - **Depends:** <code>libverto1 (&gt;= 0.2.4)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>krb5-config</code> — Debian Bookworm package; not rebuilt here
@@ -4802,7 +4802,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
       - **Depends:** <code>libkadm5clnt-mit12 (&gt;= 1.18.2)</code> — shared dependency; tree shown above
       - **Depends:** <code>libkadm5srv-mit12 (&gt;= 1.18.2)</code> — shared dependency; tree shown above
       - **Depends:** <code>libkdb5-10 (&gt;= 1.20.1)</code> — shared dependency; tree shown above
-      - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+      - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libkrb5support0 (&gt;= 1.17)</code> — shared dependency; tree shown above
       - **Depends:** <code>libss2 (&gt;= 1.01)</code> — shared dependency; tree shown above
     - **Depends:** <code>lsb-base (&gt;= 3.0-6)</code> — Debian Bookworm package; not rebuilt here
@@ -4832,7 +4832,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libkrb5-3 (&gt;= 1.14+dfsg)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5support0 (&gt;= 1.17)</code> — shared dependency; tree shown above
   - **Depends:** <code>libldap-2.5-0 (&gt;= 2.5.4)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+  - **Depends:** <code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>krb5-kpropd 1.20.1-2+deb12u5</code></a>
   - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> — Debian Bookworm package; not rebuilt here
@@ -4844,7 +4844,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libkdb5-10 (&gt;= 1.20.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5-3 (&gt;= 1.16)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5support0 (&gt;= 1.7dfsg~beta2)</code> — shared dependency; tree shown above
-  - **Depends:** <code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+  - **Depends:** <code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>lsb-base</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614"><code>krb5-locales 1.20.1-2+deb12u5</code></a>
@@ -4853,7 +4853,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
   - **Depends:** <code>libk5crypto3 (&gt;= 1.20)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libkrad0 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libkrad0 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5-3 (&gt;= 1.12~alpha1+dfsg-1~)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5support0 (&gt;= 1.11+dfsg)</code> — shared dependency; tree shown above
 
@@ -4861,7 +4861,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.25)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcom-err2 (&gt;= 1.43.9)</code> — shared dependency; tree shown above
   - **Depends:** <code>libk5crypto3 (&gt;= 1.8+dfsg)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~20261020160614)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libkrb5support0 (&gt;= 1.17)</code> — shared dependency; tree shown above
   - **Depends:** <code>libssl3 (&gt;= 3.0.0)</code> — shared dependency; tree shown above
 
@@ -4870,12 +4870,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libtinfo6 (&gt;= 6)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>lib32ncurses6 6.4-4</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>lib32tinfo6 (= 6.4-4+core2.1~20261009185822)</code></a> — Core 2 build 6.4-4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>lib32tinfo6 (= 6.4-4+core2.1~BUILD)</code></a> — Core 2 build 6.4-4
     - **Depends:** <code>libc6-i386 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6-i386 (&gt;= 2.7)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>lib32ncursesw6 6.4-4</code></a>
-  - **Depends:** <code>lib32tinfo6 (= 6.4-4+core2.1~20261009185822)</code> — shared dependency; tree shown above
+  - **Depends:** <code>lib32tinfo6 (= 6.4-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6-i386 (&gt;= 2.7)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-readline-8.2-1.3-core2.1-20261009161033"><code>lib32readline8 8.2-1.3</code></a>
@@ -4893,12 +4893,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-argon2-0-20171227-0.3-deb12u1-core2.1-20261020155240"><code>libargon2-0 0~20171227-0.3+deb12u1</code></a>
-  - **Depends:** <code>libargon2-1 (= 0~20171227-0.3+deb12u1+core2.1~20261020155240)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libargon2-1 (= 0~20171227-0.3+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-at-spi2-core-2.46.0-5-core2.1-20261020155253"><code>libatk1.0-doc 2.46.0-5</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcap-ng-0.8.3-1-core2.1-20261020160633"><code>libcap-ng-utils 0.8.3-1</code></a>
-  - **Depends:** <code>libcap-ng0 (= 0.8.3-1+core2.1~20261020160633)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcap-ng0 (= 0.8.3-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libconfuse-3.3-3-core2.1-20261020160734"><code>libconfuse-doc 3.3-3</code></a>
@@ -4931,12 +4931,12 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-db5.3-5.3.28-dfsg2-1-core2.1-20261020155531"><code>libdb5.3-tcl 5.3.28+dfsg2-1</code></a>
   - **Depends:** <code>tcl (&gt;= 8.6.0-2)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~20261020155531)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdb5.3 (= 5.3.28+dfsg2-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533"><code>libdconf-doc 0.40.0-4</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdeflate-1.14-1-core2.1-20261020160817"><code>libdeflate-tools 1.14-1 — tools for whole-buffer compression and decompression library</code></a>
-  - **Depends:** <code>libdeflate0 (= 1.14-1+core2.1~20261020160817)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libdeflate0 (= 1.14-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939"><code>libfftw3-bin 3.3.10-1 — Library for computing Fast Fourier Transforms - Tools</code></a>
@@ -4998,8 +4998,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libcairo2 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.40.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.57.2)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgtk-3-0 (&gt;= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~20261020155945)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgtk-3-0 (&gt;= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libgtk-3-common (&gt;= 3.24.38-2~deb12u3+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gtk%2B3.0-3.24.38-2-deb12u3-core2.1-20261020155945"><code>libgtk-3-doc 3.24.38-2~deb12u3</code></a>
 
@@ -5017,7 +5017,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libidn2-2.3.3-1-core2.1-20261012093052"><code>libidn2-doc 2.3.3-1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244"><code>libiptc0 1.8.9-2</code></a>
-  - **Depends:** <code>libip4tc2 (= 1.8.9-2+core2.1~20261020160244)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libip4tc2 (= 1.8.9-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libjpeg-turbo-progs 1:2.1.5-2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -5036,21 +5036,21 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626"><code>liblz4-tool 1.9.4-1</code></a>
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626"><code>lz4</code></a> — Core 2 build 1.9.4-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-    - **Depends:** <code>liblz4-1 (= 1.9.4-1+core2.1~20261020161626)</code> — shared dependency; tree shown above
+    - **Depends:** <code>liblz4-1 (= 1.9.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039"><code>libmpfr-doc 4.2.0-1</code></a>
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libncurses5 6.4-4 — shared libraries for terminal handling (legacy version)</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libtinfo5 (= 6.4-4+core2.1~20261009185822)</code></a> — Core 2 build 6.4-4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libtinfo5 (= 6.4-4+core2.1~BUILD)</code></a> — Core 2 build 6.4-4
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libncurses6 6.4-4</code></a>
-  - **Depends:** <code>libtinfo6 (= 6.4-4+core2.1~20261009185822)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libtinfo6 (= 6.4-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>libncursesw5 6.4-4</code></a>
-  - **Depends:** <code>libtinfo5 (= 6.4-4+core2.1~20261009185822)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libtinfo5 (= 6.4-4+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019"><code>libopenjp2-tools 2.5.0-2+deb12u3</code></a>
@@ -5095,7 +5095,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpng1.6-1.6.39-2-deb12u6-core2.1-20261016150951"><code>libpng-tools 1.6.39-2+deb12u6 — PNG library - tools (version 1.6)</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libpng16-16 (= 1.6.39-2+deb12u6+core2.1~20261016150951)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpng16-16 (= 1.6.39-2+deb12u6+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>zlib1g (&gt;= 1:1.2.3.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344"><code>libpoppler-glib-doc 22.12.0-2+deb12u3</code></a>
@@ -5109,8 +5109,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2-pic 2.3.3-3</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2-dev (= 2.3.3-3+core2.1~20261012055155)</code></a> — Core 2 build 2.3.3-3
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2 (= 2.3.3-3+core2.1~20261012055155)</code></a> — Core 2 build 2.3.3-3
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2-dev (= 2.3.3-3+core2.1~BUILD)</code></a> — Core 2 build 2.3.3-3
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2 (= 2.3.3-3+core2.1~BUILD)</code></a> — Core 2 build 2.3.3-3
       - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc6-dev</code> — shared dependency; tree shown above
     - **Depends (one alternative):** <code>libc-dev</code> — Debian Bookworm package; not rebuilt here
@@ -5155,7 +5155,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libtiff6 (&gt;= 4.5.0~rc1)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libjpeg-turbo-1-2.1.5-2-core2.1-20261011153748"><code>libturbojpeg-java 1:2.1.5-2 — Java bindings for the TurboJPEG library</code></a>
-  - **Depends:** <code>libturbojpeg0 (&gt;= 1:2.1.5-2+core2.1~20261011153748)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libturbojpeg0 (&gt;= 1:2.1.5-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvdpau-1.5-2-core2.1-20261016142429"><code>libvdpau-doc 1.5-2</code></a>
 
@@ -5265,7 +5265,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libgpm2 (&gt;= 1.20.7)</code> — shared dependency; tree shown above
   - **Depends:** <code>libslang2 (&gt;= 2.2.4)</code> — shared dependency; tree shown above
   - **Depends:** <code>libssh2-1 (&gt;= 1.2.8)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mc-3-4.8.29-2-core2.1-20261012055147"><code>mc-data (= 3:4.8.29-2+core2.1~20261012055147)</code></a> — Core 2 build 3:4.8.29-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mc-3-4.8.29-2-core2.1-20261012055147"><code>mc-data (= 3:4.8.29-2+core2.1~BUILD)</code></a> — Core 2 build 3:4.8.29-2
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpeg2dec-0.5.1-9-core2.1-20261016145852"><code>mpeg2dec 0.5.1-9 — Simple libmpeg2 video decoder application</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -5346,7 +5346,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-ncurses-6.4-4-core2.1-20261009185822"><code>ncurses-base (&gt;= 6.1+20190713)</code></a> — Core 2 build 6.4-4
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009082328"><code>neovim 0.7.2-7 — heavily refactored vim fork</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009082328"><code>neovim-runtime (= 0.7.2-7+core2.1~20261009082328)</code></a> — Core 2 build 0.7.2-7
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-neovim-0.7.2-7-core2.1-20261009082328"><code>neovim-runtime (= 0.7.2-7+core2.1~BUILD)</code></a> — Core 2 build 0.7.2-7
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends (one alternative):** <code>libluajit-5.1-2 (&gt;= 2.0.4+dfsg)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>libluajit2-5.1-2 (&gt;= 2.1~)</code> — Debian Bookworm package; not rebuilt here
@@ -5362,7 +5362,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgmp10 (&gt;= 2:6.2.1+dfsg1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libhogweed6</code> — shared dependency; tree shown above
-  - **Depends:** <code>libnettle8 (= 3.8.1-2+core2.1~20261020161715)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libnettle8 (= 3.8.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-odt2txt-0.5-7-core2.1-20261012055305"><code>odt2txt 0.5-7 — simple converter from OpenDocument Text to plain text</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -5401,7 +5401,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libkf5widgetsaddons5 (&gt;= 5.77.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libkf5windowsystem5 (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libkf5xmlgui5 (&gt;= 5.80.0)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~20261012055453)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libphonon4qt5-4 (&gt;= 4:4.8.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libpoppler-qt5-1 (&gt;= 22.02.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libqmobipocket2 (&gt;= 4:17.08~)</code> — Debian Bookworm package; not rebuilt here
@@ -5432,7 +5432,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libkf5kiocore5 (&gt;= 5.69.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libkf5parts5 (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libmarkdown2 (&gt;= 2.0.6)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~20261012055453)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libqt5core5a (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>libqt5gui5 (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends (one alternative):** <code>libqt5gui5-gles (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
@@ -5446,7 +5446,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453"><code>okular-mobile 4:22.12.3-1+deb12u1</code></a>
   - **Depends:** <code>qml-module-org-kde-kirigami2 (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>qml-module-org-kde-kquickcontrolsaddons (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453"><code>qml-module-org-kde-okular (= 4:22.12.3-1+deb12u1+core2.1~20261012055453)</code></a> — Core 2 build 4:22.12.3-1+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-okular-4-22.12.3-1-deb12u1-core2.1-20261012055453"><code>qml-module-org-kde-okular (= 4:22.12.3-1+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 4:22.12.3-1+deb12u1
     - **Depends:** <code>qml-module-org-kde-kirigami2 (&gt;= 5.68.0~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>qml-module-qtgraphicaleffects (&gt;= 5.12.0~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>qml-module-qtquick-controls2 (&gt;= 5.12.0~)</code> — Debian Bookworm package; not rebuilt here
@@ -5460,7 +5460,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libkf5service-bin</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libkf5service5 (&gt;= 4.96.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libkf5widgetsaddons5 (&gt;= 4.96.0)</code> — Debian Bookworm package; not rebuilt here
-    - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~20261012055453)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libokular5core10 (= 4:22.12.3-1+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libqt5core5a (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>libqt5gui5 (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
     - **Depends (one alternative):** <code>libqt5gui5-gles (&gt;= 5.15.2~)</code> — Debian Bookworm package; not rebuilt here
@@ -5497,8 +5497,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libstdc++6 (&gt;= 11)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-p11-kit-0.24.1-2-core2.1-20261020161738"><code>p11-kit 0.24.1-2 — p11-glue utilities</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-p11-kit-0.24.1-2-core2.1-20261020161738"><code>p11-kit-modules (&gt;= 0.24.1-2+core2.1~20261020161738)</code></a> — Core 2 build 0.24.1-2
-    - **Depends:** <code>libp11-kit0 (= 0.24.1-2+core2.1~20261020161738)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-p11-kit-0.24.1-2-core2.1-20261020161738"><code>p11-kit-modules (&gt;= 0.24.1-2+core2.1~BUILD)</code></a> — Core 2 build 0.24.1-2
+    - **Depends:** <code>libp11-kit0 (= 0.24.1-2+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libffi8 (&gt;= 3.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libtasn1-6 (&gt;= 4.14)</code> — shared dependency; tree shown above
@@ -5517,9 +5517,9 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libfontconfig1 (&gt;= 2.13.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libglib2.0-0 (&gt;= 2.62.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libharfbuzz0b (&gt;= 2.6.0)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~20261020161751)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpango-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpangocairo-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libpangoft2-1.0-0 (= 1.50.12+ds-1+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-pcre2-10.42-1-deb12u2-core2.1-20261009152649"><code>pcre2-utils 10.42-1+deb12u2</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
@@ -5537,7 +5537,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libtinfo6 (&gt;= 6)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504"><code>qpdfview-djvu-plugin 0.5.0+ds-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504"><code>qpdfview (= 0.5.0+ds-2+core2.1~20261012055504)</code></a> — Core 2 build 0.5.0+ds-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504"><code>qpdfview (= 0.5.0+ds-2+core2.1~BUILD)</code></a> — Core 2 build 0.5.0+ds-2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcups2 (&gt;= 1.4.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
@@ -5573,7 +5573,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libstdc++6 (&gt;= 4.1.1)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504"><code>qpdfview-ps-plugin 0.5.0+ds-2</code></a>
-  - **Depends:** <code>qpdfview (= 0.5.0+ds-2+core2.1~20261012055504)</code> — shared dependency; tree shown above
+  - **Depends:** <code>qpdfview (= 0.5.0+ds-2+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
   - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>libqt5core5a (&gt;= 5.15.1)</code> — Debian Bookworm package; not rebuilt here
@@ -5584,7 +5584,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libstdc++6 (&gt;= 4.1.1)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-qpdfview-0.5.0-ds-2-core2.1-20261012055504"><code>qpdfview-translations 0.5.0+ds-2</code></a>
-  - **Depends:** <code>qpdfview (&gt;= 0.5.0+ds-2+core2.1~20261012055504)</code> — shared dependency; tree shown above
+  - **Depends:** <code>qpdfview (&gt;= 0.5.0+ds-2+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-readline-8.2-1.3-core2.1-20261009161033"><code>readline-doc 8.2-1.3</code></a>
   - **Depends (one alternative):** <code>dpkg (&gt;= 1.15.4)</code> — Debian Bookworm package; not rebuilt here
@@ -5626,7 +5626,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>slsh 2.3.3-3</code></a>
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libslang2 (&gt;= 2.3.0)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2-modules (= 2.3.3-3+core2.1~20261012055155)</code></a> — Core 2 build 2.3.3-3
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155"><code>libslang2-modules (= 2.3.3-3+core2.1~BUILD)</code></a> — Core 2 build 2.3.3-3
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libonig5 (&gt;= 6.8.1)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libpng16-16 (&gt;= 1.6.2-1)</code> — shared dependency; tree shown above
@@ -5689,8 +5689,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216"><code>texlive-binaries 2022.20220321.62855-5.1+deb12u2</code></a>
-  - **Depends:** <code>libptexenc1 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216)</code> — shared dependency; tree shown above
-  - **Depends:** <code>libptexenc1 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216.1~), libkpathsea6 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216), libkpathsea6 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216.1~), libsynctex2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216), libsynctex2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216.1~), libtexlua53-5 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216), libtexlua53-5 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216.1~), libtexluajit2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216), libtexluajit2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~20261012055216.1~), t1utils, tex-common, perl:any, libc6 (&gt;= 2.34), libcairo2 (&gt;= 1.2.4), libfontconfig1 (&gt;= 2.12.6), libfreetype6 (&gt;= 2.3.9), libgcc-s1 (&gt;= 4.0), libgraphite2-3 (&gt;= 1.2.2)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libptexenc1 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libptexenc1 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libkpathsea6 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libkpathsea6 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libsynctex2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libsynctex2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexlua53-5 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexlua53-5 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexluajit2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexluajit2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), t1utils, tex-common, perl:any, libc6 (&gt;= 2.34), libcairo2 (&gt;= 1.2.4), libfontconfig1 (&gt;= 2.12.6), libfreetype6 (&gt;= 2.3.9), libgcc-s1 (&gt;= 4.0), libgraphite2-3 (&gt;= 1.2.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>libharfbuzz0b (&gt;= 2.6.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libicu72 (&gt;= 72.1~rc-1~)</code> — shared dependency; tree shown above
   - **Depends:** <code>libmpfr6 (&gt;= 3.1.3)</code> — shared dependency; tree shown above
@@ -5711,7 +5711,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751"><code>thunar 4.18.4-1 — File Manager for Xfce</code></a>
   - **Depends:** <code>desktop-file-utils</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-exo-4.18.0-1-core2.1-20261010053936"><code>exo-utils</code></a> — Core 2 build 4.18.0-1
-    - **Depends:** <code>libexo-2-0 (= 4.18.0-1+core2.1~20261010053936)</code> — shared dependency; tree shown above
+    - **Depends:** <code>libexo-2-0 (= 4.18.0-1+core2.1~BUILD)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code> — shared dependency; tree shown above
@@ -5720,7 +5720,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libxfce4ui-2-0 (&gt;= 4.15.1)</code> — shared dependency; tree shown above
     - **Depends:** <code>libxfce4util7 (&gt;= 4.17.2)</code> — shared dependency; tree shown above
   - **Depends:** <code>shared-mime-info</code> — shared dependency; tree shown above
-  - **Depends:** <code>thunar-data (= 4.18.4-1+core2.1~20261010054751)</code> — shared dependency; tree shown above
+  - **Depends:** <code>thunar-data (= 4.18.4-1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libatk1.0-0 (&gt;= 1.12.4)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcairo2 (&gt;= 1.14.0)</code> — shared dependency; tree shown above
@@ -5739,7 +5739,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libxfconf-0-3 (&gt;= 4.6.0)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436"><code>tigervnc-scraping-server 1.12.0+dfsg-8</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436"><code>tigervnc-common (= 1.12.0+dfsg-8+core2.1~20261011154436)</code></a> — Core 2 build 1.12.0+dfsg-8
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tigervnc-1.12.0-dfsg-8-core2.1-20261011154436"><code>tigervnc-common (= 1.12.0+dfsg-8+core2.1~BUILD)</code></a> — Core 2 build 1.12.0+dfsg-8
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libstdc++6 (&gt;= 5)</code> — Debian Bookworm package; not rebuilt here
@@ -5765,7 +5765,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>xkb-data</code> — shared dependency; tree shown above
   - **Depends:** <code>x11-xkb-utils</code> — Debian Bookworm package; not rebuilt here
   - **Depends:** <code>xauth</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>tigervnc-common (= 1.12.0+dfsg-8+core2.1~20261011154436)</code> — shared dependency; tree shown above
+  - **Depends:** <code>tigervnc-common (= 1.12.0+dfsg-8+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libaudit1 (&gt;= 1:2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libbsd0 (&gt;= 0.7.0)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.35)</code> — shared dependency; tree shown above
@@ -5818,8 +5818,8 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>tumbler-plugins-extra 4.18.0-1</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>tumbler (= 4.18.0-1+core2.1~20261010054511)</code></a> — Core 2 build 4.18.0-1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>tumbler-common (= 4.18.0-1+core2.1~20261010054511)</code></a> — Core 2 build 4.18.0-1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>tumbler (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511"><code>tumbler-common (= 4.18.0-1+core2.1~BUILD)</code></a> — Core 2 build 4.18.0-1
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libcairo2 (&gt;= 1.2.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
@@ -5875,14 +5875,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libvdpau1</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc 3.0.23-0+deb12u1 — multimedia player and streamer</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-bin (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlc-bin (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-bin (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>libvlc-bin (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
       - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
       - **Depends:** <code>libvlc5 (&gt;= 3.0.23)</code> — shared dependency; tree shown above
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libvlc5 (&gt;= 3.0.23)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-base (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-data (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-base (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-data (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
     - **Depends:** <code>liba52-0.7.4 (&gt;= 0.7.4)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libarchive13 (&gt;= 3.1.2)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libaribb24-0 (&gt;= 1.0.3)</code> — Debian Bookworm package; not rebuilt here
@@ -5975,7 +5975,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libzvbi0 (&gt;= 0.2.35)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>zlib1g (&gt;= 1:1.1.4)</code> — shared dependency; tree shown above
     - **Depends:** <code>vlc-plugin-abi-3-0-0f</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-qt (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-qt (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
     - **Depends:** <code>libc6 (&gt;= 2.29)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgcc-s1 (&gt;= 3.0)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libqt5core5a (&gt;= 5.15.1)</code> — Debian Bookworm package; not rebuilt here
@@ -5989,7 +5989,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
     - **Depends:** <code>libwayland-client0 (&gt;= 1.0.2)</code> — shared dependency; tree shown above
     - **Depends:** <code>libx11-6</code> — shared dependency; tree shown above
     - **Depends:** <code>vlc-plugin-abi-3-0-0f</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-video-output (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code></a> — Core 2 build 3.0.23-0+deb12u1
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-video-output (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a> — Core 2 build 3.0.23-0+deb12u1
     - **Depends:** <code>libaa1 (&gt;= 1.4p5)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libavcodec59 (&gt;= 7:5.0)</code> — shared dependency; tree shown above
     - **Depends:** <code>libavutil57 (&gt;= 7:5.0)</code> — shared dependency; tree shown above
@@ -6057,7 +6057,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852"><code>vlc-plugin-skins2 3.0.23-0+deb12u1</code></a>
   - **Depends:** <code>fonts-freefont-ttf</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>vlc-plugin-qt (= 3.0.23-0+deb12u1+core2.1~20261016151852)</code> — shared dependency; tree shown above
+  - **Depends:** <code>vlc-plugin-qt (= 3.0.23-0+deb12u1+core2.1~BUILD)</code> — shared dependency; tree shown above
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libfreetype6 (&gt;= 2.2.1)</code> — shared dependency; tree shown above
   - **Depends:** <code>libfribidi0 (&gt;= 0.19.2)</code> — shared dependency; tree shown above
@@ -6092,7 +6092,7 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>vlc-plugin-abi-3-0-0f</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311"><code>w3m-img 0.5.3+git20230121-2</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311"><code>w3m (= 0.5.3+git20230121-2+core2.1~20261012055311)</code></a> — Core 2 build 0.5.3+git20230121-2
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-w3m-0.5.3-git20230121-2-core2.1-20261012055311"><code>w3m (= 0.5.3+git20230121-2+core2.1~BUILD)</code></a> — Core 2 build 0.5.3+git20230121-2
     - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
     - **Depends:** <code>libgc1 (&gt;= 1:7.2d)</code> — Debian Bookworm package; not rebuilt here
     - **Depends:** <code>libgpm2 (&gt;= 1.20.7)</code> — shared dependency; tree shown above
@@ -6155,14 +6155,14 @@ Alternatives are marked as choices. Shared dependencies link back to where their
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847"><code>zsh 5.9-4 — shell with lots of features</code></a>
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847"><code>zsh-common (= 5.9-4+core2.1~20261009061847)</code></a> — Core 2 build 5.9-4
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847"><code>zsh-common (= 5.9-4+core2.1~BUILD)</code></a> — Core 2 build 5.9-4
   - **Depends:** <code>libc6 (&gt;= 2.34)</code> — shared dependency; tree shown above
   - **Depends:** <code>libcap2 (&gt;= 1:2.10)</code> — shared dependency; tree shown above
   - **Depends:** <code>libtinfo6 (&gt;= 6)</code> — shared dependency; tree shown above
   - **Depends:** <code>debianutils (&gt;= 5.3-1~)</code> — Debian Bookworm package; not rebuilt here
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847"><code>zsh-doc 5.9-4</code></a>
-  - **Depends:** <code>zsh-common (= 5.9-4+core2.1~20261009061847)</code> — shared dependency; tree shown above
+  - **Depends:** <code>zsh-common (= 5.9-4+core2.1~BUILD)</code> — shared dependency; tree shown above
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zsh-5.9-4-core2.1-20261009061847"><code>zsh-static 5.9-4</code></a>
   - **Depends:** <code>debianutils (&gt;= 5.3-1~)</code> — Debian Bookworm package; not rebuilt here
@@ -6174,11 +6174,11 @@ Alternatives are marked as choices. Shared dependencies link back to where their
 
 - <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcups2-dev 2.4.2-3+deb12u9</code></a>
   - **Depends:** <code>dpkg-dev</code> — Debian Bookworm package; not rebuilt here
-  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
-  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcupsimage2-dev (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcups2-dev (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — dependency cycle
-    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcupsimage2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code></a> — Core 2 build 2.4.2-3+deb12u9
-      - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~20261020155438)</code> — shared dependency; tree shown above
+  - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
+  - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcupsimage2-dev (= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcups2-dev (= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — dependency cycle
+    - **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cups-2.4.2-3-deb12u9-core2.1-20261020155438"><code>libcupsimage2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code></a> — Core 2 build 2.4.2-3+deb12u9
+      - **Depends:** <code>libcups2 (= 2.4.2-3+deb12u9+core2.1~BUILD)</code> — shared dependency; tree shown above
       - **Depends:** <code>libc6 (&gt;= 2.14)</code> — shared dependency; tree shown above
     - **Depends:** <code>libjpeg-dev</code> — shared dependency; tree shown above
     - **Depends:** <code>libpng-dev</code> — shared dependency; tree shown above
