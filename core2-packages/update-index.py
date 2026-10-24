@@ -366,7 +366,7 @@ def build_tree_markdown(nodes):
 
     def display_relation_label(value):
         # Keep package-specific versions readable without repeating the build timestamp.
-        return re.sub(r"(\\+core2\\.\\d+)[.~]\\d{14}", r"\\1~BUILD", str(value or ""))
+        return re.sub(r"(\+core2\.\d+)[.~]\d{14}", r"\1~BUILD", str(value or ""))
 
     def linked_package(name, label):
         url = dependency_url(name)
