@@ -339,6 +339,16 @@ def build_tree_markdown(nodes):
     def display_relation_label(value):
         return re.sub(r"(\+core2\.\d+)[.~]\d{14}", r"\1~BUILD", str(value or ""))
 
+    def package_label(name, node):
+        version = display_version(node.get("version", ""))
+        description = ""
+        if str(node.get("primary_binary") or "").lower() == name:
+            description = str(node.get("release_description") or "").strip()
+        label = f"{name} {version}"
+        if description:
+            label += f" — {description}"
+        return label
+
     def linked_package(name, label):
         safe_label = html.escape(display_relation_label(label), quote=False)
         target = all_by_name.get(name)
