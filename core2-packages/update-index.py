@@ -427,11 +427,15 @@ def build_tree_markdown(nodes):
             node = by_name[name]
             label = package_label(name, node)
             url = dependency_url(name) or str(node.get("release_url") or "")
-            output.append(f"- {linked_package(name, label)}")
+            output.extend([
+                "<details>",
+                f"<summary>{linked_package(name, label)}</summary>",
+                "",
+            ])
             expanded.add(name)
             first_path[name] = name
-            render_dependencies(name, [name], 1)
-            output.append("")
+            render_dependencies(name, [name], 0)
+            output.extend(["", "</details>", ""])
         output.extend(["</details>", ""])
 
     category_names = {}
