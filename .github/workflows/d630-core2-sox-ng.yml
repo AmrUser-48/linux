@@ -64,6 +64,10 @@ on:
           - "4"
         default: "4"
 
+concurrency:
+  group: sox-ng-completion-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   actions: write
   contents: write
@@ -95,10 +99,13 @@ jobs:
       GH_TOKEN: ${{ github.token }}
 
     steps:
-      - name: Checkout package release metadata helper
+      - name: Checkout package scripts from the triggering branch
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: ${{ github.ref }}
+          sparse-checkout: |
+            core2-packages
+          sparse-checkout-cone-mode: true
 
       - name: Install Debian 12 build dependencies and all available codec development libraries
         shell: bash
