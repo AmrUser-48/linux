@@ -409,7 +409,7 @@ jobs:
           assert "**Verified SoX NG dependency path:** <code>sox-ng</code> → <code>libsox-ng5</code> → <code>libebur128-1</code>" in sox_result, "the transitive path must be derived from package control metadata"
           assert "#core2-package-libsox-ng5" in sox_result and "#core2-package-libebur128-1" in sox_result, "Core 2 dependency links should jump to the next package entry"
           assert "libao4 (&gt;= 1.1.0)" in sox_result, "stock Debian dependencies must be shown, not omitted"
-          assert "https://example.invalid/libebur128-release" not in sox_result, "runtime dependency traversal should use internal package anchors"
+          assert "https://example.invalid/libebur128-release" in sox_result, "the package entry should still link to its release page"
           assert installer["PRIMARY"]["libdrm"] == ["libdrm2", "libdrm-intel1"]
           assert "libdrm-amdgpu1|libdrm-radeon1" in package_builder
           assert "Dropping non-Intel GPU package from the D630 libdrm release" in package_builder
