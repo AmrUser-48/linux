@@ -335,24 +335,25 @@ jobs:
               assert all("--kind" not in line for line in install_lines), install_lines
               assert sum("python3 - kmod" in line for line in install_lines) == 1, install_lines
               assert "python3.11_3.11.2-1_amd64.deb" in result
-              assert "python3.11-dev_3.11.2-1_amd64.deb" in result
+              assert "python3.11-dev_3.11.2-1_amd64.deb" not in result, "secondary .deb assets belong on the release page"
               assert "https://github.com/AmrUser-48/linux/releases/tag/test-python" in result, "release page provides build metadata, checksums, and full notes"
               for forbidden in ("python3.11-dbg_", "python3.11-dbgsym_", ".orig.tar.gz", ".dsc"):
                   assert forbidden not in result, f"forbidden asset leaked into index: {forbidden}"
-              assert "**Binary downloads:**" in result
-              assert "Details and historical versions" in result
+              assert "**Main .deb:**" in result
+              assert "All files, checksums and historical builds" in result
               assert "**Runtime binary packages in tree:** 2." in result
               tree_start = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:START -->")
               tree_end = result.index("<!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->")
               tree_result = result[tree_start:tree_end]
               assert "Depends" in tree_result
               assert "libc6 (&gt;= 2.34)" in tree_result
-              assert "Debian Bookworm package; not rebuilt here" in tree_result
+              assert "<em>(Debian Bookworm)</em>" in tree_result
               assert "python3.11-dev" not in tree_result, "development packages must not appear in the runtime tree"
-              assert "https://example.invalid/python-dev.deb" in result, "release index must retain the direct package download"
-              assert "https://example.invalid/python.deb" in result, "release index must retain the direct package download"
+              assert "https://example.invalid/python-dev.deb" not in result, "secondary download should be on the release page"
+              assert "https://example.invalid/python.deb" in result, "primary package download should be linked directly"
               assert "<summary>System &amp; libraries (1 packages)</summary>" in tree_result
-              assert "python3.11-dev" in result and "python3.11" in result and "kmod" in result
+              assert "python3.11" in result and "kmod" in result
+              assert "python3.11-dev" not in result, "download index should not repeat secondary package details"
               assert "3.11.2-1" in result and "30+20221128-1" in result
               assert "libkmod2 (&gt;= 30)" in tree_result, "dependency version constraints must be preserved"
               assert "python3.11_3.11.2-1_amd64.deb" in result, "the package index must retain the actual installable asset"
