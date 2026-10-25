@@ -62,7 +62,7 @@ jobs:
             echo "Upstream archive SHA-256: $UPSTREAM_SHA256"
             echo "Upstream release URL: https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz"
             echo "Target architecture: amd64"
-            echo "CPU target: -march=core2 -mtune=core2"
+            echo "Optimization profiles: generic Debian baseline plus -march=core2 -mtune=core2 variants"
           } > "$GITHUB_WORKSPACE/lame-benchmark-artifacts/UPSTREAM-SOURCE.txt"
           echo "LAME_BASE_VERSION=$BASE_VERSION" >> "$GITHUB_ENV"
           echo "Fetched Debian Bookworm LAME $BASE_VERSION from upstream tarball plus Debian patches."
@@ -176,7 +176,11 @@ jobs:
               echo "Profile: $profile"
               echo "Debian source version: $LAME_BASE_VERSION"
               echo "Built package version: $VARIANT_VERSION"
-              echo "Target: amd64 / Intel Core 2"
+              if [[ "$profile" == "bookworm-default" ]]; then
+                echo "Target: amd64 generic Debian baseline"
+              else
+                echo "Target: amd64 / Intel Core 2 (-march=core2 -mtune=core2)"
+              fi
               echo "Requested appended flags: $CFLAGS_APPEND"
               echo "LAME expopt mode: $expopt"
               echo "LTO linker integration: $lto"
@@ -250,9 +254,9 @@ jobs:
           Built from Debian Bookworm source package lame 3.100-6: upstream lame_3.100.orig.tar.gz
           plus Debian packaging and patches. No upstream Git clone is used. See UPSTREAM-SOURCE.txt.
 
-          All packages target amd64 with -march=core2 -mtune=core2. Each profile is in its own
-          directory and has a distinct Debian package version. Install one profile's entire
-          package set at a time.
+          All packages target amd64. The bookworm-default profile uses Debian's generic default;
+          every core2-* profile uses -march=core2 -mtune=core2. Each profile is in its own directory
+          and has a distinct Debian package version. Install one profile's complete package set at a time.
 
           Benchmark on the D630 itself; GitHub runner timings are not representative of Core 2.
           Use the same WAV and exact encoder options as the previous 5.0x and 5.5x tests.
@@ -291,7 +295,7 @@ jobs:
           RESULTS="$ROOT/RESULTS-$(date +%Y%m%d-%H%M%S).tsv"
           echo -e "profile\tround\tspeed\telapsed_seconds\tstatus" > "$RESULTS"
           for round in $(seq 1 "$RUNS"); do
-            for profile in core2-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
+            for profile in bookworm-default core2-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
               DIR="$ROOT/$profile"
               if [[ ! -d "$DIR" ]] || ! compgen -G "$DIR/*.deb" >/dev/null; then
                 echo "Skipping missing or failed profile: $profile"
