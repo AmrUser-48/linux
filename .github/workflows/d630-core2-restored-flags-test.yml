@@ -1,0 +1,289 @@
+name: Core 2 restored-flags package tests
+run-name: "Core 2 restored-flags tests: FFTW3 and x264"
+
+on:
+  push:
+    paths:
+      - ".github/workflows/d630-core2-restored-flags-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: core2-restored-flags-tests
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: "Build ${{ matrix.package }} restored-flags variant"
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    container:
+      image: debian:12
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        package: [fftw3, x264]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      PACKAGE: ${{ matrix.package }}
+      BUILD_JOBS: "4"
+      DEB_BUILD_OPTIONS: "parallel=4 noautodbgsym"
+      DEB_CFLAGS_MAINT_APPEND: "-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops"
+      DEB_CXXFLAGS_MAINT_APPEND: "-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops"
+      DEB_FFLAGS_MAINT_APPEND: "-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops"
+
+    steps:
+      - name: Install Debian packaging tools and enable Bookworm source repositories
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cat > /etc/apt/sources.list.d/core2-test.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          SOURCES
+          rm -f /etc/apt/sources.list.d/debian.sources
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential devscripts debhelper dpkg-dev fakeroot \
+            ca-certificates file xz-utils zstd jq cmake meson ninja-build \
+            python3 pkg-config quilt
+
+      - name: Verify effective restored-flags profile
+        shell: bash
+        run: |
+          set -euxo pipefail
+          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
+          FFLAGS="$(dpkg-buildflags --get FFLAGS)"
+          printf 'CFLAGS=%s\nCXXFLAGS=%s\nFFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" "$FFLAGS" \
+            | tee "$GITHUB_WORKSPACE/core2-restored-build-flags.txt"
+          for flags in "$CFLAGS" "$CXXFLAGS" "$FFLAGS"; do
+            grep -q -- '-O3' <<<"$flags"
+            grep -q -- '-march=core2' <<<"$flags"
+            grep -q -- '-mtune=core2' <<<"$flags"
+            grep -q -- '-ffast-math' <<<"$flags"
+            grep -q -- '-funroll-loops' <<<"$flags"
+            if grep -q -- '-flto' <<<"$flags"; then
+              echo "::error::LTO must not be enabled in this test."
+              exit 1
+            fi
+          done
+          echo "Confirmed profile: -O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops; no LTO."
+
+      - name: Fetch official Debian source and build dependencies
+        id: source
+        shell: bash
+        run: |
+          set -euxo pipefail
+          apt-get build-dep -y "$PACKAGE"
+          SRCROOT="$GITHUB_WORKSPACE/source-tree"
+          mkdir -p "$SRCROOT" "$GITHUB_WORKSPACE/release-artifacts"
+          cd "$SRCROOT"
+          apt-get source "$PACKAGE"
+          SOURCE_DIR="$(find "$SRCROOT" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
+            echo "::error::Could not find unpacked Debian source for $PACKAGE."
+            exit 1
+          fi
+          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          NEW_VERSION="${ORIGINAL_VERSION}+core2test1~restored.${GITHUB_RUN_ID}"
+          cd "$SOURCE_DIR"
+          dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
+            "Core 2 restored-flags performance test build; no LTO."
+          test "$(dpkg-parsechangelog -S Version)" = "$NEW_VERSION"
+          printf 'package=%s\nsource_version=%s\ntest_version=%s\nsource_dir=%s\n' \
+            "$PACKAGE" "$ORIGINAL_VERSION" "$NEW_VERSION" "$SOURCE_DIR" \
+            >> "$GITHUB_OUTPUT"
+
+      - name: Compile Debian packages as an unprivileged user
+        shell: bash
+        env:
+          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.test_version }}
+          SOURCE_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -euxo pipefail
+          BUILD_USER=core2build
+          id "$BUILD_USER" >/dev/null 2>&1 || useradd --create-home --shell /bin/bash "$BUILD_USER"
+          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
+          cd "$SOURCE_DIR"
+          runuser --preserve-environment --user "$BUILD_USER" -- env \
+            HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
+            dpkg-buildpackage -rfakeroot -us -uc -b -j"$BUILD_JOBS"
+
+          shopt -s nullglob
+          DEBS=("$GITHUB_WORKSPACE"/source-tree/*.deb)
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::Build produced no .deb files for $PACKAGE."
+            exit 1
+          fi
+          ARTIFACTS=()
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            binary_version="$(dpkg-deb -f "$deb" Version)"
+            binary_arch="$(dpkg-deb -f "$deb" Architecture)"
+            case "$binary_package" in
+              *-dev|*-dbg|*-dbgsym|*-doc|*-doc-base)
+                echo "Excluding development/debug/documentation package: $binary_package"
+                continue
+                ;;
+            esac
+            test "$binary_version" = "$PACKAGE_VERSION"
+            case "$binary_arch" in amd64|all) ;; *) echo "::error::Unexpected architecture $binary_arch"; exit 1 ;; esac
+            cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
+            ARTIFACTS+=("$GITHUB_WORKSPACE/release-artifacts/$(basename "$deb")")
+            printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
+          done
+          if (( ${#ARTIFACTS[@]} == 0 )); then
+            echo "::error::No runtime packages remain for $PACKAGE."
+            exit 1
+          fi
+
+          {
+            printf '%s\n' \
+              "Purpose: isolated performance-test artifact; not a production release" \
+              "Source package: $PACKAGE" \
+              "Debian Bookworm source version: $SOURCE_VERSION" \
+              "Test package version: $PACKAGE_VERSION" \
+              "Target: amd64 / Intel Core 2" \
+              "Flags: -O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops" \
+              "LTO: disabled" \
+              "Debian hardening flags: retained"
+            printf '\nEffective dpkg-buildflags output:\n'
+            cat "$GITHUB_WORKSPACE/core2-restored-build-flags.txt"
+            printf '\nIncluded runtime packages:\n'
+            for deb in "$GITHUB_WORKSPACE"/release-artifacts/*.deb; do
+              printf '%s %s\n' "$(dpkg-deb -f "$deb" Package)" "$(basename "$deb")"
+            done
+          } > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
+
+          if [[ "$PACKAGE" == "fftw3" ]]; then
+            cat > "$GITHUB_WORKSPACE/release-artifacts/fftw3-bench.c" <<'C_SOURCE'
+          #define _POSIX_C_SOURCE 200809L
+          #include <fftw3.h>
+          #include <math.h>
+          #include <stdio.h>
+          #include <stdlib.h>
+          #include <time.h>
+
+          int main(void) {
+              const int n = 64;
+              const int reps = 200;
+              const size_t count = (size_t)n * n * n;
+              fftw_complex *in = fftw_malloc(sizeof(*in) * count);
+              fftw_complex *out = fftw_malloc(sizeof(*out) * count);
+              if (!in || !out) {
+                  fprintf(stderr, "FFTW allocation failed\n");
+                  return 2;
+              }
+              fftw_plan plan = fftw_plan_dft_3d(n, n, n, in, out, FFTW_FORWARD, FFTW_MEASURE);
+              if (!plan) {
+                  fprintf(stderr, "FFTW plan creation failed\n");
+                  return 2;
+              }
+              for (size_t i = 0; i < count; ++i) {
+                  in[i][0] = (double)(i % 97) * 0.01;
+                  in[i][1] = (double)(i % 31) * 0.02;
+              }
+              struct timespec start, end;
+              clock_gettime(CLOCK_MONOTONIC, &start);
+              for (int i = 0; i < reps; ++i) fftw_execute(plan);
+              clock_gettime(CLOCK_MONOTONIC, &end);
+              double seconds = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
+              double checksum = 0.0;
+              for (size_t i = 0; i < count; i += 997) checksum += out[i][0] + out[i][1];
+              if (!isfinite(checksum)) {
+                  fprintf(stderr, "Non-finite checksum\n");
+                  return 3;
+              }
+              printf("FFTW3 3D complex transform: %d^3, %d executions, %.6f s, checksum %.12g\n",
+                     n, reps, seconds, checksum);
+              fftw_destroy_plan(plan);
+              fftw_free(in);
+              fftw_free(out);
+              return 0;
+          }
+          C_SOURCE
+            cat > "$GITHUB_WORKSPACE/release-artifacts/BENCHMARK.txt" <<'BENCH'
+          FFTW3 restored-flags test
+          -------------------------
+          The baseline is not rebuilt; this artifact is only the candidate:
+          -O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops. No LTO.
+
+          Install headers if needed:
+            sudo apt-get install libfftw3-dev build-essential
+
+          Extract candidate runtime .debs (from the downloaded artifact directory):
+            mkdir -p /tmp/core2-restored-fftw3
+            for p in ./*.deb; do dpkg-deb -x "$p" /tmp/core2-restored-fftw3; done
+            gcc -O2 -march=core2 -mtune=core2 -o /tmp/fftw3-bench fftw3-bench.c -lfftw3 -lm
+
+          Run each variant 3 times and compare medians:
+            /tmp/fftw3-bench
+            LD_LIBRARY_PATH=/tmp/core2-restored-fftw3/usr/lib/x86_64-linux-gnu /tmp/fftw3-bench
+
+          Use the same executable and machine conditions. The checksum is a sanity signal;
+          elapsed time is the metric. If needed, point LD_LIBRARY_PATH to the directory
+          containing the extracted libfftw3.so.3.
+          BENCH
+          fi
+
+          if [[ "$PACKAGE" == "x264" ]]; then
+            cat > "$GITHUB_WORKSPACE/release-artifacts/BENCHMARK.txt" <<'BENCH'
+          x264 restored-flags test
+          ------------------------
+          Candidate flags: -O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops.
+          No LTO. This is a test artifact, not a production release.
+
+          Extract the .debs privately; do not install them over system packages:
+            mkdir -p /tmp/core2-restored-x264
+            for p in ./*.deb; do dpkg-deb -x "$p" /tmp/core2-restored-x264; done
+
+          Generate fixed input (requires ffmpeg):
+            ffmpeg -f lavfi -i testsrc2=size=640x360:rate=30 -frames:v 300 \
+              -pix_fmt yuv420p -f yuv4mpegpipe -y /tmp/core2-x264-test.y4m
+
+          Run the installed baseline and extracted candidate, each 3 times:
+            /usr/bin/time -f 'baseline seconds=%e' x264 --preset medium --crf 23 --frames 300 --threads 1 -o /tmp/x264-baseline.264 /tmp/core2-x264-test.y4m
+            LD_LIBRARY_PATH=/tmp/core2-restored-x264/usr/lib/x86_64-linux-gnu \
+              /usr/bin/time -f 'candidate seconds=%e' /tmp/core2-restored-x264/usr/bin/x264 \
+              --preset medium --crf 23 --frames 300 --threads 1 -o /tmp/x264-candidate.264 /tmp/core2-x264-test.y4m
+
+          Compare median elapsed time, successful exit, and output size. If the candidate
+          cannot find libx264, set LD_LIBRARY_PATH to the extracted directory containing
+          libx264.so.*.
+          BENCH
+          fi
+
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          find . -maxdepth 1 -type f ! -name "SHA256SUMS-restored-*.txt" -print0 \
+            | sort -z | xargs -0 sha256sum > "SHA256SUMS-restored-$PACKAGE.txt"
+
+      - name: Upload isolated test packages and benchmark instructions
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-restored-flags-${{ matrix.package }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summarize test variant
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### $PACKAGE — restored-flags candidate"
+            echo
+            echo 'Flags: `-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops`'
+            echo "LTO: disabled"
+            echo "Publication: workflow artifact only; no release/index update"
+          } >> "$GITHUB_STEP_SUMMARY"
