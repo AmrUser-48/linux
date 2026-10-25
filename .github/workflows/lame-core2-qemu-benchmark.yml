@@ -19,9 +19,6 @@ jobs:
       image: debian:12
     timeout-minutes: 90
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Install Debian packaging tools, SoX, and QEMU
         shell: bash
         run: |
