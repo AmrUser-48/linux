@@ -132,7 +132,8 @@ jobs:
           PY
             fi
 
-            VARIANT_VERSION="$LAME_BASE_VERSION+core2bench.$profile.1"
+            VERSION_PROFILE="$(echo "$profile" | tr '-' '.')"
+            VARIANT_VERSION="$LAME_BASE_VERSION+core2bench.$VERSION_PROFILE.1"
             DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
               dch --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution \
               "Core 2 LAME benchmark profile $profile; flags: $CFLAGS_APPEND; expopt=$expopt."
