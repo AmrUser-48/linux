@@ -12,7 +12,7 @@ These are the original results recorded for this machine. They are **physical-ma
 |---|---|---:|---:|
 | Debian package, generic | Debian package defaults | 4.0× | Baseline |
 | Build 2 | `-O2 -march=core2 -mtune=core2` | 5.1× | +27.5% |
-| Last build (historical record) | `-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops` | 6.0× | +50.0% |
+| Last build (historical record) | `-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops` | 6.4× | +60.0% |
 
 The 6.0× entry is the historical figure originally recorded here; it should not be read as a result from the CI experiment. A later test of the installed Debian build measured about 5.0×, while a remembered direct-source build measured about 5.5×. Those results need a controlled repeat on the same input and machine before they can be reconciled.
 
