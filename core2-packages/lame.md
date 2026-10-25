@@ -85,61 +85,111 @@ All variants produced an MP3 of **802,480 bytes** for the test sample. The recov
 For reproducibility, use the package artifacts and full logs attached to [workflow run #40207294468](https://github.com/AmrUser-48/linux/actions/runs/40207294468). The test package variants are Debian Bookworm amd64 packages and are intended for the D630-class Core 2 target.
 
 
-# Direct test
-batch
-<details><code>
-```python
+## Physical D630 retest: Debian-generic baseline
+
+This section records the direct test on the physical Dell Latitude D630. Keep it separate from the GitHub-runner and QEMU timings above.
+
+### Baseline identity and isolation
+
+The benchmark baseline is the official Debian Bookworm amd64 package pair, lame and libmp3lame0, both version 3.100-6. The packages are extracted under /tmp/lame-test/baseline; they are not installed over the system packages.
+
+The baseline was verified with ldd: its lame executable resolves libmp3lame.so.0 to /tmp/lame-test/baseline/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0. Running that executable reported LAME version 3.100.
+
+The installed and extracted recovered files were verified byte-for-byte identical:
+
+| File | SHA-256 |
+|---|---|
+| /usr/bin/lame and recovered/usr/bin/lame | ee796af19fde2f6cf2b0ee1a8c2e7b4a60e6545a2e6c444b2913ce161cfdf102 |
+| System and recovered libmp3lame.so.0.0.0 | 84ffde71c30b7b0c5e94569423df1ff0320b95ffbb4bc1b6a377127d913ca78f |
+
+Therefore, system is not an independent build and is excluded from the comparison. The test compares only baseline, recovered, and lto.
+
+### Physical D630 throughput result
+
+Reported real-time encoding factors on the D630:
+
+| Build | Encoding speed | Throughput vs. Debian generic |
+|---|---:|---:|
+| Debian generic baseline | 4.0× real time | Reference |
+| Optimized libmp3lame build | 6.1× real time | **+52.5%** |
+
+The relative throughput gain is (6.1 / 4.0 − 1) × 100 = 52.5%. This is a physical-machine result, not a GitHub-runner or QEMU result.
+
+The mode-specific CBR 320 and V0 wall-clock medians must come from a run made after replacing the old baseline with the Debian generic packages. Earlier timings collected with the previous baseline are intentionally not presented as results from this corrected comparison.
+
+### Re-create the Debian generic baseline
+
+This extracts the official Debian packages without installing them. The subshell keeps set -e from changing the interactive shell's options. The existing baseline is replaced only after both packages have downloaded, their versions have been checked, and extraction has succeeded.
+
+~~~sh
+(
+    set -eu
+
+    mkdir -p /tmp/lame-test/debian-generic-debs
+    cd /tmp/lame-test/debian-generic-debs
+
+    wget -O lame_3.100-6_amd64.deb \
+      https://deb.debian.org/debian/pool/main/l/lame/lame_3.100-6_amd64.deb
+    wget -O libmp3lame0_3.100-6_amd64.deb \
+      https://deb.debian.org/debian/pool/main/l/lame/libmp3lame0_3.100-6_amd64.deb
+
+    test "$(dpkg-deb -f lame_3.100-6_amd64.deb Version)" = "3.100-6"
+    test "$(dpkg-deb -f lame_3.100-6_amd64.deb Architecture)" = "amd64"
+    test "$(dpkg-deb -f libmp3lame0_3.100-6_amd64.deb Version)" = "3.100-6"
+    test "$(dpkg-deb -f libmp3lame0_3.100-6_amd64.deb Architecture)" = "amd64"
+
+    rm -rf /tmp/lame-test/baseline.new
+    mkdir -p /tmp/lame-test/baseline.new
+    dpkg-deb -x lame_3.100-6_amd64.deb /tmp/lame-test/baseline.new
+    dpkg-deb -x libmp3lame0_3.100-6_amd64.deb /tmp/lame-test/baseline.new
+
+    test -x /tmp/lame-test/baseline.new/usr/bin/lame
+    test -e /tmp/lame-test/baseline.new/usr/lib/x86_64-linux-gnu/libmp3lame.so.0
+
+    rm -rf /tmp/lame-test/baseline
+    mv /tmp/lame-test/baseline.new /tmp/lame-test/baseline
+
+    echo "Debian generic baseline prepared."
+)
+~~~
+
+### Reproducible CBR 320 and V0 benchmark
+
+Run the script from the directory containing f.wav. It expects the three extracted package trees at /tmp/lame-test/{baseline,recovered,lto}. Each build is forced to load its own libmp3lame.so.0; ldd verifies the resolved library before timing. Five rotating trials are run for each mode, and medians are compared within that mode.
+
+~~~python
 #!/usr/bin/env python3
 from pathlib import Path
 import os
-import shutil
 import subprocess
 import time
 import statistics
 
 root = Path("/tmp/lame-test")
 wav = Path("f.wav").resolve()
-variants = ["baseline", "recovered", "lto", "system"]
-
-# CBR preserves the original -q0 setting.
-# V0 uses the default algorithm-quality setting, as in "lame -V0".
+variants = ["baseline", "recovered", "lto"]
 modes = {
     "cbr320": ["-q0", "-b320"],
     "v0": ["-V0"],
 }
-
-times = {
-    mode: {variant: [] for variant in variants}
-    for mode in modes
-}
-envs = {}
+trials = 5
+times = {mode: {v: [] for v in variants} for mode in modes}
 executables = {}
-root_resolved = root.resolve()
+envs = {}
 
 if not wav.is_file():
     raise SystemExit(f"Missing input WAV: {wav}")
 
 for v in variants:
+    exe = root / v / "usr/bin/lame"
+    libdir = root / v / "usr/lib/x86_64-linux-gnu"
+
+    if not exe.is_file() or not (libdir / "libmp3lame.so.0").exists():
+        raise SystemExit(f"{v}: executable or libmp3lame.so.0 missing")
+
     env = os.environ.copy()
-
-    if v == "system":
-        found = shutil.which("lame")
-        if not found:
-            raise SystemExit("System lame not found in PATH")
-
-        exe = Path(found).resolve()
-        env.pop("LD_LIBRARY_PATH", None)
-
-        if exe == root_resolved or root_resolved in exe.parents:
-            raise SystemExit(f"System lame resolves inside {root}: {exe}")
-    else:
-        exe = root / v / "usr/bin/lame"
-        libdir = root / v / "usr/lib/x86_64-linux-gnu"
-
-        if not exe.is_file() or not libdir.is_dir():
-            raise SystemExit(f"{v}: executable or library directory missing")
-
-        env["LD_LIBRARY_PATH"] = str(libdir)
+    env.pop("LD_PRELOAD", None)
+    env["LD_LIBRARY_PATH"] = str(libdir)
 
     result = subprocess.run(
         ["ldd", str(exe)],
@@ -147,7 +197,6 @@ for v in variants:
         capture_output=True,
         text=True,
     )
-
     lines = [
         line for line in result.stdout.splitlines()
         if "libmp3lame.so.0" in line and "=>" in line
@@ -163,39 +212,33 @@ for v in variants:
         lines[0].split("=>", 1)[1].strip().split()[0]
     ).resolve()
 
-    if v == "system":
-        if libpath == root_resolved or root_resolved in libpath.parents:
-            raise SystemExit(f"System build loads a test library: {libpath}")
-    elif libpath.parent != libdir.resolve():
+    if libpath.parent != libdir.resolve():
         raise SystemExit(
             f"{v}: library isolation failed.\n"
-            f"Expected: {libdir.resolve()}\n"
-            f"Actual:   {libpath}"
+            f"Expected directory: {libdir.resolve()}\n"
+            f"Actual library: {libpath}"
         )
 
     executables[v] = exe
     envs[v] = env
-
     print(f"{v:9} executable: {exe}")
     print(f"{'':9} library:    {libpath}")
 
 print("\n=== BENCHMARK ===")
 
-for trial in range(1, 5):
-    # Alternate mode order between trials.
+for trial in range(1, trials + 1):
     mode_order = list(modes)
     if trial % 2 == 0:
         mode_order.reverse()
 
     for mode in mode_order:
-        # Each mode gets a rotating variant order.
-        offset = trial - 1
+        mode_index = list(modes).index(mode)
+        offset = (trial - 1 + mode_index) % len(variants)
         order = variants[offset:] + variants[:offset]
 
         for v in order:
             output = root / f"bench-{mode}-{v}-{trial}.mp3"
             output.unlink(missing_ok=True)
-
             command = [
                 str(executables[v]),
                 "-S",
@@ -219,60 +262,22 @@ for trial in range(1, 5):
                     f"{mode}/{v} failed in trial {trial}:\n"
                     f"{result.stderr}"
                 )
-
             if not output.is_file() or output.stat().st_size == 0:
                 raise SystemExit(f"{mode}/{v}: missing or empty MP3")
 
             times[mode][v].append(elapsed)
-            print(
-                f"Trial {trial}: {mode:7} {v:9} "
-                f"{elapsed:.3f} s"
-            )
+            print(f"Trial {trial}: {mode:7} {v:9} {elapsed:.3f} s")
 
 print("\n=== MEDIAN RESULTS ===")
-
 for mode in modes:
     baseline = statistics.median(times[mode]["baseline"])
     print(f"\n[{mode}]")
     print(f"{'Variant':10} {'Median':>10} {'vs baseline':>14}")
 
     for v in variants:
-        med = statistics.median(times[mode][v])
-        change = (baseline / med - 1) * 100
-        print(f"{v:10} {med:9.3f} s {change:+12.1f}%")
+        median = statistics.median(times[mode][v])
+        change = (baseline / median - 1) * 100
+        print(f"{v:10} {median:9.3f} s {change:+12.1f}%")
 
 print(f"\nMP3 outputs: {root}/")
-
-```
-</code></details>
-
-```markdown
-baseline  executable: /tmp/lame-test/baseline/usr/bin/lame
-          library:    /tmp/lame-test/baseline/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
-recovered executable: /tmp/lame-test/recovered/usr/bin/lame
-          library:    /tmp/lame-test/recovered/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
-lto       executable: /tmp/lame-test/lto/usr/bin/lame
-          library:    /tmp/lame-test/lto/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
-system    executable: /usr/bin/lame
-          library:    /usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
-
-
-=== MEDIAN RESULTS ===
-
-[cbr320]
-Variant        Median    vs baseline
-baseline       3.987 s         +0.0%
-recovered      3.226 s        +23.6%
-lto            3.232 s        +23.4%
-system         3.198 s        +24.7%
-
-[v0]
-Variant        Median    vs baseline
-baseline       0.949 s         +0.0%
-recovered      0.912 s         +4.0%
-lto            0.920 s         +3.1%
-system         0.908 s         +4.5%
-
-```
-
-#
+~~~
