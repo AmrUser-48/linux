@@ -160,7 +160,7 @@ jobs:
             echo "BUILD_JOBS=$build_jobs"
             echo "DEB_BUILD_OPTIONS=parallel=$build_jobs noautodbgsym"
           } >> "$GITHUB_ENV"
-          echo "Using conservative system-package optimization profile: $flags"
+          echo "Using compiler optimization profile: $flags"
           echo "Build parallelism: -j$build_jobs"
           # glibc and systemd test suites rely on host/kernel facilities that are
           # unavailable or unreliable in the Debian-in-Docker build container.
