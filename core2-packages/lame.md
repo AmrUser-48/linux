@@ -112,13 +112,17 @@ Reported real-time encoding factors on the D630:
 |---|---:|---:|---|
 | Debian generic baseline | 4.0× real time | Reference | Baseline reported by user |
 | Earlier optimized-build result | 5.4× real time | **+35.0%** | Previously reported result |
-| Latest optimized-build reading | 6.1594× real time | **+54.0%** | Preliminary mid-run reading; not a completed run |
+| Earlier optimized-build result | 5.4× real time | **+35.0%** | Previously reported result |
+| Peak recovered-build reading | 6.4× real time | **+60.0%** | User-reported maximum; not a completed-run median |
+| Earlier mid-run recovered reading | 6.1594× real time | **+54.0%** | Interrupted at 26% progress |
 
-The latest reading came from a direct terminal run of `lame -q0 -b320 f.wav`. LAME reported `play/CPU = 6.1594x` at frame 200 of 767 (26% progress); the run was then interrupted with Ctrl+C. LAME's `play/CPU` field is the ratio of encoded audio playback duration to CPU time consumed. Because the run was stopped before completion, record 6.1594× as an observed mid-run rate, not as the final benchmark result. Against the 4.0× baseline, this snapshot corresponds to (6.1594 / 4.0 − 1) × 100 = **53.99%** greater throughput.
+The 6.4× peak is a user-reported maximum for the recovered build on the physical D630. Relative to the reported 4.0× Debian generic baseline, it corresponds to (6.4 / 4.0 − 1) × 100 = **60.0%** greater throughput. Treat this as a peak observation, not a sustained benchmark result or a measured median.
 
-The command reported for the CPU setting was `sudo wrmsr -a 0x199 0x0b1c`. This writes a requested performance state to IA32_PERF_CTL; it does not by itself verify the active multiplier or actual core voltage. The 5.4× result was previously associated with a reported 10× multiplier and low-voltage setting. Verify actual operating conditions independently and keep them consistent when comparing builds.
+The earlier direct terminal run of `lame -q0 -b320 f.wav` reported `play/CPU = 6.1594x` at frame 200 of 767 (26% progress), then was interrupted with Ctrl+C. LAME's `play/CPU` field is the ratio of encoded audio playback duration to CPU time consumed. That reading is retained as historical mid-run evidence, not as a completed benchmark result.
 
-This is a physical-machine observation, not a GitHub-runner or QEMU result. The mode-specific CBR 320 and V0 wall-clock medians still need a controlled repeat with the corrected Debian generic baseline and a completed encoding run.
+The CPU setting command reported for these tests was `sudo wrmsr -a 0x199 0x0b1c`. This writes a requested performance state to IA32_PERF_CTL; it does not by itself verify the active multiplier or actual core voltage. The 5.4× result was previously associated with a reported 10× multiplier and low-voltage setting. Verify actual operating conditions independently and keep them consistent when comparing builds.
+
+These are physical-machine observations, not GitHub-runner or QEMU results. The mode-specific CBR 320 and V0 wall-clock medians still need a controlled repeat with the corrected Debian generic baseline and completed encoding runs.
 
 ### Re-create the Debian generic baseline
 
