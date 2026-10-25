@@ -1,0 +1,326 @@
+name: Core 2 LAME benchmark variants
+run-name: "Core 2 LAME benchmark variants"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Debian 12 LAME variants for Core 2
+    runs-on: ubuntu-22.04
+    timeout-minutes: 240
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+
+    steps:
+      - name: Prepare Bookworm build environment and fetch Debian source
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main
+          deb-src http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian bookworm-updates main
+          deb-src http://deb.debian.org/debian bookworm-updates main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          deb-src http://deb.debian.org/debian-security bookworm-security main
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends build-essential ca-certificates debhelper devscripts dpkg-dev fakeroot file jq nasm pkg-config quilt xz-utils zstd
+          apt-get build-dep -y lame
+
+          mkdir -p "$GITHUB_WORKSPACE/source-root" "$GITHUB_WORKSPACE/lame-builds" "$GITHUB_WORKSPACE/lame-benchmark-artifacts"
+          cd "$GITHUB_WORKSPACE/source-root"
+          apt-get source lame
+          SOURCE_DIR="$(find . -mindepth 1 -maxdepth 1 -type d -name 'lame-*' -print -quit)"
+          if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" || ! -f "$SOURCE_DIR/configure.in" ]]; then
+            echo "::error::Could not locate unpacked Debian Bookworm LAME source."
+            exit 1
+          fi
+          cp -a "$SOURCE_DIR" "$GITHUB_WORKSPACE/source-template"
+          BASE_VERSION="$(dpkg-parsechangelog -l "$GITHUB_WORKSPACE/source-template/debian/changelog" -S Version)"
+          UPSTREAM_TARBALL="$(find . -maxdepth 1 -type f -name 'lame_*.orig.tar.*' -print -quit)"
+          if [[ -z "$UPSTREAM_TARBALL" ]]; then
+            echo "::error::Debian source download did not contain an upstream orig tarball."
+            exit 1
+          fi
+          UPSTREAM_SHA256="$(sha256sum "$UPSTREAM_TARBALL" | awk '{print $1}')"
+          {
+            echo "Debian source package: lame"
+            echo "Debian Bookworm source version: $BASE_VERSION"
+            echo "Upstream version: 3.100"
+            echo "Source method: apt-get source from Debian Bookworm; upstream orig tarball plus Debian packaging and patches; no upstream Git clone"
+            echo "Upstream archive: $(basename "$UPSTREAM_TARBALL")"
+            echo "Upstream archive SHA-256: $UPSTREAM_SHA256"
+            echo "Upstream release URL: https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz"
+            echo "Target architecture: amd64"
+            echo "CPU target: -march=core2 -mtune=core2"
+          } > "$GITHUB_WORKSPACE/lame-benchmark-artifacts/UPSTREAM-SOURCE.txt"
+          echo "LAME_BASE_VERSION=$BASE_VERSION" >> "$GITHUB_ENV"
+          echo "Fetched Debian Bookworm LAME $BASE_VERSION from upstream tarball plus Debian patches."
+          echo "Upstream archive SHA-256: $UPSTREAM_SHA256"
+
+      - name: Build optimization profiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          TEMPLATE="$GITHUB_WORKSPACE/source-template"
+          WORK_ROOT="$GITHUB_WORKSPACE/lame-builds"
+          ARTIFACT_ROOT="$GITHUB_WORKSPACE/lame-benchmark-artifacts"
+          BUILD_USER=core2lamebuild
+          if ! id "$BUILD_USER" >/dev/null 2>&1; then
+            useradd --create-home --shell /bin/bash "$BUILD_USER"
+          fi
+
+          for profile in bookworm-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
+            echo "::group::Build profile $profile"
+            case "$profile" in
+              bookworm-o2) opt="-O2"; extra=""; expopt="no"; lto="no" ;;
+              core2-o3) opt="-O3"; extra=""; expopt="no"; lto="no" ;;
+              core2-o3-unroll) opt="-O3"; extra="-funroll-loops"; expopt="no"; lto="no" ;;
+              core2-o2-expopt-full) opt="-O2"; extra=""; expopt="full"; lto="no" ;;
+              core2-o3-expopt-norm) opt="-O3"; extra=""; expopt="norm"; lto="no" ;;
+              core2-o3-expopt-full) opt="-O3"; extra=""; expopt="full"; lto="no" ;;
+              core2-o3-lto) opt="-O3"; extra="-flto=auto"; expopt="no"; lto="yes" ;;
+              core2-ofast) opt="-Ofast"; extra=""; expopt="no"; lto="no" ;;
+            esac
+
+            PROFILE_WORK="$WORK_ROOT/$profile"
+            PROFILE_ARTIFACTS="$ARTIFACT_ROOT/$profile"
+            SOURCE_DIR="$PROFILE_WORK/source"
+            mkdir -p "$PROFILE_WORK" "$PROFILE_ARTIFACTS"
+            cp -a "$TEMPLATE" "$SOURCE_DIR"
+            CFLAGS_APPEND="$opt -march=core2 -mtune=core2"
+            if [[ -n "$extra" ]]; then CFLAGS_APPEND="$CFLAGS_APPEND $extra"; fi
+            export DEB_CFLAGS_MAINT_APPEND="$CFLAGS_APPEND"
+            export DEB_CXXFLAGS_MAINT_APPEND="$CFLAGS_APPEND"
+            export DEB_FFLAGS_MAINT_APPEND="$CFLAGS_APPEND"
+            export DEB_BUILD_OPTIONS="parallel=4 noautodbgsym"
+
+            if [[ "$expopt" != "no" ]]; then
+              python3 - "$SOURCE_DIR/debian/rules" "$expopt" <<'PY'
+          from pathlib import Path
+          import sys
+          p = Path(sys.argv[1])
+          level = sys.argv[2]
+          s = p.read_text()
+          needle = "\t\t--with-fileio=sndfile\n"
+          if s.count(needle) != 1:
+              raise SystemExit(f"Expected one Debian LAME configure argument in {p}")
+          replacement = "\t\t--with-fileio=sndfile " + "\\" + "\n" + "\t\t--enable-expopt=" + level + "\n"
+          p.write_text(s.replace(needle, replacement, 1))
+          PY
+            fi
+            if [[ "$lto" == "yes" ]]; then
+              python3 - "$SOURCE_DIR/debian/rules" <<'PY'
+          from pathlib import Path
+          import sys
+          p = Path(sys.argv[1])
+          s = p.read_text()
+          needle = "export DEB_LDFLAGS_MAINT_APPEND = -Wl,--no-undefined"
+          if s.count(needle) != 1:
+              raise SystemExit(f"Expected Debian LAME linker flags in {p}")
+          p.write_text(s.replace(needle, needle + " -flto=auto", 1))
+          PY
+            fi
+
+            VARIANT_VERSION="$LAME_BASE_VERSION+core2bench.$profile.1"
+            DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
+              dch --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution \
+              "Core 2 LAME benchmark profile $profile; flags: $CFLAGS_APPEND; expopt=$expopt."
+            ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+            if [[ "$ACTUAL_VERSION" != "$VARIANT_VERSION" ]]; then
+              echo "::error::Unexpected changelog version $ACTUAL_VERSION"
+              echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
+              echo "::endgroup::"
+              continue
+            fi
+
+            EFFECTIVE_CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+            EFFECTIVE_CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
+            if ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CFLAGS" ||
+               ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CFLAGS" ||
+               ! grep -Fq -- "$opt" <<<"$EFFECTIVE_CFLAGS" ||
+               ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CXXFLAGS" ||
+               ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CXXFLAGS" ||
+               ! grep -Fq -- "$opt" <<<"$EFFECTIVE_CXXFLAGS"; then
+              echo "::error::Effective compiler flags do not contain required optimization and Core 2 target flags."
+              echo "CFLAGS: $EFFECTIVE_CFLAGS"
+              echo "CXXFLAGS: $EFFECTIVE_CXXFLAGS"
+              echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
+              echo "::endgroup::"
+              continue
+            fi
+
+            {
+              echo "Profile: $profile"
+              echo "Debian source version: $LAME_BASE_VERSION"
+              echo "Built package version: $VARIANT_VERSION"
+              echo "Target: amd64 / Intel Core 2"
+              echo "Requested appended flags: $CFLAGS_APPEND"
+              echo "LAME expopt mode: $expopt"
+              echo "LTO linker integration: $lto"
+              echo "Debian hardening: retained"
+              echo "Effective CFLAGS: $EFFECTIVE_CFLAGS"
+              echo "Effective CXXFLAGS: $EFFECTIVE_CXXFLAGS"
+              echo "dpkg-buildflags LDFLAGS before rules append: $(dpkg-buildflags --get LDFLAGS)"
+            } > "$PROFILE_ARTIFACTS/BUILD-INFO.txt"
+
+            chown -R "$BUILD_USER:$BUILD_USER" "$PROFILE_WORK"
+            if runuser --preserve-environment --user "$BUILD_USER" -- env \
+              HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
+              DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
+              dpkg-buildpackage -rfakeroot -us -uc -b -j4 2>&1 | tee "$PROFILE_WORK/build.log"; then
+              echo "Build command succeeded for $profile."
+            else
+              echo "::error::Build failed for profile $profile"
+              cp "$PROFILE_WORK/build.log" "$PROFILE_ARTIFACTS/BUILD-FAILED.log" 2>/dev/null || true
+              echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
+              echo "::endgroup::"
+              continue
+            fi
+
+            deb_count=0
+            profile_ok=yes
+            for deb in "$PROFILE_WORK"/*.deb; do
+              [[ -f "$deb" ]] || continue
+              deb_count=$((deb_count + 1))
+              pkg="$(dpkg-deb -f "$deb" Package)"
+              version="$(dpkg-deb -f "$deb" Version)"
+              arch="$(dpkg-deb -f "$deb" Architecture)"
+              if [[ "$version" != "$VARIANT_VERSION" ]]; then
+                echo "::error::$pkg has version $version, expected $VARIANT_VERSION"
+                profile_ok=no
+              fi
+              case "$arch" in amd64|all) ;; *) echo "::error::Unexpected architecture $arch in $deb"; profile_ok=no ;; esac
+            done
+            if [[ "$deb_count" == "0" ]]; then
+              echo "::error::No .deb packages generated for $profile."
+              profile_ok=no
+            fi
+
+            if [[ "$profile_ok" == "yes" ]]; then
+              cp "$PROFILE_WORK"/*.deb "$PROFILE_ARTIFACTS/"
+              cp "$PROFILE_WORK/build.log" "$PROFILE_ARTIFACTS/build.log"
+              for deb in "$PROFILE_ARTIFACTS"/*.deb; do dpkg-deb -f "$deb" Package Version Architecture; done
+            else
+              rm -f "$PROFILE_ARTIFACTS"/*.deb
+              cp "$PROFILE_WORK/build.log" "$PROFILE_ARTIFACTS/BUILD-FAILED.log" 2>/dev/null || true
+              echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
+            fi
+            echo "::endgroup::"
+          done
+
+          cat > "$ARTIFACT_ROOT/PROFILES.tsv" <<'PROFILES'
+          Profile	Requested optimization	What it tests
+          bookworm-o2	-O2 -march=core2 -mtune=core2	Baseline
+          core2-o3	-O3 -march=core2 -mtune=core2	Higher GCC optimization level
+          core2-o3-unroll	-O3 -funroll-loops plus Core 2 flags	Explicit loop unrolling
+          core2-o2-expopt-full	-O2 plus --enable-expopt=full	LAME full optimization set with O2 last
+          core2-o3-expopt-norm	-O3 plus --enable-expopt=norm	LAME normal optimization set
+          core2-o3-expopt-full	-O3 plus --enable-expopt=full	LAME full optimization set
+          core2-o3-lto	-O3 -flto=auto plus Core 2 flags	Link-time optimization
+          core2-ofast	-Ofast plus Core 2 flags	Fast-math relaxations; encoded output may differ
+          PROFILES
+
+          cat > "$ARTIFACT_ROOT/README-BENCHMARK.txt" <<'README'
+          Debian 12 / Intel Core 2 LAME benchmark packages
+          =================================================
+          Built from Debian Bookworm source package lame 3.100-6: upstream lame_3.100.orig.tar.gz
+          plus Debian packaging and patches. No upstream Git clone is used. See UPSTREAM-SOURCE.txt.
+
+          All packages target amd64 with -march=core2 -mtune=core2. Each profile is in its own
+          directory and has a distinct Debian package version. Install one profile's entire
+          package set at a time.
+
+          Benchmark on the D630 itself; GitHub runner timings are not representative of Core 2.
+          Use the same WAV and exact encoder options as the previous 5.0x and 5.5x tests.
+          Example only:
+            sudo ./benchmark-lame-variants.sh "$HOME/Music/test.wav" -V 2
+          Replace -V 2 with your actual earlier options. The script runs available profiles three
+          times by default (set RUNS=5 for five rounds), saves logs and results TSV, installs each
+          profile with dpkg, and leaves the last tested profile installed. Output MP3s are removed.
+          The expopt variants enable LAME's --enable-expopt=norm/full options; LTO uses -flto=auto.
+          -Ofast relaxes floating-point semantics, so compare audio output/quality as well as speed.
+          README
+
+          cat > "$ARTIFACT_ROOT/benchmark-lame-variants.sh" <<'SCRIPT'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          ROOT="$(cd -- "$(dirname -- "$0")" && pwd -P)"
+          if (( $# < 1 )); then
+            echo "Usage: sudo $0 /absolute/path/to/input.wav [LAME options...]" >&2
+            exit 2
+          fi
+          if [[ "$(id -u)" != "0" ]]; then
+            echo "Run as root, e.g. sudo $0 /path/test.wav -V 2" >&2
+            exit 2
+          fi
+          WAV="$(realpath -- "$1")"
+          shift
+          if [[ ! -f "$WAV" || ! -r "$WAV" ]]; then
+            echo "Input audio file is not readable: $WAV" >&2
+            exit 2
+          fi
+          RUNS=${RUNS:-3}
+          if [[ ! "$RUNS" =~ ^[1-9][0-9]*$ ]]; then
+            echo "RUNS must be a positive integer." >&2
+            exit 2
+          fi
+          RESULTS="$ROOT/RESULTS-$(date +%Y%m%d-%H%M%S).tsv"
+          echo -e "profile\tround\tspeed\telapsed_seconds\tstatus" > "$RESULTS"
+          for round in $(seq 1 "$RUNS"); do
+            for profile in bookworm-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
+              DIR="$ROOT/$profile"
+              if [[ ! -d "$DIR" ]] || ! compgen -G "$DIR/*.deb" >/dev/null; then
+                echo "Skipping missing or failed profile: $profile"
+                continue
+              fi
+              echo
+              echo "=== $profile, round $round/$RUNS ==="
+              dpkg -i "$DIR"/*.deb
+              lame --version | head -n 1
+              OUT="/tmp/lame-bench-$profile-$round-$$.mp3"
+              LOG="$DIR/run-$round.log"
+              START="$(date +%s)"
+              if lame "$@" "$WAV" "$OUT" 2>&1 | tee "$LOG"; then STATUS=ok; else STATUS=failed; fi
+              END="$(date +%s)"
+              ELAPSED=$((END - START))
+              SPEED="$(grep -Eo '[0-9]+([.][0-9]+)?x real-time' "$LOG" | tail -n 1 || true)"
+              if [[ -z "$SPEED" ]]; then SPEED="not-found-see-log"; fi
+              echo -e "$profile\t$round\t$SPEED\t$ELAPSED\t$STATUS" | tee -a "$RESULTS"
+              rm -f -- "$OUT"
+            done
+          done
+          echo "Results table: $RESULTS"
+          cat "$RESULTS"
+          echo "The last available profile remains installed."
+          SCRIPT
+          chmod +x "$ARTIFACT_ROOT/benchmark-lame-variants.sh"
+          bash -n "$ARTIFACT_ROOT/benchmark-lame-variants.sh"
+
+          cd "$ARTIFACT_ROOT"
+          find . -type f -name '*.deb' -print0 | sort -z | xargs -0 -r sha256sum > SHA256SUMS
+          find . -maxdepth 2 -type f \( -name '*.deb' -o -name 'BUILD-INFO.txt' -o -name 'BUILD-FAILED.log' \) -print | sort
+          cat SHA256SUMS
+          if [[ -f "$ARTIFACT_ROOT/FAILED-PROFILES.txt" ]]; then
+            echo "::error::Some LAME profiles failed; see FAILED-PROFILES.txt and profile build logs."
+            exit 1
+          fi
+
+      - name: Upload LAME benchmark packages
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-lame-bookworm-benchmark
+          path: lame-benchmark-artifacts/
+          if-no-files-found: warn
+          retention-days: 30
