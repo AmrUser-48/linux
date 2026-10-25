@@ -247,7 +247,7 @@ jobs:
           Example only:
             sudo ./benchmark-lame-variants.sh "$HOME/Music/test.wav" -V 2
           Replace -V 2 with your actual earlier options. The script runs available profiles three
-          times by default (set RUNS=5 for five rounds), saves logs and results TSV, installs each
+          times by default (use sudo env RUNS=5 ./benchmark-lame-variants.sh ... for five rounds), saves logs and results TSV, installs each
           profile with dpkg, and leaves the last tested profile installed. Output MP3s are removed.
           The expopt variants enable LAME's --enable-expopt=norm/full options; LTO uses -flto=auto.
           -Ofast relaxes floating-point semantics, so compare audio output/quality as well as speed.
@@ -288,7 +288,7 @@ jobs:
               echo
               echo "=== $profile, round $round/$RUNS ==="
               dpkg -i "$DIR"/*.deb
-              lame --version | head -n 1
+              lame --version | sed -n '1p'
               OUT="/tmp/lame-bench-$profile-$round-$$.mp3"
               LOG="$DIR/run-$round.log"
               START="$(date +%s)"
