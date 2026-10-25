@@ -201,6 +201,26 @@ jobs:
             exit 1
           fi
 
+          # Reproduce the LAME-specific experimental profile from the recovered
+          # direct-source build command. Debian's rules already enable NASM;
+          # on x86_64 LAME does not select its legacy 32-bit NASM routines.
+          if [[ "$PACKAGE" == "lame" || "$PACKAGE" == "libmp3lame0" ]]; then
+            python3 - "$SOURCE_DIR/debian/rules" <<'PY'
+          from pathlib import Path
+          import sys
+
+          rules = Path(sys.argv[1])
+          source = rules.read_text()
+          needle = "\t\t--enable-nasm \\\n\t\t--with-fileio=sndfile"
+          replacement = "\t\t--enable-nasm \\\n\t\t--enable-expopt=full \\\n\t\t--with-fileio=sndfile"
+          if source.count(needle) != 1:
+              raise SystemExit(f"Expected exactly one Debian LAME configure block in {rules}; refusing to patch.")
+          rules.write_text(source.replace(needle, replacement, 1))
+          print("Enabled configure option --enable-expopt=full for LAME benchmark.")
+          PY
+            grep -n -- '--enable-expopt=full' "$SOURCE_DIR/debian/rules"
+          fi
+
           # The extracted source tree is sufficient for a binary-only build.
           # Remove downloaded source archive files from the temporary workspace;
           # none are copied into release artifacts.
