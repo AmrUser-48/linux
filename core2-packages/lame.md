@@ -83,3 +83,196 @@ All variants produced an MP3 of **802,480 bytes** for the test sample. The recov
 4. **Do not declare a D630 winner yet.** Install one candidate at a time on the D630, use the identical `-q0 -b320` workload, run repeated trials under comparable CPU/load conditions, and compare medians against the historical 5.0–5.5× results and the original recorded figures above.
 
 For reproducibility, use the package artifacts and full logs attached to [workflow run #40207294468](https://github.com/AmrUser-48/linux/actions/runs/40207294468). The test package variants are Debian Bookworm amd64 packages and are intended for the D630-class Core 2 target.
+
+
+# Direct test
+batch
+<details><code>
+```python
+#!/usr/bin/env python3
+from pathlib import Path
+import os
+import shutil
+import subprocess
+import time
+import statistics
+
+root = Path("/tmp/lame-test")
+wav = Path("f.wav").resolve()
+variants = ["baseline", "recovered", "lto", "system"]
+
+# CBR preserves the original -q0 setting.
+# V0 uses the default algorithm-quality setting, as in "lame -V0".
+modes = {
+    "cbr320": ["-q0", "-b320"],
+    "v0": ["-V0"],
+}
+
+times = {
+    mode: {variant: [] for variant in variants}
+    for mode in modes
+}
+envs = {}
+executables = {}
+root_resolved = root.resolve()
+
+if not wav.is_file():
+    raise SystemExit(f"Missing input WAV: {wav}")
+
+for v in variants:
+    env = os.environ.copy()
+
+    if v == "system":
+        found = shutil.which("lame")
+        if not found:
+            raise SystemExit("System lame not found in PATH")
+
+        exe = Path(found).resolve()
+        env.pop("LD_LIBRARY_PATH", None)
+
+        if exe == root_resolved or root_resolved in exe.parents:
+            raise SystemExit(f"System lame resolves inside {root}: {exe}")
+    else:
+        exe = root / v / "usr/bin/lame"
+        libdir = root / v / "usr/lib/x86_64-linux-gnu"
+
+        if not exe.is_file() or not libdir.is_dir():
+            raise SystemExit(f"{v}: executable or library directory missing")
+
+        env["LD_LIBRARY_PATH"] = str(libdir)
+
+    result = subprocess.run(
+        ["ldd", str(exe)],
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+
+    lines = [
+        line for line in result.stdout.splitlines()
+        if "libmp3lame.so.0" in line and "=>" in line
+    ]
+
+    if result.returncode or len(lines) != 1 or "not found" in lines[0]:
+        raise SystemExit(
+            f"{v}: could not resolve libmp3lame.so.0:\n"
+            f"{result.stdout}\n{result.stderr}"
+        )
+
+    libpath = Path(
+        lines[0].split("=>", 1)[1].strip().split()[0]
+    ).resolve()
+
+    if v == "system":
+        if libpath == root_resolved or root_resolved in libpath.parents:
+            raise SystemExit(f"System build loads a test library: {libpath}")
+    elif libpath.parent != libdir.resolve():
+        raise SystemExit(
+            f"{v}: library isolation failed.\n"
+            f"Expected: {libdir.resolve()}\n"
+            f"Actual:   {libpath}"
+        )
+
+    executables[v] = exe
+    envs[v] = env
+
+    print(f"{v:9} executable: {exe}")
+    print(f"{'':9} library:    {libpath}")
+
+print("\n=== BENCHMARK ===")
+
+for trial in range(1, 5):
+    # Alternate mode order between trials.
+    mode_order = list(modes)
+    if trial % 2 == 0:
+        mode_order.reverse()
+
+    for mode in mode_order:
+        # Each mode gets a rotating variant order.
+        offset = trial - 1
+        order = variants[offset:] + variants[:offset]
+
+        for v in order:
+            output = root / f"bench-{mode}-{v}-{trial}.mp3"
+            output.unlink(missing_ok=True)
+
+            command = [
+                str(executables[v]),
+                "-S",
+                *modes[mode],
+                str(wav),
+                str(output),
+            ]
+
+            start = time.perf_counter()
+            result = subprocess.run(
+                command,
+                env=envs[v],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            elapsed = time.perf_counter() - start
+
+            if result.returncode:
+                raise SystemExit(
+                    f"{mode}/{v} failed in trial {trial}:\n"
+                    f"{result.stderr}"
+                )
+
+            if not output.is_file() or output.stat().st_size == 0:
+                raise SystemExit(f"{mode}/{v}: missing or empty MP3")
+
+            times[mode][v].append(elapsed)
+            print(
+                f"Trial {trial}: {mode:7} {v:9} "
+                f"{elapsed:.3f} s"
+            )
+
+print("\n=== MEDIAN RESULTS ===")
+
+for mode in modes:
+    baseline = statistics.median(times[mode]["baseline"])
+    print(f"\n[{mode}]")
+    print(f"{'Variant':10} {'Median':>10} {'vs baseline':>14}")
+
+    for v in variants:
+        med = statistics.median(times[mode][v])
+        change = (baseline / med - 1) * 100
+        print(f"{v:10} {med:9.3f} s {change:+12.1f}%")
+
+print(f"\nMP3 outputs: {root}/")
+
+```
+</code></details>
+
+```markdown
+baseline  executable: /tmp/lame-test/baseline/usr/bin/lame
+          library:    /tmp/lame-test/baseline/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+recovered executable: /tmp/lame-test/recovered/usr/bin/lame
+          library:    /tmp/lame-test/recovered/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+lto       executable: /tmp/lame-test/lto/usr/bin/lame
+          library:    /tmp/lame-test/lto/usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+system    executable: /usr/bin/lame
+          library:    /usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+
+
+=== MEDIAN RESULTS ===
+
+[cbr320]
+Variant        Median    vs baseline
+baseline       3.987 s         +0.0%
+recovered      3.226 s        +23.6%
+lto            3.232 s        +23.4%
+system         3.198 s        +24.7%
+
+[v0]
+Variant        Median    vs baseline
+baseline       0.949 s         +0.0%
+recovered      0.912 s         +4.0%
+lto            0.920 s         +3.1%
+system         0.908 s         +4.5%
+
+```
+
+#
