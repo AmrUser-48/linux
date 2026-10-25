@@ -1,11 +1,6 @@
 name: LAME Core 2 build and QEMU benchmark
 
 on:
-  push:
-    branches:
-      - test/lame-core2-q0-optimization
-    paths:
-      - .github/workflows/lame-core2-qemu-benchmark.yml
   workflow_dispatch:
 
 permissions:
@@ -237,7 +232,7 @@ jobs:
             cp "$WORK/output/$variant/"*.deb "$GITHUB_WORKSPACE/lame-core2-test-artifacts/$variant/"
             (cd "$GITHUB_WORKSPACE/lame-core2-test-artifacts/$variant" && sha256sum *.deb > SHA256SUMS.txt)
           done
-          (cd "$GITHUB_WORKSPACE/lame-core2-test-artifacts" && find . -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS-all.txt)
+          (cd "$GITHUB_WORKSPACE/lame-core2-test-artifacts" && find . -type f ! -name 'SHA256SUMS-all.txt' -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS-all.txt)
 
       - name: Upload three package variants and benchmark report
         uses: actions/upload-artifact@v4
