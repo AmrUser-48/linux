@@ -1,0 +1,253 @@
+name: LAME Core 2 build and QEMU benchmark
+
+on:
+  push:
+    branches:
+      - test/lame-core2-q0-optimization
+    paths:
+      - .github/workflows/lame-core2-qemu-benchmark.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    name: Build and test three LAME 3.100 profiles
+    runs-on: ubuntu-22.04
+    container:
+      image: debian:12
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Debian packaging tools, SoX, and QEMU
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cat > /etc/apt/sources.list.d/lame-bench.list <<'EOF'
+          deb http://deb.debian.org/debian bookworm main
+          deb-src http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          deb-src http://deb.debian.org/debian-security bookworm-security main
+          EOF
+          apt-get update
+          apt-get install -y --no-install-recommends build-essential ca-certificates \
+            debhelper devscripts dpkg-dev fakeroot qemu-user sox python3 file time
+          apt-get build-dep -y lame
+          qemu-x86_64 -cpu help > /tmp/qemu-cpu-models.txt
+          grep -iE '(^|[[:space:]])Conroe([[:space:]]|$)' /tmp/qemu-cpu-models.txt
+          qemu-x86_64 -cpu Conroe -L / /bin/true
+
+      - name: Fetch Debian Bookworm source
+        shell: bash
+        run: |
+          set -euxo pipefail
+          WORK="$RUNNER_TEMP/lame-core2-bench"
+          mkdir -p "$WORK/source" "$WORK/worktrees" "$WORK/output"
+          cd "$WORK/source"
+          apt-get source lame
+          SOURCE_DIR="$(find "$WORK/source" -mindepth 1 -maxdepth 1 -type d -name 'lame-*' -print -quit)"
+          test -n "$SOURCE_DIR"
+          test -f "$SOURCE_DIR/debian/rules"
+          dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version | tee "$WORK/source-version.txt"
+          echo "LAME_SOURCE_DIR=$SOURCE_DIR" >> "$GITHUB_ENV"
+
+      - name: Build baseline, recovered flags, and LTO variants
+        shell: bash
+        run: |
+          set -euxo pipefail
+          WORK="$RUNNER_TEMP/lame-core2-bench"
+          SOURCE_DIR="$LAME_SOURCE_DIR"
+          ORIGINAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          useradd --create-home --shell /bin/bash core2build
+
+          for variant in baseline recovered lto; do
+            BASE="$WORK/worktrees/$variant"
+            mkdir -p "$BASE" "$WORK/output/$variant"
+            cp -a "$SOURCE_DIR" "$BASE/lame-3.100"
+            TREE="$BASE/lame-3.100"
+
+            case "$variant" in
+              baseline)
+                OPT_FLAGS="-O2 -march=core2 -mtune=core2"
+                ENABLE_EXPOPT=no
+                ;;
+              recovered)
+                OPT_FLAGS="-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops"
+                ENABLE_EXPOPT=full
+                ;;
+              lto)
+                OPT_FLAGS="-O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops -flto"
+                ENABLE_EXPOPT=full
+                ;;
+            esac
+
+            if [[ "$ENABLE_EXPOPT" == "full" ]]; then
+              python3 - "$TREE/debian/rules" <<'PY'
+          from pathlib import Path
+          import sys
+          path = Path(sys.argv[1])
+          source = path.read_text()
+          needle = "\t\t--enable-nasm \\\n\t\t--with-fileio=sndfile"
+          replacement = "\t\t--enable-nasm \\\n\t\t--enable-expopt=full \\\n\t\t--with-fileio=sndfile"
+          if source.count(needle) != 1:
+              raise SystemExit(f"Expected one LAME configure block in {path}; refusing to patch.")
+          path.write_text(source.replace(needle, replacement, 1))
+          PY
+            fi
+
+            NEW_VERSION="$ORIGINAL_VERSION+core2test1~$variant"
+            export DEBFULLNAME="LAME Core2 Benchmark"
+            export DEBEMAIL="benchmark@example.invalid"
+            (cd "$TREE" && dch --newversion "$NEW_VERSION" --distribution bookworm --force-distribution \
+              "Benchmark LAME optimization profile $variant for Intel Core 2.")
+
+            export DEB_CFLAGS_MAINT_APPEND="$OPT_FLAGS"
+            export DEB_CXXFLAGS_MAINT_APPEND="$OPT_FLAGS"
+            export DEB_FFLAGS_MAINT_APPEND="$OPT_FLAGS"
+            if [[ "$variant" == "lto" ]]; then
+              export DEB_LDFLAGS_MAINT_APPEND="-flto"
+            else
+              unset DEB_LDFLAGS_MAINT_APPEND || true
+            fi
+            export DEB_BUILD_OPTIONS="parallel=4 noautodbgsym"
+
+            chown -R core2build:core2build "$BASE"
+            (cd "$TREE" && runuser --preserve-environment --user core2build -- env \
+              HOME=/home/core2build USER=core2build LOGNAME=core2build \
+              dpkg-buildpackage -rfakeroot -us -uc -b -j4)
+
+            if ! compgen -G "$BASE/*.deb" >/dev/null; then
+              echo "No package output for variant $variant" >&2
+              exit 1
+            fi
+            for deb in "$BASE"/*.deb; do
+              cp "$deb" "$WORK/output/$variant/"
+              dpkg-deb -f "$deb" Package Version Architecture
+            done
+          done
+
+          {
+            echo "Source: Debian Bookworm LAME $ORIGINAL_VERSION"
+            echo "Target: x86_64, -march=core2 -mtune=core2"
+            echo
+            echo "| Variant | Compiler flags appended | LAME configure profile |"
+            echo "|---|---|---|"
+            echo "| baseline | -O2 -march=core2 -mtune=core2 | Debian default |"
+            echo "| recovered | -O3 -march=core2 -mtune=core2 -ffast-math -funroll-loops | --enable-expopt=full |"
+            echo "| lto | recovered flags plus -flto | --enable-expopt=full and LTO |"
+            echo
+            echo "Debian hardening flags remain enabled. NASM remains as in Debian rules; its legacy assembly routines do not apply to x86_64."
+          } > "$WORK/output/BUILD-MATRIX.md"
+
+      - name: Create benchmark sample matching the D630 test
+        shell: bash
+        run: |
+          set -euxo pipefail
+          WORK="$RUNNER_TEMP/lame-core2-bench"
+          sox -r44100 -c2 -n "$WORK/benchmark.wav" synth -n 20 pi
+          soxi "$WORK/benchmark.wav" | tee "$WORK/audio-input.txt"
+
+      - name: Test on native host and under QEMU Conroe
+        shell: bash
+        run: |
+          set -euo pipefail
+          WORK="$RUNNER_TEMP/lame-core2-bench"
+          ROOTS="$WORK/roots"
+          mkdir -p "$ROOTS" "$WORK/results"
+          REPORT="$WORK/results/benchmark.csv"
+          printf 'mode,variant,trial,elapsed_seconds,realtime_factor,mp3_bytes\n' > "$REPORT"
+
+          for variant in baseline recovered lto; do
+            ROOT="$ROOTS/$variant"
+            mkdir -p "$ROOT"
+            for deb in "$WORK/output/$variant"/*.deb; do
+              package="$(dpkg-deb -f "$deb" Package)"
+              case "$package" in
+                lame|libmp3lame0) dpkg-deb -x "$deb" "$ROOT" ;;
+              esac
+            done
+            test -x "$ROOT/usr/bin/lame"
+            LIBPATH="$ROOT/usr/lib/x86_64-linux-gnu:$ROOT/usr/lib"
+            LD_LIBRARY_PATH="$LIBPATH" ldd "$ROOT/usr/bin/lame" | grep -F "$ROOT/usr/lib/x86_64-linux-gnu/libmp3lame.so.0"
+            LD_LIBRARY_PATH="$LIBPATH" qemu-x86_64 -cpu Conroe -L / "$ROOT/usr/bin/lame" --version | head -n 2
+          done
+
+          run_trial() {
+            mode="$1"
+            variant="$2"
+            trial="$3"
+            ROOT="$ROOTS/$variant"
+            LIBPATH="$ROOT/usr/lib/x86_64-linux-gnu:$ROOT/usr/lib"
+            OUT="$WORK/results/$variant-$mode-$trial.mp3"
+            LOG="$WORK/results/$variant-$mode-$trial.log"
+            if [[ "$mode" == "qemu-conroe" ]]; then
+              CMD=(qemu-x86_64 -cpu Conroe -L / "$ROOT/usr/bin/lame")
+            else
+              CMD=("$ROOT/usr/bin/lame")
+            fi
+            START="$(date +%s%N)"
+            if ! LD_LIBRARY_PATH="$LIBPATH" "${CMD[@]}" -q0 -b320 "$WORK/benchmark.wav" "$OUT" > "$LOG" 2>&1; then
+              cat "$LOG"
+              return 1
+            fi
+            END="$(date +%s%N)"
+            ELAPSED="$(awk -v s="$START" -v e="$END" 'BEGIN {printf "%.4f", (e-s)/1000000000}')"
+            FACTOR="$(awk -v t="$ELAPSED" 'BEGIN {if (t>0) printf "%.4f", 20/t; else print "0"}')"
+            BYTES="$(stat -c '%s' "$OUT")"
+            printf '%s,%s,%s,%s,%s,%s\n' "$mode" "$variant" "$trial" "$ELAPSED" "$FACTOR" "$BYTES" | tee -a "$REPORT"
+          }
+
+          for mode in native-host qemu-conroe; do
+            for trial in 1 2 3; do
+              for variant in baseline recovered lto; do
+                run_trial "$mode" "$variant" "$trial"
+              done
+            done
+          done
+
+          python3 - "$REPORT" "$WORK/results/benchmark-summary.md" <<'PY'
+          import csv, statistics, sys
+          with open(sys.argv[1], newline="") as fh:
+              rows = list(csv.DictReader(fh))
+          with open(sys.argv[2], "w") as f:
+              f.write("# LAME Core 2 flag benchmark\n\n")
+              f.write("Command: lame -q0 -b320; 44.1 kHz stereo, 20-second pink-noise sample; three serial trials per variant and mode.\n\n")
+              f.write("Important: QEMU's Conroe CPU model represents a Core 2/Merom-class feature set, but TCG does not model T7250 execution-pipeline timing. QEMU wall-time is emulator-specific. Native-host results use GitHub's CPU, not the T7250. The physical D630 test remains authoritative.\n\n")
+              f.write("| Mode | Variant | Median seconds | Median real-time factor | Output bytes per trial |\n|---|---|---:|---:|---:|\n")
+              for mode in ("native-host", "qemu-conroe"):
+                  for variant in ("baseline", "recovered", "lto"):
+                      subset = [r for r in rows if r["mode"] == mode and r["variant"] == variant]
+                      secs = statistics.median(float(r["elapsed_seconds"]) for r in subset)
+                      factors = statistics.median(float(r["realtime_factor"]) for r in subset)
+                      sizes = ", ".join(r["mp3_bytes"] for r in subset)
+                      f.write(f"| {mode} | {variant} | {secs:.4f} | {factors:.4f}x | {sizes} |\n")
+          PY
+          cat "$WORK/results/benchmark-summary.md"
+
+      - name: Gather packages and report
+        shell: bash
+        run: |
+          set -euxo pipefail
+          WORK="$RUNNER_TEMP/lame-core2-bench"
+          mkdir -p "$GITHUB_WORKSPACE/lame-core2-test-artifacts"
+          cp "$WORK/output/BUILD-MATRIX.md" "$GITHUB_WORKSPACE/lame-core2-test-artifacts/"
+          cp "$WORK/source-version.txt" "$GITHUB_WORKSPACE/lame-core2-test-artifacts/"
+          cp "$WORK/audio-input.txt" "$GITHUB_WORKSPACE/lame-core2-test-artifacts/"
+          cp "$WORK/results/"* "$GITHUB_WORKSPACE/lame-core2-test-artifacts/"
+          for variant in baseline recovered lto; do
+            mkdir -p "$GITHUB_WORKSPACE/lame-core2-test-artifacts/$variant"
+            cp "$WORK/output/$variant/"*.deb "$GITHUB_WORKSPACE/lame-core2-test-artifacts/$variant/"
+            (cd "$GITHUB_WORKSPACE/lame-core2-test-artifacts/$variant" && sha256sum *.deb > SHA256SUMS.txt)
+          done
+          (cd "$GITHUB_WORKSPACE/lame-core2-test-artifacts" && find . -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS-all.txt)
+
+      - name: Upload three package variants and benchmark report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lame-core2-three-flag-tests
+          path: lame-core2-test-artifacts/
+          if-no-files-found: error
+          retention-days: 14
