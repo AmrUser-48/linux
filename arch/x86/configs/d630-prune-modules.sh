@@ -50,5 +50,13 @@ done
 
 make olddefconfig
 
+# Preserve the userspace CPU-frequency governor through the final Kconfig
+# resolution and aggressive module-pruning pass. It must be built in, not m.
+userspace_governor="$(./scripts/config --state CONFIG_CPU_FREQ_GOV_USERSPACE 2>/dev/null || true)"
+test "$userspace_governor" = y || {
+  echo "FAIL: CONFIG_CPU_FREQ_GOV_USERSPACE must be built in (y); got '${userspace_governor:-unset}'." >&2
+  exit 1
+}
+
 echo '=== remaining module settings ==='
 grep '=m$' .config || true

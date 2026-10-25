@@ -107,6 +107,7 @@ jobs:
             ACPI \
             ACPI_BATTERY \
             X86_ACPI_CPUFREQ \
+            CPU_FREQ_GOV_USERSPACE \
             CPU_IDLE \
             SENSORS_CORETEMP \
             SND_HDA_INTEL \
@@ -141,6 +142,7 @@ jobs:
           test "$(config_state CONFIG_DEVTMPFS_MOUNT)" = "y"
           test "$(config_state CONFIG_MICROCODE)" = "y"
           test "$(config_state CONFIG_CPU_FREQ_GOV_SCHEDUTIL)" = "y"
+          test "$(config_state CONFIG_CPU_FREQ_GOV_USERSPACE)" = "y"
           test "$(config_state CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL)" = "y"
 
           test "$(config_state CONFIG_VIRTUALIZATION)" = "y"
