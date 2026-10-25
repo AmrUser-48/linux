@@ -111,9 +111,11 @@ Reported real-time encoding factors on the D630:
 | Build | Encoding speed | Throughput vs. Debian generic |
 |---|---:|---:|
 | Debian generic baseline | 4.0× real time | Reference |
-| Optimized libmp3lame build | 6.1× real time | **+52.5%** |
+| Optimized libmp3lame build | 5.4× real time | **+35.0%** |
 
-The relative throughput gain is (6.1 / 4.0 − 1) × 100 = 52.5%. This is a physical-machine result, not a GitHub-runner or QEMU result.
+The corrected reported throughput gain is (5.4 / 4.0 − 1) × 100 = 35.0%. The 5.4× result was obtained with the CPU reported to be at a 10× multiplier and using a low-voltage setting. Record this condition with the result; do not directly compare it to measurements made with different CPU frequency/voltage settings. This is a physical-machine result, not a GitHub-runner or QEMU result.
+
+The command reported for this CPU setting was `sudo wrmsr -a 0x199 0x0b1c`. Treat this as a requested performance state, not standalone proof of the active multiplier or actual core voltage; verify the actual state independently before attributing the throughput change to compiler flags.
 
 The mode-specific CBR 320 and V0 wall-clock medians must come from a run made after replacing the old baseline with the Debian generic packages. Earlier timings collected with the previous baseline are intentionally not presented as results from this corrected comparison.
 
