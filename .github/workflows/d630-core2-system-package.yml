@@ -134,9 +134,18 @@ jobs:
             exit 1
           fi
           # Keep foundational system packages on Debian's normal -O2 profile.
-          # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
-          opt="-O2"
-          flags="$opt -march=core2 -mtune=core2"
+          # LAME's configure.in disables its upstream optimization flags whenever CFLAGS
+          # is explicitly supplied. Restore the upstream GCC performance profile for LAME
+          # only, while retaining the exact Intel Core 2 instruction/tuning target.
+          if [[ "$PACKAGE" == "lame" || "$PACKAGE" == "libmp3lame0" ]]; then
+            opt="-O3"
+            flags="$opt -march=core2 -mtune=core2 -ffast-math -funroll-loops"
+            echo "LAME benchmark profile: upstream GCC optimizations plus Core 2 targeting."
+          else
+            # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
+            opt="-O2"
+            flags="$opt -march=core2 -mtune=core2"
+          fi
           # Public GitHub-hosted Ubuntu runners have 4 vCPUs / 16 GB RAM.
           # Use them for normal packages, but keep GCC's memory-heavy bootstrap at -j2.
           build_jobs=4
@@ -151,7 +160,7 @@ jobs:
             echo "BUILD_JOBS=$build_jobs"
             echo "DEB_BUILD_OPTIONS=parallel=$build_jobs noautodbgsym"
           } >> "$GITHUB_ENV"
-          echo "Using conservative system-package optimization profile: $flags"
+          echo "Using compiler optimization profile: $flags"
           echo "Build parallelism: -j$build_jobs"
           # glibc and systemd test suites rely on host/kernel facilities that are
           # unavailable or unreliable in the Debian-in-Docker build container.
@@ -190,6 +199,26 @@ jobs:
             echo "::error::Could not find unpacked Debian source for $SOURCE_PACKAGE (requested package: $PACKAGE)"
             find "$SRCROOT" -mindepth 1 -maxdepth 2 -type f -name changelog -path '*/debian/changelog' -print
             exit 1
+          fi
+
+          # Reproduce the LAME-specific experimental profile from the recovered
+          # direct-source build command. Debian's rules already enable NASM;
+          # on x86_64 LAME does not select its legacy 32-bit NASM routines.
+          if [[ "$PACKAGE" == "lame" || "$PACKAGE" == "libmp3lame0" ]]; then
+            python3 - "$SOURCE_DIR/debian/rules" <<'PY'
+          from pathlib import Path
+          import sys
+
+          rules = Path(sys.argv[1])
+          source = rules.read_text()
+          needle = "\t\t--enable-nasm \\\n\t\t--with-fileio=sndfile"
+          replacement = "\t\t--enable-nasm \\\n\t\t--enable-expopt=full \\\n\t\t--with-fileio=sndfile"
+          if source.count(needle) != 1:
+              raise SystemExit(f"Expected exactly one Debian LAME configure block in {rules}; refusing to patch.")
+          rules.write_text(source.replace(needle, replacement, 1))
+          print("Enabled configure option --enable-expopt=full for LAME benchmark.")
+          PY
+            grep -n -- '--enable-expopt=full' "$SOURCE_DIR/debian/rules"
           fi
 
           # The extracted source tree is sufficient for a binary-only build.

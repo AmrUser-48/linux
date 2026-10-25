@@ -1,0 +1,22 @@
+name: Build LAME Core 2 test package
+
+on:
+  push:
+    branches:
+      - test/lame-core2-q0-optimization
+    paths:
+      - .github/workflows/build-lame-core2-test.yml
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  build-lame:
+    name: Build Debian Bookworm LAME with recovered flags
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: libmp3lame0
+      force_rebuild: true
+      refresh_index: false
