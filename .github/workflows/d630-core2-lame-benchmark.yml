@@ -3,9 +3,6 @@ run-name: "Core 2 LAME benchmark variants"
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/d630-core2-lame-benchmark.yml'
 
 permissions:
   contents: read
