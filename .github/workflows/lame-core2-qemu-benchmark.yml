@@ -31,7 +31,7 @@ jobs:
           apt-get install -y --no-install-recommends build-essential ca-certificates \
             debhelper devscripts dpkg-dev fakeroot qemu-user sox python3 file time
           apt-get build-dep -y lame
-          qemu-x86_64 -cpu help > /tmp/qemu-cpu-models.txt
+          qemu-x86_64 -cpu help > /tmp/qemu-cpu-models.txt 2>&1 || true
           grep -iE '(^|[[:space:]])Conroe([[:space:]]|$)' /tmp/qemu-cpu-models.txt
           qemu-x86_64 -cpu Conroe -L / /bin/true
 
