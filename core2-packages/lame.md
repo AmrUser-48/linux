@@ -112,7 +112,6 @@ Reported real-time encoding factors on the D630:
 |---|---:|---:|---|
 | Debian generic baseline | 4.0× real time | Reference | Baseline reported by user |
 | Earlier optimized-build result | 5.4× real time | **+35.0%** | Previously reported result |
-| Earlier optimized-build result | 5.4× real time | **+35.0%** | Previously reported result |
 | Peak recovered-build reading | 6.4× real time | **+60.0%** | User-reported maximum; not a completed-run median |
 | Earlier mid-run recovered reading | 6.1594× real time | **+54.0%** | Interrupted at 26% progress |
 
