@@ -134,9 +134,18 @@ jobs:
             exit 1
           fi
           # Keep foundational system packages on Debian's normal -O2 profile.
-          # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
-          opt="-O2"
-          flags="$opt -march=core2 -mtune=core2"
+          # LAME's configure.in disables its upstream optimization flags whenever CFLAGS
+          # is explicitly supplied. Restore the upstream GCC performance profile for LAME
+          # only, while retaining the exact Intel Core 2 instruction/tuning target.
+          if [[ "$PACKAGE" == "lame" || "$PACKAGE" == "libmp3lame0" ]]; then
+            opt="-O3"
+            flags="$opt -march=core2 -mtune=core2 -fomit-frame-pointer -ffast-math -funroll-loops"
+            echo "LAME benchmark profile: upstream GCC optimizations plus Core 2 targeting."
+          else
+            # Avoid -O3 for libc, dynamic-loader, package-manager, and init components.
+            opt="-O2"
+            flags="$opt -march=core2 -mtune=core2"
+          fi
           # Public GitHub-hosted Ubuntu runners have 4 vCPUs / 16 GB RAM.
           # Use them for normal packages, but keep GCC's memory-heavy bootstrap at -j2.
           build_jobs=4
