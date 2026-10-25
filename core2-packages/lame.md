@@ -108,16 +108,17 @@ Therefore, system is not an independent build and is excluded from the compariso
 
 Reported real-time encoding factors on the D630:
 
-| Build | Encoding speed | Throughput vs. Debian generic |
-|---|---:|---:|
-| Debian generic baseline | 4.0× real time | Reference |
-| Optimized libmp3lame build | 5.4× real time | **+35.0%** |
+| Measurement | Encoding speed | Throughput vs. Debian generic | Status |
+|---|---:|---:|---|
+| Debian generic baseline | 4.0× real time | Reference | Baseline reported by user |
+| Earlier optimized-build result | 5.4× real time | **+35.0%** | Previously reported result |
+| Latest optimized-build reading | 6.1594× real time | **+54.0%** | Preliminary mid-run reading; not a completed run |
 
-The corrected reported throughput gain is (5.4 / 4.0 − 1) × 100 = 35.0%. The 5.4× result was obtained with the CPU reported to be at a 10× multiplier and using a low-voltage setting. Record this condition with the result; do not directly compare it to measurements made with different CPU frequency/voltage settings. This is a physical-machine result, not a GitHub-runner or QEMU result.
+The latest reading came from a direct terminal run of `lame -q0 -b320 f.wav`. LAME reported `play/CPU = 6.1594x` at frame 200 of 767 (26% progress); the run was then interrupted with Ctrl+C. LAME's `play/CPU` field is the ratio of encoded audio playback duration to CPU time consumed. Because the run was stopped before completion, record 6.1594× as an observed mid-run rate, not as the final benchmark result. Against the 4.0× baseline, this snapshot corresponds to (6.1594 / 4.0 − 1) × 100 = **53.99%** greater throughput.
 
-The command reported for this CPU setting was `sudo wrmsr -a 0x199 0x0b1c`. Treat this as a requested performance state, not standalone proof of the active multiplier or actual core voltage; verify the actual state independently before attributing the throughput change to compiler flags.
+The command reported for the CPU setting was `sudo wrmsr -a 0x199 0x0b1c`. This writes a requested performance state to IA32_PERF_CTL; it does not by itself verify the active multiplier or actual core voltage. The 5.4× result was previously associated with a reported 10× multiplier and low-voltage setting. Verify actual operating conditions independently and keep them consistent when comparing builds.
 
-The mode-specific CBR 320 and V0 wall-clock medians must come from a run made after replacing the old baseline with the Debian generic packages. Earlier timings collected with the previous baseline are intentionally not presented as results from this corrected comparison.
+This is a physical-machine observation, not a GitHub-runner or QEMU result. The mode-specific CBR 320 and V0 wall-clock medians still need a controlled repeat with the corrected Debian generic baseline and a completed encoding run.
 
 ### Re-create the Debian generic baseline
 
