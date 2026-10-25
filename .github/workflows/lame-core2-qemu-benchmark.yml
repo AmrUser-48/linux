@@ -27,10 +27,8 @@ jobs:
         run: |
           set -euxo pipefail
           cat > /etc/apt/sources.list.d/lame-bench.list <<'EOF'
-          deb http://deb.debian.org/debian bookworm main
-          deb-src http://deb.debian.org/debian bookworm main
-          deb http://deb.debian.org/debian-security bookworm-security main
-          deb-src http://deb.debian.org/debian-security bookworm-security main
+          deb-src [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian bookworm main
+          deb-src [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian-security bookworm-security main
           EOF
           apt-get update
           apt-get install -y --no-install-recommends build-essential ca-certificates \
