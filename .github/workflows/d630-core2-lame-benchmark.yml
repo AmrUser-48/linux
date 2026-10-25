@@ -80,10 +80,11 @@ jobs:
             useradd --create-home --shell /bin/bash "$BUILD_USER"
           fi
 
-          for profile in bookworm-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
+          for profile in bookworm-default core2-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
             echo "::group::Build profile $profile"
             case "$profile" in
-              bookworm-o2) opt="-O2"; extra=""; expopt="no"; lto="no" ;;
+              bookworm-default) opt="-O2"; extra=""; expopt="no"; lto="no" ;;
+              core2-o2) opt="-O2"; extra=""; expopt="no"; lto="no" ;;
               core2-o3) opt="-O3"; extra=""; expopt="no"; lto="no" ;;
               core2-o3-unroll) opt="-O3"; extra="-funroll-loops"; expopt="no"; lto="no" ;;
               core2-o2-expopt-full) opt="-O2"; extra=""; expopt="full"; lto="no" ;;
@@ -98,7 +99,8 @@ jobs:
             SOURCE_DIR="$PROFILE_WORK/source"
             mkdir -p "$PROFILE_WORK" "$PROFILE_ARTIFACTS"
             cp -a "$TEMPLATE" "$SOURCE_DIR"
-            CFLAGS_APPEND="$opt -march=core2 -mtune=core2"
+            CFLAGS_APPEND="$opt"
+            if [[ "$profile" != "bookworm-default" ]]; then CFLAGS_APPEND="$CFLAGS_APPEND -march=core2 -mtune=core2"; fi
             if [[ -n "$extra" ]]; then CFLAGS_APPEND="$CFLAGS_APPEND $extra"; fi
             export DEB_CFLAGS_MAINT_APPEND="$CFLAGS_APPEND"
             export DEB_CXXFLAGS_MAINT_APPEND="$CFLAGS_APPEND"
@@ -132,6 +134,7 @@ jobs:
           PY
             fi
 
+            cd "$SOURCE_DIR"
             VERSION_PROFILE="$(echo "$profile" | tr '-' '.')"
             VARIANT_VERSION="$LAME_BASE_VERSION+core2bench.$VERSION_PROFILE.1"
             DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
@@ -147,13 +150,21 @@ jobs:
 
             EFFECTIVE_CFLAGS="$(dpkg-buildflags --get CFLAGS)"
             EFFECTIVE_CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
-            if ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CFLAGS" ||
-               ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CFLAGS" ||
-               ! grep -Fq -- "$opt" <<<"$EFFECTIVE_CFLAGS" ||
-               ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CXXFLAGS" ||
-               ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CXXFLAGS" ||
+            if ! grep -Fq -- "$opt" <<<"$EFFECTIVE_CFLAGS" ||
                ! grep -Fq -- "$opt" <<<"$EFFECTIVE_CXXFLAGS"; then
-              echo "::error::Effective compiler flags do not contain required optimization and Core 2 target flags."
+              echo "::error::Effective compiler flags do not contain the selected optimization flag."
+              echo "CFLAGS: $EFFECTIVE_CFLAGS"
+              echo "CXXFLAGS: $EFFECTIVE_CXXFLAGS"
+              echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
+              echo "::endgroup::"
+              continue
+            fi
+            if [[ "$profile" != "bookworm-default" ]] &&
+               { ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CFLAGS" ||
+                 ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CFLAGS" ||
+                 ! grep -Fq -- "-march=core2" <<<"$EFFECTIVE_CXXFLAGS" ||
+                 ! grep -Fq -- "-mtune=core2" <<<"$EFFECTIVE_CXXFLAGS"; }; then
+              echo "::error::Effective flags lack the Core 2 target for profile $profile."
               echo "CFLAGS: $EFFECTIVE_CFLAGS"
               echo "CXXFLAGS: $EFFECTIVE_CXXFLAGS"
               echo "$profile" >> "$ARTIFACT_ROOT/FAILED-PROFILES.txt"
@@ -222,7 +233,8 @@ jobs:
 
           cat > "$ARTIFACT_ROOT/PROFILES.tsv" <<'PROFILES'
           Profile	Requested optimization	What it tests
-          bookworm-o2	-O2 -march=core2 -mtune=core2	Baseline
+          bookworm-default	Debian default -O2 flags	Generic amd64 baseline with no explicit Core 2 target
+          core2-o2	-O2 -march=core2 -mtune=core2	Core 2 target at Debian default optimization level
           core2-o3	-O3 -march=core2 -mtune=core2	Higher GCC optimization level
           core2-o3-unroll	-O3 -funroll-loops plus Core 2 flags	Explicit loop unrolling
           core2-o2-expopt-full	-O2 plus --enable-expopt=full	LAME full optimization set with O2 last
@@ -279,7 +291,7 @@ jobs:
           RESULTS="$ROOT/RESULTS-$(date +%Y%m%d-%H%M%S).tsv"
           echo -e "profile\tround\tspeed\telapsed_seconds\tstatus" > "$RESULTS"
           for round in $(seq 1 "$RUNS"); do
-            for profile in bookworm-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
+            for profile in core2-o2 core2-o3 core2-o3-unroll core2-o2-expopt-full core2-o3-expopt-norm core2-o3-expopt-full core2-o3-lto core2-ofast; do
               DIR="$ROOT/$profile"
               if [[ ! -d "$DIR" ]] || ! compgen -G "$DIR/*.deb" >/dev/null; then
                 echo "Skipping missing or failed profile: $profile"
