@@ -319,7 +319,7 @@ jobs:
               LIBCRYPTO_FOUND=false
               for deb in "$GITHUB_WORKSPACE/package-artifacts"/*.deb; do
                 [[ "$(dpkg-deb -f "$deb" Package)" == "libssl3" ]] || continue
-                if dpkg-deb --contents "$deb" | grep -Eq '/libcrypto\\.so\\.3([[:space:]]|$)'; then
+                if dpkg-deb --contents "$deb" | grep -Eq '/libcrypto\.so\.3([[:space:]]|$)'; then
                   LIBCRYPTO_FOUND=true
                   break
                 fi
