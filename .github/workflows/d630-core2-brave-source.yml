@@ -431,9 +431,20 @@ jobs:
             --gn=use_debug_fission:false \
             --ninja=j:2 >"$BUILD_LOG" 2>&1 &
           BUILD_PID=$!
-          while kill -0 "$BUILD_PID" 2>/dev/null; do
+          while :; do
+            # A completed background process can remain a zombie until wait().
+            # kill -0 may therefore stay true forever, preventing the planned
+            # 220-minute timeout from reaching the checkpoint-saving steps.
+            BUILD_STATE="$(ps -o stat= -p "$BUILD_PID" 2>/dev/null | tr -d '[:space:]' || true)"
+            if [[ -z "$BUILD_STATE" || "$BUILD_STATE" == Z* ]]; then
+              break
+            fi
             sleep 60
-            echo "Brave Release build is still running."
+            BUILD_STATE="$(ps -o stat= -p "$BUILD_PID" 2>/dev/null | tr -d '[:space:]' || true)"
+            if [[ -z "$BUILD_STATE" || "$BUILD_STATE" == Z* ]]; then
+              break
+            fi
+            echo "Brave Release build is still running (timeout PID state: $BUILD_STATE)."
             date -u
             df -h "$GITHUB_WORKSPACE"
             free -h
