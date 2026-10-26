@@ -119,49 +119,49 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libegl-mesa0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libegl-mesa0 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libegl-mesa0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libegl-mesa0 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.109)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <a href="#core2-package-libgbm1"><code>libgbm1 (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglapi-mesa"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-server0"><code>libwayland-server0 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb-dri2-0"><code>libxcb-dri2-0 (&gt;= 1.8)</code></a>; <a href="#core2-package-libxcb-dri3-0"><code>libxcb-dri3-0 (&gt;= 1.13)</code></a>; <a href="#core2-package-libxcb-present0"><code>libxcb-present0</code></a>; <a href="#core2-package-libxcb-randr0"><code>libxcb-randr0 (&gt;= 1.3)</code></a>; <a href="#core2-package-libxcb-sync1"><code>libxcb-sync1</code></a>; <a href="#core2-package-libxcb-xfixes0"><code>libxcb-xfixes0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1 (&gt;= 1.9.2)</code></a>; <code>libxshmfence1</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
-<summary id="core2-package-libegl1-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libegl1-mesa 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libegl1-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libegl1-mesa 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <code>libegl1</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
-<summary id="core2-package-libgbm1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libgbm1 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libgbm1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libgbm1 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.75)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <a href="#core2-package-libwayland-server0"><code>libwayland-server0 (&gt;= 1.15.0)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-libgl1-mesa-dri"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libgl1-mesa-dri 22.3.6-1+deb12u2 — free implementation of the OpenGL API -- DRI modules</a></code></summary>
+<summary id="core2-package-libgl1-mesa-dri"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libgl1-mesa-dri 22.3.6-1+deb12u2 — free implementation of the OpenGL API -- DRI modules</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm-intel1"><code>libdrm-intel1 (&gt;= 2.4.38)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.75)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglapi-mesa"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a>; <code>libsensors5 (&gt;= 1:3.5.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-libgl1-mesa-glx"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libgl1-mesa-glx 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libgl1-mesa-glx"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libgl1-mesa-glx 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <code>libgl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglx-mesa0"><code>libglx-mesa0</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-libglapi-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libglapi-mesa 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libglapi-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libglapi-mesa 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-libgles2-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libgles2-mesa 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libgles2-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libgles2-mesa 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <code>libgles2</code> <em>(Debian Bookworm)</em>
 
@@ -203,14 +203,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libglx-mesa0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libglx-mesa0 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libglx-mesa0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libglx-mesa0 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.75)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <a href="#core2-package-libglapi-mesa"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.4.99.1)</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb-dri2-0"><code>libxcb-dri2-0 (&gt;= 1.8)</code></a>; <a href="#core2-package-libxcb-dri3-0"><code>libxcb-dri3-0 (&gt;= 1.13)</code></a>; <a href="#core2-package-libxcb-glx0"><code>libxcb-glx0 (&gt;= 1.8)</code></a>; <a href="#core2-package-libxcb-present0"><code>libxcb-present0</code></a>; <a href="#core2-package-libxcb-randr0"><code>libxcb-randr0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb-sync1"><code>libxcb-sync1</code></a>; <a href="#core2-package-libxcb-xfixes0"><code>libxcb-xfixes0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1 (&gt;= 1.9.2)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <code>libxshmfence1</code> <em>(Debian Bookworm)</em>; <code>libxxf86vm1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgl1-mesa-dri"><code>libgl1-mesa-dri</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-libosmesa6"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libosmesa6 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libosmesa6"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libosmesa6 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglapi-mesa"><code>libglapi-mesa (= 22.3.6-1+deb12u2+core2.1~BUILD)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
@@ -273,7 +273,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libwayland-egl1-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">libwayland-egl1-mesa 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-libwayland-egl1-mesa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">libwayland-egl1-mesa 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <code>libegl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1</code></a>
 
@@ -511,14 +511,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-mesa-va-drivers"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">mesa-va-drivers 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-mesa-va-drivers"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">mesa-va-drivers 22.3.6-1+deb12u2</a></code></summary>
 
 - No declared Pre-Depends or Depends.
 
 </details>
 
 <details>
-<summary id="core2-package-mesa-vdpau-drivers"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939">mesa-vdpau-drivers 22.3.6-1+deb12u2</a></code></summary>
+<summary id="core2-package-mesa-vdpau-drivers"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759">mesa-vdpau-drivers 22.3.6-1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libvdpau1"><code>libvdpau1</code></a>
 
@@ -5705,6 +5705,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### Mesa (optimized)
+Version: `22.3.6-1+deb12u2+core2.1~20261026200759` · Published: 2026-10-26 20:19:05 UTC
+**Description:** free implementation of the OpenGL API -- DRI modules
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`
+**Main .deb:** [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261026200759_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261026200759_amd64.deb)
+**Binary packages in release:** 18
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026200759)
+
 ### SoX NG (system)
 Version: `14.8.1+core2.1~20261026180426` · Published: 2026-10-26 18:05:24 UTC
 **Description:** Swiss Army knife of sound processing (SoX NG)
@@ -6264,14 +6272,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [seccomp_2.5.4-1+deb12u1+core2.1.20261017010131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131/seccomp_2.5.4-1%2Bdeb12u1%2Bcore2.1.20261017010131_amd64.deb)
 **Binary packages in release:** 4
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libseccomp-2.5.4-1-deb12u1-core2.1-20261017010131)
-
-### Mesa (optimized)
-Version: `22.3.6-1+deb12u2+core2.1~20261016214939` · Published: 2026-10-16 21:59:48 UTC
-**Description:** free implementation of the OpenGL API -- DRI modules
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mesa`
-**Main .deb:** [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261016214939_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261016214939_amd64.deb)
-**Binary packages in release:** 18
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261016214939)
 
 ### gst-plugins-bad1.0 (optimized)
 Version: `1.22.0-4+deb12u8+core2.1~20261016163835` · Published: 2026-10-16 16:44:20 UTC
