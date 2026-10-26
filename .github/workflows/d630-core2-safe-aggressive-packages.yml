@@ -3,12 +3,29 @@ run-name: "Core 2 safe-aggressive package train"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-safe-aggressive-packages.yml"
 
 permissions:
   contents: read
 
 jobs:
+  register-workflow:
+    if: github.event_name == 'push'
+    name: Register workflow in Actions (no package builds)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm manual build entry is available
+        shell: bash
+        run: |
+          echo "Safe-aggressive package train is registered."
+          echo "Use Actions > Core 2 safe-aggressive Debian package train > Run workflow to start builds."
+
   build:
+    if: github.event_name == 'workflow_dispatch'
     name: Build ${{ matrix.target }} for Core 2
     runs-on: ubuntu-22.04
     timeout-minutes: 240
