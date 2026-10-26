@@ -1,0 +1,190 @@
+name: Core 2 LAME aggressive build
+run-name: "Core 2 LAME aggressive build"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build upstream LAME 3.100 with aggressive Core 2 flags
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+
+    steps:
+      - name: Prepare Debian 12 build environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main
+          deb-src http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian bookworm-updates main
+          deb-src http://deb.debian.org/debian bookworm-updates main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          deb-src http://deb.debian.org/debian-security bookworm-security main
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends build-essential ca-certificates dpkg-dev file nasm python3 xz-utils
+          mkdir -p "$GITHUB_WORKSPACE/source-root" "$GITHUB_WORKSPACE/upstream-source" "$GITHUB_WORKSPACE/lame-stage" "$GITHUB_WORKSPACE/lame-aggressive-artifacts"
+
+      - name: Fetch upstream LAME source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/source-root"
+          apt-get source lame
+
+          UPSTREAM_TARBALL="$(find "$GITHUB_WORKSPACE/source-root" -maxdepth 1 -type f -name 'lame_*.orig.tar.*' -print -quit)"
+          if [[ -z "$UPSTREAM_TARBALL" || ! -f "$UPSTREAM_TARBALL" ]]; then
+            echo "::error::The Debian Bookworm source package did not provide the upstream LAME archive."
+            exit 1
+          fi
+
+          UPSTREAM_VERSION="$(basename "$UPSTREAM_TARBALL" | sed -E 's/^lame_(.*)\.orig\.tar\..*$/\1/')"
+          if [[ "$UPSTREAM_VERSION" != "3.100" ]]; then
+            echo "::error::Expected upstream LAME 3.100, got $UPSTREAM_VERSION."
+            exit 1
+          fi
+
+          UPSTREAM_SHA256="$(sha256sum "$UPSTREAM_TARBALL" | awk '{print $1}')"
+          tar -xf "$UPSTREAM_TARBALL" -C "$GITHUB_WORKSPACE/upstream-source"
+          SOURCE_DIR="$(find "$GITHUB_WORKSPACE/upstream-source" -mindepth 1 -maxdepth 1 -type d -name 'lame-*' -print -quit)"
+          if [[ -z "$SOURCE_DIR" || ! -x "$SOURCE_DIR/configure" ]]; then
+            echo "::error::Could not locate the upstream LAME configure script."
+            exit 1
+          fi
+
+          {
+            echo "Upstream version: $UPSTREAM_VERSION"
+            echo "Upstream archive: $(basename "$UPSTREAM_TARBALL")"
+            echo "Upstream archive SHA-256: $UPSTREAM_SHA256"
+            echo "Source: upstream orig tarball from Debian Bookworm source metadata; Debian patch series is not applied to this build tree."
+          } > "$GITHUB_WORKSPACE/lame-aggressive-artifacts/UPSTREAM-SOURCE.txt"
+
+          echo "UPSTREAM_SOURCE_DIR=$SOURCE_DIR" >> "$GITHUB_ENV"
+          echo "UPSTREAM_VERSION=$UPSTREAM_VERSION" >> "$GITHUB_ENV"
+          echo "UPSTREAM_SHA256=$UPSTREAM_SHA256" >> "$GITHUB_ENV"
+
+      - name: Configure, build, and smoke-test aggressive LAME
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_ROOT="$GITHUB_WORKSPACE/lame-aggressive-artifacts"
+          STAGE="$GITHUB_WORKSPACE/lame-stage"
+          cd "$UPSTREAM_SOURCE_DIR"
+
+          export CFLAGS="-Ofast -march=core2 -mtune=core2 -msse3 -mfpmath=sse -ffast-math -funroll-loops -fprefetch-loop-arrays"
+          export LDFLAGS="-Wl,-O1 -Wl,--as-needed"
+
+          cat > "$ARTIFACT_ROOT/BUILD-INFO.txt" <<INFO
+          Profile: lame-aggressive
+          Upstream version: $UPSTREAM_VERSION
+          Target architecture: amd64 / Intel Core 2
+          CFLAGS: $CFLAGS
+          LDFLAGS: $LDFLAGS
+          Configure command: ./configure --prefix=/usr/local --enable-nasm --enable-expopt=full --disable-shared
+          Shared libmp3lame: disabled
+          Link-time optimization: not enabled
+          INFO
+          {
+            echo "Compiler: $(cc --version | sed -n '1p')"
+            echo "Build host: $(uname -m)"
+            echo "Build parallelism: $(nproc)"
+            echo "Upstream archive SHA-256: $UPSTREAM_SHA256"
+          } >> "$ARTIFACT_ROOT/BUILD-INFO.txt"
+
+          ./configure --help > "$ARTIFACT_ROOT/configure-help.txt"
+          grep -q -- '--enable-nasm' "$ARTIFACT_ROOT/configure-help.txt"
+          grep -q -- '--enable-expopt' "$ARTIFACT_ROOT/configure-help.txt"
+
+          ./configure --prefix=/usr/local --enable-nasm --enable-expopt=full --disable-shared 2>&1 | tee "$ARTIFACT_ROOT/configure.log"
+
+          for flag in -Ofast -march=core2 -mtune=core2 -msse3 -mfpmath=sse -ffast-math -funroll-loops -fprefetch-loop-arrays; do
+            if ! grep -R -Fq --include=Makefile -- "$flag" "$UPSTREAM_SOURCE_DIR"; then
+              echo "::error::Requested compiler flag was not found in generated Makefiles: $flag"
+              exit 1
+            fi
+          done
+
+          make -j"$(nproc)" 2>&1 | tee "$ARTIFACT_ROOT/build.log"
+
+          make DESTDIR="$STAGE" install 2>&1 | tee "$ARTIFACT_ROOT/install.log"
+          BUILT_LAME="$STAGE/usr/local/bin/lame"
+          if [[ ! -x "$BUILT_LAME" ]]; then
+            echo "::error::Install did not produce /usr/local/bin/lame."
+            exit 1
+          fi
+
+          if find "$STAGE/usr/local/lib" -type f \( -name 'libmp3lame.so' -o -name 'libmp3lame.so.*' \) -print -quit | grep -q .; then
+            echo "::error::A shared libmp3lame was produced despite --disable-shared."
+            exit 1
+          fi
+          if ldd "$BUILT_LAME" 2>&1 | grep -q 'libmp3lame\.so'; then
+            echo "::error::The lame executable unexpectedly depends on shared libmp3lame."
+            exit 1
+          fi
+
+          "$BUILT_LAME" --version 2>&1 | tee "$ARTIFACT_ROOT/LAME-VERSION.txt"
+
+          python3 - "$ARTIFACT_ROOT/smoke.wav" <<'PY'
+          import math
+          import struct
+          import sys
+          import wave
+
+          path = sys.argv[1]
+          rate = 44100
+          frames = (
+              struct.pack("<h", int(5000 * math.sin(2 * math.pi * 440 * i / rate)))
+              for i in range(rate)
+          )
+          with wave.open(path, "wb") as wav:
+              wav.setnchannels(1)
+              wav.setsampwidth(2)
+              wav.setframerate(rate)
+              wav.writeframes(b"".join(frames))
+          PY
+
+          "$BUILT_LAME" -b 128 "$ARTIFACT_ROOT/smoke.wav" "$GITHUB_WORKSPACE/lame-smoke-test.mp3" 2>&1 | tee "$ARTIFACT_ROOT/smoke-test.log"
+          test -s "$GITHUB_WORKSPACE/lame-smoke-test.mp3"
+          file "$GITHUB_WORKSPACE/lame-smoke-test.mp3" | tee "$ARTIFACT_ROOT/smoke-test-file.txt"
+          rm -f "$ARTIFACT_ROOT/smoke.wav" "$GITHUB_WORKSPACE/lame-smoke-test.mp3"
+
+          cp "$BUILT_LAME" "$ARTIFACT_ROOT/lame-aggressive"
+          tar --sort=name --mtime='UTC 2020-01-01' --owner=0 --group=0 --numeric-owner -cf - -C "$STAGE" usr/local | gzip -n > "$ARTIFACT_ROOT/lame-aggressive-3.100-core2-rootfs.tar.gz"
+
+          {
+            echo "Configure arguments: $(./config.status --config)"
+            echo "Effective Makefile CFLAGS:"
+            grep -R -h --include=Makefile '^CFLAGS[[:space:]]*=' "$UPSTREAM_SOURCE_DIR" | sort -u
+            echo "Linked libraries:"
+            ldd "$BUILT_LAME" || true
+          } >> "$ARTIFACT_ROOT/BUILD-INFO.txt"
+
+          (
+            cd "$ARTIFACT_ROOT"
+            sha256sum lame-aggressive lame-aggressive-3.100-core2-rootfs.tar.gz > SHA256SUMS
+          )
+
+          echo "Built outputs:"
+          ls -lh "$ARTIFACT_ROOT"/lame-aggressive "$ARTIFACT_ROOT"/lame-aggressive-3.100-core2-rootfs.tar.gz
+          cat "$ARTIFACT_ROOT/SHA256SUMS"
+
+      - name: Upload aggressive LAME build and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-lame-aggressive-3.100
+          path: lame-aggressive-artifacts/
+          if-no-files-found: warn
+          retention-days: 30
