@@ -171,9 +171,9 @@ jobs:
           BASE_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
           RUN_STAMP="$(date -u +%Y%m%d%H%M%S)"
           VARIANT_VERSION="$BASE_VERSION+core2safe1~$RUN_STAMP"
+          cd "$SOURCE_DIR"
           DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
-            dch --file "$SOURCE_DIR/debian/changelog" \
-              --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution \
+            dch --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution \
               "Core 2 safe-aggressive build; CFLAGS and CXXFLAGS use -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize."
 
           ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
