@@ -1,0 +1,210 @@
+name: Core 2 safe-aggressive Debian package train
+run-name: "Core 2 safe-aggressive package train"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build ${{ matrix.target }} for Core 2
+    runs-on: ubuntu-22.04
+    timeout-minutes: 240
+    container:
+      image: debian:12
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - target: mesa
+            source: mesa
+          - target: libdrm
+            source: libdrm
+          - target: pixman
+            source: pixman
+          - target: cairo-libcairo
+            source: cairo
+          - target: ffmpeg-libavcodec
+            source: ffmpeg
+          - target: mpv
+            source: mpv
+          - target: neovim
+            source: neovim
+          - target: bash
+            source: bash
+          - target: sed
+            source: sed
+          - target: grep
+            source: grep
+          - target: gawk
+            source: gawk
+          - target: tmux
+            source: tmux
+          - target: zlib
+            source: zlib
+          - target: zstd
+            source: zstd
+          - target: xz-utils-liblzma
+            source: xz-utils
+          - target: openssl-libcrypto
+            source: openssl
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      DEB_BUILD_OPTIONS: "parallel=2 noautodbgsym"
+
+    steps:
+      - name: Prepare Debian Bookworm source repositories and build tools
+        shell: bash
+        env:
+          SOURCE_PACKAGE: ${{ matrix.source }}
+          TARGET_PACKAGE: ${{ matrix.target }}
+        run: |
+          set -euo pipefail
+          WORK_ROOT="$GITHUB_WORKSPACE/package-work"
+          SOURCE_ROOT="$WORK_ROOT/source"
+          ARTIFACT_ROOT="$GITHUB_WORKSPACE/package-artifacts"
+          mkdir -p "$SOURCE_ROOT" "$ARTIFACT_ROOT"
+
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list.d/core2-safe-aggressive.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          SOURCES
+
+          apt-get update
+          apt-get install -y --no-install-recommends             build-essential ca-certificates debhelper devscripts dpkg-dev             fakeroot file pkg-config quilt xz-utils zstd
+          apt-get build-dep -y "$SOURCE_PACKAGE"
+
+          cd "$SOURCE_ROOT"
+          apt-get source "$SOURCE_PACKAGE"
+          SOURCE_DIR="$(find "$SOURCE_ROOT" -mindepth 1 -maxdepth 3 -type f -path '*/debian/changelog' -print -quit | sed 's#/debian/changelog$##')"
+          if [[ -z "$SOURCE_DIR" || ! -f "$SOURCE_DIR/debian/changelog" ]]; then
+            echo "::error::Could not locate Debian source tree for $SOURCE_PACKAGE."
+            exit 1
+          fi
+
+          BASE_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          RUN_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          VARIANT_VERSION="$BASE_VERSION+core2safe1~$RUN_STAMP"
+          DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com"             dch --file "$SOURCE_DIR/debian/changelog"               --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution               "Core 2 safe-aggressive build; CFLAGS and CXXFLAGS use -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize."
+
+          ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          if [[ "$ACTUAL_VERSION" != "$VARIANT_VERSION" ]]; then
+            echo "::error::Changelog version mismatch: got $ACTUAL_VERSION, expected $VARIANT_VERSION."
+            exit 1
+          fi
+
+          {
+            echo "Target: $TARGET_PACKAGE"
+            echo "Debian source package: $SOURCE_PACKAGE"
+            echo "Debian source version: $BASE_VERSION"
+            echo "Built package version: $VARIANT_VERSION"
+            echo "Target architecture: amd64 / Intel Core 2"
+            echo "Requested CFLAGS and CXXFLAGS: -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+            echo "Flag injection: DEB_CFLAGS_APPEND and DEB_CXXFLAGS_APPEND; Debian default hardening flags are retained."
+            echo "Build dependencies: installed from Debian Bookworm source metadata with apt-get build-dep."
+            echo "Build parallelism: 2"
+          } > "$ARTIFACT_ROOT/BUILD-INFO.txt"
+
+          find "$SOURCE_ROOT" -maxdepth 1 -type f             \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \)             -print0 | sort -z | xargs -0 -r sha256sum > "$ARTIFACT_ROOT/SOURCE-SHA256SUMS"
+
+          echo "SOURCE_PACKAGE=$SOURCE_PACKAGE" >> "$GITHUB_ENV"
+          echo "TARGET_PACKAGE=$TARGET_PACKAGE" >> "$GITHUB_ENV"
+          echo "WORK_ROOT=$WORK_ROOT" >> "$GITHUB_ENV"
+          echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
+          echo "SOURCE_DIR=$SOURCE_DIR" >> "$GITHUB_ENV"
+          echo "VARIANT_VERSION=$VARIANT_VERSION" >> "$GITHUB_ENV"
+
+          BUILD_USER=core2build
+          if ! id "$BUILD_USER" >/dev/null 2>&1; then
+            useradd --create-home --shell /bin/bash "$BUILD_USER"
+          fi
+          chown -R "$BUILD_USER:$BUILD_USER" "$WORK_ROOT"
+
+      - name: Audit effective Core 2 compiler flags
+        shell: bash
+        run: |
+          set -euo pipefail
+          COMMON_FLAGS="-O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+          EFFECTIVE_CFLAGS="$(DEB_CFLAGS_APPEND="$COMMON_FLAGS" dpkg-buildflags --get CFLAGS)"
+          EFFECTIVE_CXXFLAGS="$(DEB_CXXFLAGS_APPEND="$COMMON_FLAGS" dpkg-buildflags --get CXXFLAGS)"
+          {
+            echo "Effective dpkg-buildflags CFLAGS: $EFFECTIVE_CFLAGS"
+            echo "Effective dpkg-buildflags CXXFLAGS: $EFFECTIVE_CXXFLAGS"
+            echo "Effective dpkg-buildflags LDFLAGS: $(dpkg-buildflags --get LDFLAGS)"
+          } | tee -a "$GITHUB_WORKSPACE/package-artifacts/BUILD-INFO.txt"
+
+          for flag in -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize; do
+            if [[ " $EFFECTIVE_CFLAGS " != *" $flag "* || " $EFFECTIVE_CXXFLAGS " != *" $flag "* ]]; then
+              echo "::error::Requested compiler flag is missing from effective CFLAGS/CXXFLAGS: $flag"
+              exit 1
+            fi
+          done
+
+          echo "COMMON_FLAGS=$COMMON_FLAGS" >> "$GITHUB_ENV"
+          echo "EFFECTIVE_CFLAGS=$EFFECTIVE_CFLAGS" >> "$GITHUB_ENV"
+          echo "EFFECTIVE_CXXFLAGS=$EFFECTIVE_CXXFLAGS" >> "$GITHUB_ENV"
+
+      - name: Build Debian binary packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          BUILD_USER=core2build
+          cd "$SOURCE_DIR"
+
+          if runuser --preserve-environment --user "$BUILD_USER" -- env             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER"             DEB_CFLAGS_APPEND="$COMMON_FLAGS"             DEB_CXXFLAGS_APPEND="$COMMON_FLAGS"             DEB_BUILD_OPTIONS="parallel=2 noautodbgsym"             DH_VERBOSE=1             dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 | tee "$GITHUB_WORKSPACE/package-artifacts/build.log"; then
+            echo "Binary build completed for $TARGET_PACKAGE."
+          else
+            echo "::error::Debian binary package build failed for $TARGET_PACKAGE."
+            exit 1
+          fi
+
+          PACKAGE_COUNT=0
+          while IFS= read -r -d '' deb; do
+            PACKAGE_COUNT=$((PACKAGE_COUNT + 1))
+            PACKAGE_NAME="$(dpkg-deb -f "$deb" Package)"
+            PACKAGE_VERSION="$(dpkg-deb -f "$deb" Version)"
+            PACKAGE_ARCH="$(dpkg-deb -f "$deb" Architecture)"
+            if [[ "$PACKAGE_VERSION" != "$VARIANT_VERSION" ]]; then
+              echo "::error::$PACKAGE_NAME version $PACKAGE_VERSION differs from expected $VARIANT_VERSION."
+              exit 1
+            fi
+            case "$PACKAGE_ARCH" in
+              amd64|all) ;;
+              *) echo "::error::Unexpected package architecture $PACKAGE_ARCH in $deb."; exit 1 ;;
+            esac
+            cp "$deb" "$GITHUB_WORKSPACE/package-artifacts/"
+            printf '%s\t%s\t%s\n' "$PACKAGE_NAME" "$PACKAGE_VERSION" "$PACKAGE_ARCH"               >> "$GITHUB_WORKSPACE/package-artifacts/PACKAGES.tsv"
+          done < <(find "$SOURCE_ROOT" -maxdepth 1 -type f -name '*.deb' -print0)
+
+          if [[ "$PACKAGE_COUNT" -eq 0 ]]; then
+            echo "::error::No Debian binary packages were produced for $TARGET_PACKAGE."
+            exit 1
+          fi
+
+          (
+            cd "$GITHUB_WORKSPACE/package-artifacts"
+            find . -maxdepth 1 -type f -name '*.deb' -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS
+          )
+
+          echo "Built binary packages:"
+          cat "$GITHUB_WORKSPACE/package-artifacts/PACKAGES.tsv"
+          cat "$GITHUB_WORKSPACE/package-artifacts/SHA256SUMS"
+
+      - name: Upload package files and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-safe-${{ matrix.target }}
+          path: package-artifacts/
+          if-no-files-found: warn
+          retention-days: 30
