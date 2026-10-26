@@ -23,12 +23,16 @@ jobs:
             source: mesa
           - target: libdrm
             source: libdrm
+            expected: "libdrm-common libdrm2 libdrm-intel1"
           - target: pixman
             source: pixman
+            expected: "libpixman-1-0"
           - target: cairo-libcairo
             source: cairo
+            expected: "libcairo2"
           - target: ffmpeg-libavcodec
             source: ffmpeg
+            expected: "libavcodec59"
           - target: mpv
             source: mpv
           - target: neovim
@@ -45,12 +49,55 @@ jobs:
             source: tmux
           - target: zlib
             source: zlib
+            expected: "zlib1g"
           - target: zstd
             source: zstd
+            expected: "zstd libzstd1"
           - target: xz-utils-liblzma
             source: xz-utils
+            expected: "liblzma5"
           - target: openssl-libcrypto
             source: openssl
+            expected: "libssl3"
+          - target: pango-runtime-libraries
+            source: pango1.0
+            expected: "libpango-1.0-0 libpangocairo-1.0-0"
+          - target: freetype
+            source: freetype
+            expected: "libfreetype6"
+          - target: fzf
+            source: fzf
+            expected: "fzf"
+          - target: tree
+            source: tree
+            expected: "tree"
+          - target: lsd
+            source: rust-lsd
+            expected: "lsd"
+          - target: sd
+            source: rust-sd
+            expected: "sd"
+          - target: brotli
+            source: brotli
+            expected: "brotli libbrotli1"
+          - target: json-c
+            source: json-c
+            expected: "libjson-c5"
+          - target: cjson
+            source: cjson
+            expected: "libcjson1"
+          - target: sqlite3
+            source: sqlite3
+            expected: "libsqlite3-0 sqlite3"
+          - target: flac
+            source: flac
+            expected: "libflac12"
+          - target: opus
+            source: opus
+            expected: "libopus0"
+          - target: libvorbis
+            source: libvorbis
+            expected: "libvorbis0a"
     env:
       DEBIAN_FRONTEND: noninteractive
       LANG: C.UTF-8
@@ -63,6 +110,7 @@ jobs:
         env:
           SOURCE_PACKAGE: ${{ matrix.source }}
           TARGET_PACKAGE: ${{ matrix.target }}
+          EXPECTED_PACKAGES: ${{ matrix.expected || '' }}
         run: |
           set -euo pipefail
           WORK_ROOT="$GITHUB_WORKSPACE/package-work"
@@ -110,12 +158,14 @@ jobs:
 
           {
             echo "Target: $TARGET_PACKAGE"
+            echo "Requested binary outputs: ${EXPECTED_PACKAGES:-not specified}"
             echo "Debian source package: $SOURCE_PACKAGE"
             echo "Debian source version: $BASE_VERSION"
             echo "Built package version: $VARIANT_VERSION"
             echo "Target architecture: amd64 / Intel Core 2"
             echo "Requested CFLAGS and CXXFLAGS: -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
-            echo "Flag injection: DEB_CFLAGS_APPEND and DEB_CXXFLAGS_APPEND; Debian default hardening flags are retained."
+            echo "Requested LDFLAGS append: -Wl,-O1 -Wl,--as-needed"
+            echo "Flag injection: DEB_CFLAGS_APPEND, DEB_CXXFLAGS_APPEND, and DEB_LDFLAGS_APPEND; Debian default hardening flags are retained."
             echo "Build dependencies: installed from Debian Bookworm source metadata with apt-get build-dep."
             echo "Build parallelism: 2"
           } > "$ARTIFACT_ROOT/BUILD-INFO.txt"
@@ -126,6 +176,7 @@ jobs:
 
           echo "SOURCE_PACKAGE=$SOURCE_PACKAGE" >> "$GITHUB_ENV"
           echo "TARGET_PACKAGE=$TARGET_PACKAGE" >> "$GITHUB_ENV"
+          echo "EXPECTED_PACKAGES=$EXPECTED_PACKAGES" >> "$GITHUB_ENV"
           echo "WORK_ROOT=$WORK_ROOT" >> "$GITHUB_ENV"
           echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
           echo "SOURCE_DIR=$SOURCE_DIR" >> "$GITHUB_ENV"
@@ -142,12 +193,14 @@ jobs:
         run: |
           set -euo pipefail
           COMMON_FLAGS="-O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+          AGGRESSIVE_LDFLAGS="-Wl,-O1 -Wl,--as-needed"
           EFFECTIVE_CFLAGS="$(DEB_CFLAGS_APPEND="$COMMON_FLAGS" dpkg-buildflags --get CFLAGS)"
           EFFECTIVE_CXXFLAGS="$(DEB_CXXFLAGS_APPEND="$COMMON_FLAGS" dpkg-buildflags --get CXXFLAGS)"
+          EFFECTIVE_LDFLAGS="$(DEB_LDFLAGS_APPEND="$AGGRESSIVE_LDFLAGS" dpkg-buildflags --get LDFLAGS)"
           {
             echo "Effective dpkg-buildflags CFLAGS: $EFFECTIVE_CFLAGS"
             echo "Effective dpkg-buildflags CXXFLAGS: $EFFECTIVE_CXXFLAGS"
-            echo "Effective dpkg-buildflags LDFLAGS: $(dpkg-buildflags --get LDFLAGS)"
+            echo "Effective dpkg-buildflags LDFLAGS: $EFFECTIVE_LDFLAGS"
           } | tee -a "$GITHUB_WORKSPACE/package-artifacts/BUILD-INFO.txt"
 
           for flag in -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize; do
@@ -157,9 +210,18 @@ jobs:
             fi
           done
 
+          for flag in -Wl,-O1 -Wl,--as-needed; do
+            if [[ " $EFFECTIVE_LDFLAGS " != *" $flag "* ]]; then
+              echo "::error::Requested linker flag is missing from effective LDFLAGS: $flag"
+              exit 1
+            fi
+          done
+
           echo "COMMON_FLAGS=$COMMON_FLAGS" >> "$GITHUB_ENV"
+          echo "AGGRESSIVE_LDFLAGS=$AGGRESSIVE_LDFLAGS" >> "$GITHUB_ENV"
           echo "EFFECTIVE_CFLAGS=$EFFECTIVE_CFLAGS" >> "$GITHUB_ENV"
           echo "EFFECTIVE_CXXFLAGS=$EFFECTIVE_CXXFLAGS" >> "$GITHUB_ENV"
+          echo "EFFECTIVE_LDFLAGS=$EFFECTIVE_LDFLAGS" >> "$GITHUB_ENV"
 
       - name: Build Debian binary packages
         shell: bash
@@ -168,10 +230,30 @@ jobs:
           BUILD_USER=core2build
           cd "$SOURCE_DIR"
 
+          case "$SOURCE_PACKAGE" in
+            rust-lsd|rust-sd)
+              RUSTC_WRAPPER_PATH="$SOURCE_DIR/.core2-rustc-wrapper"
+              RUSTC_LOG_PATH="$SOURCE_DIR/.core2-rustc-invocations.log"
+              cat > "$RUSTC_WRAPPER_PATH" <<'WRAPPER'
+          #!/bin/sh
+          set -eu
+          compiler="$1"
+          shift
+          printf '%s\n' "rustc wrapper invoked; adding -C target-cpu=core2" >> "$CORE2_RUSTC_LOG"
+          exec "$compiler" -C target-cpu=core2 "$@"
+          WRAPPER
+              chmod 0755 "$RUSTC_WRAPPER_PATH"
+              chown "$BUILD_USER:$BUILD_USER" "$RUSTC_WRAPPER_PATH"
+              export RUSTC_WRAPPER="$RUSTC_WRAPPER_PATH"
+              export CORE2_RUSTC_LOG="$RUSTC_LOG_PATH"
+              ;;
+          esac
+
           if runuser --preserve-environment --user "$BUILD_USER" -- env \
             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
             DEB_CFLAGS_APPEND="$COMMON_FLAGS" \
             DEB_CXXFLAGS_APPEND="$COMMON_FLAGS" \
+            DEB_LDFLAGS_APPEND="$AGGRESSIVE_LDFLAGS" \
             DEB_BUILD_OPTIONS="parallel=2 noautodbgsym" \
             DH_VERBOSE=1 \
             dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 | tee "$GITHUB_WORKSPACE/package-artifacts/build.log"; then
@@ -204,6 +286,26 @@ jobs:
             echo "::error::No Debian binary packages were produced for $TARGET_PACKAGE."
             exit 1
           fi
+
+          if [[ -n "$EXPECTED_PACKAGES" ]]; then
+            for expected in $EXPECTED_PACKAGES; do
+              if ! awk -F '\t' -v package="$expected" '$1 == package { found=1 } END { exit !found }' "$GITHUB_WORKSPACE/package-artifacts/PACKAGES.tsv"; then
+                echo "::error::Expected binary package was not produced: $expected"
+                exit 1
+              fi
+            done
+            echo "Verified requested binary packages: $EXPECTED_PACKAGES"
+          fi
+
+          case "$SOURCE_PACKAGE" in
+            rust-lsd|rust-sd)
+              if [[ ! -s "$CORE2_RUSTC_LOG" ]]; then
+                echo "::error::Rust compiler wrapper was not invoked for $SOURCE_PACKAGE."
+                exit 1
+              fi
+              cp "$CORE2_RUSTC_LOG" "$GITHUB_WORKSPACE/package-artifacts/RUSTC-INVOCATIONS.txt"
+              ;;
+          esac
 
           (
             cd "$GITHUB_WORKSPACE/package-artifacts"
