@@ -1,0 +1,367 @@
+# Fast, capability-aware Bash completion for SoX NG.
+# Runtime metadata is read from a per-user cache and SoX is queried only when
+# that cache is missing or the executable is newer than the cache.
+
+# Global and format options are intentionally maintained by hand: this preserves
+# argument semantics even if SoX's help prose changes.
+_SOX_NG_GLOBAL_OPTIONS=(
+  -A --buffer --input-buffer --clobber --no-clobber --combine -D --no-dither
+  --effects-file -G --guard -h --help --help-effect --help-format --i --info
+  --interactive -k --keymap --magic --multi-threaded --single-threaded --norm
+  --no-show-progress --play-rate-arg --plot -q --replay-gain -R -S
+  --show-progress --temp -T --version -V -m -M
+)
+_SOX_NG_GLOBAL_ARG_OPTIONS=(
+  -A --buffer --input-buffer --combine --effects-file --help-effect
+  --help-format --keymap --play-rate-arg --plot --replay-gain --temp -h -k
+)
+_SOX_NG_FORMAT_OPTIONS=(
+  --add-comment --comment --comment-file --endian --ignore-length --no-glob
+  --type --encoding --bits --reverse-nibbles --reverse-bits --channels --rate
+  --compression --volume -b -c -e -r -t -v -C -N -X -L -B -x
+)
+_SOX_NG_FORMAT_ARG_OPTIONS=(
+  --add-comment --comment --comment-file --endian --type --encoding --bits
+  --channels --rate --compression --volume -b -c -e -r -t -v -C
+)
+_SOX_NG_FILE_ARG_OPTIONS=(--comment-file --effects-file --temp)
+_SOX_NG_COMBINE_VALUES=(concatenate merge mix mix-power multiply sequence)
+_SOX_NG_ENDIAN_VALUES=(little big swap)
+_SOX_NG_ENCODING_VALUES=(signed-integer unsigned-integer floating-point mu-law a-law ima-adpcm ms-adpcm gsm-full-rate)
+_SOX_NG_PLOT_VALUES=(gnuplot octave off)
+_SOX_NG_REPLAY_GAIN_VALUES=(track album off)
+_SOX_NG_A4_VALUES=(432 440 442)
+_SOX_NG_BUFFER_VALUES=(1024 2048 4096 8192 16384 32768 65536 131072)
+_SOX_NG_PLAY_RATE_VALUES=(-l -m -h -v)
+_SOX_NG_RATE_VALUES=(8000 11025 12000 16000 22050 24000 32000 44100 48000 88200 96000 176400 192000)
+_SOX_NG_BITS_VALUES=(8 16 24 32 64)
+_SOX_NG_CHANNEL_VALUES=(1 2 4 6 8)
+_SOX_NG_VOLUME_VALUES=(0 0.5 0.75 1 1.25 1.5 2)
+
+# Keep nounset-safe empty defaults if SoX or the cache generator is unavailable.
+declare -ga _SOX_NG_FORMATS=()
+declare -ga _SOX_NG_READ_FORMATS=()
+declare -ga _SOX_NG_WRITE_FORMATS=()
+declare -ga _SOX_NG_DEVICES=()
+declare -ga _SOX_NG_EFFECTS=()
+declare -gA _SOX_NG_EFFECT_FLAGS=()
+declare -gA _SOX_NG_EFFECT_FLAG_VALUES=()
+
+_sox_ng_completion_load_cache() {
+  [[ ${_SOX_NG_CACHE_READY:-0} == 1 ]] && return 0
+  _SOX_NG_CACHE_READY=1
+
+  local sox_bin cache_dir cache_file generator script_dir
+  sox_bin=$(type -P sox_ng 2>/dev/null || type -P sox 2>/dev/null || true)
+  [[ -n $sox_bin ]] || return 0
+  cache_dir=${XDG_CACHE_HOME:-${HOME:-/tmp}/.cache}/sox-ng-completion
+  cache_file=$cache_dir/metadata.bash
+
+  local refresh=0 candidate
+  [[ -r $cache_file ]] || refresh=1
+  [[ -r $cache_file && $sox_bin -nt $cache_file ]] && refresh=1
+  [[ -r $cache_file && ${BASH_SOURCE[0]} -nt $cache_file ]] && refresh=1
+  # Dynamic format/effect modules can be upgraded independently of the main
+  # executable. Check module-file mtimes directly; this invokes no external process.
+  for candidate in /usr/lib/*/sox_ng/*.so* /usr/lib/sox_ng/*.so* /usr/local/lib/sox_ng/*.so*; do
+    [[ -f $candidate && -r $cache_file && $candidate -nt $cache_file ]] && refresh=1
+  done
+
+  if ((refresh)); then
+    script_dir=${BASH_SOURCE[0]%/*}
+    generator=
+    for candidate in \
+      "$script_dir/sox-ng-completion-cache.py" \
+      /usr/lib/sox-ng/sox-ng-completion-cache \
+      /usr/local/lib/sox_ng/sox-ng-completion-cache; do
+      if [[ -x $candidate && $candidate != *.py ]]; then
+        generator=$candidate
+        break
+      elif [[ -r $candidate && $candidate == *.py ]] && command -v python3 >/dev/null 2>&1; then
+        generator="python3 $candidate"
+        break
+      fi
+    done
+
+    if [[ -n $generator ]]; then
+      mkdir -p "$cache_dir" 2>/dev/null || :
+      if [[ $generator == python3\ * ]]; then
+        # The Python path is our own known script path, not user command text.
+        python3 "${generator#python3 }" --sox "$sox_bin" --output "$cache_file" >/dev/null 2>&1 || :
+      else
+        "$generator" --sox "$sox_bin" --output "$cache_file" >/dev/null 2>&1 || :
+      fi
+    fi
+  fi
+
+  if [[ -r $cache_file ]]; then
+    # Cache is generated locally from installed help output; it contains only
+    # validated format/effect tokens and safely quoted Bash assignments.
+    # shellcheck disable=SC1090
+    source "$cache_file"
+  fi
+}
+
+_sox_ng_add_words() {
+  local word existing duplicate
+  for word in $(compgen -W "$1" -- "$cur"); do
+    duplicate=0
+    for existing in "${COMPREPLY[@]}"; do
+      [[ $existing == "$word" ]] && { duplicate=1; break; }
+    done
+    ((duplicate)) || COMPREPLY+=("$word")
+  done
+}
+
+_sox_ng_add_files() {
+  local -a found=()
+  compopt -o filenames 2>/dev/null || :
+  mapfile -t found < <(compgen -f -- "$cur")
+  COMPREPLY+=("${found[@]}")
+}
+
+_sox_ng_has_word() {
+  local needle=$1 item
+  shift
+  for item in "$@"; do
+    [[ $item == "$needle" ]] && return 0
+  done
+  return 1
+}
+
+_sox_ng_join_words() {
+  local IFS=' '
+  printf '%s' "$*"
+}
+
+_sox_ng_scan_line() {
+  # Approximate SoX's grammar: before an effect chain, positional words are
+  # files/devices; after input+output, a known effect name starts the chain.
+  local i word skip=0
+  _SOX_NG_FILE_COUNT=0
+  _SOX_NG_IN_EFFECTS=0
+  _SOX_NG_CURRENT_EFFECT=
+
+  for ((i=1; i<COMP_CWORD; i++)); do
+    word=${COMP_WORDS[i]}
+    if ((skip)); then skip=0; continue; fi
+
+    if _sox_ng_has_word "$word" \
+      "${_SOX_NG_GLOBAL_ARG_OPTIONS[@]}" \
+      "${_SOX_NG_FORMAT_ARG_OPTIONS[@]}" \
+      "${_SOX_NG_FILE_ARG_OPTIONS[@]}"; then
+      skip=1
+      continue
+    fi
+    case $word in
+      --*=*) continue ;;
+    esac
+
+    if ((!_SOX_NG_IN_EFFECTS)) && [[ $word == -n || $word == --null || $word == -d || $word == --default-device || $word == -p || $word == --sox-pipe ]]; then
+      ((++_SOX_NG_FILE_COUNT))
+      continue
+    fi
+
+    if [[ $word == -* ]]; then
+      continue
+    fi
+
+    if ((!_SOX_NG_IN_EFFECTS)) && (( _SOX_NG_FILE_COUNT >= 2 )) &&
+       _sox_ng_has_word "$word" "${_SOX_NG_EFFECTS[@]}"; then
+      _SOX_NG_IN_EFFECTS=1
+      _SOX_NG_CURRENT_EFFECT=$word
+      continue
+    fi
+
+    if ((_SOX_NG_IN_EFFECTS)); then
+      if _sox_ng_has_word "$word" "${_SOX_NG_EFFECTS[@]}"; then
+        _SOX_NG_CURRENT_EFFECT=$word
+      fi
+      continue
+    fi
+
+    ((++_SOX_NG_FILE_COUNT))
+  done
+}
+
+_sox_ng_type_candidates() {
+  local -a types=() devices=()
+  local device
+  case $_SOX_NG_FILE_COUNT in
+    0) types=("${_SOX_NG_READ_FORMATS[@]}") ;;
+    1) types=("${_SOX_NG_READ_FORMATS[@]}" "${_SOX_NG_WRITE_FORMATS[@]}") ;;
+    *) types=("${_SOX_NG_WRITE_FORMATS[@]}") ;;
+  esac
+
+  # Device drivers are formats too, but not all drivers support both directions.
+  # Derive input/output eligibility from the cached --help-format report.
+  for device in "${_SOX_NG_DEVICES[@]}"; do
+    case $_SOX_NG_FILE_COUNT in
+      0)
+        _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}" && devices+=("$device")
+        ;;
+      1)
+        if _sox_ng_has_word "$device" "${_SOX_NG_READ_FORMATS[@]}" ||
+           _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}"; then
+          devices+=("$device")
+        fi
+        ;;
+      *)
+        _sox_ng_has_word "$device" "${_SOX_NG_WRITE_FORMATS[@]}" && devices+=("$device")
+        ;;
+    esac
+  done
+  types+=("${devices[@]}" null sox)
+  _sox_ng_add_words "$(printf '%s ' "${types[@]}")"
+}
+
+_sox_ng_completion() {
+  local cur prev i word arglist
+  local -a candidates=() matches=()
+  COMPREPLY=()
+  cur=${COMP_WORDS[COMP_CWORD]}
+  prev=${COMP_WORDS[COMP_CWORD-1]:-}
+
+  _sox_ng_completion_load_cache
+  _sox_ng_scan_line
+
+  # Effect-chain context takes precedence because some short flags overlap
+  # global/format options (for example gain -b versus format -b BITS).
+  if ((_SOX_NG_IN_EFFECTS)); then
+    local effect_values=${_SOX_NG_EFFECT_FLAG_VALUES["${_SOX_NG_CURRENT_EFFECT}:${prev}"]:-}
+    if [[ -n $effect_values ]]; then
+      _sox_ng_add_words "$effect_values"
+      return 0
+    fi
+    if [[ $cur == -* || -z $cur ]]; then
+      local effect_flags=${_SOX_NG_EFFECT_FLAGS[$_SOX_NG_CURRENT_EFFECT]:-}
+      _sox_ng_add_words "$effect_flags"
+    fi
+    _sox_ng_add_words "${_SOX_NG_EFFECTS[*]}"
+    return 0
+  fi
+
+  # Arguments to options have a narrower completion domain than filenames.
+  case $prev in
+    -t|--type)
+      _sox_ng_type_candidates
+      return 0
+      ;;
+    -h)
+      _sox_ng_add_words "${_SOX_NG_EFFECTS[*]} ${_SOX_NG_FORMATS[*]} ${_SOX_NG_DEVICES[*]} all"
+      return 0
+      ;;
+    --help-effect)
+      _sox_ng_add_words "${_SOX_NG_EFFECTS[*]} all"
+      return 0
+      ;;
+    --help-format)
+      _sox_ng_add_words "${_SOX_NG_FORMATS[*]} ${_SOX_NG_DEVICES[*]} all"
+      return 0
+      ;;
+    --combine)
+      _sox_ng_add_words "${_SOX_NG_COMBINE_VALUES[*]}"
+      return 0
+      ;;
+    --buffer|--input-buffer)
+      _sox_ng_add_words "${_SOX_NG_BUFFER_VALUES[*]}"
+      return 0
+      ;;
+    -A)
+      _sox_ng_add_words "${_SOX_NG_A4_VALUES[*]}"
+      return 0
+      ;;
+    --play-rate-arg)
+      _sox_ng_add_words "${_SOX_NG_PLAY_RATE_VALUES[*]}"
+      return 0
+      ;;
+    --keymap|-k|--comment|--add-comment)
+      return 0
+      ;;
+    --endian)
+      _sox_ng_add_words "${_SOX_NG_ENDIAN_VALUES[*]}"
+      return 0
+      ;;
+    --encoding|-e)
+      _sox_ng_add_words "${_SOX_NG_ENCODING_VALUES[*]}"
+      return 0
+      ;;
+    --plot)
+      _sox_ng_add_words "${_SOX_NG_PLOT_VALUES[*]}"
+      return 0
+      ;;
+    --replay-gain)
+      _sox_ng_add_words "${_SOX_NG_REPLAY_GAIN_VALUES[*]}"
+      return 0
+      ;;
+    -r|--rate)
+      _sox_ng_add_words "${_SOX_NG_RATE_VALUES[*]}"
+      return 0
+      ;;
+    -b|--bits)
+      _sox_ng_add_words "${_SOX_NG_BITS_VALUES[*]}"
+      return 0
+      ;;
+    -c|--channels)
+      _sox_ng_add_words "${_SOX_NG_CHANNEL_VALUES[*]}"
+      return 0
+      ;;
+    -v|--volume)
+      _sox_ng_add_words "${_SOX_NG_VOLUME_VALUES[*]}"
+      return 0
+      ;;
+    --comment-file|--effects-file|--temp)
+      _sox_ng_add_files
+      return 0
+      ;;
+  esac
+
+  # Complete a --long-option=value argument without dropping its prefix.
+  if [[ $cur == *=* ]]; then
+    local opt=${cur%%=*} value=${cur#*=} wordlist=
+    case $opt in
+      --combine) wordlist="${_SOX_NG_COMBINE_VALUES[*]}" ;;
+      --endian) wordlist="${_SOX_NG_ENDIAN_VALUES[*]}" ;;
+      --encoding) wordlist="${_SOX_NG_ENCODING_VALUES[*]}" ;;
+      --plot) wordlist="${_SOX_NG_PLOT_VALUES[*]}" ;;
+      --replay-gain) wordlist="${_SOX_NG_REPLAY_GAIN_VALUES[*]}" ;;
+      --type)
+        local save_cur=$cur
+        cur=$value
+        _sox_ng_type_candidates
+        for i in "${!COMPREPLY[@]}"; do COMPREPLY[$i]="$opt=${COMPREPLY[$i]}"; done
+        cur=$save_cur
+        return 0
+        ;;
+    esac
+    if [[ -n $wordlist ]]; then
+      cur=$value
+      _sox_ng_add_words "$wordlist"
+      for i in "${!COMPREPLY[@]}"; do COMPREPLY[$i]="$opt=${COMPREPLY[$i]}"; done
+      return 0
+    fi
+  fi
+
+  if [[ $cur == -* ]]; then
+    _sox_ng_add_words "${_SOX_NG_GLOBAL_OPTIONS[*]}"
+    if ((_SOX_NG_FILE_COUNT < 2)); then
+      _sox_ng_add_words "${_SOX_NG_FORMAT_OPTIONS[*]}"
+      _sox_ng_add_words '-n -d -p'
+    fi
+  else
+    if ((_SOX_NG_FILE_COUNT >= 2)); then
+      _sox_ng_add_words "${_SOX_NG_EFFECTS[*]}"
+    else
+      _sox_ng_add_files
+    fi
+  fi
+
+  # After a completed input/output pair, offer effect names even when the
+  # current word begins with a letter. Before that, preserve ordinary path completion.
+  if ((_SOX_NG_FILE_COUNT >= 2)); then
+    _sox_ng_add_words "${_SOX_NG_EFFECTS[*]}"
+  fi
+  return 0
+}
+
+complete -F _sox_ng_completion -o bashdefault -o default sox sox_ng

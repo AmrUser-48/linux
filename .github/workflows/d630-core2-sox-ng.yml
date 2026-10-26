@@ -5,8 +5,13 @@ on:
   push:
     branches:
       - master
+      - sox-ng-bash-completion
     paths:
       - .github/workflows/d630-core2-sox-ng.yml
+      - core2-packages/sox-ng.bash-completion
+      - core2-packages/sox-ng-completion-cache.py
+      - core2-packages/test-sox-ng-completion.sh
+      - sox-todo
   workflow_dispatch:
     inputs:
       source_ref:
@@ -59,6 +64,10 @@ on:
           - "4"
         default: "4"
 
+concurrency:
+  group: sox-ng-completion-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   actions: write
   contents: write
@@ -90,10 +99,13 @@ jobs:
       GH_TOKEN: ${{ github.token }}
 
     steps:
-      - name: Checkout package release metadata helper
+      - name: Checkout package scripts from the triggering branch
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: ${{ github.ref }}
+          sparse-checkout: |
+            core2-packages
+          sparse-checkout-cone-mode: true
 
       - name: Install Debian 12 build dependencies and all available codec development libraries
         shell: bash
@@ -238,7 +250,7 @@ jobs:
           Package: sox-ng
           Architecture: any
           Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-          Recommends: ffmpeg, curl
+          Recommends: bash-completion, ffmpeg, curl, python3
           Conflicts: sox
           Replaces: sox
           Description: Swiss Army knife of sound processing (SoX NG)
@@ -264,6 +276,10 @@ jobs:
           	# Runtime-only package: no development headers, static API docs, or installed upstream docs.
           	rm -rf debian/tmp/usr/include debian/tmp/usr/share/man/man3
           	rm -rf debian/tmp/usr/share/doc/sox-ng
+          	# Install cached, context-aware Bash completion and its generator.
+          	install -Dm644 "$$GITHUB_WORKSPACE/core2-packages/sox-ng.bash-completion" debian/tmp/usr/share/bash-completion/completions/sox
+          	install -Dm644 "$$GITHUB_WORKSPACE/core2-packages/sox-ng.bash-completion" debian/tmp/usr/share/bash-completion/completions/sox_ng
+          	install -Dm755 "$$GITHUB_WORKSPACE/core2-packages/sox-ng-completion-cache.py" debian/tmp/usr/lib/sox-ng/sox-ng-completion-cache
 
           override_dh_auto_test:
           	@echo "Upstream source-tree tests skipped; package-installed Opus tests run in CI."
@@ -303,6 +319,9 @@ jobs:
           usr/bin/*
           usr/share/man/man1/*
           usr/share/man/man7/*
+          usr/share/bash-completion/completions/sox
+          usr/share/bash-completion/completions/sox_ng
+          usr/lib/sox-ng/sox-ng-completion-cache
           EOF
           : > debian/sox-ng.docs
           for doc in INSTALL ChangeLog README README.md README-sox_ng.md COPYING; do
@@ -458,6 +477,10 @@ jobs:
           fi
           apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
 
+          bash -n "$GITHUB_WORKSPACE/core2-packages/sox-ng.bash-completion"
+          bash -n "$GITHUB_WORKSPACE/core2-packages/test-sox-ng-completion.sh"
+          SOX_NG_COMPLETION_FILE=/usr/share/bash-completion/completions/sox bash "$GITHUB_WORKSPACE/core2-packages/test-sox-ng-completion.sh"
+
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --enable-replace "* ]]; then
             SOX_CMD=sox
             SOXI_CMD=soxi
@@ -474,7 +497,13 @@ jobs:
 
           TEST_DIR="$(mktemp -d)"
           trap 'rm -rf "$TEST_DIR"' EXIT
-          "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 0.5 sine 440
+          "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 3 sine 440
+          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/effects.wav" gain -3 highpass 80 lowpass 15000 rate 44100 dither
+          test -s "$TEST_DIR/effects.wav"
+          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/loudness.wav" loudness -10 65
+          test -s "$TEST_DIR/loudness.wav"
+          "$SOX_CMD" "$TEST_DIR/input.wav" -n stat -e >"$TEST_DIR/ebur128.log" 2>&1
+          grep -Eiq "ebur128|loudness|LUFS" "$TEST_DIR/ebur128.log"
           "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/encoded.opus"
           "$SOX_CMD" "$TEST_DIR/encoded.opus" "$TEST_DIR/decoded.wav"
           test -s "$TEST_DIR/encoded.opus"
@@ -491,6 +520,7 @@ jobs:
           retention-days: 7
 
       - name: Publish Core 2 SoX NG release
+        if: github.ref == 'refs/heads/master'
         shell: bash
         run: |
           set -euo pipefail
@@ -503,10 +533,10 @@ jobs:
           - Stable upstream source: SoX NG ${UPSTREAM_VERSION}, ref ${SOURCE_REF}, commit ${SOURCE_COMMIT}.
           - Native Opus encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}.
           - CI installed the package and verified direct SoX NG WAV-to-Opus encoding followed by Opus-to-WAV decoding; FFmpeg was not used for encoding.
-          - Conventional commands: `sox`, `soxi`, `play`, and `rec`.
+          - Conventional commands: \`sox\`, \`soxi\`, \`play\`, and \`rec\`.
           - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
-          - Dynamic format handlers: enabled by `--with-dyn-default`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
-          - Build jobs: ${BUILD_JOBS}; `DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}`.
+          - Dynamic format handlers: enabled by \`--with-dyn-default\`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
+          - Build jobs: ${BUILD_JOBS}; \`DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}\`.
           EOF
 
           export PACKAGE=sox-ng
