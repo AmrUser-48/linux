@@ -261,7 +261,7 @@ jobs:
           	dh_auto_install --destdir=debian/tmp
           	install -d debian/tmp/usr/share/bash-completion/completions
           	install -m 0644 "$$GITHUB_WORKSPACE/core2-packages/completions/sox-ng" debian/tmp/usr/share/bash-completion/completions/sox
-          	for command in sox_ng soxi soxi_ng play rec; do ln -sfn sox "debian/tmp/usr/share/bash-completion/completions/$command"; done
+          	for command in sox_ng soxi soxi_ng play rec; do ln -sfn sox "debian/tmp/usr/share/bash-completion/completions/$$command"; done
           	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.a
           	find debian/tmp/usr/lib -type f -name '*.la' -delete
           	find debian/tmp/usr/lib -type l -name '*.la' -delete
