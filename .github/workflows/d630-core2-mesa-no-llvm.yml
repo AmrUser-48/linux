@@ -1,11 +1,12 @@
 name: Build D630 Mesa without LLVM
-run-name: "D630 Mesa no-LLVM rebuild (fix Crocus validator; enforce Core 2 C/C++ flags)"
+run-name: "D630 Mesa no-LLVM rebuild (full safe-aggressive Core 2 C/C++ and linker flags)"
 
 on:
   push:
     branches: [master]
     paths:
       - ".github/workflows/d630-core2-mesa-no-llvm.yml"
+      - ".github/workflows/d630-core2-package.yml"
   workflow_dispatch:
 
 permissions:
