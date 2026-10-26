@@ -1,5 +1,5 @@
 name: Build D630 Mesa without LLVM
-run-name: "D630 Mesa no-LLVM rebuild (full safe-aggressive Core 2 C/C++ and linker flags)"
+run-name: "D630 Mesa no-LLVM | Core 2 -O3 flags | optimized linker flags"
 
 on:
   push:
@@ -11,6 +11,11 @@ on:
 
 permissions:
   contents: read
+
+# The reusable package workflow's SOURCE_PACKAGE=mesa profile applies and audits:
+# -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize
+# and -Wl,-O1 -Wl,--as-needed, while retaining Debian hardening flags.
+# Editing this workflow intentionally triggers a fresh no-LLVM Mesa rebuild on master.
 
 jobs:
   mesa:
