@@ -81,7 +81,9 @@ jobs:
           SOURCES
 
           apt-get update
-          apt-get install -y --no-install-recommends             build-essential ca-certificates debhelper devscripts dpkg-dev             fakeroot file pkg-config quilt xz-utils zstd
+          apt-get install -y --no-install-recommends \\
+            build-essential ca-certificates debhelper devscripts dpkg-dev \\
+            fakeroot file pkg-config quilt xz-utils zstd
           apt-get build-dep -y "$SOURCE_PACKAGE"
 
           cd "$SOURCE_ROOT"
@@ -95,7 +97,10 @@ jobs:
           BASE_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
           RUN_STAMP="$(date -u +%Y%m%d%H%M%S)"
           VARIANT_VERSION="$BASE_VERSION+core2safe1~$RUN_STAMP"
-          DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com"             dch --file "$SOURCE_DIR/debian/changelog"               --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution               "Core 2 safe-aggressive build; CFLAGS and CXXFLAGS use -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize."
+          DEBFULLNAME="AmrUser-48" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \\
+            dch --file "$SOURCE_DIR/debian/changelog" \\
+              --newversion "$VARIANT_VERSION" --distribution bookworm --force-distribution \\
+              "Core 2 safe-aggressive build; CFLAGS and CXXFLAGS use -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize."
 
           ACTUAL_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
           if [[ "$ACTUAL_VERSION" != "$VARIANT_VERSION" ]]; then
@@ -115,7 +120,9 @@ jobs:
             echo "Build parallelism: 2"
           } > "$ARTIFACT_ROOT/BUILD-INFO.txt"
 
-          find "$SOURCE_ROOT" -maxdepth 1 -type f             \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \)             -print0 | sort -z | xargs -0 -r sha256sum > "$ARTIFACT_ROOT/SOURCE-SHA256SUMS"
+          find "$SOURCE_ROOT" -maxdepth 1 -type f \\
+            \\( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' \\) \\
+            -print0 | sort -z | xargs -0 -r sha256sum > "$ARTIFACT_ROOT/SOURCE-SHA256SUMS"
 
           echo "SOURCE_PACKAGE=$SOURCE_PACKAGE" >> "$GITHUB_ENV"
           echo "TARGET_PACKAGE=$TARGET_PACKAGE" >> "$GITHUB_ENV"
@@ -126,7 +133,7 @@ jobs:
 
           BUILD_USER=core2build
           if ! id "$BUILD_USER" >/dev/null 2>&1; then
-            useradd --create-home --shell /bin/bash "$BUILD_USER"
+            useradd --create-home --user-group --shell /bin/bash "$BUILD_USER"
           fi
           chown -R "$BUILD_USER:$BUILD_USER" "$WORK_ROOT"
 
@@ -161,7 +168,13 @@ jobs:
           BUILD_USER=core2build
           cd "$SOURCE_DIR"
 
-          if runuser --preserve-environment --user "$BUILD_USER" -- env             HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER"             DEB_CFLAGS_APPEND="$COMMON_FLAGS"             DEB_CXXFLAGS_APPEND="$COMMON_FLAGS"             DEB_BUILD_OPTIONS="parallel=2 noautodbgsym"             DH_VERBOSE=1             dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 | tee "$GITHUB_WORKSPACE/package-artifacts/build.log"; then
+          if runuser --preserve-environment --user "$BUILD_USER" -- env \\
+            HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \\
+            DEB_CFLAGS_APPEND="$COMMON_FLAGS" \\
+            DEB_CXXFLAGS_APPEND="$COMMON_FLAGS" \\
+            DEB_BUILD_OPTIONS="parallel=2 noautodbgsym" \\
+            DH_VERBOSE=1 \\
+            dpkg-buildpackage -rfakeroot -us -uc -b -j2 2>&1 | tee "$GITHUB_WORKSPACE/package-artifacts/build.log"; then
             echo "Binary build completed for $TARGET_PACKAGE."
           else
             echo "::error::Debian binary package build failed for $TARGET_PACKAGE."
@@ -183,7 +196,8 @@ jobs:
               *) echo "::error::Unexpected package architecture $PACKAGE_ARCH in $deb."; exit 1 ;;
             esac
             cp "$deb" "$GITHUB_WORKSPACE/package-artifacts/"
-            printf '%s\t%s\t%s\n' "$PACKAGE_NAME" "$PACKAGE_VERSION" "$PACKAGE_ARCH"               >> "$GITHUB_WORKSPACE/package-artifacts/PACKAGES.tsv"
+            printf '%s\\t%s\\t%s\\n' "$PACKAGE_NAME" "$PACKAGE_VERSION" "$PACKAGE_ARCH" \\
+              >> "$GITHUB_WORKSPACE/package-artifacts/PACKAGES.tsv"
           done < <(find "$SOURCE_ROOT" -maxdepth 1 -type f -name '*.deb' -print0)
 
           if [[ "$PACKAGE_COUNT" -eq 0 ]]; then
