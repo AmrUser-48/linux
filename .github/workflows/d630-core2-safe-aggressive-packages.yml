@@ -21,6 +21,7 @@ jobs:
         include:
           - target: mesa
             source: mesa
+            expected: "libgl1-mesa-dri"
           - target: libdrm
             source: libdrm
             expected: "libdrm-common libdrm2 libdrm-intel1"
@@ -35,18 +36,25 @@ jobs:
             expected: "libavcodec59"
           - target: mpv
             source: mpv
+            expected: "mpv"
           - target: neovim
             source: neovim
+            expected: "neovim"
           - target: bash
             source: bash
+            expected: "bash"
           - target: sed
             source: sed
+            expected: "sed"
           - target: grep
             source: grep
+            expected: "grep"
           - target: gawk
             source: gawk
+            expected: "gawk"
           - target: tmux
             source: tmux
+            expected: "tmux"
           - target: zlib
             source: zlib
             expected: "zlib1g"
@@ -103,6 +111,7 @@ jobs:
       LANG: C.UTF-8
       LC_ALL: C.UTF-8
       DEB_BUILD_OPTIONS: "parallel=2 noautodbgsym"
+      GOAMD64: "v1"
 
     steps:
       - name: Prepare Debian Bookworm source repositories and build tools
@@ -166,6 +175,7 @@ jobs:
             echo "Requested CFLAGS and CXXFLAGS: -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
             echo "Requested LDFLAGS append: -Wl,-O1 -Wl,--as-needed"
             echo "Flag injection: DEB_CFLAGS_APPEND, DEB_CXXFLAGS_APPEND, and DEB_LDFLAGS_APPEND; Debian default hardening flags are retained."
+            echo "Go compiler baseline where applicable: GOAMD64=$GOAMD64 (Core 2-compatible x86-64 baseline)."
             echo "Build dependencies: installed from Debian Bookworm source metadata with apt-get build-dep."
             echo "Build parallelism: 2"
           } > "$ARTIFACT_ROOT/BUILD-INFO.txt"
@@ -304,6 +314,20 @@ jobs:
                 exit 1
               fi
               cp "$CORE2_RUSTC_LOG" "$GITHUB_WORKSPACE/package-artifacts/RUSTC-INVOCATIONS.txt"
+              ;;
+            openssl)
+              LIBCRYPTO_FOUND=false
+              for deb in "$GITHUB_WORKSPACE/package-artifacts"/*.deb; do
+                [[ "$(dpkg-deb -f "$deb" Package)" == "libssl3" ]] || continue
+                if dpkg-deb --contents "$deb" | grep -Eq '/libcrypto\\.so\\.3([[:space:]]|$)'; then
+                  LIBCRYPTO_FOUND=true
+                  break
+                fi
+              done
+              if [[ "$LIBCRYPTO_FOUND" != "true" ]]; then
+                echo "::error::OpenSSL build did not produce libssl3 containing libcrypto.so.3."
+                exit 1
+              fi
               ;;
           esac
 
