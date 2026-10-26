@@ -7,6 +7,7 @@ on:
       - master
     paths:
       - .github/workflows/d630-core2-sox-ng.yml
+      - core2-packages/completions/sox-ng
   workflow_dispatch:
     inputs:
       source_ref:
@@ -239,6 +240,7 @@ jobs:
           Architecture: any
           Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
           Recommends: ffmpeg, curl
+          Suggests: bash-completion
           Conflicts: sox
           Replaces: sox
           Description: Swiss Army knife of sound processing (SoX NG)
@@ -258,6 +260,9 @@ jobs:
 
           override_dh_auto_install:
           	dh_auto_install --destdir=debian/tmp
+          	install -d debian/tmp/usr/share/bash-completion/completions
+          	install -m 0644 "$GITHUB_WORKSPACE/core2-packages/completions/sox-ng" debian/tmp/usr/share/bash-completion/completions/sox
+          	for command in sox_ng soxi soxi_ng play rec; do ln -sfn sox "debian/tmp/usr/share/bash-completion/completions/$command"; done
           	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.so debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox_ng.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsox.a
           	find debian/tmp/usr/lib -type f -name '*.la' -delete
           	find debian/tmp/usr/lib -type l -name '*.la' -delete
@@ -303,6 +308,7 @@ jobs:
           usr/bin/*
           usr/share/man/man1/*
           usr/share/man/man7/*
+          usr/share/bash-completion/completions/*
           EOF
           : > debian/sox-ng.docs
           for doc in INSTALL ChangeLog README README.md README-sox_ng.md COPYING; do
@@ -458,6 +464,14 @@ jobs:
           fi
           apt-get install -y "${LIB_DEB[0]}" "${SOX_DEB[0]}"
 
+          for command in sox sox_ng soxi soxi_ng play rec; do
+            test -r "/usr/share/bash-completion/completions/$command"
+          done
+          bash -n /usr/share/bash-completion/completions/sox
+          bash -c 'source /usr/share/bash-completion/completions/sox; COMP_WORDS=(sox --help-effect r); COMP_CWORD=2; _sox_ng_complete; [[ " ${COMPREPLY[*]} " == *" rate "* ]]'
+          bash -c 'source /usr/share/bash-completion/completions/sox; COMP_WORDS=(sox -t o); COMP_CWORD=2; _sox_ng_complete; [[ " ${COMPREPLY[*]} " == *" ogg "* ]]'
+          echo "PASS: Bash completions for SoX, SoXI, play, and rec options, effects, and formats."
+
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --enable-replace "* ]]; then
             SOX_CMD=sox
             SOXI_CMD=soxi
@@ -504,6 +518,7 @@ jobs:
           - Native Opus encoder backport: upstream commit ${OPUS_ENCODER_COMMIT}.
           - CI installed the package and verified direct SoX NG WAV-to-Opus encoding followed by Opus-to-WAV decoding; FFmpeg was not used for encoding.
           - Conventional commands: `sox`, `soxi`, `play`, and `rec`.
+          - Bash completion covers command options, common format/rate/channel/bit-depth values, effects, and audio-file path completion for `sox`, `sox_ng`, `soxi`, `soxi_ng`, `play`, and `rec`; `bash-completion` is suggested.
           - Configure options: ${SOX_NG_CONFIGURE_FLAGS}
           - Dynamic format handlers: enabled by `--with-dyn-default`; this changes where handlers are loaded but does not guarantee a smaller total installed footprint.
           - Build jobs: ${BUILD_JOBS}; `DEB_BUILD_OPTIONS=${DEB_BUILD_OPTIONS}`.

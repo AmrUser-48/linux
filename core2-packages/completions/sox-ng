@@ -1,0 +1,100 @@
+# Smart Bash completion for SoX NG commands.
+# Installed by the Core 2 SoX NG Debian package.
+
+_sox_ng_file_completions() {
+    local cur="$1" path
+    local -a candidates audio_candidates
+    mapfile -t candidates < <(compgen -f -- "$cur")
+    for path in "${candidates[@]}"; do
+        if [[ -d "$path" || "${path,,}" =~ \.(8svx|aif|aiff|aifc|au|avr|caf|cdda|cdr|cv|dat|dvms|f32|f64|flac|fssd|gsm|hcom|ircam|la|lu|maud|mp2|mp3|nist|oga|ogg|opus|paf|prc|raw|s1|s2|s3|s4|sf|sln|smp|snd|sndr|sox|sph|sds|txw|u1|u2|u3|u4|ub|ul|uw|vms|voc|vorbis|vox|w64|wav|wave|wma|wv|wvc|xi)$ ]]; then
+            audio_candidates+=("$path")
+        fi
+    done
+    if (("${#audio_candidates[@]}")); then
+        COMPREPLY=("${audio_candidates[@]}")
+    else
+        COMPREPLY=("${candidates[@]}")
+    fi
+    compopt -o filenames 2>/dev/null || true
+}
+
+_sox_ng_complete() {
+    local cur prev cmd word i positional=0 skip_next=0 seen_effect=0
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]:-}"
+    cmd="${COMP_WORDS[0]##*/}"
+    COMPREPLY=()
+
+    local options="-h --help --version -V -v --volume -t --type --input-type --output-type -r --rate -c --channels -b --bits -e --encoding -B -L -X -D --no-dither -G --guard --norm --combine -m -M --buffer --input-buffer --effects-file --help-effect --help-format --interactive --magic --multi-threaded --single-threaded --ignore-length --clobber --no-clobber --temp --play-rate-arg"
+    local soxi_options="-V -T -r -c -s -d -D -b -B -e -a -p"
+    local formats="8svx aif aiff aifc al amb amr au avr caf cdda cdr cv dat dvms f32 f64 fap flac fssd gsm hcom ircam la lu maud mp2 mp3 nist oga ogg opus paf prc raw s1 s2 s3 s4 sf sln smp snd sndr sox sph sds txw u1 u2 u3 u4 ub ul uw vms voc vorbis vox w64 wav wave wma wv wvc xi"
+    local effects="allpass band bandpass bandreject bass bend biquad chorus channels compand contrast dcshift deemph delay dither divide delta downsample earwax echo echos equalizer fade fir firfit flanger gain highpass hilbert ladspa loudness lowpass mcompand noiseprof noisered norm oops overdrive pad phaser pitch rate remix repeat reverb reverse riaa silence sinc spectrogram speed splice stats stat stretch swap synth tempo treble tremolo trim upsample vad vol vibrato"
+
+    case "$cmd" in
+        soxi|soxi_ng)
+            if [[ "$cur" == -* ]]; then
+                COMPREPLY=( $(compgen -W "$soxi_options" -- "$cur") )
+            else
+                _sox_ng_file_completions "$cur"
+            fi
+            return 0
+            ;;
+    esac
+
+    case "$prev" in
+        -t|--type|--input-type|--output-type)
+            COMPREPLY=( $(compgen -W "$formats" -- "$cur") ); return 0 ;;
+        -r|--rate)
+            COMPREPLY=( $(compgen -W "8000 11025 12000 16000 22050 24000 32000 44100 48000 88200 96000 176400 192000" -- "$cur") ); return 0 ;;
+        -c|--channels)
+            COMPREPLY=( $(compgen -W "1 2 4 6 8" -- "$cur") ); return 0 ;;
+        -b|--bits)
+            COMPREPLY=( $(compgen -W "8 16 24 32 64" -- "$cur") ); return 0 ;;
+        --combine)
+            COMPREPLY=( $(compgen -W "concatenate merge mix mix-power multiply sequence" -- "$cur") ); return 0 ;;
+        --help-effect)
+            COMPREPLY=( $(compgen -W "$effects" -- "$cur") ); return 0 ;;
+        --help-format)
+            COMPREPLY=( $(compgen -W "$formats" -- "$cur") ); return 0 ;;
+    esac
+    if [[ "$cur" == --help-effect=* ]]; then
+        word="${cur#*=}"
+        COMPREPLY=( $(compgen -W "$effects" -- "$word") )
+        for i in "${!COMPREPLY[@]}"; do COMPREPLY[$i]="--help-effect=${COMPREPLY[$i]}"; done
+        return 0
+    elif [[ "$cur" == --help-format=* ]]; then
+        word="${cur#*=}"
+        COMPREPLY=( $(compgen -W "$formats" -- "$word") )
+        for i in "${!COMPREPLY[@]}"; do COMPREPLY[$i]="--help-format=${COMPREPLY[$i]}"; done
+        return 0
+    fi
+
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $(compgen -W "$options" -- "$cur") )
+        return 0
+    fi
+
+    for ((i=1; i<COMP_CWORD; i++)); do
+        word="${COMP_WORDS[i]}"
+        if ((skip_next)); then skip_next=0; continue; fi
+        case "$word" in
+            -t|--type|--input-type|--output-type|-r|--rate|-c|--channels|-b|--bits|-e|--encoding|-v|--volume|--buffer|--input-buffer|--combine|--effects-file|--temp|--play-rate-arg)
+                skip_next=1; continue ;;
+            -*|--*) continue ;;
+        esac
+        positional=$((positional + 1))
+        case " $effects " in *" $word "*) seen_effect=1 ;; esac
+    done
+
+    if ((seen_effect)); then
+        COMPREPLY=( $(compgen -W "$effects" -- "$cur") )
+    elif [[ "$cmd" == rec ]] && ((positional >= 1)); then
+        COMPREPLY=( $(compgen -W "$effects" -- "$cur") )
+    elif ((positional >= 2)); then
+        COMPREPLY=( $(compgen -W "$effects" -- "$cur") )
+    else
+        _sox_ng_file_completions "$cur"
+    fi
+}
+
+complete -o default -o filenames -F _sox_ng_complete sox sox_ng soxi soxi_ng play rec
