@@ -1,0 +1,49 @@
+name: Core 2 GCC toolchain packages
+run-name: "Core2 GCC toolchain / ${{ github.ref_name }} / #${{ github.run_number }}"
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-gcc-toolchain.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  gcc-12:
+    name: Build GCC 12 source family (gcc-12, cpp-12, runtime and development packages)
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: gcc-12
+      force_rebuild: false
+      refresh_index: false
+
+  gcc-defaults:
+    name: Build default compiler packages (gcc, cpp)
+    needs: gcc-12
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: gcc-defaults
+      force_rebuild: false
+      refresh_index: false
+
+  refresh-package-index:
+    name: Refresh Core 2 package index
+    needs:
+      - gcc-12
+      - gcc-defaults
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh Core 2 release index
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml \\
+            --repo "$GITHUB_REPOSITORY" --ref master
+          echo "Dispatched package-index refresh."
