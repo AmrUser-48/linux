@@ -253,6 +253,18 @@ jobs:
           chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-tree"
 
           cd "$SOURCE_DIR"
+          # Debian gcc-12's debian/rules.unpack concatenates SOURCE_DIR with
+          # "debian/..." without inserting a slash. The workflow output is an
+          # absolute directory without a trailing slash, so normalize it only
+          # for this source package before invoking dpkg-buildpackage.
+          if [[ "$PACKAGE" == "gcc-12" ]]; then
+            export SOURCE_DIR="${SOURCE_DIR%/}/"
+            test -s "${SOURCE_DIR}debian/dummy.texi" || {
+              echo "::error::GCC source-directory normalization failed; debian/dummy.texi is missing."
+              exit 1
+            }
+            echo "GCC packaging SOURCE_DIR normalized to: $SOURCE_DIR"
+          fi
           if [[ "$PACKAGE" == "libseccomp" ]]; then
             # Keep setuptools from placing the extension inside a .egg directory.
             # Debian's python3-seccomp.install expects seccomp.cpython-*.so directly
