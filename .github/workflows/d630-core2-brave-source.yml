@@ -808,7 +808,16 @@ jobs:
           }
 
           ASSETS="$RUNNER_TEMP/brave-state-cleanup-assets.tsv"
-          gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | [.id, .name] | @tsv' > "$ASSETS"
+          # gh release view exposes GraphQL node IDs in assets[].id. The REST
+          # DELETE endpoint requires numeric REST asset IDs; enumerate the assets
+          # through the release-assets REST endpoint to avoid HTTP 404 on pruning.
+          RELEASE_ID="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" --jq '.id')"
+          if [[ ! "$RELEASE_ID" =~ ^[0-9]+$ ]]; then
+            echo "::error::Could not resolve a numeric REST release ID for $STATE_TAG."
+            exit 1
+          fi
+          gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID/assets?per_page=100" \
+            --jq '.[] | [.id, .name] | @tsv' > "$ASSETS"
           awk -F '\t' -v cp="$PRESERVE_CHECKPOINT" '$2 == "state-c" cp "-manifest.txt" {found=1} END {exit !found}' "$ASSETS" || {
             echo "::error::Remote snapshot manifest is missing; preserving all previous checkpoints."
             exit 1
