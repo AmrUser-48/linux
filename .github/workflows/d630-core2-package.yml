@@ -133,18 +133,35 @@ jobs:
           SOURCE_PACKAGE: ${{ steps.resolve_source.outputs.source_package }}
         run: |
           set -euxo pipefail
+          linker_flags=""
           case "$SOURCE_PACKAGE" in
-            lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils|zlib|libjpeg-turbo|pixman|tigervnc) opt="-O3" ;;
-            *) opt="-O2" ;;
+            mesa)
+              opt="-O3"
+              flags="-O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+              linker_flags="-Wl,-O1 -Wl,--as-needed"
+              ;;
+            lame|fftw3|ffmpeg|mpv|7zip|zstd|xz-utils|zlib|libjpeg-turbo|pixman|tigervnc)
+              opt="-O3"
+              flags="$opt -march=core2 -mtune=core2"
+              ;;
+            *)
+              opt="-O2"
+              flags="$opt -march=core2 -mtune=core2"
+              ;;
           esac
-          flags="$opt -march=core2 -mtune=core2"
           {
             echo "DEB_CFLAGS_MAINT_APPEND=$flags"
             echo "DEB_CXXFLAGS_MAINT_APPEND=$flags"
             echo "DEB_FFLAGS_MAINT_APPEND=$flags"
             echo "CORE2_OPT_LEVEL=$opt"
+            if [[ -n "$linker_flags" ]]; then
+              echo "DEB_LDFLAGS_MAINT_APPEND=$linker_flags"
+            fi
           } >> "$GITHUB_ENV"
           echo "Using optimization profile: $flags"
+          if [[ -n "$linker_flags" ]]; then
+            echo "Using linker flag append: $linker_flags"
+          fi
       - name: Fetch official Debian source and build dependencies
         id: source
         shell: bash
@@ -323,7 +340,7 @@ jobs:
               raise SystemExit("Expected exactly one Debian C/C++ maintainer-flag override")
           rules = rules.replace(
               core2_flag_anchor,
-              "DEB_CFLAGS_MAINT_APPEND='-Wall -march=core2 -mtune=core2' DEB_CXXFLAGS_MAINT_APPEND='-Wall -march=core2 -mtune=core2' dpkg-buildflags --export=configure",
+              "DEB_CFLAGS_MAINT_APPEND='-Wall -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize' DEB_CXXFLAGS_MAINT_APPEND='-Wall -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize' DEB_LDFLAGS_MAINT_APPEND='-Wl,-O1 -Wl,--as-needed' dpkg-buildflags --export=configure",
           )
 
           path.write_text(rules.replace(anchor, insertion + anchor), encoding="utf-8")
@@ -589,7 +606,8 @@ jobs:
 
           CFLAGS="$(dpkg-buildflags --get CFLAGS)"
           CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
-          printf 'CFLAGS=%s\nCXXFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" \
+          LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
+          printf 'CFLAGS=%s\nCXXFLAGS=%s\nLDFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" "$LDFLAGS" \
             | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
           grep -q -- '-march=core2' <<<"$CFLAGS"
           grep -q -- '-mtune=core2' <<<"$CFLAGS"
@@ -597,6 +615,26 @@ jobs:
           grep -q -- '-mtune=core2' <<<"$CXXFLAGS"
           grep -q -- "$CORE2_OPT_LEVEL" <<<"$CFLAGS"
           grep -q -- "$CORE2_OPT_LEVEL" <<<"$CXXFLAGS"
+          if [[ "$PACKAGE" == "mesa" ]]; then
+            for flag in -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize; do
+              grep -Fq -- "$flag" <<<"$CFLAGS" || {
+                echo "::error::Mesa effective CFLAGS omit requested flag: $flag"
+                exit 1
+              }
+              grep -Fq -- "$flag" <<<"$CXXFLAGS" || {
+                echo "::error::Mesa effective CXXFLAGS omit requested flag: $flag"
+                exit 1
+              }
+            done
+            grep -Fq -- '-Wl,-O1' <<<"$LDFLAGS" || {
+              echo "::error::Mesa effective LDFLAGS omit -Wl,-O1"
+              exit 1
+            }
+            grep -Fq -- '-Wl,--as-needed' <<<"$LDFLAGS" || {
+              echo "::error::Mesa effective LDFLAGS omit -Wl,--as-needed"
+              exit 1
+            }
+          fi
 
           {
             echo "package=$PACKAGE"
@@ -729,13 +767,14 @@ jobs:
           # Verify flags at the actual dh_auto_configure invocation, not just
           # dpkg-buildflags in the outer workflow shell.
           if [[ "$PACKAGE" == "mesa" ]]; then
-            if ! grep -Eq 'CFLAGS="[^"]*-march=core2[^"]*-mtune=core2[^"]*"' "$BUILD_LOG_PATH"; then
-              echo "::error::Mesa CFLAGS lost -march=core2 -mtune=core2 in Debian rules"
-              exit 1
-            fi
-            if ! grep -Eq 'CXXFLAGS="[^"]*-march=core2[^"]*-mtune=core2[^"]*"' "$BUILD_LOG_PATH"; then
-              echo "::error::Mesa CXXFLAGS lost -march=core2 -mtune=core2 in Debian rules"
-              exit 1
+            for flag in -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize; do
+              if ! grep -Fq -- "$flag" "$BUILD_LOG_PATH"; then
+                echo "::error::Mesa build log does not show requested compiler flag: $flag"
+                exit 1
+              fi
+            done
+            if ! grep -Fq -- '-Wl,-O1' "$BUILD_LOG_PATH" || ! grep -Fq -- '-Wl,--as-needed' "$BUILD_LOG_PATH"; then
+              echo "::warning::Mesa build log did not expose both linker flags in its printed commands; effective dpkg-buildflags values were audited before compilation."
             fi
           fi
 
