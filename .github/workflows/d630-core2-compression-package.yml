@@ -1,0 +1,285 @@
+name: Core 2 compression package build
+run-name: "Core 2 compression package: ${{ inputs.package }}"
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        description: Debian Bookworm source package to rebuild with the safe-aggressive profile
+        required: true
+        type: string
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ inputs.package }} using the full Core 2 safe-aggressive flags
+    runs-on: ubuntu-22.04
+    timeout-minutes: 240
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      DEB_BUILD_OPTIONS: "parallel=2 noautodbgsym"
+    outputs:
+      package_version: ${{ steps.source.outputs.package_version }}
+      source_version: ${{ steps.source.outputs.source_version }}
+      release_tag: ${{ steps.meta.outputs.release_tag }}
+
+    steps:
+      - name: Install Debian packaging tools and Bookworm source repositories
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+          deb http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          deb-src http://deb.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            build-essential ca-certificates debhelper devscripts dpkg-dev fakeroot \
+            file jq pkg-config quilt xz-utils zstd python3
+          mkdir -p "$GITHUB_WORKSPACE/source-root" "$GITHUB_WORKSPACE/release-artifacts"
+
+      - name: Validate package and select the exact safe-aggressive profile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          set -Eeuo pipefail
+          case "$PACKAGE" in
+            7zip|xz-utils|zstd|lz4|gzip|zlib) ;;
+            *) echo "::error::Package is not in the compression train: $PACKAGE"; exit 1 ;;
+          esac
+
+          COMMON_FLAGS="-O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+          AGGRESSIVE_LDFLAGS="-Wl,-O1 -Wl,--as-needed"
+          {
+            echo "DEB_CFLAGS_MAINT_APPEND=$COMMON_FLAGS"
+            echo "DEB_CXXFLAGS_MAINT_APPEND=$COMMON_FLAGS"
+            echo "DEB_FFLAGS_MAINT_APPEND=$COMMON_FLAGS"
+            echo "DEB_LDFLAGS_MAINT_APPEND=$AGGRESSIVE_LDFLAGS"
+            echo "CORE2_OPT_LEVEL=-O3"
+            echo "CORE2_COMMON_FLAGS=$COMMON_FLAGS"
+            echo "CORE2_AGGRESSIVE_LDFLAGS=$AGGRESSIVE_LDFLAGS"
+          } >> "$GITHUB_ENV"
+          echo "CFLAGS/CXXFLAGS: $COMMON_FLAGS"
+          echo "LDFLAGS append: $AGGRESSIVE_LDFLAGS"
+          echo "Debian hardening flags are retained through dpkg-buildflags append variables."
+
+      - name: Fetch the official Debian source and build dependencies
+        id: source
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          set -Eeuo pipefail
+          apt-get build-dep -y "$PACKAGE"
+          cd "$GITHUB_WORKSPACE/source-root"
+          apt-get source "$PACKAGE"
+          SOURCE_DIR="$(find "$GITHUB_WORKSPACE/source-root" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          if [[ -z "$SOURCE_DIR" || ! -s "$SOURCE_DIR/debian/changelog" ]]; then
+            echo "::error::Could not locate the official Debian source tree for $PACKAGE."
+            exit 1
+          fi
+
+          SOURCE_VERSION="$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)"
+          BUILD_STAMP="$(date -u +%Y%m%d%H%M%S)"
+          PACKAGE_VERSION="${SOURCE_VERSION}+core2safe1~${BUILD_STAMP}"
+          cd "$SOURCE_DIR"
+          DEBFULLNAME="Core 2 Build" DEBEMAIL="66784815+AmrUser-48@users.noreply.github.com" \
+            dch --newversion "$PACKAGE_VERSION" --distribution bookworm --force-distribution \
+              "Rebuild for Intel Core 2 using safe-aggressive C/C++ and linker flags."
+
+          test "$(dpkg-parsechangelog -l "$SOURCE_DIR/debian/changelog" -S Version)" = "$PACKAGE_VERSION"
+          CFLAGS="$(dpkg-buildflags --get CFLAGS)"
+          CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)"
+          LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
+          printf 'CFLAGS=%s\nCXXFLAGS=%s\nLDFLAGS=%s\n' "$CFLAGS" "$CXXFLAGS" "$LDFLAGS" \
+            | tee "$GITHUB_WORKSPACE/core2-build-flags.txt"
+
+          for flag in -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize; do
+            grep -Fq -- "$flag" <<<"$CFLAGS" || { echo "::error::CFLAGS missing $flag"; exit 1; }
+            grep -Fq -- "$flag" <<<"$CXXFLAGS" || { echo "::error::CXXFLAGS missing $flag"; exit 1; }
+          done
+          for flag in -Wl,-O1 -Wl,--as-needed; do
+            grep -Fq -- "$flag" <<<"$LDFLAGS" || { echo "::error::LDFLAGS missing $flag"; exit 1; }
+          done
+
+          {
+            echo "package_version=$PACKAGE_VERSION"
+            echo "source_version=$SOURCE_VERSION"
+            echo "source_dir=$SOURCE_DIR"
+          } >> "$GITHUB_OUTPUT"
+          echo "Resolved source: $PACKAGE $SOURCE_VERSION"
+          echo "Built package version: $PACKAGE_VERSION"
+
+      - name: Compile Debian binary packages
+        id: compile
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          SOURCE_DIR: ${{ steps.source.outputs.source_dir }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
+          SOURCE_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -Eeuo pipefail
+          BUILD_USER=core2build
+          id "$BUILD_USER" >/dev/null 2>&1 || useradd --create-home --shell /bin/bash "$BUILD_USER"
+          chown -R "$BUILD_USER:$BUILD_USER" "$GITHUB_WORKSPACE/source-root"
+          cd "$SOURCE_DIR"
+          BUILD_LOG="$GITHUB_WORKSPACE/${PACKAGE}-build.log"
+
+          if runuser --preserve-environment --user "$BUILD_USER" -- env \
+              HOME="/home/$BUILD_USER" USER="$BUILD_USER" LOGNAME="$BUILD_USER" \
+              DEB_CFLAGS_MAINT_APPEND="$DEB_CFLAGS_MAINT_APPEND" \
+              DEB_CXXFLAGS_MAINT_APPEND="$DEB_CXXFLAGS_MAINT_APPEND" \
+              DEB_FFLAGS_MAINT_APPEND="$DEB_FFLAGS_MAINT_APPEND" \
+              DEB_LDFLAGS_MAINT_APPEND="$DEB_LDFLAGS_MAINT_APPEND" \
+              DEB_BUILD_OPTIONS="$DEB_BUILD_OPTIONS" \
+              dpkg-buildpackage -rfakeroot -us -uc -b -j2 >"$BUILD_LOG" 2>&1; then
+            echo "Debian build succeeded."
+            grep -E 'dpkg-buildpackage: info|dh binary|dpkg-deb: building package|dh_gencontrol|dh_builddeb|warning:|error:' "$BUILD_LOG" | tail -n 80 || tail -n 30 "$BUILD_LOG"
+          else
+            echo "::error::Debian binary build failed for $PACKAGE."
+            tail -n 100 "$BUILD_LOG" || true
+            exit 1
+          fi
+
+          shopt -s nullglob
+          DEBS=("$GITHUB_WORKSPACE/source-root/"*.deb)
+          if (( ${#DEBS[@]} == 0 )); then
+            echo "::error::Build produced no .deb packages for $PACKAGE."
+            exit 1
+          fi
+
+          count=0
+          for deb in "${DEBS[@]}"; do
+            binary_package="$(dpkg-deb -f "$deb" Package)"
+            binary_version="$(dpkg-deb -f "$deb" Version)"
+            binary_arch="$(dpkg-deb -f "$deb" Architecture)"
+            case "$binary_package" in *-dbg|*-dbgsym) rm -f "$deb"; continue ;; esac
+            if [[ "$binary_version" != "$PACKAGE_VERSION" ]]; then
+              echo "::error::Wrong version for $binary_package: $binary_version"
+              exit 1
+            fi
+            case "$binary_arch" in amd64|all) ;; *) echo "::error::Unexpected architecture $binary_arch"; exit 1 ;; esac
+            printf '%s %s %s %s\n' "$(basename "$deb")" "$binary_package" "$binary_version" "$binary_arch"
+            cp "$deb" "$GITHUB_WORKSPACE/release-artifacts/"
+            count=$((count + 1))
+          done
+          (( count > 0 )) || { echo "::error::No non-debug binary packages remain"; exit 1; }
+
+          {
+            echo "Profile: safe-aggressive Core 2"
+            echo "Source package: $PACKAGE"
+            echo "Debian Bookworm source version: $SOURCE_VERSION"
+            echo "Core 2 package version: $PACKAGE_VERSION"
+            echo "Target: amd64 / Intel Core 2"
+            echo "CFLAGS/CXXFLAGS append: -O3 -march=core2 -mtune=core2 -pipe -fomit-frame-pointer -ftree-vectorize"
+            echo "LDFLAGS append: -Wl,-O1 -Wl,--as-needed"
+            echo "Debian hardening: retained via dpkg-buildflags append variables"
+            echo "Build parallelism: 2"
+            echo
+            cat "$GITHUB_WORKSPACE/core2-build-flags.txt"
+          } > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt"
+          echo "build_log=$BUILD_LOG" >> "$GITHUB_OUTPUT"
+
+      - name: Upload build log for diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-compression-${{ inputs.package }}-build-log-${{ github.run_id }}
+          path: ${{ github.workspace }}/${{ inputs.package }}-build.log
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Prepare release metadata and checksums
+        id: meta
+        shell: bash
+        env:
+          PACKAGE: ${{ inputs.package }}
+          PACKAGE_VERSION: ${{ steps.source.outputs.package_version }}
+          SOURCE_VERSION: ${{ steps.source.outputs.source_version }}
+        run: |
+          set -Eeuo pipefail
+          cd "$GITHUB_WORKSPACE/release-artifacts"
+          shopt -s nullglob
+          DEBS=( ./*.deb )
+          (( ${#DEBS[@]} > 0 )) || { echo "::error::No Debian packages to release"; exit 1; }
+          sha256sum "${DEBS[@]#./}" > "SHA256SUMS-core2-$PACKAGE.txt"
+          TAG_VERSION="$(printf '%s' "$PACKAGE_VERSION" | sed -E 's/[^A-Za-z0-9._-]+/-/g')"
+          RELEASE_TAG="core2-$PACKAGE-$TAG_VERSION"
+          {
+            echo "release_tag=$RELEASE_TAG"
+            echo "package_version=$PACKAGE_VERSION"
+            echo "source_version=$SOURCE_VERSION"
+          } >> "$GITHUB_OUTPUT"
+          ls -lh ./*.deb ./*.txt
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-${{ inputs.package }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 14
+
+  release:
+    name: Publish Core 2 compression package ${{ inputs.package }}
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PACKAGE: ${{ inputs.package }}
+      SOURCE_VERSION: ${{ needs.build.outputs.source_version }}
+      PACKAGE_VERSION: ${{ needs.build.outputs.package_version }}
+      RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
+      OPT_LEVEL: "-O3"
+      BUILD_MODE: "safe-aggressive compression rebuild"
+      RELEASE_KIND: optimized
+
+    steps:
+      - name: Check out release metadata helper
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Download built packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-${{ inputs.package }}-${{ github.run_id }}
+          path: dist
+
+      - name: Publish Core 2 package release
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          cd dist
+          python3 "$GITHUB_WORKSPACE/core2-packages/release-notes.py"
+          RELEASE_TITLE="$(cat release-title.txt)"
+          rm -f release-title.txt
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Release $RELEASE_TAG already exists; refusing to overwrite."
+            exit 1
+          fi
+          shopt -s nullglob
+          ASSETS=( ./*.deb ./*.txt )
+          (( ${#ASSETS[@]} > 0 )) || { echo "::error::No package files available for release"; exit 1; }
+          gh release create "$RELEASE_TAG" "${ASSETS[@]}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$RELEASE_TITLE" \
+            --notes-file release-notes.md
+          echo "Published $RELEASE_TAG"
