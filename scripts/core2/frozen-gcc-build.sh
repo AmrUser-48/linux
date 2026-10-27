@@ -6,11 +6,11 @@ die(){ echo "::error::$*" >&2; exit 1; }
 : "${GITHUB_REPOSITORY:?missing GITHUB_REPOSITORY}"
 : "${GH_TOKEN:?missing GH_TOKEN}"
 
-ROOT="${GITHUB_WORKSPACE/gcc-frozen-work"
+ROOT="$GITHUB_WORKSPACE/gcc-frozen-work"
 STATE_TAG=core2-gcc12-frozen-state
-RESET_CHECKPOINT="${RESET_CHECKPOINT:-false"
-GEN="${GITHUB_RUN_ID:-local-${GITHUB_RUN_ATTEMPT:-1"
-CONTAINER="gcc-frozen-${GITHUB_RUN_ID-${GITHUB_RUN_ATTEMPT"
+RESET_CHECKPOINT="${RESET_CHECKPOINT:-false}"
+GEN="${GITHUB_RUN_ID:-local}-${GITHUB_RUN_ATTEMPT:-1}"
+CONTAINER="gcc-frozen-${GITHUB_RUN_ID:-local}-${GITHUB_RUN_ATTEMPT:-1}"
 TMP="$(mktemp -d)"
 UID_BUILD="$(id -u)"
 RESTORED=false
