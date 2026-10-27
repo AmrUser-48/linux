@@ -1,6 +1,7 @@
 #define _FILE_OFFSET_BITS 64
 #include <zlib.h>
 
+#include <limits.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,7 +50,7 @@ static int compress_file(const char *path) {
 
     if (input == NULL)
         return 1;
-    if ((uint64_t)input_size > UINT64_MAX || (size_t)(uLong)input_size != input_size) {
+    if ((size_t)(uLong)input_size != input_size) {
         fprintf(stderr, "input too large for zlib API\n");
         free(input);
         return 1;
