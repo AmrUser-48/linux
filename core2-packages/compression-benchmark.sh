@@ -2,6 +2,7 @@
 set -euo pipefail
 
 MODE="${1:-}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 RESULTS_DIR="$PWD/compression-bench-results"
 CORPUS_DIR="$RESULTS_DIR/corpus"
 TMP_DIR="$RESULTS_DIR/tmp"
@@ -54,6 +55,15 @@ if [[ "$MODE" == "baseline" ]]; then
     exit 1
   fi
   make_corpus
+  if ! command -v cc >/dev/null 2>&1 || [[ ! -r /usr/include/zlib.h ]]; then
+    echo "Direct zlib testing requires cc and zlib1g-dev (zlib.h)." >&2
+    exit 1
+  fi
+  cc -O2 -march=core2 -mtune=core2 -pipe "$SCRIPT_DIR/zlib-benchmark.c" -lz -o "$RESULTS_DIR/zlib-bench"
+  if ! ldd "$RESULTS_DIR/zlib-bench" | grep -q 'libz.so.1'; then
+    echo "zlib benchmark helper did not dynamically link against libz.so.1." >&2
+    exit 1
+  fi
   {
     date -Is
     uname -a
@@ -116,6 +126,7 @@ resolve_tool() {
         fi
         ;;
       xz|lzma) [[ -x "$CANDIDATE_ROOT/usr/bin/xz" ]] && echo "$CANDIDATE_ROOT/usr/bin/xz" || return 1 ;;
+      zlib) [[ -x "$RESULTS_DIR/zlib-bench" ]] && echo "$RESULTS_DIR/zlib-bench" || return 1 ;;
       zstd|lz4|gzip) [[ -x "$CANDIDATE_ROOT/usr/bin/$codec" ]] && echo "$CANDIDATE_ROOT/usr/bin/$codec" || return 1 ;;
     esac
   else
@@ -126,6 +137,7 @@ resolve_tool() {
         fi
         ;;
       xz|lzma) command -v xz || return 1 ;;
+      zlib) [[ -x "$RESULTS_DIR/zlib-bench" ]] && echo "$RESULTS_DIR/zlib-bench" || return 1 ;;
       zstd|lz4|gzip) command -v "$codec" || return 1 ;;
     esac
   fi
@@ -151,6 +163,7 @@ compress_one() {
     zstd) run_tool "$bin" -3 -T1 -c "$corpus" > "$archive" ;;
     lz4) run_tool "$bin" -1 -c "$corpus" > "$archive" ;;
     gzip) run_tool "$bin" -6 -c "$corpus" > "$archive" ;;
+    zlib) run_tool "$bin" compress "$corpus" > "$archive" ;;
   esac
 }
 
@@ -162,6 +175,7 @@ decompress_one() {
     zstd) run_tool "$bin" -dc "$archive" ;;
     lz4) run_tool "$bin" -dc "$archive" ;;
     gzip) run_tool "$bin" -dc "$archive" ;;
+    zlib) run_tool "$bin" decompress "$archive" ;;
   esac
 }
 
@@ -181,7 +195,7 @@ run_benchmarks() {
     corpus_name="$(basename "$corpus" .bin)"
     input_bytes="$(stat -c %s "$corpus")"
     input_hash="$(sha256sum "$corpus" | awk '{print $1}')"
-    for codec in 7z xz lzma zstd lz4 gzip; do
+    for codec in 7z xz lzma zstd lz4 gzip zlib; do
       if ! bin="$(resolve_tool "$codec")"; then
         if [[ "$MODE" == "candidate" ]]; then
           echo "Missing candidate executable for $codec; package set is incomplete." >&2
