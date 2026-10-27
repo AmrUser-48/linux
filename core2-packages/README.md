@@ -1259,7 +1259,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-binutils-source"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-source 2.40-2</a></code></summary>
 
-- **Depends:** <code>texinfo</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112"><code>zlib1g-dev</code></a> <em>(non-runtime Core 2 package)</em>; <code>make</code> <em>(Debian Bookworm)</em>; <code>python3</code> <em>(Debian Bookworm)</em>; <code>libjansson-dev</code> <em>(Debian Bookworm)</em>; <code>pkg-config</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libzstd-1.5.4-dfsg2-5-core2.1-20261020161546"><code>libzstd-dev</code></a> <em>(non-runtime Core 2 package)</em>
+- **Depends:** <code>texinfo</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858"><code>zlib1g-dev</code></a> <em>(non-runtime Core 2 package)</em>; <code>make</code> <em>(Debian Bookworm)</em>; <code>python3</code> <em>(Debian Bookworm)</em>; <code>libjansson-dev</code> <em>(Debian Bookworm)</em>; <code>pkg-config</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339"><code>libzstd-dev</code></a> <em>(non-runtime Core 2 package)</em>
 
 </details>
 
@@ -1763,7 +1763,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-gzip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-gzip-1.12-1-core2.1-20261009191817">gzip 1.12-1 — GNU compression utilities</a></code></summary>
+<summary id="core2-package-gzip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gzip-1.12-1-core2safe1-20261027175633">gzip 1.12-1+core2safe1~20261027175633 — GNU compression utilities</a></code></summary>
 
 - **Pre-Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 - **Depends:** one of: <code>dpkg (&gt;= 1.15.4)</code> <em>(Debian Bookworm)</em> | <code>install-info</code> <em>(Debian Bookworm)</em>
@@ -1771,7 +1771,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-gzip-win32"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-gzip-1.12-1-core2.1-20261009191817">gzip-win32 1.12-1</a></code></summary>
+<summary id="core2-package-gzip-win32"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gzip-1.12-1-core2safe1-20261027175633">gzip-win32 1.12-1+core2safe1~20261027175633</a></code></summary>
 
 - No declared Pre-Depends or Depends.
 
@@ -1855,7 +1855,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-liblzma5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709">liblzma5 5.4.1-1+deb12u2</a></code></summary>
+<summary id="core2-package-liblzma5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2safe1-20261027175341">liblzma5 5.4.1-1+deb12u2+core2safe1~20261027175341</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
@@ -1974,7 +1974,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libzstd1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libzstd-1.5.4-dfsg2-5-core2.1-20261020161546">libzstd1 1.5.4+dfsg2-5 — fast lossless compression algorithm</a></code></summary>
+<summary id="core2-package-libzstd1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339">libzstd1 1.5.4+dfsg2-5+core2safe1~20261027175339</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
@@ -2181,21 +2181,21 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-xz-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709">xz-utils 5.4.1-1+deb12u2 — XZ-format compression utilities</a></code></summary>
+<summary id="core2-package-xz-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2safe1-20261027175341">xz-utils 5.4.1-1+deb12u2+core2safe1~20261027175341 — XZ-format compression utilities</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.4.0)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-xzdec"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709">xzdec 5.4.1-1+deb12u2</a></code></summary>
+<summary id="core2-package-xzdec"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2safe1-20261027175341">xzdec 5.4.1-1+deb12u2+core2safe1~20261027175341</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-zstd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libzstd-1.5.4-dfsg2-5-core2.1-20261020161546">zstd 1.5.4+dfsg2-5</a></code></summary>
+<summary id="core2-package-zstd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339">zstd 1.5.4+dfsg2-5+core2safe1~20261027175339 — fast lossless compression algorithm -- CLI tool</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblz4-1"><code>liblz4-1 (&gt;= 1.8.0)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
@@ -2207,7 +2207,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary>Applications &amp; utilities (496 packages)</summary>
 
 <details>
-<summary id="core2-package-7zip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500">7zip 22.01+really26.02+dfsg-0+deb12u1 — 7-Zip file archiver with a high compression ratio</a></code></summary>
+<summary id="core2-package-7zip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2safe1-20261027175340">7zip 22.01+really26.02+dfsg-0+deb12u1+core2safe1~20261027175340 — 7-Zip file archiver with a high compression ratio</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>
 
@@ -3238,7 +3238,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-lib32z1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112">lib32z1 1:1.2.13.dfsg-1 — compression library - 32 bit runtime</a></code></summary>
+<summary id="core2-package-lib32z1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858">lib32z1 1:1.2.13.dfsg-1+core2safe1~20261027175858 — compression library - 32 bit runtime</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6-i386"><code>libc6-i386 (&gt;= 2.4)</code></a>
 
@@ -4085,14 +4085,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-liblz4-1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626">liblz4-1 1.9.4-1</a></code></summary>
+<summary id="core2-package-liblz4-1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2safe1-20261027175537">liblz4-1 1.9.4-1+core2safe1~20261027175537</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
 </details>
 
 <details>
-<summary id="core2-package-liblz4-tool"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626">liblz4-tool 1.9.4-1</a></code></summary>
+<summary id="core2-package-liblz4-tool"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2safe1-20261027175537">liblz4-tool 1.9.4-1+core2safe1~20261027175537</a></code></summary>
 
 - **Depends:** <a href="#core2-package-lz4"><code>lz4</code></a>
 
@@ -5052,9 +5052,9 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-lz4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626">lz4 1.9.4-1 — Fast LZ compression algorithm library - tool</a></code></summary>
+<summary id="core2-package-lz4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2safe1-20261027175537">lz4 1.9.4-1+core2safe1~20261027175537 — Fast LZ compression algorithm library - tool</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-liblz4-1"><code>liblz4-1 (= 1.9.4-1+core2.1~BUILD)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-liblz4-1"><code>liblz4-1 (= 1.9.4-1+core2safe1~20261027175537)</code></a>
 
 </details>
 
@@ -5668,7 +5668,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-zlib1g"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112">zlib1g 1:1.2.13.dfsg-1</a></code></summary>
+<summary id="core2-package-zlib1g"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858">zlib1g 1:1.2.13.dfsg-1+core2safe1~20261027175858</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
@@ -5705,6 +5705,54 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### Zstandard (optimized)
+Version: `1.5.4+dfsg2-5+core2safe1~20261027175339` · Published: 2026-10-27 18:06:41 UTC
+**Description:** fast lossless compression algorithm -- CLI tool
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zstd`
+**Main .deb:** [zstd_1.5.4+dfsg2-5+core2safe1.20261027175339_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339/zstd_1.5.4%2Bdfsg2-5%2Bcore2safe1.20261027175339_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339)
+
+### lz4 (optimized)
+Version: `1.9.4-1+core2safe1~20261027175537` · Published: 2026-10-27 18:02:42 UTC
+**Description:** Fast LZ compression algorithm library - tool
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lz4`
+**Main .deb:** [lz4_1.9.4-1+core2safe1.20261027175537_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lz4-1.9.4-1-core2safe1-20261027175537/lz4_1.9.4-1%2Bcore2safe1.20261027175537_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2safe1-20261027175537)
+
+### zlib (optimized)
+Version: `1:1.2.13.dfsg-1+core2safe1~20261027175858` · Published: 2026-10-27 17:59:38 UTC
+**Description:** compression library - 32 bit runtime
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
+**Main .deb:** [lib32z1_1.2.13.dfsg-1+core2safe1.20261027175858_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858/lib32z1_1.2.13.dfsg-1%2Bcore2safe1.20261027175858_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858)
+
+### gzip (optimized)
+Version: `1.12-1+core2safe1~20261027175633` · Published: 2026-10-27 17:58:20 UTC
+**Description:** GNU compression utilities
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gzip`
+**Main .deb:** [gzip_1.12-1+core2safe1.20261027175633_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gzip-1.12-1-core2safe1-20261027175633/gzip_1.12-1%2Bcore2safe1.20261027175633_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gzip-1.12-1-core2safe1-20261027175633)
+
+### 7-Zip (optimized)
+Version: `22.01+really26.02+dfsg-0+deb12u1+core2safe1~20261027175340` · Published: 2026-10-27 17:55:44 UTC
+**Description:** 7-Zip file archiver with a high compression ratio
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - 7zip`
+**Main .deb:** [7zip_22.01+really26.02+dfsg-0+deb12u1+core2safe1.20261027175340_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2safe1-20261027175340/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2safe1.20261027175340_amd64.deb)
+**Binary packages in release:** 1
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2safe1-20261027175340)
+
+### XZ Utils (optimized)
+Version: `5.4.1-1+deb12u2+core2safe1~20261027175341` · Published: 2026-10-27 17:55:03 UTC
+**Description:** XZ-format compression utilities
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xz-utils`
+**Main .deb:** [xz-utils_5.4.1-1+deb12u2+core2safe1.20261027175341_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-xz-utils-5.4.1-1-deb12u2-core2safe1-20261027175341/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2safe1.20261027175341_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-xz-utils-5.4.1-1-deb12u2-core2safe1-20261027175341)
+
 ### Mesa (optimized)
 Version: `22.3.6-1+deb12u2+core2.1~20261026203826` · Published: 2026-10-26 20:45:52 UTC
 **Description:** free implementation of the OpenGL API -- DRI modules
@@ -5816,14 +5864,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [gir1.2-vte-3.91_0.70.6-2.deb12u1+core2.1.20261020162049_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049/gir1.2-vte-3.91_0.70.6-2.deb12u1%2Bcore2.1.20261020162049_amd64.deb)
 **Binary packages in release:** 9
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-vte2.91-0.70.6-2-deb12u1-core2.1-20261020162049)
-
-### lz4 (optimized)
-Version: `1.9.4-1+core2.1~20261020161626` · Published: 2026-10-20 16:23:20 UTC
-**Description:** Fast LZ compression algorithm library - tool
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lz4`
-**Main .deb:** [lz4_1.9.4-1+core2.1.20261020161626_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lz4-1.9.4-1-core2.1-20261020161626/lz4_1.9.4-1%2Bcore2.1.20261020161626_amd64.deb)
-**Binary packages in release:** 4
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2.1-20261020161626)
 
 ### xkeyboard-config (optimized)
 Version: `2.35.1-1+core2.1~20261020162047` · Published: 2026-10-20 16:21:39 UTC
@@ -6320,14 +6360,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [gstreamer1.0-libav_1.22.0-2+core2.1.20261016151258_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-gst-libav1.0-1.22.0-2-core2.1-20261016151258/gstreamer1.0-libav_1.22.0-2%2Bcore2.1.20261016151258_amd64.deb)
 **Binary packages in release:** 1
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-gst-libav1.0-1.22.0-2-core2.1-20261016151258)
-
-### zlib (optimized)
-Version: `1:1.2.13.dfsg-1+core2.1~20261016151112` · Published: 2026-10-16 15:12:18 UTC
-**Description:** compression library - 32 bit runtime
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zlib`
-**Main .deb:** [lib32z1_1.2.13.dfsg-1+core2.1.20261016151112_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112/lib32z1_1.2.13.dfsg-1%2Bcore2.1.20261016151112_amd64.deb)
-**Binary packages in release:** 4
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2.1-20261016151112)
 
 ### libpng1.6 (optimized)
 Version: `1.6.39-2+deb12u6+core2.1~20261016150951` · Published: 2026-10-16 15:11:30 UTC
@@ -7201,14 +7233,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Binary packages in release:** 5
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528)
 
-### XZ Utils (system)
-Version: `5.4.1-1+deb12u2+core2.1~20261009193709` · Published: 2026-10-09 19:38:34 UTC
-**Description:** XZ-format compression utilities
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - xz-utils`
-**Main .deb:** [xz-utils_5.4.1-1+deb12u2+core2.1.20261009193709_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709/xz-utils_5.4.1-1%2Bdeb12u2%2Bcore2.1.20261009193709_amd64.deb)
-**Binary packages in release:** 4
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-xz-utils-5.4.1-1-deb12u2-core2.1-20261009193709)
-
 ### kmod (system)
 Version: `30+20221128-1+core2.1~20261009193535` · Published: 2026-10-09 19:36:20 UTC
 **Description:** tools for managing Linux kernel modules
@@ -7256,14 +7280,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [e2fsprogs_1.47.0-2+core2.1.20261009192320_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320/e2fsprogs_1.47.0-2%2Bcore2.1.20261009192320_amd64.deb)
 **Binary packages in release:** 8
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320)
-
-### gzip (system)
-Version: `1.12-1+core2.1~20261009191817` · Published: 2026-10-09 19:19:50 UTC
-**Description:** GNU compression utilities
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - gzip`
-**Main .deb:** [gzip_1.12-1+core2.1.20261009191817_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-gzip-1.12-1-core2.1-20261009191817/gzip_1.12-1%2Bcore2.1.20261009191817_amd64.deb)
-**Binary packages in release:** 2
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-gzip-1.12-1-core2.1-20261009191817)
 
 ### diffutils (system)
 Version: `1:3.8-4+core2.1~20261009191615` · Published: 2026-10-09 19:17:10 UTC
@@ -7352,14 +7368,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [libcrypt1_4.4.33-2+core2.1.20261009185630_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630/libcrypt1_4.4.33-2%2Bcore2.1.20261009185630_amd64.deb)
 **Binary packages in release:** 2
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-libxcrypt-1-4.4.33-2-core2.1-20261009185630)
-
-### 7-Zip (optimized)
-Version: `22.01+really26.02+dfsg-0+deb12u1+core2.1~20261009183500` · Published: 2026-10-09 18:37:34 UTC
-**Description:** 7-Zip file archiver with a high compression ratio
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - 7zip`
-**Main .deb:** [7zip_22.01+really26.02+dfsg-0+deb12u1+core2.1.20261009183500_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500/7zip_22.01%2Breally26.02%2Bdfsg-0%2Bdeb12u1%2Bcore2.1.20261009183500_amd64.deb)
-**Binary packages in release:** 1
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2.1-20261009183500)
 
 ### fftw3 (optimized)
 Version: `3.3.10-1+core2.1~20261009181939` · Published: 2026-10-09 18:29:31 UTC
