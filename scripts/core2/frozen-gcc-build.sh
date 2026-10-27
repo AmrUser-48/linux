@@ -32,13 +32,16 @@ if [[ "$RESET_CHECKPOINT" != true ]]; then
     RID="$(jq -r .id <<<"$RELEASE")"
     ASSET_NAMES_JSON="$(gh api "repos/$GITHUB_REPOSITORY/releases/$RID/assets?per_page=100")" ||
       die "Could not list checkpoint assets; refusing to treat an API failure as an empty checkpoint."
-    mapfile -t MANIFESTS < <(jq -r '.[].name' <<<"$ASSET_NAMES_JSON" |
-      grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json
+    mapfile -t MANIFESTS < <(
+      jq -r '.[].name' <<<"$ASSET_NAMES_JSON" |
+        grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json$' |
+        sort -t- -k3,3nr -k4,4nr || true
+    )
     for MN in "${MANIFESTS[@]}"; do
       C="$TMP/candidate"; rm -rf "$C"; mkdir -p "$C"
       gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$MN" --dir "$C" >/dev/null 2>&1 || continue
       M="$C/$MN"
-      jq -e '.schema==1 and .source_package=="gcc-12" and (.generation|type=="string") and (.parts|type=="array" and length>0)' "$M" >/dev/null 2>&1 || continue
+      jq -e '.schema==1 and .archive_format=="pax" and .source_package=="gcc-12" and (.generation|type=="string" and test("^[0-9]+-[0-9]+$")) and (.parts|type=="array" and length>0)' "$M" >/dev/null 2>&1 || continue
       G="$(jq -r .generation "$M")"; VALID=true; PARTS=()
       while IFS=$'\t' read -r N S; do
         [[ "$N" == "gcc12-state-$G.part"* && "$N" =~ ^gcc12-state-[0-9]+-[0-9]+\.part[0-9]{4}$ && "$S" =~ ^[a-f0-9]{64}$ ]] || { VALID=false; break; }
@@ -94,12 +97,13 @@ if [[ ! -s /work/state.json ]]; then
   SV="$(dpkg-parsechangelog -l "$SD/debian/changelog" -S Version)"
   PV="${SV}+core2.1~$(date -u +%Y%m%d%H%M%S)"
   cd "$SD"
+  export DEBEMAIL=core2-build@users.noreply.github.com DEBFULLNAME='Core 2 Build'
   dch --newversion "$PV" --distribution bookworm --force-distribution 'Core 2 optimized GCC 12 and runtime/development libraries.'
   [[ "$(dpkg-parsechangelog -l "$SD/debian/changelog" -S Version)" == "$PV" ]]
   find /work/source-tree -maxdepth 1 -type f \( -name '*.dsc' -o -name '*.orig.tar.*' -o -name '*.debian.tar.*' -o -name '*.diff.gz' -o -name '*.tar.gz' -o -name '*.tar.xz' -o -name '*.tar.bz2' -o -name '*.tar.zst' \) -delete
   SDREL="${SD#/work/}"
   [[ "$SDREL" =~ ^source-tree/[A-Za-z0-9.+_-]+$ ]] || { echo "Unsafe source dir" >&2; exit 1; }
-  jq -n --arg source_package gcc-12 --arg source_dir "$SDREL" --arg source_version "$SV" --arg package_version "$PV" --arg optimization_level=-O2 '{schema:1,source_package:$source_package,source_dir:$source_dir,source_version:$source_version,package_version:$package_version,optimization_level:$optimization_level}' >/work/state.json
+  jq -n --arg source_package gcc-12 --arg source_dir "$SDREL" --arg source_version "$SV" --arg package_version "$PV" --arg optimization_level "-O2" '{schema:1,source_package:$source_package,source_dir:$source_dir,source_version:$source_version,package_version:$package_version,optimization_level:$optimization_level}' >/work/state.json
   chown "$BUILD_UID:$BUILD_UID" /work/state.json
   chown -R "$BUILD_UID:$BUILD_UID" /work/source-tree
   export DEB_CFLAGS_MAINT_APPEND='-O2 -march=core2 -mtune=core2' DEB_CXXFLAGS_MAINT_APPEND='-O2 -march=core2 -mtune=core2' DEB_FFLAGS_MAINT_APPEND='-O2 -march=core2 -mtune=core2'
@@ -155,8 +159,8 @@ checkpoint_state(){
   for p in "${parts[@]}"; do
     jq -cn --arg name "$(basename "$p")" --arg sha256 "$(sha256sum "$p"|awk '{print $1}')" '{name:$name,sha256:$sha256}' >>"$lines"
   done
-  jq -n --arg generation "$GEN" --arg source_package gcc-12 --arg source_version "$SV" --arg package_version "$PV" --argjson parts "$(jq -s . "$lines")" \
-    '{schema:1,generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,parts:$parts}' >"$manifest"
+  jq -n --arg generation "$GEN" --arg source_package gcc-12 --arg source_version "$SV" --arg package_version "$PV" --arg archive_format pax --argjson parts "$(jq -s . "$lines")" \
+    '{schema:1,generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,archive_format:$archive_format,parts:$parts}' >"$manifest"
   if ! gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" >"$TMP/existing-release.json" 2>"$TMP/create-release.err"; then
     if grep -Eqi 'HTTP 404|Not Found|release not found' "$TMP/create-release.err"; then
       gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --title "Resumable GCC 12 build state" \
