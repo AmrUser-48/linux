@@ -260,12 +260,35 @@ jobs:
           echo "Core 2 flags inserted into Chromium's common x64 compiler ABI flags."
           sed -n '/if (current_cpu == "x64") {/,/} else if (current_cpu == "x86") {/p' "$CONFIG" | head -n 24
 
+      - name: Verify checkpoint archive preserves nanosecond mtimes
+        shell: bash
+        run: |
+          set -euo pipefail
+          TEST_DIR="$(mktemp -d)"
+          trap 'rm -rf "$TEST_DIR"' EXIT
+          mkdir -p "$TEST_DIR/source" "$TEST_DIR/restored"
+          printf 'checkpoint timestamp probe\n' > "$TEST_DIR/source/probe.o"
+          touch -d '2026-10-26 21:10:34.765182049 UTC' "$TEST_DIR/source/probe.o"
+          EXPECTED_MTIME="$(stat -c '%y' "$TEST_DIR/source/probe.o")"
+          tar --create --format=pax --file=- --directory="$TEST_DIR/source" -- probe.o \
+            | zstd -T0 -3 -c > "$TEST_DIR/checkpoint.tar.zst"
+          zstd -d -c "$TEST_DIR/checkpoint.tar.zst" | tar -xpf - -C "$TEST_DIR/restored"
+          ACTUAL_MTIME="$(stat -c '%y' "$TEST_DIR/restored/probe.o")"
+          if [[ "$ACTUAL_MTIME" != "$EXPECTED_MTIME" ]]; then
+            echo "::error::Checkpoint archive lost nanosecond mtimes; stopping before an expensive Chromium build."
+            echo "Expected: $EXPECTED_MTIME"
+            echo "Restored: $ACTUAL_MTIME"
+            exit 1
+          fi
+          echo "Checkpoint timestamp precision verified: $ACTUAL_MTIME"
+
       - name: Restore incremental Chromium build state
         id: state
         shell: bash
         env:
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          COMPACT_STATE: ${{ inputs.compact_state }}
         run: |
           set -euo pipefail
           WORK="$GITHUB_WORKSPACE"
@@ -314,33 +337,52 @@ jobs:
             for CP in "${COMPLETE_IDS[@]}"; do
               if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-manifest.txt" --dir "$MANIFEST_PROBE"; then
-                if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
+                if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
+                   grep -qx 'format=2' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
+                   grep -qx 'archive_format=pax' "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
                   BASE_CP="$CP"
+                else
+                  echo "Skipping checkpoint $CP: it is legacy state without verified PAX timestamp preservation."
                 fi
               else
                 echo "::warning::Could not inspect old checkpoint manifest $CP; it will not be restored."
               fi
             done
             if [[ -z "$BASE_CP" ]]; then
-              echo "::error::No downloadable full-snapshot checkpoint exists; refusing to restore an incomplete chain."
-              exit 1
-            fi
-
-            RESTORE_IDS=()
+              if [[ "$COMPACT_STATE" == "true" ]]; then
+                echo "::error::Cannot compact legacy checkpoints that lost sub-second mtimes. Run a normal build session to create a new PAX checkpoint."
+                exit 1
+              fi
+              echo "::warning::No valid PAX checkpoint exists. Legacy checkpoints may trigger full recompilation, so discard them and start a clean checkpoint sequence."
+              gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+              RELEASE_EXISTS=false
+              LAST_CP=0000
+              NEXT_CP=0001
+            else
+              RESTORE_IDS=()
             for CP in "${COMPLETE_IDS[@]}"; do
               if [[ "$CP" < "$BASE_CP" ]]; then
                 echo "Skipping superseded checkpoint $CP; full snapshot $BASE_CP replaces it."
               else
-                RESTORE_IDS+=("$CP")
+                PROBE_MANIFEST="$MANIFEST_PROBE/state-c${CP}-manifest.txt"
+                if grep -qx 'format=2' "$PROBE_MANIFEST" && grep -qx 'archive_format=pax' "$PROBE_MANIFEST"; then
+                  RESTORE_IDS+=("$CP")
+                else
+                  echo "Skipping legacy checkpoint $CP; it does not guarantee sub-second mtime preservation."
+                fi
               fi
             done
-            echo "Restoring from full snapshot $BASE_CP and subsequent deltas only."
+            echo "Restoring from full snapshot $BASE_CP and compatible PAX checkpoints only."
 
             for CP in "${RESTORE_IDS[@]}"; do
               gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-manifest.txt" --dir "$STATE_DIR"
               MANIFEST="$STATE_DIR/state-c${CP}-manifest.txt"
 
+              if ! grep -qx 'format=2' "$MANIFEST" || ! grep -qx 'archive_format=pax' "$MANIFEST"; then
+                echo "::error::Checkpoint $CP is not a nanosecond-preserving PAX snapshot; refusing unsafe reuse."
+                exit 1
+              fi
               if ! grep -qx "fingerprint=$FINGERPRINT" "$MANIFEST"; then
                 echo "::error::Checkpoint $CP is incompatible with current Brave/Chromium source or build configuration."
                 echo "Expected fingerprint: $FINGERPRINT"
@@ -375,9 +417,15 @@ jobs:
               rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
             done
+            fi
             rm -rf "$MANIFEST_PROBE"
           else
-            echo "No completed checkpoint found; this run starts the first saved build segment."
+            if [[ "$RELEASE_EXISTS" == "true" ]]; then
+              echo "::warning::Checkpoint release has no complete manifest; deleting incomplete state and starting clean."
+              gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+              NEXT_CP=0001
+            fi
+            echo "No compatible checkpoint found; this run starts a clean build segment."
           fi
 
           {
@@ -715,7 +763,7 @@ jobs:
 
           PREFIX="$PART_DIR/state-c${NEXT_CHECKPOINT}-part-"
           set -o pipefail
-          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
+          tar --create --format=pax --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
             | zstd -T0 -3 -c \
             | split -b 1700M -d -a 3 - "$PREFIX"
 
@@ -748,7 +796,8 @@ jobs:
 
           MANIFEST="$PART_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
           cat > "$MANIFEST" <<EOF
-          format=1
+          format=2
+          archive_format=pax
           checkpoint=$NEXT_CHECKPOINT
           upstream_tag=$UPSTREAM_TAG
           chromium_revision=$CHROMIUM_REVISION
