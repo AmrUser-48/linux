@@ -1,50 +1,47 @@
-name: Core 2 GCC toolchain packages
-run-name: "Core2 GCC toolchain / ${{ github.ref_name }} / #${{ github.run_number }}"
+name: Core 2 GCC frozen machine controller
+run-name: "Dispatch Core2 GCC build / #${{ github.run_number }}"
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
     paths:
       - ".github/workflows/d630-core2-gcc-toolchain.yml"
+      - ".github/workflows/d630-core2-gcc-frozen-build.yml"
       - ".github/workflows/d630-core2-system-package.yml"
+      - "scripts/core2/frozen-gcc-build.sh"
   workflow_dispatch:
+    inputs:
+      reset_checkpoint:
+        description: Ignore saved GCC build state and start a fresh build
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   actions: write
-  contents: write
+  contents: read
+
+concurrency:
+  group: core2-gcc-controller-${{ github.run_id }}
+  cancel-in-progress: false
 
 jobs:
-  gcc-12:
-    name: Build GCC 12 source family (gcc-12, cpp-12, runtime and development packages)
-    uses: ./.github/workflows/d630-core2-system-package.yml
-    with:
-      package: gcc-12
-      force_rebuild: false
-      refresh_index: false
-
-  gcc-defaults:
-    name: Build default compiler packages (gcc, cpp)
-    needs: gcc-12
-    uses: ./.github/workflows/d630-core2-system-package.yml
-    with:
-      package: gcc-defaults
-      force_rebuild: false
-      refresh_index: false
-
-  refresh-package-index:
-    name: Refresh Core 2 package index
-    needs:
-      - gcc-12
-      - gcc-defaults
+  dispatch:
+    if: github.ref == 'refs/heads/master'
+    name: Dispatch resumable GCC build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Refresh Core 2 release index
+      - name: Queue GCC 12 build
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          RESET_CHECKPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.reset_checkpoint || false }}
         run: |
           set -euo pipefail
-          gh workflow run d630-core2-update-release-index.yml \
-            --repo "$GITHUB_REPOSITORY" --ref master
-          echo "Dispatched package-index refresh."
+          gh workflow run d630-core2-gcc-frozen-build.yml \
+            --repo "$GITHUB_REPOSITORY" --ref master \
+            -f stage=gcc-12 \
+            -f reset_checkpoint="$RESET_CHECKPOINT" \
+            -f force_rebuild=true
+          echo "Queued the frozen GCC build. Its runner will checkpoint and resume after each compile segment."
