@@ -104,6 +104,11 @@ else
     exit 1
   fi
   CANDIDATE_LIB_PATH="$CANDIDATE_ROOT/usr/lib/x86_64-linux-gnu:$CANDIDATE_ROOT/lib/x86_64-linux-gnu:$CANDIDATE_ROOT/usr/lib:$CANDIDATE_ROOT/lib"
+  candidate_zlib="$(LD_LIBRARY_PATH="$CANDIDATE_LIB_PATH" ldd "$RESULTS_DIR/zlib-bench" | awk '/libz.so.1/ {print $3; exit}')"
+  case "$candidate_zlib" in
+    "$CANDIDATE_ROOT"/*) echo "Candidate zlib verified: $candidate_zlib" ;;
+    *) echo "Candidate libz.so.1 was not selected by the loader: $candidate_zlib" >&2; exit 1 ;;
+  esac
 fi
 
 if [[ "$MODE" == "baseline" ]]; then
