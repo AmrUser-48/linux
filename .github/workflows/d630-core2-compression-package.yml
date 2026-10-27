@@ -183,6 +183,10 @@ jobs:
           done
           (( count > 0 )) || { echo "::error::No non-debug binary packages remain"; exit 1; }
 
+          SOURCE_PACKAGE="$PACKAGE"
+          if [[ "$PACKAGE" == "zstd" ]]; then
+            SOURCE_PACKAGE="libzstd"
+          fi
           {
             echo "Profile: safe-aggressive Core 2"
             echo "Requested binary package family: $PACKAGE"
