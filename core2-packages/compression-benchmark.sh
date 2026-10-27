@@ -55,14 +55,17 @@ if [[ "$MODE" == "baseline" ]]; then
     exit 1
   fi
   make_corpus
-  if ! command -v cc >/dev/null 2>&1 || [[ ! -r /usr/include/zlib.h ]]; then
-    echo "Direct zlib testing requires cc and zlib1g-dev (zlib.h)." >&2
-    exit 1
-  fi
-  cc -O2 -march=core2 -mtune=core2 -pipe "$SCRIPT_DIR/zlib-benchmark.c" -lz -o "$RESULTS_DIR/zlib-bench"
-  if ! ldd "$RESULTS_DIR/zlib-bench" | grep -q 'libz.so.1'; then
-    echo "zlib benchmark helper did not dynamically link against libz.so.1." >&2
-    exit 1
+  if command -v cc >/dev/null 2>&1 && [[ -r /usr/include/zlib.h ]]; then
+    if cc -O2 -march=core2 -mtune=core2 -pipe "$SCRIPT_DIR/zlib-benchmark.c" -lz -o "$RESULTS_DIR/zlib-bench" &&
+       ldd "$RESULTS_DIR/zlib-bench" | grep -q 'libz.so.1'; then
+      echo "Direct zlib benchmark enabled."
+    else
+      rm -f "$RESULTS_DIR/zlib-bench"
+      echo "NOTE: direct zlib benchmark skipped; helper compile/link failed." >&2
+    fi
+  else
+    rm -f "$RESULTS_DIR/zlib-bench"
+    echo "NOTE: direct zlib benchmark skipped; cc or /usr/include/zlib.h is missing." >&2
   fi
   {
     date -Is
