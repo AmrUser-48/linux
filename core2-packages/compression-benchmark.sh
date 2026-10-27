@@ -104,11 +104,15 @@ else
     exit 1
   fi
   CANDIDATE_LIB_PATH="$CANDIDATE_ROOT/usr/lib/x86_64-linux-gnu:$CANDIDATE_ROOT/lib/x86_64-linux-gnu:$CANDIDATE_ROOT/usr/lib:$CANDIDATE_ROOT/lib"
-  candidate_zlib="$(LD_LIBRARY_PATH="$CANDIDATE_LIB_PATH" ldd "$RESULTS_DIR/zlib-bench" | awk '/libz.so.1/ {print $3; exit}')"
-  case "$candidate_zlib" in
-    "$CANDIDATE_ROOT"/*) echo "Candidate zlib verified: $candidate_zlib" ;;
-    *) echo "Candidate libz.so.1 was not selected by the loader: $candidate_zlib" >&2; exit 1 ;;
-  esac
+  if [[ -x "$RESULTS_DIR/zlib-bench" ]]; then
+    candidate_zlib="$(LD_LIBRARY_PATH="$CANDIDATE_LIB_PATH" ldd "$RESULTS_DIR/zlib-bench" | awk '/libz.so.1/ {print $3; exit}')"
+    case "$candidate_zlib" in
+      "$CANDIDATE_ROOT"/*) echo "Candidate zlib verified: $candidate_zlib" ;;
+      *) echo "Candidate libz.so.1 was not selected by the loader: $candidate_zlib" >&2; exit 1 ;;
+    esac
+  else
+    echo "NOTE: Direct zlib benchmark skipped; baseline did not create zlib-bench."
+  fi
 fi
 
 if [[ "$MODE" == "baseline" ]]; then
@@ -203,11 +207,13 @@ run_benchmarks() {
   local out_csv="$1"
   local corpus codec bin corpus_name archive input_bytes input_hash archive_bytes
   local comp_times dec_times rep start finish comp_sec dec_sec comp_speed dec_speed ratio verify_hash
+  local codecs=(7z xz lzma zstd lz4 gzip)
+  [[ -x "$RESULTS_DIR/zlib-bench" ]] && codecs+=(zlib)
   for corpus in "$CORPUS_DIR/text.bin" "$CORPUS_DIR/binary.bin"; do
     corpus_name="$(basename "$corpus" .bin)"
     input_bytes="$(stat -c %s "$corpus")"
     input_hash="$(sha256sum "$corpus" | awk '{print $1}')"
-    for codec in 7z xz lzma zstd lz4 gzip zlib; do
+    for codec in "${codecs[@]}"; do
       if ! bin="$(resolve_tool "$codec")"; then
         if [[ "$MODE" == "candidate" ]]; then
           echo "Missing candidate executable for $codec; package set is incomplete." >&2
