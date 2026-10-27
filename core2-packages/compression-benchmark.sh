@@ -112,9 +112,9 @@ else
 fi
 
 if [[ "$MODE" == "baseline" ]]; then
-  echo "profile,corpus,codec,input_bytes,archive_bytes,ratio,compress_seconds,compress_MiB_s,decompress_seconds,decompress_MiB_s,input_sha256" > "$RESULTS_DIR/baseline.csv"
+  echo "profile,corpus,codec,input_bytes,archive_bytes,ratio,compress_seconds,compress_MiB_s,decompress_seconds,decompress_MiB_s,input_sha256" > "$RESULTS_DIR/baseline.csv.tmp"
 else
-  echo "profile,corpus,codec,input_bytes,archive_bytes,ratio,compress_seconds,compress_MiB_s,decompress_seconds,decompress_MiB_s,input_sha256" > "$RESULTS_DIR/candidate.csv"
+  echo "profile,corpus,codec,input_bytes,archive_bytes,ratio,compress_seconds,compress_MiB_s,decompress_seconds,decompress_MiB_s,input_sha256" > "$RESULTS_DIR/candidate.csv.tmp"
 fi
 
 resolve_tool() {
@@ -246,7 +246,8 @@ run_benchmarks() {
 rm -rf "$TMP_DIR"
 mkdir -p "$TMP_DIR"
 if [[ "$MODE" == "candidate" ]]; then
-  run_benchmarks "$RESULTS_DIR/candidate.csv"
+  run_benchmarks "$RESULTS_DIR/candidate.csv.tmp"
+  mv "$RESULTS_DIR/candidate.csv.tmp" "$RESULTS_DIR/candidate.csv"
   awk -F, '
     NR == FNR {
       if (FNR > 1) {
@@ -274,7 +275,8 @@ if [[ "$MODE" == "candidate" ]]; then
   echo "Candidate results: $RESULTS_DIR/candidate.csv"
   echo "Comparison:        $RESULTS_DIR/comparison-report.txt"
 else
-  run_benchmarks "$RESULTS_DIR/baseline.csv"
+  run_benchmarks "$RESULTS_DIR/baseline.csv.tmp"
+  mv "$RESULTS_DIR/baseline.csv.tmp" "$RESULTS_DIR/baseline.csv"
   echo "Baseline results: $RESULTS_DIR/baseline.csv"
   echo "System details:   $RESULTS_DIR/system-baseline.txt"
 fi
