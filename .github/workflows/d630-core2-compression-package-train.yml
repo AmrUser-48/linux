@@ -1,0 +1,59 @@
+name: Core 2 compression package train
+run-name: "Build Core 2 compression packages (safe-aggressive flags)"
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: Publish fresh Core 2 package releases even if an older release exists
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: core2-compression-package-train
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build source package ${{ matrix.package }} on runner
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        # These source packages provide 7z, xz/lzma, zstd, lz4, gzip,
+        # zlib1g/libz, liblzma5, liblz4-1, and libstdc++6.
+        package:
+          - p7zip
+          - xz-utils
+          - zstd
+          - lz4
+          - gzip
+          - zlib
+          - gcc-12
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: ${{ matrix.package }}
+      force_rebuild: ${{ inputs.force_rebuild }}
+      refresh_index: false
+
+  refresh-index:
+    name: Refresh package index after all builds
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch release-index refresh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
+          echo "Dispatched one package-index refresh after the complete package train."
