@@ -44,4 +44,4 @@ jobs:
             -f stage=gcc-12 \
             -f reset_checkpoint="$RESET_CHECKPOINT" \
             -f force_rebuild=true
-          echo "Queued the frozen GCC build. Its runner will checkpoint and resume after each compile segment."
+          echo "Queued the frozen GCC build. It resumes only from a verified PAX checkpoint; legacy or corrupt checkpoints are rejected."
