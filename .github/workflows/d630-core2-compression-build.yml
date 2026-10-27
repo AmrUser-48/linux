@@ -1,0 +1,306 @@
+name: Core 2 compression benchmark and safe-aggressive build
+run-name: "Core 2 compression benchmark/build / #${{ github.run_number }}"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-compression-build.yml"
+      - ".github/workflows/d630-core2-compression-package.yml"
+      - "scripts/core2/compression-benchmark.sh"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: core2-compression-benchmark-build
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    name: Validate benchmark script before allocating build runners
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Check benchmark script syntax
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          bash -n scripts/core2/compression-benchmark.sh
+          echo "Benchmark shell syntax is valid."
+
+  baseline-benchmark:
+    name: Benchmark stock Debian Bookworm compression tools first
+    needs: preflight
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+    steps:
+      - name: Check out benchmark script
+        uses: actions/checkout@v4
+      - name: Install baseline tools from Debian Bookworm and security
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main
+          deb-src http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian bookworm-updates main
+          deb-src http://deb.debian.org/debian bookworm-updates main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          deb-src http://deb.debian.org/debian-security bookworm-security main
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            7zip xz-utils zstd lz4 gzip zlib1g python3 coreutils time ca-certificates
+      - name: Generate deterministic corpora and record stock package versions
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p compression-baseline/corpus
+          bash scripts/core2/compression-benchmark.sh prepare compression-baseline/corpus
+          bash scripts/core2/compression-benchmark.sh versions compression-baseline/versions.txt
+      - name: Run baseline compression and decompression benchmarks
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          bash scripts/core2/compression-benchmark.sh run baseline \
+            compression-baseline/corpus compression-baseline/baseline.csv
+          {
+            echo "## Stock Bookworm compression baseline"
+            echo
+            echo "The deterministic input corpora and compression settings are reused after rebuilding."
+            echo
+            echo '~~~text'
+            cat compression-baseline/versions.txt
+            echo '~~~'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve baseline data and results
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-compression-baseline-${{ github.run_id }}
+          path: compression-baseline/
+          if-no-files-found: error
+          retention-days: 30
+
+  build:
+    name: Build ${{ matrix.package }} with the safe-aggressive profile
+    needs: baseline-benchmark
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        package:
+          - 7zip
+          - xz-utils
+          - zstd
+          - lz4
+          - gzip
+          - zlib
+    uses: ./.github/workflows/d630-core2-compression-package.yml
+    with:
+      package: ${{ matrix.package }}
+    permissions:
+      actions: write
+      contents: write
+
+  benchmark-optimized:
+    name: Install rebuilt tools and libraries; compare against stock baseline
+    needs: [baseline-benchmark, build]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+    steps:
+      - name: Check out benchmark script
+        uses: actions/checkout@v4
+      - name: Install runtime support
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main
+          deb-src http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian bookworm-updates main
+          deb-src http://deb.debian.org/debian bookworm-updates main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          deb-src http://deb.debian.org/debian-security bookworm-security main
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            7zip xz-utils zstd lz4 gzip zlib1g python3 coreutils time ca-certificates dpkg
+      - name: Download the exact baseline corpora and result
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-compression-baseline-${{ github.run_id }}
+          path: compression-baseline
+      - name: Download 7zip packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-7zip-${{ github.run_id }}
+          path: package-artifacts/7zip
+      - name: Download xz-utils packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-xz-utils-${{ github.run_id }}
+          path: package-artifacts/xz-utils
+      - name: Download zstd packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-zstd-${{ github.run_id }}
+          path: package-artifacts/zstd
+      - name: Download lz4 packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-lz4-${{ github.run_id }}
+          path: package-artifacts/lz4
+      - name: Download gzip packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-gzip-${{ github.run_id }}
+          path: package-artifacts/gzip
+      - name: Download zlib packages
+        uses: actions/download-artifact@v4
+        with:
+          name: core2-zlib-${{ github.run_id }}
+          path: package-artifacts/zlib
+      - name: Select and install rebuilt command-line tools and runtime libraries
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p selected-debs
+          declare -A found=(
+            [7zip]=0 [xz-utils]=0 [liblzma5]=0 [zstd]=0 [libzstd1]=0
+            [lz4]=0 [liblz4-1]=0 [gzip]=0 [zlib1g]=0
+          )
+          shopt -s nullglob
+          for deb in package-artifacts/*/*.deb; do
+            package="$(dpkg-deb -f "$deb" Package)"
+            case "$package" in
+              7zip|xz-utils|liblzma5|zstd|libzstd1|lz4|liblz4-1|gzip|zlib1g)
+                cp "$deb" selected-debs/
+                found["$package"]=1
+                echo "Selected $package: $(dpkg-deb -f "$deb" Version)"
+                ;;
+            esac
+          done
+          for package in 7zip xz-utils liblzma5 zstd libzstd1 lz4 liblz4-1 gzip zlib1g; do
+            if [[ "${found[$package]}" != 1 ]]; then
+              echo "::error::Missing rebuilt runtime package: $package"
+              exit 1
+            fi
+          done
+          dpkg -i selected-debs/*.deb
+          dpkg --configure -a
+          dpkg-query -W -f='${Package} ${Version} ${Architecture}\n' \
+            7zip xz-utils liblzma5 zstd libzstd1 lz4 liblz4-1 gzip zlib1g libstdc++6
+
+      - name: Record optimized versions and rerun identical benchmark
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p compression-optimized
+          bash scripts/core2/compression-benchmark.sh versions compression-optimized/versions.txt
+          bash scripts/core2/compression-benchmark.sh run optimized \
+            compression-baseline/corpus compression-optimized/optimized.csv
+          bash scripts/core2/compression-benchmark.sh compare \
+            compression-baseline/baseline.csv compression-optimized/optimized.csv \
+            compression-optimized/comparison.csv
+
+      - name: Summarize speed, archive size, and runtime changes
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 - compression-optimized/comparison.csv compression-optimized/SUMMARY.md <<'PY'
+          import csv
+          import statistics
+          import sys
+          from collections import defaultdict
+
+          source, output = sys.argv[1:]
+          groups = defaultdict(list)
+          with open(source, newline="", encoding="utf-8") as stream:
+              for row in csv.DictReader(stream):
+                  groups[(row["tool"], row["mode"])].append(row)
+
+          lines = [
+              "# Compression benchmark: stock Debian vs Core 2 safe-aggressive packages",
+              "",
+              "Positive speed change means faster. Negative elapsed-time change means less time. Archive-size change is measured directly.",
+              "",
+              "| Tool | Operation | Median speed change | Median time change | Median archive-size change |",
+              "|---|---|---:|---:|---:|",
+          ]
+          for (tool, mode), rows in sorted(groups.items()):
+              speed = statistics.median(float(row["speed_change_pct"]) for row in rows)
+              elapsed = statistics.median(float(row["time_change_pct"]) for row in rows)
+              size = statistics.median(float(row["archive_size_change_pct"]) for row in rows)
+              lines.append(f"| {tool} | {mode} | {speed:+.2f}% | {elapsed:+.2f}% | {size:+.2f}% |")
+
+          lines.extend([
+              "",
+              "## Stock Debian package versions",
+              "",
+              "~~~text",
+          ])
+          lines.extend(open("compression-baseline/versions.txt", encoding="utf-8").read().rstrip().splitlines())
+          lines.extend([
+              "~~~",
+              "",
+              "## Rebuilt package versions",
+              "",
+              "~~~text",
+          ])
+          lines.extend(open("compression-optimized/versions.txt", encoding="utf-8").read().rstrip().splitlines())
+          lines.extend([
+              "~~~",
+              "",
+              "The benchmark runs on GitHub-hosted x86-64 runners, not a physical Core 2 Duo. Results are controlled before/after measurements for the runner class, not absolute performance claims for the Dell Latitude D630.",
+              "The installed libstdc++6 version is recorded, but its GCC rebuild remains with the existing dedicated GCC workflow to avoid starting a competing GCC build.",
+          ])
+          with open(output, "w", encoding="utf-8") as stream:
+              stream.write("\n".join(lines) + "\n")
+          print("\n".join(lines))
+          PY
+          cat compression-optimized/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload raw data and comparison results
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-compression-benchmark-results-${{ github.run_id }}
+          path: |
+            compression-baseline/
+            compression-optimized/
+          if-no-files-found: error
+          retention-days: 30
+
+  refresh-release-index:
+    name: Refresh package index after builds and benchmark succeed
+    needs: benchmark-optimized
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+    steps:
+      - name: Dispatch release-index refresh once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          gh workflow run d630-core2-update-release-index.yml --repo "$GITHUB_REPOSITORY" --ref master
+          echo "Dispatched one release-index refresh after all package builds and benchmark comparisons succeeded."
