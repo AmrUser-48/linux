@@ -140,7 +140,15 @@ resolve_tool() {
         ;;
       xz|lzma) [[ -x "$CANDIDATE_ROOT/usr/bin/xz" ]] && echo "$CANDIDATE_ROOT/usr/bin/xz" || return 1 ;;
       zlib) [[ -x "$RESULTS_DIR/zlib-bench" ]] && echo "$RESULTS_DIR/zlib-bench" || return 1 ;;
-      zstd|lz4|gzip) [[ -x "$CANDIDATE_ROOT/usr/bin/$codec" ]] && echo "$CANDIDATE_ROOT/usr/bin/$codec" || return 1 ;;
+      zstd|lz4|gzip)
+        if [[ -x "$CANDIDATE_ROOT/usr/bin/$codec" ]]; then
+          echo "$CANDIDATE_ROOT/usr/bin/$codec"
+        elif [[ -x "$CANDIDATE_ROOT/bin/$codec" ]]; then
+          echo "$CANDIDATE_ROOT/bin/$codec"
+        else
+          return 1
+        fi
+        ;;
     esac
   else
     case "$codec" in
