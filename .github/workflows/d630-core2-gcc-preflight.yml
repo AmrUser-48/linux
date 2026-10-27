@@ -1,0 +1,50 @@
+name: Core 2 GCC clean-build preflight
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/core2/frozen-gcc-build.sh"
+      - ".github/workflows/d630-core2-gcc-frozen-build.yml"
+      - ".github/workflows/d630-core2-gcc-preflight.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: core2-gcc-preflight-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  syntax:
+    name: Validate the clean-build script before compilation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+
+      - name: Validate Bash syntax and clean-build policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n scripts/core2/frozen-gcc-build.sh
+          grep -Fq 'state_phase:"prepared-clean-source"' scripts/core2/frozen-gcc-build.sh
+          grep -Fq '330m dpkg-buildpackage' scripts/core2/frozen-gcc-build.sh
+          if grep -Eq 'exec timeout .*dpkg-buildpackage.*-nc' scripts/core2/frozen-gcc-build.sh; then
+            echo "::error::Incremental no-clean mode is forbidden for this workflow."
+            exit 1
+          fi
+          echo "Bash syntax and clean-build policy checks passed."
+
+      - name: Parse workflow YAML
+        shell: bash
+        run: |
+          set -euo pipefail
+          ruby -e 'require "yaml"; ARGV.each { |file| YAML.parse_file(file); puts "YAML parsed: #{file}" }' \
+            .github/workflows/d630-core2-gcc-frozen-build.yml \
+            .github/workflows/d630-core2-system-package.yml
