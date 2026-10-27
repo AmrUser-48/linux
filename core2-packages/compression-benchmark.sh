@@ -122,10 +122,14 @@ resolve_tool() {
   if [[ "$MODE" == "candidate" ]]; then
     case "$codec" in
       7z)
-        if [[ -x "$CANDIDATE_ROOT/usr/lib/p7zip/7z" ]]; then
-          echo "$CANDIDATE_ROOT/usr/lib/p7zip/7z"
+        if [[ -x "$CANDIDATE_ROOT/usr/bin/7zz" ]]; then
+          echo "$CANDIDATE_ROOT/usr/bin/7zz"
         elif [[ -x "$CANDIDATE_ROOT/usr/bin/7z" ]]; then
           echo "$CANDIDATE_ROOT/usr/bin/7z"
+        elif [[ -x "$CANDIDATE_ROOT/usr/bin/7za" ]]; then
+          echo "$CANDIDATE_ROOT/usr/bin/7za"
+        elif [[ -x "$CANDIDATE_ROOT/usr/lib/p7zip/7z" ]]; then
+          echo "$CANDIDATE_ROOT/usr/lib/p7zip/7z"
         else
           return 1
         fi
@@ -137,8 +141,11 @@ resolve_tool() {
   else
     case "$codec" in
       7z)
-        if [[ -x /usr/lib/p7zip/7z ]]; then echo /usr/lib/p7zip/7z
-        else command -v 7z || return 1
+        if [[ -x /usr/bin/7zz ]]; then echo /usr/bin/7zz
+        elif [[ -x /usr/lib/p7zip/7z ]]; then echo /usr/lib/p7zip/7z
+        elif command -v 7z >/dev/null 2>&1; then command -v 7z
+        elif command -v 7za >/dev/null 2>&1; then command -v 7za
+        else return 1
         fi
         ;;
       xz|lzma) command -v xz || return 1 ;;
