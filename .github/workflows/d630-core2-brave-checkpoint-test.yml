@@ -3,6 +3,11 @@ run-name: "Brave checkpoint round-trip test"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/d630-core2-brave-checkpoint-test.yml"
 
 permissions:
   contents: write
@@ -47,6 +52,9 @@ jobs:
           printf 'Brave checkpoint round-trip test, run %s\n' "$GITHUB_RUN_ID" > "$OUT/alpha.txt"
           dd if=/dev/urandom of="$OUT/subdir/random.bin" bs=1M count=3 status=none
           ln -s alpha.txt "$OUT/current.txt"
+          printf 'Timestamp precision probe\n' > "$OUT/mtime-probe.o"
+          touch -d '2026-10-26 21:10:34.765182049 UTC' "$OUT/mtime-probe.o"
+          EXPECTED_MTIME="$(stat -c '%y' "$OUT/mtime-probe.o")"
 
           (cd "$OUT" && find . \( -type f -o -type l \) -print0 | sort -z) > "$FILE_LIST"
           FILE_COUNT="$(tr -cd '\000' < "$FILE_LIST" | wc -c | awk '{print $1}')"
@@ -68,7 +76,7 @@ jobs:
           PREFIX="$PART_DIR/state-c0001-part-"
           set -o pipefail
           # Keep this option order aligned with the production workflow.
-          tar --create --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
+          tar --create --format=pax --file=- --directory="$OUT" --no-recursion --null --files-from="$FILE_LIST" \
             | zstd -T0 -3 -c \
             | split -b 1M -d -a 3 - "$PREFIX"
 
@@ -97,6 +105,7 @@ jobs:
           file_count=$FILE_COUNT
           part_count=$PART_COUNT
           tree_sha256=$TREE_SHA256
+          mtime_probe_mtime=$EXPECTED_MTIME
           EOF
           # Upload the manifest last, like the production workflow, so it marks a complete checkpoint.
           gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
@@ -151,6 +160,7 @@ jobs:
           EXPECTED_PARTS="$(sed -n 's/^part_count=//p' "$MANIFEST")"
           EXPECTED_FILES="$(sed -n 's/^file_count=//p' "$MANIFEST")"
           EXPECTED_TREE_SHA256="$(sed -n 's/^tree_sha256=//p' "$MANIFEST")"
+          EXPECTED_MTIME="$(sed -n 's/^mtime_probe_mtime=//p' "$MANIFEST")"
           ACTUAL_ASSET_PARTS="$(grep -Ec '^state-c0001-part-[0-9]{3}$' "$WORK/assets.txt" || true)"
 
           if [[ -z "$EXPECTED_PARTS" || "$EXPECTED_PARTS" != "$ACTUAL_ASSET_PARTS" ||
@@ -183,6 +193,14 @@ jobs:
             } | sort
           ) > "$TREE_LIST"
           RESTORED_TREE_SHA256="$(sha256sum "$TREE_LIST" | awk '{print $1}')"
+          ACTUAL_MTIME="$(stat -c '%y' "$RESTORED_OUT/mtime-probe.o")"
+          if [[ -z "$EXPECTED_MTIME" || "$ACTUAL_MTIME" != "$EXPECTED_MTIME" ]]; then
+            echo "::error::Checkpoint lost timestamp precision; Siso may reject restored objects as stale."
+            echo "Expected mtime: $EXPECTED_MTIME"
+            echo "Restored mtime: $ACTUAL_MTIME"
+            exit 1
+          fi
+          echo "Sub-second mtime preserved exactly: $ACTUAL_MTIME"
 
           if [[ "$RESTORED_FILES" != "$EXPECTED_FILES" ||
                 "$RESTORED_TREE_SHA256" != "$EXPECTED_TREE_SHA256" ]]; then
@@ -200,6 +218,7 @@ jobs:
             echo "- Split parts downloaded and concatenated: ${#PARTS[@]}"
             echo "- Restored tree SHA-256: `$RESTORED_TREE_SHA256`"
             echo "- Content and symlink targets match: yes"
+            echo "- Nanosecond-resolution file mtime preserved: yes"
           } >> "$GITHUB_STEP_SUMMARY"
 
   cleanup:
