@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       reset_checkpoint:
-        description: Ignore saved GCC build state and start a fresh build
+        description: Ignore saved GCC build state and start clean
         required: false
         type: boolean
         default: false
@@ -39,9 +39,14 @@ jobs:
           RESET_CHECKPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.reset_checkpoint || false }}
         run: |
           set -euo pipefail
-          gh workflow run d630-core2-gcc-frozen-build.yml \
-            --repo "$GITHUB_REPOSITORY" --ref master \
-            -f stage=gcc-12 \
-            -f reset_checkpoint="$RESET_CHECKPOINT" \
-            -f force_rebuild=true
-          echo "Queued the frozen GCC build. It resumes only from a verified PAX checkpoint; legacy or corrupt checkpoints are rejected."
+          for attempt in 1 2 3; do
+            if gh workflow run d630-core2-gcc-frozen-build.yml --repo "$GITHUB_REPOSITORY" \
+                --ref master -f reset_checkpoint="$RESET_CHECKPOINT"; then
+              echo "Queued the resumable GCC build."
+              exit 0
+            fi
+            echo "::warning::Workflow dispatch attempt $attempt failed; retrying."
+            sleep "$((attempt * 10))"
+          done
+          echo "::error::Could not dispatch the GCC build workflow."
+          exit 1
