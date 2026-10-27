@@ -31,7 +31,7 @@ permissions:
 concurrency:
   # The push-triggered job is intentionally skipped; give it a unique group so
   # merging a workflow fix does not cancel an active six-hour build.
-  group: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '[resume-probe]') && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
+  group: ${{ github.event_name == 'push' && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
   cancel-in-progress: true
 
 jobs:
@@ -46,6 +46,20 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
 
     steps:
+      - name: Cancel older Brave attempts before the resume probe
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[resume-probe]')
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t ACTIVE_RUNS < <(gh run list --workflow d630-core2-brave-source.yml --repo "$GITHUB_REPOSITORY" --limit 50 --json databaseId,status --jq '.[] | select(.status == "in_progress" or .status == "queued" or .status == "pending") | .databaseId')
+          for OLD_RUN_ID in "${ACTIVE_RUNS[@]}"; do
+            if [[ "$OLD_RUN_ID" == "$GITHUB_RUN_ID" ]]; then
+              continue
+            fi
+            echo "Cancelling older Brave run $OLD_RUN_ID before resume verification."
+            gh run cancel "$OLD_RUN_ID" --repo "$GITHUB_REPOSITORY" || echo "::warning::Could not cancel run $OLD_RUN_ID; continuing with checkpoint validation."
+          done
+          echo "Previous Brave attempts have been cancellation-requested."
       - name: Free disk space and disable swap completely
         shell: bash
         run: |
