@@ -2,6 +2,19 @@
 set -Eeuo pipefail
 die(){ echo "::error::$*" >&2; exit 1; }
 
+dispatch_workflow() {
+  local workflow="$1"; shift
+  local attempt
+  for attempt in 1 2 3 4 5; do
+    if gh workflow run "$workflow" --repo "$GITHUB_REPOSITORY" --ref master "$@"; then
+      return 0
+    fi
+    echo "::warning::Dispatch of $workflow failed (attempt $attempt/5); retrying." >&2
+    sleep "$((attempt * 10))"
+  done
+  return 1
+}
+
 : "${GITHUB_WORKSPACE:?missing GITHUB_WORKSPACE}"
 : "${GITHUB_REPOSITORY:?missing GITHUB_REPOSITORY}"
 : "${GH_TOKEN:?missing GH_TOKEN}"
@@ -17,6 +30,40 @@ RESTORED=false
 cleanup(){ docker rm -f "$CONTAINER" >/dev/null 2>&1 || true; rm -rf "$TMP"; }
 trap cleanup EXIT
 for c in docker gh tar zstd split jq sha256sum; do command -v "$c" >/dev/null || die "Missing command: $c"; done
+
+# Scheduled runs are only a recovery mechanism after a complete schema-2 checkpoint exists.
+# They stop once the GCC 12 package release has been published, preventing duplicate builds.
+if [[ "${GITHUB_EVENT_NAME:-}" == schedule ]]; then
+  RELEASE_TAGS="$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq '.[].tag_name')" ||
+    die "Could not check existing GCC 12 package releases for scheduled recovery."
+  if grep -Eq '^core2-system-gcc-12-' <<<"$RELEASE_TAGS"; then
+    echo "GCC 12 package release already exists; scheduled recovery is a no-op."
+    exit 0
+  fi
+  if RELEASE="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" 2>/dev/null)"; then
+    RID="$(jq -r .id <<<"$RELEASE")"
+    ASSET_NAMES="$(gh api "repos/$GITHUB_REPOSITORY/releases/$RID/assets?per_page=100" --jq '.[].name')" ||
+      die "Could not inspect assets for scheduled checkpoint recovery."
+    HAS_VALID_CHECKPOINT=false
+    while IFS= read -r MN; do
+      [[ "$MN" =~ ^gcc12-manifest-[0-9]+-[0-9]+\.json$ ]] || continue
+      CANDIDATE="$TMP/schedule-check"
+      rm -rf "$CANDIDATE"; mkdir -p "$CANDIDATE"
+      if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$MN" --dir "$CANDIDATE" >/dev/null 2>&1 &&
+         jq -e '.schema==2 and .archive_format=="pax" and .source_package=="gcc-12" and (.parts|type=="array" and length>0)' "$CANDIDATE/$MN" >/dev/null 2>&1; then
+        HAS_VALID_CHECKPOINT=true
+        break
+      fi
+    done <<<"$ASSET_NAMES"
+    if [[ "$HAS_VALID_CHECKPOINT" != true ]]; then
+      echo "No compatible complete checkpoint exists; scheduled recovery is a no-op."
+      exit 0
+    fi
+  else
+    echo "No checkpoint release exists; scheduled recovery is a no-op."
+    exit 0
+  fi
+fi
 
 # Prove nanosecond timestamps survive the archive format before an expensive build.
 mkdir "$TMP/probe" "$TMP/probe-out"
@@ -193,8 +240,11 @@ checkpoint_state(){
 
 if [[ "$BUILD_STATUS" -eq 124 ]]; then
   checkpoint_state
-  gh workflow run d630-core2-gcc-frozen-build.yml --repo "$GITHUB_REPOSITORY" --ref master -f reset_checkpoint=false
-  echo "Queued next incremental GCC segment."
+  if dispatch_workflow d630-core2-gcc-frozen-build.yml -f reset_checkpoint=false; then
+    echo "Queued next incremental GCC segment."
+  else
+    echo "::warning::Checkpoint is saved and verified; dispatch API is unavailable. The scheduled recovery workflow will resume from this checkpoint."
+  fi
   exit 0
 elif [[ "$BUILD_STATUS" -ne 0 ]]; then
   checkpoint_state
@@ -243,5 +293,8 @@ gh release create "$RELEASE_TAG" "${ASSETS[@]}" --repo "$GITHUB_REPOSITORY" --ti
 echo "Published GCC runtime/development packages: $RELEASE_TAG"
 
 gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag || echo "::warning::Package release succeeded but checkpoint cleanup failed."
-gh workflow run d630-core2-system-package.yml --repo "$GITHUB_REPOSITORY" --ref master -f package=gcc-defaults -f force_rebuild=true -f refresh_index=true
-echo "Queued gcc/cpp default packages after GCC 12 publication."
+if dispatch_workflow d630-core2-system-package.yml -f package=gcc-defaults -f force_rebuild=true -f refresh_index=true; then
+  echo "Queued gcc/cpp default packages after GCC 12 publication."
+else
+  die "GCC runtime/development packages were published, but dispatch of the gcc/cpp default-package build failed after 5 attempts."
+fi

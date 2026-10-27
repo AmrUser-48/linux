@@ -2,6 +2,13 @@ name: Core 2 GCC frozen build
 run-name: "Core 2 GCC frozen build / #${{ github.run_number }}"
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-gcc-frozen-build.yml"
+      - "scripts/core2/frozen-gcc-build.sh"
+  schedule:
+    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       reset_checkpoint:
