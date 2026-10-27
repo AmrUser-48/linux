@@ -1,0 +1,79 @@
+name: Core 2 GCC frozen build machine
+run-name: "GCC frozen build / ${{ inputs.stage || 'gcc-12' }} / #${{ github.run_number }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: Build stage to start
+        required: true
+        type: choice
+        options:
+          - gcc-12
+          - defaults
+        default: gcc-12
+      reset_checkpoint:
+        description: Ignore the saved GCC build state and start clean
+        required: false
+        type: boolean
+        default: false
+      force_rebuild:
+        description: Rebuild gcc/cpp default packages even if a release already exists
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: core2-gcc-frozen-${{ inputs.stage || 'gcc-12' }}
+  cancel-in-progress: false
+
+jobs:
+  gcc-12:
+    if: inputs.stage == 'gcc-12'
+    name: Resume GCC 12 compile and publish package family
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RESET_CHECKPOINT: ${{ inputs.reset_checkpoint }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+
+      - name: Validate checkpoint script syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n scripts/core2/frozen-gcc-build.sh
+          command -v docker
+          command -v gh
+          command -v zstd
+          command -v jq
+
+      - name: Report machine capacity
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf 'CPU threads: '; nproc
+          free -h
+          df -h "$GITHUB_WORKSPACE"
+
+      - name: Restore frozen build state, compile GCC, and publish packages
+        shell: bash
+        run: bash scripts/core2/frozen-gcc-build.sh
+
+  defaults:
+    if: inputs.stage == 'defaults'
+    name: Build and publish default gcc/cpp packages
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: gcc-defaults
+      force_rebuild: ${{ inputs.force_rebuild }}
+      refresh_index: true
