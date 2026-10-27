@@ -200,7 +200,7 @@ shopt -s nullglob
 rm -f "$ROOT"/source-tree/*.deb "$ROOT"/source-tree/*.changes "$ROOT"/source-tree/*.buildinfo
 rm -f "$ROOT/build.log"
 rm -rf "$ROOT/release-artifacts"
-OBJECTS_BEFORE="$(find "$ROOT/source-tree" -type f \\( -name '*.o' -o -name '*.a' \\) | wc -l)"
+OBJECTS_BEFORE="$(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
 [[ "$OBJECTS_BEFORE" -eq 0 ]] || die "Clean target left $OBJECTS_BEFORE object/archive files; refusing checkpoint."
 checkpoint_state
 echo "Verified prepared workspace checkpoint; compilation starts with zero object/archive files."
