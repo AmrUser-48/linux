@@ -83,12 +83,16 @@ jobs:
           PACKAGE: ${{ inputs.package }}
         run: |
           set -Eeuo pipefail
-          apt-get build-dep -y "$PACKAGE"
+          SOURCE_PACKAGE="$PACKAGE"
+          if [[ "$PACKAGE" == "zstd" ]]; then
+            SOURCE_PACKAGE="libzstd"
+          fi
+          apt-get build-dep -y "$SOURCE_PACKAGE"
           cd "$GITHUB_WORKSPACE/source-root"
-          apt-get source "$PACKAGE"
-          SOURCE_DIR="$(find "$GITHUB_WORKSPACE/source-root" -mindepth 1 -maxdepth 1 -type d -name "${PACKAGE}-*" -print -quit)"
+          apt-get source "$SOURCE_PACKAGE"
+          SOURCE_DIR="$(find "$GITHUB_WORKSPACE/source-root" -mindepth 1 -maxdepth 1 -type d -name "${SOURCE_PACKAGE}-*" -print -quit)"
           if [[ -z "$SOURCE_DIR" || ! -s "$SOURCE_DIR/debian/changelog" ]]; then
-            echo "::error::Could not locate the official Debian source tree for $PACKAGE."
+            echo "::error::Could not locate official Debian source tree $SOURCE_PACKAGE for requested package $PACKAGE."
             exit 1
           fi
 
@@ -181,7 +185,8 @@ jobs:
 
           {
             echo "Profile: safe-aggressive Core 2"
-            echo "Source package: $PACKAGE"
+            echo "Requested binary package family: $PACKAGE"
+            echo "Debian source package: $SOURCE_PACKAGE"
             echo "Debian Bookworm source version: $SOURCE_VERSION"
             echo "Core 2 package version: $PACKAGE_VERSION"
             echo "Target: amd64 / Intel Core 2"
