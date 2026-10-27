@@ -204,7 +204,7 @@ decompress_one() {
 }
 
 elapsed_seconds() {
-  awk -v start="$1" -v finish="$2" 'BEGIN { printf "%.6f\\n", (finish - start) / 1000000000 }'
+  awk -v start="$1" -v finish="$2" 'BEGIN { printf "%.6f\n", (finish - start) / 1000000000 }'
 }
 
 median_seconds() {
