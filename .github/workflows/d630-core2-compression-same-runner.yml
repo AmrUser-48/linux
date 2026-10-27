@@ -1,0 +1,186 @@
+name: Core 2 compression same-runner verification
+run-name: "Compression same-runner verification / #${{ github.run_number }}"
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/d630-core2-compression-same-runner.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: core2-compression-same-runner-verification
+  cancel-in-progress: false
+
+jobs:
+  compare:
+    name: Measure stock and rebuilt codecs sequentially on one runner
+    runs-on: ubuntu-22.04
+    timeout-minutes: 100
+    container:
+      image: debian:12
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out only the benchmark script
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/core2
+          sparse-checkout-cone-mode: true
+
+      - name: Install stock tools and release-download support
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -f /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources
+          cat > /etc/apt/sources.list <<'SOURCES'
+          deb http://deb.debian.org/debian bookworm main
+          deb http://deb.debian.org/debian bookworm-updates main
+          deb http://deb.debian.org/debian-security bookworm-security main
+          SOURCES
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            7zip xz-utils zstd lz4 gzip zlib1g python3 coreutils time ca-certificates dpkg gh jq
+
+      - name: Capture CPU identity, versions, and deterministic test corpus
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p compression-same-runner/corpus compression-same-runner/stock
+          bash scripts/core2/compression-benchmark.sh prepare compression-same-runner/corpus
+          bash scripts/core2/compression-benchmark.sh versions compression-same-runner/stock/versions.txt
+
+      - name: Measure stock Debian packages on this runner
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          bash scripts/core2/compression-benchmark.sh run stock \
+            compression-same-runner/corpus compression-same-runner/stock/baseline.csv
+
+      - name: Download the already-published safe-aggressive Core 2 package releases
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p downloaded-packages selected-debs
+          for package in 7zip xz-utils zstd lz4 gzip zlib; do
+            tag="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases?per_page=100" |
+              jq -sr --arg prefix "core2-${package}-" \
+                'add | map(select((.tag_name | startswith($prefix)) and (.tag_name | contains("core2safe1")))) | sort_by(.published_at) | last | .tag_name // empty')"
+            if [[ -z "$tag" ]]; then
+              echo "::error::No published safe-aggressive release found for $package."
+              exit 1
+            fi
+            mkdir -p "downloaded-packages/$package"
+            echo "$package -> $tag"
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" \
+              --pattern '*.deb' --dir "downloaded-packages/$package"
+          done
+
+          declare -A found=(
+            [7zip]=0 [xz-utils]=0 [liblzma5]=0 [zstd]=0 [libzstd1]=0
+            [lz4]=0 [liblz4-1]=0 [gzip]=0 [zlib1g]=0
+          )
+          shopt -s nullglob
+          for deb in downloaded-packages/*/*.deb; do
+            package="$(dpkg-deb -f "$deb" Package)"
+            case "$package" in
+              7zip|xz-utils|liblzma5|zstd|libzstd1|lz4|liblz4-1|gzip|zlib1g)
+                cp "$deb" "selected-debs/$(basename "$deb")"
+                found["$package"]=1
+                echo "Selected $package $(dpkg-deb -f "$deb" Version)"
+                ;;
+            esac
+          done
+          for package in 7zip xz-utils liblzma5 zstd libzstd1 lz4 liblz4-1 gzip zlib1g; do
+            if [[ "${found[$package]}" != 1 ]]; then
+              echo "::error::Missing rebuilt runtime package: $package"
+              exit 1
+            fi
+          done
+
+      - name: Install rebuilt tools and runtime libraries
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          dpkg -i selected-debs/*.deb
+          dpkg --configure -a
+          dpkg-query -W -f='${Package} ${Version} ${Architecture}\n' \
+            7zip xz-utils liblzma5 zstd libzstd1 lz4 liblz4-1 gzip zlib1g libstdc++6
+
+      - name: Measure rebuilt codecs on the same runner and compare
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p compression-same-runner/rebuilt
+          bash scripts/core2/compression-benchmark.sh versions compression-same-runner/rebuilt/versions.txt
+          bash scripts/core2/compression-benchmark.sh run rebuilt \
+            compression-same-runner/corpus compression-same-runner/rebuilt/optimized.csv
+          bash scripts/core2/compression-benchmark.sh compare \
+            compression-same-runner/stock/baseline.csv \
+            compression-same-runner/rebuilt/optimized.csv \
+            compression-same-runner/rebuilt/comparison.csv
+
+      - name: Summarize same-runner results
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 - compression-same-runner/rebuilt/comparison.csv compression-same-runner/SUMMARY.md <<'PY'
+          import csv
+          import statistics
+          import sys
+          from collections import defaultdict
+
+          source, output = sys.argv[1:]
+          groups = defaultdict(list)
+          with open(source, newline="", encoding="utf-8") as stream:
+              for row in csv.DictReader(stream):
+                  groups[(row["tool"], row["mode"])].append(row)
+
+          lines = [
+              "# Same-runner compression benchmark",
+              "",
+              "Stock Debian tools were measured first, then the rebuilt safe-aggressive packages were installed and measured sequentially on this same runner. The input corpus and settings were identical.",
+              "",
+              "| Tool | Operation | Median throughput change | Median elapsed-time change | Median archive-size change |",
+              "|---|---|---:|---:|---:|",
+          ]
+          for (tool, mode), rows in sorted(groups.items()):
+              speed = statistics.median(float(row["speed_change_pct"]) for row in rows)
+              elapsed = statistics.median(float(row["time_change_pct"]) for row in rows)
+              size = statistics.median(float(row["archive_size_change_pct"]) for row in rows)
+              lines.append(f"| {tool} | {mode} | {speed:+.2f}% | {elapsed:+.2f}% | {size:+.2f}% |")
+
+          for title, path in [
+              ("Runner and stock package versions", "compression-same-runner/stock/versions.txt"),
+              ("Runner and rebuilt package versions", "compression-same-runner/rebuilt/versions.txt"),
+          ]:
+              lines.extend(["", f"## {title}", "", "~~~text"])
+              with open(path, encoding="utf-8") as stream:
+                  lines.extend(stream.read().rstrip().splitlines())
+              lines.append("~~~")
+
+          lines.extend([
+              "",
+              "This comparison controls the runner hardware by running both phases on one instance. That runner is still not a physical Dell Latitude D630/Core 2 Duo, so final target-hardware validation should use the same script on the D630 itself.",
+              "libstdc++6 is version-audited but not rebuilt here; the dedicated GCC workflow owns that package.",
+          ])
+          with open(output, "w", encoding="utf-8") as stream:
+              stream.write("\n".join(lines) + "\n")
+          print("\n".join(lines))
+          PY
+          cat compression-same-runner/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload same-runner raw data and comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: core2-compression-same-runner-${{ github.run_id }}
+          path: compression-same-runner/
+          if-no-files-found: error
+          retention-days: 30
