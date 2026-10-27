@@ -88,8 +88,8 @@ else
         fi
 
         archive="$TMP/$profile-$corpus_name-$codec"
-        ct="$TMP/times"
-        dt="$TMP/times"
+        ct="$TMP/$profile-$corpus_name-$codec-compress.times"
+        dt="$TMP/$profile-$corpus_name-$codec-decompress.times"
         : > "$ct"
         : > "$dt"
         for n in 1 2 3; do
