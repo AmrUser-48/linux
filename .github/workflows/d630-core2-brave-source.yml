@@ -14,6 +14,11 @@ on:
         required: false
         default: false
         type: boolean
+      resume_verified:
+        description: Internal chain flag; leave false for manual runs so the restored state is tested first
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [master]
     paths:
@@ -26,13 +31,13 @@ permissions:
 concurrency:
   # The push-triggered job is intentionally skipped; give it a unique group so
   # merging a workflow fix does not cancel an active six-hour build.
-  group: ${{ github.event_name == 'push' && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
+  group: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '[resume-probe]') && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
   cancel-in-progress: true
 
 jobs:
   build:
     name: Compile and package Brave for Core 2
-    if: github.event_name != 'push'
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[resume-probe]')
     runs-on: ubuntu-22.04
     timeout-minutes: 360
     env:
@@ -438,21 +443,41 @@ jobs:
           echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
           if [[ "$LAST_CP" != "0000" ]]; then
             if [[ ! -s "$OUT/.siso_deps" ]]; then
-              echo "::error::Restored output tree has no Siso dependency database (.siso_deps); refusing to restart compilation without verified state."
+              echo "::error::Restored output tree has no Siso dependency database (.siso_deps); refusing to restart compilation."
               find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
               exit 1
             fi
-            if ! find "$OUT" -maxdepth 1 -type f -name '.siso_fs_state*' -size +0c -print -quit | grep -q .; then
-              echo "::error::Restored output tree has no Siso filesystem state; refusing to restart compilation without verified state."
+            if [[ ! -s "$OUT/.ninja_log" ]]; then
+              echo "::error::Restored output tree has no Ninja build log (.ninja_log); refusing to claim incremental resume."
               find "$OUT" -maxdepth 1 -type f \( -name '.siso*' -o -name '.ninja*' \) -printf '%f %s bytes\n' || true
               exit 1
             fi
-            RESTORED_OBJECTS="$(find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -print | wc -l)"
+
+            BASELINE_OBJECTS_FILE="$RUNNER_TEMP/brave-resume-baseline-objects.txt"
+            find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -printf '%P\n' | LC_ALL=C sort -u > "$BASELINE_OBJECTS_FILE"
+            RESTORED_OBJECTS="$(wc -l < "$BASELINE_OBJECTS_FILE" | tr -d '[:space:]')"
             if (( RESTORED_OBJECTS == 0 )); then
-              echo "::error::Checkpoint $LAST_CP contains no compiled object files."
+              echo "::error::Checkpoint $LAST_CP contains no compiled object/archive files."
               exit 1
             fi
-            echo "Verified restored Siso state: .siso_deps and filesystem state present; $RESTORED_OBJECTS object/archive files."
+            {
+              echo "baseline_objects_file=$BASELINE_OBJECTS_FILE"
+              echo "restored_objects=$RESTORED_OBJECTS"
+            } >> "$GITHUB_OUTPUT"
+
+            # .siso_fs_state is a disposable filesystem-stat/hash index. Reusing it
+            # after extracting a checkpoint on a new runner can make its view of
+            # output mtimes disagree with the real filesystem and stale .siso_deps.
+            # Preserve compiled outputs, .siso_deps and .ninja_log; rebuild this index.
+            rm -f "$OUT"/.siso_fs_state*
+            rm -f "$OUT"/siso.INFO* "$OUT/siso_output"
+            if compgen -G "$OUT/.siso_fs_state*" > /dev/null; then
+              echo "::error::Could not remove the previous runner's Siso filesystem-state index."
+              exit 1
+            fi
+            echo "Restored checkpoint $LAST_CP: $RESTORED_OBJECTS existing object/archive files."
+            echo "Discarded runner-local Siso filesystem-state index; preserved .siso_deps and .ninja_log."
+            echo "Cleared prior Siso logs so resume validation measures only this runner."
           fi
           df -h "$GITHUB_WORKSPACE"
       - name: Compile Brave Release and build Linux package
@@ -462,6 +487,7 @@ jobs:
         env:
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
           LAST_CHECKPOINT: ${{ steps.state.outputs.last_checkpoint }}
+          RESUME_VERIFIED: ${{ inputs.resume_verified }}
         run: |
           set -euo pipefail
           cd "$GITHUB_WORKSPACE/src/brave"
@@ -469,10 +495,18 @@ jobs:
           OUT="$GITHUB_WORKSPACE/src/out/Release"
           mkdir -p "$OUT"
 
-          # Stop after one compile segment; the next runner restores a complete output snapshot.
+          # The first restore after this fix is deliberately short. A bad resume
+          # must fail before it can consume another 220-minute compilation segment.
+          SEGMENT_MINUTES=220
+          RESUME_PROBE=false
+          if [[ "$LAST_CHECKPOINT" != "0000" && "$RESUME_VERIFIED" != "true" ]]; then
+            SEGMENT_MINUTES=15
+            RESUME_PROBE=true
+          fi
+          echo "resume_probe=$RESUME_PROBE" >> "$GITHUB_OUTPUT"
           echo "Checkpoint baseline: $LAST_CHECKPOINT"
-          echo "Starting incremental build with no swap; checkpoint timeout is 220 minutes."
-          timeout --signal=INT --kill-after=90s 220m pnpm run create_dist Release \
+          echo "Starting incremental build with no swap; segment limit is $SEGMENT_MINUTES minutes."
+          timeout --signal=INT --kill-after=90s "${SEGMENT_MINUTES}m" pnpm run create_dist Release \
             --gn=symbol_level:0 \
             --gn=blink_symbol_level:0 \
             --gn=v8_symbol_level:0 \
@@ -526,6 +560,70 @@ jobs:
           echo "checkpoint=false" >> "$GITHUB_OUTPUT"
           grep -E 'Done\. Made|Packaging|Creating|brave-browser_.*\.deb|ninja: Entering|BUILD SUCCESS' "$BUILD_LOG" | tail -n 60 || true
           test -d "$OUT"
+
+      - name: Verify resumed compilation advances without rebuilding saved objects
+        id: validate_resume
+        if: success() && inputs.compact_state != true && steps.compile.outputs.resume_probe == 'true' && steps.compile.outputs.checkpoint == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$GITHUB_WORKSPACE/src/out/Release"
+          BASELINE="$RUNNER_TEMP/brave-resume-baseline-objects.txt"
+          CURRENT="$RUNNER_TEMP/brave-current-objects.txt"
+          NEW_OBJECTS_FILE="$RUNNER_TEMP/brave-new-objects.txt"
+          COMPILED="$RUNNER_TEMP/brave-compiled-objects.txt"
+          REPEATED="$RUNNER_TEMP/brave-repeated-objects.txt"
+
+          if [[ ! -s "$BASELINE" ]]; then
+            echo "::error::Resume probe has no baseline object list."
+            exit 1
+          fi
+          if [[ ! -s "$OUT/siso.INFO" ]]; then
+            echo "::error::Resume probe cannot inspect a fresh Siso log."
+            exit 1
+          fi
+
+          find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -printf '%P\n' | LC_ALL=C sort -u > "$CURRENT"
+          comm -13 "$BASELINE" "$CURRENT" > "$NEW_OBJECTS_FILE"
+          NEW_OBJECTS="$(wc -l < "$NEW_OBJECTS_FILE" | tr -d '[:space:]')"
+
+          # Siso logs actual local compiler commands as localexec entries. Extract
+          # their -o .o targets and compare against files that were already present.
+          grep -E 'localexec\.go:[0-9]+.*localexec: \[' "$OUT/siso.INFO" \
+            | grep -oE -- '-o "?[^" ]+\.o"?' \
+            | sed -E 's/^-o "?//; s/"?$//' \
+            | LC_ALL=C sort -u > "$COMPILED" || true
+          COMPILED_COUNT="$(wc -l < "$COMPILED" | tr -d '[:space:]')"
+          comm -12 "$BASELINE" "$COMPILED" > "$REPEATED"
+          REPEATED_COUNT="$(wc -l < "$REPEATED" | tr -d '[:space:]')"
+
+          echo "Resume probe: new object/archive paths=$NEW_OBJECTS; distinct compiler object targets=$COMPILED_COUNT; previously saved objects recompiled=$REPEATED_COUNT."
+          {
+            echo "### Brave resume probe"
+            echo
+            echo "- Restored checkpoint: ${{ steps.state.outputs.last_checkpoint }}"
+            echo "- Existing object/archive paths: ${{ steps.state.outputs.restored_objects }}"
+            echo "- New object/archive paths after 15 minutes: $NEW_OBJECTS"
+            echo "- Distinct object targets compiled: $COMPILED_COUNT"
+            echo "- Previously saved object targets recompiled: $REPEATED_COUNT"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if (( COMPILED_COUNT == 0 )); then
+            echo "::error::Resume probe found no local compiler output targets; refusing automatic continuation."
+            exit 1
+          fi
+          if (( REPEATED_COUNT != 0 )); then
+            echo "::error::Resume probe found saved objects being recompiled. First repeated targets:"
+            head -n 30 "$REPEATED" || true
+            exit 1
+          fi
+          if (( NEW_OBJECTS < 25 )); then
+            echo "::error::Resume probe produced only $NEW_OBJECTS new object/archive paths in 15 minutes; refusing automatic continuation."
+            exit 1
+          fi
+
+          echo "resume_verified=true" >> "$GITHUB_OUTPUT"
+          echo "Resume probe passed: new targets appeared and no saved object target was recompiled."
 
       - name: Capture Siso diagnostics
         if: always() && inputs.compact_state != true
@@ -745,12 +843,11 @@ jobs:
           rm -f "$PART_DIR"/state-c${NEXT_CHECKPOINT}-part-*
           : > "$FILE_LIST"
 
-          # Siso's dependency and filesystem-state files must match the complete set
-          # of restored objects. Timestamp-only deltas can omit state files, causing
-          # the next runner to schedule already-compiled objects again. Save a full,
-          # self-contained output snapshot at every boundary instead.
-          echo "Capturing full output snapshot $NEXT_CHECKPOINT (previous checkpoint $LAST_CHECKPOINT)."
-          (cd "$OUT" && find . \( -type f -o -type l \) -print0) > "$FILE_LIST"
+          # Save a complete output snapshot, but do not carry Siso's disposable
+          # filesystem-stat/hash index to a different runner. The next runner rebuilds
+          # that index from the restored files while retaining compiled outputs/deps.
+          echo "Capturing output snapshot $NEXT_CHECKPOINT without runner-local Siso filesystem state."
+          (cd "$OUT" && find . \( -type f -o -type l \) ! -name '.siso_fs_state*' -print0) > "$FILE_LIST"
 
           FILE_COUNT="$(tr -cd '\000' < "$FILE_LIST" | wc -c)"
           if (( FILE_COUNT == 0 )); then
@@ -805,6 +902,7 @@ jobs:
           file_count=$FILE_COUNT
           part_count=${#PARTS[@]}
           full_snapshot=true
+          fs_state_policy=rebuild-on-restore
           covers_through=$NEXT_CHECKPOINT
           created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
@@ -902,12 +1000,19 @@ jobs:
         shell: bash
         env:
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          RESUME_VERIFIED_INPUT: ${{ inputs.resume_verified }}
+          RESUME_VERIFIED_PROBE: ${{ steps.validate_resume.outputs.resume_verified }}
         run: |
           set -euo pipefail
-          echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION."
+          RESUME_VERIFIED="$RESUME_VERIFIED_INPUT"
+          if [[ "$RESUME_VERIFIED_PROBE" == "true" ]]; then
+            RESUME_VERIFIED=true
+          fi
+          echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION (resume_verified=$RESUME_VERIFIED)."
           gh workflow run d630-core2-brave-source.yml \
             --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
-            -f version="$UPSTREAM_VERSION"
+            -f version="$UPSTREAM_VERSION" \
+            -f resume_verified="$RESUME_VERIFIED"
 
       - name: Publish source-built Brave package release
         if: inputs.compact_state != true && success() && steps.compile.outputs.checkpoint != 'true'
