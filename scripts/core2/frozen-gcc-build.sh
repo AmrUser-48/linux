@@ -2,19 +2,6 @@
 set -Eeuo pipefail
 die(){ echo "::error::$*" >&2; exit 1; }
 
-dispatch_workflow() {
-  local workflow="$1"; shift
-  local attempt
-  for attempt in 1 2 3 4 5; do
-    if gh workflow run "$workflow" --repo "$GITHUB_REPOSITORY" --ref master "$@"; then
-      return 0
-    fi
-    echo "::warning::Dispatch of $workflow failed (attempt $attempt/5); retrying." >&2
-    sleep "$((attempt * 10))"
-  done
-  return 1
-}
-
 : "${GITHUB_WORKSPACE:?missing GITHUB_WORKSPACE}"
 : "${GITHUB_REPOSITORY:?missing GITHUB_REPOSITORY}"
 : "${GH_TOKEN:?missing GH_TOKEN}"
@@ -31,38 +18,13 @@ cleanup(){ docker rm -f "$CONTAINER" >/dev/null 2>&1 || true; rm -rf "$TMP"; }
 trap cleanup EXIT
 for c in docker gh tar zstd split jq sha256sum; do command -v "$c" >/dev/null || die "Missing command: $c"; done
 
-# Scheduled runs are only a recovery mechanism after a complete schema-2 checkpoint exists.
-# They stop once the GCC 12 package release has been published, preventing duplicate builds.
-if [[ "${GITHUB_EVENT_NAME:-}" == schedule ]]; then
-  RELEASE_TAGS="$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq '.[].tag_name')" ||
-    die "Could not check existing GCC 12 package releases for scheduled recovery."
-  if grep -Eq '^core2-system-gcc-12-' <<<"$RELEASE_TAGS"; then
-    echo "GCC 12 package release already exists; scheduled recovery is a no-op."
-    exit 0
-  fi
-  if RELEASE="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" 2>/dev/null)"; then
-    RID="$(jq -r .id <<<"$RELEASE")"
-    ASSET_NAMES="$(gh api "repos/$GITHUB_REPOSITORY/releases/$RID/assets?per_page=100" --jq '.[].name')" ||
-      die "Could not inspect assets for scheduled checkpoint recovery."
-    HAS_VALID_CHECKPOINT=false
-    while IFS= read -r MN; do
-      [[ "$MN" =~ ^gcc12-manifest-[0-9]+-[0-9]+\.json$ ]] || continue
-      CANDIDATE="$TMP/schedule-check"
-      rm -rf "$CANDIDATE"; mkdir -p "$CANDIDATE"
-      if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$MN" --dir "$CANDIDATE" >/dev/null 2>&1 &&
-         jq -e '.schema==2 and .archive_format=="pax" and .source_package=="gcc-12" and (.parts|type=="array" and length>0)' "$CANDIDATE/$MN" >/dev/null 2>&1; then
-        HAS_VALID_CHECKPOINT=true
-        break
-      fi
-    done <<<"$ASSET_NAMES"
-    if [[ "$HAS_VALID_CHECKPOINT" != true ]]; then
-      echo "No compatible complete checkpoint exists; scheduled recovery is a no-op."
-      exit 0
-    fi
-  else
-    echo "No checkpoint release exists; scheduled recovery is a no-op."
-    exit 0
-  fi
+# The GCC package release is the authoritative completion marker.
+RELEASE_TAGS="$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq '.[].tag_name')" ||
+  die "Could not check existing GCC 12 package releases."
+if grep -Eq '^core2-system-gcc-12-' <<<"$RELEASE_TAGS"; then
+  if [[ -n "${GITHUB_OUTPUT:-}" ]]; then echo "published=false" >>"$GITHUB_OUTPUT"; fi
+  echo "A GCC 12 package release already exists; refusing a duplicate build."
+  exit 0
 fi
 
 # Prove nanosecond timestamps survive the archive format before an expensive build.
@@ -83,7 +45,7 @@ if [[ "$RESET_CHECKPOINT" != true ]]; then
       C="$TMP/candidate"; rm -rf "$C"; mkdir -p "$C"
       gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$MN" --dir "$C" >/dev/null 2>&1 || continue
       M="$C/$MN"
-      jq -e '.schema==2 and .archive_format=="pax" and .source_package=="gcc-12" and
+      jq -e '.schema==3 and .state_phase=="prepared-clean-source" and .archive_format=="pax" and .source_package=="gcc-12" and
         (.generation|type=="string" and test("^[0-9]+-[0-9]+$")) and
         (.parts|type=="array" and length>0 and length<10000)' "$M" >/dev/null 2>&1 || continue
       G="$(jq -r .generation "$M")"; VALID=true; PARTS=()
@@ -175,24 +137,6 @@ PV="$(jq -r .package_version "$ROOT/state.json")"
 OPT="$(jq -r .optimization_level "$ROOT/state.json")"
 [[ "$PV" =~ ^[0-9A-Za-z.+:~_-]+$ && "$SV" =~ ^[0-9A-Za-z.+:~_-]+$ ]] || die "Unsafe version in checkpoint."
 [[ -s "$ROOT/build-flags.txt" ]] || die "Build flags missing."
-echo "Object/archive files before segment: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
-set +e
-docker exec -e SOURCE_DIR="/work/${SDREL%/}/" \
-  -e DEB_CFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
-  -e DEB_CXXFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
-  -e DEB_FFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
-  -e DEB_BUILD_OPTIONS="parallel=2 noautodbgsym" "$CONTAINER" bash -c '
-    set -o pipefail
-    runuser --preserve-environment -u core2build -- env HOME=/home/core2build USER=core2build LOGNAME=core2build \
-      SOURCE_DIR="$SOURCE_DIR" DEB_CFLAGS_MAINT_APPEND="$DEB_CFLAGS_MAINT_APPEND" \
-      DEB_CXXFLAGS_MAINT_APPEND="$DEB_CXXFLAGS_MAINT_APPEND" DEB_FFLAGS_MAINT_APPEND="$DEB_FFLAGS_MAINT_APPEND" \
-      DEB_BUILD_OPTIONS="$DEB_BUILD_OPTIONS" \
-      bash -c '"'"'cd "$SOURCE_DIR" && exec timeout --signal=INT --kill-after=90s 205m dpkg-buildpackage -rfakeroot -us -uc -b -nc -j2'"'"' \
-      2>&1 | tee -a /work/build.log
-  '
-BUILD_STATUS=$?
-set -e
-echo "dpkg-buildpackage status=$BUILD_STATUS; object/archive files afterward: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
 
 checkpoint_state(){
   [[ -s "$ROOT/state.json" ]] || die "No build state to checkpoint."
@@ -208,11 +152,11 @@ checkpoint_state(){
     jq -cn --arg name "$(basename "$p")" --arg sha256 "$(sha256sum "$p"|awk '{print $1}')" '{name:$name,sha256:$sha256}' >>"$lines"
   done
   jq -n --arg generation "$GEN" --arg source_package gcc-12 --arg source_version "$SV" --arg package_version "$PV" --arg archive_format pax --argjson parts "$(jq -s . "$lines")" \
-    '{schema:2,generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,archive_format:$archive_format,parts:$parts}' >"$manifest"
+    '{schema:3,state_phase:"prepared-clean-source",generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,archive_format:$archive_format,parts:$parts}' >"$manifest"
   if ! gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" >"$TMP/existing-release.json" 2>"$TMP/create-release.err"; then
     if grep -Eqi 'HTTP 404|Not Found|release not found' "$TMP/create-release.err"; then
-      gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --title "Resumable GCC 12 build state" \
-        --notes "Verified PAX-format disk snapshots for incremental Debian GCC 12 builds. A generation manifest is uploaded last."
+      gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --title "Prepared GCC 12 clean-build workspace" \
+        --notes "Verified PAX snapshot of clean Debian GCC 12 source and packaging state. Every build attempt compiles from scratch."
     else
       cat "$TMP/create-release.err" >&2
       die "Could not inspect checkpoint release before saving state."
@@ -238,17 +182,52 @@ checkpoint_state(){
   echo "Checkpoint $GEN uploaded and verified."
 }
 
+# The checkpoint contains clean prepared source/package state only.
+# Every build attempt cleans generated products and starts compiling from scratch.
+docker exec -i -e SOURCE_DIR="/work/${SDREL%/}/" "$CONTAINER" bash -s <<'CLEAN'
+set -Eeuo pipefail
+runuser --preserve-environment -u core2build -- env \
+  HOME=/home/core2build USER=core2build LOGNAME=core2build SOURCE_DIR="$SOURCE_DIR" \
+  bash -s <<'BUILDUSER'
+set -Eeuo pipefail
+cd "$SOURCE_DIR"
+fakeroot debian/rules clean
+test -s debian/dummy.texi
+BUILDUSER
+CLEAN
+
+shopt -s nullglob
+rm -f "$ROOT"/source-tree/*.deb "$ROOT"/source-tree/*.changes "$ROOT"/source-tree/*.buildinfo
+rm -f "$ROOT/build.log"
+rm -rf "$ROOT/release-artifacts"
+OBJECTS_BEFORE="$(find "$ROOT/source-tree" -type f \\( -name '*.o' -o -name '*.a' \\) | wc -l)"
+[[ "$OBJECTS_BEFORE" -eq 0 ]] || die "Clean target left $OBJECTS_BEFORE object/archive files; refusing checkpoint."
+checkpoint_state
+echo "Verified prepared workspace checkpoint; compilation starts with zero object/archive files."
+echo "Object/archive files before segment: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
+set +e
+docker exec -e SOURCE_DIR="/work/${SDREL%/}/" \
+  -e DEB_CFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
+  -e DEB_CXXFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
+  -e DEB_FFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
+  -e DEB_BUILD_OPTIONS="parallel=2 noautodbgsym" "$CONTAINER" bash -c '
+    set -o pipefail
+    runuser --preserve-environment -u core2build -- env HOME=/home/core2build USER=core2build LOGNAME=core2build \
+      SOURCE_DIR="$SOURCE_DIR" DEB_CFLAGS_MAINT_APPEND="$DEB_CFLAGS_MAINT_APPEND" \
+      DEB_CXXFLAGS_MAINT_APPEND="$DEB_CXXFLAGS_MAINT_APPEND" DEB_FFLAGS_MAINT_APPEND="$DEB_FFLAGS_MAINT_APPEND" \
+      DEB_BUILD_OPTIONS="$DEB_BUILD_OPTIONS" \
+      bash -c '"'"'cd "$SOURCE_DIR" && exec timeout --signal=INT --kill-after=90s 330m dpkg-buildpackage -rfakeroot -us -uc -b -j2'"'"' \
+      2>&1 | tee -a /work/build.log
+  '
+BUILD_STATUS=$?
+set -e
+echo "dpkg-buildpackage status=$BUILD_STATUS; object/archive files afterward: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
+
+
 if [[ "$BUILD_STATUS" -eq 124 ]]; then
-  checkpoint_state
-  if dispatch_workflow d630-core2-gcc-frozen-build.yml -f reset_checkpoint=false; then
-    echo "Queued next incremental GCC segment."
-  else
-    echo "::warning::Checkpoint is saved and verified; dispatch API is unavailable. The scheduled recovery workflow will resume from this checkpoint."
-  fi
-  exit 0
+  die "Clean GCC build exceeded 330 minutes. The verified clean-source checkpoint is retained; no compiled objects will be reused."
 elif [[ "$BUILD_STATUS" -ne 0 ]]; then
-  checkpoint_state
-  die "GCC build failed (status $BUILD_STATUS); state saved for diagnosis and retry."
+  die "GCC clean build failed (status $BUILD_STATUS). The prepared checkpoint is retained for a fresh clean build attempt."
 fi
 
 shopt -s nullglob
@@ -272,7 +251,7 @@ cp "$ROOT/build-flags.txt" "$ROOT/release-artifacts/CORE2-BUILD-FLAGS.txt"
   echo "Core 2 package version: $PV"
   echo "Target: amd64 / Intel Core 2 Duo"
   echo "Flags: -O2 -march=core2 -mtune=core2"
-  echo "Build: resumable incremental Debian package build with verified PAX disk snapshots"
+  echo "Build: clean Debian GCC 12 build from a verified full-workspace PAX snapshot; no previous objects reused"
   echo "Debug-symbol packages excluded."
   echo
   for deb in "${OK_DEBS[@]}"; do printf '%s %s %s\n' "$(dpkg-deb -f "$deb" Package)" "$(dpkg-deb -f "$deb" Version)" "$(dpkg-deb -f "$deb" Architecture)"; done
@@ -292,9 +271,6 @@ ASSETS=( ./*.deb ./*.txt )
 gh release create "$RELEASE_TAG" "${ASSETS[@]}" --repo "$GITHUB_REPOSITORY" --title "$TITLE" --notes-file release-notes.md
 echo "Published GCC runtime/development packages: $RELEASE_TAG"
 
+if [[ -n "${GITHUB_OUTPUT:-}" ]]; then echo "published=true" >>"$GITHUB_OUTPUT"; fi
 gh release delete "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag || echo "::warning::Package release succeeded but checkpoint cleanup failed."
-if dispatch_workflow d630-core2-system-package.yml -f package=gcc-defaults -f force_rebuild=true -f refresh_index=true; then
-  echo "Queued gcc/cpp default packages after GCC 12 publication."
-else
-  die "GCC runtime/development packages were published, but dispatch of the gcc/cpp default-package build failed after 5 attempts."
-fi
+echo "Published GCC runtime/development packages; the workflow dependency will build gcc/cpp defaults."

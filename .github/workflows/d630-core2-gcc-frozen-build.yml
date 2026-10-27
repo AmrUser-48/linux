@@ -7,8 +7,6 @@ on:
     paths:
       - ".github/workflows/d630-core2-gcc-frozen-build.yml"
       - "scripts/core2/frozen-gcc-build.sh"
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       reset_checkpoint:
@@ -27,9 +25,11 @@ concurrency:
 
 jobs:
   build:
-    name: Restore checkpoint, compile GCC 12, and publish packages
+    name: Restore clean workspace, build GCC 12 from scratch, and publish packages
     runs-on: ubuntu-22.04
     timeout-minutes: 360
+    outputs:
+      published: ${{ steps.gcc_build.outputs.published }}
     env:
       GH_TOKEN: ${{ github.token }}
       RESET_CHECKPOINT: ${{ inputs.reset_checkpoint }}
@@ -58,6 +58,17 @@ jobs:
           free -h
           df -h "$GITHUB_WORKSPACE"
 
-      - name: Restore build tree and build GCC 12
+      - name: Restore prepared workspace, clean, and build GCC 12 from scratch
+        id: gcc_build
         shell: bash
         run: bash scripts/core2/frozen-gcc-build.sh
+
+  defaults:
+    name: Build default gcc/cpp packages after GCC runtime publication
+    needs: build
+    if: needs.build.result == 'success' && needs.build.outputs.published == 'true'
+    uses: ./.github/workflows/d630-core2-system-package.yml
+    with:
+      package: gcc-defaults
+      force_rebuild: true
+      refresh_index: true

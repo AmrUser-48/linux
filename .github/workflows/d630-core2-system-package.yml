@@ -40,6 +40,10 @@ permissions:
   actions: write
   contents: write
 
+concurrency:
+  group: core2-system-package-${{ inputs.package }}
+  cancel-in-progress: false
+
 jobs:
   release-check:
     name: Skip if a release already exists
