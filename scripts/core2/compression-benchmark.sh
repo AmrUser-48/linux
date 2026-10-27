@@ -62,6 +62,26 @@ versions() {
   cat "$output"
 }
 
+run_timed() {
+  local timing="$1"
+  shift
+  python3 - "$timing" "$@" <<'PY'
+import subprocess
+import sys
+import time
+
+timing_path, *command = sys.argv[1:]
+started = time.perf_counter_ns()
+try:
+    status = subprocess.run(command, check=False).returncode
+finally:
+    elapsed = (time.perf_counter_ns() - started) / 1_000_000_000
+    with open(timing_path, "w", encoding="ascii") as stream:
+        stream.write(f"{elapsed:.6f}\n")
+raise SystemExit(status)
+PY
+}
+
 run_benchmark() {
   local phase="$1" corpus_dir="$2" output_csv="$3"
   [[ -d "$corpus_dir" ]] || die "Corpus directory missing: $corpus_dir"
@@ -88,24 +108,24 @@ run_benchmark() {
 
         case "$tool" in
           7zip)
-            /usr/bin/time -f '%e' -o "$timing" \
+            run_timed "$timing" \
               7zz a -t7z -m0=lzma2 "-mx=$level" -mmt=1 -bd -y "$archive" "$input" \
               >"$work/tool.log" 2>&1
             ;;
           xz)
-            /usr/bin/time -f '%e' -o "$timing" xz -T1 "-$level" -c "$input" > "$archive"
+            run_timed "$timing" xz -T1 "-$level" -c "$input" > "$archive"
             ;;
           lzma)
-            /usr/bin/time -f '%e' -o "$timing" lzma "-$level" -c "$input" > "$archive"
+            run_timed "$timing" lzma "-$level" -c "$input" > "$archive"
             ;;
           zstd)
-            /usr/bin/time -f '%e' -o "$timing" zstd -q -T1 "-$level" -f "$input" -o "$archive"
+            run_timed "$timing" zstd -q -T1 "-$level" -f "$input" -o "$archive"
             ;;
           lz4)
-            /usr/bin/time -f '%e' -o "$timing" lz4 -q -f "-$level" "$input" "$archive"
+            run_timed "$timing" lz4 -q -f "-$level" "$input" "$archive"
             ;;
           gzip)
-            /usr/bin/time -f '%e' -o "$timing" gzip "-$level" -c "$input" > "$archive"
+            run_timed "$timing" gzip "-$level" -c "$input" > "$archive"
             ;;
           *)
             die "Unknown benchmark tool: $tool"
@@ -123,23 +143,23 @@ run_benchmark() {
         rm -f "$timing"
         case "$tool" in
           7zip)
-            /usr/bin/time -f '%e' -o "$timing" 7zz x -so -bd "$archive" \
+            run_timed "$timing" 7zz x -so -bd "$archive" \
               > "$decoded" 2>"$work/tool.log"
             ;;
           xz)
-            /usr/bin/time -f '%e' -o "$timing" xz -dc "$archive" > "$decoded"
+            run_timed "$timing" xz -dc "$archive" > "$decoded"
             ;;
           lzma)
-            /usr/bin/time -f '%e' -o "$timing" lzma -dc "$archive" > "$decoded"
+            run_timed "$timing" lzma -dc "$archive" > "$decoded"
             ;;
           zstd)
-            /usr/bin/time -f '%e' -o "$timing" zstd -q -d -f "$archive" -o "$decoded"
+            run_timed "$timing" zstd -q -d -f "$archive" -o "$decoded"
             ;;
           lz4)
-            /usr/bin/time -f '%e' -o "$timing" lz4 -q -d -f "$archive" "$decoded"
+            run_timed "$timing" lz4 -q -d -f "$archive" "$decoded"
             ;;
           gzip)
-            /usr/bin/time -f '%e' -o "$timing" gzip -dc "$archive" > "$decoded"
+            run_timed "$timing" gzip -dc "$archive" > "$decoded"
             ;;
         esac
 

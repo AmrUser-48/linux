@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: core2-compression-benchmark-build
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   preflight:
@@ -25,6 +25,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/core2
+          sparse-checkout-cone-mode: true
       - name: Check benchmark script syntax
         shell: bash
         run: |
@@ -46,6 +50,10 @@ jobs:
     steps:
       - name: Check out benchmark script
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/core2
+          sparse-checkout-cone-mode: true
       - name: Install baseline tools from Debian Bookworm and security
         shell: bash
         run: |
@@ -127,6 +135,10 @@ jobs:
     steps:
       - name: Check out benchmark script
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/core2
+          sparse-checkout-cone-mode: true
       - name: Install runtime support
         shell: bash
         run: |

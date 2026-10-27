@@ -10,6 +10,7 @@ on:
       - 'core2-packages/**'
       - 'README.md'
       - '.ci/**'
+      - 'scripts/core2/compression-benchmark.sh'
   workflow_dispatch:
 
 concurrency:
