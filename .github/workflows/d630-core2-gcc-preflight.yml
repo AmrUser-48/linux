@@ -48,7 +48,7 @@ jobs:
       - name: Restore-test the published GCC checkpoint without compiling
         shell: bash
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -Eeuo pipefail
           for tool in gh jq zstd tar sha256sum; do command -v "$tool" >/dev/null; done
@@ -62,9 +62,9 @@ jobs:
               grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json$' |
               sort -t- -k3,3nr -k4,4nr
           )
-          (("\${#manifests[@]}" > 0)) || { echo "::error::No GCC checkpoint manifest is published."; exit 1; }
+          (("${#manifests[@]}" > 0)) || { echo "::error::No GCC checkpoint manifest is published."; exit 1; }
           restored=false
-          for manifest in "\${manifests[@]}"; do
+          for manifest in "${manifests[@]}"; do
             candidate="$tmp/candidate"
             rm -rf "$candidate"
             mkdir -p "$candidate/unpacked"
@@ -80,8 +80,8 @@ jobs:
               printf '%s  %s\n' "$checksum" "$candidate/$name" | sha256sum --check --status || { valid=false; break; }
               parts+=("$candidate/$name")
             done < <(jq -r '.parts[]|[.name,.sha256]|@tsv' "$m")
-            [[ "$valid" == true && "\${#parts[@]}" -gt 0 ]] || continue
-            if ! cat "\${parts[@]}" | zstd -q -d -c | tar -xpf - -C "$candidate/unpacked"; then
+            [[ "$valid" == true && "${#parts[@]}" -gt 0 ]] || continue
+            if ! cat "${parts[@]}" | zstd -q -d -c | tar -xpf - -C "$candidate/unpacked"; then
               continue
             fi
             state="$candidate/unpacked/state.json"
