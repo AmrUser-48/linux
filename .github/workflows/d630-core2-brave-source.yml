@@ -411,7 +411,7 @@ jobs:
               if gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" \
                 --pattern "state-c${CP}-manifest.txt" --dir "$MANIFEST_PROBE"; then
                 if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
-                   grep -qx 'format=2' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
+                   grep -Eq '^format=(2|3)$' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
                    grep -qx 'archive_format=pax' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
                    grep -qx 'fs_state_policy=preserve-and-restore' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
                    grep -qx "fingerprint=$FINGERPRINT" "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
@@ -523,7 +523,8 @@ jobs:
             rm -rf "$MANIFEST_PROBE"
           else
             if [[ "$RELEASE_EXISTS" == "true" ]]; then
-              echo "::warning::Checkpoint release has no compatible complete manifest. Preserving all existing assets and starting a short seed segment in checkpoint slot $NEXT_CP."
+              echo "::error::Checkpoint release has no complete compatible manifest. Refusing a silent clean rebuild; set fresh_start=true only if a new baseline is intended."
+              exit 1
             fi
             LAST_CP=0000
             STATE_RESUME_VERIFIED=false
