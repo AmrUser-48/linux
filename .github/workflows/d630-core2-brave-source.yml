@@ -52,7 +52,8 @@ jobs:
         run: |
           set -euo pipefail
           STOP_REQUESTED=false
-          if [[ "${GITHUB_EVENT_HEAD_COMMIT_MESSAGE:-}" == *"[stop-brave]"* ]]; then
+          COMMIT_MESSAGE="$(jq -r '.head_commit.message // ""' "$GITHUB_EVENT_PATH")"
+          if [[ "$COMMIT_MESSAGE" == *"[stop-brave]"* ]]; then
             STOP_REQUESTED=true
           fi
           mapfile -t ACTIVE_RUNS < <(gh run list --workflow d630-core2-brave-source.yml --repo "$GITHUB_REPOSITORY" --limit 100 --json databaseId,status --jq '.[] | select(.status == "in_progress" or .status == "queued" or .status == "pending") | .databaseId')
