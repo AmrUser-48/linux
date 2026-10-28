@@ -37,7 +37,7 @@ concurrency:
 jobs:
   build:
     name: Compile and package Brave for Core 2
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[resume-probe]')
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[resume-probe]') || contains(github.event.head_commit.message, '[stop-brave]')
     runs-on: ubuntu-22.04
     timeout-minutes: 360
     env:
@@ -46,20 +46,37 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
 
     steps:
-      - name: Cancel older Brave attempts before the resume probe
-        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[resume-probe]')
+      - name: Cancel older Brave attempts or stop all Brave builds
+        if: github.event_name == 'push' && (contains(github.event.head_commit.message, '[resume-probe]') || contains(github.event.head_commit.message, '[stop-brave]'))
         shell: bash
         run: |
           set -euo pipefail
-          mapfile -t ACTIVE_RUNS < <(gh run list --workflow d630-core2-brave-source.yml --repo "$GITHUB_REPOSITORY" --limit 50 --json databaseId,status --jq '.[] | select(.status == "in_progress" or .status == "queued" or .status == "pending") | .databaseId')
+          STOP_REQUESTED=false
+          if [[ "${GITHUB_EVENT_HEAD_COMMIT_MESSAGE:-}" == *"[stop-brave]"* ]]; then
+            STOP_REQUESTED=true
+          fi
+          mapfile -t ACTIVE_RUNS < <(gh run list --workflow d630-core2-brave-source.yml --repo "$GITHUB_REPOSITORY" --limit 100 --json databaseId,status --jq '.[] | select(.status == "in_progress" or .status == "queued" or .status == "pending") | .databaseId')
+          CANCEL_FAILED=false
           for OLD_RUN_ID in "${ACTIVE_RUNS[@]}"; do
             if [[ "$OLD_RUN_ID" == "$GITHUB_RUN_ID" ]]; then
               continue
             fi
-            echo "Cancelling older Brave run $OLD_RUN_ID before resume verification."
-            gh run cancel "$OLD_RUN_ID" --repo "$GITHUB_REPOSITORY" || echo "::warning::Could not cancel run $OLD_RUN_ID; continuing with checkpoint validation."
+            echo "Cancellation requested for Brave run $OLD_RUN_ID."
+            if ! gh run cancel "$OLD_RUN_ID" --repo "$GITHUB_REPOSITORY"; then
+              echo "::warning::Could not cancel Brave run $OLD_RUN_ID."
+              CANCEL_FAILED=true
+            fi
           done
-          echo "Previous Brave attempts have been cancellation-requested."
+          if [[ "$STOP_REQUESTED" == true ]]; then
+            if [[ "$CANCEL_FAILED" == true ]]; then
+              echo "::error::Stop request could not confirm cancellation of every older Brave run."
+              exit 1
+            fi
+            echo "All older Brave runs have been cancellation-requested; stop sentinel exits before build setup."
+            exit 1
+          fi
+          echo "Older Brave attempts have been cancellation-requested before resume verification."
+
       - name: Free disk space and disable swap completely
         shell: bash
         run: |
