@@ -584,7 +584,7 @@ jobs:
             echo "next_checkpoint=$NEXT_CP"
             echo "chromium_revision=$CHROMIUM_REVISION"
             echo "fingerprint=$FINGERPRINT"
-            echo "resume_verified=$STATE_RESUME_VERIFIED"
+              echo "resume_verified=$STATE_RESUME_VERIFIED"
             echo "resume_proof_version=$STATE_PROOF_VERSION"
             echo "resume_proof_checkpoint=$STATE_PROOF_CHECKPOINT"
             echo "probe_new_objects=$STATE_PROBE_NEW_OBJECTS"
@@ -783,9 +783,9 @@ jobs:
 
           SUMMARY="$(grep -E '[0-9]+ done, [0-9]+ failed, [0-9]+ remaining' "$BUILD_LOG" | tail -n 1 || true)"
           if [[ "$SUMMARY" =~ ([0-9]+)[[:space:]]+done,[[:space:]]+([0-9]+)[[:space:]]+failed,[[:space:]]+([0-9]+)[[:space:]]+remaining ]]; then
-            DONE_COUNT="\${BASH_REMATCH[1]}"
-            FAILED_COUNT="\${BASH_REMATCH[2]}"
-            REMAINING_COUNT="\${BASH_REMATCH[3]}"
+            DONE_COUNT="${BASH_REMATCH[1]}"
+            FAILED_COUNT="${BASH_REMATCH[2]}"
+            REMAINING_COUNT="${BASH_REMATCH[3]}"
           else
             echo "::error::Resume probe cannot parse Siso completed/failed/remaining counters."
             echo "Last Siso summary: $SUMMARY"
@@ -799,10 +799,10 @@ jobs:
           PROBE_TIMESTAMP_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
           cat > "$GITHUB_WORKSPACE/resume-probe-diagnostics.txt" <<EOF
-          restored_checkpoint=\${{ steps.state.outputs.last_checkpoint }}
-          restored_object_archive_count=\${{ steps.state.outputs.restored_objects }}
-          restored_object_count=\${{ steps.state.outputs.restored_o_count }}
-          restored_archive_count=\${{ steps.state.outputs.restored_a_count }}
+          restored_checkpoint=${{ steps.state.outputs.last_checkpoint }}
+          restored_object_archive_count=${{ steps.state.outputs.restored_objects }}
+          restored_object_count=${{ steps.state.outputs.restored_o_count }}
+          restored_archive_count=${{ steps.state.outputs.restored_a_count }}
           completed_actions=$DONE_COUNT
           failed_actions=$FAILED_COUNT
           remaining_actions=$REMAINING_COUNT
@@ -816,12 +816,12 @@ jobs:
           timestamp_utc=$PROBE_TIMESTAMP_UTC
           EOF
 
-          echo "Resume probe: completed_actions=$DONE_COUNT failed_actions=$FAILED_COUNT remaining_actions=$REMAINING_COUNT; restored_objects=\${{ steps.state.outputs.restored_objects }} (objects=\${{ steps.state.outputs.restored_o_count }}, archives=\${{ steps.state.outputs.restored_a_count }}); new_paths=$NEW_OBJECTS; executed_object_archive_targets=$COMPILED_COUNT; saved_targets_recompiled=$REPEATED_COUNT; stale_deps=$STALE_DEPS_COUNT; fs_state_errors=$FS_STATE_ERROR_COUNT; missing_dep_records=$MISSING_DEPS_COUNT; missing_output_records=$MISSING_OUTPUT_COUNT."
+          echo "Resume probe: completed_actions=$DONE_COUNT failed_actions=$FAILED_COUNT remaining_actions=$REMAINING_COUNT; restored_objects=${{ steps.state.outputs.restored_objects }} (objects=${{ steps.state.outputs.restored_o_count }}, archives=${{ steps.state.outputs.restored_a_count }}); new_paths=$NEW_OBJECTS; executed_object_archive_targets=$COMPILED_COUNT; saved_targets_recompiled=$REPEATED_COUNT; stale_deps=$STALE_DEPS_COUNT; fs_state_errors=$FS_STATE_ERROR_COUNT; missing_dep_records=$MISSING_DEPS_COUNT; missing_output_records=$MISSING_OUTPUT_COUNT."
           {
             echo "### Brave resume probe"
             echo
-            echo "- Restored checkpoint: \${{ steps.state.outputs.last_checkpoint }}"
-            echo "- Restored object/archive files: \${{ steps.state.outputs.restored_objects }} (objects=\${{ steps.state.outputs.restored_o_count }}, archives=\${{ steps.state.outputs.restored_a_count }})"
+            echo "- Restored checkpoint: ${{ steps.state.outputs.last_checkpoint }}"
+            echo "- Restored object/archive files: ${{ steps.state.outputs.restored_objects }} (objects=${{ steps.state.outputs.restored_o_count }}, archives=${{ steps.state.outputs.restored_a_count }})"
             echo "- Completed Siso actions: $DONE_COUNT"
             echo "- Failed Siso actions: $FAILED_COUNT"
             echo "- Remaining Siso actions: $REMAINING_COUNT"
