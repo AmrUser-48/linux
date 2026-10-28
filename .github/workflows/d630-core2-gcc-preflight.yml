@@ -45,6 +45,61 @@ jobs:
           fi
           echo "Bash syntax and resumable-checkpoint policy checks passed."
 
+      - name: Restore-test the published GCC checkpoint without compiling
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -Eeuo pipefail
+          for tool in gh jq zstd tar sha256sum; do command -v "$tool" >/dev/null; done
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          tag=core2-gcc12-frozen-state
+          release="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag")"
+          release_id="$(jq -r .id <<<"$release")"
+          mapfile -t manifests < <(
+            gh api "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' |
+              grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json |
+              sort -t- -k3,3nr -k4,4nr
+          )
+          (("${#manifests[@]}" > 0)) || { echo "::error::No GCC checkpoint manifest is published."; exit 1; }
+          restored=false
+          for manifest in "${manifests[@]}"; do
+            candidate="$tmp/candidate"
+            rm -rf "$candidate"
+            mkdir -p "$candidate/unpacked"
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$manifest" --dir "$candidate" >/dev/null
+            m="$candidate/$manifest"
+            jq -e '(.schema==2 or .schema==3 or .schema==4) and .archive_format=="pax" and .source_package=="gcc-12" and ((.schema==2) or (.schema==3 and .state_phase=="prepared-clean-source") or (.schema==4 and (.state_phase=="prepared-clean-source" or .state_phase=="build-in-progress"))) and (.generation|type=="string" and test("^[0-9]+-[0-9]+$")) and (.parts|type=="array" and length>0 and length<10000)' "$m" >/dev/null 2>&1 || continue
+            generation="$(jq -r .generation "$m")"
+            valid=true
+            parts=()
+            while IFS=\t' read -r name checksum; do
+              [[ "$name" == "gcc12-state-$generation.part"* && "$name" =~ ^gcc12-state-[0-9]+-[0-9]+\.part[0-9]{4}$ && "$checksum" =~ ^[a-f0-9]{64}$ ]] || { valid=false; break; }
+              gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$name" --dir "$candidate" >/dev/null 2>&1 || { valid=false; break; }
+              printf '%s  %s\n' "$checksum" "$candidate/$name" | sha256sum --check --status || { valid=false; break; }
+              parts+=("$candidate/$name")
+            done < <(jq -r '.parts[]|[.name,.sha256]|@tsv' "$m")
+            [[ "$valid" == true && "${#parts[@]}" -gt 0 ]] || continue
+            if ! cat "${parts[@]}" | zstd -q -d -c | tar -xpf - -C "$candidate/unpacked"; then
+              continue
+            fi
+            state="$candidate/unpacked/state.json"
+            [[ -s "$state" ]] || continue
+            [[ "$(jq -r '.schema // empty' "$state")" == "2" ]] || continue
+            [[ "$(jq -r '.source_package // empty' "$state")" == "gcc-12" ]] || continue
+            [[ "$(jq -r '.source_version // empty' "$state")" == "$(jq -r '.source_version // empty' "$m")" ]] || continue
+            [[ "$(jq -r '.package_version // empty' "$state")" == "$(jq -r '.package_version // empty' "$m")" ]] || continue
+            source_dir="$(jq -r '.source_dir // empty' "$state")"
+            [[ "$source_dir" =~ ^source-tree/[A-Za-z0-9.+_-]+$ ]] || continue
+            [[ -s "$candidate/unpacked/$source_dir/debian/changelog" ]] || continue
+            [[ -s "$candidate/unpacked/$source_dir/debian/dummy.texi" ]] || continue
+            [[ -s "$candidate/unpacked/build-flags.txt" ]] || continue
+            echo "Actual GCC checkpoint restore passed: generation=$generation phase=$(jq -r '.state_phase // "legacy"' "$m") source=$(basename "$source_dir") version=$(jq -r .package_version "$m")."
+            restored=true
+            break
+          done
+          [[ "$restored" == true ]] || { echo "::error::The published GCC checkpoint could not be downloaded, checksum-verified, extracted, and validated."; exit 1; }
       - name: Parse workflow YAML
         shell: bash
         run: |
