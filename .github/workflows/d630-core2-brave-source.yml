@@ -405,6 +405,16 @@ jobs:
           fi
           LAST_CP=0000
           STATE_RESUME_VERIFIED=false
+          STATE_PROOF_VERSION=0
+          STATE_PROOF_CHECKPOINT=0000
+          STATE_PROBE_NEW_OBJECTS=0
+          STATE_PROBE_COMPILED_TARGETS=0
+          STATE_PROBE_REPEATED_OBJECTS=0
+          STATE_PROBE_COMPLETED_ACTIONS=0
+          STATE_PROBE_FAILED_ACTIONS=0
+          STATE_PROBE_STALE_DEPS=0
+          STATE_PROBE_FS_STATE_ERRORS=0
+          STATE_PROBE_TIMESTAMP_UTC=unknown
           if [[ "$RELEASE_EXISTS" == true && ${#COMPLETE_IDS[@]} -gt 0 ]]; then
             # A full snapshot contains the complete output tree. Do not download
             # or apply deltas from before the newest full snapshot.
@@ -515,13 +525,43 @@ jobs:
                 fi
                 echo "Verified persisted Siso filesystem state: $(stat -c '%s bytes, mtime=%y' "$OUT/.siso_fs_state")."
               fi
-              if grep -qx 'format=2' "$MANIFEST"; then
-                STATE_RESUME_VERIFIED=false
-                echo "Legacy format 2 checkpoint: require a 15-minute resume probe before any long compilation segment."
-              elif grep -qx 'resume_verified=true' "$MANIFEST"; then
+              if grep -qx 'resume_verified=true' "$MANIFEST" &&
+                 grep -qx 'resume_proof_version=2' "$MANIFEST" &&
+                 grep -qx "proof_fingerprint=$FINGERPRINT" "$MANIFEST" &&
+                 grep -Eq '^resume_proof_checkpoint=[0-9]{4}$' "$MANIFEST" &&
+                 grep -Eq '^probe_new_objects=(2[5-9]|[3-9][0-9]|[1-9][0-9]{2,})$' "$MANIFEST" &&
+                 grep -Eq '^probe_compiled_targets=[1-9][0-9]*$' "$MANIFEST" &&
+                 grep -qx 'probe_repeated_objects=0' "$MANIFEST" &&
+                 grep -Eq '^probe_completed_actions=[1-9][0-9]*$' "$MANIFEST" &&
+                 grep -qx 'probe_failed_actions=0' "$MANIFEST" &&
+                 grep -qx 'probe_stale_deps=0' "$MANIFEST" &&
+                 grep -qx 'probe_fs_state_errors=0' "$MANIFEST" &&
+                 grep -Eq '^probe_timestamp_utc=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$' "$MANIFEST"; then
                 STATE_RESUME_VERIFIED=true
+                STATE_PROOF_VERSION=2
+                STATE_PROOF_CHECKPOINT="$(sed -n 's/^resume_proof_checkpoint=//p' "$MANIFEST")"
+                STATE_PROBE_NEW_OBJECTS="$(sed -n 's/^probe_new_objects=//p' "$MANIFEST")"
+                STATE_PROBE_COMPILED_TARGETS="$(sed -n 's/^probe_compiled_targets=//p' "$MANIFEST")"
+                STATE_PROBE_REPEATED_OBJECTS="$(sed -n 's/^probe_repeated_objects=//p' "$MANIFEST")"
+                STATE_PROBE_COMPLETED_ACTIONS="$(sed -n 's/^probe_completed_actions=//p' "$MANIFEST")"
+                STATE_PROBE_FAILED_ACTIONS="$(sed -n 's/^probe_failed_actions=//p' "$MANIFEST")"
+                STATE_PROBE_STALE_DEPS="$(sed -n 's/^probe_stale_deps=//p' "$MANIFEST")"
+                STATE_PROBE_FS_STATE_ERRORS="$(sed -n 's/^probe_fs_state_errors=//p' "$MANIFEST")"
+                STATE_PROBE_TIMESTAMP_UTC="$(sed -n 's/^probe_timestamp_utc=//p' "$MANIFEST")"
+                echo "Verified version-2 resume proof from checkpoint $STATE_PROOF_CHECKPOINT: new_objects=$STATE_PROBE_NEW_OBJECTS compiled_targets=$STATE_PROBE_COMPILED_TARGETS repeated=$STATE_PROBE_REPEATED_OBJECTS completed_actions=$STATE_PROBE_COMPLETED_ACTIONS."
               else
                 STATE_RESUME_VERIFIED=false
+                STATE_PROOF_VERSION=0
+                STATE_PROOF_CHECKPOINT=0000
+                STATE_PROBE_NEW_OBJECTS=0
+                STATE_PROBE_COMPILED_TARGETS=0
+                STATE_PROBE_REPEATED_OBJECTS=0
+                STATE_PROBE_COMPLETED_ACTIONS=0
+                STATE_PROBE_FAILED_ACTIONS=0
+                STATE_PROBE_STALE_DEPS=0
+                STATE_PROBE_FS_STATE_ERRORS=0
+                STATE_PROBE_TIMESTAMP_UTC=unknown
+                echo "Checkpoint $CP has no valid version-2 resume proof; a 15-minute resume probe is required."
               fi
               rm -f "${PARTS[@]}" "$MANIFEST"
               LAST_CP="$CP"
@@ -545,6 +585,16 @@ jobs:
             echo "chromium_revision=$CHROMIUM_REVISION"
             echo "fingerprint=$FINGERPRINT"
             echo "resume_verified=$STATE_RESUME_VERIFIED"
+            echo "resume_proof_version=$STATE_PROOF_VERSION"
+            echo "resume_proof_checkpoint=$STATE_PROOF_CHECKPOINT"
+            echo "probe_new_objects=$STATE_PROBE_NEW_OBJECTS"
+            echo "probe_compiled_targets=$STATE_PROBE_COMPILED_TARGETS"
+            echo "probe_repeated_objects=$STATE_PROBE_REPEATED_OBJECTS"
+            echo "probe_completed_actions=$STATE_PROBE_COMPLETED_ACTIONS"
+            echo "probe_failed_actions=$STATE_PROBE_FAILED_ACTIONS"
+            echo "probe_stale_deps=$STATE_PROBE_STALE_DEPS"
+            echo "probe_fs_state_errors=$STATE_PROBE_FS_STATE_ERRORS"
+            echo "probe_timestamp_utc=$STATE_PROBE_TIMESTAMP_UTC"
           } >> "$GITHUB_OUTPUT"
           echo "Last restored checkpoint: $LAST_CP; next checkpoint slot: $NEXT_CP."
           if [[ "$LAST_CP" != "0000" ]]; then
@@ -562,6 +612,9 @@ jobs:
             BASELINE_OBJECTS_FILE="$RUNNER_TEMP/brave-resume-baseline-objects.txt"
             find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -printf '%P\n' | LC_ALL=C sort -u > "$BASELINE_OBJECTS_FILE"
             RESTORED_OBJECTS="$(wc -l < "$BASELINE_OBJECTS_FILE" | tr -d '[:space:]')"
+            RESTORED_O_COUNT="$(grep -Ec '\.o$' "$BASELINE_OBJECTS_FILE" || true)"
+            RESTORED_A_COUNT="$(grep -Ec '\.a$' "$BASELINE_OBJECTS_FILE" || true)"
+            cp "$BASELINE_OBJECTS_FILE" "$WORK/resume-restored-inventory.txt"
             if (( RESTORED_OBJECTS == 0 )); then
               echo "::error::Checkpoint $LAST_CP contains no compiled object/archive files."
               exit 1
@@ -569,6 +622,8 @@ jobs:
             {
               echo "baseline_objects_file=$BASELINE_OBJECTS_FILE"
               echo "restored_objects=$RESTORED_OBJECTS"
+              echo "restored_o_count=$RESTORED_O_COUNT"
+              echo "restored_a_count=$RESTORED_A_COUNT"
             } >> "$GITHUB_OUTPUT"
 
             if [[ ! -s "$OUT/.siso_fs_state" ]]; then
@@ -696,37 +751,103 @@ jobs:
             exit 1
           fi
 
+          BUILD_LOG="$GITHUB_WORKSPACE/brave-build.log"
+          for STATE_FILE in .siso_fs_state .siso_deps .ninja_log; do
+            if [[ ! -s "$OUT/$STATE_FILE" ]]; then
+              echo "::error::Resume probe state file missing or empty: $STATE_FILE"
+              exit 1
+            fi
+          done
+
           find "$OUT" -type f \( -name '*.o' -o -name '*.a' \) -printf '%P\n' | LC_ALL=C sort -u > "$CURRENT"
+          cp "$BASELINE" "$GITHUB_WORKSPACE/resume-restored-inventory.txt"
+          cp "$CURRENT" "$GITHUB_WORKSPACE/resume-current-inventory.txt"
           comm -13 "$BASELINE" "$CURRENT" > "$NEW_OBJECTS_FILE"
           NEW_OBJECTS="$(wc -l < "$NEW_OBJECTS_FILE" | tr -d '[:space:]')"
 
-          # Siso logs actual local compiler commands as localexec entries. Extract
-          # their -o .o targets and compare against files that were already present.
+          # Capture compiler object outputs and explicit Siso local object/archive targets.
+          # The Siso log was cleared before compilation, so these are actions from this run.
+          : > "$COMPILED"
           grep -E 'localexec\.go:[0-9]+.*localexec: \[' "$OUT/siso.INFO" \
-            | grep -oE -- '-o "?[^" ]+\.o"?' \
-            | sed -E 's/^-o "?//; s/"?$//' \
-            | LC_ALL=C sort -u > "$COMPILED" || true
+            | grep -oE -- '-o "?[^" ]+\.(o|a)"?' \
+            | sed -E 's/^-o "?//; s/"?$//; s#^\./##; s#^out/Release/##' >> "$COMPILED" || true
+          grep -E 'exec_local\.go:[0-9]+.*exec local (CC|CXX|AR|ASM|OBJCXX|OBJC|LINK|RUST) obj/[^ ]+\.(o|a)( |$)' "$OUT/siso.INFO" \
+            | sed -E 's/^.*exec local (CC|CXX|AR|ASM|OBJCXX|OBJC|LINK|RUST) (obj\/[^ ]+\.(o|a)).*$/\2/' \
+            >> "$COMPILED" || true
+          LC_ALL=C sort -u "$COMPILED" -o "$COMPILED"
           COMPILED_COUNT="$(wc -l < "$COMPILED" | tr -d '[:space:]')"
           comm -12 "$BASELINE" "$COMPILED" > "$REPEATED"
           REPEATED_COUNT="$(wc -l < "$REPEATED" | tr -d '[:space:]')"
+          cp "$COMPILED" "$GITHUB_WORKSPACE/resume-compiled-targets.txt"
+          cp "$REPEATED" "$GITHUB_WORKSPACE/resume-repeated-targets.txt"
 
-          echo "Resume probe: new object/archive paths=$NEW_OBJECTS; distinct compiler object targets=$COMPILED_COUNT; previously saved objects recompiled=$REPEATED_COUNT."
+          SUMMARY="$(grep -E '[0-9]+ done, [0-9]+ failed, [0-9]+ remaining' "$BUILD_LOG" | tail -n 1 || true)"
+          if [[ "$SUMMARY" =~ ([0-9]+)[[:space:]]+done,[[:space:]]+([0-9]+)[[:space:]]+failed,[[:space:]]+([0-9]+)[[:space:]]+remaining ]]; then
+            DONE_COUNT="\${BASH_REMATCH[1]}"
+            FAILED_COUNT="\${BASH_REMATCH[2]}"
+            REMAINING_COUNT="\${BASH_REMATCH[3]}"
+          else
+            echo "::error::Resume probe cannot parse Siso completed/failed/remaining counters."
+            echo "Last Siso summary: $SUMMARY"
+            exit 1
+          fi
+
+          STALE_DEPS_COUNT="$(grep -Eic 'stale deps in depslog' "$OUT/siso.INFO" || true)"
+          FS_STATE_ERROR_COUNT="$(grep -Eic 'hashfs.*(loaderr|corrupt)|failed to load fs state|corrupt.*(filesystem|fs state)|discard.*(filesystem|fs state)' "$OUT/siso.INFO" || true)"
+          MISSING_DEPS_COUNT="$(grep -Eic 'failed to load deps: missing deps in depfile/depslog' "$OUT/siso.INFO" || true)"
+          MISSING_OUTPUT_COUNT="$(grep -Eic 'missing out/Release/.* data:' "$OUT/siso.INFO" || true)"
+          PROBE_TIMESTAMP_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          cat > "$GITHUB_WORKSPACE/resume-probe-diagnostics.txt" <<EOF
+          restored_checkpoint=\${{ steps.state.outputs.last_checkpoint }}
+          restored_object_archive_count=\${{ steps.state.outputs.restored_objects }}
+          restored_object_count=\${{ steps.state.outputs.restored_o_count }}
+          restored_archive_count=\${{ steps.state.outputs.restored_a_count }}
+          completed_actions=$DONE_COUNT
+          failed_actions=$FAILED_COUNT
+          remaining_actions=$REMAINING_COUNT
+          new_object_archive_paths=$NEW_OBJECTS
+          distinct_executed_object_archive_targets=$COMPILED_COUNT
+          previously_saved_targets_recompiled=$REPEATED_COUNT
+          stale_dependency_records=$STALE_DEPS_COUNT
+          filesystem_state_errors=$FS_STATE_ERROR_COUNT
+          missing_dependency_records=$MISSING_DEPS_COUNT
+          missing_output_data_records=$MISSING_OUTPUT_COUNT
+          timestamp_utc=$PROBE_TIMESTAMP_UTC
+          EOF
+
+          echo "Resume probe: completed_actions=$DONE_COUNT failed_actions=$FAILED_COUNT remaining_actions=$REMAINING_COUNT; restored_objects=\${{ steps.state.outputs.restored_objects }} (objects=\${{ steps.state.outputs.restored_o_count }}, archives=\${{ steps.state.outputs.restored_a_count }}); new_paths=$NEW_OBJECTS; executed_object_archive_targets=$COMPILED_COUNT; saved_targets_recompiled=$REPEATED_COUNT; stale_deps=$STALE_DEPS_COUNT; fs_state_errors=$FS_STATE_ERROR_COUNT; missing_dep_records=$MISSING_DEPS_COUNT; missing_output_records=$MISSING_OUTPUT_COUNT."
           {
             echo "### Brave resume probe"
             echo
-            echo "- Restored checkpoint: ${{ steps.state.outputs.last_checkpoint }}"
-            echo "- Existing object/archive paths: ${{ steps.state.outputs.restored_objects }}"
+            echo "- Restored checkpoint: \${{ steps.state.outputs.last_checkpoint }}"
+            echo "- Restored object/archive files: \${{ steps.state.outputs.restored_objects }} (objects=\${{ steps.state.outputs.restored_o_count }}, archives=\${{ steps.state.outputs.restored_a_count }})"
+            echo "- Completed Siso actions: $DONE_COUNT"
+            echo "- Failed Siso actions: $FAILED_COUNT"
+            echo "- Remaining Siso actions: $REMAINING_COUNT"
             echo "- New object/archive paths after 15 minutes: $NEW_OBJECTS"
-            echo "- Distinct object targets compiled: $COMPILED_COUNT"
-            echo "- Previously saved object targets recompiled: $REPEATED_COUNT"
+            echo "- Distinct executed object/archive targets: $COMPILED_COUNT"
+            echo "- Previously saved targets recompiled: $REPEATED_COUNT"
+            echo "- Stale dependency records: $STALE_DEPS_COUNT"
+            echo "- Filesystem-state errors: $FS_STATE_ERROR_COUNT"
+            echo "- Missing depfile records: $MISSING_DEPS_COUNT (recorded; evaluated with actual target reuse)"
+            echo "- Missing output data records: $MISSING_OUTPUT_COUNT (recorded; evaluated with actual target reuse)"
           } >> "$GITHUB_STEP_SUMMARY"
 
+          if (( DONE_COUNT < 25 )); then
+            echo "::error::Resume probe completed only $DONE_COUNT Siso actions; refusing automatic continuation."
+            exit 1
+          fi
+          if (( FAILED_COUNT != 0 )); then
+            echo "::error::Resume probe reports $FAILED_COUNT failed Siso actions."
+            exit 1
+          fi
           if (( COMPILED_COUNT == 0 )); then
-            echo "::error::Resume probe found no local compiler output targets; refusing automatic continuation."
+            echo "::error::Resume probe found no executed object/archive output targets."
             exit 1
           fi
           if (( REPEATED_COUNT != 0 )); then
-            echo "::error::Resume probe found saved objects being recompiled. First repeated targets:"
+            echo "::error::Resume probe found previously saved object/archive targets being rebuilt. First repeated targets:"
             head -n 30 "$REPEATED" || true
             exit 1
           fi
@@ -734,7 +855,21 @@ jobs:
             echo "::error::Resume probe produced only $NEW_OBJECTS new object/archive paths in 15 minutes; refusing automatic continuation."
             exit 1
           fi
+          if (( STALE_DEPS_COUNT != 0 || FS_STATE_ERROR_COUNT != 0 )); then
+            echo "::error::Resume probe found stale dependency records or Siso filesystem-state errors."
+            exit 1
+          fi
 
+          {
+            echo "probe_new_objects=$NEW_OBJECTS"
+            echo "probe_compiled_targets=$COMPILED_COUNT"
+            echo "probe_repeated_objects=$REPEATED_COUNT"
+            echo "probe_completed_actions=$DONE_COUNT"
+            echo "probe_failed_actions=$FAILED_COUNT"
+            echo "probe_stale_deps=$STALE_DEPS_COUNT"
+            echo "probe_fs_state_errors=$FS_STATE_ERROR_COUNT"
+            echo "probe_timestamp_utc=$PROBE_TIMESTAMP_UTC"
+          } >> "$GITHUB_OUTPUT"
           echo "resume_verified=true" >> "$GITHUB_OUTPUT"
           echo "Resume probe passed: new targets appeared and no saved object target was recompiled."
 
@@ -929,6 +1064,11 @@ jobs:
             brave-build.log
             siso.INFO
             siso-output-tail.log
+            resume-probe-diagnostics.txt
+            resume-restored-inventory.txt
+            resume-current-inventory.txt
+            resume-compiled-targets.txt
+            resume-repeated-targets.txt
             release-artifacts/*
           if-no-files-found: warn
           retention-days: 7
@@ -942,6 +1082,24 @@ jobs:
           COMPACT_STATE: ${{ inputs.compact_state }}
           RESUME_VERIFIED_STATE: ${{ steps.state.outputs.resume_verified }}
           RESUME_VERIFIED_PROBE: ${{ steps.validate_resume.outputs.resume_verified }}
+          RESUME_PROOF_VERSION_STATE: ${{ steps.state.outputs.resume_proof_version }}
+          RESUME_PROOF_CHECKPOINT_STATE: ${{ steps.state.outputs.resume_proof_checkpoint }}
+          PROBE_NEW_OBJECTS_STATE: ${{ steps.state.outputs.probe_new_objects }}
+          PROBE_COMPILED_TARGETS_STATE: ${{ steps.state.outputs.probe_compiled_targets }}
+          PROBE_REPEATED_OBJECTS_STATE: ${{ steps.state.outputs.probe_repeated_objects }}
+          PROBE_COMPLETED_ACTIONS_STATE: ${{ steps.state.outputs.probe_completed_actions }}
+          PROBE_FAILED_ACTIONS_STATE: ${{ steps.state.outputs.probe_failed_actions }}
+          PROBE_STALE_DEPS_STATE: ${{ steps.state.outputs.probe_stale_deps }}
+          PROBE_FS_STATE_ERRORS_STATE: ${{ steps.state.outputs.probe_fs_state_errors }}
+          PROBE_TIMESTAMP_UTC_STATE: ${{ steps.state.outputs.probe_timestamp_utc }}
+          PROBE_NEW_OBJECTS_RUN: ${{ steps.validate_resume.outputs.probe_new_objects }}
+          PROBE_COMPILED_TARGETS_RUN: ${{ steps.validate_resume.outputs.probe_compiled_targets }}
+          PROBE_REPEATED_OBJECTS_RUN: ${{ steps.validate_resume.outputs.probe_repeated_objects }}
+          PROBE_COMPLETED_ACTIONS_RUN: ${{ steps.validate_resume.outputs.probe_completed_actions }}
+          PROBE_FAILED_ACTIONS_RUN: ${{ steps.validate_resume.outputs.probe_failed_actions }}
+          PROBE_STALE_DEPS_RUN: ${{ steps.validate_resume.outputs.probe_stale_deps }}
+          PROBE_FS_STATE_ERRORS_RUN: ${{ steps.validate_resume.outputs.probe_fs_state_errors }}
+          PROBE_TIMESTAMP_UTC_RUN: ${{ steps.validate_resume.outputs.probe_timestamp_utc }}
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
           STATE_TAG: ${{ steps.state.outputs.state_tag }}
@@ -1012,9 +1170,41 @@ jobs:
           done
 
           NEXT_RESUME_VERIFIED=false
+          RESUME_PROOF_VERSION=0
+          RESUME_PROOF_CHECKPOINT=0000
+          PROBE_NEW_OBJECTS=0
+          PROBE_COMPILED_TARGETS=0
+          PROBE_REPEATED_OBJECTS=0
+          PROBE_COMPLETED_ACTIONS=0
+          PROBE_FAILED_ACTIONS=0
+          PROBE_STALE_DEPS=0
+          PROBE_FS_STATE_ERRORS=0
+          PROBE_TIMESTAMP_UTC=unknown
           if [[ "$COMPILE_OUTCOME" == "success" ]]; then
-            if [[ "$RESUME_VERIFIED_STATE" == "true" || "$RESUME_VERIFIED_PROBE" == "true" ]]; then
+            if [[ "$RESUME_VERIFIED_PROBE" == "true" ]]; then
               NEXT_RESUME_VERIFIED=true
+              RESUME_PROOF_VERSION=2
+              RESUME_PROOF_CHECKPOINT="$LAST_CHECKPOINT"
+              PROBE_NEW_OBJECTS="$PROBE_NEW_OBJECTS_RUN"
+              PROBE_COMPILED_TARGETS="$PROBE_COMPILED_TARGETS_RUN"
+              PROBE_REPEATED_OBJECTS="$PROBE_REPEATED_OBJECTS_RUN"
+              PROBE_COMPLETED_ACTIONS="$PROBE_COMPLETED_ACTIONS_RUN"
+              PROBE_FAILED_ACTIONS="$PROBE_FAILED_ACTIONS_RUN"
+              PROBE_STALE_DEPS="$PROBE_STALE_DEPS_RUN"
+              PROBE_FS_STATE_ERRORS="$PROBE_FS_STATE_ERRORS_RUN"
+              PROBE_TIMESTAMP_UTC="$PROBE_TIMESTAMP_UTC_RUN"
+            elif [[ "$RESUME_VERIFIED_STATE" == "true" && "$RESUME_PROOF_VERSION_STATE" == "2" ]]; then
+              NEXT_RESUME_VERIFIED=true
+              RESUME_PROOF_VERSION=2
+              RESUME_PROOF_CHECKPOINT="$RESUME_PROOF_CHECKPOINT_STATE"
+              PROBE_NEW_OBJECTS="$PROBE_NEW_OBJECTS_STATE"
+              PROBE_COMPILED_TARGETS="$PROBE_COMPILED_TARGETS_STATE"
+              PROBE_REPEATED_OBJECTS="$PROBE_REPEATED_OBJECTS_STATE"
+              PROBE_COMPLETED_ACTIONS="$PROBE_COMPLETED_ACTIONS_STATE"
+              PROBE_FAILED_ACTIONS="$PROBE_FAILED_ACTIONS_STATE"
+              PROBE_STALE_DEPS="$PROBE_STALE_DEPS_STATE"
+              PROBE_FS_STATE_ERRORS="$PROBE_FS_STATE_ERRORS_STATE"
+              PROBE_TIMESTAMP_UTC="$PROBE_TIMESTAMP_UTC_STATE"
             fi
           fi
           MANIFEST="$PART_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
@@ -1030,6 +1220,17 @@ jobs:
           full_snapshot=true
           fs_state_policy=preserve-and-restore
           resume_verified=$NEXT_RESUME_VERIFIED
+          resume_proof_version=$RESUME_PROOF_VERSION
+          resume_proof_checkpoint=$RESUME_PROOF_CHECKPOINT
+          proof_fingerprint=$FINGERPRINT
+          probe_new_objects=$PROBE_NEW_OBJECTS
+          probe_compiled_targets=$PROBE_COMPILED_TARGETS
+          probe_repeated_objects=$PROBE_REPEATED_OBJECTS
+          probe_completed_actions=$PROBE_COMPLETED_ACTIONS
+          probe_failed_actions=$PROBE_FAILED_ACTIONS
+          probe_stale_deps=$PROBE_STALE_DEPS
+          probe_fs_state_errors=$PROBE_FS_STATE_ERRORS
+          probe_timestamp_utc=$PROBE_TIMESTAMP_UTC
           covers_through=$NEXT_CHECKPOINT
           created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
