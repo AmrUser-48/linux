@@ -1,0 +1,31 @@
+name: Stop stale Brave run once
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/stop-brave-once.yml"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel-stale-brave:
+    name: Cancel stale Brave run #76
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Cancel stale Brave run and verify status
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh run cancel 40616100098 --repo "$GITHUB_REPOSITORY"
+          for attempt in 1 2 3 4 5; do
+            status="$(gh run view 40616100098 --repo "$GITHUB_REPOSITORY" --json status --jq .status)"
+            echo "Brave run #76 status=$status"
+            [[ "$status" == "completed" ]] && exit 0
+            sleep 2
+          done
