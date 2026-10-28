@@ -10,34 +10,33 @@ on:
         default: latest
         type: string
       compact_state:
-        description: Consolidate checkpoint deltas into one verified full snapshot and prune old assets
+        description: Create a full checkpoint without compiling; retain the two newest snapshots
         required: false
         default: false
         type: boolean
-      resume_verified:
-        description: Internal chain flag; leave false for manual runs so the restored state is tested first
+      restore_checkpoint:
+        description: Checkpoint to restore (latest or a four-digit ID such as 0003)
+        required: false
+        default: latest
+        type: string
+      fresh_start:
+        description: Explicitly ignore saved checkpoints and start a new baseline; existing assets are retained
         required: false
         default: false
         type: boolean
-  push:
-    branches: [master]
-    paths:
-      - .github/workflows/d630-core2-brave-source.yml
 
 permissions:
   actions: write
   contents: write
 
 concurrency:
-  # The push-triggered job is intentionally skipped; give it a unique group so
-  # merging a workflow fix does not cancel an active six-hour build.
-  group: ${{ github.event_name == 'push' && format('core2-brave-source-push-{0}', github.run_id) || 'core2-brave-source' }}
-  cancel-in-progress: true
+  # Serialize builds. A queued manual run must not terminate a running compile.
+  group: core2-brave-source
+  cancel-in-progress: false
 
 jobs:
   build:
     name: Compile and package Brave for Core 2
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[resume-probe]') || contains(github.event.head_commit.message, '[stop-brave]')
     runs-on: ubuntu-22.04
     timeout-minutes: 360
     env:
@@ -46,38 +45,6 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
 
     steps:
-      - name: Cancel older Brave attempts or stop all Brave builds
-        if: github.event_name == 'push' && (contains(github.event.head_commit.message, '[resume-probe]') || contains(github.event.head_commit.message, '[stop-brave]'))
-        shell: bash
-        run: |
-          set -euo pipefail
-          STOP_REQUESTED=false
-          COMMIT_MESSAGE="$(jq -r '.head_commit.message // ""' "$GITHUB_EVENT_PATH")"
-          if [[ "$COMMIT_MESSAGE" == *"[stop-brave]"* ]]; then
-            STOP_REQUESTED=true
-          fi
-          mapfile -t ACTIVE_RUNS < <(gh run list --workflow d630-core2-brave-source.yml --repo "$GITHUB_REPOSITORY" --limit 100 --json databaseId,status --jq '.[] | select(.status == "in_progress" or .status == "queued" or .status == "pending") | .databaseId')
-          CANCEL_FAILED=false
-          for OLD_RUN_ID in "${ACTIVE_RUNS[@]}"; do
-            if [[ "$OLD_RUN_ID" == "$GITHUB_RUN_ID" ]]; then
-              continue
-            fi
-            echo "Cancellation requested for Brave run $OLD_RUN_ID."
-            if ! gh run cancel "$OLD_RUN_ID" --repo "$GITHUB_REPOSITORY"; then
-              echo "::warning::Could not cancel Brave run $OLD_RUN_ID."
-              CANCEL_FAILED=true
-            fi
-          done
-          if [[ "$STOP_REQUESTED" == true ]]; then
-            if [[ "$CANCEL_FAILED" == true ]]; then
-              echo "::error::Stop request could not confirm cancellation of every older Brave run."
-              exit 1
-            fi
-            echo "All older Brave runs have been cancellation-requested; stop sentinel exits before build setup."
-            exit 1
-          fi
-          echo "Older Brave attempts have been cancellation-requested before resume verification."
-
       - name: Free disk space and disable swap completely
         shell: bash
         run: |
@@ -371,6 +338,8 @@ jobs:
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
           UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
           COMPACT_STATE: ${{ inputs.compact_state }}
+          FRESH_START: ${{ inputs.fresh_start }}
+          RESTORE_CHECKPOINT: ${{ inputs.restore_checkpoint }}
         run: |
           set -euo pipefail
           WORK="$GITHUB_WORKSPACE"
@@ -388,6 +357,12 @@ jobs:
             -path "$WORK/src/out" -prune -o \
             -type f -exec touch -d '@946684800' {} +
           echo "Normalized source/input mtimes for incremental checkpoint reuse."
+          # These inputs are patched by the workflow, not the pinned source tag.
+          # Touch only the overlay files so Siso rebuilds their dependent targets.
+          DEVTOOLS="$WORK/src/third_party/devtools-frontend/src"
+          test -s "$DEVTOOLS/front_end/core/sdk/NetworkManager.patch.ts"
+          test -s "$DEVTOOLS/scripts/build/devtools_plugin.js"
+          touch "$DEVTOOLS/front_end/core/sdk/NetworkManager.patch.ts" "$DEVTOOLS/scripts/build/devtools_plugin.js"
 
           CHROMIUM_REVISION="$(git -C "$WORK/src" rev-parse HEAD)"
           CPU_CONFIG_SHA="$(sha256sum "$WORK/src/build/config/compiler_cpu_abi.gn" | awk '{print $1}')"
@@ -409,6 +384,21 @@ jobs:
           printf -v NEXT_CP '%04d' "$NEXT_NUM"
 
           mapfile -t COMPLETE_IDS < <(sed -nE 's/^state-c([0-9]{4})-manifest\.txt$/\1/p' "$ASSET_LIST" | sort -u)
+          if [[ "$FRESH_START" == "true" && "$RESTORE_CHECKPOINT" != "latest" ]]; then
+            echo "::error::Choose either fresh_start=true or a specific restore_checkpoint, not both."
+            exit 1
+          fi
+          if [[ "$FRESH_START" != "true" && "$RESTORE_CHECKPOINT" != "latest" ]]; then
+            if [[ ! "$RESTORE_CHECKPOINT" =~ ^[0-9]{4}$ ]] || ! printf '%s\n' "${COMPLETE_IDS[@]}" | grep -qx "$RESTORE_CHECKPOINT"; then
+              echo "::error::Requested checkpoint $RESTORE_CHECKPOINT has no complete manifest; preserving all assets."
+              exit 1
+            fi
+            COMPLETE_IDS=("$RESTORE_CHECKPOINT")
+          fi
+          if [[ "$FRESH_START" == "true" ]]; then
+            echo "::warning::Explicit fresh start: stored checkpoints remain available, but none will be restored."
+            RELEASE_EXISTS=false
+          fi
           LAST_CP=0000
           STATE_RESUME_VERIFIED=false
           if [[ "$RELEASE_EXISTS" == true && ${#COMPLETE_IDS[@]} -gt 0 ]]; then
@@ -423,10 +413,11 @@ jobs:
                 if grep -qx 'full_snapshot=true' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
                    grep -qx 'format=2' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
                    grep -qx 'archive_format=pax' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
-                   grep -qx 'fs_state_policy=preserve-and-restore' "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
+                   grep -qx 'fs_state_policy=preserve-and-restore' "$MANIFEST_PROBE/state-c${CP}-manifest.txt" &&
+                   grep -qx "fingerprint=$FINGERPRINT" "$MANIFEST_PROBE/state-c${CP}-manifest.txt"; then
                   BASE_CP="$CP"
                 else
-                  echo "Skipping checkpoint $CP: it is legacy state without verified PAX timestamp preservation."
+                  echo "Skipping checkpoint $CP: legacy metadata or incompatible build fingerprint."
                 fi
               else
                 echo "::warning::Could not inspect old checkpoint manifest $CP; it will not be restored."
@@ -434,10 +425,14 @@ jobs:
             done
             if [[ -z "$BASE_CP" ]]; then
               if [[ "$COMPACT_STATE" == "true" ]]; then
-                echo "::error::Cannot compact legacy checkpoints that lost sub-second mtimes. Run a normal build session to create a new PAX checkpoint."
+                echo "::error::Cannot compact legacy/incompatible checkpoints. Existing assets are preserved."
                 exit 1
               fi
-              echo "::warning::No checkpoint has the required persisted Siso filesystem state. Preserving every existing asset and starting a short seed segment in checkpoint slot $NEXT_CP."
+              if [[ "$RELEASE_EXISTS" == "true" && "$FRESH_START" != "true" ]]; then
+                echo "::error::Checkpoint release exists but no compatible snapshot was found. Refusing a silent clean rebuild; choose restore_checkpoint or explicitly set fresh_start=true."
+                exit 1
+              fi
+              echo "No compatible checkpoint selected; starting a seed build in slot $NEXT_CP."
               LAST_CP=0000
             else
               RESTORE_IDS=()
@@ -446,10 +441,13 @@ jobs:
                 echo "Skipping superseded checkpoint $CP; full snapshot $BASE_CP replaces it."
               else
                 PROBE_MANIFEST="$MANIFEST_PROBE/state-c${CP}-manifest.txt"
-                if grep -qx 'format=2' "$PROBE_MANIFEST" && grep -qx 'archive_format=pax' "$PROBE_MANIFEST" && grep -qx 'fs_state_policy=preserve-and-restore' "$PROBE_MANIFEST"; then
+                if grep -Eq '^format=(2|3)$' "$PROBE_MANIFEST" &&
+                   grep -qx 'archive_format=pax' "$PROBE_MANIFEST" &&
+                   grep -qx 'fs_state_policy=preserve-and-restore' "$PROBE_MANIFEST" &&
+                   grep -qx "fingerprint=$FINGERPRINT" "$PROBE_MANIFEST"; then
                   RESTORE_IDS+=("$CP")
                 else
-                  echo "Skipping legacy checkpoint $CP; it does not guarantee sub-second mtime preservation."
+                  echo "Skipping checkpoint $CP; format, timestamp policy, or fingerprint is incompatible."
                 fi
               fi
             done
@@ -460,7 +458,7 @@ jobs:
                 --pattern "state-c${CP}-manifest.txt" --dir "$STATE_DIR"
               MANIFEST="$STATE_DIR/state-c${CP}-manifest.txt"
 
-              if ! grep -qx 'format=2' "$MANIFEST" || ! grep -qx 'archive_format=pax' "$MANIFEST" || ! grep -qx 'fs_state_policy=preserve-and-restore' "$MANIFEST"; then
+              if ! grep -Eq '^format=(2|3)$' "$MANIFEST" || ! grep -qx 'archive_format=pax' "$MANIFEST" || ! grep -qx 'fs_state_policy=preserve-and-restore' "$MANIFEST"; then
                 echo "::error::Checkpoint $CP lacks PAX timestamp preservation or the persisted Siso filesystem-state contract; refusing unsafe reuse."
                 exit 1
               fi
@@ -484,7 +482,20 @@ jobs:
                 echo "::error::Downloaded part count does not match checkpoint $CP manifest."
                 exit 1
               fi
-              echo "Restoring checkpoint $CP (${#PARTS[@]} archive parts)."
+              FORMAT="$(sed -n 's/^format=//p' "$MANIFEST")"
+              for PART in "${PARTS[@]}"; do
+                PART_NAME="$(basename "$PART")"
+                EXPECTED_SHA="$(sed -n "s/^sha256_${PART_NAME}=//p" "$MANIFEST")"
+                if [[ "$FORMAT" == "3" && -z "$EXPECTED_SHA" ]]; then
+                  echo "::error::Checkpoint $CP format 3 manifest lacks checksum for $PART_NAME."
+                  exit 1
+                fi
+                if [[ -n "$EXPECTED_SHA" ]] && ! printf '%s  %s\n' "$EXPECTED_SHA" "$PART" | sha256sum --check --status; then
+                  echo "::error::Checkpoint $CP checksum mismatch for $PART_NAME; leaving other checkpoints intact."
+                  exit 1
+                fi
+              done
+              echo "Restoring checkpoint $CP (${#PARTS[@]} parts; checksums verified where available)."
               cat "${PARTS[@]}" | zstd -d -c | tar -xpf - -C "$OUT"
               if grep -qx 'full_snapshot=true' "$MANIFEST"; then
                 EXPECTED_FILES="$(sed -n 's/^file_count=//p' "$MANIFEST")"
@@ -635,6 +646,13 @@ jobs:
             exit 0
           fi
           if (( RC != 0 )); then
+            if [[ -s "$OUT/.siso_fs_state" && -s "$OUT/.siso_deps" && -s "$OUT/.ninja_log" ]]; then
+              echo "checkpoint=true" >> "$GITHUB_OUTPUT"
+              echo "failure_checkpoint=true" >> "$GITHUB_OUTPUT"
+              echo "::warning::Build failed; preserving partial output as an unverified checkpoint. The previous checkpoint will not be pruned."
+            else
+              echo "::warning::Build failed and required Siso state files are incomplete; no partial checkpoint will be saved."
+            fi
             echo "::error::Brave source build failed with exit code $RC."
             grep -Ein -B 2 -A 5 'fatal error:|undefined reference|FAILED:|ninja: build stopped|error:|failed to|not found' "$BUILD_LOG" | tail -n 120 || true
             echo "::group::Last 100 build log lines"
@@ -909,9 +927,10 @@ jobs:
 
       - name: Save and upload incremental build checkpoint
         id: save_state
-        if: success() && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true')
+        if: always() && steps.state.outcome == 'success' && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true') && (steps.compile.outcome != 'failure' || steps.compile.outputs.checkpoint == 'true') && (steps.validate_resume.outcome == 'success' || steps.compile.outputs.resume_probe != 'true' || steps.compile.outcome == 'failure')
         shell: bash
         env:
+          COMPILE_OUTCOME: ${{ steps.compile.outcome }}
           COMPACT_STATE: ${{ inputs.compact_state }}
           RESUME_VERIFIED_STATE: ${{ steps.state.outputs.resume_verified }}
           RESUME_VERIFIED_PROBE: ${{ steps.validate_resume.outputs.resume_verified }}
@@ -985,12 +1004,14 @@ jobs:
           done
 
           NEXT_RESUME_VERIFIED=false
-          if [[ "$RESUME_VERIFIED_STATE" == "true" || "$RESUME_VERIFIED_PROBE" == "true" ]]; then
-            NEXT_RESUME_VERIFIED=true
+          if [[ "$COMPILE_OUTCOME" == "success" ]]; then
+            if [[ "$RESUME_VERIFIED_STATE" == "true" || "$RESUME_VERIFIED_PROBE" == "true" ]]; then
+              NEXT_RESUME_VERIFIED=true
+            fi
           fi
           MANIFEST="$PART_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
           cat > "$MANIFEST" <<EOF
-          format=2
+          format=3
           archive_format=pax
           checkpoint=$NEXT_CHECKPOINT
           upstream_tag=$UPSTREAM_TAG
@@ -1004,7 +1025,12 @@ jobs:
           covers_through=$NEXT_CHECKPOINT
           created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
-          # The manifest is uploaded last; its presence means all parts were uploaded.
+          for PART in "${PARTS[@]}"; do
+            PART_NAME="$(basename "$PART")"
+            PART_SHA="$(sha256sum "$PART" | awk '{print $1}')"
+            echo "sha256_${PART_NAME}=$PART_SHA" >> "$MANIFEST"
+          done
+          # Upload the manifest last; it records checksums for later restore validation.
           gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
 
           # Verify the remote manifest and every part before any checkpoint cleanup.
@@ -1022,7 +1048,8 @@ jobs:
             --pattern "state-c${NEXT_CHECKPOINT}-manifest.txt" --dir "$VERIFY_DIR"
           grep -qx "full_snapshot=true" "$VERIFY_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
           grep -qx "file_count=$FILE_COUNT" "$VERIFY_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
-          echo "Remote full snapshot $NEXT_CHECKPOINT verified: $FILE_COUNT files, $REMOTE_PARTS part(s)."
+          diff -u "$MANIFEST" "$VERIFY_DIR/state-c${NEXT_CHECKPOINT}-manifest.txt"
+          echo "Remote snapshot manifest verified: $FILE_COUNT files, $REMOTE_PARTS part(s); restore will SHA-256-check the archive."
           echo "part_count=${#PARTS[@]}" >> "$GITHUB_OUTPUT"
           echo "full_snapshot=true" >> "$GITHUB_OUTPUT"
           {
@@ -1036,12 +1063,13 @@ jobs:
             echo "- State release: $STATE_TAG"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Prune obsolete checkpoints after verified full snapshot
-        if: success() && steps.save_state.outcome == 'success' && steps.save_state.outputs.full_snapshot == 'true' && (steps.state.outputs.resume_verified == 'true' || steps.validate_resume.outputs.resume_verified == 'true')
+      - name: Retain the new checkpoint and its parent
+        if: success() && steps.save_state.outcome == 'success' && steps.save_state.outputs.full_snapshot == 'true' && (steps.state.outputs.resume_verified == 'true' || steps.validate_resume.outputs.resume_verified == 'true') && inputs.fresh_start != true && inputs.restore_checkpoint == 'latest'
         shell: bash
         env:
           STATE_TAG: ${{ steps.state.outputs.state_tag }}
           PRESERVE_CHECKPOINT: ${{ steps.state.outputs.next_checkpoint }}
+          PREVIOUS_CHECKPOINT: ${{ steps.state.outputs.last_checkpoint }}
           EXPECTED_PARTS: ${{ steps.save_state.outputs.part_count }}
         run: |
           set -euo pipefail
@@ -1076,8 +1104,8 @@ jobs:
           while IFS=$'\t' read -r ASSET_ID ASSET_NAME; do
             if [[ "$ASSET_NAME" =~ ^state-c([0-9]{4})-(manifest\.txt|part-[0-9]{3})$ ]]; then
               CP="${BASH_REMATCH[1]}"
-              if [[ "$CP" != "$PRESERVE_CHECKPOINT" ]]; then
-                echo "Deleting superseded checkpoint asset $ASSET_NAME (ID $ASSET_ID)"
+              if [[ "$CP" != "$PRESERVE_CHECKPOINT" && "$CP" != "$PREVIOUS_CHECKPOINT" ]]; then
+                echo "Deleting checkpoint older than retained parent/new snapshot: $ASSET_NAME (ID $ASSET_ID)"
                 if gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$ASSET_ID" >/dev/null; then
                   echo "Deleted $ASSET_NAME."
                 else
@@ -1086,31 +1114,12 @@ jobs:
               fi
             fi
           done < "$ASSETS"
-          REMAINING_OLD="$(gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | awk -v keep="$PRESERVE_CHECKPOINT" '$0 ~ /^state-c[0-9][0-9][0-9][0-9]-(manifest\.txt|part-[0-9][0-9][0-9])$/ { cp = substr($0, 8, 4); if (cp < keep) n++ } END { print n+0 }')" 
+          REMAINING_OLD="$(gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | awk -v keep="$PRESERVE_CHECKPOINT" -v prev="$PREVIOUS_CHECKPOINT" '$0 ~ /^state-c[0-9][0-9][0-9][0-9]-(manifest\.txt|part-[0-9][0-9][0-9])$/ { cp = substr($0, 8, 4); if (cp != keep && cp != prev) n++ } END { print n+0 }')"
           if [[ "$REMAINING_OLD" != "0" ]]; then
-            echo "::warning::$REMAINING_OLD superseded checkpoint assets remain in the release; restore will ignore those before full snapshot $PRESERVE_CHECKPOINT."
+            echo "::warning::$REMAINING_OLD checkpoints older than the two retained snapshots remain in the release."
           else
-            echo "Retained full snapshot checkpoint $PRESERVE_CHECKPOINT; all superseded checkpoints removed."
+            echo "Retained checkpoint $PRESERVE_CHECKPOINT and its parent $PREVIOUS_CHECKPOINT."
           fi
-
-      - name: Queue the next Brave compilation session
-        if: success() && steps.save_state.outcome == 'success' && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true')
-        shell: bash
-        env:
-          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
-          RESUME_VERIFIED_STATE: ${{ steps.state.outputs.resume_verified }}
-          RESUME_VERIFIED_PROBE: ${{ steps.validate_resume.outputs.resume_verified }}
-        run: |
-          set -euo pipefail
-          RESUME_VERIFIED="$RESUME_VERIFIED_STATE"
-          if [[ "$RESUME_VERIFIED_PROBE" == "true" ]]; then
-            RESUME_VERIFIED=true
-          fi
-          echo "Checkpoint is durable; queueing the next Brave compilation session for $UPSTREAM_VERSION (resume_verified=$RESUME_VERIFIED)."
-          gh workflow run d630-core2-brave-source.yml \
-            --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
-            -f version="$UPSTREAM_VERSION" \
-            -f resume_verified="$RESUME_VERIFIED"
 
       - name: Publish source-built Brave package release
         if: inputs.compact_state != true && success() && steps.compile.outputs.checkpoint != 'true'
