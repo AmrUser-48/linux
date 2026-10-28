@@ -278,7 +278,7 @@ jobs:
               path.write_text(text, encoding="utf-8")
           print("DevTools esbuild resolves Brave .patch.js imports.")
           PY
-          grep -qF "NetworkManager.patch.ts" "$DEVTOOLS/front_end/core/sdk/NetworkManager.patch.ts"
+          test -s "$PATCH_TS"
           grep -qF "res.id.endsWith('.patch.js')" "$DEVTOOLS/scripts/build/devtools_plugin.js"
           echo "Applied pinned-tag DevTools patch-import compatibility fix."
 
