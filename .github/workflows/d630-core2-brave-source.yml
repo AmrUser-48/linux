@@ -347,6 +347,10 @@ jobs:
           STATE_TAG="core2-brave-state-v${UPSTREAM_VERSION}"
           STATE_DIR="$RUNNER_TEMP/brave-state"
           mkdir -p "$OUT" "$STATE_DIR"
+          if [[ "$FRESH_START" == "true" && "$COMPACT_STATE" == "true" ]]; then
+            echo "::error::fresh_start and compact_state cannot be combined."
+            exit 1
+          fi
 
           # Checkpointed outputs retain mtimes from earlier runners. A fresh source
           # checkout makes unchanged inputs look newer, causing Ninja to recompile
@@ -1034,7 +1038,8 @@ jobs:
           # Upload the manifest last; it records checksums for later restore validation.
           gh release upload "$STATE_TAG" "$MANIFEST" --repo "$GITHUB_REPOSITORY"
 
-          # Verify the remote manifest and every part before any checkpoint cleanup.
+          # Verify the remote manifest and part inventory before cleanup.
+          # Full part checksums are enforced on the next restore; the parent remains retained meanwhile.
           REMOTE_ASSETS="$RUNNER_TEMP/brave-state-remote-assets.txt"
           gh release view "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' > "$REMOTE_ASSETS"
           grep -qx "state-c${NEXT_CHECKPOINT}-manifest.txt" "$REMOTE_ASSETS"
