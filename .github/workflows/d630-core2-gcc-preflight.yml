@@ -48,7 +48,7 @@ jobs:
       - name: Restore-test the published GCC checkpoint without compiling
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: \${{ github.token }}
         run: |
           set -Eeuo pipefail
           for tool in gh jq zstd tar sha256sum; do command -v "$tool" >/dev/null; done
@@ -59,12 +59,12 @@ jobs:
           release_id="$(jq -r .id <<<"$release")"
           mapfile -t manifests < <(
             gh api "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' |
-              grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json |
+              grep -E '^gcc12-manifest-[0-9]+-[0-9]+\.json$' |
               sort -t- -k3,3nr -k4,4nr
           )
-          (("${#manifests[@]}" > 0)) || { echo "::error::No GCC checkpoint manifest is published."; exit 1; }
+          (("\${#manifests[@]}" > 0)) || { echo "::error::No GCC checkpoint manifest is published."; exit 1; }
           restored=false
-          for manifest in "${manifests[@]}"; do
+          for manifest in "\${manifests[@]}"; do
             candidate="$tmp/candidate"
             rm -rf "$candidate"
             mkdir -p "$candidate/unpacked"
@@ -74,14 +74,14 @@ jobs:
             generation="$(jq -r .generation "$m")"
             valid=true
             parts=()
-            while IFS=\t' read -r name checksum; do
+            while IFS=$'\t' read -r name checksum; do
               [[ "$name" == "gcc12-state-$generation.part"* && "$name" =~ ^gcc12-state-[0-9]+-[0-9]+\.part[0-9]{4}$ && "$checksum" =~ ^[a-f0-9]{64}$ ]] || { valid=false; break; }
               gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$name" --dir "$candidate" >/dev/null 2>&1 || { valid=false; break; }
               printf '%s  %s\n' "$checksum" "$candidate/$name" | sha256sum --check --status || { valid=false; break; }
               parts+=("$candidate/$name")
             done < <(jq -r '.parts[]|[.name,.sha256]|@tsv' "$m")
-            [[ "$valid" == true && "${#parts[@]}" -gt 0 ]] || continue
-            if ! cat "${parts[@]}" | zstd -q -d -c | tar -xpf - -C "$candidate/unpacked"; then
+            [[ "$valid" == true && "\${#parts[@]}" -gt 0 ]] || continue
+            if ! cat "\${parts[@]}" | zstd -q -d -c | tar -xpf - -C "$candidate/unpacked"; then
               continue
             fi
             state="$candidate/unpacked/state.json"
