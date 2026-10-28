@@ -1,4 +1,4 @@
-name: Core 2 GCC clean-build preflight
+name: Core 2 GCC checkpoint-resume preflight
 
 on:
   push:
@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   syntax:
-    name: Validate the clean-build script before compilation
+    name: Validate resumable checkpoint behavior before compilation
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -28,18 +28,22 @@ jobs:
           ref: master
           fetch-depth: 1
 
-      - name: Validate Bash syntax and clean-build policy
+      - name: Validate Bash syntax and resumable checkpoint policy
         shell: bash
         run: |
           set -euo pipefail
           bash -n scripts/core2/frozen-gcc-build.sh
-          grep -Fq 'state_phase:"prepared-clean-source"' scripts/core2/frozen-gcc-build.sh
-          grep -Fq '330m dpkg-buildpackage' scripts/core2/frozen-gcc-build.sh
-          if grep -Eq 'exec timeout .*dpkg-buildpackage.*-nc' scripts/core2/frozen-gcc-build.sh; then
-            echo "::error::Incremental no-clean mode is forbidden for this workflow."
+          grep -Fq 'RESTORED_PHASE' scripts/core2/frozen-gcc-build.sh
+          grep -Fq 'build-in-progress' scripts/core2/frozen-gcc-build.sh
+          grep -Fq 'checkpoint_state build-in-progress' scripts/core2/frozen-gcc-build.sh
+          grep -Fq '270m dpkg-buildpackage' scripts/core2/frozen-gcc-build.sh
+          grep -Fq -- '-nc -j2' scripts/core2/frozen-gcc-build.sh
+          grep -Fq 'schema:4,state_phase:$phase' scripts/core2/frozen-gcc-build.sh
+          if grep -Fq 'gh workflow run' scripts/core2/frozen-gcc-build.sh; then
+            echo "::error::Automatic workflow chaining is forbidden; each GCC segment must be manually dispatched."
             exit 1
           fi
-          echo "Bash syntax and clean-build policy checks passed."
+          echo "Bash syntax and resumable-checkpoint policy checks passed."
 
       - name: Parse workflow YAML
         shell: bash

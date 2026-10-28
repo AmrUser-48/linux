@@ -14,6 +14,7 @@ CONTAINER="gcc-frozen-${GITHUB_RUN_ID:-local}-${GITHUB_RUN_ATTEMPT:-1}"
 TMP="$(mktemp -d)"
 UID_BUILD="$(id -u)"
 RESTORED=false
+RESTORED_PHASE=""
 cleanup(){ docker rm -f "$CONTAINER" >/dev/null 2>&1 || true; rm -rf "$TMP"; }
 trap cleanup EXIT
 for c in docker gh tar zstd split jq sha256sum; do command -v "$c" >/dev/null || die "Missing command: $c"; done
@@ -45,10 +46,8 @@ if [[ "$RESET_CHECKPOINT" != true ]]; then
       C="$TMP/candidate"; rm -rf "$C"; mkdir -p "$C"
       gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$MN" --dir "$C" >/dev/null 2>&1 || continue
       M="$C/$MN"
-      jq -e '.schema==3 and .state_phase=="prepared-clean-source" and .archive_format=="pax" and .source_package=="gcc-12" and
-        (.generation|type=="string" and test("^[0-9]+-[0-9]+$")) and
-        (.parts|type=="array" and length>0 and length<10000)' "$M" >/dev/null 2>&1 || continue
-      G="$(jq -r .generation "$M")"; VALID=true; PARTS=()
+      jq -e '(.schema==2 or .schema==3 or .schema==4) and .archive_format=="pax" and .source_package=="gcc-12" and ((.schema==2) or (.schema==3 and .state_phase=="prepared-clean-source") or (.schema==4 and (.state_phase=="prepared-clean-source" or .state_phase=="build-in-progress"))) and (.generation|type=="string" and test("^[0-9]+-[0-9]+$")) and (.parts|type=="array" and length>0 and length<10000)' "$M" >/dev/null 2>&1 || continue
+      G="$(jq -r .generation "$M")"; PHASE="$(jq -r 'if .schema==2 then "build-in-progress" else .state_phase end' "$M")"; VALID=true; PARTS=()
       while IFS=$'\t' read -r N S; do
         [[ "$N" == "gcc12-state-$G.part"* && "$N" =~ ^gcc12-state-[0-9]+-[0-9]+\.part[0-9]{4}$ && "$S" =~ ^[a-f0-9]{64}$ ]] || { VALID=false; break; }
         gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$N" --dir "$C" >/dev/null 2>&1 || { VALID=false; break; }
@@ -62,10 +61,13 @@ if [[ "$RESET_CHECKPOINT" != true ]]; then
          [[ "$(jq -r '.source_package // empty' "$ROOT/state.json")" == gcc-12 ]] &&
          [[ "$(jq -r '.package_version // empty' "$ROOT/state.json")" == "$(jq -r '.package_version // empty' "$M")" ]] &&
          [[ "$(jq -r '.source_version // empty' "$ROOT/state.json")" == "$(jq -r '.source_version // empty' "$M")" ]]; then
-        RESTORED=true; echo "Restored verified GCC checkpoint $G."; break
+        RESTORED=true; RESTORED_PHASE="$PHASE"; echo "Restored verified GCC checkpoint $G (phase $PHASE)."; break
       fi
       rm -rf "$ROOT"; mkdir -p "$ROOT"
     done
+    if [[ "$RESTORED" != true ]]; then
+      die "Checkpoint release exists, but no complete compatible checkpoint passed integrity checks. Refusing a silent clean rebuild; set reset_checkpoint=true only for an intentional restart."
+    fi
   elif grep -Eqi 'HTTP 404|Not Found|release not found' "$TMP/release.err"; then
     echo "No prior GCC checkpoint; initialize a new build."
   else
@@ -139,6 +141,7 @@ OPT="$(jq -r .optimization_level "$ROOT/state.json")"
 [[ -s "$ROOT/build-flags.txt" ]] || die "Build flags missing."
 
 checkpoint_state(){
+  local phase="${1:?checkpoint phase required}"
   [[ -s "$ROOT/state.json" ]] || die "No build state to checkpoint."
   local prefix="$TMP/gcc12-state-$GEN.part" manifest="$TMP/gcc12-manifest-$GEN.json" lines="$TMP/parts.jsonl"
   tar --format=pax --numeric-owner --acls --xattrs -cf - -C "$ROOT" \
@@ -151,8 +154,8 @@ checkpoint_state(){
   for p in "${parts[@]}"; do
     jq -cn --arg name "$(basename "$p")" --arg sha256 "$(sha256sum "$p"|awk '{print $1}')" '{name:$name,sha256:$sha256}' >>"$lines"
   done
-  jq -n --arg generation "$GEN" --arg source_package gcc-12 --arg source_version "$SV" --arg package_version "$PV" --arg archive_format pax --argjson parts "$(jq -s . "$lines")" \
-    '{schema:3,state_phase:"prepared-clean-source",generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,archive_format:$archive_format,parts:$parts}' >"$manifest"
+  jq -n --arg phase "$phase" --arg generation "$GEN" --arg source_package gcc-12 --arg source_version "$SV" --arg package_version "$PV" --arg archive_format pax --argjson parts "$(jq -s . "$lines")" \
+    '{schema:4,state_phase:$phase,generation:$generation,source_package:$source_package,source_version:$source_version,package_version:$package_version,archive_format:$archive_format,parts:$parts}' >"$manifest"
   if ! gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" >"$TMP/existing-release.json" 2>"$TMP/create-release.err"; then
     if grep -Eqi 'HTTP 404|Not Found|release not found' "$TMP/create-release.err"; then
       gh release create "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --title "Prepared GCC 12 clean-build workspace" \
@@ -171,40 +174,34 @@ checkpoint_state(){
     gh release download "$STATE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$n" --dir "$verify"
     printf '%s  %s\n' "$s" "$verify/$n" | sha256sum -c -
   done < <(jq -r '.parts[]|[.name,.sha256]|@tsv' "$manifest")
-  local rid
-  rid="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$STATE_TAG" --jq .id)"
-  while IFS=$'\t' read -r aid aname; do
-    [[ "$aname" == "gcc12-manifest-$GEN.json" || "$aname" == gcc12-state-"$GEN".part* ]] && continue
-    if [[ "$aname" =~ ^gcc12-(manifest|state)- ]]; then
-      gh api -X DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$aid" >/dev/null || echo "::warning::Could not prune old checkpoint asset $aname."
-    fi
-  done < <(gh api "repos/$GITHUB_REPOSITORY/releases/$rid/assets?per_page=100" --jq '.[]|[.id,.name]|@tsv')
-  echo "Checkpoint $GEN uploaded and verified."
+  echo "Checkpoint $GEN (phase $phase) uploaded and verified; previous generations retained."
 }
 
-# The checkpoint contains clean prepared source/package state only.
-# Every build attempt cleans generated products and starts compiling from scratch.
-docker exec -i -e SOURCE_DIR="/work/${SDREL%/}/" "$CONTAINER" bash -s <<'CLEAN'
+# Prepared-source checkpoints may be cleaned. In-progress checkpoints retain
+# object files and make stamps so dpkg-buildpackage can continue incrementally.
+if [[ "$RESTORED_PHASE" != "build-in-progress" ]]; then
+  docker exec -i -e SOURCE_DIR="/work/${SDREL%/}/" "$CONTAINER" bash -s <<'CLEAN'
 set -Eeuo pipefail
-runuser --preserve-environment -u core2build -- env \
-  HOME=/home/core2build USER=core2build LOGNAME=core2build SOURCE_DIR="$SOURCE_DIR" \
-  bash -s <<'BUILDUSER'
+runuser --preserve-environment -u core2build -- env HOME=/home/core2build USER=core2build LOGNAME=core2build SOURCE_DIR="$SOURCE_DIR" bash -s <<'BUILDUSER'
 set -Eeuo pipefail
 cd "$SOURCE_DIR"
 fakeroot debian/rules clean
 test -s debian/dummy.texi
 BUILDUSER
 CLEAN
-
-shopt -s nullglob
-rm -f "$ROOT"/source-tree/*.deb "$ROOT"/source-tree/*.changes "$ROOT"/source-tree/*.buildinfo
+  shopt -s nullglob
+  rm -f "$ROOT"/source-tree/*.deb "$ROOT"/source-tree/*.changes "$ROOT"/source-tree/*.buildinfo
+  OBJECTS_BEFORE="$(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
+  [[ "$OBJECTS_BEFORE" -eq 0 ]] || die "Clean target left $OBJECTS_BEFORE object/archive files; refusing to build."
+  checkpoint_state prepared-clean-source
+  echo "Prepared-source checkpoint saved; this segment starts clean."
+else
+  echo "Continuing restored in-progress GCC state without cleaning."
+fi
 rm -f "$ROOT/build.log"
 rm -rf "$ROOT/release-artifacts"
 OBJECTS_BEFORE="$(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
-[[ "$OBJECTS_BEFORE" -eq 0 ]] || die "Clean target left $OBJECTS_BEFORE object/archive files; refusing checkpoint."
-checkpoint_state
-echo "Verified prepared workspace checkpoint; compilation starts with zero object/archive files."
-echo "Object/archive files before segment: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
+echo "Object/archive files before segment: $OBJECTS_BEFORE"
 set +e
 docker exec -e SOURCE_DIR="/work/${SDREL%/}/" \
   -e DEB_CFLAGS_MAINT_APPEND="-O2 -march=core2 -mtune=core2" \
@@ -216,18 +213,22 @@ docker exec -e SOURCE_DIR="/work/${SDREL%/}/" \
       SOURCE_DIR="$SOURCE_DIR" DEB_CFLAGS_MAINT_APPEND="$DEB_CFLAGS_MAINT_APPEND" \
       DEB_CXXFLAGS_MAINT_APPEND="$DEB_CXXFLAGS_MAINT_APPEND" DEB_FFLAGS_MAINT_APPEND="$DEB_FFLAGS_MAINT_APPEND" \
       DEB_BUILD_OPTIONS="$DEB_BUILD_OPTIONS" \
-      bash -c '"'"'cd "$SOURCE_DIR" && exec timeout --signal=INT --kill-after=90s 330m dpkg-buildpackage -rfakeroot -us -uc -b -j2'"'"' \
+      bash -c '"'"'cd "$SOURCE_DIR" && exec timeout --signal=INT --kill-after=90s 270m dpkg-buildpackage -rfakeroot -us -uc -b -nc -j2'"'"' \
       2>&1 | tee -a /work/build.log
   '
 BUILD_STATUS=$?
 set -e
 echo "dpkg-buildpackage status=$BUILD_STATUS; object/archive files afterward: $(find "$ROOT/source-tree" -type f \( -name '*.o' -o -name '*.a' \) | wc -l)"
 
-
-if [[ "$BUILD_STATUS" -eq 124 ]]; then
-  die "Clean GCC build exceeded 330 minutes. The verified clean-source checkpoint is retained; no compiled objects will be reused."
+if [[ "$BUILD_STATUS" -eq 124 || "$BUILD_STATUS" -eq 137 ]]; then
+  checkpoint_state build-in-progress
+  if [[ -n "${GITHUB_OUTPUT:-}" ]]; then echo "published=false" >>"$GITHUB_OUTPUT"; fi
+  echo "::notice::GCC build segment reached its time limit. Verified partial state is saved; manually dispatch the same workflow to continue."
+  exit 0
 elif [[ "$BUILD_STATUS" -ne 0 ]]; then
-  die "GCC clean build failed (status $BUILD_STATUS). The prepared checkpoint is retained for a fresh clean build attempt."
+  checkpoint_state build-in-progress
+  if [[ -n "${GITHUB_OUTPUT:-}" ]]; then echo "published=false" >>"$GITHUB_OUTPUT"; fi
+  die "GCC build failed with status $BUILD_STATUS; partial state was saved for diagnosis and a controlled retry."
 fi
 
 shopt -s nullglob
