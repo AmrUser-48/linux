@@ -11,6 +11,7 @@ on:
       - 'README.md'
       - '.ci/**'
       - 'scripts/core2/compression-benchmark.sh'
+      - 'scripts/core2/frozen-gcc-build.sh'
   workflow_dispatch:
 
 concurrency:
