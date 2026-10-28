@@ -515,7 +515,10 @@ jobs:
                 fi
                 echo "Verified persisted Siso filesystem state: $(stat -c '%s bytes, mtime=%y' "$OUT/.siso_fs_state")."
               fi
-              if grep -qx 'resume_verified=true' "$MANIFEST"; then
+              if grep -qx 'format=2' "$MANIFEST"; then
+                STATE_RESUME_VERIFIED=false
+                echo "Legacy format 2 checkpoint: require a 15-minute resume probe before any long compilation segment."
+              elif grep -qx 'resume_verified=true' "$MANIFEST"; then
                 STATE_RESUME_VERIFIED=true
               else
                 STATE_RESUME_VERIFIED=false
