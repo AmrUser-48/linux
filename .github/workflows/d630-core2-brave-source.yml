@@ -798,7 +798,11 @@ jobs:
           fi
 
           STALE_DEPS_COUNT="$(grep -Eic 'stale deps in depslog' "$OUT/siso.INFO" || true)"
-          FS_STATE_ERROR_COUNT="$(grep -Eic 'hashfs.*(loaderr|corrupt)|failed to load fs state|corrupt.*(filesystem|fs state)|discard.*(filesystem|fs state)' "$OUT/siso.INFO" || true)"
+          FS_STATE_ERROR_COUNT="$(awk '
+            /hashfs loaderr:/ && !/hashfs loaderr: <nil>/ { n++; next }
+            /failed to load fs state|corrupt.*(filesystem|fs state)|discard.*(filesystem|fs state)/ { n++ }
+            END { print n+0 }
+          ' "$OUT/siso.INFO")"
           MISSING_DEPS_COUNT="$(grep -Eic 'failed to load deps: missing deps in depfile/depslog' "$OUT/siso.INFO" || true)"
           MISSING_OUTPUT_COUNT="$(grep -Eic 'missing out/Release/.* data:' "$OUT/siso.INFO" || true)"
           PROBE_TIMESTAMP_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
@@ -1080,7 +1084,10 @@ jobs:
 
       - name: Save and upload incremental build checkpoint
         id: save_state
-        if: always() && steps.state.outcome == 'success' && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true') && (steps.compile.outcome != 'failure' || steps.compile.outputs.checkpoint == 'true') && (steps.validate_resume.outcome == 'success' || steps.compile.outputs.resume_probe != 'true' || steps.compile.outcome == 'failure')
+        # Save failed-probe outputs as an explicitly unverified checkpoint. This
+        # carries repaired Siso dependency metadata forward instead of rebuilding the
+        # same saved object on every attempt. Pruning still requires verified proof.
+        if: always() && steps.state.outcome == 'success' && (inputs.compact_state == true || steps.compile.outputs.checkpoint == 'true') && (steps.compile.outcome != 'failure' || steps.compile.outputs.checkpoint == 'true')
         shell: bash
         env:
           COMPILE_OUTCOME: ${{ steps.compile.outcome }}
