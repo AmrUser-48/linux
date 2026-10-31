@@ -1,46 +1,24 @@
-name: Dell Latitude D630 — Linux 6.1 stable
+name: Dell Latitude D630 — Debian Linux 6.1.187-1
 
 on:
+  push:
+    branches:
+      - d630-debian-6.1.187
   workflow_dispatch:
 
 concurrency:
-  group: d630-kernel-6.1
-  cancel-in-progress: false
+  group: d630-debian-6.1.187
+  cancel-in-progress: true
 
 permissions:
   contents: write
   actions: read
 
 env:
-  KERNEL_TAG: v6.1.189
+  DEBIAN_SOURCE_VERSION: 6.1.187-1
 
 jobs:
-  release-check:
-    name: Skip if this commit's kernel release exists
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    outputs:
-      exists: ${{ steps.check.outputs.exists }}
-    steps:
-      - name: Check release before compiling the kernel
-        id: check
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: d630-6.1-${GITHUB_SHA}
-        shell: bash
-        run: |
-          set -euo pipefail
-          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "exists=true" >> "$GITHUB_OUTPUT"
-            echo "::notice::Release $RELEASE_TAG already exists; skipping kernel build and publication."
-          else
-            echo "exists=false" >> "$GITHUB_OUTPUT"
-          fi
-
   build:
-    needs: release-check
-    if: needs.release-check.outputs.exists != 'true'
     name: Build stripped D630 Debian packages (Linux 6.1)
     runs-on: ubuntu-22.04
     container:
@@ -62,7 +40,7 @@ jobs:
             ca-certificates curl git make gcc g++ build-essential debhelper lsb-release bc bison flex \
             libssl-dev libelf-dev libdw-dev dwarves \
             cpio kmod fakeroot dpkg-dev rsync perl xz-utils zstd \
-            python3 file
+            python3 file patch quilt
 
       - name: Checkout D630 configuration and packaging scripts
         uses: actions/checkout@v5
@@ -74,24 +52,34 @@ jobs:
             scripts/d630-firmware-package.sh
           sparse-checkout-cone-mode: false
 
-      - name: Fetch upstream Linux 6.1 stable source
+      - name: Fetch official Debian Linux source package 6.1.187-1
         shell: bash
         run: |
           set -euxo pipefail
-          git clone --depth 1 --branch "${KERNEL_TAG}" \
-            https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git linux-6.1
+          # Use official Debian Bookworm and Bookworm-security repositories.
+          printf '%s\n' \
+            'deb http://deb.debian.org/debian bookworm main non-free-firmware' \
+            'deb http://deb.debian.org/debian-security bookworm-security main non-free-firmware' \
+            'deb-src http://deb.debian.org/debian bookworm main' \
+            'deb-src http://deb.debian.org/debian-security bookworm-security main' \
+            > /etc/apt/sources.list.d/d630-debian.list
+          apt-get update
+          cd "$GITHUB_WORKSPACE"
+          apt-get source "linux=${DEBIAN_SOURCE_VERSION}"
+          test -d linux-6.1.187/debian
+          test "$(dpkg-parsechangelog -l linux-6.1.187/debian/changelog -S Version)" = "${DEBIAN_SOURCE_VERSION}"
           cp "$GITHUB_WORKSPACE/arch/x86/configs/d630-6.1.config" \
-            linux-6.1/arch/x86/configs/d630-6.1.config
+            linux-6.1.187/arch/x86/configs/d630-6.1.config
           cp "$GITHUB_WORKSPACE/arch/x86/configs/d630-prune-modules-6.1.sh" \
-            linux-6.1/arch/x86/configs/d630-prune-modules-6.1.sh
-          test "$(make -s -C linux-6.1 kernelversion)" = "6.1.189"
-          git -C linux-6.1 log -1 --oneline
+            linux-6.1.187/arch/x86/configs/d630-prune-modules-6.1.sh
+          test "$(make -s -C linux-6.1.187 kernelversion)" = "6.1.187"
+          dpkg-parsechangelog -l linux-6.1.187/debian/changelog -S Version
 
       - name: Prepare stripped Debian-compatible D630 configuration
         shell: bash
         run: |
           set -euxo pipefail
-          cd linux-6.1
+          cd linux-6.1.187
 
           make x86_64_defconfig
           scripts/kconfig/merge_config.sh -m .config arch/x86/configs/d630-6.1.config
@@ -191,33 +179,29 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          printf '%s\n' \
-            'deb http://deb.debian.org/debian bookworm main non-free-firmware' \
-            'deb http://deb.debian.org/debian-security bookworm-security main non-free-firmware' \
-            > /etc/apt/sources.list.d/d630-microcode.list
-          apt-get update
           cd "$GITHUB_WORKSPACE"
+          apt-get update
           apt-get download intel-microcode
           MICROCODE_DEB="$(find . -maxdepth 1 -type f -name 'intel-microcode_*_amd64.deb' -print -quit)"
           test -n "$MICROCODE_DEB"
           dpkg-deb -f "$MICROCODE_DEB" Package Version Architecture
-          # Verify D630-compatible Core 2 CPUID signatures: Merom and Penryn.
+          # Verify coverage for Core 2 CPUID signatures used by D630-compatible CPUs.
           dpkg-deb -c "$MICROCODE_DEB" | grep -E '/intel-ucode/06-0f-0d$'
           dpkg-deb -c "$MICROCODE_DEB" | grep -E '/intel-ucode/06-17-06$'
           sha256sum "$MICROCODE_DEB"
 
-      - name: Build Linux 6.1.189 Debian kernel packages
+      - name: Build D630 kernel from Debian Linux 6.1.187-1 source
         shell: bash
         run: |
           set -euxo pipefail
-          cd linux-6.1
+          cd linux-6.1.187
 
           export LOCALVERSION=-d630-core2
-          git config --global --add safe.directory "$PWD"
           export KBUILD_BUILD_USER=AmrUser-48
           export KBUILD_BUILD_HOST=github-actions
           export KDEB_CHANGELOG_DIST=bookworm
-          export KBUILD_BUILD_TIMESTAMP="$(git log -1 --format=%cI)"
+          SOURCE_DATE="$(dpkg-parsechangelog -l debian/changelog -S Date)"
+          export KBUILD_BUILD_TIMESTAMP="$(date -u -d "$SOURCE_DATE" '+%Y-%m-%dT%H:%M:%S+00:00')"
 
           make -j2 bindeb-pkg LOCALVERSION="${LOCALVERSION}" INSTALL_MOD_STRIP=1
 
@@ -225,8 +209,8 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          test -f linux-6.1/arch/x86/boot/bzImage
-          file linux-6.1/arch/x86/boot/bzImage
+          test -f linux-6.1.187/arch/x86/boot/bzImage
+          file linux-6.1.187/arch/x86/boot/bzImage
 
           echo "=== Debian packages ==="
           ls -lh linux-image-*.deb d630-firmware-iwl3945_*.deb intel-microcode_*_amd64.deb
@@ -254,7 +238,7 @@ jobs:
       - name: Upload release artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: linux-d630-core2-6.1-${{ github.sha }}
+          name: linux-d630-core2-debian-6.1.187-${{ github.sha }}
           path: release-artifacts/*
           if-no-files-found: error
 
@@ -265,13 +249,13 @@ jobs:
 
     env:
       GH_TOKEN: ${{ github.token }}
-      TAG: d630-6.1-${{ github.sha }}
+      TAG: d630-debian-6.1.187-${{ github.sha }}
 
     steps:
       - name: Download release artifacts
         uses: actions/download-artifact@v4
         with:
-          name: linux-d630-core2-6.1-${{ github.sha }}
+          name: linux-d630-core2-debian-6.1.187-${{ github.sha }}
           path: dist
 
       - name: Publish GitHub release
@@ -280,33 +264,36 @@ jobs:
           set -euxo pipefail
           cd dist
           cat > release-notes.md <<EOF
-          ## Dell Latitude D630 / Core 2 Duo — Linux 6.1.189
+          ## Dell Latitude D630 / Core 2 Duo — Debian Linux 6.1.187-1
 
-          Built from upstream stable tag ${KERNEL_TAG} with D630 config from
+          Built from official Debian source package linux ${DEBIAN_SOURCE_VERSION}, including Debian's source patches, with D630 configuration from
           commit ${{ github.sha }}.
 
           - D630 graphics, ACPI, audio, storage and Intel 3945ABG support
           - Intel 3945 firmware in a separate Debian package
-          - official Debian intel-microcode with Core 2 CPUID signatures 06-0f-0d and 06-17-06
+          - Official Debian intel-microcode with CPUID signatures 06-0f-0d (T7250 class) and 06-17-06 (T8300/T9300/T9500)
           - ext4, Btrfs and NTFS3 built in
           - FAT/VFAT, ISO9660/UDF built in
           - zram built in with LZ4 default compression
-          - schedutil CPU governor by default
+          - Debian's schedutil CPU governor default retained
           - cgroups/namespaces, seccomp/eBPF, AppArmor/Landlock
           - nftables/selected iptables, FUSE and OverlayFS modules
           - unused hardware-driver module families pruned
 
-          Install the kernel image, d630-firmware-iwl3945, and bundled intel-microcode packages.
-          Do not downgrade a newer installed microcode package; retain a known-good kernel as fallback.
+          Install the kernel image and d630-firmware-iwl3945 packages. The bundled
+          intel-microcode package covers the listed Core 2 families. Avoid
+          downgrading a newer installed microcode package; retain a known-good
+          kernel as fallback.
           EOF
 
           if gh release view "${TAG}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
-            echo "::notice::Release ${TAG} already exists; refusing to overwrite or upload assets."
-            exit 0
+            gh release upload "${TAG}" linux-image-*.deb d630-firmware-iwl3945_*.deb \
+              intel-microcode_*_amd64.deb SHA256SUMS-d630-6.1.txt \
+              --repo "${GITHUB_REPOSITORY}" --clobber
           else
             gh release create "${TAG}" linux-image-*.deb d630-firmware-iwl3945_*.deb \
-              intel-microcode_*_amd64.deb \
-              SHA256SUMS-d630-6.1.txt --repo "${GITHUB_REPOSITORY}" \
-              --title "Dell Latitude D630 Linux 6.1.189 (${{ github.sha }})" \
+              intel-microcode_*_amd64.deb SHA256SUMS-d630-6.1.txt \
+              --repo "${GITHUB_REPOSITORY}" \
+              --title "Dell Latitude D630 Debian Linux 6.1.187-1 (${{ github.sha }})" \
               --notes-file release-notes.md --target "${GITHUB_SHA}"
           fi
