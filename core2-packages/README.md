@@ -999,7 +999,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libsox-ng5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261026180426">libsox-ng5 14.8.1</a></code></summary>
+<summary id="core2-package-libsox-ng5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">libsox-ng5 14.8.1</a></code></summary>
 
 - **Depends:** <code>libao4 (&gt;= 1.1.0)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.16)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libebur128-1"><code>libebur128-1 (&gt;= 1.0.1)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <code>libgsm1 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <code>libid3tag0 (&gt;= 0.15.1b)</code> <em>(Debian Bookworm)</em>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <code>libmad0 (&gt;= 0.15.1b-3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmagic1"><code>libmagic1 (&gt;= 5.12)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopusenc0"><code>libopusenc0 (&gt;= 0.2.1)</code></a>; <a href="#core2-package-libopusfile0"><code>libopusfile0 (&gt;= 0.5)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <code>libsndio7.0 (&gt;= 1.8.1)</code> <em>(Debian Bookworm)</em>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <code>libtwolame0 (&gt;= 0.3.10)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisfile3 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libwavpack1 (&gt;= 4.40.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
@@ -1056,7 +1056,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-sox-ng"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261026180426">sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</a></code></summary>
+<summary id="core2-package-sox-ng"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libsox-ng5"><code>libsox-ng5 (= 14.8.1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
@@ -5705,6 +5705,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### SoX NG (system)
+Version: `14.8.1+core2.1~20261101003440` · Published: 2026-11-01 00:35:09 UTC
+**Description:** Swiss Army knife of sound processing (SoX NG)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
+**Main .deb:** [sox-ng_14.8.1+core2.1.20261101003440_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261101003440/sox-ng_14.8.1%2Bcore2.1.20261101003440_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440)
+
 ### Zstandard (optimized)
 Version: `1.5.4+dfsg2-5+core2safe1~20261027175339` · Published: 2026-10-27 18:06:41 UTC
 **Description:** fast lossless compression algorithm -- CLI tool
@@ -5760,14 +5768,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261026203826_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026203826/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261026203826_amd64.deb)
 **Binary packages in release:** 18
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261026203826)
-
-### SoX NG (system)
-Version: `14.8.1+core2.1~20261026180426` · Published: 2026-10-26 18:05:24 UTC
-**Description:** Swiss Army knife of sound processing (SoX NG)
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
-**Main .deb:** [sox-ng_14.8.1+core2.1.20261026180426_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261026180426/sox-ng_14.8.1%2Bcore2.1.20261026180426_amd64.deb)
-**Binary packages in release:** 2
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261026180426)
 
 ### libmp3lame0 (system)
 Version: `3.100-6+core2.1~20261025150924` · Published: 2026-10-25 15:10:31 UTC
