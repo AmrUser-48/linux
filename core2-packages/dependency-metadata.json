@@ -14403,6 +14403,71 @@
       "release_tag": "core2-mesa-22.3.6-1-deb12u2-core2.1-20261101003416",
       "source": "mesa",
       "version": "22.3.6-1+deb12u2+core2.1~20261101003416"
+    },
+    "711044676": {
+      "architecture": "amd64",
+      "asset_id": "711044676",
+      "asset_name": "libonig-dev_6.9.8-1+core2.1.20261104214218_amd64.deb",
+      "depends": "libonig5 (= 6.9.8-1+core2.1~20261104214218)",
+      "package": "libonig-dev",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-11-04T21:43:21Z",
+      "release_tag": "core2-libonig-6.9.8-1-core2.1-20261104214218",
+      "source": "libonig",
+      "version": "6.9.8-1+core2.1~20261104214218"
+    },
+    "711044677": {
+      "architecture": "amd64",
+      "asset_id": "711044677",
+      "asset_name": "libonig5_6.9.8-1+core2.1.20261104214218_amd64.deb",
+      "depends": "libc6 (>= 2.14)",
+      "package": "libonig5",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-11-04T21:43:21Z",
+      "release_tag": "core2-libonig-6.9.8-1-core2.1-20261104214218",
+      "source": "libonig",
+      "version": "6.9.8-1+core2.1~20261104214218"
+    },
+    "711052959": {
+      "architecture": "amd64",
+      "asset_id": "711052959",
+      "asset_name": "libjq-dev_1.6-2.1+deb12u3+core2.1.20261104214225_amd64.deb",
+      "depends": "libjq1 (= 1.6-2.1+deb12u3+core2.1~20261104214225)",
+      "package": "libjq-dev",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-11-04T21:46:24Z",
+      "release_tag": "core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225",
+      "source": "jq",
+      "version": "1.6-2.1+deb12u3+core2.1~20261104214225"
+    },
+    "711052965": {
+      "architecture": "amd64",
+      "asset_id": "711052965",
+      "asset_name": "jq_1.6-2.1+deb12u3+core2.1.20261104214225_amd64.deb",
+      "depends": "libjq1 (= 1.6-2.1+deb12u3+core2.1~20261104214225), libc6 (>= 2.34)",
+      "package": "jq",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-11-04T21:46:24Z",
+      "release_tag": "core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225",
+      "source": "jq",
+      "version": "1.6-2.1+deb12u3+core2.1~20261104214225"
+    },
+    "711052966": {
+      "architecture": "amd64",
+      "asset_id": "711052966",
+      "asset_name": "libjq1_1.6-2.1+deb12u3+core2.1.20261104214225_amd64.deb",
+      "depends": "libc6 (>= 2.36), libonig5 (>= 6.8.1)",
+      "package": "libjq1",
+      "pre_depends": "",
+      "provides": "",
+      "published_at": "2026-11-04T21:46:24Z",
+      "release_tag": "core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225",
+      "source": "jq",
+      "version": "1.6-2.1+deb12u3+core2.1~20261104214225"
     }
   },
   "schema": 1

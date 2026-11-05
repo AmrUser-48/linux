@@ -2204,7 +2204,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary>Applications &amp; utilities (496 packages)</summary>
+<summary>Applications &amp; utilities (499 packages)</summary>
 
 <details>
 <summary id="core2-package-7zip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2safe1-20261027175340">7zip 22.01+really26.02+dfsg-0+deb12u1+core2safe1~20261027175340 — 7-Zip file archiver with a high compression ratio</a></code></summary>
@@ -3123,6 +3123,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-jq"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225">jq 1.6-2.1+deb12u3 — lightweight and flexible command-line JSON processor</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libjq1"><code>libjq1 (= 1.6-2.1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-krb5-admin-server"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614">krb5-admin-server 1.20.1-2+deb12u5</a></code></summary>
 
 - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
@@ -4001,6 +4008,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libjq1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225">libjq1 1.6-2.1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <a href="#core2-package-libonig5"><code>libonig5 (&gt;= 6.8.1)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libjson-c5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-json-c-0.16-2-core2.1-20261020160448">libjson-c5 0.16-2 — JSON manipulation library - shared library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>
@@ -4275,6 +4289,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libonig5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libonig-6.9.8-1-core2.1-20261104214218">libonig5 6.9.8-1 — regular expressions library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libopenjp2-7"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openjpeg2-2.5.0-2-deb12u3-core2.1-20261016135019">libopenjp2-7 2.5.0-2+deb12u3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -4529,7 +4550,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libslang2-modules"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155">libslang2-modules 2.3.3-3 — Shared modules for S-Lang language</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libonig5 (&gt;= 6.8.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libonig5"><code>libonig5 (&gt;= 6.8.1)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -5697,7 +5718,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 
 </details>
 
-**Runtime binary packages in tree:** 800. Development, documentation, and debug packages remain in the download index.
+**Runtime binary packages in tree:** 803. Development, documentation, and debug packages remain in the download index.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 ## Latest package releases
@@ -5705,6 +5726,22 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### jq (optimized)
+Version: `1.6-2.1+deb12u3+core2.1~20261104214225` · Published: 2026-11-04 21:46:24 UTC
+**Description:** lightweight and flexible command-line JSON processor
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - jq`
+**Main .deb:** [jq_1.6-2.1+deb12u3+core2.1.20261104214225_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225/jq_1.6-2.1%2Bdeb12u3%2Bcore2.1.20261104214225_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225)
+
+### libonig (optimized)
+Version: `6.9.8-1+core2.1~20261104214218` · Published: 2026-11-04 21:43:21 UTC
+**Description:** regular expressions library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libonig`
+**Main .deb:** [libonig5_6.9.8-1+core2.1.20261104214218_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libonig-6.9.8-1-core2.1-20261104214218/libonig5_6.9.8-1%2Bcore2.1.20261104214218_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libonig-6.9.8-1-core2.1-20261104214218)
+
 ### Mesa (optimized)
 Version: `22.3.6-1+deb12u2+core2.1~20261101003416` · Published: 2026-11-01 00:44:33 UTC
 **Description:** free implementation of the OpenGL API -- DRI modules
