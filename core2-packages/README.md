@@ -39,7 +39,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 **Verified SoX NG dependency path:** <code>sox-ng</code> → <code>libsox-ng5</code> → <code>libebur128-1</code>
 
 <details>
-<summary>Graphics (81 packages)</summary>
+<summary>Graphics (82 packages)</summary>
 
 <details>
 <summary id="core2-package-cairo-perf-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244">cairo-perf-utils 1.16.0-7</a></code></summary>
@@ -66,6 +66,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libcairo2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cairo-1.16.0-7-core2.1-20261016135244">libcairo2 1.16.0-7</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.9.1)</code></a>; <a href="#core2-package-libpixman-1-0"><code>libpixman-1-0 (&gt;= 0.30.0)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxcb-render0"><code>libxcb-render0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1 (&gt;= 1.6)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxrender1"><code>libxrender1</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libdecor-0-plugin-1-cairo"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdecor-0-0.1.1-2-core2.1-20261109022826">libdecor-0-plugin-1-cairo 0.1.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.14.0)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libdecor-0-0"><code>libdecor-0-0 (= 0.1.1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.14.0)</code></a>; <a href="#core2-package-libpangocairo-1.0-0"><code>libpangocairo-1.0-0 (&gt;= 1.14.0)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.18)</code></a>
 
 </details>
 
@@ -597,7 +604,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-xserver-xorg-video-intel"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xserver-xorg-video-intel-2-2.99.917-git20210115-1-core2.1-20261016113213">xserver-xorg-video-intel 2:2.99.917+git20210115-1 — X.Org X server -- Intel i8xx, i9xx display driver</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm-intel1"><code>libdrm-intel1 (&gt;= 2.4.38)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.62)</code></a>; <a href="#core2-package-libpciaccess0"><code>libpciaccess0 (&gt;= 0.8.0+git20071002)</code></a>; <a href="#core2-package-libpixman-1-0"><code>libpixman-1-0 (&gt;= 0.30.0)</code></a>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb-dri2-0"><code>libxcb-dri2-0</code></a>; <code>libxcb-util1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxcursor1"><code>libxcursor1 (&gt;&gt; 1.1.2)</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.2.99.2)</code></a>; <a href="#core2-package-libxrender1"><code>libxrender1</code></a>; <code>libxss1</code> <em>(Debian Bookworm)</em>; <code>libxtst6</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxvmc1"><code>libxvmc1 (&gt;= 2:1.0.12)</code></a>; <code>xorg-video-abi-25</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-xserver-xorg-core"><code>xserver-xorg-core (&gt;= 2:21.1.1)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm-intel1"><code>libdrm-intel1 (&gt;= 2.4.38)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.62)</code></a>; <a href="#core2-package-libpciaccess0"><code>libpciaccess0 (&gt;= 0.8.0+git20071002)</code></a>; <a href="#core2-package-libpixman-1-0"><code>libpixman-1-0 (&gt;= 0.30.0)</code></a>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb-dri2-0"><code>libxcb-dri2-0</code></a>; <code>libxcb-util1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxcursor1"><code>libxcursor1 (&gt;&gt; 1.1.2)</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.2.99.2)</code></a>; <a href="#core2-package-libxrender1"><code>libxrender1</code></a>; <a href="#core2-package-libxss1"><code>libxss1</code></a>; <code>libxtst6</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxvmc1"><code>libxvmc1 (&gt;= 2:1.0.12)</code></a>; <code>xorg-video-abi-25</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-xserver-xorg-core"><code>xserver-xorg-core (&gt;= 2:21.1.1)</code></a>
 
 </details>
 
@@ -611,7 +618,21 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary>Audio &amp; video (66 packages)</summary>
+<summary>Audio &amp; video (115 packages)</summary>
+
+<details>
+<summary id="core2-package-codec2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-codec2-1.0.5-1-core2.1-20261109022127">codec2 1.0.5-1 — command line tools for handling Codec2 data</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcodec2-1.0"><code>libcodec2-1.0 (&gt;= 1.0.5)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-codec2-examples"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-codec2-1.0.5-1-core2.1-20261109022127">codec2-examples 1.0.5-1</a></code></summary>
+
+- **Depends:** <code>python3</code> <em>(Debian Bookworm)</em>
+
+</details>
 
 <details>
 <summary id="core2-package-ffmpeg"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">ffmpeg 7:5.1.9-0+deb12u1 — Tools for transcoding, streaming and playing of multimedia files</a></code></summary>
@@ -651,7 +672,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-gstreamer1.0-alsa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019">gstreamer1.0-alsa 1.22.0-3+deb12u7</a></code></summary>
 
-- **Depends:** <code>libasound2 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.27)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>
 
 </details>
 
@@ -684,9 +705,16 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-gstreamer1.0-pipewire"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">gstreamer1.0-pipewire 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.28)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.39.4)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.6.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.6.0)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-gstreamer1.0-plugins-bad"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-bad1.0-1.22.0-4-deb12u8-core2.1-20261016163835">gstreamer1.0-plugins-bad 1.22.0-4+deb12u8</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.6.0)</code></a>; <code>libchromaprint1 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.55.0)</code></a>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <code>libdca0 (&gt;= 0.0.5)</code> <em>(Debian Bookworm)</em>; <code>libde265-0 (&gt;= 0.9)</code> <em>(Debian Bookworm)</em>; <code>libdirectfb-1.7-7 (&gt;= 1.7.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.62)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libdvdread8 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libfaad2 (&gt;= 2.7)</code> <em>(Debian Bookworm)</em>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <code>libfluidsynth3 (&gt;= 2.2.0)</code> <em>(Debian Bookworm)</em>; <code>libfreeaptx0 (&gt;= 0.1.1)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.68)</code></a>; <code>libgme0 (&gt;= 0.6.0)</code> <em>(Debian Bookworm)</em>; <code>libgsm1 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgstreamer-gl1.0-0"><code>libgstreamer-gl1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer-plugins-bad1.0-0"><code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgtk-3-0"><code>libgtk-3-0 (&gt;= 3.15.0)</code></a>; <code>libgudev-1.0-0 (&gt;= 165)</code> <em>(Debian Bookworm)</em>; <code>libimath-3-1-29 (&gt;= 3.1.6)</code> <em>(Debian Bookworm)</em>; <code>libjson-glib-1.0-0 (&gt;= 1.5.2)</code> <em>(Debian Bookworm)</em>; <code>libkate1 (&gt;= 0.4.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.7)</code></a>; <code>libldacbt-enc2 (&gt;= 2.0.2)</code> <em>(Debian Bookworm)</em>; <code>liblilv-0-0 (&gt;= 0.22)</code> <em>(Debian Bookworm)</em>; <code>liblrdf0 (&gt;= 0.4.0-1.2)</code> <em>(Debian Bookworm)</em>; <code>libltc11 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <code>libmjpegutils-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <code>libmodplug1 (&gt;= 1:0.8.8.5)</code> <em>(Debian Bookworm)</em>; <code>libmpcdec6 (&gt;= 1:0.1~r435)</code> <em>(Debian Bookworm)</em>; <code>libmpeg2encpp-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <code>libmplex2-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <code>libneon27</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libnettle8"><code>libnettle8 (&gt;= 3)</code></a>; <code>libopenal1 (&gt;= 1.14)</code> <em>(Debian Bookworm)</em>; <code>libopenexr-3-1-30 (&gt;= 3.1.5)</code> <em>(Debian Bookworm)</em>; <code>libopenh264-7 (&gt;= 2.3.1+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <code>libopenni2-0 (&gt;= 2.2.0.33+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libpangocairo-1.0-0"><code>libpangocairo-1.0-0 (&gt;= 1.22)</code></a>; <code>libqrencode4 (&gt;= 3.2.0)</code> <em>(Debian Bookworm)</em>; <code>librsvg2-2 (&gt;= 2.36.2)</code> <em>(Debian Bookworm)</em>; <code>librtmp1 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <code>libsbc1 (&gt;= 2.0)</code> <em>(Debian Bookworm)</em>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <code>libsoundtouch1 (&gt;= 2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libspandsp2 (&gt;= 0.0.6~pre18)</code> <em>(Debian Bookworm)</em>; <code>libsrt1.5-gnutls (&gt;= 1.5.1)</code> <em>(Debian Bookworm)</em>; <code>libsrtp2-1 (&gt;= 2.0.0+20170516)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <code>libusb-1.0-0 (&gt;= 2:1.0.8)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <code>libvo-aacenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <code>libvo-amrwbenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <code>libwebrtc-audio-processing1</code> <em>(Debian Bookworm)</em>; <code>libwildmidi2 (&gt;= 0.2.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>; <code>libzbar0 (&gt;= 0.10)</code> <em>(Debian Bookworm)</em>; <code>libzvbi0 (&gt;= 0.2.35)</code> <em>(Debian Bookworm)</em>; <code>libzxing2 (&gt;= 1.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-gstreamer1.0-plugins-base"><code>gstreamer1.0-plugins-base (&gt;= 1.22.0)</code></a>; <a href="#core2-package-gstreamer1.0-plugins-good"><code>gstreamer1.0-plugins-good (&gt;= 1.22.0)</code></a>
+- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.6.0)</code></a>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.3.2)</code></a>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.55.0)</code></a>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <code>libdca0 (&gt;= 0.0.5)</code> <em>(Debian Bookworm)</em>; <code>libde265-0 (&gt;= 0.9)</code> <em>(Debian Bookworm)</em>; <code>libdirectfb-1.7-7 (&gt;= 1.7.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.62)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libdvdread8 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfaad2"><code>libfaad2 (&gt;= 2.7)</code></a>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfluidsynth3"><code>libfluidsynth3 (&gt;= 2.2.0)</code></a>; <code>libfreeaptx0 (&gt;= 0.1.1)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.68)</code></a>; <a href="#core2-package-libgme0"><code>libgme0 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libgstreamer-gl1.0-0"><code>libgstreamer-gl1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer-plugins-bad1.0-0"><code>libgstreamer-plugins-bad1.0-0 (= 1.22.0-4+deb12u8+core2.1~BUILD)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgtk-3-0"><code>libgtk-3-0 (&gt;= 3.15.0)</code></a>; <code>libgudev-1.0-0 (&gt;= 165)</code> <em>(Debian Bookworm)</em>; <code>libimath-3-1-29 (&gt;= 3.1.6)</code> <em>(Debian Bookworm)</em>; <code>libjson-glib-1.0-0 (&gt;= 1.5.2)</code> <em>(Debian Bookworm)</em>; <code>libkate1 (&gt;= 0.4.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.7)</code></a>; <code>libldacbt-enc2 (&gt;= 2.0.2)</code> <em>(Debian Bookworm)</em>; <code>liblilv-0-0 (&gt;= 0.22)</code> <em>(Debian Bookworm)</em>; <code>liblrdf0 (&gt;= 0.4.0-1.2)</code> <em>(Debian Bookworm)</em>; <code>libltc11 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <code>libmjpegutils-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmodplug1"><code>libmodplug1 (&gt;= 1:0.8.8.5)</code></a>; <a href="#core2-package-libmpcdec6"><code>libmpcdec6 (&gt;= 1:0.1~r435)</code></a>; <code>libmpeg2encpp-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <code>libmplex2-2.1-0 (&gt;= 1:2.1.0+debian)</code> <em>(Debian Bookworm)</em>; <code>libneon27</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libnettle8"><code>libnettle8 (&gt;= 3)</code></a>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <code>libopenexr-3-1-30 (&gt;= 3.1.5)</code> <em>(Debian Bookworm)</em>; <code>libopenh264-7 (&gt;= 2.3.1+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <code>libopenni2-0 (&gt;= 2.2.0.33+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libpangocairo-1.0-0"><code>libpangocairo-1.0-0 (&gt;= 1.22)</code></a>; <code>libqrencode4 (&gt;= 3.2.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.36.2)</code></a>; <a href="#core2-package-librtmp1"><code>librtmp1 (&gt;= 2.3)</code></a>; <code>libsbc1 (&gt;= 2.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <code>libsoundtouch1 (&gt;= 2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libspandsp2 (&gt;= 0.0.6~pre18)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsrt1.5-gnutls"><code>libsrt1.5-gnutls (&gt;= 1.5.1)</code></a>; <code>libsrtp2-1 (&gt;= 2.0.0+20170516)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <code>libusb-1.0-0 (&gt;= 2:1.0.8)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <code>libvo-aacenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <code>libvo-amrwbenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libwebrtc-audio-processing1"><code>libwebrtc-audio-processing1</code></a>; <a href="#core2-package-libwildmidi2"><code>libwildmidi2 (&gt;= 0.2.3)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>; <code>libzbar0 (&gt;= 0.10)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzvbi0"><code>libzvbi0 (&gt;= 0.2.35)</code></a>; <code>libzxing2 (&gt;= 1.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-gstreamer1.0-plugins-base"><code>gstreamer1.0-plugins-base (&gt;= 1.22.0)</code></a>; <a href="#core2-package-gstreamer1.0-plugins-good"><code>gstreamer1.0-plugins-good (&gt;= 1.22.0)</code></a>
 
 </details>
 
@@ -700,7 +728,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-gstreamer1.0-plugins-base"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-base1.0-1.22.0-3-deb12u7-core2.1-20261016120019">gstreamer1.0-plugins-base 1.22.0-3+deb12u7</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <code>libcdparanoia0 (&gt;= 3.10.2+debian)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.1)</code></a>; <code>libvisual-0.4-0 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.3.1)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.3.1)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <code>libcdparanoia0 (&gt;= 3.10.2+debian)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.1)</code></a>; <code>libvisual-0.4-0 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.3.1)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.3.1)</code></a>
 
 </details>
 
@@ -714,7 +742,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-gstreamer1.0-plugins-good"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-gst-plugins-good1.0-1.22.0-5-deb12u4-core2.1-20261016120601">gstreamer1.0-plugins-good 1.22.0-5+deb12u4</a></code></summary>
 
-- **Depends:** <code>libaa1 (&gt;= 1.4p5)</code> <em>(Debian Bookworm)</em>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcairo-gobject2"><code>libcairo-gobject2 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.10.0)</code></a>; <code>libdv4 (&gt;= 1.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <code>libgudev-1.0-0 (&gt;= 147)</code> <em>(Debian Bookworm)</em>; <code>libiec61883-0 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <code>libmpg123-0 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libpulse0 (&gt;= 2.0)</code> <em>(Debian Bookworm)</em>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <code>libshout3 (&gt;= 2.4.6)</code> <em>(Debian Bookworm)</em>; <code>libspeex1 (&gt;= 1.2~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <code>libtag1v5 (&gt;= 1.9.1-2.2~)</code> <em>(Debian Bookworm)</em>; <code>libtwolame0 (&gt;= 0.3.10)</code> <em>(Debian Bookworm)</em>; <code>libv4l-0 (&gt;= 0.5.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <code>libwavpack1 (&gt;= 4.60)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <a href="#core2-package-gstreamer1.0-plugins-base"><code>gstreamer1.0-plugins-base (&gt;= 1.22.0)</code></a>; one of: <code>libsoup2.4-1 (&gt;= 2.48)</code> <em>(Debian Bookworm)</em> | <code>libsoup-3.0-0</code> <em>(Debian Bookworm)</em>
+- **Depends:** <code>libaa1 (&gt;= 1.4p5)</code> <em>(Debian Bookworm)</em>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcairo-gobject2"><code>libcairo-gobject2 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.10.0)</code></a>; <code>libdv4 (&gt;= 1.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.3)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.22.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.22.0)</code></a>; <code>libgudev-1.0-0 (&gt;= 147)</code> <em>(Debian Bookworm)</em>; <code>libiec61883-0 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.28.0)</code></a>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 2.0)</code></a>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libshout3"><code>libshout3 (&gt;= 2.4.6)</code></a>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <code>libtag1v5 (&gt;= 1.9.1-2.2~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.10)</code></a>; <code>libv4l-0 (&gt;= 0.5.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 4.60)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <a href="#core2-package-gstreamer1.0-plugins-base"><code>gstreamer1.0-plugins-base (&gt;= 1.22.0)</code></a>; one of: <code>libsoup2.4-1 (&gt;= 2.48)</code> <em>(Debian Bookworm)</em> | <code>libsoup-3.0-0</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -770,7 +798,35 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-lame"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libmp3lame0-3.100-6-core2.1-20261025150924">lame 3.100-6</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libasound2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-alsa-lib-1.2.8-1-core2.1-20261109022127">libasound2 1.2.8-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2-data"><code>libasound2-data (&gt;= 1.2.8-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libasound2-data"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-alsa-lib-1.2.8-1-core2.1-20261109022127">libasound2-data 1.2.8-1 — Configuration files and profiles for ALSA drivers</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libasound2-plugin-smixer"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-alsa-lib-1.2.8-1-core2.1-20261109022127">libasound2-plugin-smixer 1.2.8-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (= 1.2.8-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libpython3.11"><code>libpython3.11 (&gt;= 3.11.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libatopology2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-alsa-lib-1.2.8-1-core2.1-20261109022127">libatopology2 1.2.8-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.2.7.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
 </details>
 
@@ -840,21 +896,21 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libavcodec-extra59"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavcodec-extra59 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <code>libaribb24-0 (&gt;= 1.0.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <code>libcodec2-1.0 (&gt;= 1.0.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.9.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <code>libgsm1 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <code>libjxl0.7 (&gt;= 0.7.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <code>librav1e0 (&gt;= 0.5.1)</code> <em>(Debian Bookworm)</em>; <code>librsvg2-2 (&gt;= 2.14.4)</code> <em>(Debian Bookworm)</em>; <code>libshine3 (&gt;= 3.1.0)</code> <em>(Debian Bookworm)</em>; <code>libsnappy1v5 (&gt;= 1.1.9)</code> <em>(Debian Bookworm)</em>; <code>libspeex1 (&gt;= 1.2~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsvtav1enc1"><code>libsvtav1enc1 (&gt;= 1.4.1+dfsg)</code></a>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <code>libtwolame0 (&gt;= 0.3.10)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.9.0)</code></a>; <code>libvo-amrwbenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libwebpmux3"><code>libwebpmux3 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxvidcore4"><code>libxvidcore4 (&gt;= 1.2.2)</code></a>; <code>libzvbi0 (&gt;= 0.2.35)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
+- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <code>libaribb24-0 (&gt;= 1.0.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libcodec2-1.0"><code>libcodec2-1.0 (&gt;= 1.0.5)</code></a>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.9.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libjxl0.7"><code>libjxl0.7 (&gt;= 0.7.0)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-librav1e0"><code>librav1e0 (&gt;= 0.5.1)</code></a>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.14.4)</code></a>; <a href="#core2-package-libshine3"><code>libshine3 (&gt;= 3.1.0)</code></a>; <a href="#core2-package-libsnappy1v5"><code>libsnappy1v5 (&gt;= 1.1.9)</code></a>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>; <a href="#core2-package-libsvtav1enc1"><code>libsvtav1enc1 (&gt;= 1.4.1+dfsg)</code></a>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.10)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.9.0)</code></a>; <code>libvo-amrwbenc0 (&gt;= 0.1.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libwebpmux3"><code>libwebpmux3 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxvidcore4"><code>libxvidcore4 (&gt;= 1.2.2)</code></a>; <a href="#core2-package-libzvbi0"><code>libzvbi0 (&gt;= 0.2.35)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libavcodec59"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavcodec59 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <code>libcodec2-1.0 (&gt;= 1.0.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.9.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <code>libgsm1 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <code>libjxl0.7 (&gt;= 0.7.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <code>librav1e0 (&gt;= 0.5.1)</code> <em>(Debian Bookworm)</em>; <code>librsvg2-2 (&gt;= 2.14.4)</code> <em>(Debian Bookworm)</em>; <code>libshine3 (&gt;= 3.1.0)</code> <em>(Debian Bookworm)</em>; <code>libsnappy1v5 (&gt;= 1.1.9)</code> <em>(Debian Bookworm)</em>; <code>libspeex1 (&gt;= 1.2~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsvtav1enc1"><code>libsvtav1enc1 (&gt;= 1.4.1+dfsg)</code></a>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <code>libtwolame0 (&gt;= 0.3.10)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.9.0)</code></a>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libwebpmux3"><code>libwebpmux3 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxvidcore4"><code>libxvidcore4 (&gt;= 1.2.2)</code></a>; <code>libzvbi0 (&gt;= 0.2.35)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
+- **Depends:** <a href="#core2-package-libaom3"><code>libaom3 (&gt;= 3.2.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libcodec2-1.0"><code>libcodec2-1.0 (&gt;= 1.0.5)</code></a>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.9.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libjxl0.7"><code>libjxl0.7 (&gt;= 0.7.0)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-librav1e0"><code>librav1e0 (&gt;= 0.5.1)</code></a>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.14.4)</code></a>; <a href="#core2-package-libshine3"><code>libshine3 (&gt;= 3.1.0)</code></a>; <a href="#core2-package-libsnappy1v5"><code>libsnappy1v5 (&gt;= 1.1.9)</code></a>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>; <a href="#core2-package-libsvtav1enc1"><code>libsvtav1enc1 (&gt;= 1.4.1+dfsg)</code></a>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.10)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.9.0)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libwebpmux3"><code>libwebpmux3 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <a href="#core2-package-libxvidcore4"><code>libxvidcore4 (&gt;= 1.2.2)</code></a>; <a href="#core2-package-libzvbi0"><code>libzvbi0 (&gt;= 0.2.35)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libavdevice59"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavdevice59 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <code>libasound2 (&gt;= 1.0.16)</code> <em>(Debian Bookworm)</em>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.101)</code></a>; <code>libgl1</code> <em>(Debian Bookworm)</em>; <code>libiec61883-0 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <code>libopenal1 (&gt;= 1.14)</code> <em>(Debian Bookworm)</em>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxcb-shape0"><code>libxcb-shape0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb-xfixes0"><code>libxcb-xfixes0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxv1"><code>libxv1</code></a>
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio-paranoia2"><code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code></a>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.101)</code></a>; <code>libgl1</code> <em>(Debian Bookworm)</em>; <code>libiec61883-0 (&gt;= 1.2.0)</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxcb-shape0"><code>libxcb-shape0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb-xfixes0"><code>libxcb-xfixes0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxv1"><code>libxv1</code></a>
 
 </details>
 
@@ -868,14 +924,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libavfilter-extra8"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavfilter-extra8 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 0.19.2)</code></a>; <code>liblilv-0-0 (&gt;= 0.14.2~dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <code>libmysofa1 (&gt;= 0.7~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpocketsphinx3 (&gt;= 0.8+5prealpha+1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libsphinxbase3 (&gt;= 0.8+5prealpha)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libtesseract5 (&gt;= 5.3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 1.7.3)</code></a>; <code>libvidstab1.1</code> <em>(Debian Bookworm)</em>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <code>libzmq5 (&gt;= 3.2.3+dfsg)</code> <em>(Debian Bookworm)</em>; one of: <code>ocl-icd-libopencl1</code> <em>(Debian Bookworm)</em> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <code>ocl-icd-libopencl1 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 0.19.2)</code></a>; <code>liblilv-0-0 (&gt;= 0.14.2~dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <code>libmysofa1 (&gt;= 0.7~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpocketsphinx3 (&gt;= 0.8+5prealpha+1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libsphinxbase3 (&gt;= 0.8+5prealpha)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libtesseract5 (&gt;= 5.3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 1.7.3)</code></a>; <code>libvidstab1.1</code> <em>(Debian Bookworm)</em>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzmq5"><code>libzmq5 (&gt;= 3.2.3+dfsg)</code></a>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1</code></a> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1 (&gt;= 1.0)</code></a> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libavfilter8"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavfilter8 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 0.19.2)</code></a>; <code>liblilv-0-0 (&gt;= 0.14.2~dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <code>libmysofa1 (&gt;= 0.7~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpocketsphinx3 (&gt;= 0.8+5prealpha+1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libsphinxbase3 (&gt;= 0.8+5prealpha)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 1.7.3)</code></a>; <code>libvidstab1.1</code> <em>(Debian Bookworm)</em>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <code>libzmq5 (&gt;= 3.2.3+dfsg)</code> <em>(Debian Bookworm)</em>; one of: <code>ocl-icd-libopencl1</code> <em>(Debian Bookworm)</em> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <code>ocl-icd-libopencl1 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbs2b0 (&gt;= 3.1.0+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libflite1 (&gt;= 1.4-release-9~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 0.19.2)</code></a>; <code>liblilv-0-0 (&gt;= 0.14.2~dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <code>libmysofa1 (&gt;= 0.7~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpocketsphinx3 (&gt;= 0.8+5prealpha+1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <code>libsphinxbase3 (&gt;= 0.8+5prealpha)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 1.7.3)</code></a>; <code>libvidstab1.1</code> <em>(Debian Bookworm)</em>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzmq5"><code>libzmq5 (&gt;= 3.2.3+dfsg)</code></a>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1</code></a> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1 (&gt;= 1.0)</code></a> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -889,21 +945,28 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libavformat-extra59"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavformat-extra59 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbluray2 (&gt;= 1:0.2.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libchromaprint1 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <code>libgme0 (&gt;= 0.5.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.3.0)</code></a>; <code>librabbitmq4 (&gt;= 0.6.0)</code> <em>(Debian Bookworm)</em>; <code>librist4 (&gt;= 0.2.6+dfsg)</code> <em>(Debian Bookworm)</em>; <code>libsmbclient (&gt;= 2:4.0.3+dfsg1)</code> <em>(Debian Bookworm)</em>; <code>libsrt1.5-gnutls (&gt;= 1.5.1)</code> <em>(Debian Bookworm)</em>; <code>libssh-gcrypt-4 (&gt;= 0.8.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <code>libzmq5 (&gt;= 4.0.1+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0.2)</code></a>
+- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:0.2.2)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.3.2)</code></a>; <a href="#core2-package-libgme0"><code>libgme0 (&gt;= 0.5.5)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.3.0)</code></a>; <a href="#core2-package-librabbitmq4"><code>librabbitmq4 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-librist4"><code>librist4 (&gt;= 0.2.6+dfsg)</code></a>; <code>libsmbclient (&gt;= 2:4.0.3+dfsg1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsrt1.5-gnutls"><code>libsrt1.5-gnutls (&gt;= 1.5.1)</code></a>; <a href="#core2-package-libssh-gcrypt-4"><code>libssh-gcrypt-4 (&gt;= 0.8.0)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <a href="#core2-package-libzmq5"><code>libzmq5 (&gt;= 4.0.1+dfsg)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0.2)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libavformat59"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavformat59 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <code>libbluray2 (&gt;= 1:0.2.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libchromaprint1 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <code>libgme0 (&gt;= 0.5.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.3.0)</code></a>; <code>librabbitmq4 (&gt;= 0.6.0)</code> <em>(Debian Bookworm)</em>; <code>librist4 (&gt;= 0.2.6+dfsg)</code> <em>(Debian Bookworm)</em>; <code>libsrt1.5-gnutls (&gt;= 1.5.1)</code> <em>(Debian Bookworm)</em>; <code>libssh-gcrypt-4 (&gt;= 0.8.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <code>libzmq5 (&gt;= 4.0.1+dfsg)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0.2)</code></a>
+- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (= 7:5.1.9-0+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:0.2.2)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.3.2)</code></a>; <a href="#core2-package-libgme0"><code>libgme0 (&gt;= 0.5.5)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.3.0)</code></a>; <a href="#core2-package-librabbitmq4"><code>librabbitmq4 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-librist4"><code>librist4 (&gt;= 0.2.6+dfsg)</code></a>; <a href="#core2-package-libsrt1.5-gnutls"><code>libsrt1.5-gnutls (&gt;= 1.5.1)</code></a>; <a href="#core2-package-libssh-gcrypt-4"><code>libssh-gcrypt-4 (&gt;= 0.8.0)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <a href="#core2-package-libzmq5"><code>libzmq5 (&gt;= 4.0.1+dfsg)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0.2)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libavutil57"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libavutil57 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.66)</code></a>; <code>libmfx1 (&gt;= 18.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.3)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; one of: <code>ocl-icd-libopencl1</code> <em>(Debian Bookworm)</em> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <code>ocl-icd-libopencl1 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.66)</code></a>; <a href="#core2-package-libmfx1"><code>libmfx1 (&gt;= 18.4.0)</code></a>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.3)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1</code></a> | <code>libopencl1</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-ocl-icd-libopencl1"><code>ocl-icd-libopencl1 (&gt;= 1.0)</code></a> | <code>libopencl-1.2-1</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libcodec2-1.0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-codec2-1.0.5-1-core2.1-20261109022127">libcodec2-1.0 1.0.5-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.32)</code></a>
 
 </details>
 
@@ -964,9 +1027,16 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libmpdclient2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmpdclient-2.20-1-core2.1-20261109023208">libmpdclient2 2.20-1 — client library for the Music Player Daemon</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.28)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libmpv2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224">libmpv2 0.35.1-4</a></code></summary>
 
-- **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.15.0)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavdevice59"><code>libavdevice59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <code>libbluray2 (&gt;= 1:0.2.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio19 (&gt;= 2.1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.105)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libegl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 17.1.0~rc2)</code></a>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.6)</code></a>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <code>libpipewire-0.3-0 (&gt;= 0.3.50)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpulse0 (&gt;= 0.99.4)</code> <em>(Debian Bookworm)</em>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <code>libsixel1 (&gt;= 1.10.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libuchardet0 (&gt;= 0.0.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva-wayland2"><code>libva-wayland2 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.0.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <code>libxpresent1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.4.0)</code></a>; <code>libxss1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxv1"><code>libxv1</code></a>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.27)</code></a>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.15.0)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavdevice59"><code>libavdevice59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:0.2.2)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio-paranoia2"><code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.105)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libegl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 17.1.0~rc2)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.6)</code></a>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (&gt;= 0.3.50)</code></a>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.4)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <code>libsixel1 (&gt;= 1.10.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libuchardet0 (&gt;= 0.0.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva-wayland2"><code>libva-wayland2 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.0.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <code>libxpresent1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.4.0)</code></a>; <a href="#core2-package-libxss1"><code>libxss1</code></a>; <a href="#core2-package-libxv1"><code>libxv1</code></a>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -992,6 +1062,34 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libpipewire-0.3-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libpipewire-0.3-0 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libspa-0.2-modules"><code>libspa-0.2-modules (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libpipewire-0.3-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libpipewire-0.3-common 0.3.65-3+deb12u1</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libpipewire-0.3-modules"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libpipewire-0.3-modules 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.31.8)</code></a>; <code>liblilv-0-0 (&gt;= 0.14.2~dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libpipewire-0.3-modules-x11"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libpipewire-0.3-modules-x11 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <code>libcanberra0 (&gt;= 0.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.7.0)</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3 (&gt;= 1:6.0.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libpostproc56"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libpostproc56 7:5.1.9-0+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
@@ -999,16 +1097,79 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libpulse-mainloop-glib0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">libpulse-mainloop-glib0 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.28.0)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libpulse0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">libpulse0 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasyncns0"><code>libasyncns0 (&gt;= 0.3)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libpulsedsp"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">libpulsedsp 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librtmp1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rtmpdump-2.4-20151223.gitfa8646d.1-2-core2.1-20261109024310">librtmp1 2.4+20151223.gitfa8646d.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgmp10"><code>libgmp10 (&gt;= 2:6.2.1+dfsg1)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libhogweed6"><code>libhogweed6</code></a>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libsox-ng5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">libsox-ng5 14.8.1</a></code></summary>
 
-- **Depends:** <code>libao4 (&gt;= 1.1.0)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.16)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libebur128-1"><code>libebur128-1 (&gt;= 1.0.1)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <code>libgsm1 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <code>libid3tag0 (&gt;= 0.15.1b)</code> <em>(Debian Bookworm)</em>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <code>libmad0 (&gt;= 0.15.1b-3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmagic1"><code>libmagic1 (&gt;= 5.12)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopusenc0"><code>libopusenc0 (&gt;= 0.2.1)</code></a>; <a href="#core2-package-libopusfile0"><code>libopusfile0 (&gt;= 0.5)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <code>libsndio7.0 (&gt;= 1.8.1)</code> <em>(Debian Bookworm)</em>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <code>libtwolame0 (&gt;= 0.3.10)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisfile3 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libwavpack1 (&gt;= 4.40.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libao4"><code>libao4 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libebur128-1"><code>libebur128-1 (&gt;= 1.0.1)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libid3tag0"><code>libid3tag0 (&gt;= 0.15.1b)</code></a>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmad0"><code>libmad0 (&gt;= 0.15.1b-3)</code></a>; <a href="#core2-package-libmagic1"><code>libmagic1 (&gt;= 5.12)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopusenc0"><code>libopusenc0 (&gt;= 0.2.1)</code></a>; <a href="#core2-package-libopusfile0"><code>libopusfile0 (&gt;= 0.5)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.8.1)</code></a>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.10)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisfile3"><code>libvorbisfile3 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 4.40.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsoxr-lsr0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsoxr-0.1.3-4-core2.1-20261109023624">libsoxr-lsr0 0.1.3-4 — High quality 1D sample-rate conversion library (libsamplerate bindings)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libsoxr0"><code>libsoxr0 (&gt;= 0.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsoxr0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsoxr-0.1.3-4-core2.1-20261109023624">libsoxr0 0.1.3-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libspa-0.2-bluetooth"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libspa-0.2-bluetooth 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libspa-0.2-modules"><code>libspa-0.2-modules (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <code>libbluetooth3 (&gt;= 4.91)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <code>libfreeaptx0 (&gt;= 0.1.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.37.3)</code></a>; <code>liblc3-0 (&gt;= 1.0.1)</code> <em>(Debian Bookworm)</em>; <code>libldacbt-abr2 (&gt;= 2.0.2)</code> <em>(Debian Bookworm)</em>; <code>libldacbt-enc2 (&gt;= 2.0.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <code>libsbc1 (&gt;= 2.0)</code> <em>(Debian Bookworm)</em>; <code>libusb-1.0-0 (&gt;= 2:1.0.16)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libspa-0.2-jack"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libspa-0.2-jack 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libspa-0.2-modules"><code>libspa-0.2-modules (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libspa-0.2-modules"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">libspa-0.2-modules 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.2.1.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <a href="#core2-package-libwebrtc-audio-processing1"><code>libwebrtc-audio-processing1</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libswresample4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ffmpeg-7-5.1.9-0-deb12u1-core2.1-20261009183944">libswresample4 7:5.1.9-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libsoxr0 (&gt;= 0.1.0)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libsoxr0"><code>libsoxr0 (&gt;= 0.1.0)</code></a>
 
 </details>
 
@@ -1020,6 +1181,34 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libtwolame0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-twolame-0.4.0-2-core2.1-20261109025433">libtwolame0 0.4.0-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libvorbis0a"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvorbis-1.3.7-1-core2.1-20261109023723">libvorbis0a 1.3.7-1 — decoder library for Vorbis General Audio Compression Codec</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libvorbisenc2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvorbis-1.3.7-1-core2.1-20261109023723">libvorbisenc2 1.3.7-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (= 1.3.7-1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libvorbisfile3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvorbis-1.3.7-1-core2.1-20261109023723">libvorbisfile3 1.3.7-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (= 1.3.7-1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libvpx7"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550">libvpx7 1.12.0-1+deb12u5</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -1027,9 +1216,16 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libwavpack1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wavpack-5.6.0-1-core2.1-20261109025602">libwavpack1 5.6.0-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libx265-199"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-x265-3.5-2-core2.1-20261016145405">libx265-199 3.5-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libnuma1 (&gt;= 2.0.11)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 4.1.1)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libnuma1"><code>libnuma1 (&gt;= 2.0.11)</code></a>; <code>libstdc++6 (&gt;= 4.1.1)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -1037,14 +1233,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-mpd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpd-0.23.12-1-core2.1-20261009114100">mpd 0.23.12-1 — Music Player Daemon</a></code></summary>
 
 - **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
-- **Depends:** <code>adduser</code> <em>(Debian Bookworm)</em>; <code>libadplug-2.3.3-0 (&gt;= 2.3.3+dfsg)</code> <em>(Debian Bookworm)</em>; <code>libao4 (&gt;= 1.1.0)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.18)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio19 (&gt;= 2.1.0)</code> <em>(Debian Bookworm)</em>; <code>libchromaprint1 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.55)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <code>libfaad2 (&gt;= 2.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libfluidsynth3 (&gt;= 2.0.5)</code> <em>(Debian Bookworm)</em>; <code>libfmt9 (&gt;= 9.1.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libgme0 (&gt;= 0.6.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <code>libid3tag0 (&gt;= 0.15.1b)</code> <em>(Debian Bookworm)</em>; <code>libiso9660-11 (&gt;= 2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libixml10 (&gt;= 1:1.8.0)</code> <em>(Debian Bookworm)</em>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <code>libmad0 (&gt;= 0.15.1b-3)</code> <em>(Debian Bookworm)</em>; <code>libmikmod3 (&gt;= 3.3.3)</code> <em>(Debian Bookworm)</em>; <code>libmms0 (&gt;= 0.4)</code> <em>(Debian Bookworm)</em>; <code>libmodplug1 (&gt;= 1:0.8.8.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <code>libmpcdec6 (&gt;= 1:0.1~r435)</code> <em>(Debian Bookworm)</em>; <code>libmpdclient2 (&gt;= 2.16)</code> <em>(Debian Bookworm)</em>; <code>libmpg123-0 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <code>libnfs13 (&gt;= 1.9.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <code>libopenal1 (&gt;= 1.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-libpcre2-8-0"><code>libpcre2-8-0 (&gt;= 10.22)</code></a>; <code>libpipewire-0.3-0 (&gt;= 0.3.38)</code> <em>(Debian Bookworm)</em>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libsamplerate0 (&gt;= 0.1.7)</code> <em>(Debian Bookworm)</em>; <code>libshout3 (&gt;= 2.4.6)</code> <em>(Debian Bookworm)</em>; <code>libsidplayfp6 (&gt;= 2.4.2)</code> <em>(Debian Bookworm)</em>; <code>libsmbclient (&gt;= 2:4.0.3+dfsg1)</code> <em>(Debian Bookworm)</em>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <code>libsndio7.0 (&gt;= 1.8.1)</code> <em>(Debian Bookworm)</em>; <code>libsoxr0 (&gt;= 0.1.0)</code> <em>(Debian Bookworm)</em>; <code>libsqlite3-0 (&gt;= 3.5.9)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <code>libupnp13 (&gt;= 1:1.8.3)</code> <em>(Debian Bookworm)</em>; <code>liburing2 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.2.3)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libwavpack1 (&gt;= 5.0.0)</code> <em>(Debian Bookworm)</em>; <code>libwildmidi2 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <code>libyajl2 (&gt;= 2.0.4)</code> <em>(Debian Bookworm)</em>; <code>libzzip-0-13 (&gt;= 0.13.56)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <code>libjs-sphinxdoc (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <code>adduser</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libadplug-2.3.3-0"><code>libadplug-2.3.3-0 (&gt;= 2.3.3+dfsg)</code></a>; <a href="#core2-package-libao4"><code>libao4 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio-paranoia2"><code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.3.2)</code></a>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.55)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <a href="#core2-package-libfaad2"><code>libfaad2 (&gt;= 2.7)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libfluidsynth3"><code>libfluidsynth3 (&gt;= 2.0.5)</code></a>; <a href="#core2-package-libfmt9"><code>libfmt9 (&gt;= 9.1.0+ds1)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgme0"><code>libgme0 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <a href="#core2-package-libid3tag0"><code>libid3tag0 (&gt;= 0.15.1b)</code></a>; <a href="#core2-package-libiso9660-11"><code>libiso9660-11 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libixml10"><code>libixml10 (&gt;= 1:1.8.0)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmad0"><code>libmad0 (&gt;= 0.15.1b-3)</code></a>; <a href="#core2-package-libmikmod3"><code>libmikmod3 (&gt;= 3.3.3)</code></a>; <a href="#core2-package-libmms0"><code>libmms0 (&gt;= 0.4)</code></a>; <a href="#core2-package-libmodplug1"><code>libmodplug1 (&gt;= 1:0.8.8.5)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libmpcdec6"><code>libmpcdec6 (&gt;= 1:0.1~r435)</code></a>; <a href="#core2-package-libmpdclient2"><code>libmpdclient2 (&gt;= 2.16)</code></a>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.28.0)</code></a>; <a href="#core2-package-libnfs13"><code>libnfs13 (&gt;= 1.9.7)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-libpcre2-8-0"><code>libpcre2-8-0 (&gt;= 10.22)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (&gt;= 0.3.38)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsamplerate0"><code>libsamplerate0 (&gt;= 0.1.7)</code></a>; <a href="#core2-package-libshout3"><code>libshout3 (&gt;= 2.4.6)</code></a>; <a href="#core2-package-libsidplayfp6"><code>libsidplayfp6 (&gt;= 2.4.2)</code></a>; <code>libsmbclient (&gt;= 2:4.0.3+dfsg1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.8.1)</code></a>; <a href="#core2-package-libsoxr0"><code>libsoxr0 (&gt;= 0.1.0)</code></a>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (&gt;= 3.5.9)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <a href="#core2-package-libupnp13"><code>libupnp13 (&gt;= 1:1.8.3)</code></a>; <a href="#core2-package-liburing2"><code>liburing2 (&gt;= 2.3)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.2.3)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 5.0.0)</code></a>; <a href="#core2-package-libwildmidi2"><code>libwildmidi2 (&gt;= 0.4.0)</code></a>; <a href="#core2-package-libyajl2"><code>libyajl2 (&gt;= 2.0.4)</code></a>; <a href="#core2-package-libzzip-0-13"><code>libzzip-0-13 (&gt;= 0.13.56)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <a href="#core2-package-libjs-sphinxdoc"><code>libjs-sphinxdoc (&gt;= 5.2)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-mpv"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpv-0.35.1-4-core2.1-20261009190224">mpv 0.35.1-4 — video player based on MPlayer/mplayer2</a></code></summary>
 
-- **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.15.0)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavdevice59"><code>libavdevice59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <code>libbluray2 (&gt;= 1:0.2.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code> <em>(Debian Bookworm)</em>; <code>libcdio19 (&gt;= 2.1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.105)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libegl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 17.1.0~rc2)</code></a>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.6)</code></a>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <code>libpipewire-0.3-0 (&gt;= 0.3.50)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <code>libpulse0 (&gt;= 0.99.4)</code> <em>(Debian Bookworm)</em>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <code>libsixel1 (&gt;= 1.10.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libuchardet0 (&gt;= 0.0.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva-wayland2"><code>libva-wayland2 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.0.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <code>libxpresent1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.4.0)</code></a>; <code>libxss1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxv1"><code>libxv1</code></a>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <code>libarchive13 (&gt;= 3.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.27)</code></a>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.15.0)</code></a>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavdevice59"><code>libavdevice59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavfilter8"><code>libavfilter8 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:0.2.2)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcaca0 (&gt;= 0.99.beta20)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio-paranoia2"><code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.105)</code></a>; <code>libdvdnav4 (&gt;= 4.1.3)</code> <em>(Debian Bookworm)</em>; <code>libegl1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 17.1.0~rc2)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.6)</code></a>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (&gt;= 0.3.50)</code></a>; <a href="#core2-package-libplacebo208"><code>libplacebo208 (&gt;= 4.208.0)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.4)</code></a>; <code>librubberband2 (&gt;= 3.1.2+dfsg0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <code>libsixel1 (&gt;= 1.10.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <code>libuchardet0 (&gt;= 0.0.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva-wayland2"><code>libva-wayland2 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libva-x11-2"><code>libva-x11-2 (&gt;= 1.0.3)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvdpau1"><code>libvdpau1 (&gt;= 0.2)</code></a>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.15.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <code>libxpresent1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.4.0)</code></a>; <a href="#core2-package-libxss1"><code>libxss1</code></a>; <a href="#core2-package-libxv1"><code>libxv1</code></a>; <code>libzimg2 (&gt;= 0.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -1056,6 +1252,147 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-pipewire"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire 0.3.65-3+deb12u1 — audio and video processing engine multimedia server</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libpipewire-0.3-modules"><code>libpipewire-0.3-modules (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-pipewire-bin"><code>pipewire-bin (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <code>init-system-helpers (&gt;= 1.52)</code> <em>(Debian Bookworm)</em>; <code>adduser</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-alsa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-alsa 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.1.7)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.17)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-audio"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-audio 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libspa-0.2-bluetooth"><code>libspa-0.2-bluetooth</code></a>; <a href="#core2-package-pipewire-alsa"><code>pipewire-alsa</code></a>; <a href="#core2-package-pipewire-pulse"><code>pipewire-pulse</code></a>; <code>wireplumber</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-audio-client-libraries"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-audio-client-libraries 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire-alsa"><code>pipewire-alsa</code></a>; <a href="#core2-package-pipewire-jack"><code>pipewire-jack</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-bin 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libpipewire-0.3-modules"><code>libpipewire-0.3-modules (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.2.1.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-jack"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-jack 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-libcamera"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-libcamera 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.32)</code></a>; <code>libcamera0.0.3 (&gt;= 0.0.3)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-pulse"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-pulse 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <code>init-system-helpers (&gt;= 1.52)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-tests"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-tests 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pipewire-v4l2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247">pipewire-v4l2 0.3.65-3+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-pipewire"><code>pipewire (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpipewire-0.3-0"><code>libpipewire-0.3-0 (= 0.3.65-3+deb12u1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio 16.1+dfsg1-2 — PulseAudio sound server</a></code></summary>
+
+- **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.2.1.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcap2"><code>libcap2 (&gt;= 1:2.10)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libfftw3-single3"><code>libfftw3-single3 (&gt;= 3.3.10)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.31.18)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.14.0)</code></a>; <code>libice6 (&gt;= 1:1.0.0)</code> <em>(Debian Bookworm)</em>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liborc-0.4-0"><code>liborc-0.4-0 (&gt;= 1:0.4.25)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <code>libsm6</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libsoxr0"><code>libsoxr0 (&gt;= 0.1.1)</code></a>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <a href="#core2-package-libtdb1"><code>libtdb1 (&gt;= 1.2.7+git20101214)</code></a>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <a href="#core2-package-libwebrtc-audio-processing1"><code>libwebrtc-audio-processing1</code></a>; <code>libwrap0 (&gt;= 7.6-4~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.7.0)</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <code>libxtst6</code> <em>(Debian Bookworm)</em>; <code>adduser</code> <em>(Debian Bookworm)</em>; <code>lsb-base (&gt;= 3.2-13)</code> <em>(Debian Bookworm)</em>; <code>libasound2-plugins</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-pulseaudio-utils"><code>pulseaudio-utils</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-equalizer"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-equalizer 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libfftw3-single3"><code>libfftw3-single3 (&gt;= 3.3.10)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <code>python3</code> <em>(Debian Bookworm)</em>; <code>python3-pyqt5</code> <em>(Debian Bookworm)</em>; <code>python3-dbus.mainloop.pyqt5</code> <em>(Debian Bookworm)</em>; <code>python3-dbus</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-bluetooth"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-bluetooth 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <code>libbluetooth3 (&gt;= 4.91)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.14)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <code>libsbc1 (&gt;= 2.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <code>bluez (&gt;= 5.23)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-gsettings"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-gsettings 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.1)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; one of: <a href="#core2-package-dconf-gsettings-backend"><code>dconf-gsettings-backend</code></a> | <code>gsettings-backend</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-jack"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-jack 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-lirc"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-lirc 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>liblirc-client0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-raop"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-raop 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio-module-zeroconf"><code>pulseaudio-module-zeroconf</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-module-zeroconf"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-module-zeroconf 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-pulseaudio"><code>pulseaudio (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-avahi-daemon"><code>avahi-daemon</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-pulseaudio-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326">pulseaudio-utils 16.1+dfsg1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (= 16.1+dfsg1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libx11-xcb1"><code>libx11-xcb1 (&gt;= 2:1.8.4)</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libpulsedsp"><code>libpulsedsp</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-rtmpdump"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rtmpdump-2.4-20151223.gitfa8646d.1-2-core2.1-20261109024310">rtmpdump 2.4+20151223.gitfa8646d.1-2 — small dumper for media content streamed over the RTMP protocol</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-librtmp1"><code>librtmp1 (&gt;= 2.4+20131018.git79459a2)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-sox-ng"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libsox-ng5"><code>libsox-ng5 (= 14.8.1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -1063,9 +1400,23 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-twolame"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-twolame-0.4.0-2-core2.1-20261109025433">twolame 0.4.0-2 — MPEG Audio Layer 2 encoder (command line frontend)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.4.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-vpx-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libvpx-1.12.0-1-deb12u5-core2.1-20261016115550">vpx-tools 1.12.0-1+deb12u5 — VP8 and VP9 video codec encoding/decoding tools</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libvpx7"><code>libvpx7 (= 1.12.0-1+deb12u5+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-wavpack"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wavpack-5.6.0-1-core2.1-20261109025602">wavpack 5.6.0-1 — audio codec (lossy and lossless) - encoder and decoder</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 5.0.0)</code></a>
 
 </details>
 
@@ -1079,7 +1430,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary>Development (83 packages)</summary>
+<summary>Development (90 packages)</summary>
 
 <details>
 <summary id="core2-package-alacritty"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rust-alacritty-0.11.0-4-core2.1-20261016151054">alacritty 0.11.0-4 — Fast, cross-platform, OpenGL terminal emulator</a></code></summary>
@@ -1105,35 +1456,35 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-binutils-aarch64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-aarch64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-alpha-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-alpha-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-arc-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-arc-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-arm-linux-gnueabi"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-arm-linux-gnueabi 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-arm-linux-gnueabihf"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-arm-linux-gnueabihf 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -1161,49 +1512,49 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-binutils-hppa-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-hppa-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-hppa64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-hppa64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>; <a href="#core2-package-binutils"><code>binutils (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>
+- **Depends:** <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>; <a href="#core2-package-binutils"><code>binutils (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-i686-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-i686-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-i686-kfreebsd-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-i686-kfreebsd-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-i686-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-i686-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-ia64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-ia64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-m68k-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-m68k-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -1217,77 +1568,77 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-binutils-powerpc-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-powerpc-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-powerpc64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-powerpc64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-powerpc64le-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-powerpc64le-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-riscv64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-riscv64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-s390x-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-s390x-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-sh4-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-sh4-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-source"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-source 2.40-2</a></code></summary>
 
-- **Depends:** <code>texinfo</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858"><code>zlib1g-dev</code></a> <em>(non-runtime Core 2 package)</em>; <code>make</code> <em>(Debian Bookworm)</em>; <code>python3</code> <em>(Debian Bookworm)</em>; <code>libjansson-dev</code> <em>(Debian Bookworm)</em>; <code>pkg-config</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339"><code>libzstd-dev</code></a> <em>(non-runtime Core 2 package)</em>
+- **Depends:** <code>texinfo</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zlib-1-1.2.13.dfsg-1-core2safe1-20261027175858"><code>zlib1g-dev</code></a> <em>(non-runtime Core 2 package)</em>; <code>make</code> <em>(Debian Bookworm)</em>; <code>python3</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jansson-2.14-2-core2.1-20261109022448"><code>libjansson-dev</code></a> <em>(non-runtime Core 2 package)</em>; <code>pkg-config</code> <em>(Debian Bookworm)</em>; <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zstd-1.5.4-dfsg2-5-core2safe1-20261027175339"><code>libzstd-dev</code></a> <em>(non-runtime Core 2 package)</em>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-sparc64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-sparc64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-x86-64-kfreebsd-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-x86-64-kfreebsd-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-x86-64-linux-gnu"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-x86-64-linux-gnu 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <a href="#core2-package-libctf-nobfd0"><code>libctf-nobfd0 (&gt;= 2.36)</code></a>; <a href="#core2-package-libctf0"><code>libctf0 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgprofng0"><code>libgprofng0 (&gt;= 2.40-2+core2.1~BUILD)</code></a>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <a href="#core2-package-libctf-nobfd0"><code>libctf-nobfd0 (&gt;= 2.36)</code></a>; <a href="#core2-package-libctf0"><code>libctf0 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgprofng0"><code>libgprofng0 (&gt;= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-binutils-x86-64-linux-gnux32"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-binutils-2.40-2-core2.1-20261009173258">binutils-x86-64-linux-gnux32 2.40-2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <code>libjansson4 (&gt;= 2.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-binutils-common"><code>binutils-common (= 2.40-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libbinutils"><code>libbinutils (&gt;= 2.39.50)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -1451,7 +1802,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libpython3.11-stdlib"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python3.11-3.11.2-6-deb12u9-core2.1-20261009153835">libpython3.11-stdlib 3.11.2-6+deb12u9</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libpython3.11-minimal"><code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a>; one of: <code>media-types</code> <em>(Debian Bookworm)</em> | <code>mime-support</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcrypt1"><code>libcrypt1 (&gt;= 1:4.1.0)</code></a>; <a href="#core2-package-libdb5.3"><code>libdb5.3</code></a>; <a href="#core2-package-libffi8"><code>libffi8 (&gt;= 3.4)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6.1)</code></a>; <code>libnsl2 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 7.0~beta)</code></a>; <code>libsqlite3-0 (&gt;= 3.36.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>; <a href="#core2-package-libtirpc3"><code>libtirpc3 (&gt;= 1.0.2)</code></a>; <code>libuuid1 (&gt;= 2.20.1)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libpython3.11-minimal"><code>libpython3.11-minimal (= 3.11.2-6+deb12u9+core2.1~BUILD)</code></a>; one of: <code>media-types</code> <em>(Debian Bookworm)</em> | <code>mime-support</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcrypt1"><code>libcrypt1 (&gt;= 1:4.1.0)</code></a>; <a href="#core2-package-libdb5.3"><code>libdb5.3</code></a>; <a href="#core2-package-libffi8"><code>libffi8 (&gt;= 3.4)</code></a>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6.1)</code></a>; <code>libnsl2 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 7.0~beta)</code></a>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (&gt;= 3.36.0)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>; <a href="#core2-package-libtirpc3"><code>libtirpc3 (&gt;= 1.0.2)</code></a>; <code>libuuid1 (&gt;= 2.20.1)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -1463,9 +1814,23 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-librav1e0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rust-rav1e-0.5.1-6-core2.1-20261109024505">librav1e0 0.5.1-6 — Fastest and safest AV1 encoder - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libtext-glob-perl"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtext-glob-perl-0.11-3-core2.1-20261020161151">libtext-glob-perl 0.11-3 — Perl module for matching globbing patterns against text</a></code></summary>
 
 - No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-makehrtf"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128">makehrtf 1:1.19.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libopenal1"><code>libopenal1 (= 1:1.19.1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -1497,6 +1862,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 
 - **Pre-Depends:** <code>dpkg (&gt;= 1.15.7.2)</code> <em>(Debian Bookworm)</em>
 - **Depends:** <a href="#core2-package-imagemagick-6-common"><code>imagemagick-6-common (= 8:6.9.11.60+dfsg-1.6+deb12u13+core2.1~BUILD)</code></a>; <a href="#core2-package-libimage-magick-perl"><code>libimage-magick-perl</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-psl-make-dafsa"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpsl-0.21.2-1-core2.1-20261109023315">psl-make-dafsa 0.21.2-1</a></code></summary>
+
+- **Depends:** <code>python3:any</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -1592,6 +1964,27 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-python3-sphinx"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sphinx-5.3.0-4-core2.1-20261109024826">python3-sphinx 5.3.0-4</a></code></summary>
+
+- **Depends:** <code>python3-distutils</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-sphinx-common"><code>sphinx-common (= 5.3.0-4+core2.1~BUILD)</code></a>; <code>python3-alabaster (&gt;= 0.7)</code> <em>(Debian Bookworm)</em>; <code>python3-babel (&gt;= 1.3)</code> <em>(Debian Bookworm)</em>; <code>python3-docutils (&gt;= 0.14)</code> <em>(Debian Bookworm)</em>; <code>python3-imagesize</code> <em>(Debian Bookworm)</em>; one of: <code>python3-importlib-metadata</code> <em>(Debian Bookworm)</em> | <code>python3 (&gt;&gt; 3.10)</code> <em>(Debian Bookworm)</em>; <code>python3-jinja2 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <code>python3-packaging</code> <em>(Debian Bookworm)</em>; <code>python3-pygments (&gt;= 2.13)</code> <em>(Debian Bookworm)</em>; <code>python3-requests (&gt;= 2.5.0)</code> <em>(Debian Bookworm)</em>; <code>python3-snowballstemmer (&gt;= 1.1)</code> <em>(Debian Bookworm)</em>; <code>python3:any</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-python3-talloc"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-talloc-2.4.0-f2-core2.1-20261109025224">python3-talloc 2.4.0-f2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libtalloc2"><code>libtalloc2 (= 2.4.0-f2+core2.1~BUILD)</code></a>; <code>python3 (&lt;&lt; 3.12), python3 (&gt;= 3.11~), libc6 (&gt;= 2.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpython3.11"><code>libpython3.11 (&gt;= 3.11.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-python3-tdb"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tdb-1.4.8-2-core2.1-20261109025328">python3-tdb 1.4.8-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libtdb1"><code>libtdb1 (= 1.4.8-2+core2.1~BUILD)</code></a>; <code>python3 (&lt;&lt; 3.12), python3 (&gt;= 3.11~), python3:any, libc6 (&gt;= 2.4)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-python3-tz"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-python-tz-2022.7.1-4-core2.1-20261012055311">python3-tz 2022.7.1-4 — Python3 version of the Olson timezone database</a></code></summary>
 
 - **Depends:** <code>tzdata</code> <em>(Debian Bookworm)</em>; <code>python3:any</code> <em>(Debian Bookworm)</em>
@@ -1642,6 +2035,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-rav1e"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rust-rav1e-0.5.1-6-core2.1-20261109024505">rav1e 0.5.1-6</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-ripgrep"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-rust-ripgrep-13.0.0-4-core2.1-20261009115443">ripgrep 13.0.0-4 — Recursively searches directories for a regex pattern</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpcre2-8-0"><code>libpcre2-8-0 (&gt;= 10.22)</code></a>
@@ -1672,7 +2072,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary>System &amp; libraries (74 packages)</summary>
+<summary>System &amp; libraries (77 packages)</summary>
 
 <details>
 <summary id="core2-package-ash"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-dash-0.5.12-2-core2.1-20261009104558">ash 0.5.12-2</a></code></summary>
@@ -1862,6 +2262,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libmikmod-config"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmikmod-3.3.11.1-7-core2.1-20261109023020">libmikmod-config 3.3.11.1-7 — Portable sound library - transitional package</a></code></summary>
+
+- **Depends:** <a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmikmod-3.3.11.1-7-core2.1-20261109023020"><code>libmikmod-dev (&gt;= 3.3.11.1-7+core2.1~BUILD)</code></a> <em>(non-runtime Core 2 package)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libmikmod3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmikmod-3.3.11.1-7-core2.1-20261109023020">libmikmod3 3.3.11.1-7</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libnss-myhostname"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-systemd-252.39-1-deb12u2-core2.1-20261010025144">libnss-myhostname 252.39-1~deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -1935,6 +2349,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libpam0g"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-pam-1.5.2-6-deb12u2-core2.1-20261009193111">libpam0g 1.5.2-6+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libaudit1"><code>libaudit1 (&gt;= 1:2.2.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; one of: <code>debconf (&gt;= 0.5)</code> <em>(Debian Bookworm)</em> | <code>debconf-2.0</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libsrt1.5-openssl"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-srt-1.5.1-1-deb12u1-core2.1-20261109024856">libsrt1.5-openssl 1.5.1-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -2204,7 +2625,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary>Applications &amp; utilities (499 packages)</summary>
+<summary>Applications &amp; utilities (658 packages)</summary>
 
 <details>
 <summary id="core2-package-7zip"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-7zip-22.01-really26.02-dfsg-0-deb12u1-core2safe1-20261027175340">7zip 22.01+really26.02+dfsg-0+deb12u1+core2safe1~20261027175340 — 7-Zip file archiver with a high compression ratio</a></code></summary>
@@ -2221,9 +2642,23 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-adplug-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-adplug-2.3.3-dfsg-2-core2.1-20261109022112">adplug-utils 2.3.3+dfsg-2 — free AdLib sound library (utils)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libadplug-2.3.3-0"><code>libadplug-2.3.3-0 (&gt;= 2.3.3+dfsg)</code></a>; <a href="#core2-package-libbinio1v5"><code>libbinio1v5 (&gt;= 1.4+dfsg1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-adwaita-icon-theme"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-adwaita-icon-theme-43-1-core2.1-20261020155234">adwaita-icon-theme 43-1 — default icon theme of GNOME</a></code></summary>
 
 - **Depends:** <a href="#core2-package-hicolor-icon-theme"><code>hicolor-icon-theme</code></a>; <a href="#core2-package-gtk-update-icon-cache"><code>gtk-update-icon-cache</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-amqp-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librabbitmq-0.11.0-1-deb12u3-core2.1-20261109023321">amqp-tools 0.11.0-1+deb12u3 — Command-line utilities for interacting with AMQP servers</a></code></summary>
+
+- **Depends:** <a href="#core2-package-librabbitmq4"><code>librabbitmq4 (= 0.11.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpopt0"><code>libpopt0 (&gt;= 1.14)</code></a>
 
 </details>
 
@@ -2328,7 +2763,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-audispd-plugins"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-audit-1-3.0.9-1-core2.1-20261020155244">audispd-plugins 1:3.0.9-1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-auditd"><code>auditd (= 1:3.0.9-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libauparse0"><code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcap-ng0"><code>libcap-ng0 (&gt;= 0.7.9)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (&gt;= 1.6.dfsg.2)</code></a>; <code>libldap-2.5-0 (&gt;= 2.5.4)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-auditd"><code>auditd (= 1:3.0.9-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libauparse0"><code>libauparse0 (= 1:3.0.9-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcap-ng0"><code>libcap-ng0 (&gt;= 0.7.9)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (&gt;= 1.6.dfsg.2)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>
 
 </details>
 
@@ -2383,6 +2818,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-bootlogd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204">bootlogd 3.06-4 — daemon to log boot messages</a></code></summary>
+
+- **Depends:** <a href="#core2-package-sysvinit-utils"><code>sysvinit-utils (&gt;= 3.05-1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-brotli"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-brotli-1.0.9-2-core2.1-20261016150736">brotli 1.0.9-2 — lossless compression algorithm and format (command line utility)</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -2404,9 +2846,16 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-cd-paranoia"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-paranoia-10.2-2.0.1-1-core2.1-20261109022807">cd-paranoia 10.2+2.0.1-1 — audio CD reading utility which includes extra data verification features</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio-paranoia2"><code>libcdio-paranoia2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-colord"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-colord-1.4.6-2.2-core2.1-20261020155348">colord 1.4.6-2.2 — system service to manage device colour profiles -- system daemon</a></code></summary>
 
-- **Depends:** <a href="#core2-package-acl"><code>acl</code></a>; <code>adduser</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-colord-data"><code>colord-data</code></a>; one of: <code>polkitd</code> <em>(Debian Bookworm)</em> | <code>policykit-1 (&gt;= 0.103)</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-dconf-gsettings-backend"><code>dconf-gsettings-backend</code></a> | <code>gsettings-backend</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcolord2"><code>libcolord2 (&gt;= 1.4.3)</code></a>; <a href="#core2-package-libcolorhug2"><code>libcolorhug2 (&gt;= 0.1.30)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.58)</code></a>; <code>libgudev-1.0-0 (&gt;= 146)</code> <em>(Debian Bookworm)</em>; <code>libgusb2 (&gt;= 0.2.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.2+git20110628)</code></a>; <code>libpolkit-gobject-1-0 (&gt;= 0.103)</code> <em>(Debian Bookworm)</em>; <code>libsane1 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <code>libsqlite3-0 (&gt;= 3.5.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>
+- **Depends:** <a href="#core2-package-acl"><code>acl</code></a>; <code>adduser</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-colord-data"><code>colord-data</code></a>; one of: <code>polkitd</code> <em>(Debian Bookworm)</em> | <code>policykit-1 (&gt;= 0.103)</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-dconf-gsettings-backend"><code>dconf-gsettings-backend</code></a> | <code>gsettings-backend</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcolord2"><code>libcolord2 (&gt;= 1.4.3)</code></a>; <a href="#core2-package-libcolorhug2"><code>libcolorhug2 (&gt;= 0.1.30)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.58)</code></a>; <code>libgudev-1.0-0 (&gt;= 146)</code> <em>(Debian Bookworm)</em>; <code>libgusb2 (&gt;= 0.2.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.2+git20110628)</code></a>; <code>libpolkit-gobject-1-0 (&gt;= 0.103)</code> <em>(Debian Bookworm)</em>; <code>libsane1 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (&gt;= 3.5.9)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>
 
 </details>
 
@@ -2715,6 +3164,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-faad"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-faad2-2.10.1-1-core2.1-20261109022208">faad 2.10.1-1 — freeware Advanced Audio Decoder player</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libfaad2"><code>libfaad2 (&gt;= 2.8.2)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-feh"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-feh-3.9.1-2-core2.1-20261020171043">feh 3.9.1-2 — imlib2 based image viewer</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcurl4"><code>libcurl4 (&gt;= 7.16.2)</code></a>; <code>libexif12 (&gt;= 0.6.21-1~)</code> <em>(Debian Bookworm)</em>; <code>libimlib2 (&gt;= 1.4.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxinerama1"><code>libxinerama1 (&gt;= 2:1.1.4)</code></a>; <code>yudit-common</code> <em>(Debian Bookworm)</em>
@@ -2732,6 +3188,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-findutils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-findutils-4.9.0-4-core2.1-20261009164357">findutils 4.9.0-4 — utilities for finding files--find, xargs</a></code></summary>
 
 - **Pre-Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libselinux1"><code>libselinux1 (&gt;= 3.1~)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-fluidsynth"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fluidsynth-2.3.1-2-core2.1-20261109022245">fluidsynth 2.3.1-2 — Real-time MIDI software synthesizer</a></code></summary>
+
+- **Depends:** <code>init-system-helpers (&gt;= 1.52)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libfluidsynth3"><code>libfluidsynth3 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>
 
 </details>
 
@@ -2932,6 +3395,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-gir1.2-rsvg-2.0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403">gir1.2-rsvg-2.0 2.54.7+dfsg-1~deb12u1 — gir files for renderer library for SVG files</a></code></summary>
+
+- **Depends:** <code>gir1.2-freedesktop (&gt;= 0.10.8)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-gir1.2-gdkpixbuf-2.0"><code>gir1.2-gdkpixbuf-2.0 (&gt;= 2.23.5-2)</code></a>; <code>gir1.2-glib-2.0 (&gt;= 0.10.8)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.52.5)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-gir1.2-thunarx-3.0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-thunar-4.18.4-1-core2.1-20261010054751">gir1.2-thunarx-3.0 4.18.4-1</a></code></summary>
 
 - **Depends:** <code>gir1.2-glib-2.0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-gir1.2-gtk-3.0"><code>gir1.2-gtk-3.0</code></a>; <a href="#core2-package-libthunarx-3-0"><code>libthunarx-3-0 (&gt;= 4.17.6)</code></a>
@@ -3088,6 +3558,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-initscripts"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204">initscripts 3.06-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-sysvinit-utils"><code>sysvinit-utils (&gt;= 3.05-1)</code></a>; one of: <a href="#core2-package-sysv-rc"><code>sysv-rc</code></a> | <code>file-rc</code> <em>(Debian Bookworm)</em> | <code>openrc</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-intel-media-va-driver"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210">intel-media-va-driver 23.1.1+dfsg1-1</a></code></summary>
 
 - **Depends:** <code>libva-driver-abi-1.17</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libigdgmm12 (&gt;= 22.3.3+ds1)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
@@ -3105,6 +3582,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-iptables"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244">iptables 1.8.9-2 — administration tools for packet filtering and NAT</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libip4tc2"><code>libip4tc2 (= 1.8.9-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libip6tc2"><code>libip6tc2 (= 1.8.9-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libxtables12"><code>libxtables12 (= 1.8.9-2+core2.1~BUILD)</code></a>; <code>netbase (&gt;= 6.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libmnl0 (&gt;= 1.0.3-4~)</code> <em>(Debian Bookworm)</em>; <code>libnetfilter-conntrack3 (&gt;= 1.0.6)</code> <em>(Debian Bookworm)</em>; <code>libnfnetlink0 (&gt;= 1.0.2)</code> <em>(Debian Bookworm)</em>; <code>libnftnl11 (&gt;= 1.1.5)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-jackd2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jackd2-1.9.21-dfsg-3-core2.1-20261109022428">jackd2 1.9.21~dfsg-3 — JACK Audio Connection Kit (server and example clients)</a></code></summary>
+
+- **Depends:** one of: <code>debconf (&gt;= 0.5)</code> <em>(Debian Bookworm)</em> | <code>debconf-2.0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (= 1.9.21~dfsg-3+core2.1~BUILD)</code></a>; <code>python3-dbus</code> <em>(Debian Bookworm)</em>; <code>python3:any</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.29)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libexpat1"><code>libexpat1 (&gt;= 2.0.1)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.3.1-2~)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <a href="#core2-package-libsamplerate0"><code>libsamplerate0 (&gt;= 0.1.7)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <code>libzita-alsa-pcmi0 (&gt;= 0.2.0)</code> <em>(Debian Bookworm)</em>; <code>libzita-resampler1 (&gt;= 1.8.0)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-jackd2-firewire"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jackd2-1.9.21-dfsg-3-core2.1-20261109022428">jackd2-firewire 1.9.21~dfsg-3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-jackd2"><code>jackd2 (= 1.9.21~dfsg-3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <code>libffado2 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825git1ed50c92~dfsg-5)</code></a>; <code>libstdc++6 (&gt;= 4.6)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -3162,7 +3653,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-krb5-kdc-ldap"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614">krb5-kdc-ldap 1.20.1-2+deb12u5</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcom-err2"><code>libcom-err2 (&gt;= 1.43.9)</code></a>; <a href="#core2-package-libgssrpc4"><code>libgssrpc4 (&gt;= 1.6.dfsg.2)</code></a>; <a href="#core2-package-libk5crypto3"><code>libk5crypto3 (&gt;= 1.20)</code></a>; <a href="#core2-package-libkadm5srv-mit12"><code>libkadm5srv-mit12 (&gt;= 1.18.2)</code></a>; <a href="#core2-package-libkdb5-10"><code>libkdb5-10 (&gt;= 1.20.1)</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (&gt;= 1.14+dfsg)</code></a>; <a href="#core2-package-libkrb5support0"><code>libkrb5support0 (&gt;= 1.17)</code></a>; <code>libldap-2.5-0 (&gt;= 2.5.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-krb5-kdc"><code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcom-err2"><code>libcom-err2 (&gt;= 1.43.9)</code></a>; <a href="#core2-package-libgssrpc4"><code>libgssrpc4 (&gt;= 1.6.dfsg.2)</code></a>; <a href="#core2-package-libk5crypto3"><code>libk5crypto3 (&gt;= 1.20)</code></a>; <a href="#core2-package-libkadm5srv-mit12"><code>libkadm5srv-mit12 (&gt;= 1.18.2)</code></a>; <a href="#core2-package-libkdb5-10"><code>libkdb5-10 (&gt;= 1.20.1)</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (&gt;= 1.14+dfsg)</code></a>; <a href="#core2-package-libkrb5support0"><code>libkrb5support0 (&gt;= 1.17)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-krb5-kdc"><code>krb5-kdc (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a>
 
 </details>
 
@@ -3206,6 +3697,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-krb5-user"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-krb5-1.20.1-2-deb12u5-core2.1-20261020160614">krb5-user 1.20.1-2+deb12u5</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcom-err2"><code>libcom-err2 (&gt;= 1.43.9)</code></a>; <a href="#core2-package-libk5crypto3"><code>libk5crypto3 (&gt;= 1.20)</code></a>; <a href="#core2-package-libkadm5clnt-mit12"><code>libkadm5clnt-mit12 (&gt;= 1.18.2)</code></a>; <a href="#core2-package-libkadm5srv-mit12"><code>libkadm5srv-mit12 (&gt;= 1.18.2)</code></a>; <a href="#core2-package-libkdb5-10"><code>libkdb5-10 (&gt;= 1.20.1)</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (= 1.20.1-2+deb12u5+core2.1~BUILD)</code></a>; <a href="#core2-package-libkrb5support0"><code>libkrb5support0 (&gt;= 1.17)</code></a>; <a href="#core2-package-libss2"><code>libss2 (&gt;= 1.01)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-ldap-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">ldap-utils 2.5.13+dfsg-5 — OpenLDAP utilities</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (= 2.5.13+dfsg-5+core2.1~BUILD)</code></a>; <a href="#core2-package-libsasl2-2"><code>libsasl2-2 (&gt;= 2.1.28+dfsg)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-lemon"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834">lemon 3.40.1-2+deb12u2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -3259,6 +3764,27 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libadplug-2.3.3-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-adplug-2.3.3-dfsg-2-core2.1-20261109022112">libadplug-2.3.3-0 2.3.3+dfsg-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbinio1v5"><code>libbinio1v5 (&gt;= 1.4+dfsg1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libao-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libao-1.2.2-20180113-1.1-core2.1-20261109022624">libao-common 1.2.2+20180113-1.1 — Cross Platform Audio Output Library (Common files)</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libao4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libao-1.2.2-20180113-1.1-core2.1-20261109022624">libao4 1.2.2+20180113-1.1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libao-common"><code>libao-common</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libaom3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-aom-3.6.0-1-deb12u3-core2.1-20261016144330">libaom3 3.6.0-1+deb12u3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -3304,6 +3830,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libass9"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libass-1-0.17.1-1-deb12u1-core2.1-20261016142820">libass9 1:0.17.1-1+deb12u1 — library for SSA/ASS subtitles rendering</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.13.0)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.3.5)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 1.0.0)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 1.2.6)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libasyncns0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libasyncns-0.8-6-core2.1-20261109022627">libasyncns0 0.8-6 — Asynchronous name service query library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -3371,6 +3904,34 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libbinio1v5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libbinio-1.5-dfsg-0.1-core2.1-20261109022639">libbinio1v5 1.5+dfsg-0.1 — Binary I/O stream class library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libbluray-bdj"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libbluray-1-1.3.4-1-core2.1-20261109022715">libbluray-bdj 1:1.3.4-1 — Blu-ray Disc Java support library (BD-J library)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:1.3.4-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&lt;&lt; 1:1.3.4-1+core2.1~BUILD.1~), default-jre-headless | java2-runtime-headless</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libbluray-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libbluray-1-1.3.4-1-core2.1-20261109022715">libbluray-bin 1:1.3.4-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbluray2"><code>libbluray2 (= 1:1.3.4-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libbluray2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libbluray-1-1.3.4-1-core2.1-20261109022715">libbluray2 1:1.3.4-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libudfread0"><code>libudfread0 (&gt;= 1.1.1)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libbrotli1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-brotli-1.0.9-2-core2.1-20261016150736">libbrotli1 1.0.9-2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
@@ -3409,6 +3970,62 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libcap2-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libcap2-1-2.66-4-deb12u3-core2.1-20261009190327">libcap2-bin 1:2.66-4+deb12u3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcap2"><code>libcap2 (&gt;= 1:2.63)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libcdio++1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libcdio++1 2.1.0-4 — C++ library to read and control CD-ROM</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <code>libstdc++6 (&gt;= 4.1.1)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libcdio-cdda2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-paranoia-10.2-2.0.1-1-core2.1-20261109022807">libcdio-cdda2 10.2+2.0.1-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libcdio-paranoia2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-paranoia-10.2-2.0.1-1-core2.1-20261109022807">libcdio-paranoia2 10.2+2.0.1-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libcdio-cdda2"><code>libcdio-cdda2 (&gt;= 10.2+2.0.0)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libcdio-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libcdio-utils 2.1.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <a href="#core2-package-libiso9660-11"><code>libiso9660-11 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>; <a href="#core2-package-libudf0"><code>libudf0 (&gt;= 0.78.2+dfsg1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libcdio19"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libcdio19 2.1.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libchromaprint-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-chromaprint-1.5.1-2-core2.1-20261109022124">libchromaprint-tools 1.5.1-2 — audio fingerprinting library - tools</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.4.1)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libchromaprint1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-chromaprint-1.5.1-2-core2.1-20261109022124">libchromaprint1 1.5.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libcjson1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cjson-1.7.15-1-deb12u4-core2.1-20261109022109">libcjson1 1.7.15-1+deb12u4 — Ultralightweight JSON parser in ANSI C</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
 </details>
 
@@ -3471,21 +4088,21 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libcurl3-gnutls"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528">libcurl3-gnutls 7.88.1-10+deb12u15</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <code>libldap-2.5-0 (&gt;= 2.5.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>; <code>libnghttp2-14 (&gt;= 1.50.0)</code> <em>(Debian Bookworm)</em>; <code>libpsl5 (&gt;= 0.16.0)</code> <em>(Debian Bookworm)</em>; <code>librtmp1 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>; <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (&gt;= 1.50.0)</code></a>; <a href="#core2-package-libpsl5"><code>libpsl5 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-librtmp1"><code>librtmp1 (&gt;= 2.3)</code></a>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-libcurl3-nss"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528">libcurl3-nss 7.88.1-10+deb12u15</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <code>libldap-2.5-0 (&gt;= 2.5.4)</code> <em>(Debian Bookworm)</em>; <code>libnghttp2-14 (&gt;= 1.50.0)</code> <em>(Debian Bookworm)</em>; <code>libnspr4 (&gt;= 2:4.9-2~)</code> <em>(Debian Bookworm)</em>; <code>libnss3 (&gt;= 2:3.66)</code> <em>(Debian Bookworm)</em>; <code>libpsl5 (&gt;= 0.16.0)</code> <em>(Debian Bookworm)</em>; <code>librtmp1 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <code>nss-plugin-pem</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (&gt;= 1.50.0)</code></a>; <code>libnspr4 (&gt;= 2:4.9-2~)</code> <em>(Debian Bookworm)</em>; <code>libnss3 (&gt;= 2:3.66)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpsl5"><code>libpsl5 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-librtmp1"><code>librtmp1 (&gt;= 2.3)</code></a>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <code>nss-plugin-pem</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
 <summary id="core2-package-libcurl4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-curl-7.88.1-10-deb12u15-core2.1-20261009190528">libcurl4 7.88.1-10+deb12u15</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <code>libldap-2.5-0 (&gt;= 2.5.4)</code> <em>(Debian Bookworm)</em>; <code>libnghttp2-14 (&gt;= 1.50.0)</code> <em>(Debian Bookworm)</em>; <code>libpsl5 (&gt;= 0.16.0)</code> <em>(Debian Bookworm)</em>; <code>librtmp1 (&gt;= 2.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.6)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (&gt;= 1.50.0)</code></a>; <a href="#core2-package-libpsl5"><code>libpsl5 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-librtmp1"><code>librtmp1 (&gt;= 2.3)</code></a>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.7.0)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -3570,6 +4187,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libdconf1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-dconf-0.40.0-4-core2.1-20261020155533">libdconf1 0.40.0-4</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.55.2)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libdecor-0-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdecor-0-0.1.1-2-core2.1-20261109022826">libdecor-0-0 0.1.1-2 — client-side window decoration library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libdecor-tests"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libdecor-0-0.1.1-2-core2.1-20261109022826">libdecor-tests 0.1.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <a href="#core2-package-libdecor-0-0"><code>libdecor-0-0 (= 0.1.1-2+core2.1~BUILD)</code></a>; <code>libegl1</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libopengl0</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.18)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.18)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>
 
 </details>
 
@@ -3665,6 +4296,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libfaad2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-faad2-2.10.1-1-core2.1-20261109022208">libfaad2 2.10.1-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libffi8"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-libffi-3.4.4-1-core2.1-20261009194707">libffi8 3.4.4-1 — Foreign Function Interface library runtime</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -3710,6 +4348,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libfftw3-single3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fftw3-3.3.10-1-core2.1-20261009181939">libfftw3-single3 3.3.10-1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libfluidsynth3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fluidsynth-2.3.1-2-core2.1-20261109022245">libfluidsynth3 2.3.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.31.8)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libinstpatch-1.0-2"><code>libinstpatch-1.0-2 (&gt;= 1.1.2)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <a href="#core2-package-libsdl2-2.0-0"><code>libsdl2-2.0-0 (&gt;= 2.0.12)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; one of: <a href="#core2-package-timgm6mb-soundfont"><code>timgm6mb-soundfont (&gt;= 1.3-3~)</code></a> | <code>sf3-soundfont-gm</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libfmt9"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-fmtlib-9.1.0-ds1-2-core2.1-20261109022244">libfmt9 9.1.0+ds1-2 — fast type-safe C++ formatting library -- library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -3798,6 +4450,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libgme0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-game-music-emu-0.6.3-6-core2.1-20261109022311">libgme0 0.6.3-6 — Playback library for video game music files - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libgmp10"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-gmp-2-6.2.1-dfsg1-1.1-core2.1-20261009194412">libgmp10 2:6.2.1+dfsg1-1.1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
@@ -3864,6 +4523,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libgraphite2-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-graphite2-1.3.14-1-deb12u1-core2.1-20261020160000">libgraphite2-utils 1.3.14-1+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgraphite2-3"><code>libgraphite2-3 (&gt;= 1.2.2)</code></a>; <code>libstdc++6 (&gt;= 4.1.1)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libgsm-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libgsm-1.0.22-1-core2.1-20261109022912">libgsm-tools 1.0.22-1 — User binaries for a GSM speech compressor</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libgsm1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libgsm-1.0.22-1-core2.1-20261109022912">libgsm1 1.0.22-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
 </details>
 
@@ -3945,9 +4618,23 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libhwy1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-highway-1.0.3-3-deb12u1-core2.1-20261109022334">libhwy1 1.0.3-3+deb12u1 — Efficient and performance-portable SIMD wrapper (runtime files)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.25)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libicu72"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-icu-72.1-3-deb12u1-core2.1-20261020160050">libicu72 72.1-3+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libid3tag0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libid3tag-0.15.1b-14-core2.1-20261109023026">libid3tag0 0.15.1b-14 — ID3 tag reading library from the MAD project</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -3962,6 +4649,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libigfxcmrt7"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-media-driver-23.1.1-dfsg1-1-core2.1-20261016140210">libigfxcmrt7 23.1.1+dfsg1-1 — Intel C for Media Runtime -- shared library</a></code></summary>
 
 - **Depends:** one of: <a href="#core2-package-intel-media-va-driver"><code>intel-media-va-driver (= 23.1.1+dfsg1-1+core2.1~BUILD)</code></a> | <code>intel-media-va-driver-non-free (&gt;= 23.1.1+dfsg1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.12)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libinstpatch-1.0-2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libinstpatch-1.1.6-1-core2.1-20261109023002">libinstpatch-1.0-2 1.1.6-1 — MIDI instrument editing library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.41.1)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>
 
 </details>
 
@@ -3987,6 +4681,41 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libiso9660++0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libiso9660++0 2.1.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libiso9660-11"><code>libiso9660-11 (&gt;= 2.0.0)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libiso9660-11"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libiso9660-11 2.1.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libixml10"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pupnp-1.8-1-1.8.4-2-core2.1-20261109024311">libixml10 1:1.8.4-2 — Portable SDK for UPnP Devices, version 1.8 (ixml shared library)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libjack-jackd2-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jackd2-1.9.21-dfsg-3-core2.1-20261109022428">libjack-jackd2-0 1.9.21~dfsg-3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdb5.3"><code>libdb5.3</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.3.1-2~)</code></a>; <a href="#core2-package-libsamplerate0"><code>libsamplerate0 (&gt;= 0.1.7)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libjansson4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jansson-2.14-2-core2.1-20261109022448">libjansson4 2.14-2 — C library for encoding, decoding and manipulating JSON data</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libjbig0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jbigkit-2.1-6.1-core2.1-20261020160309">libjbig0 2.1-6.1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>
@@ -4008,6 +4737,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libjpegxl-java"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508">libjpegxl-java 0.7.0-10+deb12u1 — JPEG XL Image Coding System - "JXL" (java bindings)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libhwy1"><code>libhwy1 (&gt;= 0.16.0)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libjq1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jq-1.6-2.1-deb12u3-core2.1-20261104214225">libjq1 1.6-2.1+deb12u3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>; <a href="#core2-package-libonig5"><code>libonig5 (&gt;= 6.8.1)</code></a>
@@ -4015,9 +4751,51 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libjs-jquery"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-node-jquery-3.6.1-dfsg-3.5.14-1-core2.1-20261109023955">libjs-jquery 3.6.1+dfsg+~3.5.14-1</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libjs-sphinxdoc"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sphinx-5.3.0-4-core2.1-20261109024826">libjs-sphinxdoc 5.3.0-4 — JavaScript support for Sphinx documentation</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libjs-jquery"><code>libjs-jquery (&gt;= 1.11.1)</code></a>; <a href="#core2-package-libjs-underscore"><code>libjs-underscore (&gt;= 1.3.1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libjs-underscore"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-underscore-1.13.4-dfsg-1.11.4-3-core2.1-20261109025448">libjs-underscore 1.13.4~dfsg+~1.11.4-3 — JavaScript's functional programming helper library</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
 <summary id="core2-package-libjson-c5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-json-c-0.16-2-core2.1-20261020160448">libjson-c5 0.16-2 — JSON manipulation library - shared library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.36)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libjxl-devtools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508">libjxl-devtools 0.7.0-10+deb12u1</a></code></summary>
+
+- **Depends:** <code>libavif15 (&gt;= 0.11.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libhwy1"><code>libhwy1 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.13)</code></a>; <code>libopenexr-3-1-30 (&gt;= 3.1.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <code>libtcmalloc-minimal4 (&gt;= 2.10)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libjxl-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508">libjxl-tools 0.7.0-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <code>libgif7 (&gt;= 5.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libhwy1"><code>libhwy1 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-libjxl0.7"><code>libjxl0.7 (&gt;= 0.7.0)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.13)</code></a>; <code>libopenexr-3-1-30 (&gt;= 3.1.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <code>libtcmalloc-minimal4 (&gt;= 2.10)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libjxl0.7"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508">libjxl0.7 0.7.0-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libhwy1"><code>libhwy1 (&gt;= 0.16.0)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.13)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -4092,9 +4870,30 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libldap-2.5-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">libldap-2.5-0 2.5.13+dfsg-5</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libsasl2-2"><code>libsasl2-2 (&gt;= 2.1.28+dfsg)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libldap-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">libldap-common 2.5.13+dfsg-5</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
 <summary id="core2-package-liblerc4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lerc-4.0.0-ds-2-core2.1-20261020160636">liblerc4 4.0.0+ds-2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-liblmdb0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lmdb-0.9.24-1-core2.1-20261109023753">liblmdb0 0.9.24-1 — Lightning Memory-Mapped Database shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -4109,6 +4908,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-liblz4-tool"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lz4-1.9.4-1-core2safe1-20261027175537">liblz4-tool 1.9.4-1+core2safe1~20261027175537</a></code></summary>
 
 - **Depends:** <a href="#core2-package-lz4"><code>lz4</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmad0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmad-0.15.1b-10.1-core2.1-20261109022953">libmad0 0.15.1b-10.1 — MPEG audio decoder library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
 
 </details>
 
@@ -4219,9 +5025,65 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libmbedcrypto7"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mbedtls-2.28.3-1-core2.1-20261109023923">libmbedcrypto7 2.28.3-1 — lightweight crypto and SSL/TLS library - crypto library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmbedtls14"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mbedtls-2.28.3-1-core2.1-20261109023923">libmbedtls14 2.28.3-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.15)</code></a>; <a href="#core2-package-libmbedcrypto7"><code>libmbedcrypto7 (&gt;= 2.28.0)</code></a>; <a href="#core2-package-libmbedx509-1"><code>libmbedx509-1 (&gt;= 2.28.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmbedx509-1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mbedtls-2.28.3-1-core2.1-20261109023923">libmbedx509-1 2.28.3-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libmbedcrypto7"><code>libmbedcrypto7 (&gt;= 2.28.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libmd0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmd-1.0.4-2-core2.1-20261016150931">libmd0 1.0.4-2 — message digest functions from BSD systems - shared library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmfx-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-mediasdk-22.5.4-1-core2.1-20261109022357">libmfx-tools 22.5.4-1 — Intel Media SDK -- tools</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libmfx1"><code>libmfx1 (= 22.5.4-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdrm-intel1"><code>libdrm-intel1 (&gt;= 2.4.1)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.60)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 1.0.3)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmfx1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-intel-mediasdk-22.5.4-1-core2.1-20261109022357">libmfx1 22.5.4-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.9.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmms0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmms-0.6.4-3-core2.1-20261109023047">libmms0 0.6.4-3 — MMS stream protocol library - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.15)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmodplug1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmodplug-1-0.8.9.0-3-core2.1-20261109023131">libmodplug1 1:0.8.9.0-3 — shared libraries for mod music based on ModPlug</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libmpcdec6"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmpc-2-0.1-r495-2-core2.1-20261109023130">libmpcdec6 2:0.1~r495-2 — MusePack decoder - library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
 
 </details>
 
@@ -4236,6 +5098,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libmpfr6"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-mpfr4-4.2.0-1-core2.1-20261009194039">libmpfr6 4.2.0-1 — multiple precision floating-point computation</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libgmp10"><code>libgmp10 (&gt;= 2:6.2.1+dfsg1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libmpg123-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927">libmpg123-0 1.31.2-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
 
 </details>
 
@@ -4275,6 +5144,41 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libnfs-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libnfs-4.0.0-1-deb12u1-core2.1-20261109023205">libnfs-utils 4.0.0-1+deb12u1 — NFS client library (binaries)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libnfs13"><code>libnfs13 (&gt;= 1.9.7)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libnfs13"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libnfs-4.0.0-1-deb12u1-core2.1-20261109023205">libnfs13 4.0.0-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.17)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libnghttp2-14"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940">libnghttp2-14 1.52.0-1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.17)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libnorm1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-norm-1.5.9-dfsg-2-core2.1-20261109023945">libnorm1 1.5.9+dfsg-2 — NACK-Oriented Reliable Multicast (NORM) library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libnuma1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-numactl-2.0.16-1-core2.1-20261109024127">libnuma1 2.0.16-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libogg0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libogg-1.3.5-3-core2.1-20261023192506">libogg0 1.3.5-3 — Ogg bitstream library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
@@ -4292,6 +5196,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libonig5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libonig-6.9.8-1-core2.1-20261104214218">libonig5 6.9.8-1 — regular expressions library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libopenal-data"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128">libopenal-data 1:1.19.1-2 — Software implementation of the OpenAL audio API (data files)</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libopenal1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128">libopenal1 1:1.19.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libopenal-data"><code>libopenal-data (= 1:1.19.1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.8.1)</code></a>
 
 </details>
 
@@ -4340,7 +5258,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libopenmpt0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234">libopenmpt0 0.6.9-1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.32)</code></a>; <code>libgcc-s1 (&gt;= 4.0)</code> <em>(Debian Bookworm)</em>; <code>libmpg123-0 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisfile3 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.32)</code></a>; <code>libgcc-s1 (&gt;= 4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.28.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisfile3"><code>libvorbisfile3 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -4348,6 +5266,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-liborc-0.4-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-orc-1-0.4.33-2-core2.1-20261016143016">liborc-0.4-0 1:0.4.33-2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libout123-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927">libout123-0 1.31.2-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -4422,6 +5347,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libpgm-5.3-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpgm-5.3.128-dfsg-2-core2.1-20261109023229">libpgm-5.3-0 5.3.128~dfsg-2 — OpenPGM shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libplacebo208"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libplacebo-4.208.0-3-core2.1-20261016142619">libplacebo208 4.208.0-3 — GPU-accelerated video/image rendering primitives (shared library)</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libepoxy0"><code>libepoxy0 (&gt;= 1.4.3)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.6)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <code>libvulkan1 (&gt;= 1.2.131.2)</code> <em>(Debian Bookworm)</em>
@@ -4478,9 +5410,30 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libpopt0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-popt-1.19-dfsg-1-core2.1-20261109024228">libpopt0 1.19+dfsg-1 — lib for parsing cmdline parameters</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libpsl5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpsl-0.21.2-1-core2.1-20261109023315">libpsl5 0.21.2-1 — Library for Public Suffix List (shared libraries)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libidn2-0"><code>libidn2-0 (&gt;= 0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libunistring2"><code>libunistring2 (&gt;= 0.9.7)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libptexenc1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216">libptexenc1 2022.20220321.62855-5.1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libkpathsea6"><code>libkpathsea6 (&gt;= 2022.20220321.62855)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librabbitmq4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librabbitmq-0.11.0-1-deb12u3-core2.1-20261109023321">librabbitmq4 0.11.0-1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.17)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>
 
 </details>
 
@@ -4492,9 +5445,107 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-librist4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librist-0.2.7-dfsg-1-core2.1-20261109023315">librist4 0.2.7+dfsg-1 — Reliable Internet Stream Transport -- shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcjson1"><code>libcjson1 (&gt;= 1.7.5)</code></a>; <a href="#core2-package-libmbedcrypto7"><code>libmbedcrypto7 (&gt;= 2.28.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librsvg2-2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403">librsvg2-2 2.54.7+dfsg-1~deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo-gobject2"><code>libcairo-gobject2 (&gt;= 1.12.16)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.15.12)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.31.1)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.50.0)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.48.11)</code></a>; <a href="#core2-package-libpangocairo-1.0-0"><code>libpangocairo-1.0-0 (&gt;= 1.48.11)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librsvg2-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403">librsvg2-bin 2.54.7+dfsg-1~deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.54.7+dfsg-1~deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.15.10)</code></a>; <code>libgcc-s1 (&gt;= 4.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.25.2)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.50.0)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.48.11)</code></a>; <a href="#core2-package-libpangocairo-1.0-0"><code>libpangocairo-1.0-0 (&gt;= 1.48.11)</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.9.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librsvg2-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403">librsvg2-common 2.54.7+dfsg-1~deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (= 2.54.7+dfsg-1~deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.23.5-2)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.50.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-librsvg2-tests"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403">librsvg2-tests 2.54.7+dfsg-1~deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.8.0)</code></a>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.23.5-2)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.50.0)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libpango-1.0-0"><code>libpango-1.0-0 (&gt;= 1.48.11)</code></a>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.52.5)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsamplerate0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsamplerate-0.2.2-3-core2.1-20261109023334">libsamplerate0 0.2.2-3 — Audio sample rate conversion library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-2 2.1.28+dfsg-10+deb12u1 — Cyrus SASL - authentication abstraction library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules-db"><code>libsasl2-modules-db (&gt;= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-db"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-db 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libdb5.3"><code>libdb5.3</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-gssapi-heimdal"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-gssapi-heimdal 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules"><code>libsasl2-modules (= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>libgssapi3-heimdal (&gt;= 1.5~pre2+git20110720)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-gssapi-mit"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-gssapi-mit 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules"><code>libsasl2-modules (= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-ldap"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-ldap 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules"><code>libsasl2-modules (= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-otp"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-otp 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules"><code>libsasl2-modules (= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsasl2-modules-sql"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">libsasl2-modules-sql 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsasl2-modules"><code>libsasl2-modules (= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>libmariadb3 (&gt;= 3.0.0)</code> <em>(Debian Bookworm)</em>; <code>libpq5</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (&gt;= 3.5.9)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libsdl2-2.0-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsdl2-2.26.5-dfsg-1-core2.1-20261016134254">libsdl2-2.0-0 2.26.5+dfsg-1 — Simple DirectMedia Layer</a></code></summary>
 
-- **Depends:** <code>libasound2 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libdecor-0-0 (&gt;= 0.1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.47)</code></a>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 8.1~0)</code></a>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libsamplerate0 (&gt;= 0.1.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.18)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.18)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxcursor1"><code>libxcursor1 (&gt;&gt; 1.1.2)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3 (&gt;= 1:5.0)</code></a>; <a href="#core2-package-libxi6"><code>libxi6 (&gt;= 2:1.6.99.1)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.2.99.3)</code></a>; <code>libxss1</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.27)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libdecor-0-0"><code>libdecor-0-0 (&gt;= 0.1.0)</code></a>; <a href="#core2-package-libdrm2"><code>libdrm2 (&gt;= 2.4.47)</code></a>; <a href="#core2-package-libgbm1"><code>libgbm1 (&gt;= 8.1~0)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsamplerate0"><code>libsamplerate0 (&gt;= 0.1.7)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libwayland-cursor0"><code>libwayland-cursor0 (&gt;= 1.18)</code></a>; <a href="#core2-package-libwayland-egl1"><code>libwayland-egl1 (&gt;= 1.18)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <a href="#core2-package-libxcursor1"><code>libxcursor1 (&gt;&gt; 1.1.2)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3 (&gt;= 1:5.0)</code></a>; <a href="#core2-package-libxi6"><code>libxi6 (&gt;= 2:1.6.99.1)</code></a>; <a href="#core2-package-libxkbcommon0"><code>libxkbcommon0 (&gt;= 0.5.0)</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.2.99.3)</code></a>; <a href="#core2-package-libxss1"><code>libxss1</code></a>
 
 </details>
 
@@ -4541,6 +5592,34 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libshine3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-shine-3.1.1-2-core2.1-20261109024529">libshine3 3.1.1-2 — Fixed-point MP3 encoding library - runtime files</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libshout-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libshout-2.4.6-1-core2.1-20261109023428">libshout-tools 2.4.6-1 — MP3/Ogg Vorbis broadcast streaming library - commandline tools</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libshout3"><code>libshout3 (&gt;= 2.4.3)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libshout3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libshout-2.4.6-1-core2.1-20261109023428">libshout3 2.4.6-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 0.0.0.alpha7.dfsg)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsidplayfp6"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsidplayfp-2.4.2-1-core2.1-20261109023502">libsidplayfp6 2.4.2-1 — Library to play Commodore 64 music based on libsidplay2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgcrypt20"><code>libgcrypt20 (&gt;= 1.10.0)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libslang2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155">libslang2 2.3.3-3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>
@@ -4562,6 +5641,62 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libsnappy1v5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-snappy-1.1.9-3-core2.1-20261109024611">libsnappy1v5 1.1.9-3 — fast compression/decompression library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libsndfile1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsndfile-1.2.0-1-deb12u1-core2.1-20261109023503">libsndfile1 1.2.0-1+deb12u1 — Library for reading/writing audio files</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.28.0)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.2.3)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsndio7.0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sndio-1.9.0-0.3-core2.1-20261109024644">libsndio7.0 1.9.0-0.3 — Small audio and MIDI framework from OpenBSD, runtime libraries</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.17)</code></a>; <a href="#core2-package-libbsd0"><code>libbsd0 (&gt;= 0.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsodium23"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsodium-1.0.18-1-deb12u1-core2.1-20261109023539">libsodium23 1.0.18-1+deb12u1 — Network communication, cryptography and signaturing library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libspeex1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-speex-1.2.1-2-core2.1-20261109024712">libspeex1 1.2.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsqlite3-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834">libsqlite3-0 3.40.1-2+deb12u2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsqlite3-tcl"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834">libsqlite3-tcl 3.40.1-2+deb12u2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (&gt;= 3.38.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libsrt1.5-gnutls"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-srt-1.5.1-1-deb12u1-core2.1-20261109024856">libsrt1.5-gnutls 1.5.1-1+deb12u1 — Secure Reliable Transport UDP streaming library (GnuTLS flavour)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.0)</code></a>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libss2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-e2fsprogs-1.47.0-2-core2.1-20261009192320">libss2 1.47.0-2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libcom-err2"><code>libcom-err2</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -4569,9 +5704,30 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libssh-4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libssh-0.10.6-0-deb12u3-core2.1-20261109023631">libssh-4 0.10.6-0+deb12u3 — tiny C SSH library (OpenSSL flavor)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libssh-gcrypt-4"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libssh-0.10.6-0-deb12u3-core2.1-20261109023631">libssh-gcrypt-4 0.10.6-0+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libgcrypt20"><code>libgcrypt20 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libgpg-error0"><code>libgpg-error0 (&gt;= 1.14)</code></a>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libssh2-1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libssh2-1.10.0-3-deb12u1-core2.1-20261012055158">libssh2-1 1.10.0-3+deb12u1 — SSH2 client-side library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libstilview0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsidplayfp-2.4.2-1-core2.1-20261109023502">libstilview0 2.4.2-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -4590,9 +5746,23 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libsyn123-0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927">libsyn123-0 1.31.2-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libsynctex2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216">libsynctex2 2022.20220321.62855-5.1+deb12u2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libtalloc2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-talloc-2.4.0-f2-core2.1-20261109025224">libtalloc2 2.4.0-f2 — hierarchical pool based memory allocator</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.16)</code></a>
 
 </details>
 
@@ -4607,6 +5777,20 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libtasn1-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtasn1-6-4.19.0-2-deb12u1-core2.1-20261020161215">libtasn1-bin 4.19.0-2+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libtasn1-6"><code>libtasn1-6 (&gt;= 4.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libtdb1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tdb-1.4.8-2-core2.1-20261109025328">libtdb1 1.4.8-2 — Trivial Database - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libtevent0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tevent-0.14.1-1-core2.1-20261109025346">libtevent0 0.14.1-1 — talloc-based event loop library - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libtalloc2"><code>libtalloc2 (&gt;= 2.4.0~)</code></a>
 
 </details>
 
@@ -4648,7 +5832,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-libtheora-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libtheora-1.1.1-dfsg.1-16.1-deb12u1-core2.1-20261016150347">libtheora-bin 1.1.1+dfsg.1-16.1+deb12u1 — Theora Video Compression Codec (example encoder, decoder)</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libsdl1.2debian (&gt;= 1.2.15)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libsdl1.2debian (&gt;= 1.2.15)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>
 
 </details>
 
@@ -4744,9 +5928,37 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libudf0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756">libudf0 2.1.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libcdio19"><code>libcdio19 (&gt;= 2.1.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libudfread0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libudfread-1.1.2-1-core2.1-20261109023717">libudfread0 1.1.2-1 — UDF reader library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-libunistring2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libunistring-1.0-2-core2.1-20261012093008">libunistring2 1.0-2 — Unicode string library for C</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libupnp13"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-pupnp-1.8-1-1.8.4-2-core2.1-20261109024311">libupnp13 1:1.8.4-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libixml10"><code>libixml10 (&gt;= 1:1.8.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-liburing2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-liburing-2.3-3-core2.1-20261109023724">liburing2 2.3-3 — Linux kernel io_uring access library - shared library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>
 
 </details>
 
@@ -4838,6 +6050,27 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-libwebpmux3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libwebp-1.2.4-0.2-deb12u1-core2.1-20261011064208">libwebpmux3 1.2.4-0.2+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.29)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libwebrtc-audio-processing1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-webrtc-audio-processing-0.3-1-core2.1-20261109025612">libwebrtc-audio-processing1 0.3-1 — AudioProcessing module from the WebRTC project.</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 4.0)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libwildmidi-config"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wildmidi-0.4.3-1-core2.1-20261109025605">libwildmidi-config 0.4.3-1</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libwildmidi2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wildmidi-0.4.3-1-core2.1-20261109025605">libwildmidi2 0.4.3-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>
 
 </details>
 
@@ -5003,6 +6236,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libxss1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libxss-1-1.2.3-1-core2.1-20261109023753">libxss1 1:1.2.3-1 — X11 Screen Saver extension library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.4)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.4.99.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <code>x11-common</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
 <summary id="core2-package-libxtables12"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-iptables-1.8.9-2-core2.1-20261020160244">libxtables12 1.8.9-2</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
@@ -5031,6 +6271,41 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-libyajl2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-yajl-2.1.0-3-deb12u2-core2.1-20261109025615">libyajl2 2.1.0-3+deb12u2 — Yet Another JSON Library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libzmq5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zeromq3-4.3.4-6-core2.1-20261109025733">libzmq5 4.3.4-6 — lightweight messaging kernel (shared library)</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbsd0"><code>libbsd0 (&gt;= 0.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgssapi-krb5-2"><code>libgssapi-krb5-2 (&gt;= 1.17)</code></a>; <a href="#core2-package-libnorm1"><code>libnorm1 (&gt;= 1.5r6)</code></a>; <a href="#core2-package-libpgm-5.3-0"><code>libpgm-5.3-0 (&gt;= 5.1.116~dfsg)</code></a>; <a href="#core2-package-libsodium23"><code>libsodium23 (&gt;= 1.0.3)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-libzvbi-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zvbi-0.2.41-1-deb12u1-core2.1-20261109025750">libzvbi-common 0.2.41-1+deb12u1</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-libzvbi0"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zvbi-0.2.41-1-deb12u1-core2.1-20261109025750">libzvbi0 0.2.41-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libzvbi-common"><code>libzvbi-common (= 0.2.41-1+deb12u1+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-libzzip-0-13"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zziplib-0.13.72-dfsg.1-1.1-core2.1-20261109025840">libzzip-0-13 0.13.72+dfsg.1-1.1 — library providing read access on ZIP-archives - library</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-links"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-links2-2.28-1-core2.1-20261012055305">links 2.28-1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libgpm2"><code>libgpm2 (&gt;= 1.20.7)</code></a>; <code>liblz1 (&gt;= 1.13)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
@@ -5040,7 +6315,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-links2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-links2-2.28-1-core2.1-20261012055305">links2 2.28-1 — Web browser running in both graphics and text mode</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <code>libdirectfb-1.7-7 (&gt;= 1.7.7)</code> <em>(Debian Bookworm)</em>; <code>libevent-2.1-7 (&gt;= 2.1.8-stable)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.16.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgpm2"><code>libgpm2 (&gt;= 1.20.7)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>liblz1 (&gt;= 1.13)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>librsvg2-2 (&gt;= 2.32.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libtiff6"><code>libtiff6 (&gt;= 4.0.3)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libbrotli1"><code>libbrotli1 (&gt;= 0.6.0)</code></a>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <code>libdirectfb-1.7-7 (&gt;= 1.7.7)</code> <em>(Debian Bookworm)</em>; <code>libevent-2.1-7 (&gt;= 2.1.8-stable)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.16.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgpm2"><code>libgpm2 (&gt;= 1.20.7)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>liblz1 (&gt;= 1.13)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblzma5"><code>liblzma5 (&gt;= 5.1.1alpha+20120614)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.32.0)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libtiff6"><code>libtiff6 (&gt;= 4.0.3)</code></a>; <a href="#core2-package-libwebp7"><code>libwebp7 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libzstd1"><code>libzstd1 (&gt;= 1.5.2)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-lmdb-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-lmdb-0.9.24-1-core2.1-20261109023753">lmdb-utils 0.9.24-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
 
 </details>
 
@@ -5101,6 +6383,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-mpg123"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927">mpg123 1.31.2-1+deb12u1 — MPEG layer 1/2/3 audio player</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <code>libaudio2</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.30.0)</code></a>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <a href="#core2-package-libout123-0"><code>libout123-0 (&gt;= 1.28.0)</code></a>; <code>libportaudio2 (&gt;= 19+svn20101113)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsyn123-0"><code>libsyn123-0 (&gt;= 1.26.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-mupdf"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501">mupdf 1.21.1+ds2-1+deb12u1 — lightweight PDF viewer</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.6)</code></a>; <code>libgl1</code> <em>(Debian Bookworm)</em>; <code>libglut3.12 (&gt;= 3.4.0)</code> <em>(Debian Bookworm)</em>; <code>libgumbo1 (&gt;= 0.9.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 0.9.11)</code></a>; <code>libjbig2dec0 (&gt;= 0.19)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
@@ -5111,6 +6400,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-mupdf-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-mupdf-1.21.1-ds2-1-deb12u1-core2.1-20261012055501">mupdf-tools 1.21.1+ds2-1+deb12u1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.35)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.6)</code></a>; <code>libgumbo1 (&gt;= 0.9.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 0.9.11)</code></a>; <code>libjbig2dec0 (&gt;= 0.19)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libmujs2 (&gt;= 1.0.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenjp2-7"><code>libopenjp2-7 (&gt;= 2.0.0)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-musepack-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libmpc-2-0.1-r495-2-core2.1-20261109023130">musepack-tools 2:0.1~r495-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libcue2</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmpcdec6"><code>libmpcdec6 (&gt;= 1:0.1~r435)</code></a>; <code>libreplaygain1 (&gt;= 1.0~r412)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -5131,7 +6427,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-ncmpcpp"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ncmpcpp-0.9.2-2-core2.1-20261009113534">ncmpcpp 0.9.2-2 — ncurses-based client for the Music Player Daemon (MPD)</a></code></summary>
 
-- **Depends:** <code>libboost-filesystem1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-locale1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-program-options1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-regex1.74.0-icu72</code> <em>(Debian Bookworm)</em>; <code>libboost-thread1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.16.2)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <code>libgcc-s1 (&gt;= 3.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <code>libmpdclient2 (&gt;= 2.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <code>libtag1v5 (&gt;= 1.11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>
+- **Depends:** <code>libboost-filesystem1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-locale1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-program-options1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <code>libboost-regex1.74.0-icu72</code> <em>(Debian Bookworm)</em>; <code>libboost-thread1.74.0 (&gt;= 1.74.0+ds1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcurl3-gnutls"><code>libcurl3-gnutls (&gt;= 7.16.2)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <code>libgcc-s1 (&gt;= 3.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <a href="#core2-package-libmpdclient2"><code>libmpdclient2 (&gt;= 2.9)</code></a>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <code>libtag1v5 (&gt;= 1.11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>
 
 </details>
 
@@ -5185,6 +6481,62 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-nghttp2"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940">nghttp2 1.52.0-1+deb12u3 — server, proxy and client implementing HTTP/2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-nghttp2-client"><code>nghttp2-client (&gt;= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-nghttp2-proxy"><code>nghttp2-proxy (&gt;= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-nghttp2-server"><code>nghttp2-server (&gt;= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-nghttp2-client"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940">nghttp2-client 1.52.0-1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libev4 (&gt;= 1:4.04)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjansson4"><code>libjansson4 (&gt;= 2.14)</code></a>; <code>libjemalloc2 (&gt;= 5.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-nghttp2-proxy"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940">nghttp2-proxy 1.52.0-1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-openssl"><code>openssl</code></a>; <code>python3</code> <em>(Debian Bookworm)</em>; <code>libc-ares2 (&gt;= 1.7.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libev4 (&gt;= 1:4.04)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libjemalloc2 (&gt;= 5.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-nghttp2-server"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940">nghttp2-server 1.52.0-1+deb12u3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libnghttp2-14"><code>libnghttp2-14 (= 1.52.0-1+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libev4 (&gt;= 1:4.04)</code> <em>(Debian Bookworm)</em>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libjemalloc2 (&gt;= 5.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-node-jquery"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-node-jquery-3.6.1-dfsg-3.5.14-1-core2.1-20261109023955">node-jquery 3.6.1+dfsg+~3.5.14-1 — NodeJS wrapper for jQuery</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-node-underscore"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-underscore-1.13.4-dfsg-1.11.4-3-core2.1-20261109025448">node-underscore 1.13.4~dfsg+~1.11.4-3</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
+<summary id="core2-package-numactl"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-numactl-2.0.16-1-core2.1-20261109024127">numactl 2.0.16-1 — NUMA scheduling and memory placement tool</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libnuma1"><code>libnuma1 (&gt;= 2.0.15-1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-ocl-icd-libopencl1"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-ocl-icd-2.3.1-1-core2.1-20261109024129">ocl-icd-libopencl1 2.3.1-1 — Generic OpenCL ICD Loader</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-odt2txt"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-odt2txt-0.5-7-core2.1-20261012055305">odt2txt 0.5-7 — simple converter from OpenDocument Text to plain text</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
@@ -5213,9 +6565,16 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-openal-info"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128">openal-info 1:1.19.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libopenal1"><code>libopenal1 (= 1:1.19.1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-openmpt123"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libopenmpt-0.6.9-1-core2.1-20261016143234">openmpt123 0.6.9-1 — module music library based on OpenMPT -- music player</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <code>libportaudio2 (&gt;= 19+svn20101113)</code> <em>(Debian Bookworm)</em>; <code>libpulse0 (&gt;= 0.99.1)</code> <em>(Debian Bookworm)</em>; <code>libsndfile1 (&gt;= 1.0.20)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenmpt0"><code>libopenmpt0 (&gt;= 0.5.10)</code></a>; <code>libportaudio2 (&gt;= 19+svn20101113)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -5258,6 +6617,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-poppler-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-poppler-22.12.0-2-deb12u3-core2.1-20261012055344">poppler-utils 22.12.0-2+deb12u3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libpoppler126"><code>libpoppler126 (= 22.12.0-2+deb12u3+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-liblcms2-2"><code>liblcms2-2 (&gt;= 2.2+git20110628)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-psl"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libpsl-0.21.2-1-core2.1-20261109023315">psl 0.21.2-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libpsl5"><code>libpsl5 (&gt;= 0.19.1)</code></a>
 
 </details>
 
@@ -5318,9 +6684,31 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-rist-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-librist-0.2.7-dfsg-1-core2.1-20261109023315">rist-tools 0.2.7+dfsg-1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libmbedcrypto7"><code>libmbedcrypto7 (&gt;= 2.28.0)</code></a>; <a href="#core2-package-librist4"><code>librist4 (&gt;= 0.2.7+dfsg)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-rlfe"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-readline-8.2-1.3-core2.1-20261009161033">rlfe 8.2-1.3 — Front-end using readline to "cook" input lines for other programs</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-samplerate-programs"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsamplerate-0.2.2-3-core2.1-20261109023334">samplerate-programs 0.2.2-3</a></code></summary>
+
+- **Depends:** <code>sndfile-tools (&gt;= 1.04)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-sasl2-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120">sasl2-bin 2.1.28+dfsg-10+deb12u1</a></code></summary>
+
+- **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <code>db-util</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsasl2-2"><code>libsasl2-2 (&gt;= 2.1.28+dfsg-10+deb12u1+core2.1~BUILD)</code></a>; <code>lsb-base</code> <em>(Debian Bookworm)</em>; one of: <code>debconf (&gt;= 0.5)</code> <em>(Debian Bookworm)</em> | <code>debconf-2.0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-perl"><code>perl:any</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcrypt1"><code>libcrypt1 (&gt;= 1:4.1.0)</code></a>; <a href="#core2-package-libdb5.3"><code>libdb5.3</code></a>; <a href="#core2-package-libkrb5-3"><code>libkrb5-3 (&gt;= 1.13~alpha1+dfsg)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-libpam0g"><code>libpam0g (&gt;= 0.99.7.1)</code></a>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>
 
 </details>
 
@@ -5367,9 +6755,94 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-shineenc"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-shine-3.1.1-2-core2.1-20261109024529">shineenc 3.1.1-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libshine3"><code>libshine3 (= 3.1.1-2+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-slapd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">slapd 2.5.13+dfsg-5</a></code></summary>
+
+- **Pre-Depends:** one of: <code>debconf (&gt;= 0.5)</code> <em>(Debian Bookworm)</em> | <code>debconf-2.0</code> <em>(Debian Bookworm)</em>; <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libargon2-1"><code>libargon2-1 (&gt;= 0~20171227)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcrypt1"><code>libcrypt1 (&gt;= 1:4.1.0)</code></a>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (= 2.5.13+dfsg-5+core2.1~BUILD)</code></a>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <code>libodbc2 (&gt;= 2.3.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libperl5.36"><code>libperl5.36 (&gt;= 5.36.0)</code></a>; <a href="#core2-package-libsasl2-2"><code>libsasl2-2 (&gt;= 2.1.28+dfsg)</code></a>; <code>libwrap0 (&gt;= 7.6-4~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-coreutils"><code>coreutils (&gt;= 4.5.1-1)</code></a>; <a href="#core2-package-psmisc"><code>psmisc</code></a>; one of: <a href="#core2-package-perl"><code>perl:any (&gt;&gt; 5.8.0)</code></a> | <code>libmime-base64-perl</code> <em>(Debian Bookworm)</em>; <code>adduser</code> <em>(Debian Bookworm)</em>; <code>lsb-base (&gt;= 3.2-13)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-perl"><code>perl:any</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-slapd-contrib"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">slapd-contrib 2.5.13+dfsg-5</a></code></summary>
+
+- **Depends:** <a href="#core2-package-slapd"><code>slapd (= 2.5.13+dfsg-5+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.8)</code></a>; <code>libkadm5srv8-heimdal (&gt;= 1.4.0+git20110226)</code> <em>(Debian Bookworm)</em>; <code>libkrb5-26-heimdal (&gt;= 1.4.0+git20110226)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libldap-2.5-0"><code>libldap-2.5-0 (&gt;= 2.5.4)</code></a>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-slapd-smbk5pwd"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124">slapd-smbk5pwd 2.5.13+dfsg-5</a></code></summary>
+
+- **Depends:** <a href="#core2-package-slapd-contrib"><code>slapd-contrib</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-slsh"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-slang2-2.3.3-3-core2.1-20261012055155">slsh 2.3.3-3</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libslang2"><code>libslang2 (&gt;= 2.3.0)</code></a>; <a href="#core2-package-libslang2-modules"><code>libslang2-modules (= 2.3.3-3+core2.1~BUILD)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sndfile-programs"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-libsndfile-1.2.0-1-deb12u1-core2.1-20261109023503">sndfile-programs 1.2.0-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sndio-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sndio-1.9.0-0.3-core2.1-20261109024644">sndio-tools 1.9.0-0.3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libbsd0"><code>libbsd0 (&gt;= 0.2.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.8.1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sndiod"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sndio-1.9.0-0.3-core2.1-20261109024644">sndiod 1.9.0-0.3</a></code></summary>
+
+- **Depends:** <code>lsb-base</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbsd0"><code>libbsd0 (&gt;= 0.2.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.9.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-speex"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-speex-1.2.1-2-core2.1-20261109024712">speex 1.2.1-2 — The Speex codec command line tools</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sphinx-common"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sphinx-5.3.0-4-core2.1-20261109024826">sphinx-common 5.3.0-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libjs-sphinxdoc"><code>libjs-sphinxdoc (= 5.3.0-4+core2.1~BUILD)</code></a>; <code>libjson-perl</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-perl"><code>perl:any</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sqlite3"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834">sqlite3 3.40.1-2+deb12u2 — Command line interface for SQLite 3</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libreadline8"><code>libreadline8 (&gt;= 6.0)</code></a>; <a href="#core2-package-libsqlite3-0"><code>libsqlite3-0 (= 3.40.1-2+deb12u2+core2.1~BUILD)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sqlite3-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834">sqlite3-tools 3.40.1-2+deb12u2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libtcl8.6 (&gt;= 8.6.0)</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-srt-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-srt-1.5.1-1-deb12u1-core2.1-20261109024856">srt-tools 1.5.1-1+deb12u1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libsrt1.5-gnutls"><code>libsrt1.5-gnutls (= 1.5.1-1+deb12u1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.0)</code></a>; <a href="#core2-package-libnettle8"><code>libnettle8</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -5381,16 +6854,44 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-sysv-rc"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204">sysv-rc 3.06-4</a></code></summary>
+
+- **Depends:** <code>insserv</code> <em>(Debian Bookworm)</em>; <code>startpar (&gt;= 0.62-1~)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-sysvinit-utils"><code>sysvinit-utils (&gt;= 3.05-1)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sysvinit-core"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204">sysvinit-core 3.06-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-initscripts"><code>initscripts</code></a>; one of: <a href="#core2-package-sysv-rc"><code>sysv-rc</code></a> | <code>file-rc</code> <em>(Debian Bookworm)</em> | <code>openrc</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-sysvinit-utils"><code>sysvinit-utils (&gt;= 2.86.ds1-66)</code></a>; <code>mount</code> <em>(Debian Bookworm)</em>; one of: <code>debconf (&gt;= 0.5)</code> <em>(Debian Bookworm)</em> | <code>debconf-2.0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libselinux1"><code>libselinux1 (&gt;= 3.1~)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-sysvinit-utils"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204">sysvinit-utils 3.06-4</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+
+</details>
+
+<details>
+<summary id="core2-package-tdb-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tdb-1.4.8-2-core2.1-20261109025328">tdb-tools 1.4.8-2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libtdb1"><code>libtdb1 (&gt;= 1.2.11)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-telegram-desktop"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-telegram-desktop-4.6.5-ds-2-core2.1-20261017193804">telegram-desktop 4.6.5+ds-2 — fast and secure messaging application</a></code></summary>
 
-- **Depends:** <code>qt5-image-formats-plugins</code> <em>(Debian Bookworm)</em>; <code>libabsl20220623 (&gt;= 0~20220623.0-1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.40.0)</code></a>; <code>libglibmm-2.68-1 (&gt;= 2.74.0)</code> <em>(Debian Bookworm)</em>; <code>libhunspell-1.7-0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libkf5coreaddons5 (&gt;= 5.96.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblz4-1"><code>liblz4-1 (&gt;= 0.0~r130)</code></a>; <code>libminizip1 (&gt;= 1.1)</code> <em>(Debian Bookworm)</em>; <code>libopenal1 (&gt;= 1.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <code>libqrcodegencpp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <code>libqt5core5a (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; one of: <code>libqt5gui5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em> | <code>libqt5gui5-gles (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5network5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5qml5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5quickwidgets5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5svg5 (&gt;= 5.6.0~beta)</code> <em>(Debian Bookworm)</em>; <code>libqt5waylandcompositor5 (&gt;= 5.7.0)</code> <em>(Debian Bookworm)</em>; <code>libqt5widgets5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>librlottie0-1 (&gt;= 0~git20200305.a717479+dfsg)</code> <em>(Debian Bookworm)</em>; <code>libsigc++-3.0-0 (&gt;= 2.2.0)</code> <em>(Debian Bookworm)</em>; <code>libsrtp2-1 (&gt;= 2.0.0+20161214)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <code>libxcb-keysyms1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb-record0"><code>libxcb-record0</code></a>; <a href="#core2-package-libxcb-screensaver0"><code>libxcb-screensaver0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxcomposite1"><code>libxcomposite1 (&gt;= 1:0.4.5)</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.5.0)</code></a>; <code>libxtst6</code> <em>(Debian Bookworm)</em>; <code>libxxhash0 (&gt;= 0.6.5)</code> <em>(Debian Bookworm)</em>; <code>qtbase-abi-5-15-8</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <code>qt5-image-formats-plugins</code> <em>(Debian Bookworm)</em>; <code>libabsl20220623 (&gt;= 0~20220623.0-1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.40.0)</code></a>; <code>libglibmm-2.68-1 (&gt;= 2.74.0)</code> <em>(Debian Bookworm)</em>; <code>libhunspell-1.7-0</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libkf5coreaddons5 (&gt;= 5.96.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-liblz4-1"><code>liblz4-1 (&gt;= 0.0~r130)</code></a>; <code>libminizip1 (&gt;= 1.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopenal1"><code>libopenal1 (&gt;= 1.14)</code></a>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.1)</code></a>; <code>libqrcodegencpp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <code>libqt5core5a (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; one of: <code>libqt5gui5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em> | <code>libqt5gui5-gles (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5network5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5qml5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5quickwidgets5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>libqt5svg5 (&gt;= 5.6.0~beta)</code> <em>(Debian Bookworm)</em>; <code>libqt5waylandcompositor5 (&gt;= 5.7.0)</code> <em>(Debian Bookworm)</em>; <code>libqt5widgets5 (&gt;= 5.15.2)</code> <em>(Debian Bookworm)</em>; <code>librlottie0-1 (&gt;= 0~git20200305.a717479+dfsg)</code> <em>(Debian Bookworm)</em>; <code>libsigc++-3.0-0 (&gt;= 2.2.0)</code> <em>(Debian Bookworm)</em>; <code>libsrtp2-1 (&gt;= 2.0.0+20161214)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssl3"><code>libssl3 (&gt;= 3.0.0)</code></a>; <code>libstdc++6 (&gt;= 12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswresample4"><code>libswresample4 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libvpx7"><code>libvpx7 (&gt;= 1.12.0)</code></a>; <a href="#core2-package-libwayland-client0"><code>libwayland-client0 (&gt;= 1.20.0)</code></a>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <code>libxcb-keysyms1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb-record0"><code>libxcb-record0</code></a>; <a href="#core2-package-libxcb-screensaver0"><code>libxcb-screensaver0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxcomposite1"><code>libxcomposite1 (&gt;= 1:0.4.5)</code></a>; <a href="#core2-package-libxdamage1"><code>libxdamage1 (&gt;= 1:1.1)</code></a>; <a href="#core2-package-libxext6"><code>libxext6</code></a>; <a href="#core2-package-libxfixes3"><code>libxfixes3</code></a>; <a href="#core2-package-libxrandr2"><code>libxrandr2 (&gt;= 2:1.5.0)</code></a>; <code>libxtst6</code> <em>(Debian Bookworm)</em>; <code>libxxhash0 (&gt;= 0.6.5)</code> <em>(Debian Bookworm)</em>; <code>qtbase-abi-5-15-8</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
 <details>
 <summary id="core2-package-texlive-binaries"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-texlive-bin-2022.20220321.62855-5.1-deb12u2-core2.1-20261012055216">texlive-binaries 2022.20220321.62855-5.1+deb12u2</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libptexenc1"><code>libptexenc1 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code></a>; <a href="#core2-package-libptexenc1"><code>libptexenc1 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libkpathsea6 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libkpathsea6 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libsynctex2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libsynctex2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexlua53-5 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexlua53-5 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexluajit2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexluajit2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), t1utils, tex-common, perl:any, libc6 (&gt;= 2.34), libcairo2 (&gt;= 1.2.4), libfontconfig1 (&gt;= 2.12.6), libfreetype6 (&gt;= 2.3.9), libgcc-s1 (&gt;= 4.0), libgraphite2-3 (&gt;= 1.2.2)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 2.6.0)</code></a>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <a href="#core2-package-libmpfr6"><code>libmpfr6 (&gt;= 3.1.3)</code></a>; <code>libpaper1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpixman-1-0"><code>libpixman-1-0 (&gt;= 0.10.0)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <code>libteckit0 (&gt;= 2.5.10+ds1-1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <code>libxaw7 (&gt;= 2:1.0.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxi6"><code>libxi6 (&gt;= 2:1.2.99.4)</code></a>; <code>libxmu6 (&gt;= 2:1.1.3)</code> <em>(Debian Bookworm)</em>; <code>libxpm4</code> <em>(Debian Bookworm)</em>; <code>libxt6</code> <em>(Debian Bookworm)</em>; <code>libzzip-0-13 (&gt;= 0.13.56)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+- **Depends:** <a href="#core2-package-libptexenc1"><code>libptexenc1 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD)</code></a>; <a href="#core2-package-libptexenc1"><code>libptexenc1 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libkpathsea6 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libkpathsea6 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libsynctex2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libsynctex2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexlua53-5 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexlua53-5 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), libtexluajit2 (&gt;= 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD), libtexluajit2 (&lt;&lt; 2022.20220321.62855-5.1+deb12u2+core2.1~BUILD.1~), t1utils, tex-common, perl:any, libc6 (&gt;= 2.34), libcairo2 (&gt;= 1.2.4), libfontconfig1 (&gt;= 2.12.6), libfreetype6 (&gt;= 2.3.9), libgcc-s1 (&gt;= 4.0), libgraphite2-3 (&gt;= 1.2.2)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 2.6.0)</code></a>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <a href="#core2-package-libmpfr6"><code>libmpfr6 (&gt;= 3.1.3)</code></a>; <code>libpaper1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpixman-1-0"><code>libpixman-1-0 (&gt;= 0.10.0)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <code>libstdc++6 (&gt;= 5.2)</code> <em>(Debian Bookworm)</em>; <code>libteckit0 (&gt;= 2.5.10+ds1-1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6 (&gt;= 2:1.2.99.901)</code></a>; <code>libxaw7 (&gt;= 2:1.0.14)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxi6"><code>libxi6 (&gt;= 2:1.2.99.4)</code></a>; <code>libxmu6 (&gt;= 2:1.1.3)</code> <em>(Debian Bookworm)</em>; <code>libxpm4</code> <em>(Debian Bookworm)</em>; <code>libxt6</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libzzip-0-13"><code>libzzip-0-13 (&gt;= 0.13.56)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
 </details>
 
@@ -5451,6 +6952,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-timgm6mb-soundfont"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-timgm6mb-soundfont-1.3-5-core2.1-20261109025350">timgm6mb-soundfont 1.3-5 — TimGM6mb SoundFont from MuseScore 1.3</a></code></summary>
+
+- No declared Pre-Depends or Depends.
+
+</details>
+
+<details>
 <summary id="core2-package-tumbler"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-tumbler-4.18.0-1-core2.1-20261010054511">tumbler 4.18.0-1 — D-Bus thumbnailing service</a></code></summary>
 
 - **Depends:** <a href="#core2-package-tumbler-common"><code>tumbler-common (= 4.18.0-1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.2.4)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libgdk-pixbuf-2.0-0"><code>libgdk-pixbuf-2.0-0 (&gt;= 2.22.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.67.1)</code></a>; <a href="#core2-package-libgstreamer-plugins-base1.0-0"><code>libgstreamer-plugins-base1.0-0 (&gt;= 1.0.0)</code></a>; <a href="#core2-package-libgstreamer1.0-0"><code>libgstreamer1.0-0 (&gt;= 1.4.0)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpoppler-glib8"><code>libpoppler-glib8 (&gt;= 0.85.0)</code></a>; <a href="#core2-package-libtumbler-1-0"><code>libtumbler-1-0 (&gt;= 4.17.2)</code></a>; <a href="#core2-package-libxfce4util7"><code>libxfce4util7 (&gt;= 4.17.1)</code></a>
@@ -5474,7 +6982,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-unar"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-unar-1.10.7-ds1-really1.10.1-2-core2.1-20261012055403">unar 1.10.7+ds1+really1.10.1-2 — Unarchiver for a variety of file formats</a></code></summary>
 
-- **Depends:** <code>gnustep-base-runtime (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libgnustep-base1.28 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <code>libobjc4 (&gt;= 4.2.1)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <code>libwavpack1 (&gt;= 4.40.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
+- **Depends:** <code>gnustep-base-runtime (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libbz2-1.0"><code>libbz2-1.0</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libgnustep-base1.28 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libicu72"><code>libicu72 (&gt;= 72.1~rc-1~)</code></a>; <code>libobjc4 (&gt;= 4.2.1)</code> <em>(Debian Bookworm)</em>; <code>libstdc++6 (&gt;= 5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 4.40.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.2.0)</code></a>
 
 </details>
 
@@ -5530,28 +7038,28 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-vlc-plugin-access-extra"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852">vlc-plugin-access-extra 3.0.23-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <code>libsrt1.5-gnutls (&gt;= 1.5.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>libvncclient1 (&gt;= 0.9.10)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb-composite0"><code>libxcb-composite0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1 (&gt;= 1.6)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.14)</code></a>; <a href="#core2-package-libsrt1.5-gnutls"><code>libsrt1.5-gnutls (&gt;= 1.5.1)</code></a>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>libvncclient1 (&gt;= 0.9.10)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb-composite0"><code>libxcb-composite0</code></a>; <a href="#core2-package-libxcb-shm0"><code>libxcb-shm0</code></a>; <a href="#core2-package-libxcb1"><code>libxcb1 (&gt;= 1.6)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
 <summary id="core2-package-vlc-plugin-base"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852">vlc-plugin-base 3.0.23-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-vlc-data"><code>vlc-data (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a>; <code>liba52-0.7.4 (&gt;= 0.7.4)</code> <em>(Debian Bookworm)</em>; <code>libarchive13 (&gt;= 3.1.2)</code> <em>(Debian Bookworm)</em>; <code>libaribb24-0 (&gt;= 1.0.3)</code> <em>(Debian Bookworm)</em>; <code>libasound2 (&gt;= 1.0.27)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <code>libbluray2 (&gt;= 1:1.0.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.13.1)</code></a>; <code>libcddb2 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <code>libchromaprint1 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.1.0)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <code>libdca0 (&gt;= 0.0.5)</code> <em>(Debian Bookworm)</em>; <code>libdvbpsi10 (&gt;= 1.3.0)</code> <em>(Debian Bookworm)</em>; <code>libdvdnav4 (&gt;= 6.1.0)</code> <em>(Debian Bookworm)</em>; <code>libdvdread8 (&gt;= 6.1.0)</code> <em>(Debian Bookworm)</em>; <code>libebml5 (&gt;= 1.4.4)</code> <em>(Debian Bookworm)</em>; <code>libfaad2 (&gt;= 2.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 1.0.0)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgcrypt20"><code>libgcrypt20 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.28.0)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libgpg-error0"><code>libgpg-error0 (&gt;= 1.14)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 0.9.4)</code></a>; <code>libixml10 (&gt;= 1:1.8.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libkate1 (&gt;= 0.3.0)</code> <em>(Debian Bookworm)</em>; <code>liblirc-client0</code> <em>(Debian Bookworm)</em>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <code>libmad0 (&gt;= 0.15.1b-3)</code> <em>(Debian Bookworm)</em>; <code>libmatroska7 (&gt;= 1.7.1)</code> <em>(Debian Bookworm)</em>; <code>libmpcdec6 (&gt;= 1:0.1~r435)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmpeg2-4"><code>libmpeg2-4 (&gt;= 0.5.1)</code></a>; <code>libmpg123-0 (&gt;= 1.28.0)</code> <em>(Debian Bookworm)</em>; <code>libmtp9 (&gt;= 1.1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <code>libnfs13 (&gt;= 1.9.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <code>libopenmpt-modplug1 (&gt;= 0.8.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.3~beta+20180516)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>libprotobuf-lite32 (&gt;= 3.21.12)</code> <em>(Debian Bookworm)</em>; <code>libpulse0 (&gt;= 1.0)</code> <em>(Debian Bookworm)</em>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <code>libresid-builder0c2a</code> <em>(Debian Bookworm)</em>; <code>librsvg2-2 (&gt;= 2.14.4)</code> <em>(Debian Bookworm)</em>; <code>libsamplerate0 (&gt;= 0.1.7)</code> <em>(Debian Bookworm)</em>; <code>libsdl-image1.2 (&gt;= 1.2.10)</code> <em>(Debian Bookworm)</em>; <code>libsdl1.2debian (&gt;= 1.2.15)</code> <em>(Debian Bookworm)</em>; <code>libsecret-1-0 (&gt;= 0.7)</code> <em>(Debian Bookworm)</em>; <code>libshine3 (&gt;= 3.1.0)</code> <em>(Debian Bookworm)</em>; <code>libshout3 (&gt;= 2.2.2)</code> <em>(Debian Bookworm)</em>; <code>libsidplay2</code> <em>(Debian Bookworm)</em>; <code>libsoxr0 (&gt;= 0.1.2)</code> <em>(Debian Bookworm)</em>; <code>libspatialaudio0 (&gt;= 0.3.0+git20180730+dfsg1)</code> <em>(Debian Bookworm)</em>; <code>libspeex1 (&gt;= 1.2~)</code> <em>(Debian Bookworm)</em>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.2.3)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <code>libtag1v5 (&gt;= 1.11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>; <code>libtwolame0 (&gt;= 0.3.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <code>libupnp13 (&gt;= 1:1.8.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>libvorbis0a (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <code>libvorbisenc2 (&gt;= 1.1.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <code>libxcb-keysyms1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <code>libzvbi0 (&gt;= 0.2.35)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-vlc-data"><code>vlc-data (= 3.0.23-0+deb12u1+core2.1~BUILD)</code></a>; <code>liba52-0.7.4 (&gt;= 0.7.4)</code> <em>(Debian Bookworm)</em>; <code>libarchive13 (&gt;= 3.1.2)</code> <em>(Debian Bookworm)</em>; <code>libaribb24-0 (&gt;= 1.0.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.27)</code></a>; <a href="#core2-package-libass9"><code>libass9 (&gt;= 1:0.13.6)</code></a>; <a href="#core2-package-libavahi-client3"><code>libavahi-client3 (&gt;= 0.6.16)</code></a>; <a href="#core2-package-libavahi-common3"><code>libavahi-common3 (&gt;= 0.6.16)</code></a>; <code>libavc1394-0 (&gt;= 0.5.3)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libavcodec59"><code>libavcodec59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavformat59"><code>libavformat59 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libavutil57"><code>libavutil57 (&gt;= 7:5.1)</code></a>; <a href="#core2-package-libbluray2"><code>libbluray2 (&gt;= 1:1.0.0)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.13.1)</code></a>; <code>libcddb2 (&gt;= 1.3.2)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libchromaprint1"><code>libchromaprint1 (&gt;= 1.3.2)</code></a>; <a href="#core2-package-libdav1d6"><code>libdav1d6 (&gt;= 0.1.0)</code></a>; <a href="#core2-package-libdbus-1-3"><code>libdbus-1-3 (&gt;= 1.9.14)</code></a>; <code>libdc1394-25 (&gt;= 2.2.6)</code> <em>(Debian Bookworm)</em>; <code>libdca0 (&gt;= 0.0.5)</code> <em>(Debian Bookworm)</em>; <code>libdvbpsi10 (&gt;= 1.3.0)</code> <em>(Debian Bookworm)</em>; <code>libdvdnav4 (&gt;= 6.1.0)</code> <em>(Debian Bookworm)</em>; <code>libdvdread8 (&gt;= 6.1.0)</code> <em>(Debian Bookworm)</em>; <code>libebml5 (&gt;= 1.4.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libfaad2"><code>libfaad2 (&gt;= 2.7)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <a href="#core2-package-libfontconfig1"><code>libfontconfig1 (&gt;= 2.12.6)</code></a>; <a href="#core2-package-libfreetype6"><code>libfreetype6 (&gt;= 2.2.1)</code></a>; <a href="#core2-package-libfribidi0"><code>libfribidi0 (&gt;= 1.0.0)</code></a>; <code>libgcc-s1 (&gt;= 3.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgcrypt20"><code>libgcrypt20 (&gt;= 1.10.0)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.28.0)</code></a>; <a href="#core2-package-libgnutls30"><code>libgnutls30 (&gt;= 3.7.5)</code></a>; <a href="#core2-package-libgpg-error0"><code>libgpg-error0 (&gt;= 1.14)</code></a>; <a href="#core2-package-libharfbuzz0b"><code>libharfbuzz0b (&gt;= 0.9.4)</code></a>; <a href="#core2-package-libixml10"><code>libixml10 (&gt;= 1:1.8.0)</code></a>; <a href="#core2-package-libjpeg62-turbo"><code>libjpeg62-turbo (&gt;= 1.3.1)</code></a>; <code>libkate1 (&gt;= 0.3.0)</code> <em>(Debian Bookworm)</em>; <code>liblirc-client0</code> <em>(Debian Bookworm)</em>; <code>liblua5.2-0 (&gt;= 5.2.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmad0"><code>libmad0 (&gt;= 0.15.1b-3)</code></a>; <code>libmatroska7 (&gt;= 1.7.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmpcdec6"><code>libmpcdec6 (&gt;= 1:0.1~r435)</code></a>; <a href="#core2-package-libmpeg2-4"><code>libmpeg2-4 (&gt;= 0.5.1)</code></a>; <a href="#core2-package-libmpg123-0"><code>libmpg123-0 (&gt;= 1.28.0)</code></a>; <code>libmtp9 (&gt;= 1.1.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libncursesw6"><code>libncursesw6 (&gt;= 6)</code></a>; <a href="#core2-package-libnfs13"><code>libnfs13 (&gt;= 1.9.7)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.1.0)</code></a>; <code>libopenmpt-modplug1 (&gt;= 0.8.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopus0"><code>libopus0 (&gt;= 1.3~beta+20180516)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpostproc56"><code>libpostproc56 (&gt;= 7:5.0)</code></a>; <code>libprotobuf-lite32 (&gt;= 3.21.12)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 1.0)</code></a>; <code>libraw1394-11 (&gt;= 2.1.2)</code> <em>(Debian Bookworm)</em>; <code>libresid-builder0c2a</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.14.4)</code></a>; <a href="#core2-package-libsamplerate0"><code>libsamplerate0 (&gt;= 0.1.7)</code></a>; <code>libsdl-image1.2 (&gt;= 1.2.10)</code> <em>(Debian Bookworm)</em>; <code>libsdl1.2debian (&gt;= 1.2.15)</code> <em>(Debian Bookworm)</em>; <code>libsecret-1-0 (&gt;= 0.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libshine3"><code>libshine3 (&gt;= 3.1.0)</code></a>; <a href="#core2-package-libshout3"><code>libshout3 (&gt;= 2.2.2)</code></a>; <code>libsidplay2</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libsoxr0"><code>libsoxr0 (&gt;= 0.1.2)</code></a>; <code>libspatialaudio0 (&gt;= 0.3.0+git20180730+dfsg1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libspeex1"><code>libspeex1 (&gt;= 1.2~)</code></a>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libssh2-1"><code>libssh2-1 (&gt;= 1.2.3)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libswscale6"><code>libswscale6 (&gt;= 7:5.0)</code></a>; <a href="#core2-package-libsystemd0"><code>libsystemd0</code></a>; <code>libtag1v5 (&gt;= 1.11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtheora0"><code>libtheora0 (&gt;= 1.0)</code></a>; <a href="#core2-package-libtinfo6"><code>libtinfo6 (&gt;= 6)</code></a>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.6)</code></a>; <a href="#core2-package-libudev1"><code>libudev1 (&gt;= 183)</code></a>; <a href="#core2-package-libupnp13"><code>libupnp13 (&gt;= 1:1.8.3)</code></a>; <a href="#core2-package-libva-drm2"><code>libva-drm2 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libva2"><code>libva2 (&gt;= 2.2.0)</code></a>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libx264-164"><code>libx264-164 (&gt;= 2:0.164.3095+gitbaee400)</code></a>; <a href="#core2-package-libx265-199"><code>libx265-199 (&gt;= 3.5)</code></a>; <code>libxcb-keysyms1 (&gt;= 0.4.0)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libxcb1"><code>libxcb1</code></a>; <a href="#core2-package-libxml2"><code>libxml2 (&gt;= 2.7.4)</code></a>; <a href="#core2-package-libzvbi0"><code>libzvbi0 (&gt;= 0.2.35)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
 <summary id="core2-package-vlc-plugin-fluidsynth"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852">vlc-plugin-fluidsynth 3.0.23-0+deb12u1</a></code></summary>
 
-- **Depends:** one of: <code>fluid-soundfont-gm</code> <em>(Debian Bookworm)</em> | <code>timgm6mb-soundfont</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.27)</code></a>; <code>libfluidsynth3 (&gt;= 2.0.5)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
+- **Depends:** one of: <code>fluid-soundfont-gm</code> <em>(Debian Bookworm)</em> | <a href="#core2-package-timgm6mb-soundfont"><code>timgm6mb-soundfont</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.27)</code></a>; <a href="#core2-package-libfluidsynth3"><code>libfluidsynth3 (&gt;= 2.0.5)</code></a>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
 
 </details>
 
 <details>
 <summary id="core2-package-vlc-plugin-jack"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852">vlc-plugin-jack 3.0.23-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.8)</code></a>; one of: <code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code> <em>(Debian Bookworm)</em> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.8)</code></a>; one of: <a href="#core2-package-libjack-jackd2-0"><code>libjack-jackd2-0 (&gt;= 1.9.10+20150825)</code></a> | <code>libjack-0.125</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -5586,7 +7094,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <details>
 <summary id="core2-package-vlc-plugin-svg"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-vlc-3.0.23-0-deb12u1-core2.1-20261016151852">vlc-plugin-svg 3.0.23-0+deb12u1</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.13.1)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <code>librsvg2-2 (&gt;= 2.14.4)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libcairo2"><code>libcairo2 (&gt;= 1.13.1)</code></a>; <a href="#core2-package-libglib2.0-0"><code>libglib2.0-0 (&gt;= 2.12.0)</code></a>; <a href="#core2-package-librsvg2-2"><code>librsvg2-2 (&gt;= 2.14.4)</code></a>; <a href="#core2-package-libvlccore9"><code>libvlccore9 (&gt;= 3.0.23)</code></a>; <code>vlc-plugin-abi-3-0-0f</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -5633,6 +7141,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
+<summary id="core2-package-wildmidi"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wildmidi-0.4.3-1-core2.1-20261109025605">wildmidi 0.4.3-1 — software MIDI player</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libwildmidi2"><code>libwildmidi2 (&gt;= 0.4.0)</code></a>
+
+</details>
+
+<details>
 <summary id="core2-package-wimtools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-wimlib-1.13.6-1-core2.1-20261012055555">wimtools 1.13.6-1 — Tools for manipulating Windows Imaging files</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libwim15"><code>libwim15 (&gt;= 1.13.0)</code></a>
@@ -5671,6 +7186,13 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 <summary id="core2-package-xpdf"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-xpdf-3.04-git20220601-1-core2.1-20261012055410">xpdf 3.04+git20220601-1 — Motif-based PDF reader using the Poppler library</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <code>libgcc-s1 (&gt;= 3.0)</code> <em>(Debian Bookworm)</em>; <code>libpaper1</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libpoppler126"><code>libpoppler126 (&gt;= 22.12.0)</code></a>; <code>libstdc++6 (&gt;= 11)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libx11-6"><code>libx11-6</code></a>; <code>libxm4 (&gt;= 2.3.4)</code> <em>(Debian Bookworm)</em>; <code>libxt6</code> <em>(Debian Bookworm)</em>
+
+</details>
+
+<details>
+<summary id="core2-package-yajl-tools"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-yajl-2.1.0-3-deb12u2-core2.1-20261109025615">yajl-tools 2.1.0-3+deb12u2</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libyajl2"><code>libyajl2 (&gt;= 2.1.0)</code></a>
 
 </details>
 
@@ -5716,9 +7238,24 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 
 </details>
 
+<details>
+<summary id="core2-package-zvbi"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zvbi-0.2.41-1-deb12u1-core2.1-20261109025750">zvbi 0.2.41-1+deb12u1 — Vertical Blanking Interval (VBI) utilities</a></code></summary>
+
+- **Pre-Depends:** <code>init-system-helpers (&gt;= 1.54~)</code> <em>(Debian Bookworm)</em>
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libzvbi0"><code>libzvbi0 (&gt;= 0.2.35)</code></a>
+
 </details>
 
-**Runtime binary packages in tree:** 803. Development, documentation, and debug packages remain in the download index.
+<details>
+<summary id="core2-package-zziplib-bin"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-zziplib-0.13.72-dfsg.1-1.1-core2.1-20261109025840">zziplib-bin 0.13.72+dfsg.1-1.1</a></code></summary>
+
+- **Depends:** <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; <a href="#core2-package-libzzip-0-13"><code>libzzip-0-13 (&gt;= 0.13.56)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
+
+</details>
+
+</details>
+
+**Runtime binary packages in tree:** 1022. Development, documentation, and debug packages remain in the download index.
 <!-- CORE2-PACKAGE-DEPENDENCY-TREE:END -->
 
 ## Latest package releases
@@ -5726,6 +7263,686 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### zeromq3 (optimized)
+Version: `4.3.4-6+core2.1~20261109025733` · Published: 2026-11-09 03:00:50 UTC
+**Description:** lightweight messaging kernel (shared library)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zeromq3`
+**Main .deb:** [libzmq5_4.3.4-6+core2.1.20261109025733_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zeromq3-4.3.4-6-core2.1-20261109025733/libzmq5_4.3.4-6%2Bcore2.1.20261109025733_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zeromq3-4.3.4-6-core2.1-20261109025733)
+
+### wavpack (optimized)
+Version: `5.6.0-1+core2.1~20261109025602` · Published: 2026-11-09 03:00:25 UTC
+**Description:** audio codec (lossy and lossless) - encoder and decoder
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wavpack`
+**Main .deb:** [wavpack_5.6.0-1+core2.1.20261109025602_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wavpack-5.6.0-1-core2.1-20261109025602/wavpack_5.6.0-1%2Bcore2.1.20261109025602_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wavpack-5.6.0-1-core2.1-20261109025602)
+
+### zziplib (optimized)
+Version: `0.13.72+dfsg.1-1.1+core2.1~20261109025840` · Published: 2026-11-09 02:59:39 UTC
+**Description:** library providing read access on ZIP-archives - library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zziplib`
+**Main .deb:** [libzzip-0-13_0.13.72+dfsg.1-1.1+core2.1.20261109025840_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zziplib-0.13.72-dfsg.1-1.1-core2.1-20261109025840/libzzip-0-13_0.13.72%2Bdfsg.1-1.1%2Bcore2.1.20261109025840_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zziplib-0.13.72-dfsg.1-1.1-core2.1-20261109025840)
+
+### openldap (optimized)
+Version: `2.5.13+dfsg-5+core2.1~20261109024124` · Published: 2026-11-09 02:59:16 UTC
+**Description:** OpenLDAP utilities
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openldap`
+**Main .deb:** [ldap-utils_2.5.13+dfsg-5+core2.1.20261109024124_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124/ldap-utils_2.5.13%2Bdfsg-5%2Bcore2.1.20261109024124_amd64.deb)
+**Binary packages in release:** 9
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openldap-2.5.13-dfsg-5-core2.1-20261109024124)
+
+### zvbi (optimized)
+Version: `0.2.41-1+deb12u1+core2.1~20261109025750` · Published: 2026-11-09 02:59:05 UTC
+**Description:** Vertical Blanking Interval (VBI) utilities
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - zvbi`
+**Main .deb:** [zvbi_0.2.41-1+deb12u1+core2.1.20261109025750_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-zvbi-0.2.41-1-deb12u1-core2.1-20261109025750/zvbi_0.2.41-1%2Bdeb12u1%2Bcore2.1.20261109025750_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-zvbi-0.2.41-1-deb12u1-core2.1-20261109025750)
+
+### webrtc-audio-processing (optimized)
+Version: `0.3-1+core2.1~20261109025612` · Published: 2026-11-09 02:58:05 UTC
+**Description:** AudioProcessing module from the WebRTC project.
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - webrtc-audio-processing`
+**Main .deb:** [libwebrtc-audio-processing1_0.3-1+core2.1.20261109025612_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-webrtc-audio-processing-0.3-1-core2.1-20261109025612/libwebrtc-audio-processing1_0.3-1%2Bcore2.1.20261109025612_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-webrtc-audio-processing-0.3-1-core2.1-20261109025612)
+
+### yajl (optimized)
+Version: `2.1.0-3+deb12u2+core2.1~20261109025615` · Published: 2026-11-09 02:56:59 UTC
+**Description:** Yet Another JSON Library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - yajl`
+**Main .deb:** [libyajl2_2.1.0-3+deb12u2+core2.1.20261109025615_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-yajl-2.1.0-3-deb12u2-core2.1-20261109025615/libyajl2_2.1.0-3%2Bdeb12u2%2Bcore2.1.20261109025615_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-yajl-2.1.0-3-deb12u2-core2.1-20261109025615)
+
+### wildmidi (optimized)
+Version: `0.4.3-1+core2.1~20261109025605` · Published: 2026-11-09 02:56:54 UTC
+**Description:** software MIDI player
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - wildmidi`
+**Main .deb:** [wildmidi_0.4.3-1+core2.1.20261109025605_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-wildmidi-0.4.3-1-core2.1-20261109025605/wildmidi_0.4.3-1%2Bcore2.1.20261109025605_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-wildmidi-0.4.3-1-core2.1-20261109025605)
+
+### underscore (optimized)
+Version: `1.13.4~dfsg+~1.11.4-3+core2.1~20261109025448` · Published: 2026-11-09 02:55:38 UTC
+**Description:** JavaScript's functional programming helper library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - underscore`
+**Main .deb:** [libjs-underscore_1.13.4.dfsg+.1.11.4-3+core2.1.20261109025448_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-underscore-1.13.4-dfsg-1.11.4-3-core2.1-20261109025448/libjs-underscore_1.13.4.dfsg%2B.1.11.4-3%2Bcore2.1.20261109025448_all.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-underscore-1.13.4-dfsg-1.11.4-3-core2.1-20261109025448)
+
+### tevent (optimized)
+Version: `0.14.1-1+core2.1~20261109025346` · Published: 2026-11-09 02:55:26 UTC
+**Description:** talloc-based event loop library - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tevent`
+**Main .deb:** [libtevent0_0.14.1-1+core2.1.20261109025346_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tevent-0.14.1-1-core2.1-20261109025346/libtevent0_0.14.1-1%2Bcore2.1.20261109025346_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tevent-0.14.1-1-core2.1-20261109025346)
+
+### twolame (optimized)
+Version: `0.4.0-2+core2.1~20261109025433` · Published: 2026-11-09 02:55:24 UTC
+**Description:** MPEG Audio Layer 2 encoder (command line frontend)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - twolame`
+**Main .deb:** [twolame_0.4.0-2+core2.1.20261109025433_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-twolame-0.4.0-2-core2.1-20261109025433/twolame_0.4.0-2%2Bcore2.1.20261109025433_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-twolame-0.4.0-2-core2.1-20261109025433)
+
+### tdb (optimized)
+Version: `1.4.8-2+core2.1~20261109025328` · Published: 2026-11-09 02:54:54 UTC
+**Description:** Trivial Database - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - tdb`
+**Main .deb:** [libtdb1_1.4.8-2+core2.1.20261109025328_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-tdb-1.4.8-2-core2.1-20261109025328/libtdb1_1.4.8-2%2Bcore2.1.20261109025328_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-tdb-1.4.8-2-core2.1-20261109025328)
+
+### timgm6mb-soundfont (optimized)
+Version: `1.3-5+core2.1~20261109025350` · Published: 2026-11-09 02:54:31 UTC
+**Description:** TimGM6mb SoundFont from MuseScore 1.3
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - timgm6mb-soundfont`
+**Main .deb:** [timgm6mb-soundfont_1.3-5+core2.1.20261109025350_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-timgm6mb-soundfont-1.3-5-core2.1-20261109025350/timgm6mb-soundfont_1.3-5%2Bcore2.1.20261109025350_all.deb)
+**Binary packages in release:** 1
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-timgm6mb-soundfont-1.3-5-core2.1-20261109025350)
+
+### talloc (optimized)
+Version: `2.4.0-f2+core2.1~20261109025224` · Published: 2026-11-09 02:53:54 UTC
+**Description:** hierarchical pool based memory allocator
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - talloc`
+**Main .deb:** [libtalloc2_2.4.0-f2+core2.1.20261109025224_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-talloc-2.4.0-f2-core2.1-20261109025224/libtalloc2_2.4.0-f2%2Bcore2.1.20261109025224_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-talloc-2.4.0-f2-core2.1-20261109025224)
+
+### sqlite3 (optimized)
+Version: `3.40.1-2+deb12u2+core2.1~20261109024834` · Published: 2026-11-09 02:53:17 UTC
+**Description:** Command line interface for SQLite 3
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sqlite3`
+**Main .deb:** [sqlite3_3.40.1-2+deb12u2+core2.1.20261109024834_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834/sqlite3_3.40.1-2%2Bdeb12u2%2Bcore2.1.20261109024834_amd64.deb)
+**Binary packages in release:** 7
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sqlite3-3.40.1-2-deb12u2-core2.1-20261109024834)
+
+### srt (optimized)
+Version: `1.5.1-1+deb12u1+core2.1~20261109024856` · Published: 2026-11-09 02:53:13 UTC
+**Description:** Secure Reliable Transport UDP streaming library (GnuTLS flavour)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - srt`
+**Main .deb:** [libsrt1.5-gnutls_1.5.1-1+deb12u1+core2.1.20261109024856_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-srt-1.5.1-1-deb12u1-core2.1-20261109024856/libsrt1.5-gnutls_1.5.1-1%2Bdeb12u1%2Bcore2.1.20261109024856_amd64.deb)
+**Binary packages in release:** 6
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-srt-1.5.1-1-deb12u1-core2.1-20261109024856)
+
+### sysvinit (optimized)
+Version: `3.06-4+core2.1~20261109025204` · Published: 2026-11-09 02:52:54 UTC
+**Description:** daemon to log boot messages
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sysvinit`
+**Main .deb:** [bootlogd_3.06-4+core2.1.20261109025204_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sysvinit-3.06-4-core2.1-20261109025204/bootlogd_3.06-4%2Bcore2.1.20261109025204_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sysvinit-3.06-4-core2.1-20261109025204)
+
+### rust-rav1e (optimized)
+Version: `0.5.1-6+core2.1~20261109024505` · Published: 2026-11-09 02:52:50 UTC
+**Description:** Fastest and safest AV1 encoder - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rust-rav1e`
+**Main .deb:** [librav1e0_0.5.1-6+core2.1.20261109024505_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rust-rav1e-0.5.1-6-core2.1-20261109024505/librav1e0_0.5.1-6%2Bcore2.1.20261109024505_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rust-rav1e-0.5.1-6-core2.1-20261109024505)
+
+### librsvg (optimized)
+Version: `2.54.7+dfsg-1~deb12u1+core2.1~20261109023403` · Published: 2026-11-09 02:51:28 UTC
+**Description:** gir files for renderer library for SVG files
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - librsvg`
+**Main .deb:** [gir1.2-rsvg-2.0_2.54.7+dfsg-1.deb12u1+core2.1.20261109023403_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403/gir1.2-rsvg-2.0_2.54.7%2Bdfsg-1.deb12u1%2Bcore2.1.20261109023403_amd64.deb)
+**Binary packages in release:** 7
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-librsvg-2.54.7-dfsg-1-deb12u1-core2.1-20261109023403)
+
+### sphinx (optimized)
+Version: `5.3.0-4+core2.1~20261109024826` · Published: 2026-11-09 02:51:18 UTC
+**Description:** JavaScript support for Sphinx documentation
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sphinx`
+**Main .deb:** [libjs-sphinxdoc_5.3.0-4+core2.1.20261109024826_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sphinx-5.3.0-4-core2.1-20261109024826/libjs-sphinxdoc_5.3.0-4%2Bcore2.1.20261109024826_all.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sphinx-5.3.0-4-core2.1-20261109024826)
+
+### speex (optimized)
+Version: `1.2.1-2+core2.1~20261109024712` · Published: 2026-11-09 02:48:04 UTC
+**Description:** The Speex codec command line tools
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - speex`
+**Main .deb:** [speex_1.2.1-2+core2.1.20261109024712_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-speex-1.2.1-2-core2.1-20261109024712/speex_1.2.1-2%2Bcore2.1.20261109024712_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-speex-1.2.1-2-core2.1-20261109024712)
+
+### sndio (optimized)
+Version: `1.9.0-0.3+core2.1~20261109024644` · Published: 2026-11-09 02:47:43 UTC
+**Description:** Small audio and MIDI framework from OpenBSD, runtime libraries
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sndio`
+**Main .deb:** [libsndio7.0_1.9.0-0.3+core2.1.20261109024644_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-sndio-1.9.0-0.3-core2.1-20261109024644/libsndio7.0_1.9.0-0.3%2Bcore2.1.20261109024644_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-sndio-1.9.0-0.3-core2.1-20261109024644)
+
+### snappy (optimized)
+Version: `1.1.9-3+core2.1~20261109024611` · Published: 2026-11-09 02:46:58 UTC
+**Description:** fast compression/decompression library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - snappy`
+**Main .deb:** [libsnappy1v5_1.1.9-3+core2.1.20261109024611_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-snappy-1.1.9-3-core2.1-20261109024611/libsnappy1v5_1.1.9-3%2Bcore2.1.20261109024611_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-snappy-1.1.9-3-core2.1-20261109024611)
+
+### shine (optimized)
+Version: `3.1.1-2+core2.1~20261109024529` · Published: 2026-11-09 02:46:16 UTC
+**Description:** Fixed-point MP3 encoding library - runtime files
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - shine`
+**Main .deb:** [libshine3_3.1.1-2+core2.1.20261109024529_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-shine-3.1.1-2-core2.1-20261109024529/libshine3_3.1.1-2%2Bcore2.1.20261109024529_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-shine-3.1.1-2-core2.1-20261109024529)
+
+### pipewire (optimized)
+Version: `0.3.65-3+deb12u1+core2.1~20261109024247` · Published: 2026-11-09 02:45:59 UTC
+**Description:** audio and video processing engine multimedia server
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pipewire`
+**Main .deb:** [pipewire_0.3.65-3+deb12u1+core2.1.20261109024247_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247/pipewire_0.3.65-3%2Bdeb12u1%2Bcore2.1.20261109024247_amd64.deb)
+**Binary packages in release:** 21
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pipewire-0.3.65-3-deb12u1-core2.1-20261109024247)
+
+### pulseaudio (optimized)
+Version: `16.1+dfsg1-2+core2.1~20261109024326` · Published: 2026-11-09 02:45:35 UTC
+**Description:** PulseAudio sound server
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pulseaudio`
+**Main .deb:** [pulseaudio_16.1+dfsg1-2+core2.1.20261109024326_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326/pulseaudio_16.1%2Bdfsg1-2%2Bcore2.1.20261109024326_amd64.deb)
+**Binary packages in release:** 13
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pulseaudio-16.1-dfsg1-2-core2.1-20261109024326)
+
+### pupnp-1.8 (optimized)
+Version: `1:1.8.4-2+core2.1~20261109024311` · Published: 2026-11-09 02:44:42 UTC
+**Description:** Portable SDK for UPnP Devices, version 1.8 (ixml shared library)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - pupnp-1.8`
+**Main .deb:** [libixml10_1.8.4-2+core2.1.20261109024311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-pupnp-1.8-1-1.8.4-2-core2.1-20261109024311/libixml10_1.8.4-2%2Bcore2.1.20261109024311_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-pupnp-1.8-1-1.8.4-2-core2.1-20261109024311)
+
+### rtmpdump (optimized)
+Version: `2.4+20151223.gitfa8646d.1-2+core2.1~20261109024310` · Published: 2026-11-09 02:43:53 UTC
+**Description:** small dumper for media content streamed over the RTMP protocol
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - rtmpdump`
+**Main .deb:** [rtmpdump_2.4+20151223.gitfa8646d.1-2+core2.1.20261109024310_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-rtmpdump-2.4-20151223.gitfa8646d.1-2-core2.1-20261109024310/rtmpdump_2.4%2B20151223.gitfa8646d.1-2%2Bcore2.1.20261109024310_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-rtmpdump-2.4-20151223.gitfa8646d.1-2-core2.1-20261109024310)
+
+### popt (optimized)
+Version: `1.19+dfsg-1+core2.1~20261109024228` · Published: 2026-11-09 02:43:19 UTC
+**Description:** lib for parsing cmdline parameters
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - popt`
+**Main .deb:** [libpopt0_1.19+dfsg-1+core2.1.20261109024228_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-popt-1.19-dfsg-1-core2.1-20261109024228/libpopt0_1.19%2Bdfsg-1%2Bcore2.1.20261109024228_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-popt-1.19-dfsg-1-core2.1-20261109024228)
+
+### openal-soft (optimized)
+Version: `1:1.19.1-2+core2.1~20261109024128` · Published: 2026-11-09 02:42:29 UTC
+**Description:** Software implementation of the OpenAL audio API (data files)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - openal-soft`
+**Main .deb:** [libopenal-data_1.19.1-2+core2.1.20261109024128_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128/libopenal-data_1.19.1-2%2Bcore2.1.20261109024128_all.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-openal-soft-1-1.19.1-2-core2.1-20261109024128)
+
+### numactl (optimized)
+Version: `2.0.16-1+core2.1~20261109024127` · Published: 2026-11-09 02:42:18 UTC
+**Description:** NUMA scheduling and memory placement tool
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - numactl`
+**Main .deb:** [numactl_2.0.16-1+core2.1.20261109024127_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-numactl-2.0.16-1-core2.1-20261109024127/numactl_2.0.16-1%2Bcore2.1.20261109024127_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-numactl-2.0.16-1-core2.1-20261109024127)
+
+### ocl-icd (optimized)
+Version: `2.3.1-1+core2.1~20261109024129` · Published: 2026-11-09 02:42:16 UTC
+**Description:** Generic OpenCL ICD Loader
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - ocl-icd`
+**Main .deb:** [ocl-icd-libopencl1_2.3.1-1+core2.1.20261109024129_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-ocl-icd-2.3.1-1-core2.1-20261109024129/ocl-icd-libopencl1_2.3.1-1%2Bcore2.1.20261109024129_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-ocl-icd-2.3.1-1-core2.1-20261109024129)
+
+### nghttp2 (optimized)
+Version: `1.52.0-1+deb12u3+core2.1~20261109023940` · Published: 2026-11-09 02:41:46 UTC
+**Description:** server, proxy and client implementing HTTP/2
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - nghttp2`
+**Main .deb:** [nghttp2_1.52.0-1+deb12u3+core2.1.20261109023940_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940/nghttp2_1.52.0-1%2Bdeb12u3%2Bcore2.1.20261109023940_all.deb)
+**Binary packages in release:** 7
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-nghttp2-1.52.0-1-deb12u3-core2.1-20261109023940)
+
+### mbedtls (optimized)
+Version: `2.28.3-1+core2.1~20261109023923` · Published: 2026-11-09 02:41:36 UTC
+**Description:** lightweight crypto and SSL/TLS library - crypto library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mbedtls`
+**Main .deb:** [libmbedcrypto7_2.28.3-1+core2.1.20261109023923_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mbedtls-2.28.3-1-core2.1-20261109023923/libmbedcrypto7_2.28.3-1%2Bcore2.1.20261109023923_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mbedtls-2.28.3-1-core2.1-20261109023923)
+
+### norm (optimized)
+Version: `1.5.9+dfsg-2+core2.1~20261109023945` · Published: 2026-11-09 02:40:44 UTC
+**Description:** NACK-Oriented Reliable Multicast (NORM) library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - norm`
+**Main .deb:** [libnorm1_1.5.9+dfsg-2+core2.1.20261109023945_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-norm-1.5.9-dfsg-2-core2.1-20261109023945/libnorm1_1.5.9%2Bdfsg-2%2Bcore2.1.20261109023945_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-norm-1.5.9-dfsg-2-core2.1-20261109023945)
+
+### node-jquery (optimized)
+Version: `3.6.1+dfsg+~3.5.14-1+core2.1~20261109023955` · Published: 2026-11-09 02:40:43 UTC
+**Description:** NodeJS wrapper for jQuery
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - node-jquery`
+**Main .deb:** [node-jquery_3.6.1+dfsg+.3.5.14-1+core2.1.20261109023955_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-node-jquery-3.6.1-dfsg-3.5.14-1-core2.1-20261109023955/node-jquery_3.6.1%2Bdfsg%2B.3.5.14-1%2Bcore2.1.20261109023955_all.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-node-jquery-3.6.1-dfsg-3.5.14-1-core2.1-20261109023955)
+
+### mpg123 (optimized)
+Version: `1.31.2-1+deb12u1+core2.1~20261109023927` · Published: 2026-11-09 02:40:41 UTC
+**Description:** MPEG layer 1/2/3 audio player
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - mpg123`
+**Main .deb:** [mpg123_1.31.2-1+deb12u1+core2.1.20261109023927_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927/mpg123_1.31.2-1%2Bdeb12u1%2Bcore2.1.20261109023927_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mpg123-1.31.2-1-deb12u1-core2.1-20261109023927)
+
+### liburing (optimized)
+Version: `2.3-3+core2.1~20261109023724` · Published: 2026-11-09 02:40:40 UTC
+**Description:** Linux kernel io_uring access library - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - liburing`
+**Main .deb:** [liburing2_2.3-3+core2.1.20261109023724_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-liburing-2.3-3-core2.1-20261109023724/liburing2_2.3-3%2Bcore2.1.20261109023724_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-liburing-2.3-3-core2.1-20261109023724)
+
+### lmdb (optimized)
+Version: `0.9.24-1+core2.1~20261109023753` · Published: 2026-11-09 02:38:52 UTC
+**Description:** Lightning Memory-Mapped Database shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - lmdb`
+**Main .deb:** [liblmdb0_0.9.24-1+core2.1.20261109023753_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-lmdb-0.9.24-1-core2.1-20261109023753/liblmdb0_0.9.24-1%2Bcore2.1.20261109023753_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-lmdb-0.9.24-1-core2.1-20261109023753)
+
+### libxss (optimized)
+Version: `1:1.2.3-1+core2.1~20261109023753` · Published: 2026-11-09 02:38:52 UTC
+**Description:** X11 Screen Saver extension library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libxss`
+**Main .deb:** [libxss1_1.2.3-1+core2.1.20261109023753_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libxss-1-1.2.3-1-core2.1-20261109023753/libxss1_1.2.3-1%2Bcore2.1.20261109023753_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libxss-1-1.2.3-1-core2.1-20261109023753)
+
+### libssh (optimized)
+Version: `0.10.6-0+deb12u3+core2.1~20261109023631` · Published: 2026-11-09 02:38:38 UTC
+**Description:** tiny C SSH library (OpenSSL flavor)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libssh`
+**Main .deb:** [libssh-4_0.10.6-0+deb12u3+core2.1.20261109023631_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libssh-0.10.6-0-deb12u3-core2.1-20261109023631/libssh-4_0.10.6-0%2Bdeb12u3%2Bcore2.1.20261109023631_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libssh-0.10.6-0-deb12u3-core2.1-20261109023631)
+
+### libvorbis (optimized)
+Version: `1.3.7-1+core2.1~20261109023723` · Published: 2026-11-09 02:38:25 UTC
+**Description:** decoder library for Vorbis General Audio Compression Codec
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libvorbis`
+**Main .deb:** [libvorbis0a_1.3.7-1+core2.1.20261109023723_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libvorbis-1.3.7-1-core2.1-20261109023723/libvorbis0a_1.3.7-1%2Bcore2.1.20261109023723_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libvorbis-1.3.7-1-core2.1-20261109023723)
+
+### libudfread (optimized)
+Version: `1.1.2-1+core2.1~20261109023717` · Published: 2026-11-09 02:38:04 UTC
+**Description:** UDF reader library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libudfread`
+**Main .deb:** [libudfread0_1.1.2-1+core2.1.20261109023717_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libudfread-1.1.2-1-core2.1-20261109023717/libudfread0_1.1.2-1%2Bcore2.1.20261109023717_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libudfread-1.1.2-1-core2.1-20261109023717)
+
+### libsoxr (optimized)
+Version: `0.1.3-4+core2.1~20261109023624` · Published: 2026-11-09 02:37:07 UTC
+**Description:** High quality 1D sample-rate conversion library (libsamplerate bindings)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsoxr`
+**Main .deb:** [libsoxr-lsr0_0.1.3-4+core2.1.20261109023624_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsoxr-0.1.3-4-core2.1-20261109023624/libsoxr-lsr0_0.1.3-4%2Bcore2.1.20261109023624_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsoxr-0.1.3-4-core2.1-20261109023624)
+
+### libsodium (optimized)
+Version: `1.0.18-1+deb12u1+core2.1~20261109023539` · Published: 2026-11-09 02:37:00 UTC
+**Description:** Network communication, cryptography and signaturing library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsodium`
+**Main .deb:** [libsodium23_1.0.18-1+deb12u1+core2.1.20261109023539_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsodium-1.0.18-1-deb12u1-core2.1-20261109023539/libsodium23_1.0.18-1%2Bdeb12u1%2Bcore2.1.20261109023539_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsodium-1.0.18-1-deb12u1-core2.1-20261109023539)
+
+### libsndfile (optimized)
+Version: `1.2.0-1+deb12u1+core2.1~20261109023503` · Published: 2026-11-09 02:36:32 UTC
+**Description:** Library for reading/writing audio files
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsndfile`
+**Main .deb:** [libsndfile1_1.2.0-1+deb12u1+core2.1.20261109023503_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsndfile-1.2.0-1-deb12u1-core2.1-20261109023503/libsndfile1_1.2.0-1%2Bdeb12u1%2Bcore2.1.20261109023503_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsndfile-1.2.0-1-deb12u1-core2.1-20261109023503)
+
+### jpeg-xl (optimized)
+Version: `0.7.0-10+deb12u1+core2.1~20261109022508` · Published: 2026-11-09 02:36:32 UTC
+**Description:** JPEG XL Image Coding System - "JXL" (java bindings)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - jpeg-xl`
+**Main .deb:** [libjpegxl-java_0.7.0-10+deb12u1+core2.1.20261109022508_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508/libjpegxl-java_0.7.0-10%2Bdeb12u1%2Bcore2.1.20261109022508_amd64.deb)
+**Binary packages in release:** 6
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-jpeg-xl-0.7.0-10-deb12u1-core2.1-20261109022508)
+
+### libsidplayfp (optimized)
+Version: `2.4.2-1+core2.1~20261109023502` · Published: 2026-11-09 02:36:31 UTC
+**Description:** Library to play Commodore 64 music based on libsidplay2
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsidplayfp`
+**Main .deb:** [libsidplayfp6_2.4.2-1+core2.1.20261109023502_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsidplayfp-2.4.2-1-core2.1-20261109023502/libsidplayfp6_2.4.2-1%2Bcore2.1.20261109023502_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsidplayfp-2.4.2-1-core2.1-20261109023502)
+
+### librist (optimized)
+Version: `0.2.7+dfsg-1+core2.1~20261109023315` · Published: 2026-11-09 02:35:45 UTC
+**Description:** Reliable Internet Stream Transport -- shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - librist`
+**Main .deb:** [librist4_0.2.7+dfsg-1+core2.1.20261109023315_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-librist-0.2.7-dfsg-1-core2.1-20261109023315/librist4_0.2.7%2Bdfsg-1%2Bcore2.1.20261109023315_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-librist-0.2.7-dfsg-1-core2.1-20261109023315)
+
+### libshout (optimized)
+Version: `2.4.6-1+core2.1~20261109023428` · Published: 2026-11-09 02:35:35 UTC
+**Description:** MP3/Ogg Vorbis broadcast streaming library - commandline tools
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libshout`
+**Main .deb:** [libshout-tools_2.4.6-1+core2.1.20261109023428_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libshout-2.4.6-1-core2.1-20261109023428/libshout-tools_2.4.6-1%2Bcore2.1.20261109023428_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libshout-2.4.6-1-core2.1-20261109023428)
+
+### libsamplerate (optimized)
+Version: `0.2.2-3+core2.1~20261109023334` · Published: 2026-11-09 02:34:42 UTC
+**Description:** Audio sample rate conversion library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libsamplerate`
+**Main .deb:** [libsamplerate0_0.2.2-3+core2.1.20261109023334_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libsamplerate-0.2.2-3-core2.1-20261109023334/libsamplerate0_0.2.2-3%2Bcore2.1.20261109023334_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libsamplerate-0.2.2-3-core2.1-20261109023334)
+
+### librabbitmq (optimized)
+Version: `0.11.0-1+deb12u3+core2.1~20261109023321` · Published: 2026-11-09 02:34:16 UTC
+**Description:** Command-line utilities for interacting with AMQP servers
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - librabbitmq`
+**Main .deb:** [amqp-tools_0.11.0-1+deb12u3+core2.1.20261109023321_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-librabbitmq-0.11.0-1-deb12u3-core2.1-20261109023321/amqp-tools_0.11.0-1%2Bdeb12u3%2Bcore2.1.20261109023321_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-librabbitmq-0.11.0-1-deb12u3-core2.1-20261109023321)
+
+### libpsl (optimized)
+Version: `0.21.2-1+core2.1~20261109023315` · Published: 2026-11-09 02:34:10 UTC
+**Description:** Library for Public Suffix List (shared libraries)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpsl`
+**Main .deb:** [libpsl5_0.21.2-1+core2.1.20261109023315_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpsl-0.21.2-1-core2.1-20261109023315/libpsl5_0.21.2-1%2Bcore2.1.20261109023315_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpsl-0.21.2-1-core2.1-20261109023315)
+
+### libpgm (optimized)
+Version: `5.3.128~dfsg-2+core2.1~20261109023229` · Published: 2026-11-09 02:33:36 UTC
+**Description:** OpenPGM shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libpgm`
+**Main .deb:** [libpgm-5.3-0_5.3.128.dfsg-2+core2.1.20261109023229_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libpgm-5.3.128-dfsg-2-core2.1-20261109023229/libpgm-5.3-0_5.3.128.dfsg-2%2Bcore2.1.20261109023229_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libpgm-5.3.128-dfsg-2-core2.1-20261109023229)
+
+### libnfs (optimized)
+Version: `4.0.0-1+deb12u1+core2.1~20261109023205` · Published: 2026-11-09 02:32:57 UTC
+**Description:** NFS client library (binaries)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libnfs`
+**Main .deb:** [libnfs-utils_4.0.0-1+deb12u1+core2.1.20261109023205_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libnfs-4.0.0-1-deb12u1-core2.1-20261109023205/libnfs-utils_4.0.0-1%2Bdeb12u1%2Bcore2.1.20261109023205_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libnfs-4.0.0-1-deb12u1-core2.1-20261109023205)
+
+### libmpdclient (optimized)
+Version: `2.20-1+core2.1~20261109023208` · Published: 2026-11-09 02:32:57 UTC
+**Description:** client library for the Music Player Daemon
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmpdclient`
+**Main .deb:** [libmpdclient2_2.20-1+core2.1.20261109023208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmpdclient-2.20-1-core2.1-20261109023208/libmpdclient2_2.20-1%2Bcore2.1.20261109023208_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmpdclient-2.20-1-core2.1-20261109023208)
+
+### highway (optimized)
+Version: `1.0.3-3+deb12u1+core2.1~20261109022334` · Published: 2026-11-09 02:32:39 UTC
+**Description:** Efficient and performance-portable SIMD wrapper (runtime files)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - highway`
+**Main .deb:** [libhwy1_1.0.3-3+deb12u1+core2.1.20261109022334_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-highway-1.0.3-3-deb12u1-core2.1-20261109022334/libhwy1_1.0.3-3%2Bdeb12u1%2Bcore2.1.20261109022334_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-highway-1.0.3-3-deb12u1-core2.1-20261109022334)
+
+### libmpc (optimized)
+Version: `2:0.1~r495-2+core2.1~20261109023130` · Published: 2026-11-09 02:32:31 UTC
+**Description:** MusePack decoder - library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmpc`
+**Main .deb:** [libmpcdec6_0.1.r495-2+core2.1.20261109023130_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmpc-2-0.1-r495-2-core2.1-20261109023130/libmpcdec6_0.1.r495-2%2Bcore2.1.20261109023130_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmpc-2-0.1-r495-2-core2.1-20261109023130)
+
+### libmodplug (optimized)
+Version: `1:0.8.9.0-3+core2.1~20261109023131` · Published: 2026-11-09 02:32:25 UTC
+**Description:** shared libraries for mod music based on ModPlug
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmodplug`
+**Main .deb:** [libmodplug1_0.8.9.0-3+core2.1.20261109023131_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmodplug-1-0.8.9.0-3-core2.1-20261109023131/libmodplug1_0.8.9.0-3%2Bcore2.1.20261109023131_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmodplug-1-0.8.9.0-3-core2.1-20261109023131)
+
+### libmms (optimized)
+Version: `0.6.4-3+core2.1~20261109023047` · Published: 2026-11-09 02:31:38 UTC
+**Description:** MMS stream protocol library - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmms`
+**Main .deb:** [libmms0_0.6.4-3+core2.1.20261109023047_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmms-0.6.4-3-core2.1-20261109023047/libmms0_0.6.4-3%2Bcore2.1.20261109023047_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmms-0.6.4-3-core2.1-20261109023047)
+
+### libmikmod (optimized)
+Version: `3.3.11.1-7+core2.1~20261109023020` · Published: 2026-11-09 02:31:18 UTC
+**Description:** Portable sound library - transitional package
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmikmod`
+**Main .deb:** [libmikmod-config_3.3.11.1-7+core2.1.20261109023020_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmikmod-3.3.11.1-7-core2.1-20261109023020/libmikmod-config_3.3.11.1-7%2Bcore2.1.20261109023020_all.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmikmod-3.3.11.1-7-core2.1-20261109023020)
+
+### libid3tag (optimized)
+Version: `0.15.1b-14+core2.1~20261109023026` · Published: 2026-11-09 02:31:16 UTC
+**Description:** ID3 tag reading library from the MAD project
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libid3tag`
+**Main .deb:** [libid3tag0_0.15.1b-14+core2.1.20261109023026_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libid3tag-0.15.1b-14-core2.1-20261109023026/libid3tag0_0.15.1b-14%2Bcore2.1.20261109023026_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libid3tag-0.15.1b-14-core2.1-20261109023026)
+
+### libinstpatch (optimized)
+Version: `1.1.6-1+core2.1~20261109023002` · Published: 2026-11-09 02:30:52 UTC
+**Description:** MIDI instrument editing library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libinstpatch`
+**Main .deb:** [libinstpatch-1.0-2_1.1.6-1+core2.1.20261109023002_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libinstpatch-1.1.6-1-core2.1-20261109023002/libinstpatch-1.0-2_1.1.6-1%2Bcore2.1.20261109023002_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libinstpatch-1.1.6-1-core2.1-20261109023002)
+
+### libmad (optimized)
+Version: `0.15.1b-10.1+core2.1~20261109022953` · Published: 2026-11-09 02:30:42 UTC
+**Description:** MPEG audio decoder library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libmad`
+**Main .deb:** [libmad0_0.15.1b-10.1+core2.1.20261109022953_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libmad-0.15.1b-10.1-core2.1-20261109022953/libmad0_0.15.1b-10.1%2Bcore2.1.20261109022953_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libmad-0.15.1b-10.1-core2.1-20261109022953)
+
+### libgsm (optimized)
+Version: `1.0.22-1+core2.1~20261109022912` · Published: 2026-11-09 02:30:01 UTC
+**Description:** User binaries for a GSM speech compressor
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libgsm`
+**Main .deb:** [libgsm-tools_1.0.22-1+core2.1.20261109022912_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libgsm-1.0.22-1-core2.1-20261109022912/libgsm-tools_1.0.22-1%2Bcore2.1.20261109022912_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libgsm-1.0.22-1-core2.1-20261109022912)
+
+### intel-mediasdk (optimized)
+Version: `22.5.4-1+core2.1~20261109022357` · Published: 2026-11-09 02:29:23 UTC
+**Description:** Intel Media SDK -- tools
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - intel-mediasdk`
+**Main .deb:** [libmfx-tools_22.5.4-1+core2.1.20261109022357_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-intel-mediasdk-22.5.4-1-core2.1-20261109022357/libmfx-tools_22.5.4-1%2Bcore2.1.20261109022357_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-intel-mediasdk-22.5.4-1-core2.1-20261109022357)
+
+### libcdio (optimized)
+Version: `2.1.0-4+core2.1~20261109022756` · Published: 2026-11-09 02:29:17 UTC
+**Description:** C++ library to read and control CD-ROM
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libcdio`
+**Main .deb:** [libcdio++1_2.1.0-4+core2.1.20261109022756_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libcdio-2.1.0-4-core2.1-20261109022756/libcdio%2B%2B1_2.1.0-4%2Bcore2.1.20261109022756_amd64.deb)
+**Binary packages in release:** 11
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-2.1.0-4-core2.1-20261109022756)
+
+### libdecor-0 (optimized)
+Version: `0.1.1-2+core2.1~20261109022826` · Published: 2026-11-09 02:29:12 UTC
+**Description:** client-side window decoration library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libdecor-0`
+**Main .deb:** [libdecor-0-0_0.1.1-2+core2.1.20261109022826_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libdecor-0-0.1.1-2-core2.1-20261109022826/libdecor-0-0_0.1.1-2%2Bcore2.1.20261109022826_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libdecor-0-0.1.1-2-core2.1-20261109022826)
+
+### libcdio-paranoia (optimized)
+Version: `10.2+2.0.1-1+core2.1~20261109022807` · Published: 2026-11-09 02:29:06 UTC
+**Description:** audio CD reading utility which includes extra data verification features
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libcdio-paranoia`
+**Main .deb:** [cd-paranoia_10.2+2.0.1-1+core2.1.20261109022807_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libcdio-paranoia-10.2-2.0.1-1-core2.1-20261109022807/cd-paranoia_10.2%2B2.0.1-1%2Bcore2.1.20261109022807_amd64.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libcdio-paranoia-10.2-2.0.1-1-core2.1-20261109022807)
+
+### libbluray (optimized)
+Version: `1:1.3.4-1+core2.1~20261109022715` · Published: 2026-11-09 02:28:24 UTC
+**Description:** Blu-ray Disc Java support library (BD-J library)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libbluray`
+**Main .deb:** [libbluray-bdj_1.3.4-1+core2.1.20261109022715_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libbluray-1-1.3.4-1-core2.1-20261109022715/libbluray-bdj_1.3.4-1%2Bcore2.1.20261109022715_all.deb)
+**Binary packages in release:** 5
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libbluray-1-1.3.4-1-core2.1-20261109022715)
+
+### libbinio (optimized)
+Version: `1.5+dfsg-0.1+core2.1~20261109022639` · Published: 2026-11-09 02:27:30 UTC
+**Description:** Binary I/O stream class library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libbinio`
+**Main .deb:** [libbinio1v5_1.5+dfsg-0.1+core2.1.20261109022639_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libbinio-1.5-dfsg-0.1-core2.1-20261109022639/libbinio1v5_1.5%2Bdfsg-0.1%2Bcore2.1.20261109022639_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libbinio-1.5-dfsg-0.1-core2.1-20261109022639)
+
+### libasyncns (optimized)
+Version: `0.8-6+core2.1~20261109022627` · Published: 2026-11-09 02:27:18 UTC
+**Description:** Asynchronous name service query library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libasyncns`
+**Main .deb:** [libasyncns0_0.8-6+core2.1.20261109022627_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libasyncns-0.8-6-core2.1-20261109022627/libasyncns0_0.8-6%2Bcore2.1.20261109022627_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libasyncns-0.8-6-core2.1-20261109022627)
+
+### libao (optimized)
+Version: `1.2.2+20180113-1.1+core2.1~20261109022624` · Published: 2026-11-09 02:27:10 UTC
+**Description:** Cross Platform Audio Output Library (Common files)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - libao`
+**Main .deb:** [libao-common_1.2.2+20180113-1.1+core2.1.20261109022624_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-libao-1.2.2-20180113-1.1-core2.1-20261109022624/libao-common_1.2.2%2B20180113-1.1%2Bcore2.1.20261109022624_all.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-libao-1.2.2-20180113-1.1-core2.1-20261109022624)
+
+### jackd2 (optimized)
+Version: `1.9.21~dfsg-3+core2.1~20261109022428` · Published: 2026-11-09 02:26:09 UTC
+**Description:** JACK Audio Connection Kit (server and example clients)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - jackd2`
+**Main .deb:** [jackd2_1.9.21.dfsg-3+core2.1.20261109022428_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-jackd2-1.9.21-dfsg-3-core2.1-20261109022428/jackd2_1.9.21.dfsg-3%2Bcore2.1.20261109022428_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-jackd2-1.9.21-dfsg-3-core2.1-20261109022428)
+
+### jansson (optimized)
+Version: `2.14-2+core2.1~20261109022448` · Published: 2026-11-09 02:25:53 UTC
+**Description:** C library for encoding, decoding and manipulating JSON data
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - jansson`
+**Main .deb:** [libjansson4_2.14-2+core2.1.20261109022448_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-jansson-2.14-2-core2.1-20261109022448/libjansson4_2.14-2%2Bcore2.1.20261109022448_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-jansson-2.14-2-core2.1-20261109022448)
+
+### fmtlib (optimized)
+Version: `9.1.0+ds1-2+core2.1~20261109022244` · Published: 2026-11-09 02:25:38 UTC
+**Description:** fast type-safe C++ formatting library -- library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fmtlib`
+**Main .deb:** [libfmt9_9.1.0+ds1-2+core2.1.20261109022244_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fmtlib-9.1.0-ds1-2-core2.1-20261109022244/libfmt9_9.1.0%2Bds1-2%2Bcore2.1.20261109022244_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-fmtlib-9.1.0-ds1-2-core2.1-20261109022244)
+
+### codec2 (optimized)
+Version: `1.0.5-1+core2.1~20261109022127` · Published: 2026-11-09 02:24:28 UTC
+**Description:** command line tools for handling Codec2 data
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - codec2`
+**Main .deb:** [codec2_1.0.5-1+core2.1.20261109022127_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-codec2-1.0.5-1-core2.1-20261109022127/codec2_1.0.5-1%2Bcore2.1.20261109022127_amd64.deb)
+**Binary packages in release:** 4
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-codec2-1.0.5-1-core2.1-20261109022127)
+
+### game-music-emu (optimized)
+Version: `0.6.3-6+core2.1~20261109022311` · Published: 2026-11-09 02:24:00 UTC
+**Description:** Playback library for video game music files - shared library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - game-music-emu`
+**Main .deb:** [libgme0_0.6.3-6+core2.1.20261109022311_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-game-music-emu-0.6.3-6-core2.1-20261109022311/libgme0_0.6.3-6%2Bcore2.1.20261109022311_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-game-music-emu-0.6.3-6-core2.1-20261109022311)
+
+### fluidsynth (optimized)
+Version: `2.3.1-2+core2.1~20261109022245` · Published: 2026-11-09 02:23:40 UTC
+**Description:** Real-time MIDI software synthesizer
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - fluidsynth`
+**Main .deb:** [fluidsynth_2.3.1-2+core2.1.20261109022245_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-fluidsynth-2.3.1-2-core2.1-20261109022245/fluidsynth_2.3.1-2%2Bcore2.1.20261109022245_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-fluidsynth-2.3.1-2-core2.1-20261109022245)
+
+### cyrus-sasl2 (optimized)
+Version: `2.1.28+dfsg-10+deb12u1+core2.1~20261109022120` · Published: 2026-11-09 02:23:16 UTC
+**Description:** Cyrus SASL - authentication abstraction library
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cyrus-sasl2`
+**Main .deb:** [libsasl2-2_2.1.28+dfsg-10+deb12u1+core2.1.20261109022120_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120/libsasl2-2_2.1.28%2Bdfsg-10%2Bdeb12u1%2Bcore2.1.20261109022120_amd64.deb)
+**Binary packages in release:** 11
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cyrus-sasl2-2.1.28-dfsg-10-deb12u1-core2.1-20261109022120)
+
+### faad2 (optimized)
+Version: `2.10.1-1+core2.1~20261109022208` · Published: 2026-11-09 02:23:10 UTC
+**Description:** freeware Advanced Audio Decoder player
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - faad2`
+**Main .deb:** [faad_2.10.1-1+core2.1.20261109022208_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-faad2-2.10.1-1-core2.1-20261109022208/faad_2.10.1-1%2Bcore2.1.20261109022208_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-faad2-2.10.1-1-core2.1-20261109022208)
+
+### alsa-lib (optimized)
+Version: `1.2.8-1+core2.1~20261109022127` · Published: 2026-11-09 02:22:44 UTC
+**Description:** Configuration files and profiles for ALSA drivers
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - alsa-lib`
+**Main .deb:** [libasound2-data_1.2.8-1+core2.1.20261109022127_all.deb](https://github.com/AmrUser-48/linux/releases/download/core2-alsa-lib-1.2.8-1-core2.1-20261109022127/libasound2-data_1.2.8-1%2Bcore2.1.20261109022127_all.deb)
+**Binary packages in release:** 7
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-alsa-lib-1.2.8-1-core2.1-20261109022127)
+
+### chromaprint (optimized)
+Version: `1.5.1-2+core2.1~20261109022124` · Published: 2026-11-09 02:22:35 UTC
+**Description:** audio fingerprinting library - tools
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - chromaprint`
+**Main .deb:** [libchromaprint-tools_1.5.1-2+core2.1.20261109022124_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-chromaprint-1.5.1-2-core2.1-20261109022124/libchromaprint-tools_1.5.1-2%2Bcore2.1.20261109022124_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-chromaprint-1.5.1-2-core2.1-20261109022124)
+
+### adplug (optimized)
+Version: `2.3.3+dfsg-2+core2.1~20261109022112` · Published: 2026-11-09 02:22:34 UTC
+**Description:** free AdLib sound library (utils)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - adplug`
+**Main .deb:** [adplug-utils_2.3.3+dfsg-2+core2.1.20261109022112_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-adplug-2.3.3-dfsg-2-core2.1-20261109022112/adplug-utils_2.3.3%2Bdfsg-2%2Bcore2.1.20261109022112_amd64.deb)
+**Binary packages in release:** 3
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-adplug-2.3.3-dfsg-2-core2.1-20261109022112)
+
+### cjson (optimized)
+Version: `1.7.15-1+deb12u4+core2.1~20261109022109` · Published: 2026-11-09 02:21:56 UTC
+**Description:** Ultralightweight JSON parser in ANSI C
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - cjson`
+**Main .deb:** [libcjson1_1.7.15-1+deb12u4+core2.1.20261109022109_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-cjson-1.7.15-1-deb12u4-core2.1-20261109022109/libcjson1_1.7.15-1%2Bdeb12u4%2Bcore2.1.20261109022109_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-cjson-1.7.15-1-deb12u4-core2.1-20261109022109)
+
 ### jq (optimized)
 Version: `1.6-2.1+deb12u3+core2.1~20261104214225` · Published: 2026-11-04 21:46:24 UTC
 **Description:** lightweight and flexible command-line JSON processor
