@@ -2,6 +2,9 @@ name: Build lightweight upstream yt-dlp package
 run-name: "yt-dlp Debian 12 package"
 
 on:
+  pull_request:
+    paths:
+      - .github/workflows/yt-dlp-bookworm.yml
   push:
     branches:
       - feat/yt-dlp-bookworm-lite-package
