@@ -2,6 +2,11 @@ name: Build lightweight upstream yt-dlp package
 run-name: "yt-dlp Debian 12 package"
 
 on:
+  push:
+    branches:
+      - feat/yt-dlp-bookworm-lite-package
+    paths:
+      - .github/workflows/yt-dlp-bookworm.yml
   workflow_dispatch:
     inputs:
       version:
@@ -229,7 +234,7 @@ jobs:
           ls -lh ./*.deb ./*.txt
 
       - name: Publish Debian package release
-        if: steps.version.outputs.skip != 'true'
+        if: steps.version.outputs.skip != 'true' && github.ref == 'refs/heads/master'
         env:
           RELEASE_TAG: ${{ steps.version.outputs.release_tag }}
           FORCE_REBUILD: ${{ inputs.force_rebuild }}
@@ -254,7 +259,7 @@ jobs:
           fi
 
       - name: Refresh Core 2 package index
-        if: steps.version.outputs.skip != 'true' && inputs.refresh_index
+        if: steps.version.outputs.skip != 'true' && inputs.refresh_index && github.ref == 'refs/heads/master'
         shell: bash
         run: |
           set -euo pipefail
