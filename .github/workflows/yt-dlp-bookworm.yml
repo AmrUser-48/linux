@@ -1,0 +1,280 @@
+name: Build lightweight upstream yt-dlp package
+run-name: "yt-dlp Debian 12 package"
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/yt-dlp-bookworm.yml
+  push:
+    branches:
+      - master
+      - feat/yt-dlp-bookworm-lite-package
+    paths:
+      - .github/workflows/yt-dlp-bookworm.yml
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Upstream release tag (empty means latest stable)
+        required: false
+        type: string
+        default: ""
+      force_rebuild:
+        description: Rebuild even if this package release already exists
+        required: false
+        type: boolean
+        default: false
+      refresh_index:
+        description: Refresh the Core 2 package index after publication
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: core2-yt-dlp-package
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Package upstream yt-dlp for Debian 12
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      GH_TOKEN: ${{ github.token }}
+      REQUESTED_VERSION: ${{ inputs.version }}
+      FORCE_REBUILD: ${{ inputs.force_rebuild }}
+    steps:
+      - name: Install minimal packaging tools
+        shell: bash
+        run: |
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            ca-certificates curl jq python3 make zip dpkg-dev
+          python3 --version
+          dpkg-deb --version
+
+      - name: Resolve upstream release and skip existing package
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "$REQUESTED_VERSION" ]]; then
+            RELEASE_JSON="$(curl -fsSL \
+              "https://api.github.com/repos/yt-dlp/yt-dlp/releases/tags/$REQUESTED_VERSION")"
+            UPSTREAM_TAG="$(jq -er '.tag_name' <<<"$RELEASE_JSON")"
+            UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
+          else
+            RELEASE_JSON="$(curl -fsSL \
+              https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest)"
+            UPSTREAM_TAG="$(jq -er '.tag_name' <<<"$RELEASE_JSON")"
+            UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
+          fi
+
+          if [[ ! "$UPSTREAM_VERSION" =~ ^[0-9]{4}\.[0-9]{2}\.[0-9]{2}([.]?[0-9]+)?$ ]]; then
+            echo "::error::Unexpected upstream version: $UPSTREAM_VERSION"
+            exit 1
+          fi
+
+          RELEASE_TAG="core2-yt-dlp-$UPSTREAM_VERSION-core2.1"
+          echo "upstream_version=$UPSTREAM_VERSION" >> "$GITHUB_OUTPUT"
+          echo "upstream_tag=$UPSTREAM_TAG" >> "$GITHUB_OUTPUT"
+          echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+
+          if [[ "$FORCE_REBUILD" != "true" ]] && \
+             gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::Release $RELEASE_TAG already exists; skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download and verify upstream source archive
+        if: steps.version.outputs.skip != 'true'
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+          UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p source release-artifacts
+          cd source
+          BASE_URL="https://github.com/yt-dlp/yt-dlp/releases/download/$UPSTREAM_TAG"
+          curl -fL "$BASE_URL/yt-dlp.tar.gz" -o yt-dlp.tar.gz
+          curl -fL "$BASE_URL/SHA2-256SUMS" -o SHA2-256SUMS
+          grep -E '^[[:xdigit:]]{64}[[:space:]]+yt-dlp\.tar\.gz$' SHA2-256SUMS
+          grep -E '^[[:xdigit:]]{64}[[:space:]]+yt-dlp\.tar\.gz$' SHA2-256SUMS | sha256sum --check
+          tar -xzf yt-dlp.tar.gz
+          SOURCE_DIR="$(find . -mindepth 1 -maxdepth 1 -type d -name 'yt-dlp*' -print -quit)"
+          test -n "$SOURCE_DIR"
+          test -f "$SOURCE_DIR/Makefile"
+          echo "Verified upstream source archive for yt-dlp $UPSTREAM_VERSION"
+
+      - name: Build official platform-independent zipimport executable
+        if: steps.version.outputs.skip != 'true'
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          SOURCE_DIR="$(find source -mindepth 1 -maxdepth 1 -type d -name 'yt-dlp*' -print -quit)"
+          cd "$SOURCE_DIR"
+          make yt-dlp
+          test -x yt-dlp
+          BUILT_VERSION="$(python3 ./yt-dlp --version)"
+          if [[ "$BUILT_VERSION" != "$UPSTREAM_VERSION" ]]; then
+            echo "::error::Built version $BUILT_VERSION does not match upstream $UPSTREAM_VERSION"
+            exit 1
+          fi
+
+          PACKAGE_ROOT="$GITHUB_WORKSPACE/package-root"
+          install -D -m 0755 yt-dlp "$PACKAGE_ROOT/usr/bin/yt-dlp"
+          DEB_VERSION="${UPSTREAM_VERSION}+core2.1"
+          mkdir -p "$PACKAGE_ROOT/DEBIAN"
+          cat > "$PACKAGE_ROOT/DEBIAN/control" <<CONTROL
+          Package: yt-dlp
+          Version: $DEB_VERSION
+          Section: web
+          Priority: optional
+          Architecture: all
+          Depends: python3 (>= 3.11)
+          Maintainer: AmrUser-48 <66784815+AmrUser-48@users.noreply.github.com>
+          Description: feature-rich command-line audio/video downloader
+           Upstream yt-dlp zipimport executable using Debian's system Python.
+           Optional post-processors and JavaScript runtimes are not bundled.
+          CONTROL
+
+          dpkg-deb --build --root-owner-group "$PACKAGE_ROOT" \
+            "$GITHUB_WORKSPACE/release-artifacts/yt-dlp_${DEB_VERSION}_all.deb"
+
+          DEB="$GITHUB_WORKSPACE/release-artifacts/yt-dlp_${DEB_VERSION}_all.deb"
+          test "$(dpkg-deb -f "$DEB" Package)" = yt-dlp
+          test "$(dpkg-deb -f "$DEB" Version)" = "$DEB_VERSION"
+          test "$(dpkg-deb -f "$DEB" Architecture)" = all
+          test "$(dpkg-deb -f "$DEB" Depends)" = 'python3 (>= 3.11)'
+          dpkg-deb --contents "$DEB"
+          mkdir -p "$GITHUB_WORKSPACE/package-test"
+          dpkg-deb -x "$DEB" "$GITHUB_WORKSPACE/package-test"
+          TEST_VERSION="$(python3 "$GITHUB_WORKSPACE/package-test/usr/bin/yt-dlp" --version)"
+          test "$TEST_VERSION" = "$UPSTREAM_VERSION"
+
+          cat > "$GITHUB_WORKSPACE/release-artifacts/BUILD-INFO.txt" <<INFO
+          Package: yt-dlp
+          Upstream version: $UPSTREAM_VERSION
+          Debian package version: $DEB_VERSION
+          Architecture: all
+          Runtime: Debian system Python 3.11+
+          Build: make yt-dlp from the official upstream source archive
+          Executable: platform-independent zipimport binary
+          Optional dependencies: not bundled (ffmpeg, yt-dlp-ejs and JavaScript runtime)
+          Verification: upstream SHA-256 archive checksum; dpkg metadata; extracted executable --version
+          INFO
+          echo "Built and verified yt-dlp $UPSTREAM_VERSION ($DEB_VERSION)."
+
+      - name: Create release metadata and checksums
+        if: steps.version.outputs.skip != 'true'
+        env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd release-artifacts
+          DEB="$(find . -maxdepth 1 -name 'yt-dlp_*_all.deb' -print -quit)"
+          test -n "$DEB"
+          DEB_VERSION="$(dpkg-deb -f "$DEB" Version)"
+          DESCRIPTION="$(dpkg-deb -f "$DEB" Description | head -n 1)"
+          python3 - "$UPSTREAM_VERSION" "$DEB_VERSION" "$DESCRIPTION" <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          upstream, package_version, description = sys.argv[1:]
+          metadata = {
+              "schema_version": 3,
+              "source_package": "yt-dlp",
+              "display_name": "yt-dlp",
+              "source_version": upstream,
+              "package_version": package_version,
+              "kind": "optimized",
+              "description": description,
+              "primary_binary": "yt-dlp",
+              "compiler_profile": "upstream platform-independent zipimport executable",
+              "build_mode": "upstream source archive; make yt-dlp; system Python; no bundled interpreter",
+              "target": "Debian 12 Bookworm / Architecture all / Python 3.11+",
+          }
+          lines = [
+              "<!-- core2-release-metadata: " + json.dumps(metadata, sort_keys=True, ensure_ascii=False, separators=(",", ":")) + " -->",
+              f"# yt-dlp {upstream}",
+              "",
+              description,
+              "",
+              "Built from the official yt-dlp upstream source archive for Debian 12 Bookworm.",
+              "The package installs one platform-independent zipimport executable at /usr/bin/yt-dlp and uses the system Python 3.11+ interpreter.",
+              "",
+              "## Package design",
+              "",
+              "- Architecture: all (no CPU-specific native code).",
+              "- Runtime dependency: python3 (>= 3.11).",
+              "- No virtualenv, pip runtime, bundled Python, PyInstaller runtime, or optional dependency payload.",
+              "- Optional post-processing remains external: install ffmpeg separately; install yt-dlp-ejs and a supported JavaScript runtime when needed for full YouTube support.",
+              "",
+              "## Verification",
+              "",
+              "- Upstream source archive SHA-256 checked against the release checksum file.",
+              "- Debian package metadata and architecture checked.",
+              "- Extracted /usr/bin/yt-dlp --version checked against the upstream release.",
+              "- BUILD-INFO.txt and SHA256SUMS-core2-yt-dlp.txt are attached.",
+          ]
+          pathlib.Path("release-notes.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          pathlib.Path("release-title.txt").write_text(
+              f"yt-dlp {upstream} (Debian 12 - system Python)", encoding="utf-8"
+          )
+          PY
+          sha256sum "$DEB" BUILD-INFO.txt > SHA256SUMS-core2-yt-dlp.txt
+          cat SHA256SUMS-core2-yt-dlp.txt
+          ls -lh ./*.deb ./*.txt
+
+      - name: Upload Debian package artifact
+        if: steps.version.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: yt-dlp-debian12-${{ steps.version.outputs.upstream_version }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish Debian package release
+        if: steps.version.outputs.skip != 'true' && github.ref == 'refs/heads/master'
+        env:
+          RELEASE_TAG: ${{ steps.version.outputs.release_tag }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd release-artifacts
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            if [[ "$FORCE_REBUILD" != "true" ]]; then
+              echo "::error::Release $RELEASE_TAG appeared during the build; refusing to overwrite it."
+              exit 1
+            fi
+            gh release upload "$RELEASE_TAG" ./*.deb ./*.txt \
+              --repo "$GITHUB_REPOSITORY" --clobber
+            gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+              --title "$(cat release-title.txt)" --notes-file release-notes.md
+          else
+            gh release create "$RELEASE_TAG" ./*.deb ./*.txt \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$(cat release-title.txt)" \
+              --notes-file release-notes.md
+          fi
+
+      - name: Refresh Core 2 package index
+        if: steps.version.outputs.skip != 'true' && inputs.refresh_index && github.ref == 'refs/heads/master'
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run d630-core2-update-release-index.yml \
+            --repo "$GITHUB_REPOSITORY" --ref master

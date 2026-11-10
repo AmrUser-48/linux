@@ -2,6 +2,10 @@
 
 This directory documents the opt-in GitHub Actions workflows for rebuilding Debian Bookworm source packages with native Core 2 compiler targets.
 
+## Lightweight upstream yt-dlp package
+
+Build the current upstream yt-dlp release as a small Architecture: all Debian package using Debian 12's system Python 3.11. It contains only the platform-independent zipimport executable; no virtualenv, bundled interpreter, PyInstaller runtime, or optional dependencies. See [the package design and build details](yt-dlp/README.md), then run [Build lightweight upstream yt-dlp package - Run workflow](https://github.com/AmrUser-48/linux/actions/workflows/yt-dlp-bookworm.yml).
+
 ## Build any package by source name
 
 The [Core 2 optimized Debian package workflow](https://github.com/AmrUser-48/linux/actions/workflows/d630-core2-package.yml) accepts a free-text Debian source-package name; it is no longer limited to a YAML dropdown list. Enter any valid source package available from the configured Debian Bookworm source repositories, such as `python3.11`, `thunar`, or another package name. The workflow resolves build dependencies, builds binary packages for amd64/all, and skips publication when that package already has a Core 2 release.
