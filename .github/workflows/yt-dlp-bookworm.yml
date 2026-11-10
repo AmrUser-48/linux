@@ -86,6 +86,7 @@ jobs:
       - name: Download and verify upstream source archive
         if: steps.version.outputs.skip != 'true'
         env:
+          UPSTREAM_VERSION: ${{ steps.version.outputs.upstream_version }}
           UPSTREAM_TAG: ${{ steps.version.outputs.upstream_tag }}
         shell: bash
         run: |
