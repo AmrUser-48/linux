@@ -7,6 +7,7 @@ on:
       - .github/workflows/yt-dlp-bookworm.yml
   push:
     branches:
+      - master
       - feat/yt-dlp-bookworm-lite-package
     paths:
       - .github/workflows/yt-dlp-bookworm.yml
@@ -235,6 +236,15 @@ jobs:
           sha256sum "$DEB" BUILD-INFO.txt > SHA256SUMS-core2-yt-dlp.txt
           cat SHA256SUMS-core2-yt-dlp.txt
           ls -lh ./*.deb ./*.txt
+
+      - name: Upload Debian package artifact
+        if: steps.version.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: yt-dlp-debian12-${{ steps.version.outputs.upstream_version }}-${{ github.run_id }}
+          path: release-artifacts/*
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Publish Debian package release
         if: steps.version.outputs.skip != 'true' && github.ref == 'refs/heads/master'
