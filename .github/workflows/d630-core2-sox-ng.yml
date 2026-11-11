@@ -148,6 +148,7 @@ jobs:
 
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
           configure = Path("configure.ac")
           text = configure.read_text()
@@ -183,6 +184,14 @@ jobs:
           # otherwise appears as a successful, zero-byte download to SoX.
           formats = Path("src/formats.c")
           text = formats.read_text()
+          text, width_changes = re.subn(
+              r'(command_args\s*\[\s*\]\s*\[)\s*7(\s*\])',
+              r'\g<1>8\2',
+              text,
+              count=1,
+          )
+          if width_changes != 1:
+              raise SystemExit("Expected one command_args[][7] declaration to resize for the extra curl option.")
           lines = text.splitlines(keepends=True)
           curl_rows = [
               i for i, line in enumerate(lines)
