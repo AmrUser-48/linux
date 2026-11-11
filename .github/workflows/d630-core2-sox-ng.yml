@@ -188,17 +188,17 @@ jobs:
               i for i, line in enumerate(lines)
               if line.lstrip().startswith("{") and '"curl"' in line
           ]
-          if len(curl_rows) != 1:
-              raise SystemExit(f"Expected one curl URL-reader argument row, found {len(curl_rows)}.")
-          row = curl_rows[0]
-          if '"-L"' not in lines[row]:
-              if '"-f"' in lines[row]:
-                  lines[row] = lines[row].replace('"-f"', '"-f", "-L"', 1)
-              else:
-                  lines[row] = lines[row].replace('"curl"', '"curl", "-L"', 1)
-          if '"-L"' not in lines[row]:
-              raise SystemExit("Could not enable HTTP redirect following for curl URL reader.")
-          print("Patched curl URL-reader arguments:", lines[row].strip())
+          if not curl_rows:
+              raise SystemExit("Could not find any curl URL-reader argument rows.")
+          for row in curl_rows:
+              if '"-L"' not in lines[row]:
+                  if '"-f"' in lines[row]:
+                      lines[row] = lines[row].replace('"-f"', '"-f", "-L"', 1)
+                  else:
+                      lines[row] = lines[row].replace('"curl"', '"curl", "-L"', 1)
+              if '"-L"' not in lines[row]:
+                  raise SystemExit("Could not enable HTTP redirect following for curl URL reader.")
+              print("Patched curl URL-reader arguments:", lines[row].strip())
           formats.write_text("".join(lines))
           PY
 
