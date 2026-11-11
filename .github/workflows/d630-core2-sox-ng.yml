@@ -527,13 +527,13 @@ jobs:
                   self.rfile.readline()
                   while True:
                       line = self.rfile.readline()
-                      if line in (b"\\r\\n", b"\\n", b""):
+                      if line in (b"\r\n", b"\n", b""):
                           break
                   self.wfile.write(
                       b"ICY 200 OK\\r\\n"
                       b"Content-Type: audio/mpeg\\r\\n"
                       b"icy-name: SoX NG regression test\\r\\n"
-                      b"\\r\\n"
+                      b"\r\n"
                   )
                   with audio_path.open("rb") as audio:
                       while True:
@@ -558,7 +558,7 @@ jobs:
           done
           test -s "$TEST_DIR/icy-port"
           ICY_PORT="$(cat "$TEST_DIR/icy-port")"
-          "$SOX_CMD" -t mp3 "http://127.0.0.1:$ICY_PORT/stream" -n stat \\
+          "$SOX_CMD" -t mp3 "http://127.0.0.1:$ICY_PORT/stream" -n stat \
             >"$TEST_DIR/icy-stream.log" 2>&1
           grep -q 'Samples read:' "$TEST_DIR/icy-stream.log"
           kill "$HTTP_PID"
