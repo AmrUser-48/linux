@@ -6,6 +6,7 @@ on:
     branches:
       - master
       - sox-ng-bash-completion
+      - fix/sox-ng-icy-streams
     paths:
       - .github/workflows/d630-core2-sox-ng.yml
       - core2-packages/sox-ng.bash-completion
@@ -43,7 +44,7 @@ on:
         description: Complete space-separated SoX NG configure options; replace this string to change options
         required: true
         type: string
-        default: "--with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng"
+        default: "--with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng"
       hardening_options:
         description: dpkg-buildflags hardening profile
         required: true
@@ -88,7 +89,7 @@ jobs:
       CXXFLAGS_APPEND: ${{ inputs.cxxflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
       CPPFLAGS_APPEND: ${{ inputs.cppflags_append || '' }}
       LDFLAGS_APPEND: ${{ inputs.ldflags_append || '' }}
-      SOX_NG_CONFIGURE_FLAGS: ${{ inputs.configure_flags || '--with-dyn-default --with-ffmpeg --with-curl --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng' }}
+      SOX_NG_CONFIGURE_FLAGS: ${{ inputs.configure_flags || '--with-dyn-default --with-ffmpeg --enable-replace --with-pkgconfigdir=no --docdir=/usr/share/doc/sox-ng' }}
       BUILD_JOBS: ${{ inputs.build_jobs || '4' }}
       DEB_CFLAGS_MAINT_APPEND: ${{ inputs.cflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
       DEB_CXXFLAGS_MAINT_APPEND: ${{ inputs.cxxflags_append || '-O2 -pipe -march=core2 -mtune=core2' }}
@@ -127,6 +128,10 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --with-curl "* ]]; then
+            echo "::error::Do not enable --with-curl: it puts libcurl ahead of wget and breaks legacy ICY radio streams."
+            exit 1
+          fi
           if [[ ! "$SOURCE_REF" =~ ^[A-Za-z0-9._/-]+$ ]]; then
             echo "::error::Invalid upstream ref: $SOURCE_REF"
             exit 1
@@ -178,6 +183,7 @@ jobs:
           opus.write_text(text.replace(old, new, 1))
           if "ope_encoder_write_float" not in opus.read_text():
               raise SystemExit("Backported src/opus.c does not contain the Opus encoder.")
+
           PY
 
           git diff --check
@@ -249,8 +255,9 @@ jobs:
 
           Package: sox-ng
           Architecture: any
-          Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-          Recommends: bash-completion, ffmpeg, curl, python3
+          Depends: libsox-ng5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends},
+           wget | wget2
+          Recommends: bash-completion, ffmpeg, python3
           Conflicts: sox
           Replaces: sox
           Description: Swiss Army knife of sound processing (SoX NG)
@@ -471,6 +478,7 @@ jobs:
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Package)" = sox-ng
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Conflicts)" = sox
           test "$(dpkg-deb -f "${SOX_DEB[0]}" Replaces)" = sox
+          dpkg-deb -f "${SOX_DEB[0]}" Depends | grep -Fq 'wget | wget2'
           if [[ " $SOX_NG_CONFIGURE_FLAGS " == *" --with-dyn-default "* ]]; then
             dpkg-deb -c "${LIB_DEB[0]}" > /tmp/libsox-ng5-contents.txt
             grep -q 'libsox_ng_fmt_opus\.so' /tmp/libsox-ng5-contents.txt
@@ -496,8 +504,67 @@ jobs:
           "$SOX_CMD" --help >/dev/null
 
           TEST_DIR="$(mktemp -d)"
-          trap 'rm -rf "$TEST_DIR"' EXIT
+          HTTP_PID=
+          cleanup() {
+            if [[ -n "${HTTP_PID:-}" ]]; then kill "$HTTP_PID" 2>/dev/null || true; fi
+            rm -rf "$TEST_DIR"
+          }
+          trap cleanup EXIT
           "$SOX_CMD" -n -r 48000 -c 2 -b 16 "$TEST_DIR/input.wav" synth 3 sine 440
+
+
+          # Exercise SoX's native URL input against a legacy SHOUTcast response.
+          # ICY 200 OK is not accepted as a regular HTTP status by libcurl.
+          "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/stream.mp3"
+          python3 - "$TEST_DIR/stream.mp3" "$TEST_DIR/icy-port" >"$TEST_DIR/icy.log" 2>&1 <<'PY' &
+          import pathlib
+          import socketserver
+          import sys
+
+          audio_path = pathlib.Path(sys.argv[1])
+
+          class IcyHandler(socketserver.StreamRequestHandler):
+              def handle(self):
+                  self.rfile.readline()
+                  while True:
+                      line = self.rfile.readline()
+                      if line in (b"\r\n", b"\n", b""):
+                          break
+                  self.wfile.write(
+                      b"ICY 200 OK\r\n"
+                      b"Content-Type: audio/mpeg\r\n"
+                      b"icy-name: SoX NG regression test\r\n"
+                      b"\r\n"
+                  )
+                  with audio_path.open("rb") as audio:
+                      while True:
+                          chunk = audio.read(65536)
+                          if not chunk:
+                              break
+                          self.wfile.write(chunk)
+                  self.wfile.flush()
+
+          class Server(socketserver.ThreadingTCPServer):
+              allow_reuse_address = True
+              daemon_threads = True
+
+          server = Server(("127.0.0.1", 0), IcyHandler)
+          pathlib.Path(sys.argv[2]).write_text(str(server.server_address[1]))
+          server.serve_forever()
+          PY
+          HTTP_PID=$!
+          for _ in {1..50}; do
+            [[ -s "$TEST_DIR/icy-port" ]] && break
+            sleep 0.1
+          done
+          test -s "$TEST_DIR/icy-port"
+          ICY_PORT="$(cat "$TEST_DIR/icy-port")"
+          "$SOX_CMD" -t mp3 "http://127.0.0.1:$ICY_PORT/stream" -n stat \
+            >"$TEST_DIR/icy-stream.log" 2>&1
+          grep -q 'Samples read:' "$TEST_DIR/icy-stream.log"
+          kill "$HTTP_PID"
+          wait "$HTTP_PID" 2>/dev/null || true
+          HTTP_PID=
           "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/effects.wav" gain -3 highpass 80 lowpass 15000 rate 44100 dither
           test -s "$TEST_DIR/effects.wav"
           "$SOX_CMD" "$TEST_DIR/input.wav" "$TEST_DIR/loudness.wav" loudness -10 65
