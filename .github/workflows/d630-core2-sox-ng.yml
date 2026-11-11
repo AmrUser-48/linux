@@ -183,11 +183,23 @@ jobs:
           # otherwise appears as a successful, zero-byte download to SoX.
           formats = Path("src/formats.c")
           text = formats.read_text()
-          old = '{ "curl", "-f", "--no-cert-status", "-s", "-o", "-", NULL },'
-          new = '{ "curl", "-f", "-L", "--no-cert-status", "-s", "-o", "-", NULL },'
-          if text.count(old) != 1:
-              raise SystemExit("Expected exactly one configured curl URL-reader argument list.")
-          formats.write_text(text.replace(old, new, 1))
+          lines = text.splitlines(keepends=True)
+          curl_rows = [
+              i for i, line in enumerate(lines)
+              if line.lstrip().startswith("{") and '"curl"' in line
+          ]
+          if len(curl_rows) != 1:
+              raise SystemExit(f"Expected one curl URL-reader argument row, found {len(curl_rows)}.")
+          row = curl_rows[0]
+          if '"-L"' not in lines[row]:
+              if '"-f"' in lines[row]:
+                  lines[row] = lines[row].replace('"-f"', '"-f", "-L"', 1)
+              else:
+                  lines[row] = lines[row].replace('"curl"', '"curl", "-L"', 1)
+          if '"-L"' not in lines[row]:
+              raise SystemExit("Could not enable HTTP redirect following for curl URL reader.")
+          print("Patched curl URL-reader arguments:", lines[row].strip())
+          formats.write_text("".join(lines))
           PY
 
           git diff --check
