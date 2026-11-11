@@ -192,6 +192,14 @@ jobs:
           )
           if width_changes != 1:
               raise SystemExit("Expected one command_args[][7] declaration to resize for the extra curl option.")
+          text, argv_changes = re.subn(
+              r'(command_argv\\s*\\[)\\s*8(\\s*\\])',
+              r'\\g<1>9\\2',
+              text,
+              count=1,
+          )
+          if argv_changes != 1:
+              raise SystemExit("Expected one command_argv[8] declaration to resize for the extra curl option.")
           lines = text.splitlines(keepends=True)
           curl_rows = [
               i for i, line in enumerate(lines)
