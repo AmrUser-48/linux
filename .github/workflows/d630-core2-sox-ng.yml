@@ -530,9 +530,9 @@ jobs:
                       if line in (b"\r\n", b"\n", b""):
                           break
                   self.wfile.write(
-                      b"ICY 200 OK\\r\\n"
-                      b"Content-Type: audio/mpeg\\r\\n"
-                      b"icy-name: SoX NG regression test\\r\\n"
+                      b"ICY 200 OK\r\n"
+                      b"Content-Type: audio/mpeg\r\n"
+                      b"icy-name: SoX NG regression test\r\n"
                       b"\r\n"
                   )
                   with audio_path.open("rb") as audio:
