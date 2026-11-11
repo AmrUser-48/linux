@@ -1125,7 +1125,7 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-libsox-ng5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">libsox-ng5 14.8.1</a></code></summary>
+<summary id="core2-package-libsox-ng5"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261111223935">libsox-ng5 14.8.1</a></code></summary>
 
 - **Depends:** <a href="#core2-package-libao4"><code>libao4 (&gt;= 1.1.0)</code></a>; <a href="#core2-package-libasound2"><code>libasound2 (&gt;= 1.0.16)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.33)</code></a>; <a href="#core2-package-libebur128-1"><code>libebur128-1 (&gt;= 1.0.1)</code></a>; <a href="#core2-package-libfftw3-double3"><code>libfftw3-double3 (&gt;= 3.3.10)</code></a>; <a href="#core2-package-libflac12"><code>libflac12 (&gt;= 1.3.0)</code></a>; <code>libgomp1 (&gt;= 4.9)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libgsm1"><code>libgsm1 (&gt;= 1.0.18)</code></a>; <a href="#core2-package-libid3tag0"><code>libid3tag0 (&gt;= 0.15.1b)</code></a>; <code>libltdl7 (&gt;= 2.4.7)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libmad0"><code>libmad0 (&gt;= 0.15.1b-3)</code></a>; <a href="#core2-package-libmagic1"><code>libmagic1 (&gt;= 5.12)</code></a>; <a href="#core2-package-libmp3lame0"><code>libmp3lame0 (&gt;= 3.100)</code></a>; <a href="#core2-package-libogg0"><code>libogg0 (&gt;= 1.0rc3)</code></a>; <code>libopencore-amrnb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <code>libopencore-amrwb0 (&gt;= 0.1.6)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libopusenc0"><code>libopusenc0 (&gt;= 0.2.1)</code></a>; <a href="#core2-package-libopusfile0"><code>libopusfile0 (&gt;= 0.5)</code></a>; <a href="#core2-package-libpng16-16"><code>libpng16-16 (&gt;= 1.6.2-1)</code></a>; <a href="#core2-package-libpulse0"><code>libpulse0 (&gt;= 0.99.1)</code></a>; <a href="#core2-package-libsndfile1"><code>libsndfile1 (&gt;= 1.0.20)</code></a>; <a href="#core2-package-libsndio7.0"><code>libsndio7.0 (&gt;= 1.8.1)</code></a>; <code>libspeexdsp1 (&gt;= 1.2.1)</code> <em>(Debian Bookworm)</em>; <a href="#core2-package-libtwolame0"><code>libtwolame0 (&gt;= 0.3.10)</code></a>; <a href="#core2-package-libvorbis0a"><code>libvorbis0a (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisenc2"><code>libvorbisenc2 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libvorbisfile3"><code>libvorbisfile3 (&gt;= 1.1.2)</code></a>; <a href="#core2-package-libwavpack1"><code>libwavpack1 (&gt;= 4.40.0)</code></a>; <a href="#core2-package-zlib1g"><code>zlib1g (&gt;= 1:1.1.4)</code></a>
 
@@ -1393,9 +1393,9 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 </details>
 
 <details>
-<summary id="core2-package-sox-ng"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440">sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</a></code></summary>
+<summary id="core2-package-sox-ng"><code><a href="https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261111223935">sox-ng 14.8.1 — Swiss Army knife of sound processing (SoX NG)</a></code></summary>
 
-- **Depends:** <a href="#core2-package-libsox-ng5"><code>libsox-ng5 (= 14.8.1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>
+- **Depends:** <a href="#core2-package-libsox-ng5"><code>libsox-ng5 (= 14.8.1+core2.1~BUILD)</code></a>; <a href="#core2-package-libc6"><code>libc6 (&gt;= 2.34)</code></a>; one of: <code>wget</code> <em>(Debian Bookworm)</em> | <code>wget2</code> <em>(Debian Bookworm)</em>
 
 </details>
 
@@ -7263,6 +7263,14 @@ Each package below shows its direct Pre-Depends and Depends from the published .
 One latest published release per Debian source package is listed here. Direct links are provided for installable .deb files; the linked release page contains build metadata, checksums, full release notes, and historical builds.
 
 <!-- CORE2-PACKAGE-RELEASE-INDEX:START -->
+### SoX NG (system)
+Version: `14.8.1+core2.1~20261111223935` · Published: 2026-11-11 22:40:19 UTC
+**Description:** Swiss Army knife of sound processing (SoX NG)
+Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
+**Main .deb:** [sox-ng_14.8.1+core2.1.20261111223935_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261111223935/sox-ng_14.8.1%2Bcore2.1.20261111223935_amd64.deb)
+**Binary packages in release:** 2
+**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261111223935)
+
 ### zeromq3 (optimized)
 Version: `4.3.4-6+core2.1~20261109025733` · Published: 2026-11-09 03:00:50 UTC
 **Description:** lightweight messaging kernel (shared library)
@@ -7966,14 +7974,6 @@ Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/
 **Main .deb:** [libgl1-mesa-dri_22.3.6-1+deb12u2+core2.1.20261101003416_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-mesa-22.3.6-1-deb12u2-core2.1-20261101003416/libgl1-mesa-dri_22.3.6-1%2Bdeb12u2%2Bcore2.1.20261101003416_amd64.deb)
 **Binary packages in release:** 18
 **All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-mesa-22.3.6-1-deb12u2-core2.1-20261101003416)
-
-### SoX NG (system)
-Version: `14.8.1+core2.1~20261101003440` · Published: 2026-11-01 00:35:09 UTC
-**Description:** Swiss Army knife of sound processing (SoX NG)
-Install/update latest: `curl -fsSL https://raw.githubusercontent.com/AmrUser-48/linux/master/core2-packages/install.py | python3 - sox-ng`
-**Main .deb:** [sox-ng_14.8.1+core2.1.20261101003440_amd64.deb](https://github.com/AmrUser-48/linux/releases/download/core2-system-sox-ng-14.8.1-core2.1-20261101003440/sox-ng_14.8.1%2Bcore2.1.20261101003440_amd64.deb)
-**Binary packages in release:** 2
-**All files, checksums and historical builds:** [release page](https://github.com/AmrUser-48/linux/releases/tag/core2-system-sox-ng-14.8.1-core2.1-20261101003440)
 
 ### Zstandard (optimized)
 Version: `1.5.4+dfsg2-5+core2safe1~20261027175339` · Published: 2026-10-27 18:06:41 UTC
